@@ -140,7 +140,7 @@ def instance2problem(
 
     if backhaul_class == 1:
         # VRPB has a backhaul section that specifies the backhaul nodes.
-        backhaul_idcs = np.flatnonzero(instance["demand_backhaul"]).tolist()
+        backhaul_idcs = (np.flatnonzero(instance["demand_backhaul"]) + 1).tolist()
         sections["BACKHAUL_SECTION"] = backhaul_idcs + [-1]
 
         # linehaul = np.flatnonzero(demand_linehaul > 0)

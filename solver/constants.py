@@ -17,7 +17,7 @@ ROUTEFINDER2LKH = {
     "OVRPMBTW": "VRPMPDTW",
     "OVRPMBLTW": "VRPMPDTW",  # Issue: distance limits
     "OVRPTW": "CVRPTW",
-    "VRPB": None,  # Issue: don't know: linehaul after backhaul
+    "VRPB": "VRPB",  # Issue: don't know: linehaul after backhaul
     "VRPBL": None,
     "VRPBLTW": None,  # Issue: service times don't work in VRPBTW
     "VRPBTW": None,  # Issue: service times don't work in VRPBTW
