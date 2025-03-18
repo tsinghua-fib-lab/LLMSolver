@@ -26,3 +26,29 @@ Solver call via LLM automation
     - 构建成熟的testbed，和metric评测标准
 - 实验补充、论文完成(4/28-5/???)
   -最终目标NeurIPS2025（去年ddl：5/22）
+
+
+## How to run pipeline
+
+```
+pip install lkh
+cd solver/lkh_solver
+tar -zvxf LKH-3.0.13.tgz
+cd LKH-3.0.13
+make
+```
+
+Because some bugs exist in lkh, you should modify the lkh files installed by pip before.
+
+The install file is '~/miniconda3/envs/conda_env/lib/python3.10/site-packages/lkh/problems.py'
+
+You should move line 62
+```
+service_time = tsplib.fields.NumberField('SERVICE_TIME')
+```
+
+after line 71
+
+```
+service_time_section = tsplib.fields.MatrixField('SERVICE_TIME_SECTION')
+```

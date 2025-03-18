@@ -11,7 +11,6 @@ from envs.mtvrp import MTVRPEnv
 from solver.model_utils import get_policy, get_model
 from solver.utils import mtvrp2anyvrp
 
-
 class NoSolver:
     def solve(self, *args, **kwargs):
         pass

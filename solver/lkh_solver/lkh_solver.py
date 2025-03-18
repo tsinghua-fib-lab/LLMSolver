@@ -174,7 +174,6 @@ def instance2problem(
     problem = "\n".join(f"{k} : {v}" for k, v in specs.items())
     problem += "\n" + "\n".join(_format(name, data) for name, data in sections.items())
     problem += "\n" + "\n".join(["DEPOT_SECTION", "1", "-1", "EOF"])
-
     return lkh.LKHProblem.parse(problem)
 
 

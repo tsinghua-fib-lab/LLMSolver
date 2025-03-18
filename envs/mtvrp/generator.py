@@ -214,6 +214,7 @@ class MTVRPGenerator(Generator):
             },
             batch_size=batch_size,
         )
+        print(td)
 
         if self.subsample:
             # Subsample problems based on given instructions

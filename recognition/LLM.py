@@ -36,8 +36,42 @@ class LLM_api:
         if stop:
             self.payload["stop"] = stop  # Only add stop if not None
         
+        # OpenAI/Azure API handling
+        if model == "gpt-4o-mini":
+            print("Using Azure OpenAI API")
+            self.HTTP_CLIENT = httpx.Client(proxy="http://127.0.0.1:8456")
+            self.client = AzureOpenAI(
+                api_key=api_key_dict.get('azure_key', ''),
+                api_version="2024-07-01-preview",
+                azure_endpoint=api_key_dict.get('azure_endpoint', ''),
+                http_client=self.HTTP_CLIENT
+            )
+
+        # deepseek API handling
+        elif model == "DeepSeek-R1":
+            self.url = 'https://deepseek.ctyun.zgci.ac.cn:10443/v1'
+            keys = api_key_dict.get("DeepSeek-R1", [])
+            self.client = OpenAI(
+                base_url=self.url,
+                api_key=keys[key_idx],
+                    )
+        elif model == "DeepSeek-R1-671B" or model == "DeepSeek-R1-Distill-32B":
+            self.url = 'https://madmodel.cs.tsinghua.edu.cn/v1/chat/completions'
+            keys = api_key_dict.get("DeepSeek-R1-671B", [])
+            self.client = OpenAI(
+                base_url=self.url,
+                api_key=keys[key_idx],
+                    )
+        elif model == "deepseek-chat" or model == "deepseek-reasoner":
+            self.url = 'https://api.deepseek.com'
+            keys = api_key_dict.get("deepseek-chat", [])
+            self.client = OpenAI(
+                base_url=self.url,
+                api_key=keys[key_idx],
+                    )
+
         # SiliconFlow API handling
-        if model != "gpt-4o-mini":
+        else:
             self.url = "https://api.siliconflow.cn/v1/chat/completions"
             keys = api_key_dict.get("silicon_flow_keys", [])
             if not keys or key_idx >= len(keys):
@@ -47,16 +81,6 @@ class LLM_api:
                 "Content-Type": "application/json"
             }
 
-        # OpenAI/Azure API handling
-        elif model == "gpt-4o-mini":
-            print("Using Azure OpenAI API")
-            self.HTTP_CLIENT = httpx.Client(proxy="http://127.0.0.1:8456")
-            self.client = AzureOpenAI(
-                api_key=api_key_dict.get('azure_key', ''),
-                api_version="2024-07-01-preview",
-                azure_endpoint=api_key_dict.get('azure_endpoint', ''),
-                http_client=self.HTTP_CLIENT
-            )
 
         self.q_token = 0
         self.a_token = 0
@@ -92,17 +116,44 @@ class LLM_api:
                     self.a_token += response.usage.completion_tokens
                     if content:
                         return {"choices": [{"message": {"content": content}}]}
+                
+                elif self.payload["model"].startswith("DeepSeek") or self.payload["model"] == "deepseek-chat":
+                    response = self.client.chat.completions.create(
+                        model=self.payload["model"],
+                        messages=self.payload["messages"],
+                        max_tokens=self.payload["max_tokens"],
+                        temperature=self.payload["temperature"],
+                        top_p=self.payload["top_p"],
+                        frequency_penalty=self.payload["frequency_penalty"],
+                        n=self.payload["n"],
+                        timeout=60
+                    )
+                    content = response.choices[0].message.content
+                    self.q_token += response.usage.prompt_tokens
+                    self.a_token += response.usage.completion_tokens
+                    if content:
+                        return {"choices": [{"message": {"content": content}}]}
 
-                else:  # Handling SiliconFlow API
-                    response = requests.post(self.url, json=self.payload, headers=self.headers)
-                    response.raise_for_status()
-                    response = response.json()
-
-                    if "choices" in response and response["choices"]:
-                        content = response["choices"][0]["message"]["content"]
-                        self.q_token += response.get("usage", {}).get("prompt_tokens", 0)
-                        self.a_token += response.get("usage", {}).get("completion_tokens", 0)
-                        return response
+                elif self.payload["model"] == "deepseek-reasoner":
+                    response = self.client.chat.completions.create(
+                        model=self.payload["model"],
+                        messages=self.payload["messages"],
+                        max_tokens=self.payload["max_tokens"],
+                        temperature=self.payload["temperature"],
+                        top_p=self.payload["top_p"],
+                        frequency_penalty=self.payload["frequency_penalty"],
+                        n=self.payload["n"],
+                        timeout=60
+                    )
+                    content = response.choices[0].message.content
+                    reasoning_content = response.choices[0].message.reasoning_content
+                    self.q_token += response.usage.prompt_tokens
+                    self.a_token += response.usage.completion_tokens
+                    if content:
+                        if reasoning_content:
+                            return {"choices": [{"message": {"content": content, "reasoning_content": reasoning_content}}]}
+                        else:
+                            return {"choices": [{"message": {"content": content}}]}
 
             except requests.RequestException as e:
                 print(response.json())
