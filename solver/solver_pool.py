@@ -1,5 +1,5 @@
 import os
-
+import concurrent.futures
 import torch
 from torch import Tensor
 from tensordict.tensordict import TensorDict
@@ -10,6 +10,7 @@ from multiprocessing import Pool
 from envs.mtvrp import MTVRPEnv
 from solver.model_utils import get_policy, get_model
 from solver.utils import mtvrp2anyvrp
+
 
 class NoSolver:
     def solve(self, *args, **kwargs):
@@ -224,10 +225,23 @@ class SolverPool:
 
             return out["best_aug_actions"]
 
-    def solve(self, instances: TensorDict, solver_name: str = "rf-transformer", problem_type="cvrp", **kwargs):
+    def _solve(self, instances: TensorDict, solver_name: str = "rf-transformer", problem_type="cvrp", **kwargs):
         if solver_name in self.model_solver_dict:
             return self.model_solve(instances=instances, solver_name=solver_name, problem_type=problem_type, **kwargs)
         elif solver_name in self.algo_solver_dict:
             return self.algo_solve(instances=instances, solver_name=solver_name, problem_type=problem_type, **kwargs)
         else:
             raise ValueError(f"Unknown solver: {solver_name}")
+
+    def solve(self, instances: TensorDict, solver_name: str = "rf-transformer", problem_type: str = "cvrp",
+              timeout: int = 30, **kwargs):
+        with concurrent.futures.ThreadPoolExecutor() as executor:
+            future = executor.submit(self._solve, instances, solver_name, problem_type, **kwargs)
+            try:
+                return future.result(timeout=timeout)  # Wait for the result within timeout
+            except concurrent.futures.TimeoutError:
+                print("Evaluation timed out! Returning default value.")
+                return "<TimeoutError>"  # Or handle timeout case differently
+            except Exception as e:
+                print(f"An error occurred: {e}")
+                return "<RuntimeError>"  # Or handle other exceptions differently
