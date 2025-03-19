@@ -19,9 +19,9 @@ def generate_prompt(instance_data, scenario):
     prompt = f"You are a problem modeler and you are provided with an example of a VRP problem below, please translate it into a plain natural language description in {scenario} and output the description directly.\n"
     prompt += f"Specifically, the problem has the following parameters:\n"
     prompt += f"Locations (depot + {len(instance_data['locs']) - 1} customers): {instance_data['locs']}\n"
-    prompt += f"Backhaul Demand: {instance_data['demand_backhaul']}\n"
+    prompt += f"Backhaul Demand: {instance_data['demand_backhaul']},\n"
     prompt += f"Linehaul Demand: {instance_data['demand_linehaul']}\n"
-    prompt += f"Backhaul Class: {instance_data['backhaul_class']}\n"
+    prompt += f"Backhaul Class: {instance_data['backhaul_class']}, where '1' means classic backhaul and '2' means mixed backhaul.\n"
     prompt += f"Distance Limit: {instance_data['distance_limit']}\n"
     prompt += f"Time Windows: {instance_data['time_windows']}\n"
     prompt += f"Service Time: {instance_data['service_time']}\n"
@@ -29,6 +29,7 @@ def generate_prompt(instance_data, scenario):
     prompt += f"Open Route: {instance_data['open_route']}, where 'True' means the routes could be open while 'False' means the routes should be closed \n"
     prompt += f"Speed: {instance_data['speed']}\n"
     prompt += f"Please notice that your description should be complete enough to recover the whole problem instance, namely, all the parameters should be included in your description.\n"
+    prompt += f"Return the description directly without any additional explanation or information.\n"
     return prompt
 
 # Function to generate natural language descriptions using LLM
@@ -78,6 +79,9 @@ scenarios = np.random.choice(scenario_list, instance_num)
 llm = LLM_api(model="deepseek-reasoner", key_idx=0)
 
 # List to store descriptions
+plist = ['CVRP', 'CVRPL', 'CVRPW', 'OVRP', 'VRPB']
+
+
 descriptions = []
 
 # Loop through each instance and generate a description
