@@ -7,7 +7,7 @@ import time
 
 # Initialize the LLM API
 # llm = LLM_api(model="deepseek-reasoner", key_idx=0)
-llm = LLM_api(model="Qwen/QwQ-32B-Preview", key_idx=0)
+llm = LLM_api(model="Qwen/QwQ-32B", key_idx=0)
 
 think_flag = False
 
@@ -40,16 +40,21 @@ def calculate_success_rate(dataset):
 
         for problem_desc in descriptions:
             problem_desc = problem_desc.strip()  # Remove any trailing newlines/whitespace
-            max_rounds = 1  # Limit the maximum number of iterations to avoid infinite loops
+            max_rounds = 3  # Limit the maximum number of iterations to avoid infinite loops
 
             for _ in range(max_rounds):
                 # Classify the VRP problem
-                classification = classifier.run(problem_desc)
+                try:
+                    classification = classifier.run(problem_desc)
 
                 # Check the classification
                 # is_correct, reason = checker.run(problem_desc, classification)
-                if classification == problem_type:
-                    correct_predictions_for_type += 1
+                    if classification == problem_type:
+                        correct_predictions_for_type += 1
+                        break
+                    
+                except Exception as e:
+                    print(f"[Error] Exception occurred: {e}")
 
                 # if is_correct:
                 #     print(f"[Final Output] {problem_type} Problem Type: {classification}")

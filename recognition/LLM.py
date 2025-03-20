@@ -154,6 +154,15 @@ class LLM_api:
                             return {"choices": [{"message": {"content": content, "reasoning_content": reasoning_content}}]}
                         else:
                             return {"choices": [{"message": {"content": content}}]}
+                        
+                else:
+                    response = requests.request("POST", self.url, json=self.payload, headers=self.headers)
+                    response = response.json()
+                    content = response["choices"][0]["message"]["content"]
+                    self.q_token += response["usage"]["prompt_tokens"]
+                    self.a_token += response["usage"]["completion_tokens"]
+                    if content:
+                        return {"choices": [{"message": {"content": content}}]}
 
             except requests.RequestException as e:
                 print(response.json())
