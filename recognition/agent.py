@@ -1,3 +1,6 @@
+import os, sys
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 from tensordict.tensordict import TensorDict
 import torch
 import time
@@ -40,8 +43,11 @@ class Classifier(Agent):
         """
         prompt = f"You are a VRP problem judger agent. The user has provided the following VRP problem description:\n"
         prompt += f"{problem_desc}\n"
-        prompt += "You only need to return one category from [CVRP, OVRP, VRPB, VRPL, VRPTW, OVRPTW, OVRPB, OVRPL, VRPBL, VRPBTW, VRPLTW, OVRPBL, OVRPBTW, OVRPLTW, VRPBLTW, OVRPBLTW].\n"
-        prompt += "Where 'O' represents Open Route, which means routes can be open."
+        # prompt += "You only need to return one category from [cvrp, ovrp, vrpb, vrpl, vrptw].\n"
+        prompt += "You only need to return one category from the following list:\n"
+        prompt += "[CVRP, OVRP, VRPB, VRPL, VRPTW]\n"
+        prompt += "Where 'C' represents Capacity, which means the vehicle has a capacity limit."
+        prompt += " 'O' represents Open Route, which means routes can be open."
         prompt += " 'B' represents Backhaul, which means the vehicle can pick up and deliver goods."
         prompt += " 'L' represents Distance or Duration Limits."
         prompt += " 'TW' represents Time Window, which means the vehicle has a time window to visit each customer.\n"
