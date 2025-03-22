@@ -2,6 +2,7 @@ import os
 import sys
 import logging
 import datetime
+import json
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
@@ -18,7 +19,9 @@ logging.basicConfig(
 )
 
 # Initialize the LLM API
-llm = LLM_api(model="Qwen/QwQ-32B", key_idx=0)
+# llm = LLM_api(model="Qwen/QwQ-32B", key_idx=0)
+# llm = LLM_api(model="deepseek-chat", key_idx=0)
+llm = LLM_api(model="deepseek-reasoner", key_idx=0)
 
 think_flag = False
 
@@ -27,20 +30,44 @@ classifier = Classifier(llm, think=False)
 checker = Checker(llm, think=False)
 
 # Load the dataset from text files
-def load_dataset(directory="/data1/shy/zgc/llm_solver/LLMSolver/benchmark"):
+# def load_dataset(directory="/data1/shy/zgc/llm_solver/LLMSolver/benchmark"):
+#     dataset = {}
+#     for filename in os.listdir(directory):
+#         if filename.endswith(".txt"):
+#             problem_type = filename.replace(".txt", "")
+#             with open(os.path.join(directory, filename), 'r') as file:
+#                 descriptions = file.readlines()
+#             dataset[problem_type] = descriptions
+#     return dataset
+
+
+def load_dataset(directory="/data1/shy/zgc/llm_solver/LLMSolver/benchmark", filename="VRP_20250320075347.json"):
     dataset = {}
-    for filename in os.listdir(directory):
-        if filename.endswith(".txt"):
-            problem_type = filename.replace(".txt", "")
-            with open(os.path.join(directory, filename), 'r') as file:
-                descriptions = file.readlines()
-            dataset[problem_type] = descriptions
+    with open(os.path.join(directory, filename), 'r') as file:
+        data = json.load(file)
+    
+    # Loop through each entry in the JSON file
+    for entry in data:
+        problem_type = entry.get("variant_name")  # Extract the problem type from "variant_name"
+        description = entry.get("description")  # Extract the description
+        
+        # Ensure the problem type exists in the dataset dictionary
+        if problem_type not in dataset:
+            dataset[problem_type] = []
+        
+        # Append the description to the corresponding problem type
+        dataset[problem_type].append(description)
+    
     return dataset
+
+
 
 # Function to calculate the success rate for each problem type and overall
 def calculate_success_rate(dataset):
+    error_excution = 0
     correct_predictions = 0
     total_predictions = 0
+
     problem_type_success = {}
 
     for problem_type, descriptions in dataset.items():
@@ -64,6 +91,7 @@ def calculate_success_rate(dataset):
                     break
                     
                 except Exception as e:
+                    error_excution += 1
                     logging.error(f"[Error] Exception occurred: {e}")
 
             # Store the success rate for this problem type
