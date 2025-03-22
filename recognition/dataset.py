@@ -1,20 +1,16 @@
-import sys
 import os
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-
-import torch
-from rl4co.utils.trainer import RL4COTrainer
-from routefinder.models import RouteFinderBase, RouteFinderPolicy
-from routefinder.envs.mtvrp import MTVRPEnv, MTVRPGenerator
-from routefinder.utils import rollout, greedy_policy, evaluate
-
-from LLM import LLM_api  # Assuming LLM API is available
 import json
-import numpy as np
 import datetime
+import numpy as np
+from LLM import LLM_api
+from rl4co.data.utils import load_npz_to_tensordict
+from tensordict.tensordict import TensorDict
+from routefinder.envs.mtvrp import MTVRPGenerator
 
+# Initialize LLM API
+llm = LLM_api(model="deepseek-reasoner", key_idx=0)
 
-# Define a function to generate the natural language prompt
+# Function to generate the natural language prompt
 def generate_prompt(instance_data, scenario):
     prompt = f"You are a problem modeler and you are provided with an example of a VRP problem below, please translate it into a plain natural language description in {scenario} and output the description directly.\n"
     prompt += f"Specifically, the problem has the following parameters:\n"
@@ -28,7 +24,7 @@ def generate_prompt(instance_data, scenario):
     prompt += f"Vehicle Capacity: {instance_data['capacity_original']}, there is no capacity limitation if the capacity is equal to 0.\n"
     prompt += f"Open Route: {instance_data['open_route']}, where 'True' means the routes could be open while 'False' means the routes should be closed \n"
     prompt += f"Speed: {instance_data['speed']}\n"
-    prompt += f"Please notice that your description should be complete enough to recover the whole problem instance, namely, all the parameters should be included in your description.\n"
+    prompt += f"Please notice that your description should be complete enough to recognize the problem type, you can omit specific parameter values from the description.\n"
     prompt += f"Return the description directly without any additional explanation or information.\n"
     return prompt
 
@@ -41,7 +37,6 @@ def generate_natural_language_description(instance_data, scenario, llm):
     response = llm.get_text(content=prompt)
     return response
 
-# Function to save the generated descriptions as a dataset
 # Function to convert TensorDict to a simple dictionary
 def convert_tensor_dict(tensor_dict):
     # Assuming tensor_dict is a dictionary-like object
@@ -54,48 +49,60 @@ def save_to_dataset(descriptions, variant_names, td_data, pclass='VRP'):
     
     # Convert TensorDict to a JSON-serializable format
     serialized_td_data = [convert_tensor_dict(data) for data in td_data]
+    print(len(serialized_td_data))
+    print(len(descriptions))
+    print(len(variant_names))
     
     data = [{"variant_name": variant_names[i], "description": descriptions[i], 'data': serialized_td_data[i]} for i in range(len(descriptions))]
     
     with open(filename, 'w') as f:
         json.dump(data, f, indent=4)
 
+# Generate instances directly from the generator and save them as JSON
+def generate_and_save_vrp_instances(generator, scenario_list, plist, num_instances=100, pclass='VRP'):
+    descriptions = []
+    variant_names = []
+    td_datas = []
+
+    # Generate and process each problem type in plist
+    for problem_type in plist:
+        # Set the variant preset for the generator
+        generator.variant_preset = problem_type.lower()  # Match problem type with preset
+
+        # Generate the data for the given problem type
+        td_data = generator._generate(batch_size=(num_instances,))
+
+        # Append the problem type to the variant names
+        variant_names.extend([problem_type] * num_instances)
+
+        # Generate natural language descriptions for each instance
+        for idx in range(len(td_data)):
+            print(f"Processing variant {problem_type}...")
+
+            # Randomly select a scenario
+            scenario = np.random.choice(scenario_list)
+            
+            # Generate natural language description
+            description = generate_natural_language_description(td_data[idx], scenario, llm)
+            
+            # Print or save the description
+            print(f"Description: {description}")
+            
+            # Append the description to the list
+            descriptions.append(description)
+            td_datas.append(td_data[idx])
+
+    # Save all descriptions, variant names, and TensorDict data to a JSON file
+    save_to_dataset(descriptions, variant_names, td_datas, pclass)
 
 
-# Assuming you have the following setup
-generator = MTVRPGenerator(num_loc=10, variant_preset="all")
-env = MTVRPEnv(generator, check_solution=False)
-
-# Define the real-world scenario (choose one from the options
+# Define a real-world scenario list
 scenario_list = ['field service management', 'waste collection', 'emergency response', 'mobile surveillance', 'goods delivery', 'advertising placement', 'personnel scheduling']
 
-# Generate data (mixed variants)
-instance_num = 1
-td_data = env.generator(instance_num)
-variant_names = env.get_variant_names(td_data)
-scenarios = np.random.choice(scenario_list, instance_num)
+# Define the generator and problem types (plist)
+generator = MTVRPGenerator(num_loc=50, variant_preset="all")
+# plist = ['cvrp', 'cvrpl', 'cvrptw', 'ovrp', 'vrpb']  # Example problem types/
+plist = ['CVRP', 'CVRPL', 'CVRPTW', 'OVRP', 'VRPB']  # Example problem types
 
-# LLM API initialization
-llm = LLM_api(model="deepseek-reasoner", key_idx=0)
-
-# List to store descriptions
-plist = ['CVRP', 'CVRPL', 'CVRPW', 'OVRP', 'VRPB']
-
-
-descriptions = []
-
-# Loop through each instance and generate a description
-for idx in range(len(td_data)):
-    
-    print(f"Processing variant {variant_names[idx]}...")
-    
-    description = generate_natural_language_description(td_data[idx], scenarios[idx], llm)
-    
-    # Print or save the description
-    print(f"Description: {description}")
-    
-    # Append the description to the list
-    descriptions.append(description)
-
-# Save the descriptions to a file
-save_to_dataset(descriptions, variant_names, td_data)
+# Generate and save the VRP instances as a JSON file
+generate_and_save_vrp_instances(generator, scenario_list, plist, num_instances=2, pclass='VRP')
