@@ -14,6 +14,7 @@ def solve(
         max_runtime: float,
         problem_type: str,
         num_runs: int,
+        max_trials:int,
         solver_loc: str,
 ) -> Tensor:
     """
@@ -29,6 +30,8 @@ def solve(
         The problem type for LKH3.
     num_runs
         The number of runs to perform and returns the best result.
+    max_trials
+        Maximum number of search trials per run. Controls how many solution modifications the solver attempts before stopping. Used to balance between speed and solution quality.
     solver_loc
         The location of the LKH3 solver executable.
 
@@ -38,7 +41,7 @@ def solve(
         A tuple consisting of the action and the cost, respectively.
     """
     problem = instance2problem(instance, problem_type, LKH_SCALING_FACTOR)
-    action = _solve(problem, max_runtime, num_runs, solver_loc)
+    action = _solve(problem, max_runtime, num_runs, max_trials, solver_loc)
     return action
 
 
@@ -46,6 +49,7 @@ def _solve(
         problem: lkh.LKHProblem,
         max_runtime: float,
         num_runs: int,
+        max_trials: int,
         solver_loc: str,
 ) -> Tensor:
     """
@@ -70,6 +74,7 @@ def _solve(
         problem=problem,
         time_limit=max_runtime,
         runs=num_runs,
+        max_trials=max_trials,
     )
 
     action = routes2action(routes)
