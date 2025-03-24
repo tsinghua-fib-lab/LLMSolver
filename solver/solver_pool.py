@@ -8,6 +8,7 @@ from functools import partial
 from multiprocessing import Pool
 
 from envs.mtvrp import MTVRPEnv
+from envs.utils import rollout, greedy_policy
 from solver.model_utils import get_policy, get_model
 from solver.utils import mtvrp2anyvrp
 
@@ -57,6 +58,7 @@ class SolverPool:
                     self.algo_solver_dict["lkh"] = lkh_solver.solve
                     self.lkh_path = kwargs.get("lkh_path", "./lkh_solver/LKH-3.0.13/LKH/")
                     self.lkh_num_runs = kwargs.get("lkh_num_runs", 10)
+                    self.lkh_max_trials = kwargs.get("lkh_max_trials", 10000)
                 elif solver_name == "ortools":
                     import solver.ortools_solver.ortools_solver as ortools_solver
                     self.algo_solver_dict["ortools"] = ortools_solver.solve
@@ -147,6 +149,7 @@ class SolverPool:
         _solve = self.algo_solver_dict[solver_name]
         if solver_name == "lkh":
             kwargs["num_runs"] = self.lkh_num_runs
+            kwargs["max_trials"] = self.lkh_max_trials
             kwargs["solver_loc"] = self.lkh_path
 
         func = partial(_solve, max_runtime=max_runtime, problem_type=problem_type, **kwargs)
@@ -225,23 +228,25 @@ class SolverPool:
 
             return out["best_aug_actions"]
 
-    def _solve(self, instances: TensorDict, solver_name: str = "rf-transformer", problem_type="cvrp", **kwargs):
-        if solver_name in self.model_solver_dict:
+    def _solve(self, instances: TensorDict, solver_name: str = "rf-transformer", problem_type="cvrp",
+               max_runtime: int = 30, num_procs=32, **kwargs):
+        if solver_name == 'greedy':
+            env = kwargs.get("env", MTVRPEnv())
+            return rollout(env, instances, greedy_policy)
+        elif solver_name in self.model_solver_dict:
             return self.model_solve(instances=instances, solver_name=solver_name, problem_type=problem_type, **kwargs)
         elif solver_name in self.algo_solver_dict:
-            return self.algo_solve(instances=instances, solver_name=solver_name, problem_type=problem_type, **kwargs)
+            return self.algo_solve(max_runtime=max_runtime, instances=instances, solver_name=solver_name,
+                                   problem_type=problem_type, num_procs=num_procs, **kwargs)
         else:
             raise ValueError(f"Unknown solver: {solver_name}")
 
     def solve(self, instances: TensorDict, solver_name: str = "rf-transformer", problem_type: str = "cvrp",
-              timeout: int = 30, **kwargs):
-        with concurrent.futures.ThreadPoolExecutor() as executor:
-            future = executor.submit(self._solve, instances, solver_name, problem_type, **kwargs)
-            try:
-                return future.result(timeout=timeout)  # Wait for the result within timeout
-            except concurrent.futures.TimeoutError:
-                print("Evaluation timed out! Returning default value.")
-                return "<TimeoutError>"  # Or handle timeout case differently
-            except Exception as e:
-                print(f"An error occurred: {e}")
-                return "<RuntimeError>"  # Or handle other exceptions differently
+              timeout: int = 30, num_procs=32, **kwargs):
+        try:
+            score = self._solve(instances=instances, solver_name=solver_name, problem_type=problem_type,
+                                max_runtime=timeout, num_procs=num_procs, **kwargs)
+        except Exception as e:
+            print(e)
+            return "<RuntimeError>"
+        return score
