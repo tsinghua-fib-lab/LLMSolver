@@ -382,6 +382,7 @@ class MTVRPEnv(RL4COEnvBase):
 
     @staticmethod
     def check_solution_validity(td: TensorDict, actions: torch.Tensor):
+        esp = 10e-8
         batch_size, n_loc = td["demand_linehaul"].size()
         locs = td["locs"]
         n_loc -= 1  # exclude depot
@@ -424,7 +425,7 @@ class MTVRPEnv(RL4COEnvBase):
                 td["open_route"].squeeze(-1) & (next_node == 0)
             )  # do not count back to depot for open route
             assert torch.all(
-                curr_length <= td["distance_limit"].squeeze(-1)
+                curr_length <= td["distance_limit"].squeeze(-1) + esp
             ), "Route exceeds distance limit"
             curr_length[next_node == 0] = 0.0  # reset length for depot
 
@@ -473,12 +474,12 @@ class MTVRPEnv(RL4COEnvBase):
 
             # Assertions: total used linehaul and backhaul capacity should not exceed vehicle capacity
             assert (
-                used_cap_l <= td["vehicle_capacity"]
+                used_cap_l <= td["vehicle_capacity"] + esp
             ).all(), "Used more linehaul than capacity: {} / {}".format(
                 used_cap_l, td["vehicle_capacity"]
             )
             assert (
-                used_cap_b <= td["vehicle_capacity"]
+                used_cap_b <= td["vehicle_capacity"] + esp
             ).all(), "Used more backhaul than capacity: {} / {}".format(
                 used_cap_b, td["vehicle_capacity"]
             )
