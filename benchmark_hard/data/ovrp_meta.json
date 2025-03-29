@@ -1,0 +1,1002 @@
+[
+    {
+        "title": "Grocery Store Delivery Service",
+        "content": "Your local grocery store offers home delivery for online orders. Each morning, trucks load up at the store (<loc_depot>) with bags of groceries (<demand>) for customers across the neighborhood (<loc_customer>).  \nEach truck can only carry so much (<capacity>), and drivers finish their shift after the last delivery\u2014no need to return to the store.  \nThe goal? Plan routes that:  \n\u2713 Fit all orders without overloading any truck.  \n\u2713 Minimize total driving distance to save fuel and time.  \n\u2713 Let drivers end their day close to home.",
+        "tags": [
+            "loc_depot",
+            "demand",
+            "loc_customer",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Waste Collection for Recycling Centers",
+        "content": "Your city\u2019s recycling trucks start their day at the depot (<loc_depot>) and visit scattered recycling bins (<loc_customer>) to collect paper, plastic, and glass.  \nEach bin has a different weight (<demand>), and trucks have a strict weight limit (<capacity>).  \nAfter emptying their last bin, drivers park at a nearby lot instead of driving back to the depot.  \nThe challenge: Design routes that:  \n\u2713 Never exceed truck capacity.  \n\u2713 Cover all bins in the fewest miles.  \n\u2713 Let drivers finish near their next job.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Food Bank Distribution",
+        "content": "A charity delivers donated food from a central warehouse (<loc_depot>) to soup kitchens and shelters (<loc_customer>).  \nEach location needs a different amount of food (<demand>), and vans can only carry so much (<capacity>).  \nDrivers end their shift after the last drop-off to avoid empty return trips.  \nThe goal is to:  \n\u2713 Deliver all food without overloading vans.  \n\u2713 Use the shortest possible routes to serve more people faster.  \n\u2713 Keep drivers from wasting time on unnecessary trips.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Mobile Vaccination Clinics",
+        "content": "During a health campaign, nurses travel from a hospital (<loc_depot>) to set up temporary vaccination sites (<loc_customer>).  \nEach site requires a specific number of vaccine doses (<demand>), and each nurse\u2019s cooler can only hold so many (<capacity>).  \nAfter the last vaccination, nurses head home instead of returning to the hospital.  \nThe task: Plan routes that:  \n\u2713 Distribute all doses without exceeding cooler limits.  \n\u2713 Minimize travel time to reach more communities.  \n\u2713 Let nurses finish near their homes.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Flower Delivery for Special Events",
+        "content": "A florist delivers bouquets from their shop (<loc_depot>) to wedding venues, restaurants, and homes (<loc_customer>) for events.  \nEach order has a different size (<demand>), and delivery vans have limited space (<capacity>).  \nDrivers finish their day after the last delivery\u2014no need to go back to the shop.  \nThe challenge: Arrange routes that:  \n\u2713 Fit all bouquets in one trip per van.  \n\u2713 Reduce total driving distance to keep flowers fresh.  \n\u2713 Let drivers end near their next job or home.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Coffee Truck Daily Stops",
+        "content": "Your mobile coffee truck starts each morning at the roastery (<loc_depot>) with a limited supply of beans, milk, and pastries (<capacity>).  \nYou\u2019ve got regular stops (<loc_customer>)\u2014office parks, construction sites\u2014where each orders a different amount (<demand> cups + snacks).  \nOnce you sell out at the last stop, you\u2019re done for the day (no need to drive back).  \nThe trick? Plan a route that:  \n\u2713 Never runs out of supplies early.  \n\u2713 Hits the busiest spots first when demand is high.  \n\u2713 Minimizes driving so you spend less on gas and more time serving customers.",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "loc_customer",
+            "demand"
+        ]
+    },
+    {
+        "title": "Moving Company Relocation Day",
+        "content": "Your moving company has one big truck (<capacity>) starting at the storage warehouse (<loc_depot>).  \nToday, you need to deliver furniture to three families (<loc_customer>), each with a different load size (<demand> boxes/beds).  \nAfter the last drop-off, the crew clocks out (no return trip).  \nOptimize the route so:  \n\u2022 The truck isn\u2019t overloaded.  \n\u2022 Heavy items go first to balance weight.  \n\u2022 Total miles are minimized\u2014saving time and diesel.",
+        "tags": [
+            "capacity",
+            "loc_depot",
+            "loc_customer",
+            "demand"
+        ]
+    },
+    {
+        "title": "Farm-to-Table Produce Run",
+        "content": "A small farm (<loc_depot>) packs its harvest into a van (<capacity> crates) to deliver to restaurants (<loc_customer>) that ordered varying amounts (<demand>).  \nSince produce spoils fast, the van must visit all spots in one go, and the driver can head home after the last drop.  \nGoal: Arrange stops so:  \n\u2713 No crate is left undelivered.  \n\u2713 The shortest route keeps veggies fresh.  \n\u2713 The van\u2019s capacity isn\u2019t exceeded (those watermelons are heavy!).",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "loc_customer",
+            "demand"
+        ]
+    },
+    {
+        "title": "City Park Maintenance Crew",
+        "content": "Your parks department sends out crews from the depot (<loc_depot>) with trucks carrying mulch, plants, and tools (<capacity>).  \nEach park (<loc_customer>) needs different supplies (<demand>) for weekly upkeep.  \nAfter the final park, the team leaves the truck there overnight.  \nPlan routes where:  \n\u2022 Supplies match each park\u2019s needs exactly.  \n\u2022 Crews zigzag less between distant parks.  \n\u2022 No truck is overloaded with heavy soil bags.",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "loc_customer",
+            "demand"
+        ]
+    },
+    {
+        "title": "Festival Merchandise Delivery",
+        "content": "Your band is touring, and today you\u2019re selling T-shirts and posters from a van (<capacity>) starting at the merch warehouse (<loc_depot>).  \nYou\u2019ll restock vendors at five festival entrances (<loc_customer>), each needing different quantities (<demand>).  \nAfter the last stop, the van stays at the festival.  \nThe challenge? Design routes that:  \n\u2713 Prevent stockouts at popular gates.  \n\u2713 Avoid congested areas during peak hours.  \n\u2713 Keep the van\u2019s load under capacity (those poster tubes take up space!).",
+        "tags": [
+            "capacity",
+            "loc_depot",
+            "loc_customer",
+            "demand"
+        ]
+    },
+    {
+        "title": "Mobile Pet Vaccination Clinics",
+        "content": "Your animal welfare organization runs weekly pop-up clinics to vaccinate pets in underserved neighborhoods. Each morning, vet teams load their vans (<capacity> doses/equipment) at the central warehouse (<loc_depot>), then visit pre-scheduled community sites (<loc_customer>). Each stop requires different supplies (<demand>) based on registered pets. After the final clinic, vans park at that location for overnight storage. Plan routes that:  \n\u2713 Distribute all vaccines without overloading vans  \n\u2713 Minimize total travel time between stops  \n\u2713 Let staff end their day at the last clinic",
+        "tags": [
+            "capacity",
+            "loc_depot",
+            "loc_customer",
+            "demand"
+        ]
+    },
+    {
+        "title": "Art Gallery Installation Crew",
+        "content": "Your museum sends teams to install rotating exhibits at partner galleries (<loc_customer>) starting from the storage facility (<loc_depot>). Each truck carries fragile sculptures/paintings (<capacity> kg), with galleries needing specific pieces (<demand>). After the last installation, trucks stay parked to avoid unnecessary handling. Design routes that:  \n\u2022 Never exceed weight limits for delicate art  \n\u2022 Group nearby galleries to reduce transit vibrations  \n\u2022 Allow crews to clock out at the final location",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "Beach Cleanup Volunteer Shuttles",
+        "content": "Every Saturday, your environmental group transports volunteers from a rally point (<loc_depot>) to littered beach sections (<loc_customer>). Each zone needs a different number of cleanup kits (<demand>), and vans carry limited supplies (<capacity>). After dropping off at the last beach, drivers join the cleanup instead of returning. Optimize routes to:  \n\u2713 Distribute all kits without shortages  \n\u2713 Minimize fuel use on sandy access roads  \n\u2713 Let all participants start cleaning simultaneously",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Pop-Up Restaurant Ingredient Runs",
+        "content": "Your gourmet food truck prepares fresh meals at different lunch spots (<loc_customer>) daily. Each morning, you load ingredients (<demand> per location) from the commissary kitchen (<loc_depot>) into refrigerated trucks (<capacity>). After the final service stop, trucks go straight to overnight parking. Create routes that:  \n\u2022 Keep perishables within safe transport time windows  \n\u2022 Avoid overloading fridge space  \n\u2022 Reduce morning prep time by optimizing stop order",
+        "tags": [
+            "loc_customer",
+            "demand",
+            "loc_depot",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Tree Pruning City Crews",
+        "content": "The parks department dispatches teams from the depot (<loc_depot>) to trim trees in residential areas (<loc_customer>). Each truck carries wood chippers, ladders, and safety gear (<capacity>), with neighborhoods requiring different equipment (<demand>). Crews finish their shift after the last job. Plan routes that:  \n\u2713 Balance heavy equipment distribution  \n\u2713 Minimize idle time between locations  \n\u2713 Avoid backtracking across the city",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "Ice Cream Truck Summer Routes",
+        "content": "Your fleet of ice cream trucks starts each day at the depot (<loc_depot>), stocked with treats (<capacity> popsicles/cones).  \nNeighborhood stops (<loc_customer>) have pre-orders (<demand>)\u2014some want 50 cones for a block party, others just a few for their kids.  \nTrucks must visit all stops without running out of inventory or exceeding their freezer space.  \nAfter the last sale, drivers park at their final stop (no need to return to base).  \nGoal? Keep kids happy by optimizing routes to:  \n\u2713 Avoid melted inventory (minimize drive time).  \n\u2713 Cover all stops in one trip.  \n\u2713 Let drivers clock out near home.",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "loc_customer",
+            "demand"
+        ]
+    },
+    {
+        "title": "Charity Clothing Pickup",
+        "content": "A nonprofit collects donated clothes from donors\u2019 homes (<loc_customer>) using vans starting at their warehouse (<loc_depot>).  \nEach donor has bags (<demand>), and vans hold up to (<capacity>) before needing to unload.  \nDrivers drop full loads at thrift stores (last stop = end of shift).  \nThe challenge: Plan pickups so that:  \n\u2022 No van overflows with sweaters.  \n\u2022 Maximize daily collections.  \n\u2022 Drivers finish near where they live.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "demand",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Solar Panel Installation Crews",
+        "content": "Your green energy company installs rooftop solar panels across the county.  \nCrews start at the supply yard (<loc_depot>), loading trucks with panels/tools (<capacity>).  \nEach job site (<loc_customer>) needs specific equipment (<demand>).  \nAfter the last installation, crews leave their trucks onsite overnight.  \nOptimize routes to:  \n\u2713 Fit all gear in one trip.  \n\u2713 Minimize zigzagging between neighborhoods.  \n\u2713 Let workers head home directly from their final job.",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "loc_customer",
+            "demand"
+        ]
+    },
+    {
+        "title": "Farmers\u2019 Market Produce Haul",
+        "content": "Local farms (<loc_customer>) send fresh veggies to a central market (<loc_depot>) via delivery trucks.  \nEach farm\u2019s harvest (<demand>) varies daily\u2014today it\u2019s 200 lbs of tomatoes, 50 lbs of kale.  \nTrucks can carry up to (<capacity>) before making a market drop-off (last stop = end of route).  \nGoal? Plan pickups to:  \n\u2022 Avoid spoiled produce (shortest routes).  \n\u2022 Use fewest trucks possible.  \n\u2022 Let drivers finish near the market\u2019s coffee stand.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "demand",
+            "capacity"
+        ]
+    },
+    {
+        "title": "City Christmas Tree Lighting",
+        "content": "The parks department decorates downtown with holiday trees.  \nCrews start at the storage lot (<loc_depot>), loading flatbeds with trees/lights (<capacity>).  \nEach plaza (<loc_customer>) gets a different number of trees (<demand>).  \nAfter the last tree is lit, crews celebrate nearby\u2014no need to drive back.  \nThe puzzle? Design routes that:  \n\u2713 Decorate every plaza in one evening.  \n\u2713 Don\u2019t overload trucks with pine needles.  \n\u2713 Minimize traffic delays for merry drivers.",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "loc_customer",
+            "demand"
+        ]
+    },
+    {
+        "title": "Mobile Car Wash Service",
+        "content": "Your mobile car wash business operates a fleet of vans that drive to customers' homes (<loc_customer>) to wash their cars on-site.  \nEach van starts the day at your garage (<loc_depot>) loaded with water, soap, and equipment (<capacity>).  \nDifferent jobs require different amounts of supplies (<demand>), like SUVs needing more water than compact cars.  \nAfter the last wash of the day, your crew parks the van at that neighborhood\u2019s storage lot\u2014no need to drive back to the garage.  \nThe goal? Plan routes that:  \n\t\u2713 Never exceed a van\u2019s supply limit.  \n\t\u2713 Minimize total driving distance between jobs.  \n\t\u2713 Let crews end their shift close to home.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "Community Garden Compost Collection",
+        "content": "Your city\u2019s sustainability team coordinates compost pickups from community gardens (<loc_customer>) using electric trucks.  \nTrucks start at the recycling center (<loc_depot>) with empty bins (<capacity>).  \nEach garden has a different amount of compost (<demand>) ready for collection.  \nAfter the last pickup, trucks unload at a processing facility near the final stop\u2014no return trip needed.  \nThe challenge: Design routes that:  \n\t\u2713 Keep trucks from overflowing with compost.  \n\t\u2713 Reduce total miles driven (to save battery life).  \n\t\u2713 End near the processing plant to streamline unloading.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "Wedding Photographer Travel Plan",
+        "content": "A photography team books back-to-back wedding gigs (<loc_customer>) across the county on a busy Saturday.  \nThey start at their studio (<loc_depot>) with gear (<capacity>), like cameras and lighting kits.  \nEach wedding requires different equipment (<demand>), e.g., a drone for outdoor venues.  \nAfter the final shoot, photographers go home\u2014no need to return to the studio.  \nOptimize their schedule to:  \n\t\u2713 Fit all gear in one car per photographer.  \n\t\u2713 Minimize rush-time driving between venues.  \n\t\u2713 Let them finish near their homes.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "Streetlight Maintenance Crew",
+        "content": "Your city\u2019s electricians repair streetlights (<loc_customer>) using trucks stocked with bulbs and tools (<capacity>).  \nThey depart from the utilities depot (<loc_depot>) each morning.  \nEach broken light needs specific parts (<demand>), like LED panels or fuses.  \nAfter the last repair, crews leave their truck at a nearby parking zone.  \nPlan routes that:  \n\t\u2713 Never overload trucks with spare parts.  \n\t\u2713 Reduce driving time between lights.  \n\t\u2713 End shifts near crew break areas.",
+        "tags": [
+            "loc_customer",
+            "capacity",
+            "loc_depot",
+            "demand"
+        ]
+    },
+    {
+        "title": "Food Truck Festival Participation",
+        "content": "Five taco trucks must visit different lunch spots (<loc_customer>) across downtown during a food festival.  \nThey start at the commissary kitchen (<loc_depot>) loaded with ingredients (<capacity>).  \nEach stop has estimated sales (<demand>), e.g., 50 lbs of meat at the business district.  \nAfter the last sale, trucks park at a designated overnight lot.  \nDesign routes that:  \n\t\u2713 Avoid running out of ingredients mid-route.  \n\t\u2713 Minimize cross-town driving during peak hours.  \n\t\u2713 Let staff finish near public transit hubs.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "Mobile Laundry Service for Seniors",
+        "content": "Your nonprofit picks up dirty laundry from homebound seniors (<loc_customer>) and delivers it clean the next day.  \nStarting at the laundromat (<loc_depot>), your vans can carry only so many bags (<capacity>). Each senior has a different load size (<demand>).  \nDrivers drop off clean laundry at their last stop and head home\u2014no need to circle back.  \nThe goal? Plan routes that:  \n\u2713 Fit all pickups/drop-offs in one trip.  \n\u2713 Never overload vans.  \n\u2713 Minimize miles driven so you can serve more seniors.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "Citywide Plant Watering Crew",
+        "content": "The parks department keeps public planters alive in summer.  \nTrucks start at the water station (<loc_depot>), carrying limited water (<capacity>). Each planter (<loc_customer>) needs a different amount (<demand>).  \nAfter watering the last one, crews clock out\u2014no returning to base.  \nThe challenge: Design routes that:  \n\u2713 Cover all thirsty plants.  \n\u2713 Don\u2019t run out of water mid-route.  \n\u2713 Reduce driving time so workers avoid overtime.",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "loc_customer",
+            "demand"
+        ]
+    },
+    {
+        "title": "Toy Donation Drive for Holidays",
+        "content": "Your charity collects toys from donors (<loc_customer>) to deliver to kids in need.  \nStarting at the warehouse (<loc_depot>), volunteers\u2019 cars hold just <capacity> gifts. Each donor has <demand> toys to give.  \nDrivers end their day after the last pickup.  \nOptimize routes to:  \n\u2713 Collect every donated toy.  \n\u2713 Never overstuff a car.  \n\u2713 Keep drivers\u2019 travel short (they\u2019re volunteers!).",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "Rideshare Grocery Trips for Non-Drivers",
+        "content": "Your app helps elderly neighbors shop by pairing them with drivers.  \nFrom the grocery store (<loc_depot>), drivers can take <capacity> bags max. Each rider (<loc_customer>) buys <demand> bags.  \nDrivers go home after their last drop-off.  \nPlan routes that:  \n\u2713 Deliver all groceries fresh.  \n\u2713 Respect car space limits.  \n\u2713 Minimize detours (cheaper fares = more users).",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "loc_customer",
+            "demand"
+        ]
+    },
+    {
+        "title": "Pop-Up COVID Test Kit Delivery",
+        "content": "During outbreaks, your team delivers test kits to community centers (<loc_customer>).  \nStarting at the health department (<loc_depot>), each car carries <capacity> kits. Locations order <demand> kits.  \nDrivers finish at their last stop to assist onsite.  \nPrioritize routes that:  \n\u2713 Cover all high-need areas fast.  \n\u2713 Avoid overloading cars.  \n\u2713 Reduce total travel time to curb spread.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "Mobile Blood Donation Drives",
+        "content": "Your blood bank operates mobile donation vans that travel to workplaces, schools, and community centers (<loc_customer>) to collect blood. Each van starts at the blood bank (<loc_depot>) with empty collection kits and can carry up to <capacity> units of blood before needing to drop it off at the processing lab (their final stop). Each location expects a different number of donors (<demand>). Plan routes that:  \n\u2713 Never exceed van capacity.  \n\u2713 Minimize total travel time so donors aren\u2019t kept waiting.  \n\u2713 Let vans end their day at the lab instead of returning to base.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "Citywide Litter Bin Emptying",
+        "content": "Your sanitation team must empty overflowing public trash bins (<loc_customer>) across the city. Trucks start at the depot (<loc_depot>) with empty compactors (<capacity> liters) and collect varying amounts of waste (<demand> liters per bin). After their last stop, crews park at a designated lot near that bin\u2014no backtracking. Optimize routes to:  \n- Avoid overfilling trucks mid-route.  \n- Hit the dirtiest bins first.  \n- Reduce fuel costs by minimizing miles driven.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "Mobile Vet Visits for Rural Farms",
+        "content": "A veterinary service brings care to livestock farms (<loc_customer>) in remote areas. Vans start at the clinic (<loc_depot>) loaded with vaccines and equipment (<capacity> kg). Each farm needs different supplies (<demand> kg). After the last farm, vans stay overnight nearby for next-day appointments. Design routes that:  \n\u2713 Fit all supplies in one trip per van.  \n\u2713 Prioritize farms with urgent cases.  \n\u2713 Cut down winding country-road travel.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "Coffee Cart Office Stops",
+        "content": "Your coffee cart visits corporate offices (<loc_customer>) downtown to sell lattes and pastries. Starting from the kitchen (<loc_depot>), the cart carries limited fresh stock (<capacity> items). Each office orders different quantities (<demand>). The cart ends its shift at the last office to avoid a rush-hour drive back. Plan a route that:  \n- Sells out all inventory.  \n- Hits the busiest offices before their lunch breaks.  \n- Avoids congested streets.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "Holiday Decorations Installation",
+        "content": "Your crew hangs festive lights and decorations at city landmarks (<loc_customer>). Trucks start at the warehouse (<loc_depot>) with fragile boxes (<capacity> kg). Each site requires specific decor (<demand> kg). Workers finish at the last site to celebrate\u2014no returns! Balance routes to:  \n\u2713 Protect decorations by minimizing bumpy roads.  \n\u2713 Hit prime locations before dark.  \n\u2713 Keep trucks from being overloaded.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "Mobile COVID Test Kit Delivery",
+        "content": "Your city\u2019s health department needs to distribute at-home COVID test kits from a central warehouse (<loc_depot>) to neighborhood pickup points (<loc_customer>).  \nEach stop requests a different number of kits (<demand>), and your delivery vans can only carry so many (<capacity>).  \nAfter dropping off the last batch, drivers clock out\u2014no need to return to the warehouse.  \nThe goal? Plan routes that:  \n\u2713 Deliver all kits without overloading vans.  \n\u2713 Minimize total miles driven.  \n\u2713 Let drivers end their shift close to home.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Toy Donation Drive for Holidays",
+        "content": "A charity collects toys from drop-off bins (<loc_customer>) across town to deliver to a children\u2019s shelter (<loc_depot>).  \nEach bin has a different number of toys (<demand>), and your volunteers\u2019 cars have limited trunk space (<capacity>).  \nAfter unloading at the shelter, drivers can head home.  \nThe challenge: Assign bins to drivers so that:  \n\u2022 No car is overloaded.  \n\u2022 Total driving distance is minimized.  \n\u2022 Drivers finish near their own neighborhoods.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "demand",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Pop-Up Restaurant Ingredient Runs",
+        "content": "A trendy food truck (<loc_depot>) sources fresh ingredients daily from farms (<loc_customer>) before heading to its lunch spot.  \nEach farm provides a different quantity of produce (<demand>), and the truck\u2019s fridge has limited space (<capacity>).  \nAfter the last pickup, the truck drives straight to its sales location.  \nOptimize routes to:  \n\u2713 Grab all ingredients without exceeding fridge capacity.  \n\u2713 Keep pre-service driving short to save time and fuel.  \n\u2713 Avoid backtracking to the depot.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Citywide Plant Watering Crew",
+        "content": "A municipal team waters public flower beds (<loc_customer>) using a water truck filled at a central station (<loc_depot>).  \nEach bed needs a different amount of water (<demand>), and the truck\u2019s tank holds (<capacity>) liters.  \nAfter the last watering, the crew parks the truck overnight near the final stop.  \nPlan routes that:  \n\u2022 Never run out of water mid-route.  \n\u2022 Minimize total distance driven.  \n\u2022 Let the crew finish near their homes.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "demand",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Mobile Vet Visits for Rural Farms",
+        "content": "A veterinary service drives from its clinic (<loc_depot>) to treat animals at remote farms (<loc_customer>), carrying vaccines and meds.  \nEach farm requires different supplies (<demand>), and the vet\u2019s van has limited storage (<capacity>).  \nAfter the last farm visit, the vet heads home instead of returning to the clinic.  \nDesign routes that:  \n\u2713 Fit all supplies in the van.  \n\u2713 Reduce total travel time for the vet.  \n\u2713 Group nearby farms together efficiently.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Mobile Hair Salon Appointments",
+        "content": "Your mobile hair salon van starts each morning at the studio (<loc_depot>), loaded with equipment (<capacity> kg of scissors, dyes, etc.).  \nClients (<loc_customer>) book appointments at their homes, each requiring different services (<demand> kg of supplies).  \nAfter the last haircut, the stylist parks the van near their own home\u2014no need to drive back to the studio.  \nThe goal? Plan routes that:  \n\u2713 Fit all tools in the van without overloading it.  \n\u2713 Minimize driving between clients.  \n\u2713 Let stylists end their day closer to home.",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "loc_customer",
+            "demand"
+        ]
+    },
+    {
+        "title": "Community Fridge Restocking",
+        "content": "A nonprofit manages 10 community fridges (<loc_customer>) where neighbors donate perishable food.  \nEach morning, a refrigerated truck picks up donations from the warehouse (<loc_depot>), carrying up to <capacity> kg of food.  \nDifferent fridges need different amounts (<demand>) based on local demand.  \nAfter the last drop-off, the truck parks at a staff member\u2019s house to save fuel.  \nThe challenge: Assign routes that restock all fridges quickly, avoid spoiled food, and minimize miles driven.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "City Bench Repair Crew",
+        "content": "The parks department sends out crews to fix broken benches citywide.  \nWorkers start at the depot (<loc_depot>) with a truck full of wood, paint, and tools (<capacity>).  \nEach bench (<loc_customer>) needs specific materials (<demand>).  \nAfter the last repair, the crew leaves the truck at a nearby parking lot\u2014no backtracking.  \nOptimize routes to:  \n\u2713 Carry all supplies in one trip.  \n\u2713 Hit benches in the most logical order.  \n\u2713 Reduce overtime by minimizing drive time.",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "loc_customer",
+            "demand"
+        ]
+    },
+    {
+        "title": "Mobile Music Lessons",
+        "content": "A piano teacher travels to students\u2019 homes (<loc_customer>) with a van carrying instruments (<capacity> kg of keyboards, amps, etc.).  \nEach lesson requires different gear (<demand>).  \nThey start from home (<loc_depot>) and finish at the last student\u2019s house.  \nThe goal? Schedule lessons so:  \n\u2713 No van overload (those keyboards are heavy!).  \n\u2713 Drive the shortest total distance.  \n\u2713 Avoid zigzagging across town unnecessarily.",
+        "tags": [
+            "loc_customer",
+            "capacity",
+            "demand",
+            "loc_depot"
+        ]
+    },
+    {
+        "title": "Election Ballot Collection",
+        "content": "On voting day, election workers collect sealed ballots from drop boxes (<loc_customer>) across the district.  \nTeams start at the election office (<loc_depot>) with secure bags (<capacity> ballots per vehicle).  \nEach box has a different number of ballots (<demand>).  \nAfter the last pickup, drivers take ballots directly to the counting center (no return).  \nPlan routes to:  \n\u2713 Never exceed bag capacity.  \n\u2713 Ensure all boxes are emptied before deadlines.  \n\u2713 Minimize miles to save taxpayer money.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "Mobile Hair Salon Appointments",
+        "content": "Your mobile hair salon serves clients who can't easily visit a traditional salon\u2014elderly residents, busy parents, or people with disabilities.  \nYou start your day at home (<loc_depot>) with a van stocked with equipment (<capacity>).  \nEach client (<loc_customer>) books a service requiring specific tools (e.g., coloring kits or scissors, weighing <demand>).  \nAfter the last haircut, you park your van nearby instead of driving home.  \nThe goal? Plan routes that:  \n\u2713 Fit all tools in your van without overloading it.  \n\u2713 Minimize driving between appointments.  \n\u2713 Let you finish near your last client, saving time and gas.",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "loc_customer",
+            "demand"
+        ]
+    },
+    {
+        "title": "Community Fridge Restocking",
+        "content": "A nonprofit maintains public fridges (<loc_customer>) where anyone can take free food.  \nVolunteers start at the food bank (<loc_depot>) with refrigerated trucks (<capacity>).  \nEach fridge needs different perishables (<demand> kg of milk, veggies, etc.).  \nAfter the last drop-off, trucks stay parked (no empty returns).  \nThe challenge:  \n\u2022 Avoid spoilage by minimizing travel time.  \n\u2022 Never exceed a truck\u2019s cold storage limit.  \n\u2022 Cover all fridges in one trip so food stays fresh.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "City Bench Repair Crew",
+        "content": "Your parks department fixes broken benches across town.  \nCrews start at the storage yard (<loc_depot>) with trucks carrying lumber, paint, and tools (<capacity>).  \nEach bench (<loc_customer>) needs materials (<demand> kg) based on damage.  \nAfter the last repair, crews leave trucks near the final site.  \nOptimize routes to:  \n\u2713 Fit all supplies in one trip per truck.  \n\u2713 Reduce driving so more benches get fixed daily.  \n\u2713 Avoid backtracking to the yard.",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "loc_customer",
+            "demand"
+        ]
+    },
+    {
+        "title": "Mobile Music Lessons",
+        "content": "A music teacher travels to students\u2019 homes for lessons.  \nThey start at their studio (<loc_depot>) with instruments in their car (<capacity>): guitars, keyboards, etc.  \nEach student (<loc_customer>) requires specific gear (<demand> kg).  \nAfter the last lesson, the teacher heads home from that neighborhood.  \nPlan routes to:  \n\u2022 Never overload the car with instruments.  \n\u2022 Group nearby students to minimize drive time.  \n\u2022 End the day close to the final lesson.",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "loc_customer",
+            "demand"
+        ]
+    },
+    {
+        "title": "Election Ballot Collection",
+        "content": "After voting ends, sealed ballot boxes (<loc_customer>) must be transported to a counting center.  \nTeams start at the election office (<loc_depot>) with secure vans (<capacity>).  \nEach box weighs (<demand> kg) and must stay intact.  \nVans stay at the counting center after the last delivery.  \nThe priority? Routes that:  \n\u2713 Guarantee no van is overloaded.  \n\u2713 Deliver all boxes quickly to ensure timely results.  \n\u2713 Eliminate unnecessary return trips.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "Mobile Coffee Cart Office Stops",
+        "content": "Your coffee cart business serves fresh brews to office buildings downtown, starting each morning from your kitchen (<loc_depot>).  \nEach office (<loc_customer>) orders a different number of cups (<demand>), and your carts can only carry so much (<capacity> cups + supplies).  \nAfter the last stop, baristas head home\u2014no need to return to the kitchen.  \nThe goal? Plan routes that:  \n\u2713 Never exceed cart capacity (no spilled coffee!).  \n\u2713 Minimize total travel time between stops.  \n\u2713 Let workers finish near their homes.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Pop-Up COVID Test Kit Delivery",
+        "content": "Health workers distribute test kits from a central warehouse (<loc_depot>) to neighborhood pickup points (<loc_customer>), each with a unique demand (<demand> kits).  \nVans have limited space (<capacity> kits) and drivers end their shift after the last drop-off.  \nOptimize routes to:  \n\u2713 Cover all stops without overloading vans.  \n\u2713 Reduce total miles driven (to save fuel and time).  \n\u2713 Avoid backtracking\u2014workers clock out at their final stop.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Mobile Vet Visits for Rural Farms",
+        "content": "A veterinary team drives from their clinic (<loc_depot>) to treat animals at scattered farms (<loc_customer>), each requiring different supplies (<demand> kg of medicine/tools).  \nTheir trucks can only hold so much (<capacity> kg). After the last farm, they head home instead of returning to the clinic.  \nPlan routes that:  \n\u2713 Fit all supplies in one trip per truck.  \n\u2713 Minimize driving on rough rural roads.  \n\u2713 Let vets finish near their homes.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Community Fridge Restocking",
+        "content": "Volunteers restock donated food from a central pantry (<loc_depot>) to public fridges (<loc_customer>) in food-insecure areas.  \nEach fridge needs a unique amount (<demand> kg), and cars have tight space limits (<capacity> kg).  \nDrivers finish their shift after the last drop-off.  \nThe challenge? Design routes that:  \n\u2713 Never overload a car (perishables spoil!).  \n\u2713 Prioritize fridges with urgent needs.  \n\u2713 Minimize total travel time to keep food fresh.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand",
+            "capacity"
+        ]
+    },
+    {
+        "title": "City Bench Repair Crew",
+        "content": "A maintenance team starts at the city yard (<loc_depot>) to fix broken benches (<loc_customer>), each needing different parts (<demand> kg of wood/hardware).  \nTheir trucks have limited cargo space (<capacity> kg). After the last repair, crews go home\u2014no return trip.  \nOptimize routes to:  \n\u2713 Carry all parts in one trip.  \n\u2713 Reduce driving time between benches.  \n\u2713 Let workers finish near their neighborhoods.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Mobile Car Wash Service",
+        "content": "Your mobile car wash business has a fleet of vans that drive to customers' homes or offices to clean their vehicles. Each morning, your team starts at the garage (<loc_depot>), loads up with water tanks and cleaning supplies (<capacity> liters), and visits clients (<loc_customer>) who've booked different service packages (<demand> supplies per wash). After the last car is sparkling clean, the crew clocks out right there\u2014no need to drag all the dirty towels back to base. The trick is planning routes that:  \n\u2713 Never exceed water/supply limits per van  \n\u2713 Group nearby appointments together  \n\u2713 Minimize total driving between jobs",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "loc_customer",
+            "demand"
+        ]
+    },
+    {
+        "title": "Community Fridge Restocking",
+        "content": "A nonprofit maintains public refrigerators around the city where anyone can take free food. Each morning, a refrigerated truck starts at the food bank (<loc_depot>) carrying perishables like milk and veggies (<capacity> kg). Volunteers visit fridges (<loc_customer>) to restock them based on how empty they are (<demand>). After topping up the last fridge, the driver parks the truck there overnight. You need routes that:  \n\u2713 Keep food fresh by minimizing travel time  \n\u2713 Match each fridge's needs without overloading the truck  \n\u2713 Let volunteers end their shift near public transit",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "loc_customer",
+            "demand"
+        ]
+    },
+    {
+        "title": "Mobile Music Lessons",
+        "content": "A music school sends teachers to students' homes for piano, guitar, etc. Teachers start at the school (<loc_depot>) with instruments/books (<capacity> items), then visit homes (<loc_customer>) for back-to-back lessons (<demand> time slots per student). After their last lesson, teachers go home\u2014not back to school. The scheduling challenge:  \n\u2713 No teacher can carry more instruments than their car fits  \n\u2713 Account for traffic between appointments  \n\u2713 Maximize the number of lessons per teacher per day",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "loc_customer",
+            "demand"
+        ]
+    },
+    {
+        "title": "Pop-Up COVID Test Kit Delivery",
+        "content": "During outbreaks, health workers deliver test kits from a warehouse (<loc_depot>) to temporary sites like libraries or churches (<loc_customer>). Each van carries fragile test kits (<capacity> boxes) and each site needs a specific amount (<demand>) based on local cases. After the last delivery, vans stay parked to become testing sites. Urgent priorities:  \n\u2713 Deliver all kits before noon (time windows)  \n\u2713 Don\u2019t overload vans\u2014kits are temperature-sensitive  \n\u2713 Minimize cross-town trips to reduce exposure risk",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "Farmers\u2019 Market Produce Haul",
+        "content": "Small farms team up to transport goods to weekly markets. Each Friday, a truck starts at the co-op (<loc_depot>), picks up crates from multiple farms (<loc_customer>), then delivers everything to the market\u2014where the truck stays until next week. Challenges:  \n\u2713 Each farm\u2019s contribution (<demand>) must fit with others (<capacity>)  \n\u2713 Berries can\u2019t sit in the truck too long (time constraints)  \n\u2713 Routes must hit remote farms early before roads get busy  \n\nEach scenario emphasizes real-world constraints (capacity, no return trips) while adding fresh twists like perishability, time sensitivity, or social impact. Let me know if you'd like any adjusted for specific industries!",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Mobile COVID Test Kit Delivery",
+        "content": "Your city\u2019s health department needs to distribute at-home test kits from the central warehouse (<loc_depot>) to pop-up pickup sites (<loc_customer>) in neighborhoods with high infection rates.  \nEach site requests a different number of kits (<demand>), and your delivery vans can only carry <capacity> kits at once.  \nDrivers finish their shifts after the last drop-off to avoid unnecessary trips back.  \nThe goal? Plan routes that:  \n\u2713 Deliver all kits without overloading vans.  \n\u2713 Minimize total miles driven to save fuel and time.  \n\u2713 Let drivers end near their homes for better work-life balance.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Mobile Hair Salon Appointments",
+        "content": "A stylist with a van equipped for haircuts must visit clients (<loc_customer>) who can\u2019t travel (e.g., seniors, busy parents).  \nThey start at home (<loc_depot>), carrying tools and products (<capacity>). Each appointment requires specific supplies (<demand>).  \nAfter the last haircut, the stylist stays in that area\u2014no backtracking.  \nOptimize routes to:  \n\u2713 Fit all booked appointments in one trip.  \n\u2713 Avoid overpacking the van.  \n\u2713 Reduce driving time so more clients can be served.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "Community Fridge Restocking",
+        "content": "Volunteers restock free community fridges (<loc_customer>) with donated groceries from a food bank (<loc_depot>).  \nEach fridge has unique needs (<demand>: milk, veggies, etc.), and cars can only hold <capacity> pounds.  \nDrivers finish after the last fridge to avoid empty return trips.  \nPlan routes that:  \n\u2713 Match donations to fridge needs.  \n\u2713 Prevent overloading cars.  \n\u2713 Minimize driving distance to keep costs low.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "demand",
+            "capacity"
+        ]
+    },
+    {
+        "title": "City Bench Repair Crew",
+        "content": "A maintenance team fixes broken park benches across town.  \nThey start at the depot (<loc_depot>), loading a truck with tools/wood (<capacity>). Each bench (<loc_customer>) needs parts (<demand>).  \nCrews clock out after the last repair.  \nOptimize routes to:  \n\u2713 Carry all supplies in one trip.  \n\u2713 Avoid exceeding truck capacity.  \n\u2713 Reduce travel time to fix more benches per day.",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "loc_customer",
+            "demand"
+        ]
+    },
+    {
+        "title": "Mobile Music Lessons",
+        "content": "A piano teacher drives to students\u2019 homes (<loc_customer>) from their studio (<loc_depot>), carrying sheet music/instruments (<demand>).  \nTheir car fits <capacity> items (e.g., keyboard, stands).  \nAfter the last lesson, they head home\u2014no return to the studio.  \nPlan routes to:  \n\u2713 Fit all gear needed for the day.  \n\u2713 Group nearby students together.  \n\u2713 Minimize drive time to reduce fatigue.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "demand",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Mobile Bike Repair Service",
+        "content": "Your bike repair van starts each day at the shop (<loc_depot>), loaded with tools and spare parts (<capacity>).  \nCustomers (<loc_customer>) across town book appointments\u2014each needing different repairs (requiring <demand> kg of parts).  \nAfter the last repair, the mechanic heads home instead of returning to the shop.  \nThe goal? Plan routes that:  \n\t\u2713 Fit all necessary parts in the van without overloading it.  \n\t\u2713 Minimize total driving distance between stops.  \n\t\u2713 Let mechanics end their day closer to home.",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "loc_customer",
+            "demand"
+        ]
+    },
+    {
+        "title": "Farmers\u2019 Cooperative Milk Collection",
+        "content": "Dairy farmers (<loc_customer>) in rural areas need their milk picked up daily and transported to the processing plant (<loc_depot>).  \nEach farm produces <demand> liters, and your refrigerated trucks can carry up to <capacity> liters before spoilage risk.  \nTrucks leave the plant empty, collect milk along optimized routes, and return directly to the plant\u2014but drivers clock out after unloading.  \nOptimize routes to:  \n\t\u2713 Collect all milk without exceeding truck capacity.  \n\t\u2713 Reduce total distance (saving fuel and time).  \n\t\u2713 Ensure drivers finish shifts at the plant.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "demand",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Mobile Childcare Playgroup Stops",
+        "content": "A nonprofit runs playgroups for toddlers in underserved neighborhoods using a converted bus (<capacity> kids).  \nThe bus starts at a central hub (<loc_depot>) and visits parks (<loc_customer>), where <demand> children join for 2-hour sessions.  \nAfter the last stop, the bus parks overnight at that location (no return trip).  \nPlan routes that:  \n\t\u2713 Never exceed safe seating limits.  \n\t\u2713 Minimize travel time between parks.  \n\t\u2713 Let staff end near their homes.",
+        "tags": [
+            "capacity",
+            "loc_depot",
+            "loc_customer",
+            "demand"
+        ]
+    },
+    {
+        "title": "Citywide Public Art Maintenance",
+        "content": "Your team maintains sculptures and murals citywide, starting from the arts depot (<loc_depot>).  \nEach artwork (<loc_customer>) needs cleaning supplies or tools weighing <demand> kg.  \nYour vans (<capacity> kg) carry ladders, solvents, etc.  \nCrews finish shifts after the last maintenance job\u2014no need to return.  \nOptimize routes to:  \n\t\u2713 Distribute supplies efficiently without overloading vans.  \n\t\u2713 Reduce driving time between sites.  \n\t\u2713 Let crews clock out near their last stop.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Pop-Up Museum Exhibit Tours",
+        "content": "A traveling museum exhibit moves between libraries (<loc_customer>) from a storage warehouse (<loc_depot>).  \nEach location hosts artifacts weighing <demand> kg, and your climate-controlled truck holds up to <capacity> kg.  \nAfter the final stop, the truck stays parked (no return).  \nDesign routes that:  \n\t\u2713 Transport fragile items without overloading.  \n\t\u2713 Minimize travel distance between libraries.  \n\t\u2713 Let drivers finish at the last venue.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "demand",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Mobile Bike Repair Service",
+        "content": "Your bike repair van starts each morning at the shop (<loc_depot>), stocked with tools and parts (<capacity>).  \nYou\u2019ve got appointments all over town (<loc_customer>)\u2014some need new tires (<demand>), others brake adjustments.  \nAfter the last repair, you park the van at that neighborhood\u2019s bike rack (no need to drive back).  \nThe goal? Plan a route that:  \n\u2713 Fits all parts/tools in one trip.  \n\u2713 Hits every stop without backtracking.  \n\u2713 Minimizes your driving time so you can fix more bikes per day.",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "loc_customer",
+            "demand"
+        ]
+    },
+    {
+        "title": "Farmers\u2019 Cooperative Milk Collection",
+        "content": "Dairy farmers drop off milk cans at local collection points (<loc_customer>) by 7 AM.  \nYour refrigerated truck starts at the co-op (<loc_depot>) and can carry <capacity> liters.  \nEach stop has a different amount of milk (<demand>).  \nAfter the last pickup, you drive straight to the processing plant (no return to base).  \nOptimize routes to:  \n\u2713 Collect all milk before it spoils.  \n\u2713 Avoid overloading the truck.  \n\u2713 Reduce total distance to save fuel costs.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "Mobile Childcare Playgroup Stops",
+        "content": "Your \"Playbus\" brings toys and activities to daycare centers (<loc_customer>), starting from the storage warehouse (<loc_depot>).  \nEach stop needs specific equipment (<demand>): art supplies, mini slides, etc.  \nThe bus holds up to <capacity> kg.  \nAfter the last play session, the bus parks at a nearby depot.  \nPlan routes to:  \n\u2713 Deliver all items without overloading.  \n\u2713 Minimize travel time between stops.  \n\u2713 Let the driver finish near their home.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "demand",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Citywide Public Art Maintenance",
+        "content": "Your crew maintains sculptures and murals across the city (<loc_customer>), starting from the arts depot (<loc_depot>).  \nEach site needs different supplies (<demand>): paint, cleaning solvents, etc.  \nThe work van carries max <capacity> kg.  \nAfter the last cleanup, the team heads home from that location.  \nGoals:  \n\u2713 Visit all artworks in one trip.  \n\u2713 Stay under weight limits.  \n\u2713 Reduce driving to focus more time on restoration.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "demand",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Pop-Up Museum Exhibit Tours",
+        "content": "Your traveling museum exhibit moves between libraries (<loc_customer>) from a central storage (<loc_depot>).  \nEach location gets artifacts weighing <demand> (fragile dinosaur bones, vintage posters, etc.).  \nThe climate-controlled truck fits <capacity> kg.  \nAfter the last drop-off, the truck stays there for the next tour.  \nOptimize routes to:  \n\u2713 Protect artifacts by minimizing bumpy road time.  \n\u2713 Never overload the truck.  \n\u2713 Let staff end near public transit.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "demand",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Mobile Bike Repair Service",
+        "content": "Your bike repair van starts each morning at the shop (<loc_depot>), loaded with tools and parts (<capacity>).  \nYou\u2019ve got appointments across town (<loc_customer>)\u2014some need tire patches (<demand>), others need brake adjustments.  \nAfter the last repair, you park the van near home instead of driving back to the shop.  \nThe goal? Plan routes that:  \n\u2713 Fit all parts/tools in the van without overloading.  \n\u2713 Minimize driving between stops.  \n\u2713 Let mechanics end their day closer to home.",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "loc_customer",
+            "demand"
+        ]
+    },
+    {
+        "title": "Farmers\u2019 Cooperative Milk Collection",
+        "content": "Dairy farmers (<loc_customer>) need their milk picked up daily and brought to the processing plant (<loc_depot>).  \nEach farm produces different amounts (<demand> liters), and your trucks can only carry so much (<capacity>).  \nAfter the last pickup, trucks unload at the plant\u2014no empty return trips!  \nOptimize routes to:  \n\u2713 Collect all milk without exceeding truck capacity.  \n\u2713 Reduce total miles driven (saving fuel).  \n\u2713 Let drivers finish near the plant for shift handovers.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "demand",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Pop-Up Museum Exhibit Tours",
+        "content": "Your museum sends out traveling exhibits (<demand> crates of artifacts) to schools (<loc_customer>) from a central warehouse (<loc_depot>).  \nEach van can safely carry fragile items up to (<capacity> crates).  \nAfter the last school drop-off, vans stay parked overnight near the final stop.  \nPlan routes that:  \n\u2713 Never stack crates beyond weight limits.  \n\u2713 Minimize travel time between schools.  \n\u2713 Avoid backtracking to the warehouse.",
+        "tags": [
+            "demand",
+            "loc_customer",
+            "loc_depot",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Mobile Childcare Playgroup Stops",
+        "content": "A playgroup van starts at the community center (<loc_depot>) with toys/snacks (<capacity>).  \nIt visits neighborhood parks (<loc_customer>) where kids await storytime (each stop needs <demand> supplies).  \nAfter the last session, the driver heads home\u2014no need to return to base.  \nDesign routes that:  \n\u2713 Pack all supplies without overloading.  \n\u2713 Hit parks in the most efficient order.  \n\u2713 Reduce idle time between stops.",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "loc_customer",
+            "demand"
+        ]
+    },
+    {
+        "title": "Citywide Public Art Maintenance",
+        "content": "Your maintenance crew starts at the arts depot (<loc_depot>) with cleaning supplies (<capacity>).  \nThey service murals and sculptures (<loc_customer>), each needing different materials (<demand>).  \nAfter the last cleanup, the team clocks out onsite.  \nOptimize routes to:  \n\u2713 Carry all supplies in one trip per truck.  \n\u2713 Minimize driving between art sites.  \n\u2713 Avoid sending half-empty trucks back.",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "loc_customer",
+            "demand"
+        ]
+    },
+    {
+        "title": "Mobile Bike Repair Service",
+        "content": "Your bike repair van starts at the shop (<loc_depot>) each morning, loaded with tools and spare parts (<capacity>).  \nYou\u2019ve got appointments at parks, offices, and homes (<loc_customer>)\u2014each needing different repairs (requiring <demand> kg of gear).  \nAfter the last tune-up, you park the van at that neighborhood instead of driving back.  \nThe goal? Plan routes that:  \n\u2713 Fit all tools in the van without overloading it.  \n\u2713 Minimize driving between stops.  \n\u2713 Let you clock out at the last job\u2014no unpaid return trips.",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "loc_customer",
+            "demand"
+        ]
+    },
+    {
+        "title": "Farmers\u2019 Cooperative Milk Collection",
+        "content": "Dairy farmers drop off milk cans at local collection points (<loc_customer>) by 7 AM.  \nYour refrigerated truck starts at the processing plant (<loc_depot>) and can carry <capacity> liters before needing to unload.  \nEach stop has a different volume of milk (<demand>).  \nAfter the last pickup, the truck heads straight to the plant\u2014no backtracking to empty spots.  \nOptimize the route to:  \n\u2713 Collect all milk before it spoils.  \n\u2713 Avoid overfilling the truck.  \n\u2713 Reduce fuel costs by taking the shortest path.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "Pop-Up Museum Exhibit Tours",
+        "content": "Your museum sends traveling exhibits (artifacts, displays) to schools and community centers (<loc_customer>).  \nThe fragile cargo (<demand> kg per stop) is packed in a truck (<capacity>) at the museum (<loc_depot>).  \nAfter the final setup, the crew leaves the truck there for the next tour leg.  \nPlan routes that:  \n\u2713 Never exceed weight limits (to protect exhibits).  \n\u2713 Minimize bumpy roads and long hauls.  \n\u2713 Let staff finish at the last venue\u2014no wasted trips back.",
+        "tags": [
+            "loc_customer",
+            "demand",
+            "capacity",
+            "loc_depot"
+        ]
+    },
+    {
+        "title": "Mobile Hair Salon Appointments",
+        "content": "Your stylist team drives a van stocked with equipment (<capacity>) from the salon (<loc_depot>) to clients\u2019 homes (<loc_customer>).  \nEach appointment needs specific tools (<demand> kg: chairs, dyes, etc.).  \nAfter the last haircut, the van stays parked nearby.  \nDesign routes that:  \n\u2713 Fit all gear without overloading.  \n\u2713 Group nearby clients to save driving time.  \n\u2713 End the day at the final house\u2014no returning to base.",
+        "tags": [
+            "capacity",
+            "loc_depot",
+            "loc_customer",
+            "demand"
+        ]
+    },
+    {
+        "title": "City Bench Repair Crew",
+        "content": "Your maintenance team starts at the depot (<loc_depot>) with a truck of supplies (<capacity>: wood, paint, tools).  \nBroken benches across the city (<loc_customer>) need different fixes (<demand> kg of materials each).  \nAfter the last repair, the crew leaves the truck at that park.  \nOptimize routes to:  \n\u2713 Carry enough supplies without overpacking.  \n\u2713 Fix all benches in one trip.  \n\u2713 Minimize driving so workers finish early.",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "loc_customer",
+            "demand"
+        ]
+    },
+    {
+        "title": "Mobile Laundry Service for Homeless Shelters",
+        "content": "Your nonprofit runs a free laundry service for homeless shelters across the city.  \nEach morning, your vans (<capacity> kg of laundry capacity) start at the wash facility (<loc_depot>), pick up dirty linens from shelters (<loc_customer>), then deliver them to the last shelter cleaned\u2014no need to return to base.  \nEach shelter has different linen volumes (<demand>).  \nThe goal? Plan routes that:  \n\t\u2713 Never overload vans with heavy laundry bags.  \n\t\u2713 Minimize total miles driven to save fuel costs.  \n\t\u2713 Let drivers end their shift near their homes after the last stop.",
+        "tags": [
+            "capacity",
+            "loc_depot",
+            "loc_customer",
+            "demand"
+        ]
+    },
+    {
+        "title": "Pop-Up COVID Test Kit Delivery",
+        "content": "During outbreaks, your team delivers test kits from the health department (<loc_depot>) to pop-up testing sites (<loc_customer>).  \nEach site needs a different number of kits (<demand>), and your cars can only fit so many (<capacity>).  \nAfter the final drop-off, staff stay to assist\u2014no returning to base.  \nThe challenge:  \n\t\u2713 Distribute all kits without exceeding car limits.  \n\t\u2713 Optimize routes to reach high-risk areas fastest.  \n\t\u2713 Reduce total travel time to get tests where they\u2019re needed most.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Mobile Bike Repair Service",
+        "content": "Your bike repair van helps cyclists in parks and trails.  \nStarting at the shop (<loc_depot>), you carry tools/parts (<capacity>) to fix bikes at pre-booked locations (<loc_customer>), each needing different supplies (<demand>).  \nAfter the last repair, you park the van overnight near that spot.  \nThe trick? Plan routes that:  \n\t\u2713 Fit all parts/tools in one trip.  \n\t\u2713 Group nearby jobs to minimize driving between parks.  \n\t\u2713 Let mechanics finish near their homes.",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "loc_customer",
+            "demand"
+        ]
+    },
+    {
+        "title": "Farmers\u2019 Cooperative Milk Collection",
+        "content": "Your dairy co-op picks up milk cans from small farms (<loc_customer>) daily.  \nTrucks start empty at the processing plant (<loc_depot>), collect cans (<demand> per farm), and deliver to the last farm\u2019s collection point\u2014no backtracking.  \nEach truck can only carry so much milk before spoiling (<capacity>).  \nThe goal?  \n\t\u2713 Visit all farms without overloading trucks.  \n\t\u2713 Plan the shortest routes to keep milk fresh.  \n\t\u2713 Let drivers end shifts near their farms.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "demand",
+            "capacity"
+        ]
+    },
+    {
+        "title": "City Bench Repair Crew",
+        "content": "Your parks department fixes broken benches citywide.  \nCrews start at the depot (<loc_depot>), haul lumber/tools (<capacity>) to repair sites (<loc_customer>), each needing different materials (<demand>).  \nAfter the last repair, they clock out onsite.  \nThe puzzle?  \n\t\u2713 Assign repairs without overloading trucks.  \n\t\u2713 Route crews efficiently to minimize overtime.  \n\t\u2713 Avoid zigzagging across town unnecessarily.  \n```  \n\nEach scenario emphasizes real-world constraints (capacity, no return trips) while keeping descriptions relatable. Let me know if you'd like adjustments!",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "loc_customer",
+            "demand"
+        ]
+    },
+    {
+        "title": "Mobile Bike Repair Service",
+        "content": "Your bike repair van starts each morning at the shop (<loc_depot>), loaded with tools and spare parts (<capacity>).  \nYou\u2019ve got appointments across town (<loc_customer>)\u2014some need new tires (<demand>), others need brake adjustments.  \nAfter the last repair, you park the van at that neighborhood and head home.  \nThe goal? Plan routes that:  \n\t\u2713 Fit all tools/parts in the van without overloading it.  \n\t\u2713 Group nearby jobs to minimize driving.  \n\t\u2713 Let you finish at the last stop (no backtracking to the shop).",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "loc_customer",
+            "demand"
+        ]
+    },
+    {
+        "title": "Farmers\u2019 Cooperative Milk Collection",
+        "content": "Dairy farmers drop off milk cans at local collection points (<loc_customer>) daily.  \nYour refrigerated truck starts at the processing plant (<loc_depot>), picks up full cans (<demand> liters each), and can carry up to <capacity> liters.  \nAfter the last pickup, the truck heads straight to the plant for unloading\u2014no empty return trips.  \nOptimize routes to:  \n\t\u2713 Collect all milk before it spoils.  \n\t\u2713 Avoid overfilling the truck.  \n\t\u2713 Keep driving distances short to save fuel.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "demand",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Mobile Hair Salon Appointments",
+        "content": "Your stylist team drives a van stocked with equipment (<capacity>) from the salon (<loc_depot>) to clients\u2019 homes (<loc_customer>).  \nEach booking requires specific tools (<demand>): scissors for cuts, dyes for color jobs.  \nAfter the final appointment, stylists leave the van parked nearby.  \nPlan routes to:  \n\t\u2713 Fit all gear in the van.  \n\t\u2713 Group nearby clients to reduce drive time.  \n\t\u2713 End the day at the last house (no returning to base).",
+        "tags": [
+            "capacity",
+            "loc_depot",
+            "loc_customer",
+            "demand"
+        ]
+    },
+    {
+        "title": "Pop-Up Museum Exhibit Tours",
+        "content": "A museum transports artifacts (<demand> kg each) from storage (<loc_depot>) to pop-up exhibits (<loc_customer>) in schools or malls.  \nThe climate-controlled truck holds up to <capacity> kg. After the last stop, it stays there for the exhibit\u2019s duration.  \nDesign routes that:  \n\t\u2713 Protect fragile items (no overloading).  \n\t\u2713 Minimize road time to reduce handling risks.  \n\t\u2713 End at the final exhibit location.",
+        "tags": [
+            "demand",
+            "loc_depot",
+            "loc_customer",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Community Fridge Restocking",
+        "content": "Volunteers restock public fridges (<loc_customer>) with donated food from a warehouse (<loc_depot>).  \nEach fridge needs different items (<demand> kg: bread, veggies). The van fits <capacity> kg total.  \nAfter the last drop-off, the van parks there for the next day\u2019s run.  \nOptimize to:  \n\t\u2713 Distribute all food before it expires.  \n\t\u2713 Avoid overpacking the van.  \n\t\u2713 Keep routes short to save time and gas.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "demand",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Mobile Bike Repair Service",
+        "content": "Your bike repair van starts each morning at the shop (<loc_depot>), loaded with tools and spare parts (<capacity>). You get service requests from cyclists across town (<loc_customer>), each needing different repairs (requiring <demand> parts/tools). After fixing the last bike of the day, you park the van near that location instead of driving back. The goal? Plan routes that:  \n\u2713 Fit all necessary gear in your van without overloading it.  \n\u2713 Let you help the most riders in the least travel time.  \n\u2713 End your workday close to home.",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "loc_customer",
+            "demand"
+        ]
+    },
+    {
+        "title": "Farmers\u2019 Cooperative Milk Collection",
+        "content": "Dairy farmers (<loc_customer>) need their milk picked up daily and brought to the co-op processing plant (<loc_depot>). Your refrigerated truck can carry <capacity> liters before needing to unload. Each farm produces <demand> liters. After the last pickup, the truck heads straight to the plant\u2014no empty return trips. The challenge? Design routes that:  \n\u2713 Collect all milk without spoilage (no overloading).  \n\u2713 Minimize driving time to keep fuel costs low.  \n\u2713 Let drivers clock out at the plant after their final stop.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "Pop-Up Museum Exhibit Tours",
+        "content": "Your museum sends traveling exhibits to schools and community centers (<loc_customer>) from a storage warehouse (<loc_depot>). Each exhibit has fragile artifacts weighing <demand>, and your trucks can safely carry <capacity> per trip. After setting up the last exhibit, the crew leaves the truck parked locally. The goal? Plan tours that:  \n\u2713 Never risk damaging artifacts by overpacking trucks.  \n\u2713 Visit locations in an order that minimizes miles.  \n\u2713 Let staff finish near their homes after the final setup.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "demand",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Mobile Laundry Service for Homeless Shelters",
+        "content": "Your laundry van picks up dirty linens from shelters (<loc_customer>), cleans them at your facility (<loc_depot>), and returns them. Each shelter provides <demand> kg of laundry, and your van holds <capacity> kg. After the last drop-off, the van stays parked overnight. The trick? Schedule pickups/deliveries so:  \n\u2713 No van is overloaded (wet laundry is heavy!).  \n\u2713 Shelters get clean linens as fast as possible.  \n\u2713 Drivers end their shift near their last stop.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "demand",
+            "capacity"
+        ]
+    },
+    {
+        "title": "City Bench Repair Crew",
+        "content": "Your maintenance team starts at the city yard (<loc_depot>) with a truck full of wood, paint, and tools (<capacity>). Damaged benches across parks (<loc_customer>) need <demand> materials each. After the final repair, the crew leaves the truck nearby. The puzzle? Assign routes that:  \n\u2713 Carry enough supplies without exceeding truck limits.  \n\u2713 Fix all benches with minimal driving.  \n\u2713 Let workers finish near public transit for an easy commute home.",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "loc_customer",
+            "demand"
+        ]
+    }
+]

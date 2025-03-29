@@ -1,0 +1,1002 @@
+[
+    {
+        "title": "E-Commerce Delivery & Returns Management",
+        "content": "I run an e-commerce fulfillment center where trucks deliver online orders to customers and pick up returns on the same trip. Some customers receive packages, while others have items to send back. The locations of the warehouse and the 20 delivery/return stops are `<locs>`. The delivery demand is `<demand_linehaul>`, and the return demand is `<demand_backhaul>`. Each truck has a capacity of `<capacity>`. I need to plan routes so that deliveries and pickups happen efficiently, trucks aren\u2019t overloaded, and drivers avoid unnecessary detours to save time and fuel.",
+        "tags": [
+            "locs",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Library Book Distribution & Returns Routing",
+        "content": "Our county library system sends out vans to drop off new books at branch libraries and pick up old ones for restocking or repairs. Some branches only need deliveries, others only have returns, and some have both. The warehouse (main library) and branch locations are `<locs>`. The delivery demand is `<demand_linehaul>`, and the return demand is `<demand_backhaul>`. Each van can carry `<capacity>` books. I need to design routes that ensure all branches get their books on schedule while collecting returns\u2014without making vans backtrack or exceed their capacity.",
+        "tags": [
+            "locs",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Appliance Delivery & Old Appliance Pickup",
+        "content": "My company delivers new refrigerators, washing machines, etc., to homes and picks up old appliances for recycling. Each truck has space for new units (deliveries) and old ones (pickups). The warehouse and 20 customer locations are `<locs>`. Delivery demand is `<demand_linehaul>`, and pickup demand is `<demand_backhaul>`. Truck capacity is `<capacity>`. I need routes that prioritize deliveries first (so customers get their appliances early) while also collecting old units efficiently\u2014all without overloading trucks or wasting miles.",
+        "tags": [
+            "locs",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Farm Produce Delivery & Empty Crate Collection",
+        "content": "I coordinate trucks for a local farm co-op. Each morning, trucks deliver fresh produce to grocery stores and restaurants, then collect empty crates from the previous delivery. Some stops only need produce, others only have crates, and some have both. The farm (warehouse) and 20 customer locations are `<locs>`. Delivery demand is `<demand_linehaul>`, and crate pickup demand is `<demand_backhaul>`. Truck capacity is `<capacity>`. I need routes that ensure produce arrives fresh (minimizing detours) while crates are collected for reuse\u2014balancing both tasks without exceeding truck limits.",
+        "tags": [
+            "locs",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Office Supply Delivery & Recycling Pickup",
+        "content": "Our office supply company delivers paper, ink, and equipment to businesses while picking up used electronics and paper for recycling. Some clients only need deliveries, others only have recyclables, and some have both. The warehouse and 20 office locations are `<locs>`. Delivery demand is `<demand_linehaul>`, and recycling demand is `<demand_backhaul>`. Truck capacity is `<capacity>`. I need routes that prioritize urgent deliveries (like printer ink) while also scheduling pickups efficiently\u2014keeping trucks full but not overloaded and minimizing travel time.",
+        "tags": [
+            "locs",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Furniture Delivery & Old Furniture Recycling",
+        "content": "I work for a furniture company that delivers new sofas, tables, and chairs to customers\u2019 homes. But many customers also want us to take away their old furniture for recycling. Our trucks start at the warehouse with capacity <capacity>, visit homes to drop off new items, and pick up old ones\u2014all in one trip. The locations of the warehouse and 20 customers are <locs>, the delivery demand is <demand_linehaul>, and the pickup demand is <demand_backhaul>. I need to plan routes so that trucks don\u2019t get overloaded, deliveries happen on time, and we minimize fuel costs while keeping customers happy.",
+        "tags": [
+            "capacity",
+            "locs",
+            "demand_linehaul",
+            "demand_backhaul"
+        ]
+    },
+    {
+        "title": "School Meal Delivery & Lunch Tray Collection",
+        "content": "Our organization delivers fresh meals to schools every morning and picks up used lunch trays in the afternoon. Each truck starts at the kitchen with capacity <capacity>, drops off meals at some schools, and collects dirty trays from others\u2014sometimes in the same trip. The locations of the kitchen and 20 schools are <locs>, the meal delivery demand is <demand_linehaul>, and the tray collection demand is <demand_backhaul>. I need to optimize routes so that no truck is overfilled, all schools get meals on time, and we reduce unnecessary driving.",
+        "tags": [
+            "capacity",
+            "locs",
+            "demand_linehaul",
+            "demand_backhaul"
+        ]
+    },
+    {
+        "title": "Retail Store Stocking & Defective Product Returns",
+        "content": "I manage a warehouse that supplies retail stores with new products while also collecting defective or expired items. Trucks leave the warehouse with capacity <capacity>, deliver fresh stock to stores, and pick up returns\u2014sometimes mixing deliveries and pickups in one route. The locations of the warehouse and 20 stores are <locs>, the delivery demand is <demand_linehaul>, and the return demand is <demand_backhaul>. I need to find the best routes to ensure stores are restocked quickly, returns are handled efficiently, and transportation costs stay low.",
+        "tags": [
+            "capacity",
+            "locs",
+            "demand_linehaul",
+            "demand_backhaul"
+        ]
+    },
+    {
+        "title": "Construction Material Delivery & Debris Removal",
+        "content": "Our construction company delivers bricks, cement, and tools to job sites while also hauling away debris like broken concrete and scrap wood. Each truck starts at the depot with capacity <capacity>, drops off supplies at some sites, and picks up waste from others\u2014sometimes in the same trip. The locations of the depot and 20 job sites are <locs>, the material delivery demand is <demand_linehaul>, and the debris pickup demand is <demand_backhaul>. I need to plan routes so that trucks don\u2019t exceed capacity, deliveries happen on schedule, and we minimize fuel waste.",
+        "tags": [
+            "capacity",
+            "locs",
+            "demand_linehaul",
+            "demand_backhaul"
+        ]
+    },
+    {
+        "title": "Laundry Service Pickup & Delivery",
+        "content": "I run a laundry service that picks up dirty clothes from homes and businesses, cleans them, and returns them fresh. Our vans start at the laundry facility with capacity <capacity>, collect dirty laundry from some customers, and drop off clean clothes to others\u2014sometimes in the same trip. The locations of the facility and 20 customers are <locs>, the clean laundry delivery demand is <demand_linehaul>, and the dirty laundry pickup demand is <demand_backhaul>. I need to optimize routes so that all customers get their laundry on time, vans don\u2019t get overloaded, and we keep fuel costs low.",
+        "tags": [
+            "capacity",
+            "locs",
+            "demand_linehaul",
+            "demand_backhaul"
+        ]
+    },
+    {
+        "title": "Postal Service Parcel Delivery & Return Pickup",
+        "content": "I work for a postal service that delivers packages to homes and businesses while also picking up prepaid return parcels.  \nEach mail truck starts at the central post office (<locs>), delivers outgoing parcels (<demand_linehaul>), and collects returns (<demand_backhaul>)\u2014all in one trip.  \nTrucks have a limited capacity (<capacity>), so we need to plan routes that balance deliveries and pickups efficiently.  \nThe goal is to minimize travel time while ensuring no truck gets overloaded and all parcels are handled on schedule.",
+        "tags": [
+            "locs",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Florist Fresh Flower Delivery & Vase Collection",
+        "content": "My flower shop delivers fresh bouquets to weddings and events but also collects empty vases afterward.  \nEach delivery van starts at the shop (<locs>), drops off flowers (<demand_linehaul>), and picks up fragile vases (<demand_backhaul>) from earlier events.  \nVans have limited space (<capacity>), so we must plan routes carefully to avoid mixing heavy vases with delicate flowers.  \nOptimizing this saves time, reduces breakage, and keeps customers happy.",
+        "tags": [
+            "locs",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Electronics Repair Service & Faulty Device Pickup",
+        "content": "I run an electronics repair company that sends technicians to homes to fix devices (e.g., laptops, TVs) while collecting broken ones for refurbishment.  \nEach service van starts at the workshop (<locs>), carries tools/parts (<demand_linehaul>), and picks up defective items (<demand_backhaul>).  \nVans have weight limits (<capacity>), so we need routes that prioritize urgent repairs while efficiently gathering recyclable electronics.  \nThis cuts fuel costs and speeds up turnaround times.",
+        "tags": [
+            "locs",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Charity Food Bank Delivery & Donation Pickup",
+        "content": "Our food bank distributes groceries to shelters but also picks up surplus donations from supermarkets.  \nTrucks start at the warehouse (<locs>), deliver perishables (<demand_linehaul>), and collect donations (<demand_backhaul>) on the same trip.  \nWith tight capacity (<capacity>), we must avoid mixing fresh deliveries with non-perishable pickups.  \nOptimized routes help us feed more people while reducing food waste.",
+        "tags": [
+            "locs",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Moving Company Furniture Delivery & Old Item Haulaway",
+        "content": "My moving company delivers new furniture to homes but also hauls away old items for recycling.  \nEach truck starts at the depot (<locs>), carries new sofas/tables (<demand_linehaul>), and collects discarded furniture (<demand_backhaul>).  \nSpace is tight (<capacity>), so we plan routes where deliveries happen first, then pickups\u2014without backtracking.  \nThis saves time and ensures trucks aren\u2019t overloaded with heavy old items too early.",
+        "tags": [
+            "locs",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Pet Food Delivery & Empty Bag Recycling",
+        "content": "I run a pet food subscription service where we deliver fresh bags of dog and cat food to customers' homes. After they finish the food, they leave the empty bags outside for us to collect and recycle. Our trucks start at the warehouse (<locs>), deliver full bags (<demand_linehaul>), and pick up empty ones (<demand_backhaul>). Each truck has a capacity of <capacity>. The challenge is to plan routes so deliveries happen first, pickups are done efficiently, and no truck gets overloaded\u2014all while keeping fuel costs low.",
+        "tags": [
+            "locs",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Clothing Retailer Delivery & Returns Management",
+        "content": "A clothing brand ships online orders to customers and also handles returns. Our vans leave the distribution center (<locs>) with new orders (<demand_linehaul>) and swing by homes to pick up unwanted items (<demand_backhaul>). Each van can carry up to <capacity> items. We need to optimize routes so deliveries are fast, returns are collected without extra trips, and drivers don\u2019t waste time backtracking.",
+        "tags": [
+            "locs",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Auto Parts Delivery & Core Returns",
+        "content": "My auto shop delivers replacement parts (like batteries or alternators) to repair garages. But many shops also have old \"core\" parts (used for recycling) that need to be picked up. Our trucks start at the depot (<locs>), drop off new parts (<demand_linehaul>), and collect cores (<demand_backhaul>). With a truck capacity of <capacity>, we must balance deliveries and pickups so no truck is overfilled and routes stay cost-effective.",
+        "tags": [
+            "locs",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Hotel Linen Service & Dirty Laundry Collection",
+        "content": "A linen supply company delivers fresh towels and bedsheets to hotels daily\u2014and picks up the dirty ones for washing. Trucks leave the laundry facility (<locs>), drop off clean linens (<demand_linehaul>), and grab dirty loads (<demand_backhaul>). Each truck holds <capacity> kg. The goal is to design routes where hotels always get fresh stock on time, dirty linens don\u2019t pile up, and trucks avoid unnecessary detours.",
+        "tags": [
+            "locs",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Tool Rental Delivery & Equipment Retrieval",
+        "content": "Our tool rental company delivers heavy equipment (like drills or generators) to construction sites and picks up rentals when projects are done. Vans start at the warehouse (<locs>), carry new rentals (<demand_linehaul>), and retrieve used tools (<demand_backhaul>). With a capacity of <capacity> per van, we need routes that prioritize urgent deliveries while ensuring no truck is stuck hauling too much on the return trip.",
+        "tags": [
+            "locs",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Waste Cooking Oil Collection & Fresh Oil Delivery",
+        "content": "A restaurant supplier delivers fresh cooking oil to eateries while also collecting used oil for recycling.  \nEach truck starts at the depot (<locs>), carries fresh oil (<demand_linehaul>) to restaurants, and picks up barrels of used oil (<demand_backhaul>) to bring back.  \nTruck capacity is <capacity>.  \nThe goal is to plan routes so deliveries and pickups happen efficiently\u2014no one wants spoiled oil sitting around, and restaurants need fresh supplies on time!",
+        "tags": [
+            "locs",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Art Gallery Exhibit Transport & Return Logistics",
+        "content": "An art logistics company moves paintings and sculptures to galleries for exhibitions.  \nAfter the exhibit closes, the same trucks retrieve the artwork to return it to storage or lenders.  \nLocations include the warehouse (<locs>), delivery demands (<demand_linehaul>), and pickup demands (<demand_backhaul>).  \nTrucks have limited space (<capacity>) and fragile cargo, so routes must minimize travel time and handling.",
+        "tags": [
+            "locs",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Refillable Propane Tank Delivery & Empty Swap-Outs",
+        "content": "A gas company delivers full propane tanks to homes and businesses while collecting empty ones for refilling.  \nTrucks start at the plant (<locs>), drop off full tanks (<demand_linehaul>), and grab empties (<demand_backhaul>).  \nCapacity is <capacity>.  \nSince propane is time-sensitive (grill season waits for no one!), routes must prioritize urgent deliveries while balancing pickups.",
+        "tags": [
+            "locs",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Event Equipment Rental Setup & Teardown Routing",
+        "content": "A party rental company delivers tents, chairs, and sound systems to event venues.  \nAfter the event, trucks return to collect the equipment.  \nLocations (<locs>) include the warehouse and venues, with delivery (<demand_linehaul>) and pickup (<demand_backhaul>) demands.  \nTruck capacity is <capacity>.  \nOptimizing routes ensures timely setups (no late weddings!) and efficient pickups (avoid paying overtime for stuck crews).",
+        "tags": [
+            "locs",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Bookmobile Library Service & Donation Pickup",
+        "content": "A mobile library delivers books to rural communities and picks up donated books for redistribution.  \nThe bookmobile starts at the central library (<locs>), drops off requested books (<demand_linehaul>), and collects donations (<demand_backhaul>).  \nCapacity is <capacity>.  \nRoutes must serve remote areas fairly while keeping the bookmobile from overflowing with donations!",
+        "tags": [
+            "locs",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Pharmacy Prescription Delivery & Empty Pill Bottle Recycling",
+        "content": "I work for a pharmacy that delivers prescriptions to homebound patients and also collects empty pill bottles for recycling.  \nEach day, our vans leave the pharmacy (located at <locs>) with fresh medications (<demand_linehaul>) and return with empty containers (<demand_backhaul>).  \nThe vans have a limited capacity (<capacity>), so we need to plan routes that ensure all patients get their meds on time while also picking up recyclables efficiently.  \nThe goal is to minimize driving time and fuel costs while keeping everything organized.",
+        "tags": [
+            "locs",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Bakery Fresh Bread Delivery & Stale Bread Collection",
+        "content": "I own a bakery that supplies fresh bread to cafes and grocery stores while collecting unsold, stale bread to donate to animal farms.  \nOur delivery trucks start at the bakery (<locs>), drop off fresh loaves (<demand_linehaul>), and pick up old bread (<demand_backhaul>) on the same trip.  \nEach truck can only carry so much (<capacity>), so we need smart routes that avoid backtracking and ensure no store runs out of fresh bread.  \nThis helps reduce waste and keeps deliveries cost-effective.",
+        "tags": [
+            "locs",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Party Rental Equipment Setup & Teardown Routing",
+        "content": "My company rents out party equipment (tables, chairs, tents) for events and later retrieves them.  \nTrucks leave the warehouse (<locs>) with equipment (<demand_linehaul>), set up at event venues, and later return to collect everything (<demand_backhaul>).  \nSince trucks have limited space (<capacity>), we need routes that minimize empty miles\u2014ideally, picking up from one event while delivering to another nearby.  \nEfficient scheduling ensures we serve more customers without extra trips.",
+        "tags": [
+            "locs",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Aquarium Fish Delivery & Empty Tank Pickup",
+        "content": "I run an aquarium supply service that delivers live fish and tanks to customers while picking up empty tanks for cleaning and reuse.  \nOur vans start at the store (<locs>), carry fragile fish orders (<demand_linehaul>), and collect used tanks (<demand_backhaul>) without overcrowding (<capacity>).  \nRoutes must prioritize fast deliveries (fish can\u2019t wait!) while grouping nearby pickups to save time.  \nThis keeps fish healthy and cuts down on unnecessary driving.",
+        "tags": [
+            "locs",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Firewood Delivery & Ash Collection Service",
+        "content": "I operate a firewood delivery business that also offers ash removal from homes with wood-burning stoves.  \nTrucks leave our depot (<locs>) loaded with firewood (<demand_linehaul>), drop it off, and collect ash bins (<demand_backhaul>) on the return trip.  \nSince ash is messy and trucks have weight limits (<capacity>), we need routes that avoid overloading while serving all customers efficiently.  \nThis way, homes stay warm, and ash is disposed of properly\u2014without extra trips.",
+        "tags": [
+            "locs",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "School Textbook Delivery & Old Book Collection",
+        "content": "A school district needs to distribute new textbooks to multiple schools at the start of the semester while also collecting outdated or damaged books for recycling.  \nThe locations of the central warehouse and the 20 schools is `<locs>`.  \nThe delivery demand for new textbooks is `<demand_linehaul>`, and the pickup demand for old books is `<demand_backhaul>`.  \nEach truck has a capacity of `<capacity>`.  \nI need to plan routes so that trucks deliver fresh textbooks first, then pick up old ones\u2014all while minimizing travel time and ensuring no truck is overloaded.",
+        "tags": [
+            "locs",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Industrial Gas Cylinder Delivery & Empty Cylinder Retrieval",
+        "content": "A gas supply company delivers full oxygen, nitrogen, and CO\u2082 cylinders to factories and labs while collecting empty ones for refilling.  \nThe locations of the depot and the 20 customer sites is `<locs>`.  \nThe delivery demand for full cylinders is `<demand_linehaul>`, and the pickup demand for empties is `<demand_backhaul>`.  \nEach truck can carry up to `<capacity>` cylinders.  \nI need to optimize routes so that deliveries happen first, pickups are done efficiently, and trucks don\u2019t exceed weight limits\u2014keeping costs low and customers happy.",
+        "tags": [
+            "locs",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Dairy Farm Milk Delivery & Empty Bottle Return",
+        "content": "A dairy farm delivers fresh milk bottles to grocery stores and cafes while collecting empty glass bottles for reuse.  \nThe locations of the dairy plant and the 20 retail locations is `<locs>`.  \nThe delivery demand for fresh milk is `<demand_linehaul>`, and the pickup demand for empty bottles is `<demand_backhaul>`.  \nEach refrigerated truck has a capacity of `<capacity>`.  \nI need to design routes that ensure milk stays fresh, empties are collected efficiently, and trucks don\u2019t run out of space\u2014balancing speed and cost.",
+        "tags": [
+            "locs",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Hardware Store Supply Delivery & Used Battery Recycling",
+        "content": "A hardware supplier restocks stores with tools and building materials while also collecting used batteries and light bulbs for safe disposal.  \nThe locations of the distribution center and the 20 stores is `<locs>`.  \nThe delivery demand for new supplies is `<demand_linehaul>`, and the pickup demand for hazardous waste is `<demand_backhaul>`.  \nEach truck has a capacity of `<capacity>`.  \nI need to optimize routes so that deliveries are prioritized, hazardous pickups are handled safely, and trucks stay within legal weight limits\u2014all while minimizing fuel costs.",
+        "tags": [
+            "locs",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Film Studio Equipment Rental & Return Logistics",
+        "content": "A film equipment rental company delivers cameras, lighting, and props to movie sets and picks up rented gear once filming wraps.  \nThe locations of the rental warehouse and the 20 production sites is `<locs>`.  \nThe delivery demand for equipment is `<demand_linehaul>`, and the pickup demand for returns is `<demand_backhaul>`.  \nEach truck has a fragile-load capacity of `<capacity>`.  \nI need to plan routes that ensure gear arrives on time, returns are collected efficiently, and delicate equipment isn\u2019t damaged\u2014all while keeping logistics costs under budget.",
+        "tags": [
+            "locs",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Ice Cream Vendor Delivery & Empty Tub Collection",
+        "content": "I run an ice cream distribution business that supplies shops and cafes with fresh ice cream while collecting empty tubs for recycling.  \nEach truck starts at the warehouse (<locs>), delivers full tubs to stores (<demand_linehaul>), and picks up empty ones (<demand_backhaul>) on the same trip.  \nWith trucks of capacity <capacity>, I need to plan routes that ensure ice cream stays cold, shops never run out, and empty tubs are returned efficiently\u2014all while keeping fuel costs low.",
+        "tags": [
+            "locs",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Toy Store Holiday Delivery & Gift Return Routing",
+        "content": "During the holidays, my toy company delivers new orders to stores and picks up unsold or defective toys for refurbishment.  \nThe warehouse (<locs>) sends trucks (capacity <capacity>) to drop off hot-selling items (<demand_linehaul>) and collect returns (<demand_backhaul>) in one trip.  \nI need a smart routing plan to handle the holiday rush, avoid delays, and make sure trucks don\u2019t get overloaded with returns on the way back.",
+        "tags": [
+            "locs",
+            "capacity",
+            "demand_linehaul",
+            "demand_backhaul"
+        ]
+    },
+    {
+        "title": "Garden Center Plant Delivery & Dead Plant Pickup",
+        "content": "My nursery delivers fresh plants to landscaping clients and picks up dead or diseased plants for composting.  \nTrucks (capacity <capacity>) start at the greenhouse (<locs>), drop off new plants (<demand_linehaul>), and collect wilted ones (<demand_backhaul>) in the same route.  \nThe challenge? Plants are perishable, so routes must be fast and efficient to keep everything fresh while minimizing empty miles.",
+        "tags": [
+            "capacity",
+            "locs",
+            "demand_linehaul",
+            "demand_backhaul"
+        ]
+    },
+    {
+        "title": "Brewery Fresh Beer Delivery & Spent Grain Collection",
+        "content": "I coordinate deliveries for a local brewery\u2014trucks drop off kegs to pubs (<demand_linehaul>) and collect spent grain (<demand_backhaul>) for animal feed.  \nStarting at the brewery (<locs>), each truck (capacity <capacity>) must balance deliveries and pickups without wasting time or space.  \nThe goal: keep pubs stocked, farmers happy, and trucks running on tight schedules.",
+        "tags": [
+            "demand_linehaul",
+            "demand_backhaul",
+            "locs",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Bike-Sharing Fleet Rebalancing & Maintenance Pickup",
+        "content": "My bike-sharing company needs to redistribute bikes across stations (<locs>) and pick up broken ones for repairs.  \nTrucks (capacity <capacity>) deliver bikes to busy stations (<demand_linehaul>) and collect damaged ones (<demand_backhaul>) in a single trip.  \nThe trick? Avoid sending half-empty trucks and ensure no station runs out of bikes during peak hours.",
+        "tags": [
+            "locs",
+            "capacity",
+            "demand_linehaul",
+            "demand_backhaul"
+        ]
+    },
+    {
+        "title": "Home Meal Kit Delivery & Packaging Recycling",
+        "content": "I run a meal kit delivery service where customers receive fresh ingredients and recipes weekly. After cooking, they leave out the empty insulated boxes and ice packs for pickup. Each truck starts at our central kitchen (<locs>), delivers meal kits to subscribers (<demand_linehaul>), and collects used packaging (<demand_backhaul>)\u2014all while staying within truck capacity (<capacity>). The challenge is to optimize routes so deliveries arrive fresh, pickups happen promptly, and trucks don\u2019t waste miles or space.",
+        "tags": [
+            "locs",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Wine Distribution & Cork Recycling Program",
+        "content": "A winery ships bottles to restaurants and wine shops, but they also run a sustainability program collecting used corks for recycling. Trucks depart from the vineyard (<locs>), drop off new wine orders (<demand_linehaul>), and gather bags of corks from partners (<demand_backhaul>). With truck capacity (<capacity>), we need routes that prioritize deliveries (to avoid spoilage) while ensuring corks don\u2019t pile up at pickup sites.",
+        "tags": [
+            "locs",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Pet Adoption Transport & Donation Pickup",
+        "content": "An animal rescue group delivers adopted pets to new homes and picks up pet food donations from drop-off points. Each van starts at the shelter (<locs>), carries crated animals to adopters (<demand_linehaul>), and collects donated supplies (<demand_backhaul>)\u2014all without overloading (<capacity>). Routes must minimize stress for the animals (shorter trips first) while maximizing donation hauling efficiency.",
+        "tags": [
+            "locs",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Office Coffee Service & Used Bean Recycling",
+        "content": "A coffee supplier restocks breakroom machines at offices and collects used coffee grounds for composting. Trucks leave the roastery (<locs>) with fresh beans and supplies (<demand_linehaul>), then swing by to grab bags of spent grounds (<demand_backhaul>). Since coffee deliveries are time-sensitive (for morning rush), routes must prioritize those stops before pickups, all within truck capacity (<capacity>).",
+        "tags": [
+            "locs",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Christmas Tree Delivery & Post-Holiday Pickup",
+        "content": "A tree farm delivers fresh-cut evergreens to homes in December and collects discarded trees for mulching in January. Each truck starts at the farm (<locs>), delivers trees (<demand_linehaul>), and later retrieves dried-out ones (<demand_backhaul>). Capacity (<capacity>) is tricky\u2014trees take more space when fresh! Routes must cluster neighborhoods to avoid zigzagging across town during the busy season.",
+        "tags": [
+            "locs",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Catering Service Delivery & Dirty Dish Collection",
+        "content": "I run a catering company that delivers hot meals to corporate offices and event venues. After the meals are served, we need to collect dirty dishes, trays, and utensils to bring back for cleaning. The locations of our kitchen (warehouse) and all client sites is `<locs>`. The delivery demand (meals) is `<demand_linehaul>`, and the collection demand (dirty items) is `<demand_backhaul>`. Each truck has a capacity of `<capacity>`. I need to optimize routes so that food arrives fresh and hot, while also ensuring all used items are picked up efficiently\u2014without overloading trucks or wasting fuel.",
+        "tags": [
+            "locs",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Vintage Record Store Delivery & Used Vinyl Pickup",
+        "content": "I own a vinyl record store that delivers new albums to collectors and also buys back used records from customers. Each day, our delivery van starts at the store (`<locs>`), drops off new records (`<demand_linehaul>`), and picks up used ones (`<demand_backhaul>`) from different homes. The van can only hold `<capacity>` records at once. I need a smart routing plan so we don\u2019t miss any pickups, avoid backtracking, and keep fuel costs low while keeping music lovers happy.",
+        "tags": [
+            "locs",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Aquarium Maintenance Service & Water Sample Collection",
+        "content": "My business provides aquarium maintenance for offices and homes\u2014delivering fresh fish, plants, and supplies while also collecting water samples for testing. The depot (`<locs>`) is where we store supplies, and each client has delivery needs (`<demand_linehaul>`) and water samples (`<demand_backhaul>`) to return. Our vans have a capacity of `<capacity>`. I need routes that ensure live fish arrive safely, samples are collected on time, and no van is overloaded with tanks or equipment.",
+        "tags": [
+            "locs",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Holiday Decoration Setup & Take-Down Service",
+        "content": "I manage a holiday decorating company that installs festive lights and decorations for homes and businesses in December\u2014then removes them in January. Each truck starts at our storage facility (`<locs>`), carries decorations (`<demand_linehaul>`) for setup, and later collects used decorations (`<demand_backhaul>`) for storage. With a truck capacity of `<capacity>`, I need optimized routes to handle both installations and removals efficiently, minimizing travel time during the busy season.",
+        "tags": [
+            "locs",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Compostable Food Container Delivery & Scrap Collection",
+        "content": "I work with restaurants that use eco-friendly compostable food containers. Our trucks deliver fresh containers (`<demand_linehaul>`) and pick up used ones (`<demand_backhaul>`) to send to composting facilities. The warehouse (`<locs>`) is our starting point, and each truck holds up to `<capacity>` containers. I need routes that ensure restaurants never run out of containers, scrap is collected before it piles up, and trucks take the shortest possible trips to save costs.",
+        "tags": [
+            "demand_linehaul",
+            "demand_backhaul",
+            "locs",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Farm-to-Table Produce Delivery & Spoiled Crop Collection",
+        "content": "I work with a local farm that delivers fresh vegetables to restaurants and grocery stores.  \nAfter deliveries, the same trucks pick up spoiled or unsold produce from these locations to bring back for composting.  \nThe locations of the farm and all the delivery/pickup spots is `<locs>`.  \nThe delivery demand is `<demand_linehaul>`, and the collection demand is `<demand_backhaul>`.  \nEach truck has a capacity of `<capacity>`.  \nI need to plan routes so that fresh produce gets delivered first, spoiled items are collected efficiently, and no truck is overloaded\u2014all while keeping fuel costs low.",
+        "tags": [
+            "locs",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Craft Brewery Keg Delivery & Empty Keg Retrieval",
+        "content": "I manage deliveries for a small craft brewery that supplies bars with kegs of beer.  \nAfter bars finish a keg, they leave it outside for pickup so we can clean and refill it.  \nThe locations of the brewery and all the bars is `<locs>`.  \nThe delivery demand is `<demand_linehaul>`, and the empty keg collection demand is `<demand_backhaul>`.  \nEach truck can carry `<capacity>` kegs at a time.  \nI need to figure out the best routes so that fresh beer arrives on time, empty kegs are collected efficiently, and trucks don\u2019t waste time driving in circles.",
+        "tags": [
+            "locs",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Office Printer Ink Delivery & Empty Cartridge Recycling",
+        "content": "I run a service that delivers printer ink to businesses and picks up their empty cartridges for recycling.  \nSome offices need urgent ink refills, while others have stacks of used cartridges waiting to be collected.  \nThe locations of our warehouse and all the offices is `<locs>`.  \nThe delivery demand is `<demand_linehaul>`, and the collection demand is `<demand_backhaul>`.  \nEach truck has a capacity of `<capacity>`.  \nI need to optimize routes so that deliveries happen first, pickups are handled smoothly, and we minimize unnecessary trips.",
+        "tags": [
+            "locs",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Pet Store Fish Delivery & Empty Tank Pickup",
+        "content": "I supply pet stores with live fish and aquarium supplies.  \nAfter stores sell fish, they sometimes have empty tanks or broken equipment that need to be returned for refurbishment.  \nThe locations of our facility and all the pet stores is `<locs>`.  \nThe delivery demand is `<demand_linehaul>`, and the collection demand is `<demand_backhaul>`.  \nEach truck can carry `<capacity>` tanks at once.  \nI need to plan routes so that live fish arrive safely, empty tanks are picked up without delays, and trucks don\u2019t backtrack unnecessarily.",
+        "tags": [
+            "locs",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Renewable Energy Battery Swap & Depleted Battery Collection",
+        "content": "I operate a service that delivers fresh batteries for solar-powered homes and collects old, depleted ones for recycling.  \nSome homes need new batteries urgently, while others have old ones ready for pickup.  \nThe locations of our depot and all the homes is `<locs>`.  \nThe delivery demand is `<demand_linehaul>`, and the collection demand is `<demand_backhaul>`.  \nEach truck can carry `<capacity>` batteries.  \nI need to optimize routes so that fresh batteries arrive quickly, old ones are collected efficiently, and we minimize travel time and costs.",
+        "tags": [
+            "locs",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Home Appliance Repair Service & Broken Parts Pickup",
+        "content": "I run a repair service for home appliances like refrigerators, washing machines, and microwaves.  \nOur technicians drive vans stocked with spare parts to fix appliances on-site.  \nAfter repairs, they often need to bring back broken parts for recycling or warranty claims.  \nThe locations of our service center and all customer homes is `<locs>`, the parts delivery demand is `<demand_linehaul>`, and the broken parts pickup demand is `<demand_backhaul>`.  \nEach van has a capacity of `<capacity>`.  \nI need to plan routes so technicians can fix appliances, drop off new parts, and collect old ones\u2014all without backtracking too much or overloading the vans.",
+        "tags": [
+            "locs",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Farmers' Market Produce Delivery & Compost Collection",
+        "content": "A local farm delivers fresh veggies to farmers' markets and restaurants every morning.  \nOn the same trip, they collect food scraps from these places to turn into compost for their fields.  \nThe locations of the farm, markets, and restaurants is `<locs>`, the produce delivery demand is `<demand_linehaul>`, and the compost pickup demand is `<demand_backhaul>`.  \nTheir trucks can carry up to `<capacity>`.  \nI need to map out routes where trucks deliver crates of tomatoes and lettuce first, then swing back to grab buckets of peels and spoiled food\u2014keeping everything fresh and efficient.",
+        "tags": [
+            "locs",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Office IT Equipment Upgrade & E-Waste Recycling",
+        "content": "A tech company is upgrading computers and printers across its office branches.  \nTheir delivery trucks bring new devices to each location and haul away old electronics for secure recycling.  \nThe locations of the warehouse and offices is `<locs>`, new equipment demand is `<demand_linehaul>`, and e-waste pickup is `<demand_backhaul>`.  \nTruck capacity is `<capacity>`.  \nThe challenge? Making sure sensitive data isn\u2019t left on old devices too long, so pickups must happen shortly after deliveries\u2014all while avoiding downtown traffic jams.",
+        "tags": [
+            "locs",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Swimming Pool Maintenance Service & Chemical Waste Disposal",
+        "content": "A pool service company visits homes weekly to refill chlorine and cleaning supplies.  \nThey also collect used chemicals and filters for safe disposal at a treatment facility.  \nThe locations of their depot and client pools is `<locs>`, chemical delivery demand is `<demand_linehaul>`, and waste pickup is `<demand_backhaul>`.  \nTheir trucks hold up to `<capacity>`.  \nSince chemicals are hazardous, I need routes that minimize spill risks\u2014deliveries first, then pickups, with no overcrowded trucks.",
+        "tags": [
+            "locs",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Bookstore Chain Restocking & Unsold Inventory Returns",
+        "content": "A bookstore ships new releases to its retail locations every month.  \nStores also send back unsold books to free up shelf space.  \nThe locations of the distribution center and stores is `<locs>`, delivery demand is `<demand_linehaul>`, and return demand is `<demand_backhaul>`.  \nTrucks have a capacity of `<capacity>`.  \nThe goal? Avoid sending half-empty trucks\u2014deliver bestsellers early in the route, then pack returns tightly on the way back to the warehouse.",
+        "tags": [
+            "locs",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Home Renovation Supply Delivery & Debris Removal",
+        "content": "I own a home renovation company, and every day, my trucks deliver fresh materials like lumber, tiles, and paint to job sites. At the same time, we need to haul away old fixtures, broken drywall, and other debris to recycling centers. The locations of our warehouse and all active renovation sites are `<locs>`, the delivery demand is `<demand_linehaul>`, and the debris pickup demand is `<demand_backhaul>`. Each truck has a capacity of `<capacity>`. I need to plan routes so that deliveries happen first, pickups happen afterward, and no truck gets overloaded\u2014all while keeping travel time and fuel costs low.",
+        "tags": [
+            "locs",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Pet Grooming Van Service & Dirty Towel Collection",
+        "content": "I run a mobile pet grooming service where vans visit homes to wash and groom pets. After each appointment, we leave fresh towels and supplies but also collect dirty towels and used grooming tools to bring back for cleaning. The locations of our service depot and all scheduled home visits are `<locs>`, the supply delivery demand is `<demand_linehaul>`, and the dirty item pickup demand is `<demand_backhaul>`. Each van has a capacity of `<capacity>`. I need to optimize routes so groomers can serve all pets efficiently while keeping the vans from overflowing with dirty laundry.",
+        "tags": [
+            "locs",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Community Garden Compost Delivery & Scrap Pickup",
+        "content": "Our city runs a program where trucks deliver fresh compost and soil to community gardens, then collect food scraps and yard waste to bring back to the composting facility. The locations of the composting center and all participating gardens are `<locs>`, the compost delivery demand is `<demand_linehaul>`, and the scrap collection demand is `<demand_backhaul>`. Each truck holds up to `<capacity>`. I need routes that ensure gardens get their supplies on schedule while keeping scrap collections organized\u2014without trucks making unnecessary detours.",
+        "tags": [
+            "locs",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Office Water Cooler Service & Empty Jug Recycling",
+        "content": "I manage a water delivery service for offices. Our trucks drop off full water jugs for coolers and pick up empty ones to refill. Some clients need more water than others, and some have stacks of empties waiting. The locations of our bottling plant and all office buildings are `<locs>`, the full jug delivery demand is `<demand_linehaul>`, and the empty jug pickup demand is `<demand_backhaul>`. Each truck can carry `<capacity>` jugs. I need a route plan that keeps every office hydrated without drivers backtracking or running out of space for empties.",
+        "tags": [
+            "locs",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Tire Shop Delivery & Used Tire Haulaway",
+        "content": "My tire shop gets weekly shipments of new tires from suppliers, but we also collect worn-out tires from customers to send to recycling plants. The locations of our shop, suppliers, and recycling centers are `<locs>`, the new tire delivery demand is `<demand_linehaul>`, and the used tire pickup demand is `<demand_backhaul>`. Each truck can hold `<capacity>` tires. I need to design routes that balance deliveries and pickups so we never leave customers waiting\u2014and avoid trucks getting stuck with too many old tires.",
+        "tags": [
+            "locs",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Solar Panel Installation & Old Panel Recycling",
+        "content": "I work for a solar energy company that installs new solar panels for homes and businesses. After installation, we also collect old or broken panels for recycling.  \nThe locations of our warehouse and all the installation sites is `<locs>`. The new panel delivery demand is `<demand_linehaul>`, and the old panel pickup demand is `<demand_backhaul>`.  \nOur trucks have a capacity of `<capacity>`.  \nI need to plan routes so that installers deliver new panels first, then pick up old ones\u2014all while avoiding backtracking and keeping travel costs low.",
+        "tags": [
+            "locs",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "College Dorm Move-In & Move-Out Assistance",
+        "content": "Every semester, our moving company helps students move their belongings into dorms at the start of the term and out at the end.  \nThe locations of our storage facility and all the dorm buildings is `<locs>`. The incoming furniture demand is `<demand_linehaul>`, and the outgoing items (like boxes or donated furniture) is `<demand_backhaul>`.  \nOur trucks hold up to `<capacity>`.  \nI need to optimize routes so we efficiently drop off new items and pick up old ones in one trip, minimizing chaos during busy move-in/move-out days.",
+        "tags": [
+            "locs",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Pet Adoption Van Transport & Donation Pickup",
+        "content": "Our animal rescue group delivers adopted pets to their new homes and picks up donated supplies (like food or blankets) from supporters along the way.  \nThe locations of our shelter and all the delivery/pickup stops is `<locs>`. The pet delivery demand is `<demand_linehaul>`, and the donation pickup demand is `<demand_backhaul>`.  \nOur vans can carry `<capacity>` (pets + supplies).  \nI need routes that prioritize pet safety (deliveries first) while also collecting donations efficiently\u2014all without overloading the vans.",
+        "tags": [
+            "locs",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Refillable Water Jug Delivery & Empty Jug Collection",
+        "content": "I manage a service that delivers fresh 5-gallon water jugs to offices and homes, then picks up empty ones for refilling.  \nThe locations of our bottling plant and all customer stops is `<locs>`. The full jug delivery demand is `<demand_linehaul>`, and the empty jug pickup demand is `<demand_backhaul>`.  \nEach truck holds `<capacity>` jugs.  \nI need routes that balance deliveries and pickups so trucks aren\u2019t half-empty on return trips, saving fuel and time.",
+        "tags": [
+            "locs",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Mobile Vaccination Clinic & Medical Waste Disposal",
+        "content": "Our healthcare team runs mobile vaccination clinics in rural areas. We deliver vaccines and supplies, then collect used needles/syringes for safe disposal.  \nThe locations of our depot and all clinics is `<locs>`. The vaccine delivery demand is `<demand_linehaul>`, and the medical waste pickup demand is `<demand_backhaul>`.  \nOur refrigerated vans have a capacity of `<capacity>`.  \nI need routes that ensure vaccines stay cold and waste is collected promptly, all while minimizing travel through remote areas.",
+        "tags": [
+            "locs",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Mobile Vaccination Clinic & Medical Waste Disposal",
+        "content": "Our local health department runs mobile vaccination clinics that visit neighborhoods to administer vaccines. After giving shots, they also collect used syringes and medical waste for safe disposal. The locations of the clinic depot and all vaccination sites is `<locs>`. The vaccine delivery demand is `<demand_linehaul>`, and the medical waste pickup demand is `<demand_backhaul>`. Each van has a capacity of `<capacity>`. We need to plan routes so that vaccines are delivered first, waste is collected afterward, and no van exceeds its capacity\u2014all while minimizing travel time and ensuring safe handling of medical materials.",
+        "tags": [
+            "locs",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Christmas Tree Delivery & Post-Holiday Pickup",
+        "content": "A Christmas tree farm delivers fresh trees to homes in December and picks up discarded trees in January for recycling. Each truck starts at the farm (`<locs>`), drops off trees (demand `<demand_linehaul>`), and later collects old trees (demand `<demand_backhaul>`). With a truck capacity of `<capacity>`, we need to optimize routes so deliveries happen before pickups, trucks aren\u2019t overloaded, and drivers take the shortest possible routes to save fuel during the busy season.",
+        "tags": [
+            "locs",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Office Printer Ink Delivery & Empty Cartridge Recycling",
+        "content": "A supplier delivers fresh ink cartridges to offices and picks up empty ones for recycling. Each truck starts at the warehouse (`<locs>`), delivers new cartridges (demand `<demand_linehaul>`), and collects used ones (demand `<demand_backhaul>`). With a capacity of `<capacity>`, we must plan routes to ensure offices never run out of ink while efficiently gathering recyclables\u2014all without mixing deliveries and pickups in a way that slows down service.",
+        "tags": [
+            "locs",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Farmers' Market Produce Delivery & Compost Collection",
+        "content": "A farm delivers fresh veggies to farmers' markets and picks up spoiled produce/compost scraps from vendors. The farm depot and market locations are `<locs>`. Deliveries (demand `<demand_linehaul>`) must happen first, followed by compost pickups (demand `<demand_backhaul>`). Each truck holds `<capacity>`. We need routes that keep produce fresh, avoid overloading trucks with heavy compost, and minimize detours between markets.",
+        "tags": [
+            "locs",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Bike-Sharing Fleet Rebalancing & Maintenance Pickup",
+        "content": "A bike-sharing company moves bikes from overcrowded stations to empty ones (deliveries) and picks up broken bikes for repairs (pickups). The depot and station locations are `<locs>`. Rebalancing demand is `<demand_linehaul>`, and repair pickups are `<demand_backhaul>`. Each van fits `<capacity>` bikes. We need routes that prioritize rebalancing first, then collect damaged bikes, ensuring no van carries too many bikes at once while keeping stations operational.",
+        "tags": [
+            "locs",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Mobile Vet Clinic & Pet Supply Delivery",
+        "content": "A mobile veterinary service delivers pet food and medications to homes while also picking up donated pet supplies (like leashes or carriers) for animal shelters. Each van starts at the clinic (<locs>), carries fresh supplies (<demand_linehaul>), and collects donations (<demand_backhaul>) without exceeding its capacity (<capacity>). The goal is to serve all pet owners efficiently while supporting shelters with recycled items.",
+        "tags": [
+            "locs",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Coffee Shop Bean Delivery & Grounds Recycling",
+        "content": "A local roaster delivers fresh coffee beans to caf\u00e9s and collects used coffee grounds for composting. Trucks start at the roastery (<locs>), drop off beans (<demand_linehaul>), and pick up grounds (<demand_backhaul>) in one trip. With limited truck space (<capacity>), they need routes that avoid backtracking and keep caf\u00e9s stocked sustainably.",
+        "tags": [
+            "locs",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "School Laptop Loan Program & Repairs",
+        "content": "A school district lends laptops to students and periodically retrieves broken devices for repairs. Vans start at the tech depot (<locs>), deliver loaners (<demand_linehaul>), and collect damaged units (<demand_backhaul>). Each van fits only so many laptops (<capacity>), so routes must prioritize urgent repairs while minimizing disruption to classes.",
+        "tags": [
+            "locs",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Flower Shop Wedding Deliveries & Decor Teardown",
+        "content": "A florist delivers fresh arrangements to wedding venues and later picks up rented vases/stands. Trucks start at the shop (<locs>), drop off flowers (<demand_linehaul>), and retrieve items (<demand_backhaul>) after events. With tight time windows and fragile cargo (<capacity>), routes must balance speed and careful handling.",
+        "tags": [
+            "locs",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Toy Library Rotation & Donation Drive",
+        "content": "A toy-lending service rotates educational toys between daycare centers and picks up donated toys for refurbishment. Vans start at the warehouse (<locs>), deliver new toys (<demand_linehaul>), and collect donations (<demand_backhaul>). Since toys vary in size (<capacity>), routes must group stops by bulky items to maximize space.",
+        "tags": [
+            "locs",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Mobile Vaccination Clinic & Medical Waste Disposal",
+        "content": "Our local health department runs mobile vaccination clinics that visit neighborhoods, schools, and senior centers. After giving shots, they also collect used syringes and medical waste for safe disposal. The truck starts at the health department (<locs>), delivers vaccines (<demand_linehaul>), and picks up biohazard waste (<demand_backhaul>). Each van has limited storage (<capacity>), so we need to plan routes that ensure vaccines reach everyone while safely collecting waste without overloading the trucks.",
+        "tags": [
+            "locs",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Coffee Shop Bean Delivery & Grounds Recycling",
+        "content": "A coffee roaster supplies fresh beans to caf\u00e9s downtown and picks up their used coffee grounds for composting. The truck leaves the roastery (<locs>) with bags of beans (<demand_linehaul>), drops them off, and grabs sacks of spent grounds (<demand_backhaul>) to recycle. With a tight schedule and small truck capacity (<capacity>), we need routes that keep caf\u00e9s stocked and grounds collected efficiently\u2014no one wants stale beans or overflowing compost bins!",
+        "tags": [
+            "locs",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "School Laptop Loan Program & Repairs",
+        "content": "Our school district lends laptops to students but also needs to collect broken devices for repairs. Each morning, vans leave the tech depot (<locs>) with loaners (<demand_linehaul>), swap them for damaged ones (<demand_backhaul>), and return before the school bell. With limited space (<capacity>) and urgent repair needs, we must optimize routes to minimize downtime for students.",
+        "tags": [
+            "locs",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Flower Shop Wedding Deliveries & Decor Teardown",
+        "content": "A florist delivers fresh bouquets and arches to wedding venues (<demand_linehaul>) but also retrieves rented vases and stands after the event (<demand_backhaul>). Starting at the shop (<locs>), drivers must time pickups late at night (after receptions end!) while avoiding overloading their vans (<capacity>). We need routes that keep brides happy and inventory from getting lost.",
+        "tags": [
+            "demand_linehaul",
+            "demand_backhaul",
+            "locs",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Toy Library Rotation & Donation Drive",
+        "content": "A nonprofit runs a toy-lending service, dropping off educational toys at daycare centers (<demand_linehaul>) and picking up outgrown toys for cleaning/donation (<demand_backhaul>). Their van (<capacity>) starts at the warehouse (<locs>), and they need routes that rotate toys fairly while collecting donations\u2014because every kid deserves playtime, and no toy should go to waste!",
+        "tags": [
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity",
+            "locs"
+        ]
+    },
+    {
+        "title": "Mobile Vet Clinic & Pet Supply Delivery",
+        "content": "A mobile veterinary service visits neighborhoods to provide checkups and vaccinations for pets. At the same time, they deliver pet food and supplies to local pet owners. After appointments, they collect empty prescription bottles and used pet care items (like old leashes or carriers) for recycling.  \nThe locations of the clinic\u2019s home base and the 20 stops (homes/pet stores) is `<locs>`. The delivery demand (pet supplies) is `<demand_linehaul>`, and the pickup demand (recyclables) is `<demand_backhaul>`. Each van has capacity `<capacity>`.  \nThe challenge is to plan routes so pets get care and supplies efficiently while ensuring collected items don\u2019t overflow the vans\u2014all while minimizing driving time between stops.",
+        "tags": [
+            "locs",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Coffee Shop Bean Delivery & Grounds Recycling",
+        "content": "A coffee roaster supplies fresh beans to caf\u00e9s across the city and picks up used coffee grounds for composting. Caf\u00e9s need timely bean deliveries to avoid shortages, and the roaster repurposes the grounds for garden fertilizer.  \nThe warehouse and 20 caf\u00e9 locations are at `<locs>`. Delivery demand (bean bags) is `<demand_linehaul>`, and pickup demand (grounds) is `<demand_backhaul>`. Trucks have capacity `<capacity>`.  \nThe goal is to balance deliveries and pickups so no truck runs out of space for grounds while keeping caf\u00e9s stocked\u2014optimizing for fuel efficiency and freshness.",
+        "tags": [
+            "locs",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "School Laptop Loan Program & Repairs",
+        "content": "A school district lends laptops to students and periodically collects broken devices for repairs. Trucks deliver new or repaired laptops to schools while picking up damaged ones from the same locations.  \nThe depot and 20 schools are at `<locs>`. Delivery demand (laptops) is `<demand_linehaul>`, and pickup demand (broken devices) is `<demand_backhaul>`. Each van holds up to `<capacity>` laptops.  \nRoutes must ensure no school misses a repair cycle, and vans aren\u2019t overloaded with broken devices\u2014prioritizing urgent repairs and minimizing student downtime.",
+        "tags": [
+            "locs",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Flower Shop Wedding Deliveries & Decor Teardown",
+        "content": "A florist handles wedding deliveries (bouquets, centerpieces) and later picks up rented vases and decor after the event. Timing is critical: deliveries must arrive before ceremonies, and pickups happen after receptions end.  \nThe shop and 20 wedding venues are at `<locs>`. Delivery demand (flowers) is `<demand_linehaul>`, and pickup demand (vases) is `<demand_backhaul>`. Vans have capacity `<capacity>`.  \nThe puzzle? Schedule routes so drivers aren\u2019t stuck waiting for pickups, decor isn\u2019t left behind, and flowers arrive fresh\u2014all while avoiding overtime costs.",
+        "tags": [
+            "locs",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Toy Library Rotation & Donation Drive",
+        "content": "A toy library swaps educational toys between branches to keep kids engaged. They also collect donated toys for refurbishment. Trucks deliver fresh toys to libraries and pick up old/donated ones in the same trip.  \nThe warehouse and 20 libraries are at `<locs>`. Delivery demand (new toys) is `<demand_linehaul>`, and pickup demand (used toys) is `<demand_backhaul>`. Capacity is `<capacity>`.  \nThe goal is to rotate toys fairly among branches while leaving space for donations\u2014ensuring no truck is too full to accept a prized teddy bear!",
+        "tags": [
+            "locs",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Mobile Library & Book Donation Pickup",
+        "content": "Our county runs a mobile library service that delivers books to rural communities and schools. After a few weeks, the truck needs to collect the borrowed books and also pick up donated books from drop-off points. The locations of the library depot and all stops are `<locs>`. The delivery demand (new books) is `<demand_linehaul>`, and the pickup demand (returns and donations) is `<demand_backhaul>`. Each van has a capacity of `<capacity>`. I need to plan routes so that all stops are served efficiently, books are swapped without overloading the vans, and travel time is minimized\u2014especially since some areas have narrow time windows for visits.",
+        "tags": [
+            "locs",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Refillable Cleaning Supply Service",
+        "content": "I operate a business that delivers eco-friendly cleaning products in reusable containers to offices and hotels. After use, clients leave empty bottles for pickup. Each truck starts at our depot (`<locs>`), delivers fresh supplies (`<demand_linehaul>`), and collects empties (`<demand_backhaul>`). With a truck capacity of `<capacity>`, I need to optimize routes so deliveries happen first (priority for urgent orders), pickups are consolidated, and detours are avoided\u2014since some downtown areas have strict parking limits.",
+        "tags": [
+            "locs",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Farmers\u2019 Market Fresh Produce & Compost Run",
+        "content": "Our farm delivers fresh veggies to local markets and restaurants each morning. On the return trip, trucks stop at the same spots to collect food scraps for composting. The depot and stops are at `<locs>`, with delivery demand `<demand_linehaul>` (produce) and pickup demand `<demand_backhaul>` (compost). Trucks have a capacity of `<capacity>`. Since produce is perishable, deliveries must happen early, while compost pickup can be later\u2014but I want to avoid sending trucks back half-empty. How do I balance both tasks efficiently?",
+        "tags": [
+            "locs",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Office IT Equipment Upgrade & E-Waste Recycling",
+        "content": "A tech company is upgrading workstations across 20 offices. Trucks must deliver new computers (`<demand_linehaul>`) and haul away old ones (`<demand_backhaul>`) for recycling. Depot and office locations are `<locs>`, and each truck holds `<capacity>` items. The challenge? Some offices are in high-rises with limited loading docks, so pickups/deliveries must be tightly scheduled. Also, e-waste is bulky, so trucks can\u2019t carry too many old devices at once. How do I prioritize routes to minimize downtime?",
+        "tags": [
+            "demand_linehaul",
+            "demand_backhaul",
+            "locs",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Ice Rink Zamboni Fuel Delivery & Used Oil Pickup",
+        "content": "Our company supplies fuel to ice rinks for their Zamboni machines. During deliveries (`<demand_linehaul>`), we also collect used oil (`<demand_backhaul>`) for recycling. Locations (`<locs>`) include rinks across the city, and each truck\u2019s tank holds `<capacity>` liters. Deliveries must happen before peak skating hours, while pickups can wait\u2014but trucks can\u2019t mix fresh and used oil in the same tank. How do I schedule routes to serve all rinks without backtracking or wasting fuel?",
+        "tags": [
+            "demand_linehaul",
+            "demand_backhaul",
+            "locs",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Mobile Vaccination Clinic & Medical Waste Disposal",
+        "content": "A healthcare provider operates mobile vaccination units that visit neighborhoods to administer vaccines. After giving shots, they also collect used syringes and medical waste for safe disposal.  \nThe locations of the central depot and 15 vaccination sites is `<locs>`. Each van has a capacity of `<capacity>` for both vaccines (deliveries) and waste (pickups).  \nThe vaccine demand per site is `<demand_linehaul>`, and the waste collection need is `<demand_backhaul>`.  \nI need to plan routes so that all sites get vaccines, waste is collected efficiently, and no van exceeds its capacity\u2014while minimizing travel time and ensuring safe handling of medical materials.",
+        "tags": [
+            "locs",
+            "capacity",
+            "demand_linehaul",
+            "demand_backhaul"
+        ]
+    },
+    {
+        "title": "Refillable Cleaning Supply Service",
+        "content": "A eco-friendly cleaning company delivers bulk soap, detergents, and sanitizers to businesses in reusable containers. After use, they pick up the empty containers to refill.  \nThe locations of the warehouse and 20 office buildings is `<locs>`. Each truck has a capacity of `<capacity>`.  \nThe delivery demand for cleaning supplies is `<demand_linehaul>`, and the empty container pickup demand is `<demand_backhaul>`.  \nI need to optimize routes so deliveries and pickups happen in the same trip, reducing empty miles and ensuring no truck is overloaded\u2014while keeping customers stocked on time.",
+        "tags": [
+            "locs",
+            "capacity",
+            "demand_linehaul",
+            "demand_backhaul"
+        ]
+    },
+    {
+        "title": "Farmers\u2019 Market Fresh Produce & Compost Run",
+        "content": "A local farm delivers fresh veggies to farmers\u2019 markets and grocery stores, while also collecting food scraps from them to turn into compost.  \nThe locations of the farm and 12 markets is `<locs>`. Each truck can carry `<capacity>` of produce (deliveries) and compost scraps (pickups).  \nThe produce demand is `<demand_linehaul>`, and the compost collection need is `<demand_backhaul>`.  \nI need routes that ensure fresh deliveries arrive first, pickups happen afterward, and trucks don\u2019t mix spoiled scraps with new produce\u2014all while minimizing fuel costs.",
+        "tags": [
+            "locs",
+            "capacity",
+            "demand_linehaul",
+            "demand_backhaul"
+        ]
+    },
+    {
+        "title": "Office IT Equipment Upgrade & E-Waste Recycling",
+        "content": "A tech company is rolling out new laptops to offices while collecting old devices for recycling. Each truck delivers new equipment and picks up e-waste in the same trip.  \nThe locations of the distribution center and 10 office parks is `<locs>`. Truck capacity is `<capacity>`.  \nThe new device demand is `<demand_linehaul>`, and the e-waste pickup volume is `<demand_backhaul>`.  \nI need to plan routes so upgrades happen smoothly, e-waste is securely transported, and no truck carries more than its capacity\u2014while avoiding unnecessary detours.",
+        "tags": [
+            "locs",
+            "capacity",
+            "demand_linehaul",
+            "demand_backhaul"
+        ]
+    },
+    {
+        "title": "Ice Rink Zamboni Fuel Delivery & Used Oil Pickup",
+        "content": "A supplier delivers clean fuel to ice rinks for their Zamboni machines and collects used oil for recycling. Each stop requires both a drop-off and pickup.  \nThe locations of the fuel depot and 8 ice rinks is `<locs>`. Each tanker truck holds `<capacity>` of fuel/oil.  \nThe fuel delivery demand is `<demand_linehaul>`, and the used oil collection is `<demand_backhaul>`.  \nI need routes that ensure rinks never run out of fuel, oil is collected before storage bins overflow, and trucks avoid cross-contaminating new and used oil\u2014all while minimizing travel time.",
+        "tags": [
+            "locs",
+            "capacity",
+            "demand_linehaul",
+            "demand_backhaul"
+        ]
+    }
+]
