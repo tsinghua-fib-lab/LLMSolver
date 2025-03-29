@@ -1,73 +1,9 @@
 [
     {
-        "title": "School Meal Delivery Problem",
-        "content": "A central kitchen at <loc_depot> prepares fresh meals for <num_schools> schools across the district.  \nEach school (<loc_customer>) has a daily meal order (<demand>) based on student counts, and refrigerated trucks (max <capacity>) must deliver them before lunchtime.  \nThe challenge?  \n- Avoid overloading trucks (spoilage risk!).  \n- Minimize travel distance to keep meals hot and fresh.  \n- Ensure each school gets its exact order in one trip.  \nEfficient routing means happier kids and lower fuel costs!",
+        "title": "Grocery Store Fresh Produce Delivery Problem",
+        "content": "A regional farm supplies fresh fruits and vegetables to <num_customer> grocery stores from its packing facility at <loc_depot>. Their refrigerated trucks can carry up to <capacity> kg of perishable goods per trip. Each store (<loc_customer>) orders a different amount (<demand> kg) based on daily sales. The farm needs to deliver everything in one morning to keep produce fresh, but trucks can\u2019t be overloaded. The goal? Plan routes so all stores get their orders, no truck exceeds capacity, and the total distance driven is as short as possible\u2014saving fuel and keeping strawberries crisp!",
         "tags": [
-            "loc_depot",
-            "num_schools",
-            "loc_customer",
-            "demand",
-            "capacity"
-        ]
-    },
-    {
-        "title": "Waste Collection Route Optimization",
-        "content": "A sanitation company manages trash pickup for <num_bins> recycling bins placed around the city (<loc_customer>).  \nTheir garbage trucks (<capacity>) start at the depot (<loc_depot>) and must collect waste (<demand> per bin) without exceeding weight limits.  \nKey constraints:  \n- Each bin must be emptied exactly once per day.  \n- Overflowing bins attract fines, so routes must be reliable.  \n- Minimizing mileage reduces fuel costs and emissions.  \nThe goal? A cleaner city with fewer trucks on the road.",
-        "tags": [
-            "num_bins",
-            "loc_customer",
-            "capacity",
-            "loc_depot",
-            "demand"
-        ]
-    },
-    {
-        "title": "Mobile Clinic Vaccine Distribution",
-        "content": "A health organization dispatches mobile clinics (<capacity> doses per vehicle) from <loc_depot> to remote villages (<loc_customer>).  \nEach village has a registered number of patients (<demand>) needing vaccines, and doses are temperature-sensitive.  \nChallenges:  \n- No vehicle can carry more than its cooler\u2019s capacity.  \n- Villages must be visited once to avoid dose wastage.  \n- Shortest routes save time and keep vaccines effective.  \nEfficiency here directly impacts community health outcomes!",
-        "tags": [
-            "capacity",
-            "loc_depot",
-            "loc_customer",
-            "demand"
-        ]
-    },
-    {
-        "title": "Florist\u2019s Wedding Season Deliveries",
-        "content": "A flower shop (<loc_depot>) must deliver fresh bouquets (<demand>) to <num_venues> wedding venues (<loc_customer>) using vans (<capacity>).  \nBouquets are fragile and time-sensitive:  \n- Each van can only fit so many arrangements without damage.  \n- Every venue needs its order delivered in one trip (no partial drops!).  \n- Routes must be quick to preserve freshness.  \nOptimizing saves flowers, fuel, and frantic brides!",
-        "tags": [
-            "loc_depot",
-            "demand",
-            "num_venues",
-            "loc_customer",
-            "capacity"
-        ]
-    },
-    {
-        "title": "Hardware Store Lumber Deliveries",
-        "content": "A lumber supplier (<loc_depot>) delivers wood bundles (<demand> per order) to construction sites (<loc_customer>) via flatbed trucks (<capacity>).  \nConstraints:  \n- Truck weight limits are strict (safety regulations!).  \n- Each site requires a full load in one go\u2014no splitting orders.  \n- Short routes reduce fuel costs for heavy vehicles.  \nBetter planning means on-time builds and fewer traffic jams from lumber trucks!",
-        "tags": [
-            "loc_depot",
-            "demand",
-            "loc_customer",
-            "capacity"
-        ]
-    },
-    {
-        "title": "Grocery Store Fresh Produce Delivery",
-        "content": "A regional farm supplies fresh fruits and vegetables to <num_stores> grocery stores across the county from its packing facility at <loc_depot>.  \nEach store (<loc_customer>) orders a different amount (<demand> crates) based on daily sales.  \nDelivery trucks (max <capacity> crates) must distribute perishable goods quickly to maintain freshness.  \nThe farm wants to:  \n\u2713 Avoid overloading trucks to prevent spoilage.  \n\u2713 Minimize travel distance to save fuel and time.  \n\u2713 Ensure every store gets its order in one trip.  \nEfficient routing means fresher produce and happier customers!",
-        "tags": [
-            "num_stores",
-            "loc_depot",
-            "loc_customer",
-            "demand",
-            "capacity"
-        ]
-    },
-    {
-        "title": "Office Printer Maintenance Service",
-        "content": "A tech company services office printers at <num_offices> client sites from its central hub (<loc_depot>).  \nEach service van (<capacity> repair kits/parts) visits offices (<loc_customer>) needing maintenance, with demand (<demand>) based on printer issues reported.  \nThe goal is to:  \n\u2713 Schedule routes so no van runs out of parts.  \n\u2713 Reduce total miles driven to cut costs.  \n\u2713 Ensure each office is visited once per day.  \nSmarter routes mean faster fixes and fewer frustrated employees waiting for printer repairs!",
-        "tags": [
-            "num_offices",
+            "num_customer",
             "loc_depot",
             "capacity",
             "loc_customer",
@@ -75,144 +11,21 @@
         ]
     },
     {
-        "title": "Library Bookmobile Route Planning",
-        "content": "A county library operates bookmobiles (capacity: <capacity> books) from its main branch (<loc_depot>) to <num_stops> neighborhoods (<loc_customer>).  \nEach stop requests a unique number of books (<demand>) based on local readers\u2019 preferences.  \nThe library must:  \n\u2713 Distribute books without exceeding vehicle limits.  \n\u2713 Optimize stops to cover all areas fairly.  \n\u2713 Minimize fuel costs to stretch their budget.  \nEfficient routes mean more communities get access to books with fewer resources!",
-        "tags": [
-            "capacity",
-            "loc_depot",
-            "num_stops",
-            "loc_customer",
-            "demand"
-        ]
-    },
-    {
-        "title": "Brewery Keg Delivery to Bars",
-        "content": "A local brewery delivers kegs (each counts as <demand> units) to <num_bars> pubs from its warehouse (<loc_depot>).  \nTheir trucks hold up to <capacity> kegs but struggle with narrow downtown streets.  \nThey need routes that:  \n\u2713 Avoid overloading trucks (kegs are heavy!).  \n\u2713 Group nearby bars to reduce detours.  \n\u2713 Ensure no pub runs dry before the next delivery.  \nBetter planning means happier bartenders and fresher beer on tap!",
-        "tags": [
-            "demand",
-            "num_bars",
-            "loc_depot",
-            "capacity"
-        ]
-    },
-    {
-        "title": "Moving Company Furniture Transport",
-        "content": "A moving company coordinates relocations for <num_families> families from a storage hub (<loc_depot>).  \nEach family\u2019s belongings (<demand> cubic meters) must fit in trucks (<capacity>).  \nDrivers must:  \n\u2713 Avoid mixing shipments to prevent delays.  \n\u2713 Optimize routes to save time and fuel.  \n\u2713 Ensure no truck is overloaded (weight limits matter!).  \nEfficient moves mean lower costs for customers and fewer trips back to the warehouse!",
-        "tags": [
-            "num_families",
-            "loc_depot",
-            "demand",
-            "capacity"
-        ]
-    },
-    {
-        "title": "Farm-to-Table Produce Delivery",
-        "content": "A local organic farm at <loc_depot> supplies fresh vegetables to <num_restaurants> restaurants and farmers' markets across the region using refrigerated vans (max <capacity> kg per trip).  \nEach customer (<loc_customer>) orders different quantities (<demand>) of perishable goods like tomatoes, lettuce, or berries.  \nThe farm needs routes that:  \n\u2713 Prioritize the shortest travel time to keep produce crisp.  \n\u2713 Never exceed van weight limits (or risk spoilage from overstacking).  \n\u2713 Avoid backtracking to save fuel.  \nSince deliveries happen at dawn, drivers must finish before lunch rush hour!",
+        "title": "Pharmacy Vaccine Distribution Problem",
+        "content": "A medical warehouse at <loc_depot> must deliver temperature-sensitive vaccines to <num_customer> clinics (<loc_customer>) using coolers in vans (max <capacity> doses per trip). Each clinic needs a specific number of doses (<demand>) for the week. Since vaccines expire quickly, every clinic must be visited exactly once, and vans can\u2019t mix shipments due to safety rules. The team wants to minimize travel time to ensure doses stay cold and reach clinics ASAP. Tight capacity and urgency make this a high-stakes routing puzzle!",
         "tags": [
             "loc_depot",
-            "num_restaurants",
-            "capacity",
-            "loc_customer",
-            "demand"
-        ]
-    },
-    {
-        "title": "Laundry Service for Hotels",
-        "content": "A industrial laundry facility (<loc_depot>) cleans linens for <num_hotels> hotels using trucks that fit <capacity> kg of sheets/towels.  \nEach hotel (<loc_customer>) sends a unique batch (<demand>) of dirty laundry daily and expects clean replacements.  \nThe challenge?  \n\u2022 Trucks must collect dirty loads *and* drop clean ones in one trip.  \n\u2022 No overloading\u2014wet linens are heavier than they look!  \n\u2022 Routes should minimize detours so no hotel waits past check-in time.",
-        "tags": [
-            "loc_depot",
-            "num_hotels",
-            "capacity",
-            "loc_customer",
-            "demand"
-        ]
-    },
-    {
-        "title": "Pet Food Subscription Deliveries",
-        "content": "A pet food company at <loc_depot> delivers monthly subscriptions (20kg bags) to <num_customers> homes (<loc_customer>) via small trucks (<capacity>).  \nSome homes order 1 bag (<demand=20>), others 5+ for multi-dog households!  \nConstraints:  \n\u2713 Narrow streets mean no large trucks\u2014strict capacity limits.  \n\u2713 Drivers must avoid left turns (company policy to reduce accidents).  \n\u2713 Deliveries are contactless, so routes must group nearby homes efficiently.",
-        "tags": [
-            "loc_depot",
-            "num_customers",
-            "loc_customer",
-            "capacity"
-        ]
-    },
-    {
-        "title": "ATM Cash Replenishment",
-        "content": "A bank\u2019s cash depot (<loc_depot>) restocks <num_ATMs> ATMs (<loc_customer>) using armored vans (<capacity> $Million).  \nEach ATM has a unique cash threshold (<demand>) triggering replenishment.  \nThe twist:  \n\u2022 High-risk zones require two guards per van\u2014reducing capacity by 30%.  \n\u2022 Routes must avoid high-crime areas *and* minimize travel time (cash-in-transit insurance is time-based!).",
-        "tags": [
-            "loc_depot",
-            "num_ATMs",
+            "num_customer",
             "loc_customer",
             "capacity",
             "demand"
         ]
     },
     {
-        "title": "Solar Panel Installation Crew Dispatch",
-        "content": "A solar company\u2019s warehouse (<loc_depot>) sends crews in vans (<capacity> panels/equipment) to <num_installations> homes (<loc_customer>).  \nEach installation needs <demand> panels + tools, varying by roof size.  \nGoals:  \n\u2713 Maximize daily installations by grouping nearby jobs.  \n\u2713 Never exceed van weight limits (safety regulations).  \n\u2713 Finish all jobs by sunset\u2014no overtime pay!",
+        "title": "Office Printer Maintenance Problem",
+        "content": "A tech company services <num_customer> office buildings (<loc_customer>) with printers that need monthly toner replacements (<demand> cartridges per building). Their technicians start at the depot (<loc_depot>) with vans that fit <capacity> cartridges. Each building must be visited once, and no van can carry more toner than its limit. To reduce downtime, they aim to optimize routes so technicians spend less time driving and more time fixing printers\u2014saving both mileage and frustrated employees!",
         "tags": [
-            "loc_depot",
-            "capacity",
-            "num_installations",
-            "loc_customer",
-            "demand"
-        ]
-    },
-    {
-        "title": "Courier Service for Small Business Shipments",
-        "content": "A local courier company picks up packages from small businesses (like bakeries, craft shops, and boutiques) at their locations (<loc_customer>) and delivers them to a central sorting hub (<loc_depot>).  \nEach business has a different number of packages (<demand>), and the courier\u2019s vans can carry up to <capacity> kg per trip.  \nThe goal is to collect all packages efficiently, ensuring no van is overloaded while minimizing total travel distance.  \nSince businesses close at different times, the courier must finish pickups before the last shop shuts its doors.",
-        "tags": [
-            "loc_customer",
-            "loc_depot",
-            "demand",
-            "capacity"
-        ]
-    },
-    {
-        "title": "Charity Food Bank Distribution",
-        "content": "A food bank at <loc_depot> supplies groceries to community centers (<loc_customer>) in low-income neighborhoods.  \nEach center requests a specific number of food boxes (<demand>), and the delivery trucks have a strict weight limit (<capacity>).  \nVolunteers need to plan routes that:  \n\u2713 Deliver all boxes in one trip (no leftovers).  \n\u2713 Avoid backtracking to save fuel.  \n\u2713 Reach every center before closing time.  \nWith tight budgets, optimizing routes means more money can go toward food instead of gas.",
-        "tags": [
-            "loc_depot",
-            "loc_customer",
-            "demand",
-            "capacity"
-        ]
-    },
-    {
-        "title": "Industrial Gas Cylinder Replacement",
-        "content": "A gas company delivers heavy industrial gas cylinders to factories (<loc_customer>) from a central depot (<loc_depot>).  \nEach factory orders a different number of cylinders (<demand>), and the specialized trucks can carry up to <capacity> cylinders at once.  \nDrivers must swap empty cylinders for full ones without exceeding truck capacity.  \nSince factories operate 24/7, timing isn\u2019t an issue\u2014just efficiency. The goal is to serve all customers in the fewest miles possible.",
-        "tags": [
-            "loc_customer",
-            "loc_depot",
-            "demand",
-            "capacity"
-        ]
-    },
-    {
-        "title": "Mobile Post Office for Rural Areas",
-        "content": "In remote regions, a mobile post office truck starts at <loc_depot> and visits scattered villages (<loc_customer>) to deliver and collect mail.  \nEach village has a known mail volume (<demand>), and the truck can hold up to <capacity> kg.  \nThe route must cover all villages in a single day while staying under capacity.  \nSince villages rely on this service, the post office aims to minimize detours to maintain a predictable schedule.",
-        "tags": [
-            "loc_depot",
-            "loc_customer",
-            "demand",
-            "capacity"
-        ]
-    },
-    {
-        "title": "Coffee Bean Delivery to Caf\u00e9s",
-        "content": "A roastery at <loc_depot> supplies fresh coffee beans to local caf\u00e9s (<loc_customer>), each ordering a unique weight (<demand>).  \nTheir delivery vans can carry up to <capacity> kg per trip.  \nTo keep beans fresh, deliveries must happen in the morning, so routes need to be fast and efficient.  \nThe roastery wants to avoid sending half-empty trucks while ensuring no caf\u00e9 runs out of beans.",
-        "tags": [
-            "loc_depot",
-            "loc_customer",
-            "demand",
-            "capacity"
-        ]
-    },
-    {
-        "title": "Ice Cream Truck Stock-Up Problem",
-        "content": "An ice cream distributor needs to restock ice cream trucks parked at different spots (<loc_customer>) across town before their daily routes begin.  \nEach truck has a different demand (<demand>) based on expected sales, and the distributor\u2019s warehouse (<loc_depot>) sends out refrigerated vans with a <capacity> limit.  \nSince melted ice cream means lost profits, they need the fastest possible routes to restock every truck while keeping the vans from overloading.  \nThe goal? Minimize driving time so all trucks are fully stocked before the afternoon rush!",
-        "tags": [
+            "num_customer",
             "loc_customer",
             "demand",
             "loc_depot",
@@ -220,99 +33,357 @@
         ]
     },
     {
-        "title": "Construction Site Concrete Delivery Problem",
-        "content": "A concrete supplier (<loc_depot>) must deliver fresh batches to <num_sites> active construction sites (<loc_customer>), each needing a specific volume (<demand>).  \nTheir mixer trucks can carry up to <capacity> per trip, and concrete hardens if delayed.  \nThey must plan routes so:  \n\u2713 Every site gets its exact order on time.  \n\u2713 No truck exceeds its load limit.  \n\u2713 Total distance is minimized to save fuel and avoid wasted material.  \nOne late delivery could delay an entire project\u2014efficiency is key!",
+        "title": "Charity Food Bank Collection Problem",
+        "content": "A food bank at <loc_depot> coordinates daily pickups of donated groceries from <num_customer> supermarkets (<loc_customer>). Each store has a different amount (<demand> kg) to donate, and the food bank\u2019s trucks hold up to <capacity> kg. Volunteers need to collect all donations in one trip per store without overloading trucks, while minimizing distance to save on fuel (and spend more funds on meals for the needy!). Rain or shine, those routes must be efficient!",
         "tags": [
             "loc_depot",
-            "num_sites",
+            "num_customer",
             "loc_customer",
             "demand",
             "capacity"
         ]
     },
     {
-        "title": "Pharmacy Prescription Drop-Off Problem",
-        "content": "A central pharmacy (<loc_depot>) delivers time-sensitive prescriptions to homebound patients (<loc_customer>) using a fleet of small vans (<capacity>).  \nEach patient\u2019s order (<demand>) varies in size, and some medications require temperature control.  \nThe pharmacy must:  \n\u2713 Visit every patient once per day.  \n\u2713 Avoid overpacking vans (to prevent damage).  \n\u2713 Minimize route length to ensure fast deliveries.  \nEfficient routing means patients get meds on time, and the pharmacy saves on fuel and labor.",
+        "title": "Flower Shop Wedding Deliveries Problem",
+        "content": "A florist at <loc_depot> has <num_customer> wedding venues (<loc_customer>) needing bouquets and centerpieces (<demand> arrangements per venue) on the same Saturday. Their delivery vans can only fit <capacity> fragile arrangements at once. Since flowers wilt and weddings can\u2019t wait, the florist must design routes where:  \n- Every venue gets their order in one go.  \n- No van is overstuffed (or roses get crushed!).  \n- Drivers take the shortest paths to keep bouquets fresh.  \nOne wrong turn could mean wilted peonies and a very unhappy bride!",
         "tags": [
             "loc_depot",
-            "loc_customer",
-            "capacity",
-            "demand"
-        ]
-    },
-    {
-        "title": "Farmers\u2019 Market Produce Pickup Problem",
-        "content": "Local farmers (<loc_customer>) send their harvest (apples, tomatoes, etc.) to a weekly farmers\u2019 market.  \nA co-op truck (<capacity>) starts at a central hub (<loc_depot>) to collect produce (<demand>) from each farm.  \nSince crops spoil quickly, they need to:  \n\u2713 Pick up all goods in one trip per farm.  \n\u2713 Stay under the truck\u2019s weight limit.  \n\u2713 Plan the shortest route to get everything to the market fresh.  \nSlow routes mean wilted greens\u2014speed and efficiency keep customers happy!",
-        "tags": [
-            "loc_customer",
-            "capacity",
-            "loc_depot",
-            "demand"
-        ]
-    },
-    {
-        "title": "Office Supply Store Bulk Delivery Problem",
-        "content": "A store (<loc_depot>) delivers bulk orders (paper, ink, etc.) to businesses (<loc_customer>) using trucks (<capacity>).  \nEach company\u2019s order (<demand>) varies, and some are in high-rise buildings with tight delivery windows.  \nThey need routes that:  \n\u2713 Fit all orders without overloading trucks.  \n\u2713 Group nearby offices to minimize detours.  \n\u2713 Avoid backtracking to save time.  \nSmarter routes mean faster deliveries and happier corporate clients!",
-        "tags": [
-            "loc_depot",
-            "loc_customer",
-            "capacity",
-            "demand"
-        ]
-    },
-    {
-        "title": "Mobile Library for Rural Communities",
-        "content": "A county library system operates a fleet of mobile library vans (each with a <capacity> book limit) that travel to remote villages (<loc_customer>) from a central depot (<loc_depot>). Each village requests a specific number of books (<demand>) based on their population. The challenge is to rotate book collections efficiently\u2014ensuring no van is overloaded while minimizing travel distance on winding rural roads so more villages can be served weekly.",
-        "tags": [
-            "capacity",
-            "loc_customer",
-            "loc_depot",
-            "demand"
-        ]
-    },
-    {
-        "title": "Art Gallery Framing Service",
-        "content": "A framing workshop (<loc_depot>) delivers fragile custom frames to high-end art galleries (<loc_customer>) using temperature-controlled vans with strict weight limits (<capacity>). Each gallery\u2019s order (<demand>) includes oversized pieces that can\u2019t be stacked. Routes must avoid bumpy roads to prevent damage while ensuring no van exceeds its payload\u2014all while keeping urban driving time short to meet same-day delivery promises.",
-        "tags": [
-            "loc_depot",
-            "loc_customer",
-            "capacity",
-            "demand"
-        ]
-    },
-    {
-        "title": "Beach Umbrella Rental Restocking",
-        "content": "A coastal rental company at <loc_depot> supplies umbrellas and chairs to 20+ beach kiosks (<loc_customer>) before 9 AM daily. Their trucks (<capacity>) carry both equipment and sand anchors (<demand> varies by kiosk size). Since tides affect access times to some beaches, routes must prioritize kiosks with narrow delivery windows first while balancing truck loads\u2014no one wants half a truck stuck with unused umbrellas at noon!",
-        "tags": [
-            "loc_depot",
-            "loc_customer",
-            "capacity",
-            "demand"
-        ]
-    },
-    {
-        "title": "Theater Costume Dry-Cleaning Circuit",
-        "content": "A costume warehouse (<loc_depot>) services 15 local theaters (<loc_customer>) weekly. Each theater sends back soiled costumes (<demand> by weight) and receives cleaned ones via eco-friendly trucks (<capacity>). Delicate fabrics mean no truck can mix certain costume types (e.g., medieval armor with ballet tutus). The goal? Cluster theaters with compatible costume needs on shared routes to cut down on CO2 emissions from multiple trips.",
-        "tags": [
-            "loc_depot",
+            "num_customer",
             "loc_customer",
             "demand",
             "capacity"
         ]
     },
     {
-        "title": "City Christmas Tree Recycling",
-        "content": "After the holidays, a municipal depot (<loc_depot>) collects discarded trees from 50+ drop-off points (<loc_customer>) using wood chippers mounted on trucks (<capacity> trees per trip). Each location reports tree counts (<demand>) in real-time via an app. Routes must adapt daily\u2014prioritizing overflowing sites first while avoiding left turns (to save time) and ensuring trucks don\u2019t exceed chipper safety limits before returning to unload.",
+        "title": "Mobile Library Delivery Problem",
+        "content": "A county library system operates a fleet of mobile library vans that bring books to rural communities (<loc_customer>) from a central depot (<loc_depot>).  \nEach van can carry up to <capacity> books, and every stop has a unique request (<demand>)\u2014some want children\u2019s books, others need large-print editions.  \nThe goal is to plan routes so that:  \n\u2713 No van is overloaded.  \n\u2713 Every community gets their requested books in one visit.  \n\u2713 The total driving distance is minimized to save fuel and time.  \nSince some villages are far apart, efficient routing ensures librarians spend more time with readers and less time on the road.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "E-Waste Recycling Collection Problem",
+        "content": "An eco-friendly company collects old electronics (laptops, phones, etc.) from <num_customer> drop-off points (<loc_customer>) using trucks with a <capacity> weight limit.  \nEach location has a pile of e-waste (<demand>), and the team starts from a recycling hub (<loc_depot>).  \nThey need routes that:  \n\u2713 Avoid sending half-empty trucks (wasting fuel).  \n\u2713 Cover all stops without exceeding truck capacity.  \n\u2713 Minimize total distance to reduce emissions.  \nEfficient planning means more gadgets get recycled, and fewer trucks clog up city streets.",
+        "tags": [
+            "num_customer",
+            "loc_customer",
+            "capacity",
+            "demand",
+            "loc_depot"
+        ]
+    },
+    {
+        "title": "Farm-to-Table Produce Delivery Problem",
+        "content": "A local farm (<loc_depot>) delivers fresh veggies to <num_customer> restaurants and farmers' markets (<loc_customer>) using refrigerated vans (<capacity>).  \nEach stop orders a different mix of produce (<demand>), and the farm must:  \n\u2713 Deliver everything in one trip per location (to keep food fresh).  \n\u2713 Never overload vans (safety rules!).  \n\u2713 Optimize routes so lettuce doesn\u2019t wilt while drivers take long detours.  \nThe shorter the routes, the crisper the greens\u2014and the happier the chefs!",
         "tags": [
             "loc_depot",
+            "num_customer",
             "loc_customer",
             "capacity",
             "demand"
         ]
     },
     {
-        "title": "Mobile Blood Donation Unit Collection",
-        "content": "A blood bank operates mobile donation units that travel to different neighborhoods (<loc_customer>) to collect blood donations.  \nEach unit has a limited storage capacity (<capacity>), and different locations have varying expected donation volumes (<demand>).  \nStarting from the blood bank (<loc_depot>), refrigerated vans must collect the donations efficiently, ensuring no unit overflows and minimizing travel time to keep the blood fresh.  \nThe goal is to visit all locations in the shortest possible route while respecting vehicle capacity constraints.",
+        "title": "Laundry Service for Hotels Problem",
+        "content": "A industrial laundry service picks up dirty linens from <num_customer> hotels (<loc_customer>) and returns clean sheets, all from their facility (<loc_depot>).  \nTheir trucks hold <capacity> kg of laundry, and each hotel has a daily load (<demand>).  \nThe challenge?  \n\u2713 Plan pickups/drop-offs so no truck is overstuffed.  \n\u2713 Avoid backtracking (saves time and detergent fumes).  \n\u2713 Ensure all hotels get serviced in one go.  \nEfficient routes mean fresher towels for guests and fewer miles for drivers.",
+        "tags": [
+            "num_customer",
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "Solar Panel Installation Problem",
+        "content": "A solar company installs panels at <num_customer> homes (<loc_customer>), shipping equipment from a warehouse (<loc_depot>) in trucks that fit <capacity> panels per trip.  \nEach house needs a custom number of panels (<demand>), and the team must:  \n\u2713 Deliver all panels in a single visit (no partial installs!).  \n\u2713 Avoid sending near-empty trucks (expensive!).  \n\u2713 Minimize driving distance to cut costs.  \nSmart routing means more rooftops go green faster\u2014and fewer trucks block narrow streets.",
+        "tags": [
+            "num_customer",
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "Ice Cream Truck Inventory Restocking Problem",
+        "content": "An ice cream supplier operates a fleet of refrigerated trucks from a central depot (<loc_depot>) to restock <num_customer> convenience stores and ice cream vendors across town. Each truck can carry up to <capacity> units of ice cream, and each store (<loc_customer>) has a specific order size (<demand>) based on their sales. Since ice cream melts quickly, the supplier needs to minimize travel time while ensuring no truck exceeds its capacity. The goal is to restock every store in the shortest possible routes so that the ice cream stays frozen and customers stay happy!",
+        "tags": [
+            "loc_depot",
+            "num_customer",
+            "capacity",
+            "loc_customer",
+            "demand"
+        ]
+    },
+    {
+        "title": "Pet Food Warehouse Delivery Problem",
+        "content": "A pet food distributor at <loc_depot> delivers bulk orders to <num_customer> pet stores and veterinary clinics using vans with a <capacity> kg limit. Each store (<loc_customer>) orders different amounts of dog food, cat food, and treats (<demand>). The distributor must plan routes that:  \n\u2713 Deliver the exact quantities needed.  \n\u2713 Avoid overloading any van.  \n\u2713 Minimize total travel distance to save on fuel.  \nSince pet food is heavy, efficient loading and routing are crucial to keeping costs low and stores well-supplied.",
+        "tags": [
+            "loc_depot",
+            "num_customer",
+            "capacity",
+            "loc_customer",
+            "demand"
+        ]
+    },
+    {
+        "title": "Moving Company Furniture Transport Problem",
+        "content": "A moving company has a central warehouse (<loc_depot>) and needs to deliver furniture to <num_customer> new homes across the city. Each moving truck has a <capacity> weight limit, and each home (<loc_customer>) has a different furniture load (<demand>). The company wants to assign trucks efficiently so that:  \n\u2713 No truck carries more than its limit.  \n\u2713 Each home gets all its furniture in one trip.  \n\u2713 The total distance driven by all trucks is minimized.  \nThe better the routes, the faster the moves\u2014and the happier the customers!",
+        "tags": [
+            "loc_depot",
+            "num_customer",
+            "capacity",
+            "loc_customer",
+            "demand"
+        ]
+    },
+    {
+        "title": "Coffee Bean Roastery Distribution Problem",
+        "content": "A small-batch coffee roaster at <loc_depot> supplies fresh beans to <num_customer> local cafes (<loc_customer>). Each cafe orders a specific weight (<demand>) of beans per week, and the roastery uses delivery vans with a <capacity> kg limit. Since coffee loses freshness quickly, the roastery needs to:  \n\u2713 Deliver to all cafes in the shortest possible time.  \n\u2713 Avoid overloading any van.  \n\u2713 Ensure each cafe gets its beans in one trip.  \nEfficient routing means fresher coffee and lower delivery costs!",
+        "tags": [
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "demand",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Construction Materials Supply Problem",
+        "content": "A building materials supplier at <loc_depot> delivers sand, cement, and bricks to <num_customer> construction sites (<loc_customer>). Each site has a different order size (<demand>), and the supplier\u2019s trucks can carry up to <capacity> tons per trip. The challenge is to:  \n\u2713 Deliver all materials without exceeding truck limits.  \n\u2713 Minimize total travel distance (since fuel costs add up).  \n\u2713 Ensure each site gets its supplies in one go to avoid delays.  \nSmart routing keeps construction projects on schedule and cuts down on wasted trips!",
+        "tags": [
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "demand",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Bakery Wholesale Delivery Problem",
+        "content": "A family-owned bakery produces fresh bread and pastries daily at their central kitchen (<loc_depot>) and delivers to <num_customer> local cafes and grocery stores. Their delivery vans can only carry <capacity> kg of fragile baked goods at a time. Each store (<loc_customer>) orders different amounts (<demand>)\u2014some need 20 loaves, others 50 croissants\u2014and everything must arrive before breakfast rush hour. They need routes that ensure:  \n\u2713 No squished bread from overpacked vans  \n\u2713 Every store gets their order in one trip  \n\u2713 The shortest possible driving time to keep goods fresh",
+        "tags": [
+            "loc_depot",
+            "num_customer",
+            "capacity",
+            "loc_customer",
+            "demand"
+        ]
+    },
+    {
+        "title": "Community Garden Compost Collection Problem",
+        "content": "The city\u2019s sustainability team collects organic waste from <num_customer> community gardens (<loc_customer>) using electric trucks (<capacity>) to bring it to a composting facility (<loc_depot>). Each garden generates a different amount of scraps (<demand>). Since the trucks have small batteries, they must plan tight routes to:  \n\u2713 Avoid detours that drain battery life  \n\u2713 Never exceed weight limits (wet compost is heavy!)  \n\u2713 Hit every garden on pickup day so nothing rots onsite",
+        "tags": [
+            "num_customer",
+            "loc_customer",
+            "capacity",
+            "loc_depot",
+            "demand"
+        ]
+    },
+    {
+        "title": "Hardware Store Paint Delivery Problem",
+        "content": "A hardware store at <loc_depot> delivers paint cans to <num_customer> contractors\u2019 job sites (<loc_customer>). Their trucks fit <capacity> liters, and each site orders specific colors and quantities (<demand>). Paint is messy\u2014they can\u2019t split orders across trips! They need routes that:  \n\u2713 Group nearby job sites together  \n\u2713 Avoid overloading (spilled paint means unhappy customers)  \n\u2713 Minimize travel time so paint doesn\u2019t dry in transit",
+        "tags": [
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "Fisherman\u2019s Market Fresh Catch Distribution Problem",
+        "content": "At dawn, a seafood supplier at the harbor (<loc_depot>) must deliver the day\u2019s catch to <num_customer> restaurants (<loc_customer>) using refrigerated trucks (<capacity>). Each restaurant orders different fish amounts (<demand>), and the ice keeps things fresh for only 4 hours. Routes must:  \n\u2713 Prioritize farthest restaurants first  \n\u2713 Never overload (or the ice melts faster)  \n\u2713 Ensure no backtracking\u2014time is literally money with fresh fish!",
+        "tags": [
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "Toy Store Holiday Gift Rush Problem",
+        "content": "During Christmas, a toy warehouse (<loc_depot>) sends out <num_customer> online orders (<loc_customer>) via delivery vans (<capacity>). Each order is a different size (<demand>), from teddy bears to bicycles. With parents counting on timely deliveries, they need routes that:  \n\u2713 Fit all gifts in one trip (no returns to the warehouse!)  \n\u2713 Group neighborhoods together to avoid Santa-style delays  \n\u2713 Keep drivers from getting stuck in holiday traffic loops",
+        "tags": [
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "Post Office Parcel Delivery Problem",
+        "content": "The local post office at <loc_depot> handles daily parcel deliveries to <num_customer> neighborhoods using vans with a <capacity> kg limit.  \nEach neighborhood (<loc_customer>) has a set of packages waiting to be delivered (<demand> kg).  \nSince the post office operates on tight schedules, they need to plan routes that:  \n\u2713 Deliver all parcels in a single trip per van.  \n\u2713 Never exceed weight limits to avoid fines.  \n\u2713 Minimize total travel distance to save fuel and time.  \nThe goal is to ensure every package reaches its destination efficiently while keeping costs low.",
+        "tags": [
+            "loc_depot",
+            "num_customer",
+            "capacity",
+            "loc_customer",
+            "demand"
+        ]
+    },
+    {
+        "title": "Brewery Keg Distribution Problem",
+        "content": "A local brewery at <loc_depot> supplies fresh kegs to <num_customer> bars and pubs across town using trucks that can carry up to <capacity> kegs.  \nEach bar (<loc_customer>) orders a different number of kegs (<demand>) based on their weekend demand.  \nThe brewery must:  \n\u2713 Distribute kegs before Friday evening rush hour.  \n\u2713 Avoid overloading trucks (kegs are heavy!).  \n\u2713 Optimize routes so drivers aren\u2019t stuck in traffic.  \nEfficient planning means happy bartenders and fresher beer for customers!",
+        "tags": [
+            "loc_depot",
+            "num_customer",
+            "capacity",
+            "loc_customer",
+            "demand"
+        ]
+    },
+    {
+        "title": "Medical Lab Sample Collection Problem",
+        "content": "A diagnostic lab at <loc_depot> sends out vans (max <capacity> samples per trip) to collect medical tests from <num_customer> clinics (<loc_customer>).  \nEach clinic has a certain number of samples (<demand>) that must be picked up before 2 PM for same-day processing.  \nThe lab must:  \n\u2713 Collect all samples without exceeding van capacity.  \n\u2713 Minimize travel time to ensure timely delivery.  \n\u2713 Avoid backtracking to save fuel.  \nEfficient routing means faster test results for patients!",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "num_customer",
+            "loc_customer",
+            "demand"
+        ]
+    },
+    {
+        "title": "Furniture Store Home Delivery Problem",
+        "content": "A furniture store at <loc_depot> delivers bulky items (sofas, tables, etc.) to <num_customer> customers (<loc_customer>) using trucks with a <capacity> m\u00b3 limit.  \nEach customer\u2019s order (<demand> m\u00b3) must fit in a single truck trip\u2014no partial deliveries!  \nThe store needs to:  \n\u2713 Plan routes that avoid narrow streets or low bridges.  \n\u2713 Ensure no truck is overloaded (safety first!).  \n\u2713 Minimize total distance to reduce fuel costs.  \nSmart routing means happy customers and fewer damaged goods!",
+        "tags": [
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "Farmers' Market Produce Pickup Problem",
+        "content": "A farmers' cooperative at <loc_depot> collects fresh produce from <num_customer> local farms (<loc_customer>) using refrigerated trucks (max <capacity> kg).  \nEach farm contributes a different amount (<demand> kg) of fruits/vegetables for the weekly market.  \nThe cooperative must:  \n\u2713 Pick up all produce before it spoils.  \n\u2713 Avoid mixing incompatible items (e.g., apples and onions).  \n\u2713 Optimize routes to keep fuel costs low.  \nEfficient collection means fresher goods at the market and happier shoppers!",
+        "tags": [
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "Citywide Trash Bin Collection Problem",
+        "content": "The city sanitation department manages hundreds of public trash bins (<num_customer>) placed at parks, bus stops, and sidewalks (<loc_customer>). Each bin has a different fill level (<demand>), and garbage trucks (<capacity>) start their routes daily from the depot (<loc_depot>). The goal is to empty every bin without overfilling the trucks, while minimizing driving distance to save fuel and reduce emissions. Some bins fill up faster than others, so efficient routing ensures no overflow or missed pickups.",
+        "tags": [
+            "num_customer",
+            "loc_customer",
+            "demand",
+            "capacity",
+            "loc_depot"
+        ]
+    },
+    {
+        "title": "Art Gallery Painting Transport Problem",
+        "content": "A famous art gallery (<loc_depot>) loans valuable paintings to <num_customer> smaller museums (<loc_customer>) for a traveling exhibition. Each museum requests a specific set of paintings (total weight = <demand>), and the gallery\u2019s climate-controlled trucks (<capacity>) must deliver them safely. Since the paintings are fragile, the route should avoid bumpy roads and minimize travel time. No truck can carry more than its weight limit, and each museum must receive their artworks in one visit to reduce handling risks.",
+        "tags": [
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "demand",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Campus Mail Delivery Problem",
+        "content": "A university\u2019s mail center (<loc_depot>) sorts packages and letters for <num_customer> departments (<loc_customer>) across campus. Each department\u2019s mail pile weighs <demand>, and electric carts (<capacity>) transport them daily. The challenge? Narrow pathways and busy foot traffic mean longer routes delay deliveries. The mail team needs to group stops efficiently so carts aren\u2019t overloaded, while minimizing detours to ensure professors get their research materials on time.",
+        "tags": [
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "demand",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Mobile Vet Clinic Scheduling Problem",
+        "content": "A nonprofit runs mobile vet clinics from a central hub (<loc_depot>) to serve <num_customer> low-income neighborhoods (<loc_customer>). Each clinic requires medical supplies weighing <demand>, and the team\u2019s vans (<capacity>) must also carry equipment like exam tables. Since pets can\u2019t wait, routes must prioritize the shortest possible travel time between stops while ensuring no van is over capacity. Some neighborhoods have higher demand, so careful planning prevents extra trips.",
+        "tags": [
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "demand",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Amusement Park Snack Restocking Problem",
+        "content": "A large amusement park has <num_customer> snack kiosks (<loc_customer>) that need regular restocking of popcorn, drinks, and cotton candy (<demand>). Delivery carts (<capacity>) start from the central warehouse (<loc_depot>) and must navigate crowded walkways. Overloading carts risks spills, but too many trips waste time during peak hours. The park wants routes that keep every kiosk fully stocked without disrupting visitors\u2014balancing speed and capacity to avoid long lines at empty stands.",
+        "tags": [
+            "num_customer",
+            "loc_customer",
+            "demand",
+            "capacity",
+            "loc_depot"
+        ]
+    },
+    {
+        "title": "Mobile COVID-19 Testing Van Deployment Problem",
+        "content": "A city health department operates mobile testing vans that travel to different neighborhoods (<loc_customer>) to provide free COVID-19 tests.  \nEach van starts and ends its day at the central depot (<loc_depot>) and can carry only <capacity> test kits at a time.  \nNeighborhoods have different expected demand (<demand>), and the vans must visit all locations without running out of supplies.  \nThe goal is to minimize total travel distance while ensuring no van is overloaded and every testing site gets enough kits.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "Courier Service for Small Business Deliveries Problem",
+        "content": "A local courier service picks up packages from small businesses (<loc_customer>) and delivers them to a central sorting hub (<loc_depot>).  \nTheir delivery vans can hold up to <capacity> kg, and each business has a different package weight (<demand>).  \nSince many businesses close early, the courier must optimize routes to collect all packages efficiently without exceeding van capacity.  \nThe challenge? Minimizing fuel costs while ensuring no van is overloaded and every pickup is completed on time.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "School Laptop Distribution Problem",
+        "content": "A school district needs to distribute laptops to <num_customer> schools (<loc_customer>) from a central warehouse (<loc_depot>).  \nEach delivery truck can carry up to <capacity> laptops, and each school has a specific order size (<demand>).  \nThe district wants to minimize travel time so IT staff can set up devices quickly before classes start.  \nRoutes must ensure no truck is overloaded and every school gets exactly the laptops they requested.",
+        "tags": [
+            "num_customer",
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "City Park Maintenance Supplies Delivery Problem",
+        "content": "A parks department must deliver gardening tools, mulch, and plants to <num_customer> parks (<loc_customer>) from a central storage yard (<loc_depot>).  \nTheir trucks can carry up to <capacity> kg, and each park has different needs (<demand>).  \nSince workers start early, deliveries must be optimized to minimize travel time while ensuring no truck exceeds its weight limit.  \nThe goal? Efficiently restock all parks so maintenance crews can start work without delays.",
+        "tags": [
+            "num_customer",
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "Local Bakery Bread Delivery Problem",
+        "content": "A small bakery (<loc_depot>) supplies fresh bread daily to <num_customer> cafes and grocery stores (<loc_customer>).  \nTheir delivery van can carry up to <capacity> loaves, and each store orders a different amount (<demand>).  \nSince bread must arrive before stores open, the bakery needs the shortest possible routes to ensure freshness.  \nThe challenge? Delivering all orders without overloading the van while minimizing morning driving time.",
+        "tags": [
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "Mobile Blood Donation Van Scheduling Problem",
+        "content": "A blood bank operates mobile donation vans that travel to different neighborhoods (<loc_customer>) to collect blood donations. Each van has a limited storage capacity (<capacity>) for blood bags, and each stop has an estimated donation volume (<demand>). Starting from the blood bank (<loc_depot>), the vans must visit all scheduled locations without exceeding capacity. The goal is to minimize travel time so that collected blood can be processed quickly while ensuring no van is overloaded.",
         "tags": [
             "loc_customer",
             "capacity",
@@ -321,9 +392,20 @@
         ]
     },
     {
-        "title": "E-Waste Recycling Pickup Service",
-        "content": "An electronics recycling company offers scheduled pickups for old devices (TVs, computers, etc.) from homes and businesses (<loc_customer>).  \nEach pickup location has a different amount of e-waste (<demand>), and the company's trucks (<capacity>) must collect everything without exceeding weight limits.  \nStarting from the recycling center (<loc_depot>), drivers need optimized routes to minimize fuel costs and ensure all pickups are completed in a single trip.  \nThe challenge is balancing truck loads while avoiding unnecessary detours.",
+        "title": "Courier Service for Small Business Deliveries Problem",
+        "content": "A local courier service picks up packages from small businesses (<loc_customer>) and delivers them to a central sorting hub (<loc_depot>). Each business has a different number of packages (<demand>), and the delivery vans have a strict weight limit (<capacity>). The courier must plan routes that collect all packages efficiently, avoiding unnecessary detours while ensuring no van is overfilled. Faster pickups mean happier customers and lower fuel costs!",
         "tags": [
+            "loc_customer",
+            "loc_depot",
+            "demand",
+            "capacity"
+        ]
+    },
+    {
+        "title": "School Laptop Distribution Problem",
+        "content": "A school district is rolling out laptops to <num_customer> schools (<loc_customer>), with each school needing a specific number of devices (<demand>). The IT department has a fleet of vans (<capacity>) that transport the laptops from the district warehouse (<loc_depot>). They need to ensure every school gets its laptops in one trip without overloading any van while minimizing total travel distance to save time and fuel.",
+        "tags": [
+            "num_customer",
             "loc_customer",
             "demand",
             "capacity",
@@ -331,19 +413,142 @@
         ]
     },
     {
-        "title": "Catering Delivery for Corporate Events",
-        "content": "A catering company prepares meals at a central kitchen (<loc_depot>) and delivers them to multiple corporate offices (<loc_customer>) hosting lunch meetings.  \nEach office has a different number of attendees (<demand>), and the delivery vans (<capacity>) must carry enough meals without overloading.  \nSince food must stay fresh, routes should be as short as possible to ensure timely delivery.  \nThe company wants to minimize total travel distance while ensuring no van exceeds its meal capacity.",
+        "title": "City Park Maintenance Supplies Delivery Problem",
+        "content": "The city\u2019s parks department must deliver gardening tools, mulch, and plants to <num_customer> parks (<loc_customer>) from a central depot (<loc_depot>). Each park has a unique order (<demand>), and the delivery trucks have a strict weight limit (<capacity>). The team needs to plan routes that avoid backtracking while ensuring no truck is overloaded\u2014efficient deliveries mean well-maintained parks and happy visitors!",
+        "tags": [
+            "num_customer",
+            "loc_customer",
+            "loc_depot",
+            "demand",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Local Bakery Bread Delivery Problem",
+        "content": "A small bakery (<loc_depot>) supplies fresh bread daily to <num_customer> cafes and grocery stores (<loc_customer>). Each store orders a different number of loaves (<demand>), and the delivery van can only carry so much (<capacity>). The baker must plan the shortest possible route to ensure all deliveries are made while keeping bread fresh and avoiding wasted trips. Faster deliveries mean happier customers and less stale bread!",
         "tags": [
             "loc_depot",
+            "num_customer",
             "loc_customer",
             "demand",
             "capacity"
         ]
     },
     {
-        "title": "Fire Hydrant Inspection & Maintenance",
-        "content": "The city\u2019s water department must inspect and maintain fire hydrants (<loc_customer>) spread across different neighborhoods.  \nEach hydrant requires specific tools and parts (<demand>), and maintenance trucks (<capacity>) can only carry so much equipment.  \nStarting from the depot (<loc_depot>), crews need efficient routes to service all hydrants without backtracking unnecessarily.  \nThe goal is to complete inspections in the least amount of driving time while staying within truck capacity limits.",
+        "title": "Mobile Vaccination Clinic Scheduling Problem",
+        "content": "A public health team operates mobile vaccination clinics to serve rural communities. Starting from a central depot (<loc_depot>), they use vans (each with a <capacity> dose limit) to visit <num_customer> villages (<loc_customer>), where each has a known demand (<demand> doses). Since vaccines are temperature-sensitive, they must be delivered efficiently without delays. The goal is to minimize total travel distance while ensuring no van exceeds its storage capacity and every village gets its exact vaccine allocation in a single visit.",
         "tags": [
+            "loc_depot",
+            "capacity",
+            "num_customer",
+            "loc_customer",
+            "demand"
+        ]
+    },
+    {
+        "title": "Furniture Store Home Delivery Problem",
+        "content": "A furniture store at <loc_depot> delivers bulky items (sofas, tables, etc.) to <num_customer> customers (<loc_customer>) using trucks with a <capacity> weight limit. Each order has a unique size/weight (<demand>), and trucks can\u2019t be overloaded. Drivers must plan routes to drop off all items in one trip per customer while minimizing fuel costs. Tight city streets and narrow driveways make route efficiency critical\u2014no one wants a truck stuck in traffic with a delayed dining set!",
+        "tags": [
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "Citywide Trash Bin Collection Problem",
+        "content": "A waste management company must empty public trash bins at <num_customer> locations (<loc_customer>) daily. Their garbage trucks (<capacity>) start and end at the depot (<loc_depot>). Each bin has a predictable fill level (<demand>), and trucks can\u2019t exceed weight limits. The challenge? Optimize routes to cover all bins without backtracking or overfilling trucks, reducing fuel use and overtime for drivers. Missed bins mean complaints, so every stop counts!",
+        "tags": [
+            "num_customer",
+            "loc_customer",
+            "capacity",
+            "loc_depot",
+            "demand"
+        ]
+    },
+    {
+        "title": "Mobile Vet Clinic Scheduling Problem",
+        "content": "A nonprofit runs mobile vet clinics to provide care for pets in underserved neighborhoods. From a central hub (<loc_depot>), their vans (<capacity> for supplies/equipment) visit <num_customer> locations (<loc_customer>), each with a estimated demand (<demand> for vaccines, medications, etc.). Since clinics operate on tight schedules, routes must minimize travel time while ensuring vans carry enough supplies for each stop\u2014no running out of cat vaccines halfway through the day!",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "num_customer",
+            "loc_customer",
+            "demand"
+        ]
+    },
+    {
+        "title": "Amusement Park Snack Restocking Problem",
+        "content": "A large amusement park has snack kiosks at <num_customer> spots (<loc_customer>) that need regular restocking from a central warehouse (<loc_depot>). Electric carts (<capacity>) carry perishable goods (ice cream, drinks, etc.), and each kiosk has a unique daily demand (<demand>). Routes must avoid crowded walkways and ensure no cart is overloaded, all while minimizing total distance to keep snacks fresh and lines short. Happy visitors mean more cotton candy sales!",
+        "tags": [
+            "num_customer",
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "Mobile Car Wash Service Scheduling Problem",
+        "content": "A mobile car wash company operates from a central garage (<loc_depot>) with vans that carry water tanks and supplies (<capacity>). Each day, they receive requests from <num_customer> office buildings (<loc_customer>) needing car wash services for their employees' vehicles. Each location has a different number of cars to wash (<demand>). The team must plan routes so every van stays under its water/supply limit while minimizing travel time between stops\u2014because the faster they finish, the more appointments they can book that day!",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "num_customer",
+            "loc_customer",
+            "demand"
+        ]
+    },
+    {
+        "title": "Craft Beer Barrel Delivery to Pubs Problem",
+        "content": "A local brewery at <loc_depot> delivers fresh beer barrels to <num_customer> pubs (<loc_customer>) using trucks that can safely carry up to <capacity> barrels. Each pub orders different quantities weekly (<demand>), and barrels must arrive before Friday night rush hour. The challenge? Designing routes where no truck is overloaded, each pub gets visited once, and the total distance is minimized\u2014because flat beer from late deliveries means unhappy customers!",
+        "tags": [
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "School Laptop Repair Pickup Problem",
+        "content": "A tech company services broken laptops from <num_customer> schools (<loc_customer>), collecting them in padded vans (<capacity>) from a central depot (<loc_depot>). Each school has a specific number of devices (<demand>) needing repairs. The goal is to pick up all laptops in one trip per school without exceeding van capacity while keeping routes short\u2014since faster collections mean quicker repairs and less disruption for students.",
+        "tags": [
+            "num_customer",
+            "loc_customer",
+            "capacity",
+            "loc_depot",
+            "demand"
+        ]
+    },
+    {
+        "title": "Farmers' Cheese Market Delivery Problem",
+        "content": "A dairy farm at <loc_depot> supplies fresh cheese to <num_customer> farmers' markets (<loc_customer>) using refrigerated trucks (<capacity>). Each market has a limited shelf space and orders a unique weight of cheese (<demand>) before opening hours. Routes must ensure cheese arrives cold and fresh, trucks aren\u2019t overloaded, and the total distance is optimized\u2014because melted cheese or missed sales ruin everyone\u2019s day!",
+        "tags": [
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "City Christmas Tree Recycling Problem",
+        "content": "After the holidays, the city\u2019s recycling center (<loc_depot>) deploys wood-chipper trucks (<capacity>) to collect trees from <num_customer> neighborhood drop-off points (<loc_customer>). Each point has a pile of trees (<demand>). The team needs routes where trucks never exceed chipping capacity, every site is visited once, and total fuel use is minimized\u2014because snowy roads and impatient residents demand efficiency!",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "num_customer",
+            "loc_customer",
+            "demand"
+        ]
+    },
+    {
+        "title": "Mobile ATM Cash Replenishment Problem",
+        "content": "Your local bank manages 15 cash-strapped ATMs (<num_customer>) scattered around town (<loc_customer>), each needing different amounts of bills (<demand>). Armored trucks (<capacity>) depart daily from the vault (<loc_depot>) to refill them. Since these trucks have strict weight limits for safety, and cash is heavy, planners must create routes that visit every ATM exactly once without overloading any vehicle - while minimizing driving time between stops to reduce robbery risks.",
+        "tags": [
+            "num_customer",
             "loc_customer",
             "demand",
             "capacity",
@@ -351,240 +556,38 @@
         ]
     },
     {
-        "title": "Pop-Up Retail Inventory Restocking",
-        "content": "A trendy pop-up shop chain moves between different temporary locations (<loc_customer>) and needs regular inventory restocking from a central warehouse (<loc_depot>).  \nEach pop-up has a unique product demand (<demand>), and delivery vans (<capacity>) must distribute items efficiently.  \nSince locations change frequently, route planning must adapt to minimize travel distance while ensuring no van is overloaded.  \nThe challenge is optimizing deliveries to keep all pop-ups stocked without wasted trips.",
+        "title": "Beach Umbrella Rental Delivery Problem",
+        "content": "A coastal resort rents umbrellas to 20 beach sections (<loc_customer>) each morning. Crews load carts (<capacity>) at the storage shed (<loc_depot>) with varying numbers of umbrellas (<demand>) based on reservations. Since sand paths slow down travel, they need routes that deliver all umbrellas in one trip per cart without exceeding load limits, while minimizing the distance pushed through soft sand under the hot sun.",
         "tags": [
             "loc_customer",
+            "capacity",
             "loc_depot",
+            "demand"
+        ]
+    },
+    {
+        "title": "Film Set Equipment Logistics Problem",
+        "content": "A movie studio must transport cameras, lights, and props (<demand>) from their warehouse (<loc_depot>) to 8 filming locations (<loc_customer>) using equipment trucks (<capacity>). Some heavy items can't be split between trucks. The production manager needs to assign gear to trucks and plan routes so everything arrives simultaneously for the shoot, without overloading vehicles or making duplicate deliveries to any set.",
+        "tags": [
             "demand",
-            "capacity"
-        ]
-    },
-    {
-        "title": "Mobile Car Wash Service Fleet Routing",
-        "content": "A mobile car wash company operates a fleet of vans (each with <capacity> water/tool capacity) from their home base (<loc_depot>). Each day, they receive service requests from customers at different locations (<loc_customer>), with varying vehicle sizes requiring different amounts of supplies (<demand>). They need to schedule routes that:  \n\u2713 Visit all booked appointments in one trip  \n\u2713 Never exceed van supply limits  \n\u2713 Minimize driving time between homes  \n\u2713 Avoid backtracking across town  \nThe goal is to wash the most cars per day without running out of soap or water mid-job!",
-        "tags": [
-            "capacity",
             "loc_depot",
-            "loc_customer",
-            "demand"
-        ]
-    },
-    {
-        "title": "Community Garden Compost Delivery",
-        "content": "The city\u2019s sustainability department collects compost from a central facility (<loc_depot>) to deliver to 25 community gardens (<loc_customer>) using electric trucks (<capacity> load limit). Each garden requests a different amount (<demand>) based on their size. Challenges include:  \n\u2022 Tight urban streets limiting truck access  \n\u2022 Fragile schedules (gardens only accept deliveries 9AM-12PM)  \n\u2022 Perishable cargo that can\u2019t be left in trucks all day  \nRoutes must ensure every garden gets their nutrient-rich delivery while keeping the electric trucks\u2019 battery-efficient paths under 4 hours total runtime.",
-        "tags": [
-            "loc_depot",
-            "loc_customer",
-            "capacity",
-            "demand"
-        ]
-    },
-    {
-        "title": "Bowling Alley Ball Restocking",
-        "content": "A bowling supply company services 12 alleys (<loc_customer>) from their warehouse (<loc_depot>), delivering replacement bowling balls (each truck fits <capacity> balls). Each alley orders different quantities (<demand>) based on league schedules. The twist:  \n\u2022 Balls are heavy \u2013 trucks hit weight limits before space limits  \n\u2022 Some alleys need urgent replacements for tournaments  \n\u2022 Drivers must avoid highways (vibrations damage ball precision)  \nThe optimal route gets every alley game-ready with minimal bumpy roads traveled.",
-        "tags": [
-            "loc_customer",
-            "loc_depot",
-            "capacity",
-            "demand"
-        ]
-    },
-    {
-        "title": "Mall Santa Photo Equipment Circuit",
-        "content": "During Christmas, a team transports Santa sets (throne, props, camera gear totaling <capacity> per van) between 8 shopping malls (<loc_customer>). Each mall hosts Santa for 3 days (<demand> = equipment sets needed). Constraints:  \n\u2022 Morning setup deadlines (9AM sharp)  \n\u2022 Some malls need multiple sets for busy weekends  \n\u2022 Equipment is fragile \u2013 minimize unloading/reloading  \nThe solution creates a rotating schedule where vans leapfrog between malls like holiday elves, ensuring no child finds Santa missing his sleigh!",
-        "tags": [
-            "capacity",
-            "loc_customer",
-            "demand"
-        ]
-    },
-    {
-        "title": "Swimming Pool Maintenance Route",
-        "content": "A chemical supplier services 50 residential pools (<loc_customer>) weekly from their depot (<loc_depot>). Each truck (<capacity>) carries chlorine, acid, and salt bags. Challenges:  \n\u2022 Each pool needs custom chemical mixes (<demand>)  \n\u2022 Products can\u2019t be stored together due to safety rules  \n\u2022 Drivers are certified to handle hazardous materials  \nThe ideal route groups nearby pools with compatible orders, ensuring safe transport while preventing algae outbreaks from delayed deliveries!",
-        "tags": [
-            "loc_customer",
-            "loc_depot",
-            "capacity",
-            "demand"
-        ]
-    },
-    {
-        "title": "Mobile COVID-19 Testing Unit Deployment",
-        "content": "A public health agency operates mobile testing vans (capacity: <capacity> test kits) from a central depot (<loc_depot>) to serve neighborhoods with high infection rates.  \nEach stop (<loc_customer>) has a predicted demand (<demand>) based on population density.  \nThe vans must visit all locations in a single day without exceeding their kit limits, while minimizing travel time to maximize testing availability.  \nSince test kits are temperature-sensitive, delays could spoil supplies\u2014efficient routing is critical!",
-        "tags": [
-            "capacity",
-            "loc_depot",
-            "loc_customer",
-            "demand"
-        ]
-    },
-    {
-        "title": "Toy Store Holiday Gift Wrapping Service",
-        "content": "A toy store chain offers free gift-wrapping during the holidays, with a fleet of vans (capacity: <capacity> wrapping stations) dispatched from a warehouse (<loc_depot>).  \nEach mall (<loc_customer>) requests a certain number of stations (<demand>) based on expected shoppers.  \nThe goal is to deploy all stations in one trip per van, avoiding backtracking between malls.  \nWith limited staff and tight holiday schedules, optimizing routes ensures no mall runs out of wrapping paper or frustrated elves!",
-        "tags": [
-            "capacity",
-            "loc_depot",
-            "loc_customer",
-            "demand"
-        ]
-    },
-    {
-        "title": "Urban Tree Pruning Crew Scheduling",
-        "content": "A city parks department must prune trees across neighborhoods (<loc_customer>) using crews with trucks (capacity: <capacity> pruning tools/equipment) starting from a maintenance yard (<loc_depot>).  \nEach location has a unique workload (<demand>), like the number of trees or required tools.  \nRoutes must avoid overloading trucks with heavy equipment while covering all areas efficiently.  \nBonus challenge: Some streets have low bridges, so route planners must also consider height restrictions!",
-        "tags": [
-            "loc_customer",
-            "capacity",
-            "loc_depot",
-            "demand"
-        ]
-    },
-    {
-        "title": "Corporate Lunchbox Delivery for Offices",
-        "content": "A catering company delivers pre-ordered lunchboxes from a kitchen (<loc_depot>) to office buildings (<loc_customer>) using refrigerated vans (capacity: <capacity> meals).  \nEach office orders a specific number of meals (<demand>), and vans must deliver all lunches within a tight 90-minute window before noon.  \nSince meals spoil if left too long, the company needs the shortest possible routes that respect van capacities and delivery time constraints.  \nHungry employees (and their bosses) will revolt if lunches arrive late!",
-        "tags": [
-            "loc_depot",
-            "loc_customer",
-            "capacity",
-            "demand"
-        ]
-    },
-    {
-        "title": "Scuba Tank Refill Service for Dive Shops",
-        "content": "A gas supplier refills scuba tanks for dive shops (<loc_customer>) from a central facility (<loc_depot>) using trucks with limited cylinder capacity (<capacity>).  \nEach shop needs a set number of tanks (<demand>) refilled weekly.  \nTrucks must visit all shops without exceeding weight limits (compressed air is heavy!) while minimizing detours\u2014divers get cranky when tanks run low.  \nPro tip: Some shops are on narrow coastal roads, so large trucks can\u2019t access them!",
-        "tags": [
-            "loc_customer",
-            "loc_depot",
-            "capacity",
-            "demand"
-        ]
-    },
-    {
-        "title": "Mobile Vet Clinic Pet Care Visits",
-        "content": "A mobile veterinary service operates from a central clinic (<loc_depot>) and sends out vans (<capacity>) to visit pet owners\u2019 homes (<loc_customer>) for routine checkups, vaccinations, or treatments. Each appointment requires specific equipment and supplies (<demand>), and the vans can only carry so much. The goal is to schedule routes so every pet gets care without backtracking or overloading the vans, while keeping travel distances short to maximize the number of daily visits.",
-        "tags": [
-            "loc_depot",
-            "capacity",
-            "loc_customer",
-            "demand"
-        ]
-    },
-    {
-        "title": "Bakery Wholesale Delivery to Caf\u00e9s",
-        "content": "A local bakery (<loc_depot>) supplies fresh pastries, bread, and desserts to dozens of caf\u00e9s (<loc_customer>) every morning. Their delivery trucks (<capacity>) must account for each caf\u00e9\u2019s unique order size (<demand>)\u2014some need 10 boxes of croissants, others just a few loaves. Since freshness is critical, routes must be optimized to ensure no truck is overloaded, all deliveries arrive before opening hours, and the total distance driven is as short as possible to save fuel.",
-        "tags": [
-            "loc_depot",
-            "loc_customer",
-            "capacity",
-            "demand"
-        ]
-    },
-    {
-        "title": "City Park Trash Bin Maintenance",
-        "content": "The city\u2019s sanitation department (<loc_depot>) sends out crews with compacting trucks (<capacity>) to empty overflowing trash bins (<loc_customer>) across public parks. Each bin has a different fill level (<demand>), and trucks can only hold so much before needing to dump at the landfill. The team needs routes that hit every bin efficiently, avoid unnecessary detours, and prevent trucks from filling up mid-route\u2014keeping parks clean without wasting time or fuel.",
-        "tags": [
-            "loc_depot",
-            "capacity",
-            "loc_customer",
-            "demand"
-        ]
-    },
-    {
-        "title": "Corporate Laptop Repair Pickup Service",
-        "content": "An IT company (<loc_depot>) offers on-site laptop repairs for businesses. Their technicians use vans (<capacity>) to pick up broken devices (<demand> per office) from multiple offices (<loc_customer>), then bring them back to the workshop. Since vans have limited space and some offices have dozens of laptops, routes must ensure no van is overloaded, all pickups happen in one trip, and the total driving distance is minimized to reduce service costs.",
-        "tags": [
-            "loc_depot",
-            "capacity",
-            "demand",
-            "loc_customer"
-        ]
-    },
-    {
-        "title": "Rural School Lunch Program",
-        "content": "A nonprofit (<loc_depot>) delivers pre-packaged meals (<demand>) to remote schools (<loc_customer>) using refrigerated trucks (<capacity>). Each school has a fixed weekly order, and the trucks must keep food cold, so long detours aren\u2019t an option. The challenge? Design routes that deliver all meals without exceeding truck capacity, prioritize the farthest schools first to prevent spoilage, and minimize total travel distance to stretch donor funding further.",
-        "tags": [
-            "loc_depot",
-            "demand",
             "loc_customer",
             "capacity"
         ]
     },
     {
-        "title": "Mobile Pet Grooming Van Route Optimization",
-        "content": "A mobile pet grooming service operates a fleet of vans (each with a <capacity> for equipment and supplies) from a central garage (<loc_depot>). Each day, they receive grooming appointments at various pet owners' homes (<loc_customer>), each requiring a specific set of tools and products (<demand>). The goal is to schedule routes so that every pet gets pampered without any van exceeding its load limit, while minimizing total driving distance between stops. Efficient routing means more happy pets (and owners) per day!",
+        "title": "Community Center Meal Delivery Problem",
+        "content": "A nonprofit cooks meals at their kitchen (<loc_depot>) and delivers them to 12 senior centers (<loc_customer>) using volunteer cars (<capacity>). Each center orders specific meal quantities (<demand>). Since meals must stay warm and volunteers have limited time, routes must group nearby centers together without exceeding car trunk space, ensuring all deliveries arrive within 90 minutes of cooking.",
         "tags": [
-            "capacity",
             "loc_depot",
             "loc_customer",
+            "capacity",
             "demand"
         ]
     },
     {
-        "title": "Craft Beer Delivery to Local Pubs",
-        "content": "A small brewery at <loc_depot> supplies fresh craft beer kegs to <num_pubs> neighborhood pubs (<loc_customer>), each ordering a unique quantity (<demand> kegs). Their delivery truck can carry up to <capacity> kegs per trip. Since beer tastes best when fresh, they want to minimize delivery time while ensuring no pub runs dry. Routes must avoid overloading the truck and prioritize the shortest possible paths\u2014because no pub likes waiting for their next round!",
-        "tags": [
-            "loc_depot",
-            "num_pubs",
-            "loc_customer",
-            "demand",
-            "capacity"
-        ]
-    },
-    {
-        "title": "Citywide Newspaper Distribution",
-        "content": "A newspaper printing hub (<loc_depot>) delivers daily editions to <num_stops> convenience stores and newsstands (<loc_customer>), each with a pre-ordered stack size (<demand>). Delivery vans (capacity: <capacity> papers) must distribute all copies before sunrise. The challenge? Packing vans optimally so no route exceeds weight limits while ensuring the fastest possible drop-offs\u2014because yesterday\u2019s news is useless!",
-        "tags": [
-            "loc_depot",
-            "num_stops",
-            "loc_customer",
-            "demand",
-            "capacity"
-        ]
-    },
-    {
-        "title": "Portable Toilet Servicing for Events",
-        "content": "A sanitation company manages portable toilets across multiple festival sites (<loc_customer>) from a depot (<loc_depot>). Each unit requires cleaning and restocking (total <demand> supplies per stop). Their service trucks (<capacity>) must visit every site exactly once per day without overloading. Efficient routing means fresher facilities for attendees and lower fuel costs for the company\u2014nobody wants a line at the loo!",
-        "tags": [
-            "loc_customer",
-            "loc_depot",
-            "demand",
-            "capacity"
-        ]
-    },
-    {
-        "title": "Home Meal Kit Subscription Deliveries",
-        "content": "A meal kit startup at <loc_depot> ships fresh ingredient boxes to <num_customers> subscribers (<loc_customer>), each with a customized order (<demand>). Their refrigerated vans (<capacity>) must deliver all kits within a tight 2-hour window to prevent spoilage. The goal? Group nearby deliveries into routes that max out van capacity (without overloading) and minimize detours\u2014because hungry customers don\u2019t wait!",
-        "tags": [
-            "loc_depot",
-            "num_customers",
-            "loc_customer",
-            "demand",
-            "capacity"
-        ]
-    },
-    {
-        "title": "Mobile Laundromat Service for Apartment Complexes",
-        "content": "A mobile laundromat service picks up and delivers laundry for residents in multiple apartment buildings (<loc_customer>).  \nTheir van (capacity: <capacity> loads) starts at the cleaning facility (<loc_depot>) and must collect/drop off laundry bags (<demand>) at each stop.  \nSince they charge per trip, they need to optimize routes to serve all buildings in the shortest distance possible\u2014without overstuffing the van.  \nEfficiency means lower costs for customers and fewer trips for the driver!",
-        "tags": [
-            "loc_customer",
-            "capacity",
-            "loc_depot",
-            "demand"
-        ]
-    },
-    {
-        "title": "Citywide Public Bike Repair Van Routing",
-        "content": "A city\u2019s bike-share program sends repair vans (capacity: <capacity> tools/parts) from the depot (<loc_depot>) to fix broken bikes at stations (<loc_customer>).  \nEach station needs a different set of parts (<demand>), and the van can\u2019t carry everything at once.  \nThe goal? Plan a route that fixes all stations in one trip without backtracking, ensuring no van is overloaded and mechanics aren\u2019t stuck driving in circles.",
-        "tags": [
-            "capacity",
-            "loc_depot",
-            "loc_customer",
-            "demand"
-        ]
-    },
-    {
-        "title": "Corporate Office Coffee Bean Refills",
-        "content": "A specialty coffee supplier delivers fresh beans to office break rooms (<loc_customer>) from their roastery (<loc_depot>).  \nTheir delivery van holds <capacity> kg of beans, and each office orders a unique amount (<demand>).  \nSince coffee quality drops after 24 hours, they need routes that minimize travel time so every office gets the freshest brew possible\u2014without making extra trips.",
+        "title": "Stadium Concession Restocking Problem",
+        "content": "During baseball games, vendors must restock 50 concession stands (<loc_customer>) from the central commissary (<loc_depot>) using electric carts (<capacity>). Each stand has unique snack/drink needs (<demand>) that change inning-by-inning. Staff need real-time routes that avoid crowded concourses, never overload carts (which would slow them down), and minimize trips so hungry fans never wait too long.",
         "tags": [
             "loc_customer",
             "loc_depot",
@@ -593,129 +596,295 @@
         ]
     },
     {
-        "title": "Ambulance Depot Medical Supply Restocking",
-        "content": "A regional ambulance service stocks its vehicles with supplies (bandages, oxygen tanks, etc.) from a central depot (<loc_depot>).  \nEach ambulance (<loc_customer>) needs a custom restock (<demand>), and the supply truck (capacity: <capacity>) can\u2019t carry everything at once.  \nRoutes must prioritize speed and efficiency\u2014every minute saved means ambulances get back on the road faster.",
+        "title": "Mobile Car Wash Service Scheduling Problem",
+        "content": "A mobile car wash company operates a fleet of vans (<capacity> water/tools per van) from a central depot (<loc_depot>). Each day, they receive requests from <num_customer> customers (<loc_customer>) needing their cars washed. Each job requires a specific amount of water and supplies (<demand>). The team must plan routes so every customer gets serviced without any van running out of supplies mid-route. The goal is to minimize total travel distance while ensuring no van is overloaded\u2014keeping both customers and drivers happy!",
+        "tags": [
+            "capacity",
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "demand"
+        ]
+    },
+    {
+        "title": "Craft Beer Barrel Delivery to Pubs Problem",
+        "content": "A local brewery at <loc_depot> delivers fresh craft beer barrels to <num_customer> pubs across town. Their delivery trucks can carry up to <capacity> barrels per trip. Each pub (<loc_customer>) orders a unique number of barrels (<demand>) weekly. The brewery wants to optimize routes so all pubs get their beer in one trip, no truck is over capacity, and drivers take the shortest possible paths. Efficient delivery means fresher beer and lower fuel costs!",
         "tags": [
             "loc_depot",
+            "num_customer",
+            "capacity",
+            "loc_customer",
+            "demand"
+        ]
+    },
+    {
+        "title": "School Laptop Repair Pickup Problem",
+        "content": "A tech company manages laptop repairs for <num_customer> schools (<loc_customer>). Each school has broken laptops (<demand>) that need pickup and transport to a repair hub (<loc_depot>). Their vans can carry up to <capacity> laptops at once. The challenge? Collect all devices in a single trip per school while minimizing total distance traveled. No van should be overloaded, and schools prefer quick pickups to avoid disrupting classes.",
+        "tags": [
+            "num_customer",
+            "loc_customer",
+            "demand",
+            "loc_depot",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Farmers' Cheese Market Delivery Problem",
+        "content": "A dairy farm at <loc_depot> produces artisanal cheeses and delivers them to <num_customer> farmers' markets (<loc_customer>) every weekend. Their refrigerated trucks have a <capacity> weight limit, and each market orders a different amount (<demand>). The farm needs routes that ensure all cheese arrives fresh, no truck exceeds its capacity, and drivers spend as little time on the road as possible. Happy markets mean repeat customers!",
+        "tags": [
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "Mobile ATM Cash Replenishment Problem",
+        "content": "A bank must restock cash in <num_customer> mobile ATMs (<loc_customer>) scattered around the city. Armored trucks (<capacity>) depart from the central vault (<loc_depot>), each carrying cash cassettes (<demand> per ATM). Security rules require minimizing travel time and ensuring no truck carries excess cash. The goal: visit every ATM once, stay under capacity, and reduce road time to lower robbery risks.",
+        "tags": [
+            "num_customer",
+            "loc_customer",
+            "capacity",
+            "loc_depot",
+            "demand"
+        ]
+    },
+    {
+        "title": "Mobile Pop-Up Retail Inventory Rotation Problem",
+        "content": "A trendy clothing brand operates mobile pop-up shops at <num_customer> rotating locations (<loc_customer>) across the city. Each week, they need to redistribute inventory from their warehouse (<loc_depot>) using vans with <capacity> clothing unit capacity. Some pop-ups need fresh stock (<demand>) while others return unsold items (negative demand). The challenge is balancing new deliveries with returns in the same trip without overloading vans, while minimizing travel distance between these temporary retail spots.",
+        "tags": [
+            "num_customer",
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "Community Fridge Network Restocking Problem",
+        "content": "A nonprofit maintains <num_customer> neighborhood community fridges (<loc_customer>) that provide free groceries. Volunteers start from a food bank (<loc_depot>) with refrigerated trucks (<capacity>) carrying perishables like milk (<demand> gallons), eggs, and produce. Each fridge has different capacity needs based on neighborhood usage. The team must completely restock all fridges before food spoils, ensuring no truck exceeds its cold storage limits while visiting fridges in the most fuel-efficient order.",
+        "tags": [
+            "num_customer",
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "Film Festival Equipment Circulation Problem",
+        "content": "During a citywide film festival, <num_customer> venues (<loc_customer>) need specialized projectors and sound equipment delivered from a central depot (<loc_depot>). Each van (<capacity>) can carry fragile equipment for multiple venues (<demand> units), but identical equipment must reach certain venues at the same time for synchronized screenings. The logistics team must coordinate routes where no van is overloaded, all equipment arrives before showtimes, and total mileage is minimized across this time-sensitive circuit.",
+        "tags": [
+            "num_customer",
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "Urban Tree Nursery Delivery Problem",
+        "content": "A city parks department grows saplings at a central nursery (<loc_depot>) and delivers them to <num_customer> planting sites (<loc_customer>) each spring. Their trucks (<capacity>) carry delicate young trees (<demand> per site) that must be planted the same day. Since different neighborhoods request different tree species (affecting how many fit per truck), planners must create routes where: 1) No truck exceeds weight limits for fragile roots 2) All trees reach planting sites within daylight hours 3) Total fleet mileage is minimized to stay under budget.",
+        "tags": [
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "Library Bookmobile Scheduling Problem",
+        "content": "A county library operates bookmobiles that visit <num_customer> rural stops (<loc_customer>) weekly from a main branch (<loc_depot>). Each vehicle (<capacity>) carries books, DVDs, and hotspots (<demand> items per stop) tailored to each community's preferences. The challenge? Creating routes where: 1) Vehicles never exceed weight limits (important for rural road safety) 2) Popular items are distributed fairly 3) Total travel distance is minimized across vast service areas 4) Each stop gets visited on its designated day without exception - rain or shine.",
+        "tags": [
+            "num_customer",
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "Mobile Pet Grooming Van Scheduling Problem",
+        "content": "A mobile pet grooming service with a fleet of vans (each holding <capacity> appointments) starts its day at the garage (<loc_depot>). They need to visit <num_customer> homes (<loc_customer>) where pets are waiting - each appointment requires specific equipment (<demand> space in van). The groomers want to:  \n\u2713 Fit all booked appointments without overstuffing vans  \n\u2713 Minimize driving between houses to reduce fuel costs  \n\u2713 Ensure no backtracking across town  \nThe happier the schedule, the more wagging tails they can pamper per day!",
+        "tags": [
+            "capacity",
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "demand"
+        ]
+    },
+    {
+        "title": "University Campus Laundry Collection Problem",
+        "content": "Every Monday, laundry trucks (<capacity> kg) depart from the central facility (<loc_depot>) to collect dirty linens from <num_customer> dorm buildings (<loc_customer>). Each dorm generates a different pile (<demand> kg) of sheets/towels. The challenge?  \n\u2713 Never exceed truck weight limits (or risk soapy avalanches!)  \n\u2713 Visit each dorm exactly once per route  \n\u2713 Optimize paths through narrow campus roads  \nClean sheets depend on dirty math!",
+        "tags": [
+            "capacity",
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "demand"
+        ]
+    },
+    {
+        "title": "Festival Food Truck Supply Problem",
+        "content": "During the weekend music festival at <loc_depot>, organizers must restock <num_customer> food trucks (<loc_customer>) scattered across the venue. Supply vehicles (<capacity> cases) carry everything from burger patties to ice cream cones (<demand> cases per truck). The rules:  \n\u2713 Keep performers fed without trucks running empty  \n\u2713 Navigate crowded pedestrian pathways  \n\u2713 Avoid crossing the main stage during shows  \nHungry crowds disappear when the nachos do!",
+        "tags": [
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "Neighborhood Tool Library Rotation Problem",
+        "content": "A community tool library at <loc_depot> loans out power tools to <num_customer> local workshops (<loc_customer>) weekly. Their electric van (<capacity> tools) redistributes items based on reservations (<demand> tools/location). They need routes that:  \n\u2713 Prevent overloading (no dangling drills!)  \n\u2713 Group nearby workshops together  \n\u2713 Return unused tools to headquarters  \nBecause nothing builds community like shared circular saws!",
+        "tags": [
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "Aquarium Fish Delivery Problem",
+        "content": "The city aquarium (<loc_depot>) supplies rare tropical fish to <num_customer> pet stores (<loc_customer>) using specialized tanks (<capacity> liters). Each store orders delicate species (<demand> liters of tank space) needing careful transport. The goal?  \n\u2713 Never mix incompatible fish in same tank  \n\u2713 Minimize travel time for fragile cargo  \n\u2713 Visit each store in one smooth loop  \nHappy fish = fewer angry customer calls about floating customers!",
+        "tags": [
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "Mobile COVID-19 Testing Van Deployment Problem",
+        "content": "A city health department operates mobile testing vans that start each day at a central depot (<loc_depot>). These vans must visit <num_customer> neighborhoods (<loc_customer>) to provide COVID-19 tests, with each stop requiring a certain number of test kits (<demand>). Each van can carry up to <capacity> kits. The goal is to assign routes so every neighborhood gets tested without exceeding van capacity, while minimizing total travel distance to save fuel and time. Since testing demand varies daily, routes must adapt efficiently.",
+        "tags": [
+            "loc_depot",
+            "num_customer",
             "loc_customer",
             "demand",
             "capacity"
         ]
     },
     {
-        "title": "Festival Portable Charger Station Refills",
-        "content": "During a multi-day festival, electric carts (capacity: <capacity> power banks) recharge portable phone chargers at kiosks (<loc_customer>) across the venue (<loc_depot> = charging hub).  \nEach kiosk has a different demand (<demand>), and carts must avoid congested paths.  \nThe goal? Keep all kiosks stocked so attendees never run out of battery, while minimizing detours for the carts.",
+        "title": "Mobile Pop-Up Retail Inventory Rotation Problem",
+        "content": "A trendy clothing brand uses pop-up shops in <num_customer> high-traffic areas (<loc_customer>). Each week, a delivery truck (capacity: <capacity>) restocks these shops from the warehouse (<loc_depot>), swapping unsold items for fresh inventory. Each pop-up\u2019s demand (<demand>) depends on sales data. The challenge? Plan routes that rotate stock efficiently\u2014no overloading trucks, no missed stops\u2014while reducing mileage to cut costs. Bonus: Some pop-ups may need urgent restocks, adding complexity!",
         "tags": [
-            "capacity",
+            "num_customer",
             "loc_customer",
+            "capacity",
             "loc_depot",
             "demand"
         ]
     },
     {
-        "title": "Mobile Library for Rural Communities",
-        "content": "A county library system operates a fleet of mobile library vans (<capacity> books per van) that travel to remote villages (<loc_customer>) from a central depot (<loc_depot>). Each village has a weekly request (<demand>) for books, from children\u2019s stories to farming manuals. The library wants to ensure every stop gets its requested books without overloading the vans, while minimizing travel time on winding rural roads. Since some villages only have narrow access roads, efficient routing is key to serving all communities fairly.",
+        "title": "Community Fridge Network Restocking Problem",
+        "content": "A nonprofit manages <num_customer> community fridges (<loc_customer>) stocked with donated food. Volunteers drive refrigerated trucks (capacity: <capacity>) from a central kitchen (<loc_depot>) to deliver perishables (<demand>) based on fridge usage data. Routes must ensure no fridge runs empty, no truck is overloaded, and food arrives fresh. Since fridges serve vulnerable populations, minimizing delivery time is critical\u2014wasted miles mean wasted meals.",
         "tags": [
-            "capacity",
+            "num_customer",
             "loc_customer",
+            "capacity",
             "loc_depot",
             "demand"
         ]
     },
     {
-        "title": "Ice Cream Truck Stock-Up Problem",
-        "content": "An ice cream distributor supplies independent ice cream trucks across the city (<loc_customer>) from a central freezer warehouse (<loc_depot>). Each truck orders a unique mix of flavors and cones (<demand>), and the distributor\u2019s refrigerated vehicles can only carry <capacity> units per trip. Since melted ice cream means lost profits, the distributor needs tight routes that avoid detours while ensuring no truck exceeds its weight limit. Bonus challenge: Some trucks operate near schools and need midday restocks!",
+        "title": "Urban Tree Nursery Delivery Problem",
+        "content": "A city\u2019s parks department plants trees in <num_customer> neighborhoods (<loc_customer>) using saplings from a nursery (<loc_depot>). Each truck (capacity: <capacity>) carries fragile young trees (<demand> per site). Routes must avoid long detours (to keep saplings healthy) and balance loads (heavy soil/water adds weight). The goal? Plant every tree without damaging roots or wasting fuel, ensuring green spaces thrive.",
         "tags": [
+            "num_customer",
             "loc_customer",
             "loc_depot",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "Mobile ATM Cash Replenishment Problem",
+        "content": "A bank services <num_customer> ATMs (<loc_customer>) via armored trucks (capacity: <capacity>) starting from a cash vault (<loc_depot>). Each ATM needs a specific cash amount (<demand>) to avoid shortages. Security rules require minimizing stops and travel time to reduce robbery risk. The twist: High-traffic ATMs need frequent refills, so routes must adapt daily while never exceeding truck weight limits.",
+        "tags": [
+            "num_customer",
+            "loc_customer",
+            "capacity",
+            "loc_depot",
+            "demand"
+        ]
+    },
+    {
+        "title": "Mobile Vaccination Clinic Scheduling Problem",
+        "content": "The county health department operates mobile vaccination vans (capacity: <capacity> doses) from a central storage facility (<loc_depot>) to serve <num_customer> neighborhoods. Each stop (<loc_customer>) has a pre-registered number of patients (<demand> doses needed). Since vaccines spoil quickly, teams must visit all locations in one day without exceeding van capacity, while minimizing travel time between stops to maximize daily coverage.",
+        "tags": [
+            "capacity",
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "demand"
+        ]
+    },
+    {
+        "title": "Urban Tree Nursery Delivery Problem",
+        "content": "A city's parks department grows saplings at a central nursery (<loc_depot>) and delivers them to <num_customer> planting sites using trucks that can carry <capacity> young trees. Each planting location (<loc_customer>) requests specific quantities (<demand>) of different species for neighborhood greening projects. The challenge? Deliver all trees in a single morning when soil conditions are ideal, without mixing incompatible species in the same truckload.",
+        "tags": [
+            "loc_depot",
+            "num_customer",
+            "capacity",
+            "loc_customer",
+            "demand"
+        ]
+    },
+    {
+        "title": "Beach Umbrella Rental Delivery Problem",
+        "content": "A coastal rental company stocks umbrellas and chairs at a warehouse (<loc_depot>) and delivers them daily to <num_customer> lifeguard stations (<loc_customer>) along the shore using golf carts (capacity: <capacity> items). Each station needs different quantities (<demand>) based on reservations. The trick is completing all deliveries before 9am when tourists arrive, using the shortest possible sand routes that avoid crowded boardwalks.",
+        "tags": [
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "Film Set Equipment Logistics Problem",
+        "content": "A movie production rents gear from a central depot (<loc_depot>) and must shuttle it between <num_customer> shooting locations (<loc_customer>) daily. Each scene requires specific equipment bundles (<demand>), transported in trucks (capacity: <capacity>). The crew needs all gear delivered before filming starts at dawn, with absolute priority given to time-sensitive locations while never splitting essential equipment sets across vehicles.",
+        "tags": [
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
             "demand",
             "capacity"
         ]
     },
     {
-        "title": "Farmers\u2019 Market Produce Pickup Problem",
-        "content": "A local food hub collects fresh produce from small farms (<loc_customer>) to distribute to urban farmers\u2019 markets. Their refrigerated trucks (<capacity>) start empty at the hub (<loc_depot>) and must pick up crates of tomatoes, greens, and berries (<demand>) from each farm. Since produce spoils quickly, they need direct routes that minimize travel time while ensuring no truck is overloaded. Some farms are only accessible via gravel roads, so route planning must account for tricky terrain.",
+        "title": "Community Fridge Network Restocking Problem",
+        "content": "Volunteers collect donated food from a food bank (<loc_depot>) to stock <num_customer> neighborhood fridges (<loc_customer>) using refrigerated vans (capacity: <capacity> lbs). Each fridge has unique capacity limits (<demand>) and accepts only certain food types. The team must distribute perishables before they spoil, balancing quantities across locations while avoiding cross-contamination (no raw meat with produce in same delivery).",
         "tags": [
-            "loc_customer",
-            "capacity",
             "loc_depot",
-            "demand"
-        ]
-    },
-    {
-        "title": "Mobile Vet Clinic Pet Care Visits",
-        "content": "A nonprofit runs mobile vet clinics to provide low-cost care in underserved neighborhoods. Their vans (<capacity> medical supplies/equipment) start at a central garage (<loc_depot>) and visit scheduled stops (<loc_customer>), each with a set number of pets needing vaccines or checkups (<demand>). Since anxious pets can\u2019t wait long, the team needs the shortest possible routes that fit all supplies in one trip\u2014no backtracking to restock! Tight space limits mean careful load planning is crucial.",
-        "tags": [
-            "capacity",
-            "loc_depot",
+            "num_customer",
             "loc_customer",
-            "demand"
-        ]
-    },
-    {
-        "title": "Festival Portable Charger Station Refills",
-        "content": "During a multi-day music festival, attendees rent portable phone chargers from kiosks scattered across the venue (<loc_customer>). Staff use golf carts (<capacity> chargers per cart) to collect depleted chargers from kiosks and deliver fresh ones from a charging depot (<loc_depot>). Each kiosk has a predictable turnover (<demand>), and carts must avoid overcrowded paths. The goal? Keep all kiosks stocked while minimizing laps around the festival grounds\u2014because nobody likes a dead phone mid-concert!",
-        "tags": [
-            "loc_customer",
-            "capacity",
-            "loc_depot",
-            "demand"
-        ]
-    },
-    {
-        "title": "Mobile EV Charging Station Deployment",
-        "content": "A city is testing mobile electric vehicle charging stations to reduce range anxiety in areas with few chargers.  \nEach morning, trucks (capacity: <capacity> chargers) leave the depot (<loc_depot>) to deploy chargers at high-demand spots (<loc_customer>).  \nLocations like shopping malls need 2-3 chargers (<demand>), while residential areas need just 1.  \nThe goal is to cover all requested sites in one trip per truck while minimizing total miles driven\u2014since these heavy battery packs drain fuel fast!",
-        "tags": [
-            "capacity",
-            "loc_depot",
-            "loc_customer",
-            "demand"
-        ]
-    },
-    {
-        "title": "Urban Beehive Honey Collection",
-        "content": "A local honey co-op tends to rooftop beehives at 30+ buildings (<loc_customer>) downtown.  \nTheir electric cargo bikes (capacity: <capacity> jars) start at the co-op (<loc_depot>) to collect honey jars (<demand>) weekly.  \nSome hives produce 10+ jars; others just 2-3. They must plan routes where no bike is overloaded, and sticky spills are avoided by keeping jars upright (no stacking!).  \nBonus: routes prioritize shady streets to keep honey cool.",
-        "tags": [
-            "loc_customer",
-            "capacity",
-            "loc_depot",
-            "demand"
-        ]
-    },
-    {
-        "title": "Mall Plant Maintenance Service",
-        "content": "A plant-care company services indoor palms and ferns for 50+ mall stores (<loc_customer>).  \nTheir watering trucks (<capacity> liters) start at the nursery (<loc_depot>), carrying water and fertilizer.  \nEach store\u2019s plants need a fixed volume (<demand>)\u2014e.g., a department store might need 200L, while a small kiosk needs 20L.  \nRoutes must avoid backtracking (mall parking is chaotic!) and finish by 10 AM before shoppers arrive.",
-        "tags": [
-            "loc_customer",
-            "capacity",
-            "loc_depot",
-            "demand"
-        ]
-    },
-    {
-        "title": "Fishing Village Ice Delivery",
-        "content": "In a coastal town, fishing boats (<loc_customer>) need fresh ice daily to preserve their catch.  \nThe ice factory (<loc_depot>) sends trucks (capacity: <capacity> blocks) to docks where each boat orders 1-10 blocks (<demand>).  \nSince ice melts fast, routes must be quick\u2014prioritizing distant docks first.  \nTrucks can\u2019t double back to the factory, so deliveries must fit in one trip per vehicle.",
-        "tags": [
-            "loc_customer",
-            "loc_depot",
             "capacity",
             "demand"
         ]
     },
     {
-        "title": "Stadium Merchandise Restocking",
-        "content": "During a baseball tournament, vendors at 20+ concession stands (<loc_customer>) run low on hats and jerseys.  \nA warehouse (<loc_depot>) sends golf carts (capacity: <capacity> items) to restock them between innings.  \nHigh-traffic stands near home plate need 50+ items (<demand>); outfield stands need just 10.  \nRoutes must avoid crowded pedestrian paths and finish before the 7th-inning stretch!",
+        "title": "Mobile Coffee Cart Refueling Problem",
+        "content": "A local coffee roaster operates a fleet of mobile coffee carts across downtown (<loc_customer>), each needing daily refills of beans, milk, and syrups (<demand>).  \nStarting from the roastery (<loc_depot>), a single refill truck (<capacity>) must visit all carts before they open. Some carts in busy areas need heavier supplies than others. The goal? Plan routes so no truck is overloaded, every cart is stocked on time, and the driver avoids downtown traffic by taking the shortest possible path.",
         "tags": [
             "loc_customer",
+            "demand",
             "loc_depot",
-            "capacity",
-            "demand"
+            "capacity"
         ]
     },
     {
-        "title": "Mobile EV Charging Station Deployment",
-        "content": "A city has deployed mobile electric vehicle (EV) charging stations at key locations (<loc_customer>) to support drivers without home charging. Each station has a varying battery drain rate (<demand> kWh/day). A fleet of battery-swap trucks (each with a <capacity> kWh capacity) starts from a central depot (<loc_depot>) to replace depleted batteries. The goal is to plan routes that ensure no station runs out of power, no truck exceeds its battery load, and the total distance traveled is minimized\u2014keeping the city\u2019s EVs running smoothly.",
+        "title": "Community Compost Bin Collection Problem",
+        "content": "A city\u2019s sustainability team collects food scraps from <num_customer> neighborhood compost bins (<loc_customer>), each with varying fill levels (<demand>).  \nTheir electric trucks (<capacity>) start at the recycling center (<loc_depot>) and must empty every bin weekly without exceeding weight limits. Since the bins smell if left too full, routes must prioritize nearly-full bins while minimizing detours to save battery life.",
         "tags": [
+            "num_customer",
             "loc_customer",
             "demand",
             "capacity",
@@ -723,39 +892,10 @@
         ]
     },
     {
-        "title": "Urban Beehive Honey Collection",
-        "content": "A local honey cooperative manages beehives scattered across rooftops and parks (<loc_customer>). Each hive produces a different amount of honey (<demand> liters) between harvests. Beekeepers use a van (<capacity> liters) to collect honey from the depot (<loc_depot>). They need routes that visit every hive, avoid overloading the van, and minimize travel time\u2014so the honey stays fresh and the bees stay happy!",
+        "title": "Pop-Up Holiday Market Supply Problem",
+        "content": "During the holidays, a vendor manages stalls at <num_customer> temporary markets (<loc_customer>), each needing daily restocks of handmade goods (<demand>).  \nFrom a cramped warehouse (<loc_depot>), small vans (<capacity>) deliver fragile inventory. Routes must avoid congested shopping districts, ensure no van carries more than its fragile cargo allows, and hit all markets before opening hours\u2014all while dodging parade roadblocks!",
         "tags": [
-            "loc_customer",
-            "demand",
-            "capacity",
-            "loc_depot"
-        ]
-    },
-    {
-        "title": "Mall Plant Maintenance Service",
-        "content": "A landscaping company services indoor plants in shopping malls (<loc_customer>), each requiring fresh soil, fertilizer, or replacements (<demand> kg). Their maintenance van (<capacity> kg) starts at a nursery (<loc_depot>). They must design routes to restock all malls without overloading the van, while keeping travel short\u2014because wilted plants mean unhappy mall managers!",
-        "tags": [
-            "loc_customer",
-            "demand",
-            "capacity",
-            "loc_depot"
-        ]
-    },
-    {
-        "title": "Fishing Village Ice Delivery",
-        "content": "In coastal towns, fishing boats (<loc_customer>) need daily ice deliveries (<demand> blocks) to preserve their catch. A single ice truck (<capacity> blocks) departs from the ice factory (<loc_depot>). Routes must ensure no boat runs out of ice, no truck is overloaded, and the distance is minimized\u2014because melted ice means spoiled fish and lost income!",
-        "tags": [
-            "loc_customer",
-            "demand",
-            "capacity",
-            "loc_depot"
-        ]
-    },
-    {
-        "title": "Stadium Merchandise Restocking",
-        "content": "During big games, concession stands (<loc_customer>) run low on jerseys, hats, and snacks (<demand> units). A warehouse (<loc_depot>) sends out cargo bikes (<capacity> units) to restock them. The challenge? Plan routes that hit every stand before crowds arrive, avoid overloading bikes, and minimize detours\u2014so fans never miss out on their team\u2019s gear!",
-        "tags": [
+            "num_customer",
             "loc_customer",
             "demand",
             "loc_depot",
@@ -763,40 +903,10 @@
         ]
     },
     {
-        "title": "Mobile EV Charging Station Deployment",
-        "content": "A city\u2019s electric vehicle (EV) charging company operates mobile charging trucks that visit low-coverage neighborhoods (<loc_customer>) to top up stranded EVs. Each truck (capacity: <capacity> kWh) starts at the depot (<loc_depot>) and must deliver power to stations with varying demand (<demand> kWh). The goal is to cover all stops without exceeding battery capacity per truck while minimizing total driving distance\u2014since idle trucks mean frustrated EV owners waiting for a charge.",
+        "title": "Rural Library Bookmobile Problem",
+        "content": "A county\u2019s bookmobile serves <num_customer> remote towns (<loc_customer>), delivering requested books (<demand>) from the central library (<loc_depot>).  \nThe aging bookmobile (<capacity>) can\u2019t handle rough roads if overloaded. The librarian must plan a monthly route that visits every town, balances heavy book requests evenly, and minimizes miles on unpaved roads to avoid breakdowns.",
         "tags": [
-            "loc_customer",
-            "capacity",
-            "loc_depot",
-            "demand"
-        ]
-    },
-    {
-        "title": "Urban Beehive Honey Collection",
-        "content": "A local honey cooperative tends to rooftop beehives (<loc_customer>) across the city, each producing <demand> liters of raw honey per week. Their collection van (<capacity> liters) departs from the processing hub (<loc_depot>) to gather honey without mixing batches. Routes must ensure no overloading (honey is heavy!) and prioritize efficiency\u2014every extra kilometer burns fuel and risks spoilage in summer heat.",
-        "tags": [
-            "loc_customer",
-            "demand",
-            "capacity",
-            "loc_depot"
-        ]
-    },
-    {
-        "title": "Mall Plant Maintenance Service",
-        "content": "A plant-care company services decorative palms and ferns in <num_stores> mall stores (<loc_customer>), each needing <demand> liters of water/fertilizer weekly. Their truck (<capacity> liters) starts at the nursery (<loc_depot>). Overloading would spill supplies, and inefficient routes waste labor hours\u2014so they need to hit every store exactly once while keeping routes tight (mall traffic is brutal at peak hours!).",
-        "tags": [
-            "num_stores",
-            "loc_customer",
-            "demand",
-            "capacity",
-            "loc_depot"
-        ]
-    },
-    {
-        "title": "Fishing Village Ice Delivery",
-        "content": "In coastal towns, fishing boats (<loc_customer>) rely on daily ice deliveries (<demand> blocks) to preserve catches. The ice factory (<loc_depot>) sends out trucks (<capacity> blocks) before dawn. Routes must account for narrow docks, perishable cargo (melting ice!), and strict capacity limits\u2014a single overloaded truck could delay the entire fleet\u2019s departure.",
-        "tags": [
+            "num_customer",
             "loc_customer",
             "demand",
             "loc_depot",
@@ -804,9 +914,10 @@
         ]
     },
     {
-        "title": "Stadium Merchandise Restocking",
-        "content": "On game days, a sports team\u2019s merch vendor stocks kiosks (<loc_customer>) across the stadium, each needing <demand> jerseys/snacks. Carts (<capacity> items) start at the warehouse (<loc_depot> inside the venue). With halftime rushes, routes must avoid congested aisles and ensure no cart is overpacked\u2014dropped hot dogs mean lost sales!",
+        "title": "Urban Plant Nursery Delivery Problem",
+        "content": "A plant nursery delivers potted trees to <num_customer> landscaping sites (<loc_customer>), each ordering different sizes (<demand>).  \nTheir trucks (<capacity>) start at the greenhouse (<loc_depot>). Since large trees take more space and soil weight varies, routes must group orders by truck capacity (e.g., no mixing heavy oak saplings with delicate flowers). The challenge? Avoid backtracking across the city while keeping roots moist during transit.",
         "tags": [
+            "num_customer",
             "loc_customer",
             "demand",
             "capacity",
@@ -814,49 +925,120 @@
         ]
     },
     {
-        "title": "Mobile EV Charging Station Deployment",
-        "content": "A city has deployed mobile electric vehicle (EV) charging stations at key locations (<loc_customer>) to support drivers who run out of battery.  \nEach station has a different power demand (<demand> kWh), and a fleet of charging trucks (each with a <capacity> kWh battery) starts from a central depot (<loc_depot>).  \nThe goal is to recharge all stations efficiently, ensuring no truck exceeds its battery capacity while minimizing total travel distance.  \nSince EVs rely on these stations, the routes must be optimized to avoid delays and keep the city moving smoothly.",
+        "title": "Mobile Dentist Van Scheduling Problem",
+        "content": "A nonprofit operates mobile dentist vans that visit schools in low-income areas to provide free checkups. Each van (capacity: <capacity> dental kits) starts at the clinic (<loc_depot>) and must visit <num_customer> schools (<loc_customer>), where each school requires a specific number of dental kits (<demand>). Since the vans can only carry limited supplies, they need optimized routes to serve all schools without exceeding capacity while minimizing driving time between locations.",
         "tags": [
-            "loc_customer",
-            "demand",
             "capacity",
-            "loc_depot"
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "demand"
         ]
     },
     {
-        "title": "Urban Beehive Honey Collection",
-        "content": "A local honey producer maintains beehives across rooftops and community gardens (<loc_customer>).  \nEach hive produces a different amount of honey (<demand> liters), and the beekeeper uses a van (max <capacity> liters) to collect it from the depot (<loc_depot>).  \nThe challenge? Planning a route that picks up all the honey without overloading the van while minimizing driving time\u2014because honey is heavy, and fuel costs add up!  \nPlus, the beekeeper wants to finish early to process the honey while it's fresh.",
+        "title": "Wedding Cake Delivery Problem",
+        "content": "A high-end bakery must deliver fragile wedding cakes to <num_customer> venues (<loc_customer>) on peak wedding Saturdays. Their refrigerated trucks (capacity: <capacity> cakes) start at the bakery (<loc_depot>). Each venue orders 1-3 cakes (<demand>), which can't be stacked. Routes must ensure:  \n\u2713 No truck carries more cakes than its shelves can safely hold  \n\u2713 The shortest possible travel time to prevent frosting melting  \n\u2713 Each venue receives cakes exactly 2 hours before the ceremony",
         "tags": [
+            "num_customer",
             "loc_customer",
-            "demand",
             "capacity",
-            "loc_depot"
+            "loc_depot",
+            "demand"
         ]
     },
     {
-        "title": "Mall Plant Maintenance Service",
-        "content": "A landscaping company maintains indoor plants across multiple mall locations (<loc_customer>).  \nEach mall needs a different number of replacement plants (<demand>), and the company uses a truck (capacity <capacity>) starting from their nursery (<loc_depot>).  \nThey must deliver the right number of plants to each mall without overloading the truck, while also minimizing travel time between stops.  \nSince plants wilt if left too long in the truck, efficiency is key to keeping them healthy and customers happy.",
+        "title": "Surfboard Rental Delivery Problem",
+        "content": "A beach resort offers surfboard rentals delivered to tourists' hotels. Each morning, their pickup truck (capacity: <capacity> boards) starts at the shop (<loc_depot>) to deliver boards to <num_customer> hotels (<loc_customer>), where each hotel has reservations for 2-8 boards (<demand>). They need routes that:  \n\u2713 Fit all boards without exceeding truck rack space  \n\u2713 Minimize driving distance before 9 AM peak hours  \n\u2713 Ensure no hotel waits past their booked time slot",
         "tags": [
-            "loc_customer",
-            "demand",
             "capacity",
-            "loc_depot"
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "demand"
         ]
     },
     {
-        "title": "Fishing Village Ice Delivery",
-        "content": "In a coastal town, fishing boats rely on daily ice deliveries to keep their catch fresh.  \nEach boat at the docks (<loc_customer>) orders a different amount of ice (<demand> blocks), and the supplier uses refrigerated trucks (max <capacity> blocks) from a central ice plant (<loc_depot>).  \nThe goal is to deliver all orders without any truck exceeding its capacity while minimizing travel distance\u2014because melting ice means lost profits!  \nEfficient routes ensure fishermen get their ice on time and the supplier saves on fuel.",
+        "title": "Library Hotspot Lending Problem",
+        "content": "A city library lends portable WiFi hotspots to <num_customer> community centers (<loc_customer>) for digital literacy programs. Their van (capacity: <capacity> devices) starts at HQ (<loc_depot>). Each center needs 5-15 hotspots (<demand>) monthly. The challenge:  \n\u2713 Devices are expensive - routes must prevent theft/damage  \n\u2713 No center can be skipped (they rely on these for classes)  \n\u2713 Must complete deliveries in one day due to staff schedules",
         "tags": [
+            "num_customer",
             "loc_customer",
-            "demand",
             "capacity",
-            "loc_depot"
+            "loc_depot",
+            "demand"
         ]
     },
     {
-        "title": "Stadium Merchandise Restocking",
-        "content": "During a major sports event, vendors inside a stadium (<loc_customer>) need quick restocking of jerseys, hats, and snacks (<demand> items).  \nA warehouse (<loc_depot>) sends out carts (capacity <capacity>) to replenish supplies before crowds arrive.  \nThe challenge? Ensuring every vendor gets exactly what they need without overloading any cart, while minimizing travel time inside the stadium.  \nEfficient restocking means happier fans and fewer delays during peak sales!",
+        "title": "Plant Nursery Landscaping Delivery Problem",
+        "content": "A nursery supplies plants to landscaping projects. Their fleet (capacity: <capacity> potted plants) starts at the greenhouse (<loc_depot>). Today they must deliver to <num_customer> construction sites (<loc_customer>), each needing specific quantities (<demand>) of heavy shrubs/trees. They need routes that:  \n\u2713 Respect weight limits (soil makes plants heavy)  \n\u2713 Group nearby sites to save fuel  \n\u2713 Deliver all plants before noon (landscapers start planting at 1 PM)",
         "tags": [
+            "capacity",
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "demand"
+        ]
+    },
+    {
+        "title": "Mobile Vaccination Clinic Scheduling Problem",
+        "content": "A county health department operates mobile vaccination clinics that visit <num_customer> neighborhoods (<loc_customer>) from their central medical depot (<loc_depot>). Each clinic van can carry <capacity> doses (including refrigerated storage), while neighborhoods have varying population needs (<demand>). The team must plan routes that:  \n\u2713 Cover all scheduled stops in one day  \n\u2713 Never exceed vaccine storage limits  \n\u2713 Minimize travel time between locations  \n\u2713 Ensure no community is left unserved",
+        "tags": [
+            "num_customer",
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "Beach Equipment Rental Delivery Problem",
+        "content": "A coastal rental company provides chairs/umbrellas to <num_customer> beach access points (<loc_customer>) from their warehouse (<loc_depot>). Delivery trucks (capacity: <capacity> sets) must distribute morning rentals and collect evening returns. Each station needs different quantities (<demand>) based on reservations. The challenge? Creating morning/evening routes that:  \n\u2713 Match delivery trucks to reservation demands  \n\u2713 Avoid overloading vehicles  \n\u2713 Minimize driving on sandy roads  \n\u2713 Complete all deliveries before peak beach hours",
+        "tags": [
+            "num_customer",
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "Urban Plant Nursery Delivery Problem",
+        "content": "A city plant nursery (<loc_depot>) delivers live trees to <num_customer> park renovation sites (<loc_customer>). Their specialized trucks (capacity: <capacity> trees) must transport delicate saplings with specific species requirements (<demand> per site). The logistics team needs routes that:  \n\u2713 Prevent tree damage through minimal transit time  \n\u2713 Respect truck weight limits (soil adds bulk)  \n\u2713 Group deliveries by geographic clusters  \n\u2713 Complete all deliveries within 4-hour windows to ensure planting success",
+        "tags": [
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "Mobile Laundry Service for Seniors Problem",
+        "content": "A community service picks up/drops off laundry for <num_customer> elderly housing complexes (<loc_customer>) from their cleaning facility (<loc_depot>). Their vans (capacity: <capacity> laundry bags) handle scheduled weekly pickups where each location generates different volumes (<demand>). They need routes that:  \n\u2713 Accommodate fragile clothing loads  \n\u2713 Never mix clean/dirty laundry in same trip  \n\u2713 Honor all pickup time windows  \n\u2713 Minimize fuel costs across weekly cycles",
+        "tags": [
+            "num_customer",
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "Pop-Up Museum Exhibit Transport Problem",
+        "content": "A traveling science museum must move interactive exhibits to <num_customer> schools (<loc_customer>) from their storage hub (<loc_depot>). Their climate-controlled trucks (capacity: <capacity> exhibit crates) carry fragile displays, with each school requesting specific exhibits (<demand>). The coordinator seeks routes that:  \n\u2713 Prevent exhibit damage through minimal handling  \n\u2713 Group deliveries by crate compatibility  \n\u2713 Complete all school deliveries before morning assemblies  \n\u2713 Avoid unnecessary mileage that risks vibration damage",
+        "tags": [
+            "num_customer",
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "Mobile Coffee Cart Refueling Problem",
+        "content": "A local coffee roaster supplies fresh beans and supplies to <num_customer> mobile coffee carts scattered across the city. Each cart operates at a fixed spot (<loc_customer>) and has a weekly demand (<demand>) for beans, milk, and syrups. The roaster\u2019s warehouse (<loc_depot>) uses small vans with a <capacity> limit to restock the carts.  \n\nThe challenge?  \n- Carts can\u2019t run out of supplies (or they lose customers).  \n- Vans can\u2019t carry more than their capacity (or risk spills or fines).  \n- Traffic is unpredictable, so shorter routes save time and fuel.  \n\nThe goal is to design routes that refill every cart exactly once, keep vans within their limits, and minimize total driving distance\u2014so baristas never hear \"Sorry, we\u2019re out of oat milk!\"",
+        "tags": [
+            "num_customer",
             "loc_customer",
             "demand",
             "loc_depot",
@@ -864,156 +1046,47 @@
         ]
     },
     {
-        "title": "Mobile Phone Repair Service Pickup",
-        "content": "A tech company offers same-day phone repairs by sending couriers to collect broken devices from customers' homes (<loc_customer>). Each courier bike can carry up to <capacity> devices at once from the central service hub (<loc_depot>). Customers request pickups throughout the day (<demand>), and the company wants to minimize total travel time while ensuring no courier exceeds their carrying limit. The challenge? Grouping nearby pickups efficiently so couriers aren\u2019t zigzagging across town unnecessarily.",
+        "title": "Mobile Library Delivery Problem",
+        "content": "A county library system operates a fleet of mobile library vans that bring books to <num_customer> rural communities (<loc_customer>) from a central depot (<loc_depot>). Each van can carry up to <capacity> books, and each stop has a unique request list (<demand> books). The challenge? Create routes that get every community their requested titles (from novels to textbooks) while keeping vans from being overloaded. Since some villages are hours apart on winding roads, minimizing total miles driven means more time for kids to browse shelves at each stop.",
         "tags": [
+            "num_customer",
             "loc_customer",
-            "capacity",
             "loc_depot",
+            "capacity",
             "demand"
         ]
     },
     {
-        "title": "Community Fridge Food Rescue",
-        "content": "Volunteers collect surplus food from grocery stores (<loc_customer>) in refrigerated vans (<capacity>) to stock free community fridges. Starting at the food bank (<loc_depot>), they must visit stores with varying donations (<demand>)\u2014some have just a few crates, others have pallets. Routes must prioritize perishable items (avoiding multiple return trips to the depot) while ensuring vans don\u2019t overload. The goal? Maximize food saved while minimizing fuel costs for this zero-budget operation.",
+        "title": "Ice Cream Shop Supply Problem",
+        "content": "On scorching summer days, an ice cream factory at <loc_depot> must deliver fresh batches to <num_customer> shops (<loc_customer>) before noon using refrigerated trucks (<capacity> gallons each). Each shop orders different flavors in specific quantities (<demand> gallons). Melt risk means trucks can\u2019t make too many stops\u2014routes must be tight loops where the last shop still gets firm scoops. The goal? Cover all shops with the fewest possible miles so every cone is perfectly chilled when served.",
         "tags": [
+            "loc_depot",
+            "num_customer",
             "loc_customer",
             "capacity",
-            "loc_depot",
             "demand"
         ]
     },
     {
-        "title": "Carnival Game Prize Restocking",
-        "content": "During a traveling carnival, staff must replenish plush toys and prizes to game booths (<loc_customer>) scattered around the fairgrounds (<loc_depot> is the storage trailer). Each booth consumes prizes at different rates (<demand>), and restock carts (<capacity>) can only carry so many giant teddy bears. The team needs routes that keep all booths supplied without visible gaps (angry customers!) while avoiding congested pathways during peak hours. Efficiency means fewer staff trips and happier attendees.",
+        "title": "Urban Tree Planting Problem",
+        "content": "A nonprofit is greening the city by delivering young trees (<demand> per site) from their nursery (<loc_depot>) to <num_customer> planting sites (<loc_customer>) using pickup trucks (<capacity> trees per truck). Each oak or maple needs careful handling\u2014overloading risks root damage. Volunteers must hit every location in one morning, balancing truck space between 6-foot shade trees and compact fruit trees. Optimal routes mean more trees planted before the midday heat wilts the team.",
         "tags": [
-            "loc_customer",
-            "loc_depot",
             "demand",
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
             "capacity"
         ]
     },
     {
-        "title": "Urban Tree Watering Service",
-        "content": "A city parks department uses water trucks (<capacity>) to sustain young street trees during droughts. Each truck starts at the depot (<loc_depot>), visiting tree sites (<loc_customer>) that need specific water volumes (<demand>) based on size and species. The twist? Some streets have narrow access, and trucks can\u2019t U-turn. Routes must sequence stops to avoid backtracking while ensuring no truck runs dry before returning to refill. Saving trees depends on optimizing every gallon.",
+        "title": "Bakery Outlet Bread Run Problem",
+        "content": "A discount bakery outlet at <loc_depot> sells day-old goods to <num_customer> food pantries (<loc_customer>) via small vans (<capacity> loaves). Each pantry orders based on their clients\u2019 needs (<demand> loaves of rye, sourdough, etc.). Since bread stales fast, vans must reach all pantries within 3 hours after loading. The twist? Pantries in food deserts get priority, and no van can mix sweet pastries with savory bread (separate compartments). Efficient routing ensures more families get fresh(ish) bread before closing time.",
         "tags": [
-            "capacity",
             "loc_depot",
-            "loc_customer",
-            "demand"
-        ]
-    },
-    {
-        "title": "Film Set Equipment Shuttle",
-        "content": "A movie studio transports cameras, lights, and props between shooting locations (<loc_customer>) from a central gear warehouse (<loc_depot>). Each truck (<capacity>) carries fragile equipment with unique destination demands (<demand>). The logistics team must:  \n- Avoid overlapping routes (no two trucks at the same location simultaneously)  \n- Prioritize time-sensitive gear (e.g., cameras for morning scenes)  \n- Never exceed weight limits (stunt equipment is heavy!)  \nThe ideal plan keeps all crews working without expensive delays.",
-        "tags": [
-            "loc_customer",
-            "loc_depot",
-            "capacity",
-            "demand"
-        ]
-    },
-    {
-        "title": "Mobile Car Detailing Service Routing",
-        "content": "A mobile car detailing business operates a fleet of vans (each with <capacity> cleaning supplies) from its garage at <loc_depot>. Each day, customers at <loc_customer> book appointments requiring specific services (interior shampoo, waxing, etc.), which translate to different supply demands (<demand>). The team must visit all homes/offices without exceeding van capacity while minimizing driving time between jobs\u2014because the faster they finish, the more clients they can serve that day!",
-        "tags": [
-            "capacity",
-            "loc_depot",
-            "loc_customer",
-            "demand"
-        ]
-    },
-    {
-        "title": "City Park Bench Paint Refill Problem",
-        "content": "The parks department must repaint weathered benches across <num_parks> locations (<loc_customer>) using trucks (<capacity> paint cans) from their depot at <loc_depot>. Each bench requires a fixed amount of paint (<demand>), and trucks can\u2019t carry excess weight. The goal? Plan routes so crews refresh every bench in one trip per truck while driving the shortest total distance\u2014saving taxpayer money on fuel and overtime.",
-        "tags": [
-            "num_parks",
+            "num_customer",
             "loc_customer",
             "capacity",
-            "loc_depot",
             "demand"
-        ]
-    },
-    {
-        "title": "Corporate Office Snack Cart Restocking",
-        "content": "A catering company refills snack carts in <num_office> high-rise offices (<loc_customer>) from a central kitchen at <loc_depot>. Their electric carts (<capacity> snacks) must deliver granola bars, sodas, etc. (<demand> per office) without overloading. Since offices only accept deliveries during 10\u201311 AM, routes must prioritize proximity over capacity\u2014getting all snacks delivered in the tight time window matters more than absolute distance.",
-        "tags": [
-            "num_office",
-            "loc_customer",
-            "loc_depot",
-            "capacity",
-            "demand"
-        ]
-    },
-    {
-        "title": "Rural Postal Package Pickup Circuit",
-        "content": "A postal service uses vans (<capacity> parcel weight) to collect prepaid packages from <num_village> remote villages (<loc_customer>) daily, starting/ending at <loc_depot>. Each village has a set volume of parcels (<demand>), often bulky but lightweight (e.g., handmade crafts). The challenge? Covering vast distances on dirt roads while ensuring no van hits weight limits\u2014even if space isn\u2019t full\u2014to avoid breakdowns in areas with no cell service.",
-        "tags": [
-            "capacity",
-            "num_village",
-            "loc_customer",
-            "loc_depot",
-            "demand"
-        ]
-    },
-    {
-        "title": "Pop-Up Cinema Equipment Tour",
-        "content": "A traveling cinema team transports projectors, screens, and speakers (<demand> per venue) to <num_location> outdoor venues (<loc_customer>) weekly from their warehouse at <loc_depot>. Their trucks (<capacity>) can\u2019t carry all equipment at once, so they must split deliveries across nights. The twist? Each venue must get everything in one go (no partial deliveries), and shows start at sunset\u2014so routes must balance truck loads while guaranteeing setups finish before dusk.",
-        "tags": [
-            "demand",
-            "num_location",
-            "loc_customer",
-            "loc_depot",
-            "capacity"
-        ]
-    },
-    {
-        "title": "Mobile Dentist Clinic Routing",
-        "content": "A nonprofit operates a fleet of mobile dental vans (<capacity> chairs/equipment per van) from their clinic (<loc_depot>) to serve schools and community centers (<loc_customer>). Each location has a specific number of scheduled patients (<demand>). The team needs to visit all sites in a single day without exceeding van capacity while minimizing travel time between stops so they can treat as many patients as possible.",
-        "tags": [
-            "capacity",
-            "loc_depot",
-            "loc_customer",
-            "demand"
-        ]
-    },
-    {
-        "title": "Wedding Cake Delivery Coordination",
-        "content": "A high-end bakery (<loc_depot>) has 15 wedding cake deliveries across the city this Saturday. Each fragile cake (<demand> box size) requires a temperature-controlled van (<capacity>). Drivers must carefully plan routes to:  \n\u2713 Deliver all cakes within 2-hour time windows  \n\u2713 Never stack cakes beyond van weight limits  \n\u2713 Avoid last-minute cross-town dashes  \n\u2713 Keep buttercream from melting in traffic",
-        "tags": [
-            "loc_depot",
-            "demand",
-            "capacity"
-        ]
-    },
-    {
-        "title": "City Bench Repair Patrol",
-        "content": "The parks department dispatches repair crews (<capacity> tools/materials per truck) from the maintenance yard (<loc_depot>) to fix broken benches at 50+ locations (<loc_customer>). Each bench needs different parts (<demand>). The challenge? Fix all benches in one week while:  \n\u2022 Carrying just enough lumber/hardware per trip  \n\u2022 Grouping nearby repairs efficiently  \n\u2022 Avoiding duplicate passes through the same park",
-        "tags": [
-            "capacity",
-            "loc_depot",
-            "loc_customer",
-            "demand"
-        ]
-    },
-    {
-        "title": "Museum Artifact Transport",
-        "content": "A natural history museum (<loc_depot>) loans dinosaur fossils to 8 regional museums (<loc_customer>). Each fossil has unique size/weight (<demand>), and specialized trucks (<capacity>) must:  \n\u2713 Transport fragile items without mixing certain specimens  \n\u2713 Follow no-left-turn routes for stability  \n\u2713 Complete all deliveries before exhibition dates  \n\u2713 Return empty trucks via shortest paths",
-        "tags": [
-            "loc_depot",
-            "loc_customer",
-            "demand",
-            "capacity"
-        ]
-    },
-    {
-        "title": "Urban Chicken Coop Feed Delivery",
-        "content": "A farm cooperative delivers organic feed (<demand> bags) from their mill (<loc_depot>) to backyard chicken keepers (<loc_customer>) using modified sedans (<capacity>). The quirky constraints:  \n\u2022 Some homes only accept deliveries before dawn  \n\u2022 Feed bags attract pigeons if left unattended  \n\u2022 Narrow alleys limit vehicle size  \n\u2022 Customers reorder at different rates  \nThe solution? Hyper-local routes that sync with both chicken diets and city parking rules.  \n\nEach scenario maintains CVRP's core constraints (capacity, single depot, demand points) while introducing fresh real-world nuances. Let me know if you'd like any refined further!",
-        "tags": [
-            "demand",
-            "loc_depot",
-            "loc_customer",
-            "capacity"
         ]
     }
 ]

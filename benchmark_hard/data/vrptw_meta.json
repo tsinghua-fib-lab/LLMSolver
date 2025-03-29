@@ -262,14 +262,13 @@
     },
     {
         "title": "Bakery Truck Route for Fresh Donut Deliveries",
-        "content": "A donut shop supplies cafes (<locs>) with hourly-batch deliveries before customers' breakfast times (<time_windows>). Each truck fits <capacity> boxes (1 box per cafe), travels at <speed>, and spends <service_time> minutes per drop-off. Donuts stale after 3 hours, so routes must finish within <max_route_time>. Depot is the central kitchen. Objective: minimize driving time so all cafes get piping-hot donuts by 7 AM.",
+        "content": "A donut shop supplies cafes (<locs>) with hourly-batch deliveries before customers' breakfast times (<time_windows>). Each truck fits <capacity> boxes (1 box per cafe), travels at <speed>, and spends <service_time> minutes per drop-off. Depot is the central kitchen. Objective: minimize driving time so all cafes get piping-hot donuts by 7 AM.",
         "tags": [
             "locs",
             "time_windows",
             "capacity",
             "speed",
-            "service_time",
-            "max_route_time"
+            "service_time"
         ]
     },
     {
@@ -311,14 +310,13 @@
     },
     {
         "title": "Campus Mail Courier with Departmental Availability Slots",
-        "content": "A university mailroom uses electric carts to deliver packages across <locs> (labs, offices). Each department has strict pickup windows <time_windows> (e.g., \"9\u201311 AM only\").  \nCarts hold <capacity> parcels, move at <speed>, and take <service_time> per stop. Some departments require signatures, adding <extra_service_time>.  \nGoal: Deliver all mail on time with the fewest carts and shortest routes.",
+        "content": "A university mailroom uses electric carts to deliver packages across <locs> (labs, offices). Each department has strict pickup windows <time_windows> (e.g., \"9\u201311 AM only\").  \nCarts hold <capacity> parcels, move at <speed>, and take <service_time> per stop.  \nGoal: Deliver all mail on time with the fewest carts and shortest routes.",
         "tags": [
             "locs",
             "time_windows",
             "capacity",
             "speed",
-            "service_time",
-            "extra_service_time"
+            "service_time"
         ]
     },
     {
@@ -846,7 +844,7 @@
     },
     {
         "title": "Floating Market Stall Restocking with Tide-Dependent Windows",
-        "content": "A supplier restocks vendors in a tidal river market where docks are only accessible at specific tide levels (<time_windows>). Each stall (<locs>[1:]) needs <demand> crates; unloading takes <service_time> minutes per stall. The barge (<capacity> crates) must navigate narrow waterways. Twist: Time windows shrink during neap tides - routes must adapt to daily tidal changes.\n```  \n\nEach scenario emphasizes unique time window constraints (biological, environmental, or operational) while maintaining the classic CVRPTW structure. Let me know if you'd like any adjusted for specific industries!",
+        "content": "A supplier restocks vendors in a tidal river market where docks are only accessible at specific tide levels (<time_windows>). Each stall (<locs>[1:]) needs <demand> crates; unloading takes <service_time> minutes per stall. The barge (<capacity> crates) must navigate narrow waterways. Twist: Time windows shrink during neap tides - routes must adapt to daily tidal changes.\n",
         "tags": [
             "time_windows",
             "locs",
@@ -1075,15 +1073,14 @@
     },
     {
         "title": "Floating Market Stall Restocking with Tide-Dependent Windows",
-        "content": "A supplier restocks floating market vendors (<locs>) via boat during 90-minute \"high tide\" windows (<time_windows>) when docks are accessible. The boat (<capacity> crates) starts at the warehouse (<locs>[0]). Each vendor needs <demand> crates and takes <service_time> minutes to unload. With tides changing hourly, design routes that serve all vendors during their specific tidal windows while minimizing nautical miles traveled.\n``` \n\nEach scenario emphasizes unique real-world constraints (nap times, tidal access, etc.) while keeping the CVRPTW structure intact with <placeholders> for problem instance data. The descriptions avoid jargon to make them relatable to non-experts.",
+        "content": "A supplier restocks floating market vendors (<locs>) via boat during 90-minute \"high tide\" windows (<time_windows>) when docks are accessible. The boat (<capacity> crates) starts at the warehouse (<locs>[0]). Each vendor needs <demand> crates and takes <service_time> minutes to unload. With tides changing hourly, design routes that serve all vendors during their specific tidal windows while minimizing nautical miles traveled.\n",
         "tags": [
             "locs",
             "time_windows",
             "capacity",
             "locs",
             "demand",
-            "service_time",
-            "placeholders"
+            "service_time"
         ]
     },
     {
@@ -1099,12 +1096,12 @@
     },
     {
         "title": "Artisanal Bread Delivery to High-End Restaurants",
-        "content": "A sourdough bakery must deliver fresh loaves to <num_customer> restaurants before their morning prep time (<time_windows_close>). Each delivery van (<capacity> loaves) leaves the bakery at 4 AM (<depot_open>), travels at <speed>, and takes <service_time> minutes per stop. Some restaurants require double the standard delivery time due to difficult parking. The bakery wants to minimize driving time while ensuring no bread arrives after chefs start cooking.",
+        "content": "A sourdough bakery must deliver fresh loaves to <num_customer> restaurants before their morning prep time (<time_windows_close>). Each delivery van (<capacity> loaves) leaves the bakery at 4 AM (<depot_open_time>), travels at <speed>, and takes <service_time> minutes per stop. Some restaurants require double the standard delivery time due to difficult parking. The bakery wants to minimize driving time while ensuring no bread arrives after chefs start cooking.",
         "tags": [
             "num_customer",
             "time_windows_close",
             "capacity",
-            "depot_open",
+            "depot_open_time",
             "speed",
             "service_time"
         ]
@@ -1134,14 +1131,14 @@
     },
     {
         "title": "Library Book Returns for Homebound Seniors",
-        "content": "A county library sends vans (<capacity> books each) to collect returns from homebound patrons (<locs>) during their preferred 2-hour windows (<time_windows>). Each stop takes <service_time> minutes for social interaction. Vans travel at <speed> between homes and must return to the library by closing time (<depot_close>). The system prioritizes patrons who haven't had visits in the longest time while respecting their availability windows.",
+        "content": "A county library sends vans (<capacity> books each) to collect returns from homebound patrons (<locs>) during their preferred 2-hour windows (<time_windows>). Each stop takes <service_time> minutes for social interaction. Vans travel at <speed> between homes and must return to the library by closing time (<depot_close_time>). The system prioritizes patrons who haven't had visits in the longest time while respecting their availability windows.",
         "tags": [
             "capacity",
             "locs",
             "time_windows",
             "service_time",
             "speed",
-            "depot_close"
+            "depot_close_time"
         ]
     },
     {

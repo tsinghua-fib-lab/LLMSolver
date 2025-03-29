@@ -3,9 +3,12 @@ import re
 import json
 import time
 from typing import List
+
+import numpy as np
 from tqdm import tqdm
 
 from LLM import LLM_api
+from envs import MTVRPGenerator, MTVRPEnv
 from seed_cvrp import cvrp_data_seed
 from seed_ovrp import ovrp_data_seed
 from seed_vrpb import vrpb_data_seed
@@ -85,7 +88,7 @@ def extract_templates(text: str) -> List[dict]:
 
 
 if __name__ == '__main__':
-    problem_type = 'vrptw'
+    problem_type = 'cvrp'
     llm = LLM_api(model="deepseek-chat", )
     time_start = time.time()
     generated_problem_type_path = f"./data/{problem_type}_meta.json"

@@ -1,3 +1,7 @@
+import json
+
+import numpy as np
+
 from envs import MTVRPGenerator, MTVRPEnv
 
 cvrp_data_seed = [
@@ -7,7 +11,7 @@ cvrp_data_seed = [
                 "A beverage company has set up many self-service drink machines across the city and needs to restock them regularly.\n" +
                 "They use trucks (with a <capacity> capacity) from a central warehouse <loc_depot> to deliver drinks to these scattered machines.\n" +
                 "Each machine has a specific location and a demand.\n" +
-                "Knowing the exact locations (<loc_machine>) and demands (<demand>), the company wants to plan fuel-efficient routes without overloading any truck.\n" +
+                "Knowing the exact <num_customer> locations (<loc_customer>) and demands (<demand>), the company wants to plan fuel-efficient routes without overloading any truck.\n" +
                 "The goal is to minimize the total gas bill by reducing unnecessary driving while ensuring each machine is restocked exactly once.\n"
         ),
         "data_template": {
@@ -39,6 +43,7 @@ cvrp_data_seed = [
                              [4.0074, 5.4404],
                              [0.0173, 9.4268]],
             "demand": [1.6667, 1.3333, 3.0000, 0.3333, 1.6667, 2.6667, 2.3333, 1.0000, 3.0000, 1.6667],
+            "num_customer": [10],
             "capacity": [10],
         },
         "label": "cvrp",
@@ -46,7 +51,7 @@ cvrp_data_seed = [
     {
         "title": "Book Distribution Center Delivery Problem",
         "desc_split": (
-                "The book distribution center at <loc_depot> needs to deliver orders to <num_bookstore> bookstores across the city using vans with a <capacity> ton capacity.\n" +
+                "The book distribution center at <loc_depot> needs to deliver orders to <num_customer> bookstores across the city using vans with a <capacity> ton capacity.\n" +
                 "Each store is at a unique location (<loc_customer>) and requires a different amount of books (<demand> ton).\n" +
                 "The delivery team has to organize their vans schedules so every store gets their book shipments, but no truck ever carries more than it's supposed to.\n" +
                 "They hope each store is visited just once and the total distance traveled by all vans is minimized.\n" +
@@ -77,7 +82,7 @@ cvrp_data_seed = [
                              [14.3001, 2.0244],
                              [6.6016, 5.5725],
                              [8.5811, 1.6571]],
-            "num_bookstore": [8],
+            "num_customer": [8],
             "demand": [0.2333, 0.1000, 0.2000, 0.0667, 0.2667, 0.2667, 0.2667, 0.1333],
             "capacity": [1],
         },
@@ -152,7 +157,7 @@ cvrp_data_seed = [
     {
         "title": "Restaurant Chain Delivery Problem",
         "desc_split": (
-                "You run a restaurant chain with a central kitchen <loc_depot> supplying multiple locations.\n" +
+                "You run a restaurant chain with a central kitchen <loc_depot> supplying <num_customer> restaurants.\n" +
                 "Your central kitchen needs to get fresh food out to all locations using trucks (<capacity>) that can only carry so much.\n" +
                 "Each restaurant at <loc_customer> has its specific daily order (<demand>) - some need more ingredients, others less.\n" +
                 "You've got to plan routes that:\n" +
@@ -200,6 +205,7 @@ cvrp_data_seed = [
                 [97.1866, 43.3411]],
             "demand": [0.2667, 1.6000, 0.5333, 0.2667, 0.2667, 2.4000, 1.8667, 1.3333, 0.2667,
                        1.0667, 0.2667, 1.3333, 2.4000],
+            "num_customer": [13],
             "capacity": [4],
         },
         "label": "cvrp",
