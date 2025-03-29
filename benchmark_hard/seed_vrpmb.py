@@ -1,7 +1,8 @@
 from envs.mtdvrp import MTVRPGenerator, MTVRPEnv
 
-vrpmb_data = [
+vrpmb_data_seed = [
     {
+        "title": "Route Planning for Fleet Logistics",
         "desc_split": (
                 "A company has a fleet of trucks that need to deliver goods to some customers and pick up goods from others.\n" +
                 "Each truck in its route can either choose to deliver or to pick up in any order.\n" +
@@ -53,6 +54,7 @@ vrpmb_data = [
         "label": "vrpmb"
     },
     {
+        "title": "Route Optimization for Logistics Fleets",
         "desc_split": (
                 "I run a logistics company, and every day we send out trucks to handle both deliveries and pickups.\n" +
                 "Deliveries and pickups can be mixed along the routs.\n" +
@@ -83,6 +85,7 @@ vrpmb_data = [
         "label": "vrpmb"
     },
     {
+        "title": "Grocery Distribution & Returns Logistics Optimization",
         "desc_split": (
                 "I manage a distribution network for a grocery supplier, and every day we send trucks to restock stores and collect unsold or expired goods for disposal.\n" +
                 "Each store has specific delivery needs, and some stores also have returns that must be brought back.\n" +
@@ -111,6 +114,7 @@ vrpmb_data = [
         "label": "vrpmb"
     },
     {
+        "title": "Medical Supply Delivery & Medical Waste Reverse Logistics Optimization",
         "desc_split": (
                 "I run a medical supply distribution for hospitals and clinics.\n" +
                 "Every day, our trucks transport essential medical equipment, medications, and supplies to healthcare facilities.\n" +
@@ -127,9 +131,10 @@ vrpmb_data = [
             "num_depot": [1],
             "backhaul_class": [2],
         },
-        "label": "vrpb"
+        "label": "vrpmb"
     },
     {
+        "title": "Beverage Distribution & Empty Container Return Logistics Optimization",
         "desc_split": (
                 "I manage a beverage distribution business that supplies restaurants and bars with drinks while also collecting empty kegs and bottles for reuse.\n" +
                 "Each truck leaves with a full load of beverages, delivers them to customers, and also picks up empty containers on the way back.\n" +
@@ -157,7 +162,7 @@ vrpmb_data = [
             "num_depot": [1],
             "backhaul_class": [2],
         },
-        "label": "vrpb"
+        "label": "vrpmb"
     },
 
 ]

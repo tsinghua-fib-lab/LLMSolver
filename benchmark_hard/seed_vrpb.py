@@ -1,7 +1,8 @@
 from envs import MTVRPGenerator, MTVRPEnv
 
-vrpb_data = [
+vrpb_data_seed = [
     {
+        "title": "Routing for Fleet Logistics",
         "desc_split": (
                 "A company has a fleet of trucks that need to deliver goods to some customers and pick up goods from others.\n" +
                 "The tricky part is that deliveries and pickups can’t be mixed randomly. Each truck must finish all its deliveries before it starts picking up anything.\n" +
@@ -50,6 +51,7 @@ vrpb_data = [
         "label": "vrpb"
     },
     {
+        "title": "Efficient Delivery-Pickup Fleet Routing",
         "desc_split": (
                 "I run a logistics company, and every day we send out trucks to handle both deliveries and pickups.\n" +
                 "The problem is that we can’t just load up a truck with everything at once. Deliveries have to be completed first before we start collecting goods from customers.\n" +
@@ -82,6 +84,7 @@ vrpb_data = [
         "label": "vrpb"
     },
     {
+        "title": "Grocery Distribution Routing Problem",
         "desc_split": (
                 "I manage a distribution network for a grocery supplier, and every day we send trucks to restock stores and collect unsold or expired goods for disposal.\n" +
                 "The challenge is that a truck can’t mix deliveries and pickups freely—it must finish all deliveries before starting any pickups.\n" +
@@ -111,6 +114,7 @@ vrpb_data = [
         "label": "vrpb"
     },
     {
+        "title": "Medical Supply Distribution Problem",
         "desc_split": (
                 "I run a medical supply distribution for hospitals and clinics. Every day, our trucks transport essential medical equipment, medications, and supplies to healthcare facilities.\n" +
                 "At the same time, they need to collect expired drugs for proper disposal.\n" +
@@ -142,6 +146,7 @@ vrpb_data = [
         "label": "vrpb"
     },
     {
+        "title": "Beverage Distribution Routing Problem",
         "desc_split": (
                 "I manage a beverage distribution business that supplies restaurants and bars with drinks while also collecting empty kegs and bottles for reuse.\n" +
                 "Each truck leaves with a full load of beverages, delivers them to customers, and then picks up empty containers on the way back.\n" +
