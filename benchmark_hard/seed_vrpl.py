@@ -1,6 +1,6 @@
 from envs import MTVRPGenerator, MTVRPEnv
 
-vrptw_data_seed = [
+vrpl_data_seed = [
     {
         "title": "Unmanned Aerial Vehicle Delivery Problem",
         "desc_split": (
@@ -220,7 +220,7 @@ vrptw_data_seed = [
                 "Due to rain and snow, a power company must inspect several signal towers potentially impacted by the weather. Workers will drive from the depot <loc_depot> to inspect the towers, located at <locs>.\n" +
                 "The maintenance of a signal tower requires <equipment_num> set of maintenance equipment, and a vehicle can carry a maximum of <capacity> sets of maintenance equipment.\n" +
                 "Since the towers are in mountainous areas with no gas stations along the route, workers must return to the depot before running out of fuel.\n" +
-                "A fully fueled service vehicle can travel <max_distance> km.\n" +
+                "A fully fueled service vehicle can travel <distance_limit> km.\n" +
                 "Please plan a route for the power company to ensure all signal towers are inspected and the workers can safely return to the depot."
         ),
         "data_template": {
