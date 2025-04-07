@@ -1,13 +1,13 @@
 from envs import MTVRPGenerator, MTVRPEnv
 
-vrptw_data_seed = [
+vrpl_data_seed = [
     {
         "title": "Unmanned Aerial Vehicle Delivery Problem",
         "desc_split": (
                 """
                 A company needs to use drones for parcel delivery. Specifically, given a set of delivery locations relative to the launch site, 
-                the coordinates of the start point is <loc_depot> and the delivery points are provided as <locs>. Each drone has a speed of 2 km/h and a maximum endurance time 
-                of 1.2676 hours. Before the battery is depleted, each drone must return to the launch site to recharge.
+                the coordinates of the start point is <loc_depot> and the delivery points are provided as <loc_customer>. Each drone has a speed of <speed> km/h and a maximum endurance time 
+                of <time_limit> hours. Before the battery is depleted, each drone must return to the launch site to recharge.
                 Please plan the flight paths of the drones such that:
                 1. Each customer receives their parcel.
                 2. Each drone can safely return to the launch site.
@@ -63,7 +63,7 @@ vrptw_data_seed = [
                     [0.9399, 0.8094],
                     [0.7146, 0.5329]],
             "speed": [2],
-            "max_flight_time": [1.2676],
+            "time_limit": [1.2676],
             "num_depot": [1],
         },
         "label": "vrpl",
@@ -73,10 +73,10 @@ vrptw_data_seed = [
     {
         "title": "Optimizing Research Team Routes for Polar Biological Sampling in Antarctica with Distance and Time Constraints",
         "desc_split": (
-                "Our Antarctic scientific research team needs to conduct polar biological sampling tasks at multiple locations. The coordinates of base camp and the sampling task locations are <locs>." +\
-                "The research team can dispatch multiple research teams, each advancing at a speed of 5 kilometers per day, but they only have enough food to support them for 3 days. " +\
-                "They must return to the base camp before the food runs out. " +\
-                "Please plan the number of research teams and routes to ensure that each team can safely return to the base camp, " +\
+                "Our Antarctic scientific research team needs to conduct polar biological sampling tasks at multiple locations. The coordinates of base camp and the sampling task locations are <locs>." +
+                "The research team can dispatch multiple research teams, each advancing at a speed of <speed> kilometers per day, but they only have enough food to support them for <time_limit> days. " +
+                "They must return to the base camp before the food runs out. " +
+                "Please plan the number of research teams and routes to ensure that each team can safely return to the base camp, " +
                 "that each sampling location is sampled by at least one team, and to minimize the total travel distance for all teams."
         ),
         "data_template": {
@@ -106,7 +106,7 @@ vrptw_data_seed = [
             "num_depot": [1],
         },
         "user_template": {
-            "corrdinates": [[505.6, 343.3],
+            "locs": [[505.6, 343.3],
                     [33.4, 622.4],
                     [995.4, 862.7],
                     [114.0, 61.7],
@@ -128,7 +128,7 @@ vrptw_data_seed = [
                     [427.4, 173.9],
                     [353.1, 650.3]],
             "speed": [5.0],
-            "max_explore": [3.0],
+            "time_limit": [3.0],
             "num_depot": [1],
         },
         "label": "vrpl",
@@ -137,8 +137,8 @@ vrptw_data_seed = [
         "title": "Designing an Irrigation System for a Large Farm",
         "desc_split": (
             "You need to design an irrigation system for a large farm. The system draws water from a well and distributes it to various fields through pipes.\n" +
-            "For maintenance purposes, each pipe must form a loop, starting from the well and returning to it, with a maximum length of <max_length> per loop.\n" +
-            "The well is located at <loc_well>, and the fields requiring irrigation are located at <loc_lands>.\n" +
+            "For maintenance purposes, each pipe must form a loop, starting from the well and returning to it, with a maximum length of <distance_limit> per loop.\n" +
+            "The well is located at <loc_depot>, and the fields requiring irrigation are located at <loc_lands>.\n" +
             "Please design the irrigation system to ensure that each field has access to water while minimizing the total length of all pipes."
         ),
         "data_template": {
@@ -167,7 +167,7 @@ vrptw_data_seed = [
             "num_depot": [1],
         },
         "user_template": {
-            "loc_well": [[439.5, 290.0],],
+            "loc_depot": [[439.5, 290.0],],
             "loc_lands": [[38.50, 71.46],
                     [84.91, 96.39],
                     [86.16, 24.84],
@@ -188,16 +188,16 @@ vrptw_data_seed = [
                     [12.61, 73.42],
                     [82.22, 6.69],
                     [91.04, 42.25]],
-            "max_length": [1.8319],
+            "distance_limit": [1.8319],
         },
         "label": "vrpl",
     },
     {
         "title": "Power Company Signal Tower Inspection",
         "desc_split": (
-                "Due to rain and snow, a power company must inspect several signal towers potentially impacted by the weather. Workers will drive from the depot <loc_depot> to inspect the towers, located at <locs>.\n" +
+                "Due to rain and snow, a power company must inspect several signal towers potentially impacted by the weather. Workers will drive from the depot <loc_depot> to inspect the towers, located at <loc_customer>.\n" +
                 "Since the towers are in mountainous areas with no gas stations along the route, workers must return to the depot before running out of fuel.\n" +
-                "A fully fueled service vehicle can travel <max_distance> km.\n" +
+                "A fully fueled service vehicle can travel <distance_limit> km.\n" +
                 "Please plan a route for the power company to ensure all signal towers are inspected and the workers can safely return to the depot."
         ),
         "data_template": {
@@ -227,7 +227,7 @@ vrptw_data_seed = [
         },
         "user_template": {
             "loc_depot": [[694.8, 790.3]],
-            "loc_tower": [[789.2, 665.7],
+            "loc_customer": [[789.2, 665.7],
                     [284.3, 751.9],
                     [680.7, 669.9],
                     [547.0, 564.2],
@@ -247,7 +247,7 @@ vrptw_data_seed = [
                     [997.5, 850.8],
                     [462.6, 596.1],
                     [356.9, 357.0]],
-            "max_distance": [213.49],
+            "distance_limit": [213.49],
         },
         "label": "vrpl",
     },
@@ -255,8 +255,8 @@ vrptw_data_seed = [
         "title": "School Bus Route Optimization",
         "desc_split": (    
             "You need to plan a route for a school bus to drop off all students at their homes and return to the school without refueling.\n" +
-            "The school is located at <school>, and the students' homes are located at <homes>.\n" +
-            "The school bus has a maximum range of 200 km when fully fueled.\n" +
+            "The school is located at <loc_depot>, and the students' homes are located at <loc_customer>.\n" +
+            "The school bus has a maximum range of <distance_limit> km when fully fueled.\n" +
             "Please design a route to ensure all students are delivered home and the bus returns to the school within the fuel limit."
         ),
         "data_template": {
@@ -284,9 +284,8 @@ vrptw_data_seed = [
             "distance_limit": [2.3625],
         },
         "user_template": {
-            "num_students": [20],
-            "school": [[640.7, 198.3]],
-            "homes": [[957.8, 295.5],
+            "loc_depot": [[640.7, 198.3]],
+            "loc_customer": [[957.8, 295.5],
                     [405.4, 315.8],
                     [271.5, 708.7],
                     [362.9, 92.5],
@@ -306,8 +305,7 @@ vrptw_data_seed = [
                     [216.5, 859.7],
                     [695.9, 809.0],
                     [361.8, 603.6]],
-            "max_distance": [236.25],
-            "max_speed": [120],
+            "distance_limit": [236.25],
         },
         "label": "vrpl"
     }
