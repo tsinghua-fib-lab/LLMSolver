@@ -1,0 +1,1103 @@
+[
+    {
+        "title": "Grocery Delivery for Elderly Residents",
+        "content": "A local charity organizes grocery deliveries for elderly residents who cannot leave their homes. The depot is the grocery store at `<loc_depot>`, and the delivery points are the residents' homes at `<locs>`.  \nEach delivery van can carry up to `<capacity>` kg of groceries, and each resident\u2019s order weighs `<demand>` kg. The vans have a fuel limit and must return to the store after driving no more than `<distance_limit>` km.  \nPlan the routes to ensure all residents receive their groceries while minimizing the total distance traveled by the vans.",
+        "tags": [
+            "loc_depot",
+            "locs",
+            "capacity",
+            "demand",
+            "distance_limit"
+        ]
+    },
+    {
+        "title": "Mobile Library Book Distribution",
+        "content": "A rural county operates a mobile library service to bring books to remote villages. The library van starts at `<loc_depot>` and must visit villages at `<locs>`.  \nEach van can carry up to `<capacity>` books, and each village requests `<demand>` books. The van\u2019s battery allows it to travel up to `<distance_limit>` km before needing to return to the library to recharge.  \nDesign routes so every village gets its books, and the vans don\u2019t run out of power.",
+        "tags": [
+            "loc_depot",
+            "locs",
+            "capacity",
+            "demand",
+            "distance_limit"
+        ]
+    },
+    {
+        "title": "Medical Supply Drone Drops in Disaster Zones",
+        "content": "After a flood, drones are used to deliver emergency medical supplies to cut-off villages. The launch site is `<loc_depot>`, and villages are at `<locs>`.  \nEach drone can carry `<capacity>` kg of supplies, and each village needs `<demand>` kg. Drones must return to base after `<distance_limit>` km to avoid battery failure.  \nPlan flight paths to ensure all villages receive supplies while minimizing total drone travel distance.",
+        "tags": [
+            "loc_depot",
+            "locs",
+            "capacity",
+            "demand",
+            "distance_limit"
+        ]
+    },
+    {
+        "title": "Waste Collection in a National Park",
+        "content": "A national park needs to collect trash from campgrounds and picnic areas. The garbage truck starts at `<loc_depot>` and must visit sites at `<locs>`.  \nThe truck\u2019s compactor can hold up to `<capacity>` kg of waste, and each site has `<demand>` kg of trash. Due to rough terrain, the truck can only drive `<distance_limit>` km before refueling.  \nOptimize routes to clean all sites while keeping fuel usage low.",
+        "tags": [
+            "loc_depot",
+            "locs",
+            "capacity",
+            "demand",
+            "distance_limit"
+        ]
+    },
+    {
+        "title": "Coffee Bean Pickup from Small Farms",
+        "content": "A coffee roaster collects beans from small farms in a mountainous region. The roastery is at `<loc_depot>`, and farms are at `<locs>`.  \nEach truck can carry `<capacity>` kg of beans, and each farm has `<demand>` kg ready for pickup. The trucks must return to the roastery within `<distance_limit>` km due to fuel constraints.  \nDesign routes to collect all beans efficiently while minimizing travel distance.",
+        "tags": [
+            "loc_depot",
+            "locs",
+            "capacity",
+            "demand",
+            "distance_limit"
+        ]
+    },
+    {
+        "title": "Mobile Vaccination Clinic for Rural Villages",
+        "content": "A health organization is running a mobile vaccination clinic to serve remote villages. The clinic starts and ends at the regional hospital (<loc_depot>), and the villages needing vaccines are at <loc_customer>.  \nEach village has <demand> people to vaccinate, and the mobile clinic can carry a maximum of <capacity> vaccine doses per trip.  \nThe clinic van has a fuel limit of <distance_limit> km before it must return to the hospital to refuel.  \nPlan the routes to ensure all villages receive vaccines while minimizing total travel distance.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand",
+            "capacity",
+            "distance_limit"
+        ]
+    },
+    {
+        "title": "Courier Service for Small Business Deliveries",
+        "content": "A local courier service picks up packages from small businesses and delivers them to a central sorting facility (<loc_depot>). The businesses are located at <loc_customer>, each with a package weighing <demand> kg.  \nThe delivery van can carry up to <capacity> kg and has a maximum range of <distance_limit> km before needing to return to the depot.  \nDesign routes so that all packages are collected, the van doesn\u2019t exceed weight limits, and it returns before running out of fuel.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand",
+            "capacity",
+            "distance_limit"
+        ]
+    },
+    {
+        "title": "Wildlife Tracking Collar Retrieval in a Nature Reserve",
+        "content": "Researchers need to retrieve GPS collars from tagged animals scattered across a nature reserve. The base station is at <loc_depot>, and the collars are at <loc_customer>.  \nEach collar weighs <demand> kg, and the field team can carry a max of <capacity> kg at once.  \nSince the terrain is rough, the team can only travel <distance_limit> km per day before returning to base.  \nPlan retrieval routes to collect all collars while minimizing travel distance.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand",
+            "capacity",
+            "distance_limit"
+        ]
+    },
+    {
+        "title": "Food Bank Distribution to Homeless Shelters",
+        "content": "A food bank must deliver perishable meals to homeless shelters across the city. The distribution center is at <loc_depot>, and shelters are at <loc_customer>.  \nEach shelter needs <demand> meals, and the refrigerated truck can hold up to <capacity> meals before spoilage becomes a risk.  \nThe truck must return to the depot before its refrigeration fails after <distance_limit> km.  \nOptimize routes to ensure all shelters receive meals while keeping travel distance short.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand",
+            "capacity",
+            "distance_limit"
+        ]
+    },
+    {
+        "title": "Maintenance Drone Fleet for Wind Turbine Inspection",
+        "content": "An energy company uses drones to inspect wind turbines in a large wind farm. The charging station is at <loc_depot>, and turbines are at <loc_customer>.  \nEach inspection requires <demand> battery units, and a drone can only carry <capacity> units before needing to recharge.  \nDrones must return to the station after flying <distance_limit> km to avoid battery failure.  \nPlan flight paths so all turbines are inspected with minimal total distance traveled.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand",
+            "capacity",
+            "distance_limit"
+        ]
+    },
+    {
+        "title": "Emergency Blood Supply Delivery to Remote Clinics",
+        "content": "A regional blood bank needs to deliver life-saving blood supplies to remote clinics after a natural disaster. The blood bank is located at `<loc_depot>`, and the clinics are at `<loc_customer>`. Each clinic requires `<demand>` units of blood, and the delivery van can carry a maximum of `<capacity>` units. Due to damaged roads, the van must return to the blood bank before its fuel runs out\u2014it can only travel `<distance_limit>` km on a full tank. Plan the most efficient routes to ensure all clinics receive blood while minimizing total travel distance.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand",
+            "capacity",
+            "distance_limit"
+        ]
+    },
+    {
+        "title": "Mobile Vet Clinic for Rural Livestock Checkups",
+        "content": "A nonprofit mobile vet clinic provides vaccinations and health checks for livestock in remote villages. The clinic starts at `<loc_depot>` and must visit farms at `<loc_customer>`. Each farm has `<demand>` animals needing care, and the vet van can only carry `<capacity>` doses of vaccines and supplies. Since fuel is scarce, the van must return to base before exceeding `<distance_limit>` km. Design routes so all animals are treated while minimizing travel distance.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand",
+            "capacity",
+            "distance_limit"
+        ]
+    },
+    {
+        "title": "E-Scooter Battery Swapping Service",
+        "content": "An e-scooter rental company needs to swap depleted batteries for fully charged ones at docking stations across the city. The service depot is at `<loc_depot>`, and the docking stations are at `<loc_customer>`. Each station has `<demand>` dead batteries to collect, and the service van can carry up to `<capacity>` batteries at once. The van must return to the depot before its own battery depletes\u2014it can only travel `<distance_limit>` km per charge. Optimize the routes to minimize total distance while keeping all scooters operational.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand",
+            "capacity",
+            "distance_limit"
+        ]
+    },
+    {
+        "title": "Postal Service Parcel Pickup from Lockers",
+        "content": "A postal service must collect packages from secure lockers scattered across a metropolitan area. The central hub is at `<loc_depot>`, and the lockers are at `<loc_customer>`. Each locker has `<demand>` parcels, and the postal truck can hold up to `<capacity>` parcels. Due to strict shift schedules, the truck must return to the hub before reaching `<distance_limit>` km. Plan the most efficient pickup routes to ensure all parcels are collected on time.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand",
+            "capacity",
+            "distance_limit"
+        ]
+    },
+    {
+        "title": "Solar Panel Cleaning for Desert Farms",
+        "content": "A maintenance company cleans dust off solar panels at large desert farms to maximize energy output. The service team starts at `<loc_depot>` and must visit farms at `<loc_customer>`. Each farm has `<demand>` panels needing cleaning, and the cleaning truck carries enough water for `<capacity>` panels per trip. Due to extreme heat, the truck must return to base before traveling more than `<distance_limit>` km to avoid overheating. Optimize the routes to clean all panels while minimizing distance traveled.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand",
+            "capacity",
+            "distance_limit"
+        ]
+    },
+    {
+        "title": "Mobile Laundry Service for Remote Communities",
+        "content": "A laundry company operates a fleet of mobile laundry vans to serve remote villages without access to washing facilities. The depot is at <loc_depot>, and the villages are at <loc_customer>. Each van can carry up to <capacity> kg of laundry, and each village has <demand> kg of clothes to be collected, washed, and returned. The vans have a maximum range of <distance_limit> km before needing to return to the depot for refueling. Plan routes to ensure all villages are served, no van exceeds its capacity or range, and the total distance traveled is minimized.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand",
+            "distance_limit"
+        ]
+    },
+    {
+        "title": "Floating Market Vendor Restocking",
+        "content": "In a riverine community, vendors paddle boats to restock goods from a central warehouse (<loc_depot>) to floating market stalls (<loc_customer>). Each boat can carry <capacity> kg of supplies, and each stall needs <demand> kg of goods daily. The boats must return to the warehouse before their batteries deplete, limiting trips to <distance_limit> km. Design routes to restock all stalls while minimizing paddling distance.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand",
+            "distance_limit"
+        ]
+    },
+    {
+        "title": "Urban Tree Pruning Crew Scheduling",
+        "content": "A city parks department must prune trees across neighborhoods. Crews depart from the maintenance yard (<loc_depot>) with equipment to service trees at <loc_customer>. Each crew truck carries <capacity> kg of tools, and each tree requires <demand> kg of equipment (e.g., ladders, saws). Trucks can only drive <distance_limit> km before returning to refuel. Optimize routes to cover all trees efficiently.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand",
+            "distance_limit"
+        ]
+    },
+    {
+        "title": "Artisanal Cheese Farm Collection",
+        "content": "A gourmet distributor collects cheese from small farms (<loc_customer>) to bring to a central warehouse (<loc_depot>). Each refrigerated truck can transport <capacity> kg of cheese, and each farm produces <demand> kg. Due to perishability, trucks must return within <distance_limit> km to avoid spoilage. Plan routes to collect all cheese while minimizing travel distance.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "demand",
+            "distance_limit"
+        ]
+    },
+    {
+        "title": "Beach Cleanup Volunteer Coordination",
+        "content": "An environmental group organizes volunteers to clean litter from beaches (<loc_customer>), starting from a hub (<loc_depot>). Each volunteer team can carry <capacity> kg of trash, and each beach has <demand> kg of litter. Teams must return to the hub within <distance_limit> km due to limited water/supplies. Design routes to clean all beaches with minimal total travel.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "demand",
+            "distance_limit"
+        ]
+    },
+    {
+        "title": "Mobile COVID-19 Testing in Rural Towns",
+        "content": "A health organization is deploying mobile testing vans to provide COVID-19 tests in remote villages. The vans start and end their routes at the central clinic at <loc_depot>, and the villages needing tests are at <loc_customer>. Each van can carry <capacity> test kits, and each village requires <demand> kits. The vans have a fuel limit of <distance_limit> km before needing to return to the clinic. Plan routes to ensure all villages receive testing while minimizing total travel distance.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand",
+            "distance_limit"
+        ]
+    },
+    {
+        "title": "Ice Cream Truck Summer Route Planning",
+        "content": "An ice cream vendor wants to optimize their daily route to cover multiple neighborhoods before their stock melts. The truck starts and ends at the warehouse at <loc_depot>, and the neighborhoods are at <loc_customer>. The truck can carry <capacity> ice cream units, and each neighborhood has an estimated demand of <demand> units. Due to refrigeration limits, the truck must return to the warehouse within <distance_limit> km. Design routes to maximize sales while keeping the ice cream fresh.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand",
+            "distance_limit"
+        ]
+    },
+    {
+        "title": "Forest Ranger Patrol for Wildlife Protection",
+        "content": "A national park needs to schedule ranger patrols to monitor endangered species across different zones. The rangers start and end at the ranger station at <loc_depot>, and the monitoring zones are at <loc_customer>. Each patrol vehicle can carry <capacity> units of supplies (cameras, traps, etc.), and each zone requires <demand> units. Due to fuel constraints, each patrol must stay within <distance_limit> km. Plan routes to ensure all zones are monitored efficiently.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand",
+            "distance_limit"
+        ]
+    },
+    {
+        "title": "Citywide Flower Delivery for a Wedding",
+        "content": "A florist must deliver fresh flower arrangements to multiple wedding venues across the city before the ceremonies begin. The florist\u2019s shop is at <loc_depot>, and the venues are at <loc_customer>. Each delivery van can carry <capacity> bouquets, and each venue needs <demand> bouquets. To keep flowers fresh, vans must return to the shop within <distance_limit> km. Optimize routes to ensure timely deliveries with minimal travel.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand",
+            "distance_limit"
+        ]
+    },
+    {
+        "title": "Rural Postal Mail Collection from Mailboxes",
+        "content": "A postal service needs to collect mail from scattered roadside mailboxes in a rural area. The post office is at <loc_depot>, and the mailboxes are at <loc_customer>. Each postal truck can hold <capacity> kg of mail, and each mailbox has an estimated <demand> kg of outgoing mail. Due to fuel limits, trucks must return to the post office within <distance_limit> km. Plan routes to collect all mail while minimizing driving distance.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand",
+            "distance_limit"
+        ]
+    },
+    {
+        "title": "Mobile Dentist Van for Remote Villages",
+        "content": "A mobile dental clinic travels to remote villages to provide checkups and basic treatments. The van starts at the central clinic (<loc_depot>) and visits villages at <loc_customer>.  \nEach village has <demand> patients needing care, and the van can carry enough supplies for <capacity> treatments per trip.  \nThe van must return to the clinic before running out of fuel, which limits each trip to <distance_limit> km.  \nPlan the routes so every village gets visited, no trip exceeds capacity or distance, and the total distance driven is minimized.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand",
+            "capacity",
+            "distance_limit"
+        ]
+    },
+    {
+        "title": "Charity Bread Delivery to Homeless Shelters",
+        "content": "A bakery donates fresh bread daily to homeless shelters across the city. The bakery (<loc_depot>) has a delivery van that can carry up to <capacity> loaves.  \nShelters at <loc_customer> need <demand> loaves each. The van must return to the bakery before the driver\u2019s shift ends, limiting each route to <distance_limit> km.  \nDesign routes to ensure all shelters receive bread, no van is overloaded, and the total delivery distance is as short as possible.",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "loc_customer",
+            "demand",
+            "distance_limit"
+        ]
+    },
+    {
+        "title": "Rural Ambulance Service for Emergency Calls",
+        "content": "A small hospital operates ambulances to respond to emergencies in nearby villages. The hospital (<loc_depot>) must cover calls at <loc_customer>, each with <demand> patients needing transport.  \nEach ambulance can carry <capacity> patients and has a fuel limit allowing <distance_limit> km per shift before returning.  \nPlan ambulance routes to ensure all emergencies are reached quickly, no ambulance is overloaded, and the total distance traveled is minimized.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand",
+            "capacity",
+            "distance_limit"
+        ]
+    },
+    {
+        "title": "Recycling Truck Collection in a Green City",
+        "content": "A city\u2019s recycling trucks collect sorted waste from neighborhoods. The depot (<loc_depot>) dispatches trucks to bins at <loc_customer>, each with <demand> kg of recyclables.  \nTrucks have a <capacity> kg limit and must return to the depot before their shift ends, restricting routes to <distance_limit> km.  \nOptimize routes so all bins are emptied, no truck is overloaded, and fuel usage is minimized.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand",
+            "capacity",
+            "distance_limit"
+        ]
+    },
+    {
+        "title": "Mobile Charging Stations for Electric Scooters",
+        "content": "A company deploys mobile charging vans to recharge electric scooters scattered across a city. The vans start at a warehouse (<loc_depot>) and visit scooter hubs at <loc_customer>, each needing <demand> kWh of power.  \nEach van carries a battery with <capacity> kWh and must return to the warehouse before depleting its own charge, limiting trips to <distance_limit> km.  \nDesign routes to recharge all hubs efficiently while minimizing total travel distance.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand",
+            "capacity",
+            "distance_limit"
+        ]
+    },
+    {
+        "title": "Mobile Pet Grooming Service for Suburban Neighborhoods",
+        "content": "A mobile pet grooming van needs to visit clients\u2019 homes to wash and groom their pets. The van starts and ends its day at the grooming center located at <loc_depot>, and clients are scattered across the neighborhood at <loc_customer>.  \nEach grooming session takes <demand> minutes, and the van can only handle <capacity> appointments before needing to return to the center for restocking (shampoo, towels, etc.).  \nThe van has a fuel limit of <distance_limit> km per shift.  \nPlan the route so that:  \n1. All pets get groomed.  \n2. The van doesn\u2019t run out of fuel.  \n3. Total driving distance is minimized.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand",
+            "capacity",
+            "distance_limit"
+        ]
+    },
+    {
+        "title": "Rural Newspaper Delivery with Limited Fuel",
+        "content": "A local newspaper company delivers daily papers to remote villages using a single truck. The printing press is at <loc_depot>, and drop-off points are at <loc_customer>.  \nEach village requires <demand> newspapers, and the truck can carry up to <capacity> papers per trip.  \nSince the villages are far apart, the truck can only drive <distance_limit> km before needing to refuel back at the press.  \nDesign routes to ensure:  \n1. Every village receives its newspapers.  \n2. The truck never runs out of fuel.  \n3. Total distance traveled is as short as possible.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand",
+            "capacity",
+            "distance_limit"
+        ]
+    },
+    {
+        "title": "Mobile Car Wash for Corporate Fleets",
+        "content": "A car wash company services company vehicles (e.g., delivery vans, sales cars) parked at various office locations. The service truck starts at <loc_depot> and must visit offices at <loc_customer>.  \nEach vehicle requires <demand> liters of water and detergent, and the truck can carry <capacity> liters before refilling.  \nThe truck\u2019s fuel tank allows <distance_limit> km of driving per day.  \nPlan the route so that:  \n1. All company vehicles are cleaned.  \n2. The truck returns to base before running out of supplies or fuel.  \n3. Driving distance is minimized.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand",
+            "capacity",
+            "distance_limit"
+        ]
+    },
+    {
+        "title": "Streetlight Bulb Replacement in a Small Town",
+        "content": "The town\u2019s maintenance crew must replace burnt-out bulbs in streetlights across the city. The depot is at <loc_depot>, and faulty lights are at <loc_customer>.  \nEach bulb replacement requires <demand> spare bulbs (some lights need multiple), and the truck can carry <capacity> bulbs at once.  \nDue to tight schedules, the crew can only drive <distance_limit> km per shift before returning to the depot.  \nOptimize the route to:  \n1. Replace all broken bulbs.  \n2. Avoid running out of spares or fuel.  \n3. Reduce total travel distance.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand",
+            "capacity",
+            "distance_limit"
+        ]
+    },
+    {
+        "title": "Farmers\u2019 Market Produce Collection",
+        "content": "A food distributor collects fresh produce from small farms to supply a city\u2019s farmers\u2019 market. The warehouse is at <loc_depot>, and farms are at <loc_customer>.  \nEach farm has <demand> kg of produce ready, and the truck can carry <capacity> kg per trip.  \nSince produce spoils quickly, the truck must return to the warehouse within <distance_limit> km to ensure freshness.  \nPlan routes to:  \n1. Collect all available produce.  \n2. Keep deliveries within the freshness distance limit.  \n3. Minimize total distance driven.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand",
+            "capacity",
+            "distance_limit"
+        ]
+    },
+    {
+        "title": "Mobile Health Clinic for Remote Fishing Villages",
+        "content": "A nonprofit organization operates a mobile health clinic to provide basic medical checkups for isolated fishing villages along a coastal region. The clinic van starts at the central hospital (<loc_depot>) and must visit villages at <loc_customer>. Each village has <demand> patients needing care, and the van can carry enough supplies for <capacity> patients per trip. Due to rough terrain, the van can only travel <distance_limit> km before returning to the hospital for restocking. Plan routes to serve all villages while minimizing total travel distance.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand",
+            "capacity",
+            "distance_limit"
+        ]
+    },
+    {
+        "title": "Urban Food Rescue for Surplus Groceries",
+        "content": "A food rescue organization collects unsold perishables from supermarkets (<loc_customer>) to distribute to food banks. Their refrigerated truck starts at a central warehouse (<loc_depot>), has a cold storage capacity of <capacity> kg, and can travel up to <distance_limit> km before needing to return to avoid spoilage. Each supermarket has <demand> kg of surplus food. Optimize pickup routes to maximize rescued food while ensuring no route exceeds the truck\u2019s constraints.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "distance_limit",
+            "demand"
+        ]
+    },
+    {
+        "title": "Rural Solar Panel Maintenance in Off-Grid Communities",
+        "content": "A technician team services solar panels in remote off-grid villages. Starting from their base (<loc_depot>), they visit villages (<loc_customer>) where each requires <demand> hours of maintenance. Their truck carries tools for <capacity> hours of work and can drive <distance_limit> km before returning to base for refueling. Design routes to maintain all panels while minimizing downtime between villages.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand",
+            "capacity",
+            "distance_limit"
+        ]
+    },
+    {
+        "title": "Citywide Flowerpot Fertilization Service",
+        "content": "A gardening company fertilizes flowerpots across a city\u2019s public spaces. Their vehicle starts at the nursery (<loc_depot>), carries <capacity> liters of liquid fertilizer, and must return before the tank is empty (max <distance_limit> km). Each flowerpot at <loc_customer> requires <demand> liters. Plan routes to fertilize all pots with minimal backtracking.",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "distance_limit",
+            "loc_customer",
+            "demand"
+        ]
+    },
+    {
+        "title": "Island Hopping for Coral Reef Monitoring",
+        "content": "Marine biologists monitor coral reefs around small islands. Departing from their research station (<loc_depot>), they use a boat with fuel for <distance_limit> km and space for <capacity> kg of equipment. Each reef site (<loc_customer>) requires <demand> kg of gear (sensors, cameras). Optimize routes to survey all reefs without stranding the team!",
+        "tags": [
+            "loc_depot",
+            "distance_limit",
+            "capacity",
+            "loc_customer",
+            "demand"
+        ]
+    },
+    {
+        "title": "Mobile Coffee Cart for Office Districts",
+        "content": "A mobile coffee cart needs to serve multiple office buildings in a downtown area. The cart starts and ends its day at the central kitchen (<loc_depot>), and the office stops are at <loc_customer>.  \nEach building orders <demand> liters of coffee, but the cart can only carry <capacity> liters at a time.  \nThe cart\u2019s battery allows it to travel up to <distance_limit> km before needing to return to recharge.  \nPlan the routes so every office gets its coffee order, the cart doesn\u2019t run out of battery, and the total distance traveled is minimized.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand",
+            "capacity",
+            "distance_limit"
+        ]
+    },
+    {
+        "title": "Rural Mobile Pharmacy for Chronic Medication",
+        "content": "A pharmacy van delivers prescription refills to elderly patients in remote villages. The van starts at the central pharmacy (<loc_depot>) and visits patients at <loc_customer>.  \nEach patient\u2019s medication weighs <demand> kg, and the van can carry up to <capacity> kg per trip.  \nDue to poor road conditions, the van can only drive <distance_limit> km per day before returning to the pharmacy.  \nDesign routes to ensure all patients receive their meds, the van doesn\u2019t get stranded, and travel distance is optimized.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand",
+            "capacity",
+            "distance_limit"
+        ]
+    },
+    {
+        "title": "Citywide Christmas Light Maintenance Crew",
+        "content": "A crew maintains decorative holiday lights across the city. They start at the warehouse (<loc_depot>) and visit light installations at <loc_customer>.  \nEach installation requires <demand> kg of replacement bulbs/equipment, and their truck holds <capacity> kg.  \nThe truck must return to the warehouse before its shift ends, limiting daily travel to <distance_limit> km.  \nPlan routes to fix all lights, avoid overtime, and minimize driving.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand",
+            "capacity",
+            "distance_limit"
+        ]
+    },
+    {
+        "title": "Floating Solar Panel Cleaning in Reservoirs",
+        "content": "A boat cleans solar panels installed on a reservoir. It starts at the dock (<loc_depot>) and services panels at <loc_customer>.  \nEach panel requires <demand> liters of cleaning fluid, and the boat\u2019s tank holds <capacity> liters.  \nThe boat\u2019s fuel restricts it to <distance_limit> km per trip before returning to the dock.  \nOptimize routes to clean all panels, avoid running out of supplies, and reduce fuel usage.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand",
+            "capacity",
+            "distance_limit"
+        ]
+    },
+    {
+        "title": "Mobile EV Charging for Stranded Cars",
+        "content": "A service van provides emergency charging to electric cars that run out of battery on highways. The van starts at the charging hub (<loc_depot>) and assists stranded cars at <loc_customer>.  \nEach car needs <demand> kWh of charge, and the van\u2019s battery can supply <capacity> kWh before needing a recharge.  \nThe van can only travel <distance_limit> km per shift due to its own battery limits.  \nPlan routes to rescue as many cars as possible while ensuring the van returns safely.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand",
+            "capacity",
+            "distance_limit"
+        ]
+    },
+    {
+        "title": "Mobile EV Charging for Stranded Cars",
+        "content": "A roadside assistance company operates mobile charging trucks to help stranded electric vehicles (EVs) with dead batteries. The depot is at <loc_depot>, and stranded EVs are located at <locs>. Each truck carries a battery pack with <capacity> kWh of charge, and each stranded EV needs <demand> kWh to reach the nearest charging station. Trucks can travel up to <distance_limit> km before needing to return to the depot for a recharge. Plan routes so that all EVs get enough power, trucks don\u2019t run out of charge, and total travel distance is minimized.",
+        "tags": [
+            "loc_depot",
+            "locs",
+            "capacity",
+            "demand",
+            "distance_limit"
+        ]
+    },
+    {
+        "title": "Rural Ambulance Service for Emergency Calls",
+        "content": "A rural hospital must dispatch ambulances to pick up patients in remote villages. The hospital is at <loc_depot>, and emergency call locations are at <locs>. Each ambulance can carry up to <capacity> patients and has a fuel limit allowing <distance_limit> km before returning. Each pickup point has <demand> patients needing transport. Design routes so all patients are collected, ambulances don\u2019t run out of fuel, and response time is minimized.",
+        "tags": [
+            "loc_depot",
+            "locs",
+            "capacity",
+            "distance_limit",
+            "demand"
+        ]
+    },
+    {
+        "title": "Mobile Pet Grooming Service for Suburban Neighborhoods",
+        "content": "A pet grooming business sends out vans to groom dogs at customers' homes. The vans start at the grooming center (<loc_depot>) and visit homes at <locs>. Each van carries <capacity> kg of grooming supplies, and each appointment requires <demand> kg (based on dog size). Vans must return before traveling more than <distance_limit> km to avoid overtime costs. Plan routes so all pets get groomed, vans stay within range, and total travel distance is minimized.",
+        "tags": [
+            "loc_depot",
+            "locs",
+            "capacity",
+            "demand",
+            "distance_limit"
+        ]
+    },
+    {
+        "title": "Farmers\u2019 Market Produce Collection",
+        "content": "A local food co-op collects fresh produce from small farms to sell at a central market. The market is at <loc_depot>, and farms are at <locs>. Each truck can carry <capacity> kg of produce, and each farm has <demand> kg ready for pickup. Due to perishability, trucks can\u2019t travel more than <distance_limit> km before unloading. Plan routes to collect all produce, keep trips short, and ensure freshness.",
+        "tags": [
+            "loc_depot",
+            "locs",
+            "capacity",
+            "demand",
+            "distance_limit"
+        ]
+    },
+    {
+        "title": "Citywide Christmas Light Maintenance Crew",
+        "content": "A city hires a crew to maintain holiday lights on public trees. The crew starts at the depot (<loc_depot>) and services light displays at <locs>. Each truck carries <capacity> replacement bulbs, and each location needs <demand> bulbs. Trucks must return before driving more than <distance_limit> km to avoid overtime. Plan routes so all displays stay lit, trucks stay within range, and fuel costs are minimized.",
+        "tags": [
+            "loc_depot",
+            "locs",
+            "capacity",
+            "demand",
+            "distance_limit"
+        ]
+    },
+    {
+        "title": "Mobile EV Charging for Stranded Cars",
+        "content": "An electric vehicle (EV) charging service operates a fleet of mobile charging trucks to assist stranded EVs with dead batteries. The service depot is at `<loc_depot>`, and stranded cars are reported at `<loc_customer>`. Each truck carries a battery capacity of `<capacity>` kWh, and each stranded EV requires `<demand>` kWh to reach the nearest charging station. The trucks have a maximum range of `<distance_limit>` km before needing to return to the depot. Plan routes to ensure all stranded EVs are charged while minimizing total travel distance.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand",
+            "distance_limit"
+        ]
+    },
+    {
+        "title": "Rural Bookmobile for Remote Villages",
+        "content": "A county library runs a bookmobile service to deliver books to small villages without libraries. The bookmobile starts at `<loc_depot>` and must visit villages at `<loc_customer>`. Each village has a book request of `<demand>` kg, and the bookmobile can carry up to `<capacity>` kg. Due to limited fuel, the bookmobile must return to the depot after traveling no more than `<distance_limit>` km. Design routes to ensure all villages receive their books while minimizing travel distance.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand",
+            "capacity",
+            "distance_limit"
+        ]
+    },
+    {
+        "title": "Urban Food Rescue for Surplus Groceries",
+        "content": "A food rescue organization collects surplus groceries from supermarkets to distribute to food banks. The warehouse is at `<loc_depot>`, and supermarkets are at `<loc_customer>`. Each supermarket has `<demand>` kg of surplus food, and each truck can carry up to `<capacity>` kg. Due to perishability, trucks must return to the warehouse within `<distance_limit>` km. Plan routes to maximize food collection while minimizing travel distance.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand",
+            "capacity",
+            "distance_limit"
+        ]
+    },
+    {
+        "title": "Mobile Vet Clinic for Rural Livestock Checkups",
+        "content": "A veterinary service sends mobile clinics to remote farms to vaccinate livestock. The clinic departs from `<loc_depot>` and must visit farms at `<loc_customer>`. Each farm has `<demand>` animals needing vaccines, and the mobile clinic can carry `<capacity>` doses. Due to fuel constraints, the clinic must return to the depot within `<distance_limit>` km. Design routes to ensure all farms are visited while minimizing travel distance.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand",
+            "capacity",
+            "distance_limit"
+        ]
+    },
+    {
+        "title": "Island Hopping for Coral Reef Monitoring",
+        "content": "A marine research team monitors coral reefs around small islands. The boat departs from `<loc_depot>` and must visit reef sites at `<loc_customer>`. Each site requires `<demand>` kg of monitoring equipment, and the boat can carry up to `<capacity>` kg. Due to fuel limits, the boat must return to base within `<distance_limit>` km. Plan routes to ensure all reefs are monitored while minimizing travel distance.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand",
+            "capacity",
+            "distance_limit"
+        ]
+    },
+    {
+        "title": "Mobile EV Charging for Stranded Cars",
+        "content": "A roadside assistance company wants to help stranded electric vehicles (EVs) with dead batteries. Their service vans carry portable chargers and start from the depot at <loc_depot>. Stranded EVs are located at <loc_customer>, each needing a charge of <demand> kWh. Each van can carry a maximum of <capacity> kWh worth of chargers and has a fuel range of <distance_limit> km before needing to return. Plan routes so that:  \n1. Every stranded EV gets enough charge.  \n2. Vans return to the depot before running out of fuel.  \n3. The total distance driven is minimized.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand",
+            "capacity",
+            "distance_limit"
+        ]
+    },
+    {
+        "title": "Rural Bookmobile for Remote Villages",
+        "content": "A library operates a bookmobile to deliver books to remote villages. The bookmobile starts at the central library (<loc_depot>) and visits villages at <loc_customer>. Each village requests <demand> books, and the bookmobile can carry up to <capacity> books at once. Due to rough terrain, the bookmobile can only travel <distance_limit> km before needing to return. Plan routes to:  \n1. Deliver all requested books.  \n2. Ensure the bookmobile returns safely.  \n3. Minimize total travel distance.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand",
+            "capacity",
+            "distance_limit"
+        ]
+    },
+    {
+        "title": "Urban Food Rescue for Surplus Groceries",
+        "content": "A nonprofit collects surplus food from grocery stores to distribute to food banks. Their refrigerated trucks start at a central warehouse (<loc_depot>) and visit stores at <loc_customer>. Each store has <demand> kg of food to donate, and each truck can carry up to <capacity> kg. Due to perishability, trucks must return within <distance_limit> km. Plan routes to:  \n1. Collect all surplus food.  \n2. Keep food fresh by minimizing detours.  \n3. Ensure trucks return before spoilage risk.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand",
+            "capacity",
+            "distance_limit"
+        ]
+    },
+    {
+        "title": "Mobile Vet Clinic for Rural Livestock Checkups",
+        "content": "A veterinary service sends mobile clinics to farms for livestock vaccinations. The clinic starts at the main office (<loc_depot>) and visits farms at <loc_customer>. Each farm has <demand> animals needing shots, and the van can carry <capacity> doses. Since rural roads are slow, the van can only travel <distance_limit> km per trip. Plan routes to:  \n1. Vaccinate all animals.  \n2. Avoid running out of supplies mid-route.  \n3. Minimize travel time for the vet team.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand",
+            "capacity",
+            "distance_limit"
+        ]
+    },
+    {
+        "title": "Island Hopping for Coral Reef Monitoring",
+        "content": "A marine research team monitors coral reefs around small islands. Their boat departs from a coastal base (<loc_depot>) and visits reefs at <loc_customer>. Each reef requires <demand> kg of equipment for sampling, and the boat can carry <capacity> kg. Due to fuel limits, the boat can only travel <distance_limit> km before returning. Plan routes to:  \n1. Survey all reefs.  \n2. Avoid stranding the boat.  \n3. Minimize fuel consumption.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand",
+            "capacity",
+            "distance_limit"
+        ]
+    },
+    {
+        "title": "Mobile EV Charging for Stranded Cars",
+        "content": "A city\u2019s emergency services team operates mobile charging vans to assist electric vehicles (EVs) that run out of battery on highways. The charging depot is at <loc_depot>, and stranded EVs are reported at <loc_customer>. Each van carries a battery pack with <capacity> kWh, and each stranded EV requires <demand> kWh to reach the nearest charging station. Vans can travel up to <distance_limit> km before needing to return to the depot. Plan routes to rescue as many stranded EVs as possible while ensuring vans don\u2019t run out of power themselves.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand",
+            "distance_limit"
+        ]
+    },
+    {
+        "title": "Rural Bookmobile for Remote Villages",
+        "content": "A library system sends a bookmobile to deliver books to isolated villages. The bookmobile starts at the central library (<loc_depot>) and visits villages at <loc_customer>. Each village requests <demand> books, and the bookmobile can carry up to <capacity> books. Due to rough terrain, the vehicle can only drive <distance_limit> km per day before returning. Design routes to maximize book deliveries while keeping the bookmobile\u2019s daily travel within limits.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand",
+            "capacity",
+            "distance_limit"
+        ]
+    },
+    {
+        "title": "Urban Food Rescue for Surplus Groceries",
+        "content": "A nonprofit collects unsold food from grocery stores (<loc_customer>) to distribute to food banks. Their refrigerated truck starts at a warehouse (<loc_depot>), has a cold storage capacity of <capacity> kg, and must return within <distance_limit> km to avoid spoilage. Each store has <demand> kg of surplus food. Optimize routes to rescue as much food as possible before it\u2019s discarded.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "distance_limit",
+            "demand"
+        ]
+    },
+    {
+        "title": "Mobile Vet Clinic for Rural Livestock Checkups",
+        "content": "A veterinary service sends a mobile clinic to farms (<loc_customer>) to vaccinate livestock. The clinic departs from the county office (<loc_depot>), carries <capacity> doses of vaccines, and can travel up to <distance_limit> km per trip. Each farm needs <demand> doses. Plan routes to ensure all farms are served while minimizing travel distance.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "distance_limit",
+            "demand"
+        ]
+    },
+    {
+        "title": "Island Hopping for Coral Reef Monitoring",
+        "content": "Marine biologists must survey coral reefs around islands (<loc_customer>) using a boat that launches from a research station (<loc_depot>). The boat can carry <capacity> kg of equipment, each reef requires <demand> kg of gear for sampling, and the boat\u2019s fuel allows <distance_limit> km per trip. Design routes to cover all reefs while ensuring the boat returns safely.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "demand",
+            "distance_limit"
+        ]
+    },
+    {
+        "title": "Mobile EV Charging for Stranded Cars",
+        "content": "A roadside assistance company operates mobile charging vans to rescue electric vehicles (EVs) that run out of battery. The vans start at the depot `<loc_depot>` and must reach stranded EVs at locations `<loc_customer>`. Each van carries a battery pack with `<capacity>` kWh of charge, and each stranded EV needs `<demand>` kWh to reach the nearest charging station. Vans can travel up to `<distance_limit>` km before needing to return to the depot to recharge. Plan routes to minimize total distance while ensuring all EVs are rescued and no van runs out of power.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand",
+            "distance_limit"
+        ]
+    },
+    {
+        "title": "Rural Bookmobile for Remote Villages",
+        "content": "A library system sends a bookmobile to deliver books to isolated villages. The bookmobile starts at the central library `<loc_depot>` and visits villages at `<loc_customer>`. Each village requests `<demand>` books, and the bookmobile can carry up to `<capacity>` books. Due to poor roads, the vehicle must return to the library after `<distance_limit>` km to avoid breakdowns. Design routes to maximize book deliveries while minimizing travel distance.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand",
+            "capacity",
+            "distance_limit"
+        ]
+    },
+    {
+        "title": "Urban Food Rescue for Surplus Groceries",
+        "content": "A nonprofit collects surplus food from grocery stores `<loc_customer>` to distribute to food banks. Their refrigerated trucks start at a warehouse `<loc_depot>`, have a capacity of `<capacity>` kg, and must return within `<distance_limit>` km to keep food fresh. Each store has `<demand>` kg of surplus. Optimize routes to rescue all food before it spoils, minimizing travel time.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "distance_limit",
+            "demand"
+        ]
+    },
+    {
+        "title": "Mobile Vet Clinic for Rural Livestock Checkups",
+        "content": "A veterinary service sends teams to farms `<loc_customer>` to vaccinate livestock. Teams depart from a central clinic `<loc_depot>`, carry `<capacity>` doses of vaccines, and must return within `<distance_limit>` km (due to perishable medicines). Each farm needs `<demand>` doses. Plan routes to vaccinate all animals efficiently.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "distance_limit",
+            "demand"
+        ]
+    },
+    {
+        "title": "Island Hopping for Coral Reef Monitoring",
+        "content": "Marine biologists must monitor coral reefs around islands `<loc_customer>` using a boat that launches from a research station `<loc_depot>`. The boat can travel `<distance_limit>` km before refueling and carries `<capacity>` kg of equipment. Each reef requires `<demand>` kg of sensors. Design routes to cover all reefs while minimizing fuel use.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "distance_limit",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "Mobile Water Tanker Delivery to Drought-Stricken Villages",
+        "content": "A drought has left several remote villages without reliable water sources. A water distribution company must send tanker trucks from a central depot (<loc_depot>) to deliver water to villages (<loc_customer>). Each truck can carry up to <capacity> liters, and each village requires <demand> liters per delivery. Due to poor road conditions, trucks must return to the depot before exceeding <distance_limit> km to avoid breakdowns. Plan routes to ensure all villages receive water while minimizing total distance traveled.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand",
+            "distance_limit"
+        ]
+    },
+    {
+        "title": "Urban Bicycle Courier for Restaurant Meal Deliveries",
+        "content": "A city\u2019s bike courier service delivers meals from a central kitchen (<loc_depot>) to restaurants (<loc_customer>) for last-mile distribution. Each courier can carry up to <capacity> meals in insulated bags, and each restaurant orders <demand> meals per shift. Couriers must return to the kitchen within <time_limit> hours to keep food fresh. Their average cycling speed is <speed> km/h. Optimize routes so all restaurants get meals on time while minimizing travel distance.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand",
+            "time_limit",
+            "speed"
+        ]
+    },
+    {
+        "title": "Rural Mobile Banking for Cash-Strapped Communities",
+        "content": "A bank operates mobile vans to serve villages without ATMs. Starting from a regional branch (<loc_depot>), vans visit villages (<loc_customer>) to dispense cash. Each van carries up to <capacity> in currency, and each village withdraws an average of <demand>. Due to security risks, vans cannot travel more than <distance_limit> km per trip before returning. Design routes to serve all villages while minimizing armored vehicle mileage.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand",
+            "distance_limit"
+        ]
+    },
+    {
+        "title": "Floating Garbage Collection in a Canal City",
+        "content": "A historic canal city relies on small boats to collect trash from waterfront homes (<loc_customer>). Boats depart from a waste depot (<loc_depot>), each with a capacity of <capacity> kg. Each home generates <demand> kg of waste daily. Boats must return to the depot every <distance_limit> km due to fuel constraints. Plan routes to ensure all waste is collected efficiently without stranded boats.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "demand",
+            "distance_limit"
+        ]
+    },
+    {
+        "title": "Mobile Pop-Up Shoe Repair for Busy Suburbs",
+        "content": "A shoe repair van tours suburban neighborhoods (<loc_customer>) from a workshop (<loc_depot>). Each van can service up to <capacity> pairs of shoes per trip, and each stop has <demand> repairs. The van must return to the workshop before <distance_limit> km to restock supplies. Optimize stops so all customers get same-day service while reducing unnecessary driving.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "demand",
+            "distance_limit"
+        ]
+    },
+    {
+        "title": "Mobile Water Tanker Delivery to Drought-Stricken Villages",
+        "content": "A drought has hit several remote villages, and the government is sending water tankers to deliver emergency supplies. The depot is at <loc_depot>, and the villages needing water are at <loc_customer>. Each tanker can carry up to <capacity> liters, and each village requires <demand> liters. The roads are rough, so tankers can only travel <distance_limit> km before needing to return to refuel. Plan routes to ensure every village gets water while minimizing total distance traveled.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand",
+            "distance_limit"
+        ]
+    },
+    {
+        "title": "Urban Bicycle Courier for Restaurant Meal Deliveries",
+        "content": "A food delivery startup uses bicycle couriers to transport meals from partner restaurants to customers. The central kitchen (where orders are packed) is at <loc_depot>, and delivery points are at <loc_customer>. Each courier can carry up to <capacity> kg of food (each order weighs <demand> kg). To keep deliveries fast, couriers must return to the kitchen every <distance_limit> km to pick up new orders. Design routes to ensure all meals are delivered while minimizing cycling distance.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand",
+            "distance_limit"
+        ]
+    },
+    {
+        "title": "Rural Mobile Banking for Cash-Strapped Communities",
+        "content": "A bank sends armored vans to provide cash withdrawals in villages without ATMs. The main branch is at <loc_depot>, and the villages are at <loc_customer>. Each van carries up to <capacity> dollars, and each village needs <demand> dollars. Due to security risks, vans can\u2019t travel more than <distance_limit> km before returning to reload. Plan routes so every village gets cash without exceeding distance limits.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand",
+            "distance_limit"
+        ]
+    },
+    {
+        "title": "Floating Garbage Collection in a Canal City",
+        "content": "A city built on canals needs boats to collect trash from floating bins. The waste depot is at <loc_depot>, and bins are at <loc_customer>. Each boat can hold <capacity> kg of trash, and each bin has <demand> kg. Boats must return to the depot every <distance_limit> km to unload. Design routes to clean all bins while minimizing fuel usage.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand",
+            "distance_limit"
+        ]
+    },
+    {
+        "title": "Mobile Pop-Up Shoe Repair for Busy Suburbs",
+        "content": "A shoe repair service uses a van to visit neighborhoods on a rotating schedule. The workshop is at <loc_depot>, and stops are at <loc_customer>. The van can carry tools for <capacity> repairs/day (each stop has <demand> repairs). To avoid overtime, the van must return to the workshop within <distance_limit> km. Plan a route to serve all stops efficiently.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand",
+            "distance_limit"
+        ]
+    },
+    {
+        "title": "Mobile Water Tanker Delivery to Drought-Stricken Villages",
+        "content": "A drought has hit several remote villages, and the government is sending water tankers to deliver emergency supplies. The water depot is at <loc_depot>, and the villages needing water are at <loc_customer>. Each tanker can carry up to <capacity> liters of water, and each village requires <demand> liters. Due to rough terrain, the tankers can only travel <distance_limit> km before needing to return to refuel. Plan routes so that:  \n1. Every village gets its water supply.  \n2. No tanker runs out of fuel.  \n3. The total distance traveled is minimized.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand",
+            "distance_limit"
+        ]
+    },
+    {
+        "title": "Urban Bicycle Courier for Restaurant Meal Deliveries",
+        "content": "A food delivery startup uses bicycle couriers to deliver meals from a central kitchen (<loc_depot>) to customers (<loc_customer>). Each courier can carry up to <capacity> meals, and each customer has ordered <demand> meals. Since couriers pedal manually, they can only travel <distance_limit> km before needing to return to recharge. Optimize their routes so that:  \n1. All meals are delivered on time.  \n2. No courier gets stranded.  \n3. The total delivery distance is minimized.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand",
+            "distance_limit"
+        ]
+    },
+    {
+        "title": "Rural Mobile Banking for Cash-Strapped Communities",
+        "content": "A bank sends armored vans to remote villages where ATMs are scarce. The vans start at the central branch (<loc_depot>) and visit villages (<loc_customer>) to dispense cash. Each van can carry up to <capacity> dollars, and each village needs <demand> dollars. Due to security risks, vans must return to base before traveling more than <distance_limit> km. Plan routes ensuring:  \n1. Every village gets its cash.  \n2. No van exceeds its travel limit.  \n3. The total distance is minimized.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand",
+            "distance_limit"
+        ]
+    },
+    {
+        "title": "Floating Garbage Collection in a Canal City",
+        "content": "A historic canal city needs to clean up floating trash daily. The garbage barge starts at the depot (<loc_depot>) and must visit collection points (<loc_customer>). Each barge can hold <capacity> kg of trash, and each stop has <demand> kg. Due to battery constraints, the barge can only travel <distance_limit> km before needing to return. Plan routes so that:  \n1. All trash is collected.  \n2. The barge doesn\u2019t run out of power.  \n3. The total route distance is minimized.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand",
+            "distance_limit"
+        ]
+    },
+    {
+        "title": "Mobile Pop-Up Shoe Repair for Busy Suburbs",
+        "content": "A shoe repair service operates from a van that visits different neighborhoods. The van starts at the workshop (<loc_depot>) and stops at designated spots (<loc_customer>). It can carry <capacity> pairs of shoes for repairs, and each stop has <demand> pairs waiting. The van must return before traveling more than <distance_limit> km to avoid overtime costs. Plan routes ensuring:  \n1. All shoes are picked up.  \n2. The van returns on time.  \n3. The total distance is minimized.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand",
+            "distance_limit"
+        ]
+    },
+    {
+        "title": "Mobile Toy Library for Remote Kindergartens",
+        "content": "A nonprofit organization runs a mobile toy library to bring educational toys to rural kindergartens. The van starts at the warehouse (<loc_depot>) and visits villages (<locs>) where teachers have requested toy sets (<demand>). The van can carry up to <capacity> kg of toys, and each village must receive exactly what they ordered. Since fuel is scarce, the van can only travel <distance_limit> km before needing to return to the warehouse. Plan routes so every kindergarten gets their toys while minimizing total distance traveled.",
+        "tags": [
+            "loc_depot",
+            "locs",
+            "demand",
+            "capacity",
+            "distance_limit"
+        ]
+    },
+    {
+        "title": "Hot Meal Delivery for Homeless Shelters",
+        "content": "A charity prepares hot meals at a central kitchen (<loc_depot>) and delivers them to homeless shelters (<locs>) before they go cold. Each shelter needs <demand> meals, and a delivery van can carry up to <capacity> meals at once. The meals must arrive within <time_limit> hours to stay fresh, limiting how far each van can travel. Design routes to ensure all shelters receive meals on time while minimizing fuel costs.",
+        "tags": [
+            "loc_depot",
+            "locs",
+            "demand",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Mobile ATM Service for Cash-Strapped Towns",
+        "content": "A bank operates a mobile ATM truck to serve rural towns without branches. The truck starts at the central vault (<loc_depot>) and visits towns (<locs>), each needing <demand> dollars in cash. The truck\u2019s safe holds up to <capacity> dollars, and for security, it must return to the vault before traveling more than <distance_limit> km. Plan routes to restock all towns while minimizing the risk of robbery (i.e., shortest possible trips).",
+        "tags": [
+            "loc_depot",
+            "locs",
+            "demand",
+            "capacity",
+            "distance_limit"
+        ]
+    },
+    {
+        "title": "Floating Clinic for Island Communities",
+        "content": "A medical boat provides checkups to remote island villages. It departs from the coastal hospital (<loc_depot>) and visits islands (<locs>), each requiring <demand> kg of medical supplies. The boat\u2019s storage holds <capacity> kg, and due to fuel constraints, it can\u2019t travel more than <distance_limit> km per trip. Schedule routes so every island gets visited, and the boat returns safely without running out of fuel.",
+        "tags": [
+            "loc_depot",
+            "locs",
+            "demand",
+            "capacity",
+            "distance_limit"
+        ]
+    },
+    {
+        "title": "Urban Plant Nursery Delivery Service",
+        "content": "A plant nursery delivers potted trees to city parks (<locs>) from its greenhouse (<loc_depot>). Each park orders <demand> plants, and a truck can carry <capacity> plants at once. The fragile plants wilt if the trip takes longer than <time_limit> hours, so routes must be short. Design delivery paths to keep the plants healthy and minimize total distance driven.",
+        "tags": [
+            "locs",
+            "loc_depot",
+            "demand",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Mobile Blood Donation Van for Corporate Offices",
+        "content": "A blood bank operates a mobile donation van that visits corporate offices to collect blood donations. The van starts at the blood bank (<loc_depot>) and must visit offices at <loc_customer>. Each office has <demand> eligible donors, and the van can store up to <capacity> blood bags. Due to refrigeration limits, the van must return to the blood bank within <distance_limit> km to preserve the collected blood. Plan routes to maximize donations while ensuring no blood spoils due to late returns.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand",
+            "capacity",
+            "distance_limit"
+        ]
+    },
+    {
+        "title": "Rural Mobile Cinema for Remote Villages",
+        "content": "A nonprofit brings movie screenings to villages without theaters. The cinema truck starts at a storage depot (<loc_depot>) and visits villages at <loc_customer>. Each village has <demand> attendees, and the truck can carry only <capacity> seats/projectors per trip. The generator fuel lasts for <distance_limit> km before needing a depot refill. Design routes to entertain all villages while avoiding stranded equipment.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand",
+            "capacity",
+            "distance_limit"
+        ]
+    },
+    {
+        "title": "Urban Tree Watering During Drought",
+        "content": "A city hires trucks to water young street trees during a drought. The water refill station is at <loc_depot>, and trees are at <loc_customer>. Each tree needs <demand> liters, and a truck holds <capacity> liters. Trucks can\u2019t travel beyond <distance_limit> km per shift to meet labor rules. Create routes to hydrate all trees efficiently without overtime.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand",
+            "capacity",
+            "distance_limit"
+        ]
+    },
+    {
+        "title": "Mobile Compost Collection for Urban Apartments",
+        "content": "A green initiative collects kitchen compost from apartment buildings. The collection truck starts at a processing plant (<loc_depot>) and visits buildings at <loc_customer>. Each building has <demand> kg of compost, and the truck\u2019s capacity is <capacity> kg. To avoid odor complaints, the truck must return to unload within <distance_limit> km. Optimize routes to keep the city clean and residents happy.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand",
+            "capacity",
+            "distance_limit"
+        ]
+    },
+    {
+        "title": "Mobile Bicycle Repair for Touring Cyclists",
+        "content": "A support van assists cyclists on a long-distance trail. The van starts at a base (<loc_depot>) and stops at trail points (<loc_customer>). Each stop expects <demand> repairs, and the van carries <capacity> spare parts/tools. The van must return to base every <distance_limit> km for restocks. Plan routes to minimize stranded cyclists while conserving fuel.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand",
+            "capacity",
+            "distance_limit"
+        ]
+    },
+    {
+        "title": "Mobile Water Tanker Delivery to Drought-Stricken Villages",
+        "content": "A drought has hit several remote villages, and a water tanker truck must deliver clean drinking water from a central depot (<loc_depot>) to each village (<loc_customer>).  \nEach village needs <demand> liters of water, but the tanker can only carry <capacity> liters at a time.  \nThe truck must return to the depot to refill before running out of water, and due to poor road conditions, it can only travel <distance_limit> km per trip.  \nPlan the routes so every village gets enough water while minimizing the total distance traveled.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand",
+            "capacity",
+            "distance_limit"
+        ]
+    },
+    {
+        "title": "Urban Bicycle Courier for Restaurant Meal Deliveries",
+        "content": "A food delivery service uses bicycle couriers to pick up meals from a central kitchen (<loc_depot>) and deliver them to customers (<loc_customer>).  \nEach courier can carry up to <capacity> meals at once, and each customer has ordered <demand> meals.  \nSince couriers pedal manually, they can only travel <distance_limit> km before needing a break.  \nDesign routes so all meals are delivered on time while keeping the cyclists' workload fair.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand",
+            "distance_limit"
+        ]
+    },
+    {
+        "title": "Rural Mobile Banking for Cash-Strapped Communities",
+        "content": "A bank sends a mobile ATM van to remote villages where people can\u2019t easily access cash.  \nThe van starts at the bank (<loc_depot>) and visits villages (<loc_customer>), each needing <demand> cash withdrawals.  \nThe van can hold up to <capacity> in cash and must return to the bank before running out (max travel distance: <distance_limit> km).  \nPlan the route so all villages get service while minimizing fuel costs.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand",
+            "capacity",
+            "distance_limit"
+        ]
+    },
+    {
+        "title": "Floating Garbage Collection in a Canal City",
+        "content": "A cleanup crew uses small boats to collect trash from floating bins along city canals.  \nThey start at the waste facility (<loc_depot>) and visit bins (<loc_customer>), each with <demand> kg of trash.  \nEach boat can carry <capacity> kg before needing to unload, and due to fuel limits, they can only travel <distance_limit> km per trip.  \nOptimize the routes to keep the canals clean while reducing boat trips.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand",
+            "capacity",
+            "distance_limit"
+        ]
+    },
+    {
+        "title": "Mobile Pop-Up Shoe Repair for Busy Suburbs",
+        "content": "A shoe repair van travels through neighborhoods, offering quick fixes for worn-out shoes.  \nIt starts at the workshop (<loc_depot>) and visits pre-booked stops (<loc_customer>), each with <demand> pairs of shoes to repair.  \nThe van can process <capacity> pairs per trip and must return before dark (max travel distance: <distance_limit> km).  \nPlan the route so all customers get same-day service while keeping travel efficient.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand",
+            "capacity",
+            "distance_limit"
+        ]
+    }
+]

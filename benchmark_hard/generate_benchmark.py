@@ -3,21 +3,14 @@ import re
 import json
 import time
 from typing import List
-
-import numpy as np
 from tqdm import tqdm
 
 from LLM import LLM_api
-from envs import MTVRPGenerator, MTVRPEnv
-from seed_cvrp import cvrp_data_seed
-from seed_ovrp import ovrp_data_seed
-from seed_vrpb import vrpb_data_seed
-from seed_vrpmb import vrpmb_data_seed
-from seed_vrptw import vrptw_data_seed
 
 problem_type_dict = {
     'cvrp': "Capacitated Vehicle Routing Problem (CVRP)",
     'ovrp': "Open Vehicle Routing Problem (OVRP)",
+    'vrpl': "Distance Constrained Capacitated Vehicle Routing Problem (DCVRPB)",
     'vrpb': "Vehicle Routing Problem with Backhauls (VRPB)",
     'vrpmb': "Vehicle Routing Problem with Mixed Backhauls (VRPMB)",
     'vrptw': "Capacitated Vehicle Routing Problem with Time Windows (CVRPTW)",
@@ -26,14 +19,22 @@ problem_type_dict = {
 
 def generate_problem_desc(problem_type: str, generate_num: int = 5, another_title_list=None) -> str:
     if problem_type == 'cvrp':
+        from seed_cvrp import cvrp_data_seed
         problem_data_seed = cvrp_data_seed
     elif problem_type == 'ovrp':
+        from seed_ovrp import ovrp_data_seed
         problem_data_seed = ovrp_data_seed
+    elif problem_type == 'vrpl':
+        from seed_vrpl import vrpl_data_seed
+        problem_data_seed = vrpl_data_seed
     elif problem_type == 'vrpb':
+        from seed_vrpb import vrpb_data_seed
         problem_data_seed = vrpb_data_seed
     elif problem_type == 'vrpmb':
+        from seed_vrpmb import vrpmb_data_seed
         problem_data_seed = vrpmb_data_seed
     elif problem_type == 'vrptw':
+        from seed_vrptw import vrptw_data_seed
         problem_data_seed = vrptw_data_seed
     else:
         raise ValueError(f"Unknown problem_type: {problem_type}")

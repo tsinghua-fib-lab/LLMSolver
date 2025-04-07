@@ -55,6 +55,10 @@ def get_user_template_data(data_template_dict: dict, tags: list) -> dict:
         elif tag == 'locs_time_windows':
             user_template_dict = np.hstack(
                 [np.array(data_template_dict['logs']), np.array(data_template_dict['time_windows'])]).tolist()
+        elif tag == 'distance_limit':
+            user_template_dict[tag] = data_template_dict['distance_limit']
+        elif tag == 'time_limit':
+            user_template_dict[tag] = [data_template_dict['distance_limit'][0] / data_template_dict['speed'][0]]
         else:
             raise NotImplementedError(f"Tag {tag} not implemented")
     return user_template_dict

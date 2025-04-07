@@ -4,14 +4,14 @@ vrpl_data_seed = [
     {
         "title": "Unmanned Aerial Vehicle Delivery Problem",
         "desc_split": (
-                "A company needs to use drones for parcel delivery. Specifically, given a set of delivery locations relative to the launch site.\n" +\
-                "the coordinates of the start point is <loc_depot> and the delivery points are provided as <locs>.\n" +\
-                "The drone can carry a maximum weight of <max_weight> kg for items, and the weight of items to be delivered to each location is <loc_weight> kg.\n" +\
-                "Each drone has a speed of 2 km/h and a maximum endurance time of 1.37 hours.\n" +\
-                "Before the battery is depleted, each drone must return to the launch site to recharge.\n" +\
-                "Please plan the flight paths of the drones such that:\n" +\
-                "1. Each customer receives their parcel.\n" +\
-                "2. Each drone can safely return to the launch site.\n" +\
+                "A company needs to use drones for parcel delivery. Specifically, given a set of delivery locations relative to the launch site.\n" +
+                "the coordinates of the start point is <loc_depot> and the delivery points are provided as <locs>.\n" +
+                "The drone can carry a maximum weight of <capacity> kg for items, and the weight of items to be delivered to each location is <demand> kg.\n" +
+                "Each drone has a speed of <speed> km/h and a maximum endurance time of <time_limit> hours.\n" +
+                "Before the battery is depleted, each drone must return to the launch site to recharge.\n" +
+                "Please plan the flight paths of the drones such that:\n" +
+                "1. Each customer receives their parcel.\n" +
+                "2. Each drone can safely return to the launch site.\n" +
                 "3. The total flight distance of the drones is minimized."
         ),
         "data_template": {
@@ -67,22 +67,22 @@ vrpl_data_seed = [
                     [0.2080, 0.9617],
                     [0.7351, 0.2070]],       
             "speed": [2],
-            "max_flight_time": [1.37],
-            "loc_weight": [0.1000, 0.0667, 0.1000, 0.1333, 0.1000, 0.1667, 0.1333, 0.1333, 0.1667,
+            "time_limit": [1.37],
+            "demand": [0.1000, 0.0667, 0.1000, 0.1333, 0.1000, 0.1667, 0.1333, 0.1333, 0.1667,
                                 0.1667, 0.0667, 0.1333, 0.0333, 0.3000, 0.2667, 0.1667, 0.2667, 0.0333,
                                 0.2333, 0.1667],
-            "max_weight": [30],
+            "capacity": [30],
         },
         "label": "vrpl",
     },
     {
         "title": "Optimizing Research Team Routes for Polar Biological Sampling in Antarctica with Distance and Time Constraints",
         "desc_split": (
-                "Our Antarctic scientific research team needs to conduct polar biological sampling tasks at multiple locations. The coordinates of base camp and the sampling task locations are <locs>.\n" +\
-                "The research team can dispatch multiple research teams, each advancing at a speed of <speed> kilometers per day, but they only have enough food to support them for <max_days> days.\n" +\
-                "They must return to the base camp before the food runs out.\n" +\
-                "At the same time, each sampling location needs to sample <sample_weight> kg of samples, but a team can only carry sample boxes with a capacity of <capacity> kg.\n" +\
-                "Please plan the number of research teams and routes to ensure that each team can safely return to the base camp, " +\
+                "Our Antarctic scientific research team needs to conduct polar biological sampling tasks at multiple locations. The coordinates of base camp and the sampling task locations are <locs>.\n" +
+                "The research team can dispatch multiple research teams, each advancing at a speed of <speed> kilometers per day, but they only have enough food to support them for <time_limit> days.\n" +
+                "They must return to the base camp before the food runs out.\n" +
+                "At the same time, each sampling location needs to sample <demand> kg of samples, but a team can only carry sample boxes with a capacity of <capacity> kg.\n" +
+                "Please plan the number of research teams and routes to ensure that each team can safely return to the base camp, " +
                 "that each sampling location is sampled by at least one team, and to minimize the total travel distance for all teams."
         ),
         "data_template": {
@@ -116,7 +116,7 @@ vrpl_data_seed = [
             "num_depot": [1],
         },
         "user_template": {
-            "corrdinates": [[0.8004, 0.6360],
+            "locs": [[0.8004, 0.6360],
                     [0.6770, 0.6895],
                     [0.7237, 0.4662],
                     [0.5300, 0.3197],
@@ -137,22 +137,22 @@ vrpl_data_seed = [
                     [0.2724, 0.8253],
                     [0.7451, 0.6034],
                     [0.4603, 0.7962]],
-            "sample_weight": [0.1000, 0.2333, 0.2667, 0.2667, 0.0333, 0.2667, 0.3000, 0.0333, 0.1667,
+            "demand": [0.1000, 0.2333, 0.2667, 0.2667, 0.0333, 0.2667, 0.3000, 0.0333, 0.1667,
                                 0.1333, 0.2667, 0.2667, 0.2667, 0.1667, 0.1000, 0.0333, 0.3000, 0.1667,
                                 0.0333, 0.2000], 
             "capacity": [10],
             "speed": [0.5],
-            "max_days": [5],
+            "time_limit": [5],
         },
         "label": "vrpl",
     },
     {
         "title": "Designing an Irrigation System for a Large Farm",
         "desc_split": (
-            "You need to design an irrigation system for a large farm. The system draws water from a well and distributes it to various fields through pipes.\n" +\
-            "For maintenance purposes, each pipe must form a loop, starting from the well and returning to it, with a maximum length of <max_length> per loop.\n" +\
-            "The well is located at <loc_well>, and the fields requiring irrigation are located at <loc_lands>.\n" +\
-            "A single pipeline can irrigate a maximum area of <max_area>, with each field having an area of <areas>.\n" +\
+            "You need to design an irrigation system for a large farm. The system draws water from a well and distributes it to various fields through pipes.\n" +
+            "For maintenance purposes, each pipe must form a loop, starting from the well and returning to it, with a maximum length of <distance_limit> per loop.\n" +
+            "The well is located at <loc_depot>, and the fields requiring irrigation are located at <loc_customer>.\n" +
+            "A single pipeline can irrigate a maximum area of <capacity>, with each field having an area of <demand>.\n" +
             "Please design the irrigation system to ensure that each field has access to water while minimizing the total length of all pipes."
         ),
         "data_template": {
@@ -185,8 +185,8 @@ vrpl_data_seed = [
             "num_depot": [1],
         },
         "user_template": {
-            "loc_well": [[0.1992, 0.1014]],
-            "loc_lands": [[0.1345, 0.8002],
+            "loc_depot": [[0.1992, 0.1014]],
+            "loc_customer": [[0.1345, 0.8002],
                         [0.2649, 0.3050],
                         [0.9622, 0.0897],
                         [0.2558, 0.3797],
@@ -206,9 +206,9 @@ vrpl_data_seed = [
                         [0.0357, 0.0122],
                         [0.9160, 0.0274],
                         [0.3167, 0.1229]],
-            "max_length": [2.5395],
-            "max_area": [30],
-            "areas": [0.1333, 0.1000, 0.1333, 0.2000, 0.0667, 0.0333, 0.2667, 0.1000, 0.2667,
+            "distance_limit": [2.5395],
+            "capacity": [30],
+            "demand": [0.1333, 0.1000, 0.1333, 0.2000, 0.0667, 0.0333, 0.2667, 0.1000, 0.2667,
         0.0667, 0.1000, 0.3000, 0.3000, 0.2667, 0.1667, 0.3000, 0.3000, 0.2667,
         0.0667, 0.0333],
         },
@@ -217,8 +217,8 @@ vrpl_data_seed = [
     {
         "title": "Power Company Signal Tower Inspection",
         "desc_split": (
-                "Due to rain and snow, a power company must inspect several signal towers potentially impacted by the weather. Workers will drive from the depot <loc_depot> to inspect the towers, located at <locs>.\n" +
-                "The maintenance of a signal tower requires <equipment_num> set of maintenance equipment, and a vehicle can carry a maximum of <capacity> sets of maintenance equipment.\n" +
+                "Due to rain and snow, a power company must inspect several signal towers potentially impacted by the weather. Workers will drive from the depot <loc_depot> to inspect the towers, located at <loc_customer>.\n" +
+                "The maintenance of a signal tower requires <single_demand> set of maintenance equipment, and a vehicle can carry a maximum of <capacity> sets of maintenance equipment.\n" +
                 "Since the towers are in mountainous areas with no gas stations along the route, workers must return to the depot before running out of fuel.\n" +
                 "A fully fueled service vehicle can travel <distance_limit> km.\n" +
                 "Please plan a route for the power company to ensure all signal towers are inspected and the workers can safely return to the depot."
@@ -252,7 +252,7 @@ vrpl_data_seed = [
         },
         "user_template": {
             "loc_depot": [[0.1419, 0.1857]],
-            "loc_tower": [[0.1926, 0.5126],
+            "loc_customer": [[0.1926, 0.5126],
                     [0.7123, 0.1064],
                     [0.9827, 0.4145],
                     [0.0544, 0.7004],
@@ -272,8 +272,8 @@ vrpl_data_seed = [
                     [0.6794, 0.4672],
                     [0.7200, 0.5891],
                     [0.2699, 0.5819]],
-            "max_distance": [2.2027],
-            "equipment_num": [1],
+            "distance_limit": [2.2027],
+            "single_demand": [1],
             "capacity": [30],
         },
         "label": "vrpl",
@@ -282,8 +282,9 @@ vrpl_data_seed = [
         "title": "School Bus Route Optimization",
         "desc_split": (    
             "You need to plan a route for a school bus to drop off all students at their homes and return to the school without refueling.\n" +
-            "The school is located at <school>, and the students' homes are located at <homes>.\n" +
-            "The school bus has a maximum range of <max_distance> km when fully fueled.\n" +
+            "The school is located at <loc_depot>, and the students' homes are located at <loc_customer>.\n" +
+            "The school bus has a capacity for up to <capacity> students and a maximum range of <distance_limit> km when fully fueled."
+            "The school bus has a maximum range of <distance_limit> km when fully fueled.\n" +
             "Please design a route to ensure all students are delivered home and the bus returns to the school within the fuel limit."
         ),
         "data_template": {
@@ -309,14 +310,13 @@ vrpl_data_seed = [
                     [0.7521, 0.7470],
                     [0.0263, 0.1879]],
             "demand_linehaul": [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0],
-            "capacity": [30],
+            "capacity": [10],
             "distance_limit": [2.2921],
             "num_depot": [1],
         },
         "user_template": {
-            "num_students": [20],
-            "school": [[0.0704, 0.4355]],
-            "homes": [[0.5380, 0.2166],
+            "loc_depot": [[0.0704, 0.4355]],
+            "loc_customer": [[0.5380, 0.2166],
                     [0.6099, 0.3619],
                     [0.4306, 0.6357],
                     [0.6129, 0.0445],
@@ -336,8 +336,8 @@ vrpl_data_seed = [
                     [0.8934, 0.0847],
                     [0.7521, 0.7470],
                     [0.0263, 0.1879]],
-            "max_distance": [2.2921],
-            "max_speed": [120],
+            "capacity": [10],
+            "distance_limit": [2.2921],
         },
         "label": "vrpl"
     }
