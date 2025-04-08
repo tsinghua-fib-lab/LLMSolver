@@ -4,26 +4,31 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from tensordict.tensordict import TensorDict
 import torch
 import time
-from LLM import LLM_api
+from recognition.LLM import LLM_api
 from collections import defaultdict
 
 
 class Agent:
     """Base agent class: Encapsulates the common LLM calling logic."""
-    def __init__(self, llm_api, think = False):
+    def __init__(self, llm_api):
         """
         :param llm_api: An instance of LLM_api
         """
         self.llm_api = llm_api
-        self.think = think
 
-    def get_result(self, text: str) -> str:
-        if self.think:
-            result = text.split('</think>')[1].strip()
-        else:
-            result = text
-        
-        return result
+    def get_result(self, text):
+        """
+        Parses the LLM output to extract the JSON result.
+        :param text: The LLM output
+        :return: A dictionary containing the parsed result
+        """
+        try:
+            json_format = eval(text)
+            result = json_format.get('result', None)
+            reason = json_format.get('reason', None)
+            return (result, reason)
+        except Exception as e:
+            return (f"<Error> parsing JSON: {e}", text)
 
     def run(self, *args, **kwargs):
         """Subclasses must implement the run method."""
@@ -35,8 +40,7 @@ class Classifier(Agent):
     A VRP problem classifier agent: 
     Given a VRP problem description in natural language, 
     """
-    
-    def run(self, problem_desc: str) -> str:
+    def run(self, problem_desc: str, reason=None) -> str:
         """
         :param problem_desc: The user's natural language VRP problem description
         :return: A string, one of [CVRP, OVRP, VRPB, VRPL, VRPTW, OVRPTW, OVRPB, OVRPL, VRPBL, VRPBTW, VRPLTW, OVRPBL, OVRPBTW, OVRPLTW, VRPBLTW, OVRPBLTW]
@@ -44,20 +48,28 @@ class Classifier(Agent):
         prompt = f"You are a VRP problem judger agent. The user has provided the following VRP problem description:\n"
         prompt += f"{problem_desc}\n"
         # prompt += "You only need to return one category from [cvrp, ovrp, vrpb, vrpl, vrptw].\n"
-        prompt += "You only need to return one category from the following list:\n"
+        prompt += "You need to choose one category for the description from the following list:\n"
         prompt += "[CVRP, OVRP, VRPB, VRPL, VRPTW]\n"
         prompt += "Where 'C' represents Capacity, which means the vehicle has a capacity limit."
         prompt += " 'O' represents Open Route, which means routes can be open."
-        prompt += " 'B' represents Backhaul, which means the vehicle can pick up and deliver goods."
-        prompt += " 'L' represents Distance or Duration Limits."
+        prompt += " 'B' represents Backhaul or Linehaul demand."
+        prompt += " 'L' represents Distance Limits."
         prompt += " 'TW' represents Time Window, which means the vehicle has a time window to visit each customer.\n"
-        prompt += "Return nothing else."
+        prompt += "Your output should be in json format as follows:\n"
+        prompt += "{\n"
+        prompt += "    'reason': <string>,\n"
+        prompt += "    'result': <string>\n"
+        prompt += "}\n"
+        prompt += "Where 'reason' is a string explaining why you chose this category, and 'result' must be one of the elements in the list.\n"
+        # prompt += "Return nothing else."
 
         text = self.llm_api.get_text(content=prompt)
         result = self.get_result(text)
-
-        print('Classifier:', result)
-        return result.strip()
+        if isinstance(result, tuple):
+            choice, reason = result
+            return (choice.strip(), reason.strip())
+        else:
+            return f"<Error> {result}"
 
 
 class Checker(Agent):
@@ -80,32 +92,33 @@ class Checker(Agent):
         prompt = f"You are a VRP problem checker agent.\n"
         prompt += f"User's description: {problem_desc}\n"
         prompt += f"Classifier's classification: {classification}\n"
-        prompt += "If you believe this classification is correct, return only: 'CORRECT', otherwise return only: 'INCORRECT: <reason>'."
+        prompt += f"Candidate categories: [CVRP, OVRP, VRPB, VRPL, VRPTW]\n"
+        prompt += "If you believe this classification is correct, 1 if correct, 0 if incorrect.\n"
         prompt += 'Below are the letters that may appear in the VRP category and their corresponding meanings:\n'
-        prompt += "C: Capacity, O: Open Route, B: Backhaul, L: Distance Limit, TW: Time Window\n"
-        # prompt += " 'O' represents Open Route, which means routes can be open."
-        # prompt += " 'B' represents both Backhaul or Linehaul demand."
-        # prompt += " 'L' represents Distance or Duration Limits."
-        # prompt += " 'TW' represents Time Window, which means the vehicle has a time window to visit each customer.\n"
-        prompt += "Do not add any additional text beyond these formats."
+        prompt += " 'C' represents Capacity, which means the vehicle has a capacity limit."
+        prompt += " 'O' represents Open Route, which means routes can be open."
+        prompt += " 'B' represents Backhaul or Linehaul demand."
+        prompt += " 'L' represents Distance Limits."
+        prompt += " 'TW' represents Time Window, which means the vehicle has a time window to visit each customer.\n"
+        prompt += "Your output should be in json format as follows:\n"
+        prompt += "{\n"
+        prompt += "    'reason': <string>,\n"
+        prompt += "    'result': <string>\n"
+        prompt += "}\n"
+        prompt += "Where 'reason' is a string explaining why the classification is correct or incorrect, and 'result' is a string that should be either '1' or '0'.\n"
         
         text = self.llm_api.get_text(content=prompt).strip()
-        # print('Checker:', text)
+        print(f"[Checker] LLM response: {text}")
         result = self.get_result(text)
-        print('Checker:', result)
 
-        if result.startswith("CORRECT"):
-            return True, ""
-        elif result.startswith("INCORRECT"):
-            # Parse the reason after "INCORRECT:"
-            if ":" in result:
-                reason = result.split(":", 1)[1].strip()
-                return False, reason
-            else:
-                return False, "No reason provided"
+        if isinstance(result, tuple):
+            correct, reason = result
+            if correct == "1":
+                return (True, reason.strip())
+            elif correct == "0":
+                return (False, reason.strip())
         else:
-            # If the response does not follow the specified format, treat it as incorrect
-            return False, f"Invalid output format: {result}"
+            return f"<Error>: {result}"
 
 class Extractor(Agent):
     """
@@ -113,7 +126,7 @@ class Extractor(Agent):
     Given a natural language VRP problem description and a prompt to extract specific data,
     it processes the description and extracts relevant information in a structured format.
     """
-    def run(self, problem_desc: str) -> dict:
+    def run(self, problem_desc: str) -> TensorDict:
         """
         :param problem_desc: The user's natural language VRP problem description
         :param prompt: The prompt to guide the extraction process
@@ -122,53 +135,58 @@ class Extractor(Agent):
         # Create a structured prompt to instruct the LLM on what data to extract
         prompt = f"You are a VRP data extractor agent.\n"
         prompt += f"The user has provided the following VRP problem description:\n{problem_desc}\n"
-        prompt += f"Based on this description, extract the following data in a structured format (similar to a JSON or dictionary):\n"
-        
-        prompt += "Extract the following keys, and ensure that any missing key is set to its default value (e.g., 0):\n"
+        prompt += f"Based on this description, extract the following data in a json format as follows :\n"
         prompt += "{\n"
-        prompt += "    'locs': <list of location coordinates, length should be equal to the number of locations or depots>,\n"
+        prompt += "    'locs': <list of location coordinates, length should be equal to the number of locations>,\n"
         prompt += "    'demand_backhaul': <list of demand values for backhaul, length should equal to the number of locations - 1>,\n"
         prompt += "    'demand_linehaul': <list of demand values for linehaul, length should equal to the number of locations - 1>,\n"
         prompt += "    'backhaul_class': <list with a single value, [1] for classic backhaul and [2] for mixed backhaul. Default value is [1]>,\n"
-        prompt += "    'distance_limit': <list with a single value, or a default Infinity if not provided>,\n"
-        prompt += "    'time_windows': <list of time windows, length should match number of locations, default value [0, Infinity] if not specified>,\n"
+        prompt += "    'distance_limit': <list with a single value, or a default 'inf if not provided>,\n"
+        prompt += "    'time_windows': <list of time windows, length should match number of locations, default value [0, 'inf'] if not specified>,\n"
         prompt += "    'service_time': <list of service times, length should match number of locations, default value 0 if not specified>,\n"
         prompt += "    'vehicle_capacity': <list with a single value for vehicle capacity, or default 1 if not specified>,\n"
         prompt += "    'capacity_original': <list with a single value for the original capacity, or default 30 if not specified>,\n"
         prompt += "    'open_route': <list with a single value, 1 if open routes are allowed, otherwise 0. Default value is False if not specified>,\n"
         prompt += "    'speed': <list with a single value for vehicle speed, or default 1 if not specified>\n"
         prompt += "}\n"
-        prompt += "Provide only the extracted data in the above format without any additional explanations.\n"
+        prompt += "Your output should be in json format as follows:\n"
+        prompt += "{\n"
+        prompt += "    'reason': <string>,\n"
+        prompt += "    'result': <json>\n"
+        prompt += "}\n"
+        prompt += "Where 'reason' is a string explaining the extracted data, and 'result' should be the extracted data in JSON format.\n"
+
         # Get the extracted text from LLM
         text = self.llm_api.get_text(content=prompt)
+        print(f"[Extractor] LLM response: {text}")
         result = self.get_result(text)
 
-        # Parse the extracted data
-        try:
-            extracted_dict = eval(result)  # This should be a valid Python dictionary
-            td_data =  TensorDict(
-            {
-                # normalize and add 1 dim at the start 
-                'locs': (torch.tensor(extracted_dict['locs'])).float().unsqueeze(0),
-                'demand_backhaul': torch.tensor(extracted_dict['demand_backhaul']).float().unsqueeze(0),
-                'demand_linehaul': torch.tensor(extracted_dict['demand_linehaul']).float().unsqueeze(0),
-                'backhaul_class': torch.tensor(extracted_dict['backhaul_class']).float().unsqueeze(0),
-                'distance_limit': torch.tensor(extracted_dict['distance_limit']).float().unsqueeze(0),
-                'time_windows': torch.tensor(extracted_dict['time_windows']).float().unsqueeze(0),
-                'service_time': torch.tensor(extracted_dict['service_time']).float().unsqueeze(0),
-                'vehicle_capacity': torch.tensor(extracted_dict['vehicle_capacity']).float().unsqueeze(0),
-                'capacity_original': torch.tensor(extracted_dict['capacity_original']).float().unsqueeze(0),
-                'open_route': torch.tensor(extracted_dict['open_route']).bool().unsqueeze(0),
-                'speed': torch.tensor(extracted_dict['speed']).float().unsqueeze(0)
-            },
-            batch_size = 1
-        )
-            print('Extractor:', td_data)
-            return td_data
-        
-        except Exception as e:
-            print(f"Error parsing extracted data: {e}")
-            return result
+        if isinstance(result, tuple):
+            extracted_dict, reason = result
+            try:
+                print(extracted_dict)
+                td_data =  TensorDict(
+                {
+                    # normalize and add 1 dim at the start 
+                    'locs': (torch.tensor(extracted_dict['locs'])).float().unsqueeze(0),
+                    'demand_backhaul': torch.tensor(extracted_dict['demand_backhaul']).float().unsqueeze(0),
+                    'demand_linehaul': torch.tensor(extracted_dict['demand_linehaul']).float().unsqueeze(0),
+                    'backhaul_class': torch.tensor(extracted_dict['backhaul_class']).float().unsqueeze(0),
+                    'distance_limit': torch.tensor(extracted_dict['distance_limit']).float().unsqueeze(0),
+                    'time_windows': torch.tensor(extracted_dict['time_windows']).float().unsqueeze(0),
+                    'service_time': torch.tensor(extracted_dict['service_time']).float().unsqueeze(0),
+                    'vehicle_capacity': torch.tensor(extracted_dict['vehicle_capacity']).float().unsqueeze(0),
+                    'capacity_original': torch.tensor(extracted_dict['capacity_original']).float().unsqueeze(0),
+                    'open_route': torch.tensor(extracted_dict['open_route']).bool().unsqueeze(0),
+                    'speed': torch.tensor(extracted_dict['speed']).float().unsqueeze(0)
+                },
+                batch_size = 1
+            )
+                return (td_data, reason.strip())
+            except Exception as e:
+                return f"<Error> parsing JSON for td: {e}"
+        else:
+            return f"<Error>: {result}"
 
 def main():
     """

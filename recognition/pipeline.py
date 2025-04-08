@@ -17,9 +17,9 @@ llm = LLM_api(model="deepseek-reasoner", key_idx=0)
 think_flag = False
 
 # Initialize the Classifier and Checker
-classifier = Classifier(llm, think=think_flag)
-checker = Checker(llm, think=think_flag)
-extractor = Extractor(llm, think=think_flag)
+classifier = Classifier(llm)
+checker = Checker(llm)
+extractor = Extractor(llm)
 
 # # Load the dataset of VRP problem descriptions and their labels
 # def load_dataset(filename="VRP_20250312162103.json"):

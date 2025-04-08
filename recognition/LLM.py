@@ -3,7 +3,7 @@ import time
 import httpx
 import asyncio
 from openai import OpenAI, AzureOpenAI
-from API_key import api_key_dict
+from recognition.API_key import api_key_dict
 
 class OverloadError(Exception):
     pass
@@ -95,7 +95,7 @@ class LLM_api:
     def get_response(self):
         """Handles API requests with retry mechanism"""
         max_try = 10
-        sleep_time = 1
+        sleep_time = 5
         max_sleep = 20
 
         for try_num in range(max_try):
@@ -165,7 +165,6 @@ class LLM_api:
                         return {"choices": [{"message": {"content": content}}]}
 
             except requests.RequestException as e:
-                print(response.json())
                 print(f"API request failed (attempt {try_num + 1}/{max_try}): {e}")
             except KeyError as e:
                 print(f"Unexpected API response structure: {e}")

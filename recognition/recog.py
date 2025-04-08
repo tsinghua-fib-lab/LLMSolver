@@ -1,5 +1,5 @@
 import json
-from zgc.llm_solver.LLMSolver.recognition.agent import Classifier, Checker
+from agent import Classifier, Checker
 from LLM import LLM_api
 import time
 
