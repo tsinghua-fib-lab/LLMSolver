@@ -1,0 +1,996 @@
+[
+    {
+        "title": "Urban Garden Supply Delivery",
+        "content": "A company specializing in urban agriculture operates from multiple depots (<loc_depot>) to supply compost, seeds, and tools to community gardens and urban farms (<loc_customer>). Each garden requires a specific amount of materials (<demand>), and delivery trucks have a maximum carrying capacity of <capacity> kg. The goal is to design routes that minimize total travel distance while ensuring no truck exceeds its load limit. Drivers can conclude their routes at the final delivery location, streamlining logistics and reducing operational costs.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Automotive Parts Regional Distribution",
+        "content": "An automotive supplier with multiple warehouses (<loc_depot>) across a region must deliver engine components and spare parts to assembly plants (<loc_customer>). Each plant\u2019s order varies in size (<demand>), and delivery vehicles are limited to <capacity> units of cargo. The challenge is to strategically assign plants to depots, plan efficient paths that avoid overloading trucks, and allow drivers to terminate routes at the last stop, eliminating redundant return journeys.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Rural Healthcare Equipment Deployment",
+        "content": "A nonprofit organization distributes medical equipment (e.g., oxygen concentrators, diagnostic kits) to remote healthcare clinics (<loc_customer>) using trucks dispatched from regional depots (<loc_depot>). Each clinic\u2019s equipment needs (<demand>) must be met, but rugged terrain restricts vehicle capacity to <capacity> kg. Routes must prioritize accessibility and minimize travel distance while ensuring no vehicle is overloaded. Trucks end their routes at the final clinic, maximizing resource allocation efficiency.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "demand",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Event Catering Supplies Network",
+        "content": "A catering company manages large-scale events by delivering supplies like tables, chairs, and linens to venues (<loc_customer>) from multiple distribution hubs (<loc_depot>). Each venue\u2019s order varies in volume (<demand>), and delivery trucks are constrained by <capacity> kg. The task is to optimize routes from the nearest depot, ensure all supplies are delivered without exceeding truck limits, and allow drivers to finish at the last venue, reducing fuel waste and improving on-time delivery.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "demand",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Public Library Bookmobile Services",
+        "content": "A municipal library system operates bookmobiles from several depots (<loc_depot>) to deliver books and educational materials to underserved neighborhoods (<loc_customer>). Each stop requires a specific number of items (<demand>), and bookmobiles can carry up to <capacity> books. The goal is to assign routes that minimize travel distance, prevent overloading, and let drivers conclude their shifts at the final delivery point, maximizing community access while cutting operational expenses.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Regional Fresh Produce Delivery Network",
+        "content": "A network of regional warehouses (<loc_depot>) supplies fresh fruits and vegetables to local farmers' markets and grocery stores (<loc_customer>). Each truck has a maximum load capacity of <capacity> kilograms. Markets require varying amounts of produce (<demand>). Routes must be planned so that trucks start at their assigned depot, deliver to all assigned customers without exceeding capacity, and end their route at the final market. The goal is to minimize total travel distance while ensuring every market receives its required supply.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "Appliance Retailer's Home Delivery Service",
+        "content": "An appliance retailer operates from multiple distribution centers (<loc_depot>) across the region to deliver large home appliances (e.g., refrigerators, washing machines) to customer homes (<loc_customer>). Each delivery van can carry up to <capacity> cubic meters of appliances. Customers have specific order volumes (<demand>). Routes must originate from a depot, visit all assigned customer locations in an efficient sequence, and conclude at the last delivery stop without returning to the depot. The challenge is to balance depot workloads, avoid overloading any vehicle, and reduce overall travel costs.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "Utility Infrastructure Supply Chains",
+        "content": "Electric utility companies must deliver utility poles, transformers, and wiring supplies from regional depots (<loc_depot>) to construction sites (<loc_customer>) for grid expansion projects. Each truck is limited to a cargo capacity of <capacity> tons. Sites require specific quantities of materials (<demand>). Routes must begin at the assigned depot, traverse to all designated sites, and terminate at the final site. The objective is to optimize route efficiency while ensuring no vehicle exceeds its weight limit and all infrastructure needs are met.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "Solar Panel Installation Kit Delivery",
+        "content": "A renewable energy firm distributes solar panel kits and installation hardware from multiple warehouses (<loc_depot>) to remote off-grid locations (<loc_customer>). Each delivery truck can carry up to <capacity> solar panels. Customers specify the number of panels needed (<demand>). Routes must start at a depot, deliver to each assigned site in sequence, and end at the last installation location. The company aims to minimize transportation costs and ensure every site receives its full order without overloading any vehicle.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "School District Facility Maintenance Supplies",
+        "content": "A school district manages several regional storage facilities (<loc_depot>) to supply cleaning chemicals, repair tools, and maintenance equipment to schools and campuses (<loc_customer>). Each delivery truck has a maximum load capacity of <capacity> liters/kilos. Schools report varying supply needs (<demand>). Routes must originate from a depot, service all assigned schools in an optimized path, and conclude at the final destination. The goal is to efficiently allocate resources, prevent vehicle overloads, and reduce fuel consumption across all routes.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "Construction Material Delivery Network",
+        "content": "A construction company operates multiple regional depots (`<loc_depot>`) to supply building materials like steel beams, cement, and lumber to active construction sites (`<loc_customer>`). Each vehicle has a strict weight capacity (`<capacity>` tons), and each site requires specific quantities (`<demand>`). Routes must originate from assigned depots but terminate at the final delivery point (open routes), ensuring efficient material distribution without overloading trucks. The goal is to minimize total travel distance while balancing workload across depots and adhering to load limits.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "Industrial Equipment Redistribution",
+        "content": "A multinational manufacturer uses `<loc_depot>` warehouses to distribute heavy machinery parts to industrial factories (`<loc_customer>`). Each truck can carry up to `<capacity>` kilograms of equipment, and factories demand varying `<demand>` amounts. Routes must originate from designated depots but end at the last customer site (open routes). The challenge is to optimize depot assignments and vehicle paths to reduce fuel costs while ensuring no truck exceeds its capacity, even when transporting bulky or awkwardly shaped components.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "Disaster Relief Shelter Supplies Deployment",
+        "content": "During a crisis, relief organizations coordinate `<loc_depot>` warehouses to deliver emergency shelter kits, generators, and medical tents (`<demand>` units) to disaster-affected zones (`<loc_customer>`). Vehicles have limited cargo space (`<capacity>` cubic meters) and must prioritize rapid delivery to all locations. Routes are open-ended (no return to depot), allowing teams to remain on-site for immediate support. The task is to plan efficient multi-depot routes that maximize coverage while avoiding overloading any vehicle.",
+        "tags": [
+            "loc_depot",
+            "demand",
+            "loc_customer",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Bulk Agricultural Inputs Distribution",
+        "content": "An agribusiness operates `<loc_depot>` distribution centers to supply fertilizers, seeds, and irrigation tools to farming communities (`<loc_customer>`). Each truck can carry up to `<capacity>` tons of bulk materials, and farms require specific `<demand>` quantities. Routes start at assigned depots but end at the final delivery point (open routes). The goal is to minimize total travel distance while ensuring no vehicle overloads, even when transporting heavy or voluminous supplies to remote rural locations.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "Outdoor Event Infrastructure Deployment",
+        "content": "A live event production company uses `<loc_depot>` regional hubs to deliver tents, stages, lighting rigs, and audio equipment (`<demand>` units) to temporary venues (`<loc_customer>`). Vehicles have weight and space constraints (`<capacity>`), and each event site requires precise equipment setups. Routes must originate from assigned depots but conclude at the last venue (open routes). The challenge is to balance depot assignments, avoid overloading trucks, and optimize travel paths to ensure all events receive their infrastructure on time with minimal logistical waste.",
+        "tags": [
+            "loc_depot",
+            "demand",
+            "loc_customer",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Regional Retail Store Restocking Network",
+        "content": "A large retail chain operates multiple regional distribution centers (`<loc_depot>`) to supply inventory to stores (`<loc_customer>`). Each store requires specific quantities of goods (`<demand>`), and delivery trucks (`<capacity>`) must be loaded without exceeding their capacity. The challenge is to design open routes that start at depots, deliver to all assigned stores, and end at the final stop, minimizing total travel distance while ensuring every store receives its full order.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Construction Equipment Deployment for Temporary Sites",
+        "content": "A construction firm uses several depots (`<loc_depot>`) to dispatch trucks carrying heavy machinery and tools (`<demand>`) to temporary job sites (`<loc_customer>`). Each vehicle has a weight limit (`<capacity>`), and equipment must be delivered directly to remote locations without returning to the depot. Routes must balance depot assignments and capacity constraints to minimize fuel costs while ensuring all sites receive their required equipment.",
+        "tags": [
+            "loc_depot",
+            "demand",
+            "loc_customer",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Livestock Feed Distribution to Rural Farms",
+        "content": "An agricultural cooperative manages multiple feed depots (`<loc_depot>`) to supply livestock farms (`<loc_customer>`) in remote rural areas. Each farm\u2019s feed requirement (`<demand>`) varies, and delivery trucks (`<capacity>`) must traverse rugged terrain without overloading. The goal is to plan open routes originating from depots, terminating at the last farm, and minimizing travel time while fulfilling all feed orders efficiently.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Festival Stage and Equipment Delivery Network",
+        "content": "An events company coordinates `<loc_depot>` warehouses to deliver stage equipment, lighting, and sound systems (`<demand>`) to festival venues (`<loc_customer>`). Each truck (`<capacity>`) must transport bulky gear to scattered locations, with routes starting at depots and ending at the final venue. The challenge is to optimize delivery paths to reduce transportation costs, avoid vehicle overloads, and ensure all equipment arrives on time for setup.",
+        "tags": [
+            "loc_depot",
+            "demand",
+            "loc_customer",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Medical Oxygen Cylinder Distribution During Health Crises",
+        "content": "During a public health emergency, hospitals and clinics (`<loc_customer>`) urgently require oxygen cylinders (`<demand>`). Medical supply depots (`<loc_depot>`) dispatch trucks (`<capacity>`) to deliver cylinders to high-need areas. Routes must originate from depots, terminate at the last delivery point, and prioritize rapid deployment while adhering to vehicle capacity limits. The goal is to maximize coverage and minimize travel distance to save critical resources.",
+        "tags": [
+            "loc_customer",
+            "demand",
+            "loc_depot",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Modular Classroom Delivery to Remote Schools",
+        "content": "A national education initiative aims to provide temporary classrooms to underserved rural schools. The program operates from **multiple regional warehouses** (`<loc_depot>`) across the country. Each truck departing these depots has a **maximum carrying capacity** (`<capacity>`) for pre-assembled modular units. Schools in remote areas (`<loc_customer>`) require a specific number of classrooms (`<demand>`), and routes must be designed so that trucks do not exceed their load limits. Since classrooms are permanently installed at their final destination, vehicles do not return to depots after completing deliveries, minimizing logistical overhead. The goal is to efficiently allocate depots to schools while ensuring all modular units are delivered within capacity constraints.",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "loc_customer",
+            "demand"
+        ]
+    },
+    {
+        "title": "Temporary Event Staging Equipment Deployment",
+        "content": "A global events company must deploy modular staging equipment (e.g., stages, lighting rigs, and sound systems) to **multiple outdoor venues** (`<loc_customer>`) for simultaneous festivals. The company uses **regional distribution hubs** (`<loc_depot>`) to stage equipment deliveries. Each vehicle has a **weight capacity** (`<capacity>`) and must transport equipment bundles (`<demand>`) that match venue requirements. Routes are open-ended, as trucks unload all equipment at the final venue and terminate there. The challenge is to balance depot assignments, avoid overloading trucks, and minimize total travel distance while meeting all event setups.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "Water Tank Delivery During Regional Droughts",
+        "content": "During a severe drought, a water utility company operates **four depots** (`<loc_depot>`) in a drought-stricken region. The company must deliver portable water tanks (`<demand>`) to **remote communities** (`<loc_customer>`), each requiring varying tank quantities. Trucks from depots have a **volume capacity** (`<capacity>`) that limits how many tanks they can carry. Routes are open-ended, as trucks leave tanks at the final delivery point and do not return to depots. The objective is to optimally assign depots to communities, ensure no truck exceeds its capacity, and minimize the total distance traveled across all vehicles.",
+        "tags": [
+            "loc_depot",
+            "demand",
+            "loc_customer",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Agricultural Tool Redistribution to Farm Cooperatives",
+        "content": "A cooperative network of farming collectives across a vast region relies on **multiple supply depots** (`<loc_depot>`) to distribute plows, seeders, and irrigation kits (`<demand>`) to member farms (`<loc_customer>`). Each vehicle has a **payload capacity** (`<capacity>`) restricted by terrain and equipment weight. Deliveries are finalized at the last farm on each route, as drivers end their shifts there to assist with tool setup. The problem requires coordinating depot-to-farm assignments, ensuring no vehicle overloads, and reducing redundant travel across the rugged landscape.",
+        "tags": [
+            "loc_depot",
+            "demand",
+            "loc_customer",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Emergency Communication Towers Installation",
+        "content": "After a widespread blackout caused by a hurricane, a telecommunications firm must rapidly install temporary communication towers (`<demand>`) at **critical disaster zones** (`<loc_customer>`). The firm mobilizes **three regional depots** (`<loc_depot>`) to dispatch trucks carrying tower components. Each truck has a **weight limit** (`<capacity>`) for transporting steel frames, solar panels, and batteries. Routes are open-ended, as crews remain at the final tower site to deploy equipment and provide on-site support. The challenge is to assign depots to zones, avoid overloading trucks, and prioritize high-impact areas while minimizing total travel costs.",
+        "tags": [
+            "demand",
+            "loc_customer",
+            "loc_depot",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Renewable Energy Installation Kit Delivery",
+        "content": "A renewable energy company operates multiple regional depots (`<loc_depot>`) to supply wind turbine components, solar inverters, and battery modules to remote construction sites (`<loc_customer>`). Each vehicle has a maximum load capacity of `<capacity>` tons. Sites require specific equipment quantities (`<demand>`), and routes must be planned to avoid overloading trucks while minimizing total travel distance. Vehicles end their routes at the final delivery location, as equipment is permanently installed on-site.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "Large-Scale Event Venue Equipment Deployment",
+        "content": "An event production company manages multiple warehouses (`<loc_depot>`) to deliver temporary infrastructure\u2014such as stages, lighting rigs, and audio systems\u2014to festival and conference venues (`<loc_customer>`). Each truck can carry up to `<capacity>` cubic meters of equipment, and venues demand varying payloads (`<demand>`). Routes must optimize vehicle utilization across depots while ensuring all sites receive their equipment without requiring trucks to return to base after their last drop-off.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "Mobile Medical Diagnostic Unit Redistribution",
+        "content": "A healthcare consortium uses regional medical depots (`<loc_depot>`) to distribute portable diagnostic units (e.g., ultrasound machines, blood analyzers) to rural clinics (`<loc_customer>`). Each vehicle\u2019s capacity (`<capacity>`) limits how many units it can transport, and clinics have specific equipment needs (`<demand>`). Routes must balance depot resource allocation and vehicle capacity constraints, with trucks terminating at their final delivery point to reduce operational costs.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "Agricultural Machinery Spare Parts Supply Chain",
+        "content": "A farm equipment supplier operates from multiple regional hubs (`<loc_depot>`) to deliver critical spare parts (e.g., engine components, hydraulic systems) to remote farms (`<loc_customer>`). Each delivery van has a `<capacity>` kg weight limit, and farms require varying part quantities (`<demand>`). The goal is to design efficient, open routes that ensure all farms receive their orders without overloading vehicles, while minimizing cross-depot logistical redundancy.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "Temporary Classroom Container Delivery for Remote Regions",
+        "content": "A nonprofit organization deploys prefabricated classroom containers (`<demand>` units) from urban distribution centers (`<loc_depot>`) to underserved rural schools (`<loc_customer>`). Each truck can carry up to `<capacity>` containers, and schools have specific capacity requirements. Routes must prioritize equitable resource allocation across depots while allowing vehicles to conclude their journeys at the last school visited, avoiding unnecessary return trips to reduce emissions and costs.",
+        "tags": [
+            "demand",
+            "loc_depot",
+            "loc_customer",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Temporary Sports Venue Equipment Distribution",
+        "content": "A sports event organizer must deploy tents, barricades, and seating to multiple outdoor event sites (<loc_customer>) across a city using trucks dispatched from multiple regional warehouses (<loc_depot>). Each truck has a weight limit of `<capacity>` tons, and each venue requires a specific quantity of equipment (<demand>). The challenge is to assign trucks to depots, plan routes ensuring no vehicle exceeds its capacity, and end deliveries at the final site to minimize fuel costs. All equipment must be deployed efficiently without returning to depots after completion.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "Data Center Hardware Delivery Network",
+        "content": "A tech firm operates `<loc_depot>` regional warehouses to supply data centers (<loc_customer>) with servers and networking gear. Each truck carries a maximum payload of `<capacity>` kilograms, and data centers demand precise hardware quantities (<demand>). Routes must start at depots, deliver all assigned hardware without overloading trucks, and conclude at the final delivery point. The goal is to optimize route efficiency and reduce logistics costs while respecting capacity constraints.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "Urban Furniture Delivery Service",
+        "content": "An online furniture retailer with multiple city showrooms (<loc_depot>) delivers large items (e.g., sofas, wardrobes) to customers\u2019 homes (<loc_customer>). Each van has a `<capacity>` kg load limit. Routes must originate from the nearest depot, deliver all orders on a route without exceeding capacity, and end at the last customer\u2019s address. The focus is on minimizing total driving distance while ensuring all deliveries are completed safely and efficiently.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Emergency Power Supply Deployment During Outages",
+        "content": "During citywide power outages, an energy provider distributes portable generators from `<loc_depot>` regional hubs to critical sites like hospitals and shelters (<loc_customer>). Each truck can carry up to `<capacity>` generators, and demand (<demand>) varies per location. Routes must start at depots, deliver all required units without overloading vehicles, and terminate at the final drop-off point. The priority is rapid deployment to restore power while minimizing travel costs.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "Modular Housing Delivery for Disaster Recovery",
+        "content": "After a disaster, a relief organization transports pre-fabricated housing units from `<loc_depot>` distribution centers to affected communities (<loc_customer>). Each truck has a `<capacity>` unit limit, and each site needs a specific number of units (<demand>). Routes must originate from depots, ensure no vehicle overloads, and conclude at the last delivery location. The aim is to accelerate recovery efforts by efficiently delivering housing while reducing logistical expenses.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "Modular Laboratory Equipment Delivery for Field Research",
+        "content": "Researchers need to deploy portable laboratory modules to remote field sites across a region. Multiple depots (<loc_depot>) store pre-configured lab kits containing equipment, chemicals, and instruments. Each vehicle can carry up to `<capacity>` kilograms of gear. Sites (<loc_customer>) require specific quantities (<demand>) of equipment to conduct studies. Routes must start at a depot, deliver all required modules without exceeding vehicle capacity, and end at the final site\u2014no return trips. The goal is to minimize total travel distance while ensuring every research team receives their full setup.",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "loc_customer",
+            "demand"
+        ]
+    },
+    {
+        "title": "Pop-Up Retail Event Equipment Redistribution",
+        "content": "A retail company organizes temporary pop-up stores in various urban areas. Equipment like display stands, kiosks, and signage are stored at multiple regional warehouses (<loc_depot>). Each event site (<loc_customer>) has a unique demand (<demand>) for materials, and delivery trucks (<capacity> ton capacity) must transport these items. Routes must originate from the nearest depot, deliver all required equipment without overloading trucks, and terminate at the last stop. The aim is to optimize delivery efficiency while maximizing event coverage.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Agricultural Drone Deployment for Precision Farming",
+        "content": "Agricultural tech firms deploy crop-spraying drones and sensor packages to farms in rural regions. Drones are stored at several distribution centers (<loc_depot>). Each farm (<loc_customer>) requires a specific number of drones and accessories (<demand>), but drone payloads and their carrying vehicles have strict weight limits (<capacity>). Vehicles must depart from a depot, deliver all equipment to each farm, and end their routes at the final destination. The challenge is to minimize travel costs while ensuring no vehicle overloads and all farms are equipped.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Museum Artifact Redistribution for Special Exhibitions",
+        "content": "A consortium of museums rotates rare artifacts between temporary exhibitions in different cities. Artifacts are stored at multiple conservation centers (<loc_depot>). Each exhibition venue (<loc_customer>) needs a curated set of items (<demand>), and transport vehicles must adhere to strict weight limits (<capacity>) to protect fragile items. Routes must start at a depot, deliver all artifacts to each venue without exceeding capacity, and conclude at the final stop. The focus is on minimizing logistical costs while safeguarding cultural heritage.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Emergency Power Grid Component Delivery After Natural Disasters",
+        "content": "Utilities companies rush to restore electricity in regions hit by hurricanes. Critical components like transformers, cables, and generators are stored at multiple regional depots (<loc_depot>). Each damaged substation (<loc_customer>) requires a specific quantity (<demand>) of equipment, and delivery trucks (<capacity> ton capacity) must navigate disrupted roads. Routes must originate from depots, deliver all supplies without overloading trucks, and end at the final substation\u2014no return trips. The priority is rapid, efficient restoration to minimize downtime.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Election Materials Secure Distribution Network",
+        "content": "A national election commission must distribute secure ballot boxes, voting machines, and administrative kits from regional hubs (`<loc_depot>`) to polling stations (`<loc_customer>`). Each vehicle has a maximum load capacity of `<capacity>` kilograms to prevent overloading. Stations require varying quantities of materials (`<demand>`), and routes must originate from the nearest depot but end at the final polling location without returning. The goal is to minimize total travel distance while ensuring all stations receive their supplies without exceeding vehicle capacities.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "Remote Wind Turbine Component Delivery",
+        "content": "A renewable energy company deploys wind turbine parts from multiple manufacturing depots (`<loc_depot>`) to construction sites in remote mountainous regions (`<loc_customer>`). Each truck can carry up to `<capacity>` tons of components (e.g., blades, towers). Sites have specific part requirements (`<demand>`), and vehicles must originate from the closest depot but terminate at their last delivery point. Routes must avoid overloading trucks while minimizing fuel costs across all depots.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "Arctic Research Equipment Redistribution",
+        "content": "A consortium of research institutions sends specialized equipment (e.g., lab gear, drones, sensors) from polar logistics bases (`<loc_depot>`) to remote Arctic research stations (`<loc_customer>`). Each aircraft or truck has a cargo limit of `<capacity>` kilograms. Stations need different equipment loads (`<demand>`), and vehicles must depart from assigned depots but end their routes at the final destination. The challenge is to balance depot workloads and prevent capacity breaches while optimizing fuel efficiency in harsh conditions.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "Festival Ice Sculpture Deployment",
+        "content": "A winter festival organizer coordinates the delivery of ice blocks and sculpting tools from seasonal storage centers (`<loc_depot>`) to temporary ice art venues (`<loc_customer>`). Trucks have a maximum payload of `<capacity>` cubic meters, and venues require specific volumes of ice (`<demand>`). Routes must start at the nearest depot but conclude at the last venue, avoiding unnecessary return trips. The focus is on minimizing travel time to ensure ice stability while adhering to vehicle capacity limits.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "Modular Office Unit Delivery to Mining Camps",
+        "content": "A mining company transports prefabricated office containers from regional fabrication plants (`<loc_depot>`) to remote drilling sites (`<loc_customer>`). Each flatbed truck can carry up to `<capacity>` tons. Sites need varying numbers of units (`<demand>`), and vehicles must originate from the closest depot but end their routes at the final camp. The goal is to reduce total transportation costs while ensuring no truck exceeds its weight limit, even across rugged terrain.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "Film Production Equipment Redistribution Network",
+        "content": "A film production company operates multiple equipment depots (`<loc_depot>`) across a region to supply film sets (`<loc_customer>`). Each depot manages trucks with a maximum cargo capacity of `<capacity>` tons, tasked with delivering cameras, lighting rigs, and props to remote locations. Each film site requires a specific `<demand>` of equipment, and vehicles must depart from their assigned depot without returning. The goal is to minimize total travel distance while ensuring no truck exceeds its capacity, allowing crews to start filming immediately after deliveries.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "Remote Environmental Monitoring Sensor Deployment",
+        "content": "A research organization deploys environmental sensors to monitor climate patterns in isolated regions (`<loc_customer>`). Multiple depot hubs (`<loc_depot>`) store sensors, and each vehicle can carry up to `<capacity>` units. Each sensor installation site demands a specific `<demand>` quantity of sensors. Routes must originate from the nearest depot and terminate at the final deployment site, avoiding return trips. The challenge is to balance depot workload and ensure no vehicle overloads while covering all critical monitoring zones efficiently.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "Urban Emergency Firefighting Gear Distribution",
+        "content": "During a citywide emergency, fire departments dispatch gear trucks from multiple depots (`<loc_depot>`) to temporary fire crews stationed at high-risk areas (`<loc_customer>`). Each truck has a `<capacity>` limit for carrying hoses, extinguishers, and protective gear. Crews at each location require a `<demand>` amount of supplies. Vehicles must start at their assigned depot but end routes at the final delivery point to support ongoing operations. The aim is to maximize coverage while adhering to capacity constraints and minimizing total travel.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "Large-Scale Agricultural Harvest Machinery Redistribution",
+        "content": "An agricultural conglomerate uses `<loc_depot>` warehouses to deploy harvest machinery (tractors, combines) to seasonal farming sites (`<loc_customer>`). Each vehicle transporting machinery has a `<capacity>` tonnage limit, and farms require `<demand>` quantities of equipment. Routes must originate from the nearest depot but terminate at the last farm to allow crews to begin work immediately. The problem involves coordinating multi-depot logistics to avoid overloading trucks and ensure timely harvest operations across vast rural regions.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "International Aid Organization's Mobile Clinic Setup",
+        "content": "A global health NGO operates `<loc_depot>` supply centers to deliver mobile clinic equipment (medical tools, generators) to underserved regions (`<loc_customer>`). Each truck has a `<capacity>` limit, and clinics require `<demand>` resources to function. Vehicles depart from their assigned depot, deliver supplies to the final clinic site, and remain stationed there to support operations. The challenge is to optimize depot assignments and routes to minimize travel costs while ensuring no vehicle exceeds its capacity during the critical deployment phase.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "Offshore Renewable Energy Installation Logistics",
+        "content": "A renewable energy company must deploy turbine components to offshore wind farm sites scattered across coastal regions. Multiple depots (<loc_depot>) along the coast stockpile pre-assembled parts, each requiring vehicles with a <capacity> ton limit to transport. Each wind farm (<loc_customer>) needs specific quantities of equipment (<demand>). Routes must originate from the nearest depot, ensure no vehicle overloads, and terminate at the final installation site to minimize maritime transit costs. The goal is to optimize depot assignments and vehicle paths to cover all sites efficiently without requiring trucks to backtrack to shore.",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "loc_customer",
+            "demand"
+        ]
+    },
+    {
+        "title": "Telecommunications Emergency Network Deployment",
+        "content": "After a major earthquake, a telecom provider races to restore connectivity by setting up temporary cell towers in disconnected regions. Teams operate from multiple regional depots (<loc_depot>), using trucks that can carry up to <capacity> kilograms of equipment. Each affected area (<loc_customer>) requires a specified payload (<demand>), such as antennas or generators. Vehicles must deliver supplies directly to remote deployment zones and end their routes there to maximize coverage. The challenge is balancing depot resource allocation and minimizing total travel distance while respecting payload limits.",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "loc_customer",
+            "demand"
+        ]
+    },
+    {
+        "title": "Seasonal Agricultural Drone Redistribution",
+        "content": "A precision farming startup needs to distribute crop-spraying drones to seasonal agricultural hubs across a large region. With drones stored at several regional depots (<loc_depot>), delivery vans (capacity <capacity> drones per trip) must transport them to farming cooperatives (<loc_customer>). Each cooperative requires a specific number of drones (<demand>), and vans can end routes at the final drop-off point to avoid unnecessary return trips. The solution must prioritize depot selection based on proximity and vehicle capacity constraints to ensure all farms receive their allocated drones efficiently.",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "loc_customer",
+            "demand"
+        ]
+    },
+    {
+        "title": "Disaster Response Mobile Clinic Setup",
+        "content": "An NGO deploys mobile healthcare clinics to disaster-affected regions using multiple emergency depots (<loc_depot>). Each clinic requires medical supplies, equipment, and staff transported in trucks with a <capacity> kg limit. Affected zones (<loc_customer>) report varying supply needs (<demand>). Vehicles must deliver full payloads to remote locations and conclude routes at their last destination to support immediate patient care. The optimization focuses on minimizing travel distance while ensuring no truck exceeds capacity and all clinics are fully equipped.",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "loc_customer",
+            "demand"
+        ]
+    },
+    {
+        "title": "Scientific Research Equipment to Arctic Field Stations",
+        "content": "A research consortium must deliver specialized lab equipment to remote Arctic research stations. Equipment is stored at three northern depots (<loc_depot>), and ice-resistant vehicles (capacity <capacity> tons) must transport gear to field sites (<loc_customer>). Each station\u2019s research agenda dictates its equipment demand (<demand>). Routes must originate from the depot nearest to each destination to reduce ice road wear, with vehicles halting permanently at the final station to avoid hazardous round-trip navigation. The plan must balance depot workload and prevent overloading while ensuring all scientific operations commence on schedule.",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "loc_customer",
+            "demand"
+        ]
+    },
+    {
+        "title": "Offshore Wind Farm Component Delivery Network",
+        "content": "Marine logistics companies must deliver turbine blades, towers, and generators from coastal depots (`<loc_depot>`) to offshore wind farm construction sites (`<loc_customer>`). Each transport vessel has a strict `<capacity>` ton limit to avoid overloading. Routes must originate from the nearest depot based on site locations, and vessels terminate operations at their final delivery point to minimize return voyages. The challenge is to balance depot workloads while ensuring all components reach their destinations without exceeding vessel capacities, even for the largest turbine components.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Polar Research Station Equipment Redistribution",
+        "content": "Scientific organizations operate multiple supply depots (`<loc_depot>`) across Antarctica to distribute research equipment (e.g., weather sensors, drilling tools) to remote field stations (`<loc_customer>`). Each vehicle\u2019s `<capacity>` restricts how much gear can be transported over ice roads. Routes start at the depot closest to each station but end at the final delivery site to avoid unnecessary backtracking. The goal is to efficiently allocate equipment while ensuring no vehicle exceeds its weight limit, even when carrying bulky items like snowmobiles or generators.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Refugee Camp Modular Shelter Deployment",
+        "content": "Humanitarian agencies use `<loc_depot>` hubs in crisis zones to distribute prefabricated shelters, medical tents, and sanitation units to `<num_customer>` refugee camps (`<loc_customer>`). Each truck can carry up to `<capacity>` cubic meters of supplies, and routes must originate from the nearest depot but conclude at the last camp visited. The priority is to maximize coverage while adhering to vehicle limits, especially when transporting large structures like communal kitchens or water filtration systems.",
+        "tags": [
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Large-Scale Art Installation Material Transport",
+        "content": "A global art collective coordinates `<loc_depot>` warehouses in major cities to deliver sculptures, lighting rigs, and interactive exhibits to `<num_customer>` public spaces (`<loc_customer>`). Each art piece has a `<demand>` weight/volume, and trucks (`capacity` <capacity>) must avoid overloading while optimizing scenic routes through urban areas. Routes begin at the depot closest to each installation site but end at the final destination to align with exhibition opening events.",
+        "tags": [
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "demand",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Arctic Mining Camp Supplies Redistribution",
+        "content": "Mining companies operate `<loc_depot>` storage facilities across the Arctic to supply remote drilling sites (`<loc_customer>`) with fuel, machinery parts, and survival gear. Vehicles must navigate icy terrain while respecting `<capacity>` ton limits for heavy equipment. Routes originate from the nearest depot but terminate at the last customer to reduce fuel waste in extreme conditions. The challenge is to balance depot resource allocation and ensure critical supplies like heating systems are delivered without exceeding vehicle capacities.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Offshore Wind Farm Maintenance Equipment Deployment",
+        "content": "Multiple coastal depots (<loc_depot>) serve as hubs for deploying maintenance crews and specialized equipment to offshore wind turbines scattered along coastlines. Each supply vessel has a maximum cargo capacity of `<capacity>` tons, and turbines require `<demand>` tons of tools, spare parts, and safety gear. Routes must originate from the nearest depot, deliver all equipment to each turbine site, and end at the final destination without returning to the depot. The goal is to minimize total travel distance while ensuring no vessel exceeds its capacity, allowing crews to begin repairs immediately upon arrival.",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "Remote Research Station Equipment Resupply",
+        "content": "A network of research stations in isolated regions (e.g., deserts, rainforests, or polar bases) rely on `<loc_depot>` regional depots to deliver critical supplies like scientific instruments, food, and fuel. Each resupply truck has a `<capacity>` kg limit, and stations demand `<demand>` kg of materials. Routes must start at the closest depot, deliver to all assigned stations in one trip, and conclude at the last stop to avoid unnecessary backtracking. The challenge is to balance depot workloads and ensure no vehicle overloads while covering all remote sites efficiently.",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "Emergency Water Purification Unit Deployment",
+        "content": "After a natural disaster, aid organizations deploy water purification units to affected communities (<loc_customer>) using `<loc_depot>` regional warehouses as supply hubs. Each truck can carry `<capacity>` units of equipment, and communities require `<demand>` units to meet their daily needs. Routes must depart from the nearest depot, deliver all requested units, and end at the final destination to maximize deployment speed. The priority is minimizing total travel time while adhering to vehicle capacity constraints to ensure rapid access to clean water.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "Agricultural Drought Relief Equipment Distribution",
+        "content": "Farmers in drought-stricken regions rely on `<loc_depot>` agricultural depots to distribute water pumps, irrigation kits, and drought-resistant seeds. Each delivery truck has a `<capacity>` kg limit, and farms require `<demand>` kg of supplies. Routes must originate from the closest depot, deliver to all farms in the region, and terminate at the last stop without returning. The aim is to optimize routes to cover all affected areas while preventing vehicle overloads, ensuring timely delivery of life-saving agricultural support.",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "Urban Microgrid Components Delivery",
+        "content": "A utility company deploys solar panels, batteries, and inverters to establish urban microgrids (<loc_customer>) across a city using `<loc_depot>` distribution centers. Each truck can carry `<capacity>` units of equipment, and microgrid sites require `<demand>` units to function. Routes must start at the nearest depot, deliver all components to each site, and end at the final location to reduce fuel costs. The goal is to minimize travel distance while ensuring no vehicle exceeds its capacity, enabling rapid installation of resilient energy systems.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "National Park Ranger Equipment Distribution",
+        "content": "The National Park Service manages multiple regional depots (`<loc_depot>`) to supply remote ranger stations (`<loc_customer>`) with safety gear, tools, and emergency supplies. Each vehicle has a maximum cargo capacity of `<capacity>` kg, and stations require specific equipment quantities (`<demand>`). Routes must originate from assigned depots, deliver to all stations without exceeding capacity, and end at the final stop\u2014vehicles do not return to depots. The goal is to minimize total travel distance while ensuring all stations receive their equipment reliably.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "Flood Zone Emergency Shelter Supplies Delivery",
+        "content": "After severe flooding, aid organizations use `<loc_depot>` hubs across disaster zones to distribute emergency shelters, food, and water to stranded communities (`<loc_customer>`). Delivery trucks can carry up to `<capacity>` kg of supplies, and each affected area demands specific\u7269\u8d44 (`<demand>`). Routes must originate from designated depots, prioritize critical zones, and terminate at the last delivery point. The challenge is to balance depot workloads, avoid overloading vehicles, and ensure rapid, efficient coverage of all affected regions.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "Offshore Oil Rig Maintenance Kit Delivery",
+        "content": "A maritime logistics company operates `<loc_depot>` coastal warehouses to deliver maintenance kits to offshore oil rigs (`<loc_customer>`). Each boat or truck has a cargo limit of `<capacity>` tons, and rigs require varying quantities of parts (`<demand>`). Routes must start and end at assigned depots, but vehicles finalize trips at the final rig visited. The objective is to minimize travel distance while ensuring all rigs receive the correct supplies without exceeding vehicle capacities.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "Rural School Science Lab Equipment Redistribution",
+        "content": "A nonprofit organization uses `<loc_depot>` regional distribution centers to supply portable science lab kits to remote schools (`<loc_customer>`). Each van can carry up to `<capacity>` units of equipment, and schools request specific lab sets (`<demand>`). Routes must depart from assigned depots, deliver to all schools, and terminate at the last stop. The goal is to optimize routes for fuel efficiency while ensuring every school receives its equipment without overloading any vehicle.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "Mobile Veterinary Units Deployment for Livestock Health",
+        "content": "A livestock health initiative deploys `<loc_depot>` regional hubs to deliver mobile veterinary units to farms (`<loc_customer>`) in need of animal care services. Each truck can transport up to `<capacity>` units of equipment and supplies, and farms require specific medical kits (`<demand>`). Routes originate from depots, visit all farms, and end at the final destination without returning. The focus is on minimizing travel distance while ensuring capacity constraints are met and all farms are serviced promptly.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "Post-Disaster Debris Removal Logistics",
+        "content": "Following a catastrophic flood, recovery teams must coordinate debris removal across multiple impacted zones. Trucks depart from regional depots (`<loc_depot>`) equipped to handle up to `<capacity>` cubic meters of waste. Each affected area (`<loc_customer>`) has a calculated debris volume (`<demand>`), requiring careful route planning to prevent overloading. Vehicles follow optimized paths to collect debris and terminate at landfill sites without returning to depots, ensuring efficient use of resources and rapid clearance of hazardous materials.",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "loc_customer",
+            "demand"
+        ]
+    },
+    {
+        "title": "Data Center Hardware Deployment for Cloud Providers",
+        "content": "A cloud computing firm needs to rapidly deploy server racks to new data centers (`<loc_customer>`) scattered across a region. Multiple distribution hubs (`<loc_depot>`) serve as starting points for specialized trucks with `<capacity>` ton payload limits. Each data center requires a specific number of servers (`<demand>`), and routes must prioritize minimal travel distance while adhering to vehicle capacities. Once servers are delivered, trucks conclude their routes at the final destination to reduce idle time and fuel consumption.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "Offshore Wind Farm Blade Transportation",
+        "content": "Wind energy contractors must transport oversized turbine blades from coastal manufacturing depots (`<loc_depot>`) to offshore installation sites (`<loc_customer>`). Each transport vessel has a `<capacity>` limit for blade quantities (`<demand>`), and routes must be planned across multiple depots to balance logistical demands. Vessels proceed directly to their assigned offshore platforms after loading, avoiding return trips to ensure timely installation and maximize operational efficiency.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "Modular Hotel Unit Delivery for Tourism Festivals",
+        "content": "A hospitality company is setting up temporary luxury hotel pods for a major international festival. Modular units are stored at several logistics hubs (`<loc_depot>`), and trucks must transport them to festival zones (`<loc_customer>`) while respecting `<capacity>` weight limits per vehicle. Each festival site requires a specific number of units (`<demand>`), and routes end at the final drop-off point to streamline setup and minimize equipment downtime before event commencement.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "Precision Agriculture Sensor Network Deployment",
+        "content": "An agri-tech startup aims to install soil moisture sensors across large-scale farms (`<loc_customer>`). Teams operate from decentralized depots (`<loc_depot>`) equipped with vans holding `<capacity>` sensor units. Each farm\u2019s `<demand>` varies based on acreage, and routes must ensure no vehicle exceeds its sensor load while covering all sites. Vans conclude their journeys at the last farm on their route to accelerate deployment and reduce logistical overhead.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "Satellite Ground Station Deployment Across Remote Regions",
+        "content": "A global telecommunications firm must deploy satellite ground stations to remote regions. They operate from multiple regional depots (`<loc_depot>`), each dispatching trucks with `<capacity>` kg payload limits to deliver equipment to scattered sites (`<loc_customer>`). Each site requires specific quantities of antennas, transmitters, and power units (`<demand>`). Vehicles start at their assigned depot, deliver all equipment for their route without exceeding capacity, and end at the final destination to aid installation teams. The goal is to minimize total travel distance while ensuring all sites receive their full payload.",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "loc_customer",
+            "demand"
+        ]
+    },
+    {
+        "title": "Mobile Vaccination Clinic Distribution During Outbreaks",
+        "content": "During a pandemic, a health organization uses `<loc_depot>` regional warehouses to distribute mobile vaccination clinics to `<num_customer>` rural and urban centers (`<loc_customer>`). Each clinic requires medical supplies, refrigeration units, and staff equipment totaling `<demand>` kg. Delivery vans have a `<capacity>` kg limit. Routes must start at depots, visit all assigned locations in the most efficient sequence, and terminate at the last stop to reduce operational costs. The challenge is to avoid overloading any van while ensuring rapid deployment to high-risk areas.",
+        "tags": [
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "demand",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Temporary Internet Caching Server Delivery to Rural Areas",
+        "content": "A tech company bridges the digital divide by deploying `<num_customer>` temporary internet caching servers to underserved towns (`<loc_customer>`). Servers are transported from `<loc_depot>` regional hubs using trucks limited to `<capacity>` kg. Each town requires a specific number of server modules (`<demand>`), and routes must start at depots, cover all sites without exceeding vehicle capacities, and end at the final delivery point. The aim is to minimize travel costs while ensuring seamless internet access in remote regions.",
+        "tags": [
+            "num_customer",
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "Emergency Flood Barrier Installation in Coastal Communities",
+        "content": "To prepare for flooding, a disaster response team must deploy `<num_customer>` flood barriers to coastal towns (`<loc_customer>`). Barriers are sourced from `<loc_depot>` regional depots and transported via trucks with `<capacity>` kg limits. Each town\u2019s barrier requirement (`<demand>`) depends on risk assessments. Routes must start at depots, deliver all barriers efficiently, and end at the last site without returning. The priority is minimizing travel distance while ensuring no truck exceeds its capacity, allowing crews to install barriers immediately.",
+        "tags": [
+            "num_customer",
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "Wildlife Monitoring Equipment Deployment in Protected Areas",
+        "content": "A conservation group deploys `<num_customer>` wildlife monitoring systems (cameras, sensors) to remote national parks (`<loc_customer>`). Equipment is sourced from `<loc_depot>` regional supply hubs and transported by trucks with `<capacity>` kg limits. Each site requires a customized kit (`<demand>`), and routes must start at depots, deliver all equipment without overloading, and conclude at the final destination. The objective is to minimize logistical costs while achieving full coverage of critical biodiversity zones.",
+        "tags": [
+            "num_customer",
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "Eco-Restoration Seedling Delivery Network",
+        "content": "A reforestation initiative requires distributing millions of seedlings to deforested zones across rugged terrain. Multiple regional depots (<loc_depot>) act as storage hubs, while each replanting site (<loc_customer>) specifies the number of saplings needed (<demand>). Delivery trucks (<capacity> seedlings per vehicle) must avoid overloading while planning open routes that terminate at the final drop-off point to minimize fuel use and enable rapid planting. The challenge is to balance depot assignments and optimize delivery efficiency without requiring trucks to return to their origins.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Temporary Farmers' Market Equipment Deployment",
+        "content": "A government program aims to establish seasonal farmers' markets in underserved towns. Equipment such as stalls, tents, and infrastructure (<demand>) must be transported from regional warehouses (<loc_depot>) to market sites (<loc_customer>). Each truck has a strict capacity (<capacity> kg), and routes must be designed to end at the last destination to reduce empty return trips. The goal is to ensure all towns receive their supplies without exceeding vehicle limits, while minimizing total travel distance.",
+        "tags": [
+            "demand",
+            "loc_depot",
+            "loc_customer",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Disaster Zone Satellite Communication Kit Delivery",
+        "content": "Following a catastrophic earthquake, satellite communication kits must be urgently delivered to isolated communities (<loc_customer>). Kits are stored at multiple emergency depots (<loc_depot>), and trucks (<capacity> kg) must adhere to weight constraints to avoid overloading. Routes are structured as open paths, allowing teams to remain at the final drop-off site for immediate setup. This ensures uninterrupted communication while optimizing fuel use for rapid response efforts.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Rural Telemedicine Unit Distribution",
+        "content": "A nonprofit organization deploys mobile telemedicine units to remote villages (<loc_customer>) lacking healthcare access. Units are housed at regional health depots (<loc_depot>), and each vehicle (<capacity> units) must transport equipment without exceeding weight limits. Open routes conclude at the last village to streamline setup and reduce logistical overhead. The focus is on equitable depot utilization and minimizing total travel costs while ensuring all villages receive critical medical technology.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Remote Hydroelectric Generator Delivery",
+        "content": "A utility company installs hydroelectric generators in mountainous regions (<loc_customer>) to boost renewable energy access. Generators are transported from several regional depots (<loc_depot>) using trucks (<capacity> tons). Routes must be planned to avoid overloading vehicles and end at the final site to enable immediate installation. The goal is to balance depot workloads and minimize travel distance, ensuring efficient deployment of this critical infrastructure without unnecessary return journeys.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Electric Vehicle Charging Station Installation Network",
+        "content": "An energy company is deploying EV charging stations across a sprawling urban area. They operate from multiple regional depots (`<loc_depot>`) to serve installation sites (`<loc_customer>`). Each truck has a `<capacity>` ton limit for transporting heavy components like charging units and power converters. The goal is to deliver equipment to all locations without exceeding vehicle capacity, while minimizing total travel distance. Since crews finish work at the last site, routes end there (open routes), avoiding return trips to depots.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Urban Public Art Installation Logistics",
+        "content": "A citywide art initiative requires delivering large-scale sculptures and installations to diverse neighborhoods (`<loc_customer>`). The art foundation uses multiple depots (`<loc_depot>`) strategically placed across the city. Each truck can carry up to `<capacity>` cubic meters of art pieces, which vary in size (`<demand>`). Routes must ensure no vehicle is overloaded and all art pieces reach their designated locations efficiently. Drivers end their shifts at the final delivery point (open routes), optimizing resource use and reducing idle travel.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "Disaster Zone Temporary Shelter Deployment",
+        "content": "Following a catastrophic earthquake, aid agencies must rapidly deploy temporary shelters to affected regions. Multiple distribution hubs (`<loc_depot>`) are activated to serve disaster zones (`<loc_customer>`). Each truck carries `<capacity>` units of prefabricated shelter kits, with `<demand>` varying per site based on population needs. Routes prioritize urgent areas first and terminate at the last drop-off (open routes), maximizing coverage while respecting vehicle capacity limits.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "International Sports Event Infrastructure Delivery",
+        "content": "A city hosting the Olympics needs to deliver equipment like bleachers, timing systems, and safety gear to 50 venues (`<loc_customer>`). The logistics team operates from three central depots (`<loc_depot>`) to manage regional distribution efficiently. Each truck has a `<capacity>` ton limit for cargo, and venues require different amounts of equipment (`<demand>`). Routes are planned as open-ended paths, ending at the final venue to avoid redundant return trips, ensuring all sites are supplied without overloading vehicles.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "Rural Internet Infrastructure Deployment",
+        "content": "A telecom provider is expanding broadband access to underserved rural areas. They dispatch trucks from `<loc_depot>` hubs in regional towns to deliver satellite dishes, routers, and cables to remote villages (`<loc_customer>`). Each truck\u2019s `<capacity>` limits how many kits it can carry, and villages have varying `<demand>` based on population. Routes are designed to end at the last village (open routes), minimizing travel costs while ensuring every community receives the required equipment without overloading trucks.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "Offshore Subsea Equipment Delivery Network",
+        "content": "A marine engineering firm operates multiple coastal depots (`<loc_depot>`) to supply subsea equipment (e.g., pipelines, sensors) to offshore drilling platforms and renewable energy sites (`<loc_customer>`). Each vehicle can carry up to `<capacity>` tons of specialized gear, and each site requires `<demand>` units of equipment. Routes must originate from the nearest depot and end at the final destination without returning, as crews remain on-site to assist with installation. The goal is to minimize total travel distance while ensuring no vehicle overloads and all sites receive their equipment.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "Rural Telecommunication Tower Installation",
+        "content": "A telecom provider uses `<loc_depot>` regional warehouses to deploy cell towers to remote villages (`<loc_customer>`). Towers vary in size and weight (`<demand>`), and each truck has a `<capacity>` ton limit. Teams must select depot assignments to balance workload and avoid overloading vehicles. Routes are designed as one-way trips, ending at the final site where technicians stay to install the tower, ensuring continuous network coverage expansion.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Wildlife Conservation Equipment Redistribution",
+        "content": "Conservation organizations manage `<loc_depot>` depots in ecologically sensitive regions to deliver tracking collars, cameras, and field supplies (`<demand>`) to research sites (`<loc_customer>`). Vehicles departing from depots must not exceed `<capacity>` kg limits due to fragile or bulky equipment. Routes terminate at the last site to allow researchers to begin deployments immediately, avoiding unnecessary return journeys.",
+        "tags": [
+            "loc_depot",
+            "demand",
+            "loc_customer",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Large-Scale Agriculture Tractor Redistribution",
+        "content": "An agricultural cooperative operates `<loc_depot>` hubs across farmland regions to deliver tractors and machinery (`<demand>`) to seasonal farms (`<loc_customer>`). Each truck has a `<capacity>` ton limit to transport heavy equipment. Routes are planned from the closest depot to minimize fuel costs, with drivers concluding their trip at the final farm to assist with setup, ensuring timely harvest or planting operations.",
+        "tags": [
+            "loc_depot",
+            "demand",
+            "loc_customer",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Temporary Medical Research Facilities Deployment",
+        "content": "A global health organization deploys mobile laboratories and medical equipment (`<demand>`) to outbreak-prone regions (`<loc_customer>`) using `<loc_depot>` logistics centers in major cities. Vehicles must adhere to `<capacity>` kg limits to handle sensitive supplies. Routes end at the final destination, allowing researchers to begin operations immediately without requiring drivers to backtrack, optimizing response speed and resource allocation.",
+        "tags": [
+            "demand",
+            "loc_customer",
+            "loc_depot",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Offshore Research Vessel Supply Network",
+        "content": "A network of research vessels operates in remote oceanic zones to monitor marine ecosystems. These vessels require regular resupply of scientific equipment, food, and fuel. Multiple coastal depots (`<loc_depot>`) serve as distribution hubs, dispatching supply ships with a maximum cargo capacity of `<capacity>`. Each vessel (`<loc_customer>`) has specific demand `<demand>` for supplies. Routes must originate from depots and terminate at the final vessel without returning, ensuring all vessels receive their required resources efficiently while avoiding overloading any ship.",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "loc_customer",
+            "demand"
+        ]
+    },
+    {
+        "title": "Emergency Wildlife Rescue Equipment Redistribution",
+        "content": "Wildlife conservation agencies urgently deploy rescue teams to protect habitats devastated by natural disasters. Equipment such as animal transport crates, medical supplies, and tracking devices must be distributed from multiple regional depots (`<loc_depot>`) to affected sites (`<loc_customer>`). Each vehicle (e.g., trucks or helicopters) has a `<capacity>` limit, and the total weight of equipment (`<demand>`) for each site must not exceed this. Routes must start at depots and end at the final rescue location, prioritizing rapid deployment without unnecessary returns.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "Temporary Maritime Infrastructure Deployment",
+        "content": "A government agency constructs temporary offshore platforms for tsunami early-warning systems along a vulnerable coastline. These platforms require sensors, buoys, and communication gear. Multiple coastal depots (`<loc_depot>`) store equipment, and delivery vehicles (ships or trucks) must transport `<demand>` units of supplies to each deployment site (`<loc_customer>`). Each vehicle\u2019s capacity (`<capacity>`) restricts how much can be carried per trip. Routes must originate at depots and conclude at the last site, ensuring all infrastructure is deployed without exceeding weight limits.",
+        "tags": [
+            "loc_depot",
+            "demand",
+            "loc_customer",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Urban Rooftop Garden Installation Kits Delivery",
+        "content": "A citywide initiative promotes sustainability by installing rooftop gardens on apartment buildings. Kits include soil, planters, irrigation systems, and compost bins. The project uses multiple urban depots (`<loc_depot>`) to dispatch delivery vans, each with a `<capacity>` limit. Each building (`<loc_customer>`) has a specific `<demand>` for materials. Routes must begin at depots and end at the final rooftop without returning, optimizing travel distance while adhering to vehicle capacity constraints.",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "loc_customer",
+            "demand"
+        ]
+    },
+    {
+        "title": "Film Production Set Material Redistribution",
+        "content": "A film studio is shooting a large-scale outdoor movie across multiple locations. Each filming site (`<loc_customer>`) requires sets, props, and equipment (e.g., backdrops, lighting rigs) transported from regional production hubs (`<loc_depot>`). Delivery trucks have a `<capacity>` limit, and each location\u2019s `<demand>` must be met precisely. Routes must start at depots and conclude at the final site, ensuring all materials arrive without overloading vehicles, while minimizing total distance driven.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "demand"
+        ]
+    }
+]

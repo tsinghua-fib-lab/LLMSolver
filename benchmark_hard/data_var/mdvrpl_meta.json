@@ -1,0 +1,1038 @@
+[
+    {
+        "title": "Regional Medical Supply Distribution Network",
+        "content": "A healthcare logistics firm operates multiple regional depots (`<loc_depot>`) to deliver critical medical supplies to hospitals and clinics (`<loc_customer>`). Each vehicle has a cargo capacity of `<capacity>` kg and must return to its origin depot. Routes must ensure no truck exceeds capacity while delivering supplies like oxygen tanks, vaccines, and PPE kits (`<demand>` per location). Additionally, all routes must be completed within an 8-hour window to maintain supply freshness and meet urgent healthcare demands.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "Perishable Grocery Delivery with Multiple Hubs",
+        "content": "A grocery chain uses several regional distribution centers (`<loc_depot>`) to supply perishable goods (e.g., dairy, produce) to supermarkets (`<loc_customer>`). Refrigerated trucks have a maximum load of `<capacity>` tons and must return to their assigned hub after deliveries. The challenge is to plan routes that avoid overloading vehicles and complete all deliveries within a 6-hour timeframe to preserve food quality, minimizing fuel use and maximizing customer satisfaction.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Urban Waste Collection with Depot-Specific Routes",
+        "content": "A city\u2019s sanitation department manages waste collection from residential and commercial areas (`<loc_customer>`) using trucks dispatched from multiple district depots (`<loc_depot>`). Each truck can carry up to `<capacity>` cubic meters of waste and must return to its starting depot. Routes must be designed to ensure no truck exceeds its capacity while completing all pickups within an 8-hour shift, avoiding overworked drivers and late-night operations.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Construction Material Delivery Under Time Constraints",
+        "content": "A construction company operates from several regional depots (`<loc_depot>`) to deliver building materials (e.g., steel beams, concrete) to active sites (`<loc_customer>`). Each truck has a `<capacity>` ton limit and must return to its origin depot. The goal is to plan routes that deliver all requested materials (`<demand>`) without overloading vehicles and finish deliveries within a 10-hour window to meet tight project deadlines.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "Furniture Delivery Across Metropolitan Areas",
+        "content": "A furniture retailer uses multiple warehouses (`<loc_depot>`) to serve customers in sprawling urban regions (`<loc_customer>`). Delivery trucks have limited cargo space (`<capacity>`) to accommodate bulky items like sofas and wardrobes. Routes must ensure each truck returns to its starting depot and completes deliveries within a 12-hour timeframe to maximize daily efficiency, while precisely fitting all ordered items (`<demand>`) onto each vehicle.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "Industrial Equipment Rental Logistics",
+        "content": "A heavy equipment rental firm operates from multiple regional depots (`<loc_depot>`) to serve construction sites (`<loc_customer>`). Each truck has a `<capacity>` ton limit for carrying machinery like excavators or generators. To ensure equipment arrives promptly for morning work shifts, all deliveries must be completed within an 8-hour window (`<time_limit>`). The company must assign each site to the nearest depot, plan routes avoiding overloading, and minimize total travel distance while ensuring drivers return before their shift ends.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Urban Courier Network with Multiple Distribution Centers",
+        "content": "A courier service uses `<loc_depot>` hubs in a sprawling city to deliver packages to `<num_customer>` businesses. Each van can carry up to `<capacity>` kg of cargo. To comply with labor regulations, drivers cannot exceed a `<time_limit>`-hour workday. The challenge is to optimally assign deliveries to depots, design routes that respect vehicle capacity and time limits, and reduce fuel costs by minimizing detours between drop-off points.",
+        "tags": [
+            "loc_depot",
+            "num_customer",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Perishable Lab Sample Transportation",
+        "content": "A medical research consortium operates `<loc_depot>` biorepositories across a region, transporting temperature-sensitive lab samples (`<demand>` liters) from field labs (`<loc_customer>`) to central analysis facilities. Refrigerated trucks have a `<capacity>` liter limit and must return within `<time_limit>` hours to prevent sample degradation. Routes must balance depot assignments, avoid overloading, and ensure all samples reach labs before the time limit expires.",
+        "tags": [
+            "loc_depot",
+            "demand",
+            "loc_customer",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Offshore Supply Boat Operations",
+        "content": "An offshore energy company resupplies oil rigs (`<loc_customer>`) from coastal depots (`<loc_depot>`). Supply boats carry `<capacity>` cubic meters of equipment and fuel but must return to their origin depot within `<time_limit>` hours due to tides and safety regulations. The company must decide which depot to dispatch from for each rig, plan routes to avoid capacity overflow, and ensure all supplies are delivered before time constraints force a return.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Rural School Uniform Distribution",
+        "content": "A textile manufacturer distributes school uniforms (`<demand>` units) to `<num_customer>` rural schools from `<loc_depot>` warehouses. Delivery trucks can carry `<capacity>` units but must complete routes within a `<time_limit>`-hour window to avoid delays in the academic calendar. The problem involves assigning schools to depots based on proximity, optimizing routes to prevent overloading, and ensuring all uniforms are delivered before the time limit while minimizing total mileage.",
+        "tags": [
+            "demand",
+            "num_customer",
+            "loc_depot",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Agricultural Harvest Collection with Regional Cooperatives",
+        "content": "Agricultural cooperatives operate multiple depots (`<loc_depot>`) across a valley to collect perishable harvests from farms (`<loc_customer>`). Each truck has a `<capacity>` kg limit to prevent produce damage. Farmers report daily yields (`<demand>`), and harvested goods must reach depots within `<time_limit>` hours to maintain freshness. Routes must assign farms to the nearest depot, optimize truck loads, and ensure all vehicles return before spoilage risks arise.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Retail Outlet Stock Resupply with Regional Distribution Centers",
+        "content": "A nationwide retailer uses `<loc_depot>` warehouses to replenish inventory at `<num_customer>` stores (`<loc_customer>`). Delivery trucks (`<capacity>` ton capacity) must restock shelves daily but cannot exceed a `<time_limit>` hour working window. The challenge is to balance depot workloads, avoid overloading trucks, and ensure all stores are supplied within operational hours while minimizing total mileage.",
+        "tags": [
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Flood Relief Supplies Distribution with Multiple Aid Hubs",
+        "content": "After a flood, humanitarian agencies coordinate `<loc_depot>` aid hubs to deliver emergency kits (`<demand>` units) to stranded communities (`<loc_customer>`). Rescue teams use `<capacity>`-ton trucks but must return to their origin hub within `<time_limit>` hours due to fuel shortages. Routes must prioritize hardest-hit areas while adhering to strict time limits and capacity constraints.",
+        "tags": [
+            "loc_depot",
+            "demand",
+            "loc_customer",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Technology Hardware Delivery with Multi-Regional Tech Stores",
+        "content": "A tech company operates `<loc_depot>` regional warehouses to supply `<num_customer>` retail stores (`<loc_customer>`) with electronics. Each van (`<capacity>` kg) delivers gadgets like laptops and servers. Delivery must finish within `<time_limit>` hours to align with store opening hours, ensuring no vehicle exceeds weight limits while covering all locations efficiently.",
+        "tags": [
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Utility Meter Reading with Daily Route Optimization",
+        "content": "A utility company dispatches meter readers from `<loc_depot>` offices to record consumption at `<num_customer>` residential meters (`<loc_customer>`). Each vehicle (`<capacity>` meters per shift) must complete all assigned readings and return to its starting depot within `<time_limit>` hours. Routes must cluster meters by depot proximity, respect daily working hours, and avoid overloading drivers with excessive stops.",
+        "tags": [
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Island Resort Supplies Delivery Network",
+        "content": "A chain of tropical resorts located on separate islands requires regular delivery of perishable goods (e.g., produce, beverages, and linens) from coastal distribution hubs (`<loc_depot>`). Each resort (`<loc_customer>`) specifies a weekly demand `<demand>` for supplies, but boats transporting these items have a cargo limit of `<capacity>` tons. Additionally, vessels must return to their origin depot within `<time_limit>` hours to avoid overnight anchoring due to safety regulations. The challenge is to allocate resorts to depots, plan fuel-efficient routes, and ensure no boat exceeds its capacity or operational duration.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Electric Vehicle Charging Station Maintenance Logistics",
+        "content": "A network of EV charging stations across a region must be serviced by technicians dispatched from regional maintenance centers (`<loc_depot>`). Each service vehicle carries `<capacity>` kg of tools and replacement parts to repair or upgrade stations (`<loc_customer>`), which have varying `<demand>` requirements (e.g., broken components). However, the vehicles themselves are electric and have a maximum operational range corresponding to `<time_limit>` hours of travel before needing recharge. Routes must assign stations to depots, avoid overloading trucks, and ensure all vehicles return to their starting depot within their battery life.",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "loc_customer",
+            "demand",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Rural Postal Delivery in Mountainous Regions",
+        "content": "A postal service operates from several remote sorting hubs (`<loc_depot>`) to deliver packages to scattered villages (`<loc_customer>`). Each delivery van has a maximum load capacity of `<capacity>` parcels and must complete its route within `<time_limit>` hours to return before nightfall, as driving in mountainous terrain after dark is prohibited. Villages have distinct `<demand>` volumes (e.g., bulk mail, small packages), and vehicles cannot deviate to other depots mid-route. The goal is to minimize total travel distance while respecting capacity and time constraints for each depot\u2019s assigned routes.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "time_limit",
+            "demand"
+        ]
+    },
+    {
+        "title": "Mining Equipment Redistribution in Remote Regions",
+        "content": "A mining conglomerate uses multiple supply depots (`<loc_depot>`) to transport heavy machinery and spare parts (`<demand>`) to active drilling sites (`<loc_customer>`). Off-road trucks have a payload limit of `<capacity>` metric tons and must return to their origin depot within `<time_limit>` hours to comply with safety protocols and shift schedules. The terrain\u2019s unpredictability requires minimizing detours, while ensuring each site receives the exact equipment needed without overloading any truck.",
+        "tags": [
+            "loc_depot",
+            "demand",
+            "loc_customer",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Event Catering for Music Festivals and Conventions",
+        "content": "A catering company serves food trucks and vendors at temporary events (`<loc_customer>`) across a metropolitan area using kitchens as depots (`<loc_depot>`). Each delivery vehicle carries pre-packed meals and ingredients up to `<capacity>` kilograms, but must arrive at event sites within `<time_limit>` minutes to ensure food freshness and setup timelines. Routes must assign events to the nearest depot, avoid traffic congestion, and prevent overloading trucks while meeting all `<demand>` requirements (e.g., vegetarian options, portion counts).",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "time_limit",
+            "demand"
+        ]
+    },
+    {
+        "title": "Renewable Energy Equipment Delivery to Remote Villages",
+        "content": "A renewable energy company operates multiple regional warehouses (`<loc_depot>`) to deploy solar panels and batteries to off-grid villages (`<loc_customer>`). Each delivery truck has a maximum capacity of `<capacity>` kg to carry equipment. Villages require `<demand>` kg of materials, and routes must be planned within a `<time_limit>` hour window due to challenging terrain and limited daylight. The goal is to assign villages to depots, ensure no truck overloads, and complete all deliveries before nightfall while minimizing total distance traveled.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Tech Server Deployment Across Data Centers",
+        "content": "A tech firm uses `<loc_depot>` regional hubs to deliver servers (`<demand>` kg each) to data centers (`<loc_customer>`). Each delivery van can carry up to `<capacity>` kg of equipment. To guarantee next-day service, all routes must be completed within `<time_limit>` hours of operation. The challenge is to balance workload across depots, avoid overloading vehicles, and prioritize critical data centers while optimizing fuel and time efficiency.",
+        "tags": [
+            "loc_depot",
+            "demand",
+            "loc_customer",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Disaster Response Generator Distribution",
+        "content": "After a hurricane, aid organizations dispatch emergency generators from `<loc_depot>` warehouses to disaster zones (`<loc_customer>`). Each generator weighs `<demand>` kg, and transport trucks have a `<capacity>` kg limit. Crews must return to depots within `<time_limit>` hours due to shift limitations and fuel constraints. Routes must prioritize high-impact areas while ensuring no vehicle exceeds weight or time limits, maximizing the number of zones receiving power restoration.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Perishable Flower Delivery to Urban Florists",
+        "content": "A floral distributor operates `<loc_depot>` greenhouses to supply `<num_customer>` florists (`<loc_customer>`) with fresh flowers packed in refrigerated trucks. Each truck can carry `<capacity>` cubic meters of floral boxes, and flowers must be delivered within `<time_limit>` hours to prevent wilting. The task is to assign florists to depots, plan routes that meet time-sensitive freshness requirements, and ensure no truck exceeds its volume capacity while minimizing refrigeration costs.",
+        "tags": [
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Mountainous Internet Infrastructure Deployment",
+        "content": "A telecommunications company deploys broadband equipment to remote mountain villages (`<loc_customer>`) using `<loc_depot>` regional supply centers. Each truck has a `<capacity>` kg limit for carrying routers, cables, and hardware. Due to narrow mountain roads and inclement weather, all routes must be completed within `<time_limit>` hours to ensure team safety and return before darkness. The solution must cluster villages by depot proximity, respect vehicle limits, and minimize total driving distance to accelerate network rollout.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Marine Wildlife Rescue Operations",
+        "content": "Coastal wildlife rescue teams operate from multiple depots (`<loc_depot>`) along a shoreline to respond to stranded marine animals at various sites (`<loc_customer>`). Rescue boats have a maximum cargo capacity of `<capacity>` kg for carrying specialized equipment. Each rescue mission requires `<demand>` kg of gear (e.g., nets, medical supplies). Teams must return to their originating depot within `<time_limit>` hours to avoid tidal shifts or worsening animal conditions. Routes must balance workload across depots, avoid overloading boats, and ensure timely returns while minimizing total travel distance.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Agricultural Pesticide Distribution to Farmland",
+        "content": "Agricultural suppliers use regional depots (`<loc_depot>`) to deliver pesticides to farms (`<loc_customer>`). Each pesticide truck can carry up to `<capacity>` liters of chemical, and farms require `<demand>` liters of specific formulations. Pesticides degrade rapidly in heat, so drivers must complete deliveries within `<time_limit>` hours of departure to maintain efficacy. Vehicles must return to their starting depot to reload, and routes must optimize fuel use while respecting capacity and duration limits.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Telecommunications Tower Maintenance Logistics",
+        "content": "A telecom company maintains cell towers (`<loc_customer>`) across a region using technicians dispatched from multiple depots (`<loc_depot>`). Maintenance trucks carry spare parts and tools (max `<capacity>` kg). Each tower requires `<demand>` kg of equipment for repairs. Technicians must finish all repairs and return to their depot within an 8-hour shift (`<time_limit>`), avoiding overtime costs. Routes must prioritize high-priority towers while ensuring vehicle loads stay within limits.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "demand",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Winter Sports Equipment Redistribution",
+        "content": "A ski resort operator manages equipment depots (`<loc_depot>`) to supply mountain lodges (`<loc_customer>`) with skis, snowboards, and gear. Each delivery van has a capacity of `<capacity>` kg, and lodges demand `<demand>` kg of equipment. Vehicles must complete routes before sunset (`<time_limit>`) to ensure equipment arrives before nightfall and return safely to depots. The goal is to minimize travel distance while balancing workload among depots.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Airport Ground Support Equipment Logistics",
+        "content": "An airport authority redistributes ground support equipment (GSE) like baggage carts and fuel trucks from multiple depots (`<loc_depot>`) to gates (`<loc_customer>`). Each transport truck can carry up to `<capacity>` kg of GSE, and gates require `<demand>` kg worth of equipment. Vehicles must return to their depots within `<time_limit>` hours to meet flight schedule changes. Routes must prevent overloading trucks and ensure timely redistribution to avoid flight delays.  \n```",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Remote Mountain Research Station Resupply",
+        "content": "A logistics team must deliver critical supplies to isolated mountain research stations using helicopters from two alpine depots. Each helicopter has a maximum payload of **<capacity> kg** (C) and must return to its starting depot within **<time_limit> hours** (L) due to fuel constraints. Researchers at each station require specific quantities of equipment and provisions (**<demand> kg**). The challenge involves assigning stations to depots, optimizing flight paths to avoid exceeding weight limits, and ensuring all deliveries are completed before helicopters must return.",
+        "tags": [
+            "capacity",
+            "time_limit",
+            "demand"
+        ]
+    },
+    {
+        "title": "Coastal Seafood Delivery Logistics",
+        "content": "A seafood distributor operates from three coastal depots (**<loc_depot>**) and must deliver fresh catches to inland markets (**<loc_customer>**) daily. Refrigerated trucks can carry up to **<capacity> kg** (C) and must return to their origin depot within **<time_limit> hours** (L) to prevent spoilage. Each market demands a precise amount of seafood (**<demand> kg**). Routes must balance depot assignments, avoid overloading trucks, and prioritize time-sensitive deliveries.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "time_limit",
+            "demand"
+        ]
+    },
+    {
+        "title": "Urban Delivery Robot Network",
+        "content": "An autonomous delivery startup uses electric robots from five urban depots (**<loc_depot>**) to transport packages to neighborhoods (**<loc_customer>**). Each robot has a **<capacity> kg** payload limit (C) and a battery life restricting trips to **<time_limit> hours** (L). Customers require varying package weights (**<demand> kg**). The goal is to route robots efficiently, ensuring all deliveries are completed within battery life constraints while minimizing travel distance and adhering to depot-specific assignments.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "time_limit",
+            "demand"
+        ]
+    },
+    {
+        "title": "Emergency Oxygen Distribution During Health Crisis",
+        "content": "During a health emergency, oxygen plants (**<loc_depot>**) must deliver oxygen tanks to hospitals (**<loc_customer>**) in a region. Each delivery truck can carry **<capacity> tanks** (C) and must return to its assigned plant within **<time_limit> hours** (L) due to driver shift limits. Hospitals require urgent quantities (**<demand> tanks**). The challenge is coordinating depot assignments, optimizing routes, and ensuring no truck exceeds capacity or time constraints while meeting critical medical needs.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "time_limit",
+            "demand"
+        ]
+    },
+    {
+        "title": "Live Plant Distribution Across Greenhouses",
+        "content": "A nursery chain operates from four regional greenhouses (**<loc_depot>**) and must deliver live plants to garden centers (**<loc_customer>**). Trucks have a **<capacity> plant** limit (C) and must complete deliveries within **<time_limit> hours** (L) to maintain plant freshness. Each garden center specifies unique plant requirements (**<demand> plants**). The task is to assign depots to centers, plan routes avoiding overloads, and ensure timely deliveries to prevent wilt or damage.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "time_limit",
+            "demand"
+        ]
+    },
+    {
+        "title": "Disaster Debris Removal Post-Natural Disaster",
+        "content": "Following a hurricane, multiple regional waste management depots (`<loc_depot>`) must coordinate trucks to collect debris from affected neighborhoods (`<loc_customer>`). Each truck has a maximum load capacity of `<capacity>` tons and must return to its origin depot daily. The total route duration cannot exceed 8 hours to comply with labor regulations, ensuring efficient resource allocation across disaster zones while respecting vehicle capacity and driver work-hour limits.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Tourist Resort Linen Supply Network",
+        "content": "A chain of coastal resorts (`<loc_depot>`) operates laundry hubs to supply fresh linens to scattered vacation properties (`<loc_customer>`). Delivery vans can carry up to `<capacity>` kg of linens, and drivers must complete routes within a 10-hour shift to maintain service reliability. The challenge is to assign properties to the nearest depot, optimize routes without overloading trucks, and ensure all resorts receive fresh linens before peak guest check-in times.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Precision Agriculture Drone Spraying Operations",
+        "content": "Farm cooperatives deploy drone fleets from decentralized charging stations (`<loc_depot>`) to spray pesticides on crops (`<loc_customer>`). Each drone carries `<capacity>` liters of pesticide and has a battery life allowing only `<time_limit>` minutes of flight. Routes must ensure drones return to their assigned depot before battery depletion while covering all fields requiring `<demand>` liters of pesticide, balancing workload across depots and avoiding payload overflow.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "time_limit",
+            "demand"
+        ]
+    },
+    {
+        "title": "Rural School Textbook Distribution",
+        "content": "A provincial education authority uses regional warehouses (`<loc_depot>`) to deliver textbooks to rural schools (`<loc_customer>`). School buses with `<capacity>` cubic meters of storage capacity must complete deliveries within a single day\u2019s drive (`<time_limit>` hours). The goal is to minimize fuel costs by clustering schools near their assigned depot, ensuring no bus exceeds its load limit while reaching remote educational sites before the start of the academic term.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Emergency Blood Transfusion Logistics",
+        "content": "A network of hospitals (`<loc_depot>`) must exchange blood units (`<demand>` liters) with one another during a public health crisis. Refrigerated vehicles cannot carry more than `<capacity>` liters and must return to their origin hospital within `<time_limit>` hours to preserve blood integrity. Routes must prioritize urgent transfusion requests while adhering to depot-specific vehicle capacities and strict time constraints to ensure blood remains viable for patients.",
+        "tags": [
+            "loc_depot",
+            "demand",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Livestock Feed Delivery to Remote Ranches with Multiple Feed Depots",
+        "content": "A livestock company operates across a vast rural region, maintaining several feed depots (`<loc_depot>`) to supply remote ranches (`<loc_customer>`). Each depot dispatches trucks with a maximum load capacity of `<capacity>` tons. Ranches require specific `<demand>` amounts of feed to sustain their herds. Routes must ensure trucks return to their origin depot within `<time_limit>` hours to avoid overworking drivers and guarantee timely feed distribution. The challenge is to balance depot assignments, prevent overloading, and minimize total travel distance while respecting strict time constraints.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Satellite Dish Maintenance in Remote Areas with Multiple Service Bases",
+        "content": "A telecommunications firm maintains satellite dishes in remote locations (`<loc_customer>`) using service crews based at multiple regional depots (`<loc_depot>`). Each service vehicle carries a limited capacity (`<capacity>`) of tools and spare parts. Technicians must complete all maintenance tasks within a `<time_limit>`-hour shift, returning to their starting depot to recharge equipment and restock supplies. The problem involves optimizing depot-to-customer assignments, ensuring no vehicle exceeds its cargo limit, and minimizing total travel distance across all routes.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Electric Scooter Redistribution Across City Zones with Multiple Hubs",
+        "content": "An e-scooter rental platform uses `<loc_depot>` hubs distributed across a city to rebalance scooters between high-demand and low-demand zones (`<loc_customer>`). Each redistribution van can carry up to `<capacity>` scooters at a time. To ensure scooters are available for peak hours, all routes must be completed within `<time_limit>` hours, requiring vans to return to their origin hub. The goal is to plan efficient pickup/delivery routes that respect vehicle capacity limits, prioritize high-demand areas, and minimize idle time between shifts.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Mining Equipment Delivery to Remote Sites with Multiple Depots",
+        "content": "A mining corporation relies on `<loc_depot>` depots to deliver heavy machinery and spare parts to isolated mine sites (`<loc_customer>`). Trucks departing from these depots have a maximum load capacity of `<capacity>` tons. Equipment deliveries must be completed within `<time_limit>` hours to avoid halting mining operations, necessitating rapid returns to depots. The challenge is to assign routes that cluster sites near their origin depot, avoid overloading vehicles, and minimize fuel consumption while adhering to strict duration limits.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "LPG Cylinder Delivery to Urban Households with Multiple Depots",
+        "content": "A gas utility company manages `<loc_depot>` distribution centers to supply liquefied petroleum gas (LPG) cylinders to urban households (`<loc_customer>`). Delivery trucks can carry up to `<capacity>` cylinders per trip and must return to their starting depot within a `<time_limit>`-hour window to maintain service availability. The problem requires optimizing routes that cover all households with `<demand>` cylinder requests, ensuring no truck exceeds its capacity, and minimizing total travel distance while respecting time constraints to meet customer demand efficiently.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "time_limit",
+            "demand"
+        ]
+    },
+    {
+        "title": "Wind Turbine Maintenance Logistics Across Multiple Service Hubs",
+        "content": "A renewable energy provider operates wind farms across a large region, with maintenance depots located at `<loc_depot>`. Each depot dispatches service trucks equipped with limited capacity (`<capacity> kg`) to repair turbines scattered at `<loc_customer>`. Each turbine requires spare parts totaling `<demand> kg`. Routes must ensure all turbines are serviced without overloading trucks, while each vehicle completes its tour and returns to its starting depot within a maximum `<time_limit>` hour timeframe to comply with crew work regulations and equipment battery limits.",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "loc_customer",
+            "demand",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Urban Electric Vehicle Charging Infrastructure Deployment",
+        "content": "The city government plans to install EV charging stations at `<num_customer>` strategic locations (`<loc_customer>`). Multiple depots (`<loc_depot>`) store charging units, which trucks (capacity `<capacity>`) transport. Each station requires `<demand>` units. To maximize daily deployment, all vehicles must return to their depots by the end of an 8-hour workday (`<time_limit>`), ensuring efficient route planning that respects vehicle capacities and time constraints.",
+        "tags": [
+            "num_customer",
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "demand",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Post-Disaster Temporary Shelter Material Delivery",
+        "content": "After a catastrophic flood, relief agencies use `<loc_depot>` depots to distribute emergency shelter kits to `<num_customer>` affected communities (`<loc_customer>`). Each truck can carry `<capacity>` kits, and each community needs `<demand>` kits. To prioritize rapid aid, all delivery routes must be completed within `<time_limit>` hours, ensuring vehicles return to depots for immediate reassignment without exceeding capacity limits.",
+        "tags": [
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "capacity",
+            "demand",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Satellite Dish Installation in Remote Rural Areas",
+        "content": "A telecommunications firm must install satellite dishes at `<num_customer>` rural locations (`<loc_customer>`) using `<loc_depot>` regional depots. Each installation truck can carry `<capacity>` dishes, and each site requires `<demand>` dishes. Technicians must finish all installations and return to their origin depot within `<time_limit>` hours to meet contractual deadlines and avoid overnight stays in remote areas.",
+        "tags": [
+            "num_customer",
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "demand",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Reforestation Sapling Distribution to Conservation Sites",
+        "content": "A conservation organization operates multiple nurseries (`<loc_depot>`) supplying saplings to `<num_customer>` reforestation sites (`<loc_customer>`). Each truck has a `<capacity>` sapling limit, and each site needs `<demand>` saplings. To ensure sapling viability, all deliveries must be completed within `<time_limit>` hours\u2014before heat exposure jeopardizes plant survival\u2014while optimizing routes to minimize nursery-to-site travel distances.",
+        "tags": [
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "capacity",
+            "demand",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Remote Solar Panel Installation Logistics",
+        "content": "Solar energy companies operate from multiple regional depots to supply remote villages with solar panels. Each truck has a maximum capacity (C) of panels it can carry. Villages scattered across mountainous regions have specific solar panel requirements (demand). To ensure timely installation, all delivery routes must return to their originating depot within an 8-hour working day (L), avoiding overnight stays. The challenge is to assign villages to depots, optimize truck loads without exceeding capacity, and minimize total travel distance while adhering to daily duration limits.",
+        "tags": []
+    },
+    {
+        "title": "Post-Earthquake Medical Equipment Redistribution",
+        "content": "Following an earthquake, medical aid organizations deploy from multiple disaster response depots to deliver critical equipment to hospitals. Each vehicle (capacity C) carries medical supplies (e.g., surgical kits, medicines) to affected regions. Due to fuel shortages and crew fatigue limits, all delivery routes must return to their starting depot within 12 hours (L). The problem requires assigning hospitals to depots, ensuring equipment loads stay under capacity, and minimizing total travel distance while meeting urgent needs within time constraints.",
+        "tags": []
+    },
+    {
+        "title": "Agricultural Seed Distribution Across Rural Regions",
+        "content": "Agricultural cooperatives use multiple regional depots to distribute seasonal seeds to rural farming communities. Seed trucks (capacity C) must deliver precise quantities (demand) to each farm. To maintain planting schedules, all routes must be completed within a single working day (L), ensuring trucks return to their depots before dusk. The challenge involves balancing depot assignments, optimizing seed loads without overfilling trucks, and minimizing fuel consumption across the network.",
+        "tags": []
+    },
+    {
+        "title": "Mountain Lodge Supplies via Helicopter Logistics",
+        "content": "Luxury mountain lodges in rugged terrain are supplied by helicopters operating from several base depots. Each helicopter (capacity C) transports perishable goods and equipment to remote lodges. Due to limited fuel reserves and safety regulations, all flights must return to their originating depot within 4 hours (L). The task is to allocate lodges to depots, plan efficient flight paths that stay under weight limits, and minimize total flight distance while adhering to strict time constraints.",
+        "tags": []
+    },
+    {
+        "title": "Wildlife Reserve Conservation Supply Drops",
+        "content": "Conservation agencies manage wildlife reserves in remote regions using multiple supply depots. Supply trucks (capacity C) deliver food, equipment, and research materials to field stations. To avoid disrupting animal behavior, all routes must be completed within daylight hours (L), requiring return to depots before sunset. The problem involves assigning stations to depots, ensuring cargo loads do not exceed truck capacities, and optimizing travel routes to minimize environmental impact and fuel usage.",
+        "tags": []
+    },
+    {
+        "title": "Coastal Cruise Ship Provisions Delivery",
+        "content": "A cruise line operates multiple supply depots (`<loc_depot>`) along a coastline to restock ships anchored at scenic coastal locations (`<loc_customer>`). Each supply boat has a maximum cargo capacity of `<capacity>` tons to carry food, fuel, and amenities. Due to tidal constraints and crew shift schedules, each boat must return to its home depot within `<time_limit>` hours after departure. The challenge is to allocate ships to depots, plan efficient routes, and ensure no vessel exceeds its capacity while minimizing total travel distance.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Offshore Wind Farm Maintenance Logistics",
+        "content": "Maintenance crews based at `<loc_depot>` harbors must service wind turbines scattered across marine zones (`<loc_customer>`). Each service vessel carries specialized equipment (limited to `<capacity>` cubic meters) and must return to its origin depot within `<time_limit>` hours due to fuel restrictions and tidal window constraints. Routes must cluster turbines near their assigned depot to avoid overloading vehicles and ensure timely returns.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Arctic Research Outpost Resupply Network",
+        "content": "A network of `<loc_depot>` supply bases in the Arctic coordinates deliveries to remote research stations (`<loc_customer>`). Snowmobile convoys and ice-breaking trucks have limited cargo space (`<capacity>` kg) and must complete round trips within `<time_limit>` days before ice conditions worsen. The problem requires balancing depot assignments, avoiding vehicle overloads, and optimizing routes to reach all outposts amid unpredictable weather.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Mountain Trail Maintenance Crew Supplies",
+        "content": "A national park\u2019s maintenance division uses `<loc_depot>` base camps to supply crews repairing trails in rugged terrain (`<loc_customer>`). All-terrain vehicles (ATVs) carry tools and materials (max `<capacity>` kg) but must return to their starting depot within `<time_limit>` hours to avoid being stranded after sunset or sudden weather changes. Routes must prioritize steep trails requiring heavier equipment while respecting vehicle limits.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Remote Mining Camp Equipment Redistribution",
+        "content": "Mining companies rely on `<loc_depot>` warehouses to deliver heavy machinery parts and safety gear to isolated mining camps (`<loc_customer>`). Helicopters and rugged trucks, each with a `<capacity>` kg limit, must complete their missions and return to base within `<time_limit>` hours due to equipment battery life and regulatory flight windows. The solution must minimize fuel costs while ensuring all camps receive critical supplies without overloading any vehicle.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Coastal Oil Spill Cleanup Logistics",
+        "content": "Following an oil spill along a coastline, multiple regional depots (`<loc_depot>`) must distribute cleanup equipment (booms, absorbent pads) to polluted beaches (`<loc_customer>`). Each vehicle has a maximum capacity (`<capacity>`) for gear transport, and each site requires `<demand>` units of supplies. Cleanup crews must complete deliveries within a critical `<time_limit>` hour window to minimize ecological damage. Routes must minimize total distance while ensuring vehicles return to their depots on time and without overloading.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Refugee Camp Medical Supply Distribution",
+        "content": "International aid agencies operate from `<loc_depot>` depots to deliver medical supplies to scattered refugee camps (`<loc_customer>`). Each vehicle carries up to `<capacity>` kg of medical kits, and camps require `<demand>` kg. With security risks escalating, all routes must conclude within `<time_limit>` hours of departure to ensure timely delivery and avoid unsafe travel periods. The goal is to optimize routes for minimal fuel use while adhering to depot assignments and capacity limits.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Urban Food Bank Network Resupply",
+        "content": "A network of `<loc_customer>` urban food banks relies on `<loc_depot>` regional depots to distribute perishable groceries. Each truck has a `<capacity>` kg limit, and food banks demand `<demand>` kg of supplies. To prevent spoilage, deliveries must be completed within `<time_limit>` hours of departure. Routes must prioritize shortest paths while ensuring all vehicles return to their starting depots within the time window and without exceeding capacity.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "demand",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Music Festival Equipment Deployment",
+        "content": "A multi-venue music festival requires `<loc_depot>` regional depots to deliver equipment (`<capacity>` kg per truck) to `<loc_customer>` stage locations. Each venue needs `<demand>` kg of gear, and setup deadlines (`<time_limit>` hours) before the event start must be met. Routes must balance workload across depots, avoid overloading vehicles, and minimize travel distance to ensure timely deployment.",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "loc_customer",
+            "demand",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Solar Farm Construction Logistics",
+        "content": "A solar energy company uses `<loc_depot>` warehouses to transport solar panels (`<capacity>` panels per truck) to `<loc_customer>` construction sites. Each site requires `<demand>` panels, and strict deadlines (`<time_limit>` days) apply to meet renewable energy targets. Routes must minimize travel distance while ensuring all trucks return to their depots on schedule and without exceeding capacity limits.",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "loc_customer",
+            "demand",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Maritime Distress Rescue Operations",
+        "content": "Coast guard teams operate from multiple regional stations (`<loc_depot>`) to rescue stranded ships and crews in distress. Rescue boats have a maximum capacity (`<capacity>`) for carrying lifeboats, medical supplies, and personnel. Each distress call at `<loc_customer>` specifies the required aid quantity (`<demand>`). Rescue missions must complete within `<time_limit>` hours to ensure victim safety, and boats must return to their originating depot after each rescue. Routes must balance workload across depots while adhering to capacity and time constraints.",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "loc_customer",
+            "demand",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Mountain Climber Evacuation Support",
+        "content": "A network of mountain rescue bases (`<loc_depot>`) serves hikers and climbers in distress across remote peaks (`<loc_customer>`). Rescue teams use all-terrain vehicles with a `<capacity>` limit for carrying stretchers, medical kits, and survival gear. Evacuations must be completed within `<time_limit>` hours before nightfall or worsening weather, and vehicles must return to their assigned depot. The challenge is to route teams efficiently to meet urgent demands (`<demand>`) while avoiding overloading equipment and respecting time limits.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "time_limit",
+            "demand"
+        ]
+    },
+    {
+        "title": "Offshore Oil Platform Supplies Redistribution",
+        "content": "Offshore oil platforms (`<loc_customer>`) rely on supply ships departing from coastal depots (`<loc_depot>`) to deliver fuel, equipment, and provisions. Each ship has a cargo capacity (`<capacity>`) and must return to its starting depot within `<time_limit>` hours due to tidal restrictions and fuel limitations. The platforms require specific `<demand>` amounts of supplies, and routes must minimize travel distance while ensuring no vessel exceeds its capacity or time window.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "time_limit",
+            "demand"
+        ]
+    },
+    {
+        "title": "Urban Emergency Power Generator Deployment",
+        "content": "After a citywide blackout, emergency generators must be distributed from multiple energy depots (`<loc_depot>`) to critical facilities (`<loc_customer>`), such as hospitals and water treatment plants. Delivery trucks have a `<capacity>` limit for carrying generators and must return to their origin depot within `<time_limit>` hours to maintain fuel efficiency and crew safety. Each facility requires a `<demand>` number of generators, and routes must prioritize high-priority locations while adhering to capacity and duration limits.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "time_limit",
+            "demand"
+        ]
+    },
+    {
+        "title": "High-Value Artifact Transportation Network",
+        "content": "A museum consortium uses armored vehicles from several secure warehouses (`<loc_depot>`) to transport priceless artifacts (`<demand>`) between exhibition venues (`<loc_customer>`). Each vehicle has a `<capacity>` limit for artifact weight and volume. To minimize exposure risk, routes must be completed within `<time_limit>` hours, and vehicles must return to their starting depot. The challenge is to plan secure, efficient paths that balance depot workloads and ensure artifacts arrive undamaged without exceeding time or capacity constraints.",
+        "tags": [
+            "loc_depot",
+            "demand",
+            "loc_customer",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Cross-Continental Live Animal Relocation Network",
+        "content": "A conservation organization relocates endangered species between wildlife reserves located across multiple regions. Vehicles departing from regional depots (<loc_depot>) must transport live animals (each requiring <demand> m\u00b3 of space) to receiving facilities (<loc_customer>). Each truck has a maximum cargo capacity of <capacity> tons and must return to its origin depot within <time_limit> hours to prevent animal stress. Routes must balance depot workloads while ensuring no vehicle exceeds time or capacity limits during cross-country transfers.",
+        "tags": [
+            "loc_depot",
+            "demand",
+            "loc_customer",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Urban Snow Removal with Multiple Municipal Depots",
+        "content": "A city\u2019s winter operations team manages snowplows from three depots (<loc_depot>) to clear roads at priority locations (<loc_customer>). Each plow can carry up to <capacity> tons of snow-removal equipment and must return to its starting depot within <time_limit> hours to refuel and restock. Routes must ensure all critical roadways are cleared before additional snowfall, while respecting vehicle capacity limits for equipment and fuel.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Offshore Wind Farm Emergency Equipment Deployment",
+        "content": "A renewable energy company deploys maintenance teams from coastal depots (<loc_depot>) to repair turbines at remote offshore wind farms (<loc_customer>). Each service vessel has a cargo capacity of <capacity> cubic meters for equipment and must return within <time_limit> hours due to unpredictable weather windows. The fleet must distribute workload across depots while ensuring no vessel exceeds its capacity or operational time limit.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Film Production Equipment Redistribution Network",
+        "content": "A film studio\u2019s logistics team delivers heavy production equipment (cameras, lighting, sets) from regional warehouses (<loc_depot>) to remote filming locations (<loc_customer>). Each truck can carry <capacity> kg of gear and must complete deliveries within <time_limit> hours to avoid production delays. Multiple depots are used to minimize transit distances, but routes must avoid overloading vehicles and ensure all equipment arrives before scheduled filming starts.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Satellite Disaster Communication Hub Resupply",
+        "content": "During a crisis, aid agencies distribute emergency communication equipment from regional hubs (<loc_depot>) to isolated disaster zones (<loc_customer>). Each vehicle can carry <capacity> kg of satellite dishes, radios, and generators, and must return within <time_limit> hours to maintain supply chains. The challenge is to balance depot assignments, avoid overloading trucks, and ensure all zones receive critical equipment before communication infrastructure fails.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Winter Heating Oil Delivery Network",
+        "content": "In regions with harsh winters, heating oil must be delivered to residential and commercial customers from multiple distribution centers (`<loc_depot>`). Each vehicle has a maximum capacity of `<capacity>` liters and must return to its origin depot within `<time_limit>` hours to ensure continuous service. The demand at each customer location (`<loc_customer>`) varies based on tank size and usage rates. Routes must balance depot workloads, avoid overloading trucks, and prioritize high-risk households (e.g., elderly residents) while minimizing total travel distance.",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "time_limit",
+            "loc_customer"
+        ]
+    },
+    {
+        "title": "Offshore Wind Farm Turbine Blade Repair Logistics",
+        "content": "Maintenance crews must service damaged turbine blades at offshore wind farms (`<loc_customer>`) using vessels dispatched from multiple coastal depots (`<loc_depot>`). Each vessel carries a limited capacity of `<capacity>` kg for tools and replacement parts. Repair teams must complete their tasks and return to their home depot within `<time_limit>` hours due to tidal restrictions and crew safety protocols. Routes must cluster farms near depots to respect time limits while fulfilling `<demand>` repair material requirements per site.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "time_limit",
+            "demand"
+        ]
+    },
+    {
+        "title": "Smart City Sensor Maintenance Network",
+        "content": "A city deploys environmental sensors (`<loc_customer>`) to monitor air quality, traffic, and infrastructure health. Maintenance vehicles from distributed depots (`<loc_depot>`) must collect data and replace batteries/sensors. Each vehicle can carry `<capacity>` sensors at a time and must return to their depot within `<time_limit>` hours to avoid disrupting real-time data collection. Routes must ensure all sensors are serviced periodically without exceeding vehicle capacity or time constraints.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Rural Telemedicine Equipment Redistribution",
+        "content": "A healthcare nonprofit operates multiple regional depots (`<loc_depot>`) to supply portable telemedicine kits to remote clinics (`<loc_customer>`). Each vehicle has a `<capacity>` limit for carrying kits, medical devices, and supplies. Clinics require `<demand>` units of equipment based on patient volume. Vehicles must complete deliveries and return within `<time_limit>` hours to ensure equipment is available for follow-up visits, especially in regions with limited connectivity.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Airport Ground Support Equipment Redistribution During Peak Seasons",
+        "content": "During holiday travel surges, an airport\u2019s ground support teams redistribute luggage carts, baggage tugs, and refueling equipment between terminals and depots (`<loc_depot>`). Vehicles transporting equipment have a `<capacity>` limit and must return within `<time_limit>` hours to meet shifting demand peaks. Each terminal (`<loc_customer>`) specifies `<demand>` units of equipment needed to handle flight schedules, requiring efficient route planning across multiple depots to avoid delays.",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "time_limit",
+            "loc_customer",
+            "demand"
+        ]
+    },
+    {
+        "title": "Cross-Regional Water Tanker Distribution During Severe Drought",
+        "content": "A network of regional water depots (`<loc_depot>`) must deliver emergency freshwater supplies to drought-stricken communities (`<loc_customer>`). Each tanker truck has a maximum capacity of `<capacity>` liters and must return to its origin depot after completing deliveries. Routes must be planned to ensure all villages receive their required `<demand>` volume of water while adhering to strict duration limits (`<time_limit>` hours) to prevent water spoilage in unrefrigerated tanks. The challenge lies in balancing depot workloads and avoiding overloading vehicles while ensuring timely deliveries to remote arid regions.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "High-Altitude Mountain Base Camp Gear Redistribution",
+        "content": "Adventure tour operators use multiple depots (`<loc_depot>`) located at different mountain bases to supply climbing gear to remote high-altitude camps (`<loc_customer>`). Each vehicle can carry up to `<capacity>` kilograms of equipment, and camps demand `<demand>` kg of gear for seasonal expeditions. Routes must account for treacherous terrain and weather windows, requiring completion within `<time_limit>` hours to avoid delays caused by sudden snowstorms. Vehicles must return to their originating depot, necessitating efficient depot-to-camp assignment strategies.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Urban Vertical Farm Seedling Delivery Network",
+        "content": "A multi-depot (`<loc_depot>`) urban vertical farming consortium delivers delicate seedlings to rooftop farms (`<loc_customer>`). Each refrigerated van has a `<capacity>` kg limit to maintain freshness, and farms require `<demand>` kg of seedlings. Routes must be completed within `<time_limit>` hours to prevent temperature fluctuations damaging the plants. The problem requires optimizing depot-to-farm assignments while minimizing total travel distance and ensuring no vehicle exceeds its capacity or time constraints.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Offshore Oil Rig Emergency Maintenance Logistics",
+        "content": "An offshore oil company operates multiple supply depots (`<loc_depot>`) along coastlines to deliver critical maintenance parts to rigs (`<loc_customer>`). Each barge has a `<capacity>` ton payload capacity and must return to its home depot within `<time_limit>` hours to comply with maritime safety regulations. Rigs demand `<demand>` tons of specialized equipment, and routes must avoid congested shipping lanes while ensuring timely repairs to prevent operational shutdowns.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "time_limit",
+            "demand"
+        ]
+    },
+    {
+        "title": "International Art Exhibit Artifact Transport",
+        "content": "A global art consortium coordinates `<loc_depot>` regional hubs to transport fragile art pieces (`<demand>` kg each) between museums (`<loc_customer>`). Each climate-controlled truck can carry up to `<capacity>` kg of artifacts and must return to its origin depot within `<time_limit>` hours to prevent humidity/damage. The logistics team must balance depot workloads, avoid overloading vehicles, and ensure all exhibits arrive in time for synchronized opening dates across cities.\n```",
+        "tags": [
+            "loc_depot",
+            "demand",
+            "loc_customer",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Coral Reef Restoration Material Distribution",
+        "content": "Marine conservation teams operate from multiple coastal depots (<loc_depot>) to deliver coral fragments and restoration materials to damaged reef sites (<loc_customer>). Each boat has a cargo capacity of `<capacity>` kg for transporting fragile supplies. Divers must complete their work before the boat\u2019s oxygen supply runs out, requiring return to the depot within `<time_limit>` hours. Routes must minimize travel distance while ensuring all reefs receive materials without overloading vessels, balancing workload across depots.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Arctic Research Outpost Equipment Resupply",
+        "content": "Scientific research bases in the Arctic (<loc_depot>) coordinate to supply remote weather stations (<loc_customer>) with heavy gear like sensors and generators. Snowmobile convoys carry `<capacity>` kg of equipment but must return to their origin depot within `<time_limit>` hours to avoid extreme cold draining fuel. Routes must optimize depot assignments to prevent overloading trucks and ensure all stations are serviced efficiently.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Urban EV Charging Station Maintenance Logistics",
+        "content": "A city\u2019s network of EV charging hubs (<loc_depot>) dispatches maintenance trucks to repair malfunctioning stations (<loc_customer>). Each vehicle carries `<capacity>` kg of spare parts and tools. To ensure continuous service, trucks must return to their starting depot within `<time_limit>` hours to recharge. Routes must balance depot workloads and minimize travel costs while adhering to strict time and capacity constraints.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Mountain Weather Station Equipment Redistribution",
+        "content": "Mountain observatories use multiple base depots (<loc_depot>) to deliver equipment to remote weather stations (<loc_customer>). Helicopters carry `<capacity>` kg of sensors and instruments but face strict `<time_limit>`-hour return windows due to altitude-related fuel limits. Routes must prioritize critical stations, avoid overloading payloads, and ensure safe round-trip durations from the nearest depot.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Conflict Zone Medical Aid Distribution",
+        "content": "Medical NGOs operate from multiple field depots (<loc_depot>) in conflict zones to deliver emergency supplies (<demand> kg per location) to besieged areas (<loc_customer>). Each convoy has a `<capacity>` kg payload limit and must return to its origin depot within `<time_limit>` hours for security reasons. Routes must prioritize high-need locations while ensuring no vehicle exceeds capacity or duration limits, coordinating efficiently across depots.",
+        "tags": [
+            "loc_depot",
+            "demand",
+            "loc_customer",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Arctic Research Supply Logistics with Distributed Bases",
+        "content": "A network of Arctic research bases (`<loc_depot>`) must deliver scientific equipment and supplies to remote field stations (`<loc_customer>`). Each vehicle has a maximum cargo capacity of `<capacity>` kg to carry equipment demands `<demand>`. Routes must ensure vehicles return to their originating depot before extreme weather conditions set in (within `<time_limit>` hours), avoiding stranded teams while covering all stations efficiently.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Urban Food Bank Emergency Resupply with Multiple Distribution Centers",
+        "content": "During a food shortage crisis, `<loc_depot>` urban food banks must redistribute perishable groceries to `<num_customer>` community centers. Vehicles (capacity `<capacity>` tons) must complete deliveries within an 8-hour window (`<time_limit>`) to maintain food safety. The challenge is to balance depot workloads, avoid overloading trucks, and ensure all centers receive their required `<demand>` quantities before spoilage.",
+        "tags": [
+            "loc_depot",
+            "num_customer",
+            "capacity",
+            "time_limit",
+            "demand"
+        ]
+    },
+    {
+        "title": "High-Altitude Weather Station Equipment Redistribution Across Mountain Ranges",
+        "content": "Mountain meteorological agencies operate from `<loc_depot>` depots to service weather stations (`<loc_customer>`) on rugged peaks. Helicopters with `<capacity>` kg payload capacity must transport equipment (`<demand>` kg per station) while adhering to strict return deadlines (`<time_limit>` hours) to avoid nighttime flying restrictions. Routes must cluster stations near each depot to respect safety and time constraints.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Global Satellite Tracking Station Equipment Redistribution",
+        "content": "A space agency uses `<loc_depot>` global tracking stations to redistribute sensitive satellite components to remote launch sites (`<loc_customer>`). Each vehicle can carry up to `<capacity>` kg of equipment (`<demand>` per site) and must complete its route within `<time_limit>` hours to align with critical launch windows. Depot assignments and route timing must be optimized to prevent delays in satellite deployment.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Coastal Marine Conservation Gear Deployment with Multiple Coastal Depots",
+        "content": "Marine conservation teams from `<loc_depot>` coastal bases deploy monitoring gear to protected marine areas (`<loc_customer>`). Boats (capacity `<capacity>` m\u00b3) carry `<demand>` quantities of sensors and buoys but must return to their starting depot before tidal restrictions (`<time_limit>` hours). Routes must avoid overlapping zones and ensure all conservation sites are equipped without exceeding vehicle capacities.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Polar Research Station Equipment Redistribution",
+        "content": "A network of Arctic research stations (<loc_depot>) must redistribute specialized scientific equipment (<demand> kg) to remote field teams (<loc_customer>) via tracked vehicles. Each vehicle has a maximum load capacity of `<capacity>` tons and must return to its origin depot within `<time_limit>` hours before extreme cold compromises equipment functionality. Routes must balance depot workloads while ensuring no vehicle exceeds its capacity or operational duration limits.",
+        "tags": [
+            "loc_depot",
+            "demand",
+            "loc_customer",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Offshore Wind Turbine Component Delivery",
+        "content": "Multiple coastal depots (<loc_depot>) supply wind turbine components (<demand> tons) to offshore installation sites (<loc_customer>). Heavy-lift barges (capacity `<capacity>` tons) must complete round trips within `<time_limit>` hours to avoid delays caused by tidal restrictions. Each depot prioritizes its assigned zones, requiring careful assignment of sites to depots while respecting barge capacities and voyage duration limits.",
+        "tags": [
+            "loc_depot",
+            "demand",
+            "loc_customer",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Urban Emergency Shelter Supplies Deployment",
+        "content": "After a sudden disaster, municipal authorities coordinate `<loc_depot>` warehouses to deliver essentials (<demand> units) to temporary shelters (<loc_customer>). Delivery trucks (capacity `<capacity>` pallets) must return to their assigned depot within `<time_limit>` hours to maximize rescue operations efficiency. Routes must minimize travel time while adhering to vehicle load limits and ensuring equitable resource distribution across all shelters.",
+        "tags": [
+            "loc_depot",
+            "demand",
+            "loc_customer",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Wildlife Reserve Conservation Drone Logistics",
+        "content": "A conservation organization operates `<loc_depot>` drone hubs to deliver monitoring equipment (<demand> kg) to biodiversity hotspots (<loc_customer>). Solar-powered drones (capacity `<capacity>` kg) have a maximum flight duration of `<time_limit>` hours before needing recharge. Routes must assign each drone to its home depot, avoid overloading payloads, and ensure all sites are serviced within operational limits to maintain real-time ecological surveillance.",
+        "tags": [
+            "loc_depot",
+            "demand",
+            "loc_customer",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Cultural Heritage Artifact Transport Network",
+        "content": "A consortium of museums uses `<loc_depot>` regional storage centers to redistribute fragile artifacts (<demand> kg) for international exhibitions. Temperature-controlled trucks (capacity `<capacity>` kg) must complete deliveries and return to their origin depot within `<time_limit>` hours to prevent environmental damage. The logistics must balance depot assignments, avoid overloading vehicles, and ensure timely artifact exchanges across multiple cultural institutions.",
+        "tags": [
+            "loc_depot",
+            "demand",
+            "capacity",
+            "time_limit"
+        ]
+    }
+]

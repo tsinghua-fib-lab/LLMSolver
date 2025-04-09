@@ -1,0 +1,986 @@
+[
+    {
+        "title": "E-commerce Returns and Delivery Integration Problem",
+        "content": "An online retailer operates multiple regional warehouses (`<loc_depot>`) to manage both outgoing deliveries and incoming returns. Trucks with `<capacity>` capacity must service `<num_customer>` locations (`<loc_customer>`), where some customers require deliveries (`<demand_linehaul>`) while others have returned items to pick up (`<demand_backhaul>`). The challenge is to design routes that allow flexible delivery-pickup sequences, ensuring no truck exceeds its capacity. The goal is to minimize total travel distance while balancing workload across depots and handling all customer requests efficiently.",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "num_customer",
+            "loc_customer",
+            "demand_linehaul",
+            "demand_backhaul"
+        ]
+    },
+    {
+        "title": "Curbside Recycling Bin Service Optimization",
+        "content": "A waste management company deploys trucks from `<loc_depot>` depots to service neighborhoods (`<loc_customer>`). Each truck carries empty recycling bins (`<demand_linehaul>`) to replace filled ones and collects the filled bins (`<demand_backhaul>`). The capacity constraint (`<capacity>`) must accommodate both deliveries and pickups in any order, depending on route efficiency. The aim is to optimize routes to minimize fuel use while ensuring all bins are swapped and collected without overloading vehicles.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Furniture Delivery and Recycling Pickup Problem",
+        "content": "A furniture retailer with regional distribution centers (`<loc_depot>`) delivers new items to customers (`<demand_linehaul>`) and collects old furniture for recycling (`<demand_backhaul>`). Trucks must balance the weight of outgoing deliveries and incoming pickups, adhering to their `<capacity>` limits. Routes must be planned to serve all `<num_customer>` locations efficiently, starting and ending at their assigned depot, while avoiding capacity violations and reducing overall travel costs.",
+        "tags": [
+            "loc_depot",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity",
+            "num_customer"
+        ]
+    },
+    {
+        "title": "Bulk Grocery Delivery with Reusable Container Collection",
+        "content": "A grocery cooperative uses `<loc_depot>` hubs to deliver perishables in reusable crates (`<demand_linehaul>`) and collect empty crates from households (`<demand_backhaul>`). Each truck (`<capacity>`) must handle mixed tasks, allowing deliveries and pickups in any sequence as long as capacity is not exceeded. The goal is to design routes that minimize distance traveled while ensuring all `<num_customer>` locations receive fresh supplies and return containers are efficiently retrieved.",
+        "tags": [
+            "loc_depot",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity",
+            "num_customer"
+        ]
+    },
+    {
+        "title": "IT Equipment Deployment and Retrieval for Corporations",
+        "content": "An IT logistics firm services multiple enterprise clients (`<loc_customer>`) from `<loc_depot>` warehouses. Trucks transport new servers and computers (`<demand_linehaul>`) while also retrieving outdated hardware (`<demand_backhaul>`). Vehicles must manage mixed loads without exceeding `<capacity>`, balancing the weight of deliveries and pickups. The problem requires optimizing routes across depots to reduce operational costs and ensure all client requests are fulfilled within a single trip.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Appliance Repair and Part Recycling Network",
+        "content": "A nationwide appliance repair service operates from multiple regional depots (`<loc_depot>`). Technicians need to deliver replacement parts to customers\u2019 homes (`<loc_customer>`) while also collecting broken components for recycling. Each service truck has a `<capacity>` limit for carrying both new parts (linehaul) and\u5e9f\u65e7\u56de\u6536 (backhaul). The company must plan routes that balance depot assignments, ensure no truck overloads, and optimize fuel use across all regions.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Event Logistics for Temporary Infrastructure",
+        "content": "A company specializing in event setups manages `<num_customer>` festivals, trade shows, and conferences. They dispatch trucks from multiple regional warehouses (`<loc_depot>`) to deliver tents, stages, and equipment (linehaul) and later retrieve the items (backhaul) after the events. Each truck\u2019s `<capacity>` must accommodate both outbound deliveries and inbound returns without exceeding limits, while minimizing cross-regional travel costs.",
+        "tags": [
+            "num_customer",
+            "loc_depot",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Municipal Tool Redistribution and Waste Collection",
+        "content": "A city\u2019s public works department uses `<loc_depot>` facilities to distribute maintenance tools to crews fixing potholes, streetlights, and infrastructure (`<loc_customer>`). Simultaneously, crews return damaged tools and collect hazardous waste materials (backhaul) for disposal. Trucks must handle mixed loads of tool deliveries and waste pickups within their `<capacity>`, ensuring efficient depot-specific route planning to avoid overloading.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Agricultural Supply Delivery and Crop Byproduct Collection",
+        "content": "A farming cooperative operates from `<loc_depot>` distribution centers to supply fertilizers and seeds to `<num_customer>` farms (`<loc_customer>`). In the same routes, trucks collect crop residues or surplus produce (backhaul) for biofuel processing. Each vehicle\u2019s `<capacity>` must manage both outbound supplies and inbound agricultural byproducts, balancing depot assignments to minimize regional logistics costs and environmental impact.",
+        "tags": [
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Library Book Redistribution and Returned Material Recovery",
+        "content": "A library system with multiple branch depots (`<loc_depot>`) sends trucks to resupply bookmobiles and remote libraries (`<loc_customer>`) with new titles (linehaul) while retrieving returned books (backhaul). Vehicles must prioritize load balancing to avoid exceeding `<capacity>` limits, ensuring all materials are redistributed efficiently without requiring time-sensitive pickups or deliveries.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Construction Equipment Rental and Return Logistics",
+        "content": "A construction equipment rental company operates multiple depots (`<loc_depot>`) across a region to serve job sites (`<loc_customer>`). Each vehicle has a maximum capacity of `<capacity>` tons, balancing deliveries of rented equipment (linehaul) and pickups of returned gear (backhaul). The company must design routes that ensure trucks can handle both outbound and inbound loads without exceeding capacity. For instance, a truck might first deliver a bulldozer to a site (linehaul), then collect dismantled scaffolding from another site (backhaul), optimizing fuel use and depot workload distribution.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Home Appliance Delivery and Trade-In Pickup Network",
+        "content": "An appliance retailer uses `<loc_depot>` distribution centers to deliver new refrigerators, washing machines, etc. (linehaul) to customers\u2019 homes (`<loc_customer>`) while also collecting old units (backhaul) for recycling. Each truck\u2019s `<capacity>` must accommodate both the weight of new appliances and the volume of bulky outdated models. Routes must ensure that delivering heavier items like stoves doesn\u2019t leave insufficient space for bulky pickups, while minimizing detours between depots and customers.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Courier Hub Network with Mixed Deliveries and Pickups",
+        "content": "A regional courier service with `<loc_depot>` hubs must manage both package deliveries (linehaul) and customer pickups (backhaul) for returns or shipments. Vehicles with `<capacity>` cubic meters must prioritize load balancing: for example, a truck departing Depot A might first drop off parcels to five addresses, then collect packages from three others before returning. The challenge is to cluster routes efficiently across depots while avoiding overpacking trucks with either outbound or inbound freight.",
+        "tags": [
+            "loc_depot",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Agricultural Tool Deployment and Harvest Collection",
+        "content": "Farmers in rural areas rely on `<loc_depot>` tool depots to borrow machinery (e.g., harvesters, tractors) for seasonal work (linehaul). After use, the same vehicles must collect crops or byproducts (backhaul). Each truck\u2019s `<capacity>` must handle both the weight of heavy equipment and the volume of harvested goods. Routes must link farms (`<loc_customer>`) to the nearest depot while ensuring tools are distributed before harvest season peaks and crops are collected promptly to avoid spoilage.",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "loc_customer"
+        ]
+    },
+    {
+        "title": "Festival Infrastructure Setup and Dismantling Logistics",
+        "content": "A company specializing in temporary event infrastructure operates from `<loc_depot>` warehouses to deploy inflatable stages, lighting rigs, and catering equipment (linehaul) to festival venues (`<loc_customer>`). After events, trucks must retrieve the gear (backhaul). Vehicles with `<capacity>` must balance the weight of heavy equipment during setup and the bulk of disassembled materials during teardown. Multiple depots ensure rapid servicing of festivals across regions, with routes optimized to minimize idle time between deployments and recoveries.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Home Appliance Repair and Spare Parts Exchange Network",
+        "content": "A nationwide appliance repair service operates from multiple regional warehouses (<loc_depot>) to serve customers (<loc_customer>). Each truck (<capacity>) must deliver replacement parts to households for repairs and simultaneously collect broken appliances for recycling. The mixed backhaul routes require planners to prioritize deliveries first to ensure customers receive parts before returning with bulky scrap electronics. The challenge is to balance load constraints across depots while minimizing total mileage and ensuring all repair requests and pickups are fulfilled efficiently.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Event Rental Equipment Deployment and Recovery",
+        "content": "An event rental company provides temporary equipment (e.g., stage gear, lighting rigs) to venues (<loc_customer>) for concerts and festivals. With depots distributed across regions (<loc_depot>), trucks (<capacity>) must first deliver equipment to event sites and later retrieve it post-event. The mixed backhaul routes must avoid overloading vehicles with outbound deliveries or inbound returns. The company seeks optimal depot assignments and route sequences to maximize vehicle utilization and reduce cross-regional travel costs.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Livestock Feed Delivery and Manure Collection",
+        "content": "Agricultural logistics firm manages feed distribution to farms (<loc_customer>) while collecting manure for compost production. Multiple depots (<loc_depot>) serve distinct farming regions. Each truck (<capacity>) must first deliver precise quantities of feed (<demand_linehaul>) to livestock farms and then pick up manure (<demand_backhaul>) from the same or nearby locations. The capacity constraint requires careful load balancing between dry feed and bulky organic waste, ensuring no vehicle exceeds its weight limit during mixed trips.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "demand_linehaul",
+            "demand_backhaul"
+        ]
+    },
+    {
+        "title": "Medical Diagnostic Equipment Delivery and Sample Retrieval",
+        "content": "A healthcare supply chain delivers portable diagnostic tools (e.g., ultrasound machines) to clinics (<loc_customer>) and collects blood or tissue samples for analysis. Regional medical depots (<loc_depot>) dispatch vehicles (<capacity>) that must first deliver equipment before picking up lab samples. The mixed backhaul routes must account for both the weight of medical devices and the temperature-sensitive nature of biological samples, while adhering to strict capacity limits to prevent equipment overload or sample contamination risks.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Winter Sports Equipment Rental and Return Logistics",
+        "content": "A ski resort chain operates seasonal rental depots (<loc_depot>) in mountain regions to serve skiers (<loc_customer>). Trucks (<capacity>) deliver ski gear (boards, boots) to rental outlets and later collect used equipment for cleaning and redistribution. Mixed backhaul routes require planners to first distribute fresh inventory to high-demand locations and then retrieve returned gear without exceeding vehicle capacity limits. The goal is to optimize depot-to-outlet assignments and route efficiency to meet fluctuating seasonal demand while minimizing operational costs.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Urban Bike-Share Vehicle Redistribution and Maintenance Parts Delivery",
+        "content": "A bike-sharing company operates multiple maintenance depots (`<loc_depot>`) across a city. Each depot dispatches trucks (capacity `<capacity>`) to redistribute bikes between understocked and overstocked stations (`<loc_customer>`). Simultaneously, trucks deliver replacement parts (linehaul) to stations for repairs and collect damaged bikes (backhaul) for refurbishment. The challenge is to balance deliveries and pickups on each route without exceeding truck capacity, ensuring equitable distribution of bikes and efficient maintenance logistics.",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "loc_customer"
+        ]
+    },
+    {
+        "title": "Industrial Tool Rental and Return Logistics Network",
+        "content": "A nationwide tool rental firm uses regional depots (`<loc_depot>`) to serve construction sites (`<loc_customer>`). Their trucks (capacity `<capacity>`) must deliver heavy-duty equipment (linehaul) to active sites and collect returned tools (backhaul) from completed projects. Routes must accommodate mixed tasks\u2014such as dropping off drills at one site and picking up scaffolding from another\u2014while adhering to capacity limits. The goal is to minimize travel distance and optimize depot resource allocation.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Hotel Linen Delivery and Used Linen Collection System",
+        "content": "A hotel chain relies on linen distribution centers (`<loc_depot>`) to service hotels (`<loc_customer>`). Trucks (capacity `<capacity>`) transport fresh linens (linehaul) to hotels and collect soiled laundry (backhaul) for washing. Routes must allow flexible sequencing\u2014e.g., delivering to a resort first, then collecting from a nearby boutique hotel\u2014to prevent overloading. The system aims to streamline operations while ensuring hotels always have clean linens and waste is efficiently recycled.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity"
+        ]
+    },
+    {
+        "title": "School Supplies Delivery and Textbook Return Program",
+        "content": "An educational supply provider manages multiple depots (`<loc_depot>`) to deliver new textbooks and stationery (linehaul) to schools (`<loc_customer>`). Trucks (capacity `<capacity>`) also collect outdated or damaged books (backhaul) for recycling. The problem requires balancing deliveries and pickups on the same routes, ensuring no truck exceeds its load limit. The solution must prioritize schools in remote areas while minimizing total mileage across all depots.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Restaurant Supply Chain with Waste Oil Collection",
+        "content": "A foodservice supplier operates depots (`<loc_depot>`) to deliver fresh ingredients (linehaul) to restaurants (`<loc_customer>`) and collect used cooking oil (backhaul) for biodiesel production. Each truck (capacity `<capacity>`) must navigate routes that mix deliveries and pickups, avoiding overflow. For instance, a truck might first drop off spices to a caf\u00e9, then pick up waste oil from a pizzeria. The goal is to optimize fuel efficiency while meeting strict environmental compliance for waste disposal.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Urban Garden Supply and Compost Collection Network",
+        "content": "A city-wide network of urban farms and community gardens requires regular deliveries of soil, seeds, and tools while also generating compost waste for pickup. Multiple depots (<loc_depot>) strategically placed in different districts dispatch vehicles (<capacity> kg capacity) to serve <num_customer> customer locations (<loc_customer>). Each location has a demand for supplies (<demand_linehaul>) and a volume of compost to collect (<demand_backhaul>). Routes must balance delivery and pickup stops without exceeding vehicle capacity, ensuring efficient use of resources and minimizing cross-depot travel.",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "num_customer",
+            "loc_customer",
+            "demand_linehaul",
+            "demand_backhaul"
+        ]
+    },
+    {
+        "title": "Utility Meter Deployment and Collection for Smart Cities",
+        "content": "A utility company upgrades to smart meters, deploying new units to households while retrieving outdated meters for recycling. The company operates from <num_depot> depots (<loc_depot>), each managing a regional service area. Trucks (<capacity> kg) must deliver new meters (<demand_linehaul>) and collect old ones (<demand_backhaul>), ensuring the total load (deliveries + pickups) never exceeds capacity. The goal is to optimize routes across depots to minimize fuel use and streamline meter replacement.",
+        "tags": [
+            "num_depot",
+            "loc_depot",
+            "capacity",
+            "demand_linehaul",
+            "demand_backhaul"
+        ]
+    },
+    {
+        "title": "Automotive Parts Delivery and Core Return Logistics",
+        "content": "An auto parts supplier delivers replacement components to repair shops and collects used \"cores\" (recyclable parts) for refurbishing. With depots (<loc_depot>) positioned near major highways, vehicles (<capacity> m\u00b3) serve <num_customer> auto shops (<loc_customer>). Each shop requires specific parts (<demand_linehaul>) and returns a certain number of cores (<demand_backhaul>). Routes must prioritize core pickups only after deliveries to avoid overloading trucks, while balancing workload among depots.",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "num_customer",
+            "loc_customer",
+            "demand_linehaul",
+            "demand_backhaul"
+        ]
+    },
+    {
+        "title": "Temporary Storage Container Delivery and Retrieval System",
+        "content": "A logistics firm provides portable storage containers to construction sites and event organizers. Containers are delivered to <num_customer> locations (<loc_customer>), then retrieved once projects conclude. The firm uses <num_depot> depots (<loc_depot>), each with trucks (<capacity> ton) that can mix deliveries and pickups. The challenge is to plan routes that prevent trucks from exceeding capacity (containers weigh <demand_linehaul> for delivery, and empty containers subtract <demand_backhaul> during pickup) while efficiently redistributing containers across depots.",
+        "tags": [
+            "num_customer",
+            "loc_customer",
+            "num_depot",
+            "loc_depot",
+            "capacity",
+            "demand_linehaul",
+            "demand_backhaul"
+        ]
+    },
+    {
+        "title": "Commercial HVAC Installation and Scrap Metal Pickup",
+        "content": "A climate control company installs new HVAC units at commercial buildings while recycling obsolete equipment. Multiple depots (<loc_depot>) service different cities, dispatching trucks (<capacity> kg) to <num_customer> sites (<loc_customer>). Each site needs a new unit (<demand_linehaul>) and has scrap metal to remove (<demand_backhaul>). Routes must ensure that the combined weight of installations and pickups stays within limits, with flexibility to interleave stops as long as capacity constraints are respected.",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "num_customer",
+            "loc_customer",
+            "demand_linehaul",
+            "demand_backhaul"
+        ]
+    },
+    {
+        "title": "Solar Panel Installation and Recycling Logistics Network",
+        "content": "A renewable energy company operates multiple depots (`<loc_depot>`) to deliver new solar panels to customers (`<loc_customer>`) and collect outdated panels for recycling. Each vehicle has a maximum capacity of `<capacity>`, and must manage mixed loads: delivering new panels (linehaul `<demand_linehaul>`) and collecting old ones (backhaul `<demand_backhaul>`). The routes must ensure that no vehicle exceeds capacity while efficiently balancing depot assignments to minimize travel costs and support sustainable operations.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand_linehaul",
+            "demand_backhaul"
+        ]
+    },
+    {
+        "title": "Hazardous Waste Collection and Safety Equipment Delivery",
+        "content": "A waste management firm uses depots (`<loc_depot>`) to collect hazardous materials (backhaul `<demand_backhaul>`) from industrial sites and deliver safety gear (linehaul `<demand_linehaul>`) to workplaces. Vehicles must handle mixed loads without exceeding `<capacity>` limits. The challenge is optimizing routes across depots to ensure compliance with regulations, efficient resource use, and minimal transportation costs.",
+        "tags": [
+            "loc_depot",
+            "demand_backhaul",
+            "demand_linehaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Clothing Rental and Garment Collection Network",
+        "content": "A clothing rental service operates from multiple depots (`<loc_depot>`) to deliver fresh garments (`<demand_linehaul>`) to customers and collect returned items (`<demand_backhaul>`) for cleaning. Each vehicle must manage mixed loads within `<capacity>` constraints, ensuring efficient depot-based routing to balance supply and demand across regions. The goal is to minimize fuel and labor costs while maintaining fast turnaround times for rentals.",
+        "tags": [
+            "loc_depot",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Agricultural Seed Distribution and Crop Harvest Collection",
+        "content": "An agricultural cooperative dispatches vehicles from `<loc_depot>` depots to deliver seeds and supplies (`<demand_linehaul>`) to farmers and collect harvested crops (`<demand_backhaul>`). With vehicles limited to `<capacity>`, routes must balance mixed loads to optimize logistics costs while supporting timely farm operations. The solution must account for seasonal variations in demand and depot workload distribution.",
+        "tags": [
+            "loc_depot",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Construction Material Delivery and Debris Removal",
+        "content": "A construction company uses multiple depots (`<loc_depot>`) to transport building materials (`<demand_linehaul>`) to active sites and collect debris (`<demand_backhaul>`) for disposal. Vehicles must handle mixed loads without exceeding `<capacity>`, requiring optimized depot-based routes to minimize costs and ensure efficient site servicing. The problem involves prioritizing urgent material deliveries while coordinating debris pickups to avoid storage overflows.",
+        "tags": [
+            "loc_depot",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Telecom Equipment Deployment and Recycling Collection Network",
+        "content": "A telecom provider operates multiple regional depots `<loc_depot>` to service cell towers. Trucks with `<capacity>` kg capacity must deliver new antennas and routers (`<demand_linehaul>`) to remote tower sites while collecting outdated equipment (`<demand_backhaul>`) for recycling. Routes must balance mixed deliveries and pickups across all `<num_customer>` tower locations `<loc_customer>`, ensuring no truck exceeds its load limit. The goal is to minimize total mileage while efficiently redistributing resources from all depots.",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "demand_linehaul",
+            "demand_backhaul",
+            "num_customer",
+            "loc_customer"
+        ]
+    },
+    {
+        "title": "Blood Bank Network Supply and Sample Collection",
+        "content": "A network of blood banks `<loc_depot>` distributes life-saving blood units (`<demand_linehaul>`) to hospitals `<loc_customer>` and simultaneously retrieves blood samples (`<demand_backhaul>`) for testing. Each vehicle\u2019s `<capacity>` liter limit requires precise load management, as samples must not overcrowd delivery payloads. The challenge is optimizing routes across depots to ensure urgent deliveries and timely sample returns without overloading trucks.",
+        "tags": [
+            "loc_depot",
+            "demand_linehaul",
+            "loc_customer",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Electronics Retailer Device Delivery and Recycling Pickup",
+        "content": "An electronics retailer with stores `<loc_depot>` in multiple cities delivers new appliances (`<demand_linehaul>`) to customers and collects old devices (`<demand_backhaul>`) for e-waste recycling. Vehicles must handle both tasks dynamically, prioritizing space for heavier new products while accommodating bulky outdated electronics. Route planning ensures all `<num_customer>` locations `<loc_customer>` are serviced efficiently, keeping truck capacities `<capacity>` within bounds.",
+        "tags": [
+            "loc_depot",
+            "demand_linehaul",
+            "demand_backhaul",
+            "num_customer",
+            "loc_customer",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Construction Pallet Redistribution and Recycling Logistics",
+        "content": "A construction supplies firm uses `<loc_depot>` depots to dispatch empty wooden pallets (`<demand_linehaul>`) to job sites `<loc_customer>` and recover used pallets (`<demand_backhaul>`) for repair or recycling. Each truck\u2019s `<capacity>` restricts how many pallets can be moved per trip. The mixed backhaul process allows flexible routing, but planners must ensure no vehicle overloads when balancing outbound and inbound loads across multiple depot hubs.",
+        "tags": [
+            "loc_depot",
+            "demand_linehaul",
+            "loc_customer",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Agricultural Pesticide Distribution and Empty Container Retrieval",
+        "content": "Farm supply cooperatives `<loc_depot>` deliver pesticide containers (`<demand_linehaul>`) to farmers `<loc_customer>` and collect empty containers (`<demand_backhaul>`) for refilling or disposal. Trucks must adhere to `<capacity>` weight limits, as full pesticide drums are heavier than empties. The multi-depot system requires strategic depot-to-farm assignments to minimize travel while ensuring every farmer receives supplies and empties are retrieved without exceeding vehicle capacities.",
+        "tags": [
+            "loc_depot",
+            "demand_linehaul",
+            "loc_customer",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Electronics Recycling and Repair Parts Delivery Network",
+        "content": "A national electronics recycling company operates multiple regional depots (`<loc_depot>`) to manage a dual logistics process. Trucks with `<capacity>` kg capacity collect outdated electronics (e.g., phones, computers) from businesses and households (`<loc_customer>`) while simultaneously delivering replacement repair parts to authorized service centers. Each customer location specifies the weight of recyclables (`<demand_backhaul>`) and the required parts (`<demand_linehaul>`). Routes must balance pickup and delivery demands without exceeding vehicle limits, ensuring efficient reuse of resources and minimizing cross-country travel costs.",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "loc_customer",
+            "demand_backhaul",
+            "demand_linehaul"
+        ]
+    },
+    {
+        "title": "Disaster Relief Equipment Deployment and Waste Collection",
+        "content": "In post-disaster scenarios, humanitarian agencies use `<loc_depot>` depots distributed across affected regions to dispatch trucks (`<capacity>` ton capacity). These vehicles deliver emergency shelters, medical kits, and food (linehaul) to disaster zones (`<loc_customer>`) while also collecting hazardous waste or debris (backhaul) for safe disposal. Each site has a specified relief demand (`<demand_linehaul>`) and waste volume (`<demand_backhaul>`). Routes must prioritize critical zones while managing truck loads to prevent overloading and ensure timely service across multiple depot networks.",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "loc_customer",
+            "demand_linehaul",
+            "demand_backhaul"
+        ]
+    },
+    {
+        "title": "Agricultural Machinery Rental and Spare Parts Exchange",
+        "content": "A farm equipment rental firm operates `<loc_depot>` warehouses in agricultural hubs to serve `<loc_customer>` farms. Trucks (`<capacity>` ton) deliver plows, harvesters, or tractors (linehaul) to fields while retrieving used machinery or spare parts (backhaul) for maintenance. Farms specify equipment needs (`<demand_linehaul>`) and returnable items (`<demand_backhaul>`). Routes must cluster farms near their assigned depot to optimize fuel use and ensure no truck exceeds its weight limit during mixed deliveries and pickups.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand_linehaul",
+            "demand_backhaul"
+        ]
+    },
+    {
+        "title": "Modular Office Furniture Delivery and Disposal",
+        "content": "A furniture company specializing in modular office systems uses `<loc_depot>` distribution centers to service `<loc_customer>` businesses. Vehicles (`<capacity>` cubic meter capacity) transport new desks, panels, or chairs (linehaul) to offices while collecting outdated modular components (backhaul) for recycling. Each office specifies new furniture requirements (`<demand_linehaul>`) and the volume of old parts to discard (`<demand_backhaul>`). Routes must balance load constraints and depot assignments to minimize cross-regional travel while efficiently managing space on trucks.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand_linehaul",
+            "demand_backhaul"
+        ]
+    },
+    {
+        "title": "Temporary Event Infrastructure Deployment and Recovery",
+        "content": "An events company deploys `<loc_depot>` warehouses nationwide to handle `<loc_customer>` venues hosting pop-up festivals, trade shows, or sports events. Trucks (`<capacity>` ton) deliver tents, stages, and equipment (linehaul) to event sites and later recover them (backhaul) for reuse. Each venue lists infrastructure needs (`<demand_linehaul>`) and returnable items (`<demand_backhaul>`). Routes must coordinate depot-based teams to ensure timely setup and teardown, avoiding vehicle overloads during mixed operations.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand_linehaul",
+            "demand_backhaul"
+        ]
+    },
+    {
+        "title": "Aviation Maintenance Parts Delivery and\u5e9f\u65e7\u90e8\u4ef6\u56de\u6536 Network",
+        "content": "Aircraft maintenance companies operate multiple regional depots (`<loc_depot>`) to supply new parts to airports (`<loc_customer>`) and retrieve outdated components for recycling. Each airport requires specific linehaul parts (`<demand_linehaul>`) while returning backhaul materials (`<demand_backhaul>`). Vehicles must balance deliveries and pickups without exceeding `<capacity>` weight limits, ensuring efficient routes between depots and geographically dispersed airports.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Telecom Tower Equipment Deployment and Recycling Logistics",
+        "content": "A telecommunications firm manages `<loc_depot>` warehouses to deliver new signal tower equipment (`<demand_linehaul>`) to remote sites (`<loc_customer>`) and collect obsolete gear (`<demand_backhaul>`). Vehicles must navigate rugged terrain while adhering to `<capacity>` constraints, optimizing routes to minimize fuel costs and ensure both deployment and recycling operations are completed in a single trip.",
+        "tags": [
+            "loc_depot",
+            "demand_linehaul",
+            "loc_customer",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Urban Compost Collection and Garden Supply Delivery",
+        "content": "A municipal composting service uses `<loc_depot>` hubs to collect organic waste (`<demand_backhaul>`) from residential areas and distribute finished compost (`<demand_linehaul>`) to community gardens and farms (`<loc_customer>`). Trucks must alternate between pickups and deliveries while staying within `<capacity>` limits, balancing the weight of wet waste and dense compost loads to reduce mileage and operational costs.",
+        "tags": [
+            "loc_depot",
+            "demand_backhaul",
+            "demand_linehaul",
+            "loc_customer",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Automotive Repair Chain Parts Supply and Core Return System",
+        "content": "A nationwide auto repair franchise operates `<loc_depot>` distribution centers to supply new automotive parts (`<demand_linehaul>`) to repair shops (`<loc_customer>`) and collect cores (used parts) (`<demand_backhaul>`) for recycling. Vehicles must prioritize route efficiency while ensuring that the combined weight of new and returned parts does not exceed `<capacity>`, streamlining just-in-time inventory management across multiple depots.",
+        "tags": [
+            "loc_depot",
+            "demand_linehaul",
+            "loc_customer",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Maritime Port Supply and Waste Retrieval Network",
+        "content": "Ports rely on `<loc_depot>` logistics centers to deliver provisions (`<demand_linehaul>`) to anchored ships (`<loc_customer>`) and haul away waste materials (`<demand_backhaul>`) for disposal. Vessels\u2019 storage limits (`<capacity>`) require precise load planning to accommodate both supplies and waste, while minimizing detours between depots and docking zones to maintain operational timelines.",
+        "tags": [
+            "loc_depot",
+            "demand_linehaul",
+            "loc_customer",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Car Rental Agency Redistribution and Maintenance Logistics",
+        "content": "A nationwide car rental company operates multiple depots (`<loc_depot>`) to manage vehicle redistribution and maintenance. Fleets of trucks must deliver newly sanitized rental cars to busy urban depots while simultaneously collecting returned vehicles from rural depots for maintenance. Each truck has a `<capacity>` vehicle limit, requiring careful planning to balance outbound deliveries and inbound pickups. Routes must cluster depots by geographic proximity to minimize travel costs while ensuring no truck exceeds its capacity when carrying a mix of outgoing and incoming vehicles.",
+        "tags": [
+            "loc_depot",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Mobile Farmers' Market Supply and Compost Collection",
+        "content": "A network of mobile farmers' markets (`<loc_customer>`) requires fresh produce deliveries and compostable waste pickup. Trucks from regional depots (`<loc_depot>`) must first deliver perishable goods (e.g., fruits, vegetables) to market locations, then collect organic waste from stalls for composting. Each truck\u2019s `<capacity>` must accommodate both delivery loads (e.g., crates of produce) and pickup loads (e.g., compost bins), ensuring no overloading occurs. The goal is to optimize routes for minimal fuel use while meeting market supply demands and waste collection targets.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Laboratory Equipment Distribution and Biomedical Sample Retrieval",
+        "content": "A biotech firm deploys lab equipment to research facilities (`<loc_customer>`) and collects biomedical samples for analysis. Multiple depots (`<loc_depot>`) serve regional hubs, with trucks transporting sensitive equipment (linehaul) and refrigerated samples (backhaul). Each vehicle\u2019s `<capacity>` must account for the weight and space of both deliveries and pickups, ensuring temperature-controlled cargo for samples is prioritized. Routes must balance depot assignments to equitably distribute workload and prevent capacity breaches.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Electronics Retailer Device Delivery and E-Waste Recycling",
+        "content": "An electronics retailer uses `<loc_depot>` warehouses to deliver new devices (e.g., smartphones, laptops) to retail stores while collecting old electronics for recycling. Trucks must first drop off `<demand_linehaul>` units of new products, then pick up `<demand_backhaul>` e-waste from customer drop-off points. Capacity constraints (`<capacity>`) require careful weight and space management, as bulky old devices might displace new inventory. The system ensures efficient reverse logistics while reducing environmental impact.",
+        "tags": [
+            "loc_depot",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Temporary Event Infrastructure Deployment and Equipment Retrieval",
+        "content": "A live event company sets up stages, lighting, and AV equipment (`<loc_customer>`) for festivals, conferences, and trade shows. Multiple depots (`<loc_depot>`) dispatch trucks to deliver equipment to event sites and retrieve used gear afterward. Each truck\u2019s `<capacity>` must handle both heavy deliveries (e.g., generators) and bulky pickups (e.g., dismantled tents). Routes must prioritize rapid setup timelines while consolidating return trips for cost efficiency, ensuring no vehicle exceeds its payload limits during mixed backhaul operations.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Temporary Event Decor Setup and Dismantling Logistics",
+        "content": "A company provides temporary decor services for events, delivering items like tents, signage, and furniture to venues and later retrieving them post-event. Multiple regional depots must coordinate routes where trucks can mix deliveries to new venues with pickups from concluded events. Vehicles must ensure the total load (decor delivery + item retrieval) stays within `<capacity>` while minimizing travel distance. The challenge is balancing depot assignments and optimizing routes to serve all `<num_customer>` event locations efficiently.",
+        "tags": [
+            "capacity",
+            "num_customer"
+        ]
+    },
+    {
+        "title": "Restaurant Equipment Supply and Used Cooking Oil Collection Network",
+        "content": "A business supplies commercial kitchen equipment (grills, refrigerators) to restaurants while collecting used cooking oil for recycling. Trucks depart from `<loc_depot>` depots, delivering equipment to `<num_customer>` eateries and picking up oil from others. Routes must accommodate mixed backhauls: for instance, a truck might first drop off a fryer at one restaurant, then collect oil from another, ensuring total weight never exceeds `<capacity>`. The goal is to minimize fuel costs while managing dual demands across depots.",
+        "tags": [
+            "loc_depot",
+            "num_customer",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Greenhouse Agricultural Supply and Organic Waste Collection System",
+        "content": "An agricultural company operates `<loc_depot>` depots to deliver fertilizers, seeds, and irrigation tools to greenhouse farms while collecting plant waste (e.g., crop residues) for composting. Each vehicle must handle both delivery and pickup tasks without exceeding `<capacity>`. For example, a truck might supply a farm with supplies, then collect waste from another, optimizing routes to balance workload among depots and minimize total distance for `<num_customer>` farms.",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "num_customer"
+        ]
+    },
+    {
+        "title": "Office Supply Delivery and E-Waste Recycling Pickup for Corporations",
+        "content": "A logistics firm provides office supplies (paper, printers, desks) to corporate clients and simultaneously collects outdated electronics (monitors, keyboards) for recycling. Trucks from `<loc_depot>` hubs must route to `<num_customer>` businesses, mixing deliveries and pickups. The challenge is ensuring that the combined weight of supplies and e-waste stays within `<capacity>`, while minimizing travel costs and efficiently distributing tasks across depots.",
+        "tags": [
+            "loc_depot",
+            "num_customer",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Winter Snow Removal Equipment Delivery and De-icer Container Collection",
+        "content": "A municipal services team distributes snow plows, salt spreaders, and de-icer supplies to `<num_customer>` city districts from `<loc_depot>` depots during winter storms. After use, trucks must also collect empty de-icer containers and malfunctioning equipment for recycling. Routes must accommodate mixed backhauls (e.g., delivering salt to one area while retrieving empty containers from another), adhering to `<capacity>` limits to ensure timely service and cost efficiency.",
+        "tags": [
+            "num_customer",
+            "loc_depot",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Data Center Hardware Deployment and E-Waste Retrieval Network",
+        "content": "A technology company operates multiple regional depots (`<loc_depot>`) to service data centers across the country. Each depot dispatches trucks (capacity `<capacity>`) to deliver new servers and storage devices (`<demand_linehaul>`) to remote data centers (`<loc_customer>`), while simultaneously collecting outdated hardware (`<demand_backhaul>`) for recycling. The challenge is to balance delivery and pickup loads without overloading vehicles, optimize depot assignments to minimize cross-regional travel, and ensure efficient reverse logistics for electronic waste.",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "demand_linehaul",
+            "loc_customer",
+            "demand_backhaul"
+        ]
+    },
+    {
+        "title": "Outdoor Event Infrastructure Deployment and Post-Event Recovery",
+        "content": "Event organizers use multiple depots (`<loc_depot>`) to deploy temporary infrastructure like stages, tents, and equipment (`<demand_linehaul>`) to festival and sports event sites (`<loc_customer>`). After events conclude, trucks must collect used materials (`<demand_backhaul>`) for reuse or disposal. With capacity constraints (`<capacity>`), planners must design routes that first deliver items to sites and then retrieve them efficiently, ensuring vehicles do not exceed their load limits and depots handle regional workloads equitably.",
+        "tags": [
+            "loc_depot",
+            "demand_linehaul",
+            "loc_customer",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Lab Chemical Delivery and Empty Container Recycling System",
+        "content": "A scientific supply company manages multiple distribution hubs (`<loc_depot>`) to deliver chemicals (`<demand_linehaul>`) to universities and research labs (`<loc_customer>`). Simultaneously, trucks collect empty containers (`<demand_backhaul>`) for recycling. Each vehicle\u2019s capacity (`<capacity>`) must accommodate both outgoing hazardous materials and returning empties without overloading. The solution requires coordinating depot assignments to reduce cross-regional trips and prioritize route efficiency while adhering to safety and environmental regulations.",
+        "tags": [
+            "loc_depot",
+            "demand_linehaul",
+            "loc_customer",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Maritime Supply Chain and Waste Retrieval for Cruise Ships",
+        "content": "A maritime logistics firm supplies cruise ships anchored at coastal ports (`<loc_customer>`) with provisions (`<demand_linehaul>`) using trucks from regional depots (`<loc_depot>`). After delivery, the same trucks collect waste materials (`<demand_backhaul>`) from the ships for disposal. Capacity limits (`<capacity>`) necessitate careful load planning to ensure outbound supplies and inbound waste do not exceed vehicle limits. Routes must balance depot workload distribution and minimize travel distance between coastal facilities and offshore locations.",
+        "tags": [
+            "loc_customer",
+            "demand_linehaul",
+            "loc_depot",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Retail Store Equipment Delivery and Outdated Device Recycling",
+        "content": "A retail chain operates multiple regional warehouses (`<loc_depot>`) to deliver shelving units, checkout systems, and displays (`<demand_linehaul>`) to new store locations (`<loc_customer>`). Simultaneously, trucks collect outdated equipment (`<demand_backhaul>`) from closing stores for recycling. With strict capacity constraints (`<capacity>`), planners must design routes that first deliver items to stores and then retrieve old equipment, while assigning depots strategically to reduce overlap and ensure efficient reverse logistics for bulky items.",
+        "tags": [
+            "loc_depot",
+            "demand_linehaul",
+            "loc_customer",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Telecommunications Tower Installation and\u5e9f\u65e7Equipment\u56de\u6536 Network",
+        "content": "A telecommunications firm must deploy new cell towers to rural areas while removing outdated equipment from decommissioned sites. Multiple regional depots (<loc_depot>) supply towers and trucks (capacity <capacity>) must deliver components to installation sites (<loc_customer>) and simultaneously collect\u5e9f\u65e7equipment from disused locations. Each truck\u2019s load must prioritize tower deliveries without exceeding capacity, as\u56de\u6536pickups can only occur after ensuring delivery demands (<demand_linehaul>) are met. The goal is to minimize fuel costs while efficiently redistributing resources across depots.",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "loc_customer",
+            "demand_linehaul"
+        ]
+    },
+    {
+        "title": "Pop-Up Retail Store Setup and Inventory Collection Logistics",
+        "content": "A retail chain opens temporary stores in high-traffic areas, requiring trucks (<capacity>) from urban depots (<loc_depot>) to deliver merchandise (<demand_linehaul>) for displays and collect unsold stock (<demand_backhaul>) afterward. Routes must balance deliveries to new locations and pickups from closing stores, ensuring no vehicle overloads. The challenge is optimizing depot assignments and minimizing redundant trips between densely packed commercial zones.",
+        "tags": [
+            "capacity",
+            "loc_depot",
+            "demand_linehaul",
+            "demand_backhaul"
+        ]
+    },
+    {
+        "title": "Medical Lab Equipment Delivery and\u5e9f\u5f03Sample Collection System",
+        "content": "A healthcare logistics provider transports lab equipment and supplies to hospitals (<loc_customer>) while retrieving\u5e9f\u5f03biomedical samples for disposal. Trucks from specialized depots (<loc_depot>) must first deliver critical medical devices (<demand_linehaul>), then collect hazardous waste (<demand_backhaul>) without violating capacity limits. The solution must prioritize urgent deliveries while safely managing mixed loads of sensitive and contaminated materials.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "demand_linehaul",
+            "demand_backhaul"
+        ]
+    },
+    {
+        "title": "Agricultural Machinery Rental and\u5e9f\u65e7Parts\u56de\u6536 Network",
+        "content": "A farm equipment rental company operates from rural depots (<loc_depot>), dispatching trucks (<capacity>) to deliver tractors and parts (<demand_linehaul>) to farms and collect\u5e9f\u65e7components (<demand_backhaul>) for recycling. Routes must ensure machinery deliveries precede parts\u56de\u6536to avoid overloading vehicles. The aim is to streamline resource redistribution across multiple regional depots while minimizing travel distances in agricultural regions.",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "demand_linehaul",
+            "demand_backhaul"
+        ]
+    },
+    {
+        "title": "Maritime Port Equipment Distribution and\u5e9f\u65e7Containers\u56de\u6536 Logistics",
+        "content": "A port logistics firm manages equipment distribution (cranes, containers) to global terminals (<loc_customer>) and\u56de\u6536\u5e9f\u5f03containers from storage yards. Trucks (<capacity>) from coastal depots (<loc_depot>) must first deliver new equipment while picking up\u5e9f\u65e7containers afterward. Capacity constraints require precise load balancing to prevent overloading, especially when transporting heavy machinery alongside bulky\u56de\u6536materials. The focus is on efficient depot coordination to support port operations worldwide.",
+        "tags": [
+            "loc_customer",
+            "capacity",
+            "loc_depot"
+        ]
+    },
+    {
+        "title": "Industrial Chemical Delivery and Empty Drum Recycling Network",
+        "content": "A chemical distribution company operates multiple regional depots (MD) to supply hazardous materials to industrial factories and collect empty drums for recycling. Each vehicle (C) must first deliver chemicals (linehaul) before picking up empty containers (backhaul) to avoid capacity overloads (MB). The challenge is to design routes that minimize fuel costs while balancing depot workloads and ensuring compliance with hazardous material transport regulations.",
+        "tags": []
+    },
+    {
+        "title": "Event Catering Supply Chain with Disposable Dishware Collection",
+        "content": "A catering service uses multiple warehouses (MD) to deliver disposable dishware and food supplies to event venues and collect used, recyclable items afterward. Vehicles (C) must handle mixed backhaul (MB) by prioritizing deliveries before pickups, ensuring capacity limits are respected. The goal is to optimize routes across depots to efficiently service events while managing material flow and reducing waste.",
+        "tags": []
+    },
+    {
+        "title": "Automotive Service Center Parts Delivery and\u5e9f\u65e7Vehicle\u56de\u6536 Logistics",
+        "content": "An automotive service network (MD) delivers replacement parts to repair shops and collects\u5e9f\u65e7 vehicles from customers for recycling. Vehicles (C) must first complete delivery routes (linehaul) before picking up\u5e9f\u65e7 vehicles (backhaul) to prevent overloading (MB). The objective is to minimize travel distances while balancing workload across depots and ensuring timely service to customers.",
+        "tags": []
+    },
+    {
+        "title": "Aerospace Maintenance Parts Delivery and\u5e9f\u65e7Component\u56de\u6536 Network",
+        "content": "A global aerospace maintenance provider operates from multiple regional depots (MD) to supply replacement parts to airports and collect\u5e9f\u65e7 aircraft components for recycling. Each vehicle (C) must first deliver parts (linehaul) before picking up\u5e9f\u65e7 materials (backhaul), adhering to strict capacity constraints (MB). The focus is on route optimization to support rapid maintenance turnaround while managing multi-depot logistics efficiently.",
+        "tags": []
+    },
+    {
+        "title": "Urban Home Improvement Supply and\u5e9f\u65e7BuildingMaterial\u56de\u6536 System",
+        "content": "A home improvement retailer uses multiple distribution centers (MD) to deliver construction materials (e.g., lumber, tiles) to residential customers and collect\u5e9f\u65e7 building waste (e.g., demolition debris) for recycling. Vehicles (C) must prioritize deliveries (linehaul) before pickups (backhaul) to avoid exceeding capacity (MB). The aim is to reduce operational costs and environmental impact by streamlining multi-depot routes for sustainable material circulation.",
+        "tags": []
+    },
+    {
+        "title": "Rural Healthcare Supply Delivery and Medical Waste Retrieval Network",
+        "content": "A nonprofit operates multiple medical supply depots (`<loc_depot>`) across remote regions to serve isolated clinics. Vehicles with `<capacity>` kg capacity must deliver critical medical supplies (linehaul) to clinics (`<loc_customer>`) while collecting infectious medical waste (backhaul) for disposal. Clinics have specific `<demand_linehaul>` needs, and waste pickups (`<demand_backhaul>`) must not exceed vehicle limits. The challenge is optimizing routes across depots to ensure efficient waste collection without overloading trucks, balancing supply delivery timeliness and hazardous waste management.",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "loc_customer",
+            "demand_linehaul",
+            "demand_backhaul"
+        ]
+    },
+    {
+        "title": "Film Production Equipment Deployment and Post-Production Material Recovery",
+        "content": "A film logistics company uses regional depots (`<loc_depot>`) to supply cameras, lighting, and props to film sets (`<loc_customer>`) while retrieving\u5e9f\u65e7 props and equipment post-shooting. Each truck\u2019s `<capacity>` must handle both deliveries (`<demand_linehaul>`) and pickups (`<demand_backhaul>`). Routes must coordinate across depots to ensure equipment arrives on time while efficiently recovering materials to minimize waste and transportation costs.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand_linehaul",
+            "demand_backhaul"
+        ]
+    },
+    {
+        "title": "Sports Venue Rental Equipment Delivery and Post-Event Retrieval Network",
+        "content": "A sports logistics firm manages depots (`<loc_depot>`) to deliver bleachers, scoreboards, and temporary seating to stadiums (`<loc_customer>`) for events, then collects\u5e9f\u65e7 materials afterward. Vehicles must balance delivery (`<demand_linehaul>`) and pickup (`<demand_backhaul>`) loads within `<capacity>`. The goal is to design cross-depot routes that minimize travel costs while ensuring timely equipment deployment and efficient\u5e9f\u65e7 material retrieval.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Pop-Up Retail Store Equipment Supply and Inventory Retrieval",
+        "content": "A retail chain deploys multiple distribution hubs (`<loc_depot>`) to outfit pop-up stores (`<loc_customer>`) with shelves, displays, and inventory, then collects unsold items and\u5e9f\u65e7 equipment post-event. Each truck\u2019s `<capacity>` must accommodate both delivery (`<demand_linehaul>`) and pickup (`<demand_backhaul>`) demands. The challenge is optimizing depot-based routes to reduce logistics costs while ensuring stores are stocked efficiently and\u5e9f\u65e7 materials are retrieved without overloading vehicles.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand_linehaul",
+            "demand_backhaul"
+        ]
+    },
+    {
+        "title": "Mining Site Equipment Delivery and\u5e9f\u65e7Material Collection Network",
+        "content": "A mining logistics provider operates from scattered depots (`<loc_depot>`) to deliver machinery, fuel, and supplies to remote mining sites (`<loc_customer>`) while retrieving\u5e9f\u65e7 equipment and hazardous waste. Vehicles must handle outbound (`<demand_linehaul>`) and return (`<demand_backhaul>`) loads within `<capacity>`. The objective is to design depot-coordinated routes that minimize travel expenses, ensure timely equipment delivery, and safely manage hazardous material collection without exceeding vehicle limits.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Aquaculture Feed Delivery and Fish Waste Collection Network",
+        "content": "Aquaculture farms across coastal regions require daily deliveries of fish feed (linehaul) while generating organic waste byproducts needing collection (backhaul). Multiple depots strategically located along the coast service clusters of farms. Vehicles must first deliver feed to each farm before collecting waste, ensuring total load (feed weight + waste volume) never exceeds their `<capacity>`. The challenge is to design routes that minimize travel distance while balancing depot workloads and adhering to capacity constraints.",
+        "tags": [
+            "capacity"
+        ]
+    },
+    {
+        "title": "Mobile Health Clinic Supply Delivery and Medical Waste Collection",
+        "content": "A healthcare nonprofit operates mobile medical units deployed from `<loc_depot>` regional hubs to remote villages (`<loc_customer>`). Each van delivers critical medical supplies (linehaul) such as vaccines, medications, and equipment, then collects used needles, expired drugs, and biohazard waste (backhaul). Vehicles must prioritize delivering supplies before pickups to ensure patient safety, while managing `<capacity>` constraints to avoid overloading. The goal is to serve all villages efficiently while optimizing fuel costs and maintaining regulatory compliance.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Automotive Showroom Inventory Delivery and\u5e9f\u65e7Vehicle Retrieval",
+        "content": "An automotive retailer network uses `<loc_depot>` distribution centers to restock showrooms (`<loc_customer>`) with new vehicles (linehaul) while simultaneously retrieving trade-in or outdated models (backhaul). Each truck has a `<capacity>` limit for transporting vehicles, requiring careful route planning to balance deliveries and pickups. For instance, a truck might first deliver three new SUVs to a suburban dealership before towing two retired sedans back to the depot for recycling. The objective is to minimize empty truck mileage and ensure all showrooms are replenished while maximizing\u5e9f\u65e7vehicle collection.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Brewery Ingredient Delivery and Spent Grain Collection",
+        "content": "A craft beer consortium delivers barley, hops, and yeast (`<demand_linehaul>`) to member breweries (`<loc_customer>`) from `<loc_depot>` regional warehouses. After brewing, breweries generate spent grain waste (`<demand_backhaul>`) that must be collected for composting or livestock feed. Trucks must first offload ingredients before collecting waste, ensuring combined weight stays within `<capacity>`. Routes must cluster breweries by proximity to depots to reduce cross-regional travel and minimize spoilage of perishable ingredients.",
+        "tags": [
+            "demand_linehaul",
+            "loc_customer",
+            "loc_depot",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Wind Farm Maintenance Parts Delivery and\u5e9f\u65e7Blade Collection",
+        "content": "Wind energy operators use `<loc_depot>` maintenance hubs to supply technicians at remote wind farms (`<loc_customer>`) with lubricants, bolts, and repair kits (linehaul). Simultaneously, decommissioned turbine blades (`<demand_backhaul>`) must be retrieved for recycling. Vehicles must first deliver parts before hauling\u5e9f\u65e7blades, as blade collection requires specialized equipment that occupies significant space. The challenge is to balance payload weights (e.g., dense lubricants vs. bulky blades) while covering all farms within a multi-depot network and minimizing carbon emissions from long-distance travel.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand_backhaul"
+        ]
+    },
+    {
+        "title": "Airport Ground Support Equipment Redistribution Network",
+        "content": "A major airport operates multiple depots (`<loc_depot>`) to manage the distribution of ground support equipment (e.g., baggage carts, aircraft dollies) across terminals. Each vehicle (`capacity: <capacity>`) must deliver equipment to loading zones while also collecting used units from return points. The challenge is to plan routes that first service delivery requests (`demand_linehaul`) before picking up equipment (`demand_backhaul`), ensuring no vehicle exceeds its capacity. Multiple depots serve different terminal clusters, requiring optimized workload distribution to minimize idle time and fuel costs while maintaining equipment availability at all locations.",
+        "tags": [
+            "loc_depot",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Temporary Medical Facility Equipment Deployment and Decontamination Logistics",
+        "content": "During a public health emergency, a logistics provider coordinates with regional depots (`<loc_depot>`) to deliver medical supplies (e.g., ventilators, PPE) to pop-up clinics (`<loc_customer>`). After use, the same vehicles return to collect contaminated equipment for decontamination. Each truck must prioritize deliveries (`demand_linehaul`) before pickups (`demand_backhaul`), balancing loads to avoid overloading. The system must efficiently allocate depot resources across dispersed sites while adhering to strict capacity limits for both outbound and return trips.",
+        "tags": [
+            "loc_depot",
+            "loc_customer"
+        ]
+    },
+    {
+        "title": "Commercial Laundromat Linen Delivery and Dirty Linen Retrieval System",
+        "content": "A laundromat chain uses multiple distribution centers (`<loc_depot>`) to supply clean linens (sheets, towels) to hotels and restaurants (`<loc_customer>`), while simultaneously collecting soiled linens for processing. Trucks must first deliver fresh loads (`demand_linehaul`) before picking up heavy soiled loads (`demand_backhaul`), ensuring capacity constraints (`<capacity>`) are never breached. The goal is to optimize routes across depots to reduce travel distance and fuel costs, while maintaining hygiene standards by segregating clean and dirty linen pickups.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Industrial Robotics Rental and Maintenance Pickup Network",
+        "content": "An automation firm rents industrial robots to factories from regional depots (`<loc_depot>`). Vehicles deliver new robotics units (`demand_linehaul`) to client sites while also retrieving returned equipment (`demand_backhaul`) for maintenance or redistribution. The mixed loads require careful planning to balance the weight of outbound machinery with inbound scrap or used parts. Routes must coordinate across multiple depots to minimize travel time and ensure no truck exceeds its `<capacity>` limit, while efficiently rotating equipment between high-demand locations.",
+        "tags": [
+            "loc_depot",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Urban Art Installation Delivery and Removal Logistics",
+        "content": "A city\u2019s public art program uses several depots (`<loc_depot>`) to deploy temporary sculptures and installations (`demand_linehaul`) to parks and plazas (`<loc_customer>`). The same vehicles later return to collect the artworks (`demand_backhaul`) after exhibitions. Routes must prioritize deliveries first, then pickups, while ensuring vehicle capacities (`<capacity>`) are not exceeded. The system must coordinate across depots to serve scattered urban locations efficiently, avoiding overloading during both setup and dismantling phases.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Construction Material Delivery and\u5e9f\u65e7Material Retrieval Network",
+        "content": "A construction company operates multiple regional depots (`<loc_depot>`) to supply building materials (e.g., steel beams, lumber) to active construction sites (`<loc_customer>`) while simultaneously collecting\u5e9f\u65e7construction waste (e.g., scrap metal, broken concrete) from completed projects. Each truck has a `<capacity>` ton limit, requiring careful balancing of outbound deliveries (`<demand_linehaul>`) and inbound pickups (`<demand_backhaul>`). Routes must ensure materials are delivered before\u5e9f\u65e7materials are collected at shared sites, avoiding capacity overloads. The goal is to minimize cross-regional truck movements while efficiently consolidating waste for recycling.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand_linehaul",
+            "demand_backhaul"
+        ]
+    },
+    {
+        "title": "Telecommunications Infrastructure Deployment and\u5e9f\u65e7Equipment\u56de\u6536System",
+        "content": "A telecom provider uses `<loc_depot>` hubs to deploy new fiber-optic equipment (`<demand_linehaul>`) to rural areas (`<loc_customer>`) while retrieving obsolete hardware (`<demand_backhaul>`) for eco-friendly disposal. Trucks must first deliver new gear before collecting\u5e9f\u65e7equipment at the same sites, adhering to `<capacity>` constraints. Multi-depot operations allow faster service in dispersed regions, optimizing fuel use and ensuring no truck exceeds its weight or volume limits.",
+        "tags": [
+            "loc_depot",
+            "demand_linehaul",
+            "loc_customer",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Electric Vehicle Battery Delivery and\u5e9f\u65e7Battery Collection Network",
+        "content": "An EV charging station operator manages `<loc_depot>` warehouses to distribute charged batteries (`<demand_linehaul>`) to stations (`<loc_customer>`) and collect depleted ones (`<demand_backhaul>`) for reconditioning. Each vehicle\u2019s `<capacity>` must accommodate both outbound deliveries (heavy) and inbound pickups (lighter\u5e9f\u65e7batteries), prioritizing delivery routes to ensure stations never run dry. Multi-depot coordination reduces response times in densely populated urban clusters.",
+        "tags": [
+            "loc_depot",
+            "demand_linehaul",
+            "loc_customer",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Medical Oxygen Cylinder Delivery and Empty Cylinder Pickup System",
+        "content": "A healthcare logistics firm operates `<loc_depot>` medical supply centers to deliver oxygen cylinders (`<demand_linehaul>`) to hospitals (`<loc_customer>`) and retrieve empty cylinders (`<demand_backhaul>`) for refilling. Trucks must first deliver full cylinders before collecting empties at the same locations, ensuring `<capacity>` limits are respected. Regional depot networks enable rapid emergency responses, with routes optimized to serve high-demand hospitals efficiently while minimizing deadhead mileage.",
+        "tags": [
+            "loc_depot",
+            "demand_linehaul",
+            "loc_customer",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Winter Sports Equipment Delivery and\u5e9f\u65e7Gear\u56de\u6536Logistics",
+        "content": "A ski resort operator uses `<loc_depot>` storage facilities in mountain regions to distribute winter gear (skis, snowboards) (`<demand_linehaul>`) to rental shops (`<loc_customer>`) and collect\u5e9f\u65e7equipment (`<demand_backhaul>`) from customers for recycling. Trucks must first deliver fresh inventory before picking up\u5e9f\u65e7items, balancing the mixed loads within `<capacity>` limits. Multi-depot operations ensure quick service across remote slopes while reducing the carbon footprint of redundant trips.",
+        "tags": [
+            "loc_depot",
+            "demand_linehaul",
+            "loc_customer",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Renewable Energy Component Delivery and\u5e9f\u65e7Material Recycling",
+        "content": "A solar energy company operates multiple regional depots (`<loc_depot>`) to supply solar panels and installation tools to construction sites (`<loc_customer>`) while simultaneously collecting\u5e9f\u65e7 solar equipment (e.g., damaged panels, wiring) for recycling. Each vehicle has a `<capacity>` ton limit, balancing the weight of new components being delivered (`<demand_linehaul>`) and\u5e9f\u65e7 materials being picked up (`<demand_backhaul>`). Routes must ensure no truck exceeds capacity while efficiently covering all sites, minimizing fuel use and maximizing material recovery.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand_linehaul",
+            "demand_backhaul"
+        ]
+    },
+    {
+        "title": "Event Catering Equipment Deployment and\u9910\u5177Collection",
+        "content": "A catering logistics firm manages `<loc_depot>` hubs to dispatch trucks carrying catering equipment (e.g., chafing dishes, serving trays) to event venues (`<loc_customer>`) and collecting disposable\u9910\u5177 (plates, cutlery) for recycling. Each truck\u2019s `<capacity>` must accommodate both the weight of equipment deliveries (`<demand_linehaul>`) and the volume of\u9910\u5177 pickups (`<demand_backhaul>`). The goal is to optimize routes to serve all venues while avoiding overloading and reducing empty return trips.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand_linehaul",
+            "demand_backhaul"
+        ]
+    },
+    {
+        "title": "Municipal Public Art Installation and Removal Logistics",
+        "content": "A city\u2019s public arts department uses `<loc_depot>` storage facilities to deliver temporary public art installations (e.g., sculptures, murals) to parks and public spaces (`<loc_customer>`), while simultaneously retrieving\u5e9f\u65e7 or expired artworks for repurposing or disposal. Trucks must balance the weight of new installations (`<demand_linehaul>`) and\u5e9f\u65e7 materials (`<demand_backhaul>`) without exceeding `<capacity>`, ensuring timely deployment and removal cycles across multiple districts.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Automotive Service Chain Parts Delivery and\u5e9f\u65e7Oil Collection",
+        "content": "An automotive service network operates from `<loc_depot>` warehouses to supply repair shops (`<loc_customer>`) with parts and tools (`<demand_linehaul>`) while collecting\u5e9f\u65e7 motor oil and filters (`<demand_backhaul>`) for environmentally safe disposal. Each vehicle\u2019s `<capacity>` must handle both outbound deliveries and inbound pickups efficiently, prioritizing high-demand locations while adhering to regulatory compliance for hazardous waste transport.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "School Playground Equipment Delivery and\u5e9f\u65e7Materials Retrieval",
+        "content": "A playground equipment supplier uses `<loc_depot>` distribution centers to deliver new play structures, safety mats, and accessories (`<demand_linehaul>`) to schools and childcare facilities (`<loc_customer>`), while simultaneously collecting\u5e9f\u65e7 playground materials (e.g., weathered plastic, rusted metal) for recycling. Trucks must manage mixed loads to avoid overloading, ensuring schools receive upgrades and\u5e9f\u65e7 items are diverted from landfills. Routes are optimized to cover rural and urban sites equitably.",
+        "tags": [
+            "loc_depot",
+            "demand_linehaul",
+            "loc_customer"
+        ]
+    }
+]

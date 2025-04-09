@@ -1,0 +1,1124 @@
+[
+    {
+        "title": "Grocery Delivery for Elderly Care Centers",
+        "content": "A meal delivery service operates from a central kitchen (<loc_depot>) to supply fresh groceries to <num_customer> elderly care centers (<loc_customer>). Each center has a specific daily order (<demand>) and a strict delivery window (<time_windows>) to align with meal prep schedules. Delivery vans (<capacity>) must:  \n\u2713 Avoid overloading while carrying perishable goods.  \n\u2713 Arrive within each center\u2019s time window (early arrivals wait).  \n\u2713 End routes at the last center, as drivers assist with unloading.  \nThe goal is to minimize total travel distance while ensuring timely deliveries.",
+        "tags": [
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "demand",
+            "time_windows",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Mobile Vaccination Clinic Deployment",
+        "content": "A health organization dispatches mobile clinics from a hub (<loc_depot>) to <num_customer> rural villages (<loc_customer>). Each clinic van (<capacity>) carries vaccines (<demand>) and must arrive during village-specified time windows (<time_windows>) to align with local events. Staff stay overnight at the final village, eliminating return trips. Challenges include:  \n\u2713 Strict cold-chain capacity limits for vaccines.  \n\u2713 Narrow time windows (e.g., midday when villagers gather).  \n\u2713 Routes ending at the last village to reduce wasted travel.",
+        "tags": [
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "capacity",
+            "demand",
+            "time_windows"
+        ]
+    },
+    {
+        "title": "E-Commerce Same-Day Delivery in Urban Areas",
+        "content": "A logistics company fulfills same-day orders from a warehouse (<loc_depot>) to <num_customer> customers (<loc_customer>). Each order has a weight (<demand>) and a 2-hour delivery window (<time_windows>). Scooters (<capacity>) deliver parcels and:  \n\u2713 Cannot carry more than their load limit.  \n\u2713 Must arrive within the customer\u2019s window (early arrivals wait).  \n\u2713 Finish routes at the last delivery point, as riders clock out.  \nThe objective is to minimize total distance while meeting tight deadlines.",
+        "tags": [
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "demand",
+            "time_windows",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Waste Collection from Temporary Event Sites",
+        "content": "After a city festival, cleanup crews start from a depot (<loc_depot>) to collect waste from <num_customer> temporary bins (<loc_customer>). Each bin has a volume (<demand>) and a pickup deadline (<time_windows>) before site teardown. Trucks (<capacity>) must:  \n\u2713 Avoid overfilling during collection.  \n\u2713 Reach bins before their closing time.  \n\u2713 End routes at the last bin, as crews shift to sorting.  \nOptimize for shortest total travel while adhering to time constraints.",
+        "tags": [
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "demand",
+            "time_windows",
+            "capacity"
+        ]
+    },
+    {
+        "title": "On-Demand Courier Services for Legal Documents",
+        "content": "A law firm uses couriers to deliver sensitive documents from its office (<loc_depot>) to <num_customer> clients (<loc_customer>). Each package has a weight (<demand>) and a strict signing window (<time_windows>). Couriers (<capacity>) must:  \n\u2713 Stay under load limits for secure transport.  \n\u2713 Arrive within the client\u2019s availability window.  \n\u2713 Finish at the last stop, as couriers file reports remotely.  \nThe goal is to minimize travel distance while ensuring punctual deliveries.",
+        "tags": [
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "demand",
+            "time_windows",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Fresh Flower Delivery for Wedding Events",
+        "content": "A florist must deliver fresh floral arrangements to multiple wedding venues (<loc_customer>) from a central greenhouse (<loc_depot>). Each venue has a strict delivery window (<time_windows>) due to event schedules, and arrangements are perishable (service time includes setup). Delivery vans have limited space (<capacity>) to prevent damage to delicate flowers. Drivers finish their day at the last venue (no return to depot). The goal is to minimize travel distance while ensuring all deliveries arrive within their time windows and no van is overloaded.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "time_windows",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Mobile COVID-19 Testing Unit Deployment",
+        "content": "A health agency dispatches mobile testing units from a central lab (<loc_depot>) to high-risk neighborhoods (<loc_customer>). Each unit carries limited test kits (<capacity>) and must arrive during pre-announced time slots (<time_windows>) to avoid overcrowding. After the last test site, units park at local hospitals (open routes). The objective is to maximize coverage by minimizing total travel time while respecting kit capacity and testing schedules.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "time_windows"
+        ]
+    },
+    {
+        "title": "Luxury Retail Pop-Up Shop Inventory Replenishment",
+        "content": "A high-end brand restocks temporary pop-up shops (<loc_customer>) from a hidden warehouse (<loc_depot>). Each shop has exclusive delivery windows (<time_windows>) to maintain exclusivity, and armored trucks have strict weight limits (<capacity>) for security. Drivers end routes at the final shop to avoid backtracking. The challenge is to optimize routes that adhere to discreet delivery times, avoid overloading, and minimize exposure on roads.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "time_windows",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Film Production Equipment Logistics",
+        "content": "A studio transports cameras and gear from a rental facility (<loc_depot>) to multiple film sets (<loc_customer>) with tight shooting schedules (<time_windows>). Equipment is bulky (<demand>), and trucks have load limits (<capacity>). Crews keep trucks on-site after final deliveries (open routes). The goal is to ensure no set experiences delays by coordinating routes that respect both time windows and payload constraints.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "time_windows",
+            "demand",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Disaster Relief Tent Distribution",
+        "content": "After an earthquake, aid workers distribute tents from a central hub (<loc_depot>) to makeshift camps (<loc_customer>). Camps have narrow delivery windows (<time_windows>) due to security concerns, and trucks have limited cargo space (<capacity>). Vehicles remain at the last camp to assist (open routes). The priority is to minimize total distribution time while ensuring equitable access and avoiding overloading any truck.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "time_windows",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Mobile Blood Donation Unit Deployment",
+        "content": "A blood bank operates mobile donation units that travel to corporate offices (<loc_customer>) from a central hub (<loc_depot>). Each unit has a limited storage capacity (<capacity> liters) and must arrive within pre-scheduled time slots (<time_windows>) to align with employee breaks. After the final donation session, units proceed directly to testing labs (no return to depot). The goal is to maximize daily collections while ensuring no unit exceeds capacity or misses time windows.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "time_windows"
+        ]
+    },
+    {
+        "title": "Agricultural Input Delivery to Remote Farms",
+        "content": "An agribusiness distributes seeds/fertilizers (<demand>) from a regional warehouse (<loc_depot>) to scattered farms (<loc_customer>) using trucks (<capacity>). Deliveries must occur during farmers' specified availability windows (<time_windows>) around planting schedules. Trucks end routes at the last farm to assist with unloading, minimizing backtracking. The objective is to serve all farms with minimal fleet mileage while respecting both payload limits and narrow delivery timeframes.",
+        "tags": [
+            "demand",
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "time_windows"
+        ]
+    },
+    {
+        "title": "Temporary Traffic Sensor Installation for Urban Studies",
+        "content": "A research team deploys portable sensors (<demand> units/weight) to intersections (<loc_customer>) from a municipal yard (<loc_depot>), with installation vans (<capacity>). Each location has strict time windows (<time_windows>) coinciding with low-traffic periods. Technicians finish shifts at the last installation site. The challenge is to optimize routes that:  \n\u2713 Install all sensors before morning rush hour  \n\u2713 Never exceed van payload limits  \n\u2713 Minimize pre-dawn driving distances",
+        "tags": [
+            "demand",
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "time_windows"
+        ]
+    },
+    {
+        "title": "Luxury Hotel Amenity Delivery for VIP Guests",
+        "content": "A concierge service transports premium amenities (wine, gifts - <demand>) from a storage facility (<loc_depot>) to high-end hotels (<loc_customer>) using temperature-controlled carts (<capacity>). Deliveries must align with guest arrival times (<time_windows>), with staff released after final drop-off. The system requires routes that:  \n\u2022 Respect 15-minute delivery windows  \n\u2022 Prevent cargo mixing (capacity per item type)  \n\u2022 Eliminate unnecessary cross-town trips",
+        "tags": [
+            "demand",
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "time_windows"
+        ]
+    },
+    {
+        "title": "Festival Food Vendor Restocking",
+        "content": "During multi-day festivals, a logistics provider replenishes food trucks (<loc_customer>) from a commissary (<loc_depot>) using refrigerated vehicles (<capacity>). Each vendor specifies restocking times (<time_windows>) between customer rushes. Vehicles remain near vendor clusters after final delivery for rapid response. The optimization seeks to:  \n\u25b8 Synchronize with 30-minute service gaps  \n\u25b8 Handle perishable item volume limits  \n\u25b8 Reduce congestion in pedestrian zones",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "time_windows"
+        ]
+    },
+    {
+        "title": "Mobile Pet Vaccination Clinic Routing",
+        "content": "A veterinary service operates mobile clinics to provide vaccinations at designated community centers (<loc_customer>). Each center has a specific time window (<time_windows>) for visits due to local event schedules. Vehicles (capacity: <capacity> doses) depart from a central hub (<loc_depot>), and each stop requires unloading equipment (<service_time>). Clinics end at the final location without returning. The goal is to maximize vaccinated pets while respecting time constraints and vehicle limits.",
+        "tags": [
+            "loc_customer",
+            "time_windows",
+            "capacity",
+            "loc_depot",
+            "service_time"
+        ]
+    },
+    {
+        "title": "Art Gallery Exhibition Setup Logistics",
+        "content": "An art transport company must deliver sculptures and paintings to multiple galleries (<loc_customer>) for a synchronized exhibition opening. Each fragile item (<demand> units) requires careful handling (<service_time>), and galleries impose strict unloading windows (<time_windows>) to avoid disrupting other events. Trucks (capacity: <capacity> items) start from a storage facility (<loc_depot>). Drivers may finish routes at the last gallery. Optimize for minimal travel distance while meeting all delivery deadlines.",
+        "tags": [
+            "loc_customer",
+            "demand",
+            "service_time",
+            "time_windows",
+            "capacity",
+            "loc_depot"
+        ]
+    },
+    {
+        "title": "Corporate Catering Lunch Delivery",
+        "content": "A catering service delivers pre-ordered meals (<demand> boxes) to office buildings (<loc_customer>) during fixed lunch hours (<time_windows>). Thermal delivery vans (capacity: <capacity> boxes) depart from a kitchen (<loc_depot>). Each stop involves setup time (<service_time>). Vehicles need not return after the last delivery. The objective is to ensure all meals arrive hot and on time while minimizing fleet mileage.",
+        "tags": [
+            "demand",
+            "loc_customer",
+            "time_windows",
+            "capacity",
+            "loc_depot",
+            "service_time"
+        ]
+    },
+    {
+        "title": "Pop-Up EV Charging Station Deployment",
+        "content": "An energy company deploys temporary charging stations (<loc_customer>) during peak travel periods. Each location has a setup window (<time_windows>) coordinated with local authorities. Transport trucks (capacity: <capacity> chargers) carry equipment from a warehouse (<loc_depot>), with installation time (<service_time>) at each site. Routes terminate at the final deployment point. Optimize for rapid deployment across all locations within narrow time frames.",
+        "tags": [
+            "loc_customer",
+            "time_windows",
+            "capacity",
+            "loc_depot",
+            "service_time"
+        ]
+    },
+    {
+        "title": "Academic Conference Materials Distribution",
+        "content": "Conference organizers must distribute attendee kits (<demand> units) to hotels (<loc_customer>) before check-in deadlines (<time_windows>). Vans (capacity: <capacity> kits) start from a printing center (<loc_depot>), with unloading time (<service_time>) per hotel. Drivers may end shifts after the last delivery. The challenge is to synchronize all deliveries before registration opens while reducing total route distance.",
+        "tags": [
+            "demand",
+            "loc_customer",
+            "time_windows",
+            "capacity",
+            "loc_depot",
+            "service_time"
+        ]
+    },
+    {
+        "title": "Mobile Laundry Service for Homeless Shelters",
+        "content": "A mobile laundry van operates from a central facility (<loc_depot>) to provide washing services for <num_customer> homeless shelters across the city. Each shelter (<loc_customer>) has a specific linen volume (<demand>) and a strict service window (<time_windows>) based on shelter operating hours. The van has a <capacity> kg load limit and must complete all pickups within the designated time frames. Drivers end their routes at the last shelter, eliminating unnecessary returns to the depot. The goal is to minimize total mileage while ensuring no van is overloaded and all shelters receive service during their available hours.",
+        "tags": [
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "demand",
+            "time_windows",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Perishable Seafood Delivery to High-End Restaurants",
+        "content": "A seafood distributor supplies fresh catch from a harbor (<loc_depot>) to <num_customer> premium restaurants (<loc_customer>), each with unique order sizes (<demand>) and narrow delivery windows (<time_windows>) aligned with kitchen prep schedules. Refrigerated trucks (<capacity>) must maintain cold chains and cannot arrive early/late. Routes terminate at the final restaurant to preserve freshness. The objective is to optimize delivery sequences that respect both capacity limits and tight time constraints while minimizing travel distance.",
+        "tags": [
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "demand",
+            "time_windows",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Temporary Election Ballot Box Collection",
+        "content": "During elections, officials must collect sealed ballots from <num_customer> remote drop-off sites (<loc_customer>) using secure vans (<capacity>). Each site has a fixed closing time (<time_windows_close>), and collections must occur within 30 minutes after closure to ensure chain-of-custody. Vehicles start at an election office (<loc_depot>) but end routes at a central counting facility (modeled via open routes). The challenge is to design routes that guarantee all ballots are collected promptly without exceeding van capacity or violating time-sensitive protocols.",
+        "tags": [
+            "num_customer",
+            "loc_customer",
+            "capacity",
+            "time_windows_close",
+            "loc_depot"
+        ]
+    },
+    {
+        "title": "On-Demand Industrial Sensor Calibration",
+        "content": "A tech firm deploys field engineers from a hub (<loc_depot>) to calibrate <num_customer> industrial sensors (<loc_customer>) installed at factories. Each calibration requires specialized equipment (<demand> units) and must occur during factory downtime (<time_windows>). Service vehicles (<capacity>) carry calibration tools, and engineers finish their day at the last site. The solution must minimize travel time while ensuring no vehicle exceeds tool capacity and all calibrations are performed within strict maintenance windows.",
+        "tags": [
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "demand",
+            "time_windows",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Pop-Up Retail Sample Distribution for Marketing Campaigns",
+        "content": "A brand launches a campaign where promotional teams distribute product samples from a warehouse (<loc_depot>) to <num_customer> temporary pop-up locations (<loc_customer>) in high-footfall areas. Each pop-up has a fixed activation period (<time_windows>) and sample requirement (<demand>). Vehicles (<capacity>) carry samples but don\u2019t return to the depot after the last stop. The aim is to maximize campaign coverage by meeting all time-bound distribution targets without overloading vehicles, while minimizing route distances to reduce fuel costs.",
+        "tags": [
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "time_windows",
+            "demand",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Mobile EV Charging Station Deployment for Urban Fleets",
+        "content": "A city deploys mobile EV charging units to service electric buses, taxis, and municipal vehicles across depots (<loc_customer>). Each vehicle type has a charging demand (<demand> kWh) and must be serviced within its operational downtime window (<time_windows>). Charging trucks (<capacity> kWh) start from a central hub (<loc_depot>) but remain at their final location overnight. Routes must minimize total distance while ensuring no truck exceeds capacity and all charging sessions start within designated time slots.",
+        "tags": [
+            "loc_customer",
+            "demand",
+            "time_windows",
+            "capacity",
+            "loc_depot"
+        ]
+    },
+    {
+        "title": "Just-in-Time Automotive Parts Delivery to Assembly Lines",
+        "content": "An auto manufacturer supplies parts from a warehouse (<loc_depot>) to <num_customer> assembly plants (<loc_customer>), each with a time-critical consumption schedule (<time_windows>). Delivery trucks (<capacity> tons) transport components (<demand>) matching hourly production needs. Drivers end shifts at their last plant without returning. The goal is to avoid line stoppages by meeting strict time windows and optimizing part distribution without overloading vehicles.",
+        "tags": [
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "time_windows",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "Temperature-Controlled Vaccine Distribution to Clinics",
+        "content": "A pharmaceutical company delivers vaccines from a cold storage depot (<loc_depot>) to clinics (<loc_customer>), each specifying a 1-hour receiving window (<time_windows>) to maintain cold chain integrity. Refrigerated vans (<capacity> doses) must complete deliveries before vaccines expire, with drivers finishing routes at the last clinic. Constraints include vehicle capacity and the requirement that no clinic is visited outside its time window.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "time_windows",
+            "capacity"
+        ]
+    },
+    {
+        "title": "On-Demand Scaffolding Delivery for Construction Sites",
+        "content": "A rental company services <num_customer> construction sites (<loc_customer>) requiring scaffolding deliveries (<demand> units) during non-peak hours (<time_windows>). Flatbed trucks (<capacity> units) depart from a central yard (<loc_depot>) and remain on-site after final delivery. Routes must minimize travel distance while adhering to site access time restrictions and vehicle load limits.",
+        "tags": [
+            "num_customer",
+            "loc_customer",
+            "demand",
+            "time_windows",
+            "capacity",
+            "loc_depot"
+        ]
+    },
+    {
+        "title": "Pop-Up Museum Exhibit Installation with Curatorial Time Slots",
+        "content": "A traveling museum exhibit must install artifacts at <num_customer> galleries (<loc_customer>) during pre-booked curator availability windows (<time_windows>). Specialty trucks (<capacity> fragile items) transport exhibits from a storage depot (<loc_depot>), with crews staying at the final venue. The challenge is to sequence installations without overlapping time windows or exceeding vehicle fragility limits.",
+        "tags": [
+            "num_customer",
+            "loc_customer",
+            "time_windows",
+            "capacity",
+            "loc_depot"
+        ]
+    },
+    {
+        "title": "Mobile Dental Clinic Scheduling",
+        "content": "A nonprofit operates mobile dental clinics that visit underserved communities (<loc_customer>) from a central hub (<loc_depot>). Each clinic van has limited equipment capacity (<capacity>), and communities have specific time windows (<time_windows>) based on school/work schedules. Dentists must arrive within these windows to perform procedures (service time: <service_time>). Vans end their routes at the final community without returning to the hub to maximize service time. The goal is to maximize the number of communities served while minimizing travel distance between stops.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "time_windows",
+            "service_time"
+        ]
+    },
+    {
+        "title": "Perishable Lab Sample Collection",
+        "content": "A biotech company collects time-sensitive lab samples from hospitals (<loc_customer>) using refrigerated vans (<capacity>) starting at a processing center (<loc_depot>). Each hospital has a strict 2-hour collection window (<time_windows>) when samples are ready. Vans must arrive within these windows to ensure sample viability (service time: <service_time> for packaging). Drivers finish their shifts after the last collection to avoid unnecessary returns. The objective is to minimize total travel time while meeting all sample pickup deadlines.",
+        "tags": [
+            "loc_customer",
+            "capacity",
+            "loc_depot",
+            "time_windows",
+            "service_time"
+        ]
+    },
+    {
+        "title": "Pop-Up Fitness Class Equipment Logistics",
+        "content": "A fitness chain deploys instructors with equipment (<capacity>) to temporary outdoor locations (<loc_customer>) from a storage depot (<loc_depot>). Each pop-up class has a setup window (<time_windows>) before attendees arrive, with setup time (<service_time>) for arranging gear. Instructors leave equipment at the final location for overnight events. Routes must ensure all classes are supplied without overloading vehicles while minimizing detours between spatially dispersed parks and plazas.",
+        "tags": [
+            "capacity",
+            "loc_customer",
+            "loc_depot",
+            "time_windows",
+            "service_time"
+        ]
+    },
+    {
+        "title": "Just-in-Time Aircraft Catering Delivery",
+        "content": "An airline catering service delivers meals (<demand>) from a kitchen (<loc_depot>) to multiple aircraft (<loc_customer>) during tight turnaround times (<time_windows>). Trucks (<capacity>) must arrive precisely during boarding to load meals (service time: <service_time>). Vehicles remain at the airport after final deliveries to avoid empty return trips. The challenge is to synchronize deliveries across fluctuating flight schedules while respecting both vehicle capacity and strict airline deadlines.",
+        "tags": [
+            "demand",
+            "loc_depot",
+            "loc_customer",
+            "time_windows",
+            "capacity",
+            "service_time"
+        ]
+    },
+    {
+        "title": "Wildlife Tracking Tag Deployment",
+        "content": "Researchers deploy GPS tags (<demand>) from a field station (<loc_depot>) to remote animal habitats (<loc_customer>) using off-road vehicles (<capacity>). Each habitat has optimal tagging time windows (<time_windows>) based on animal activity patterns, with variable setup times (<service_time>). Teams camp at the final deployment site. The goal is to maximize tag deployments per trip while adhering to ecological time constraints and minimizing cross-country travel distance.",
+        "tags": [
+            "demand",
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "time_windows",
+            "service_time"
+        ]
+    },
+    {
+        "title": "Mobile Library Book Rotation",
+        "content": "A county library system operates mobile book vans that rotate collections between branch libraries (<loc_customer>). Each branch has a specific time window (<time_windows>) for swaps due to staff availability, and each van can carry up to <capacity> books. Vans depart from the central warehouse (<loc_depot>) but remain at their final branch for maintenance. The goal is to minimize total distance while ensuring no van is overloaded and all swaps occur within designated time slots.",
+        "tags": [
+            "loc_customer",
+            "time_windows",
+            "capacity",
+            "loc_depot"
+        ]
+    },
+    {
+        "title": "On-Demand Laboratory Animal Feed Delivery",
+        "content": "A biotech supplier delivers time-sensitive, temperature-controlled feed to research labs (<loc_customer>) from a production facility (<loc_depot>). Each lab specifies a narrow delivery window (<time_windows>) to align with animal care protocols, and trucks have strict weight limits (<capacity>) due to refrigeration requirements. Drivers end their shifts after the final delivery without returning to base. The objective is to optimize routes that respect both biological timing constraints and vehicle payload limits.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "time_windows",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Pop-Up Urban Farming Kit Distribution",
+        "content": "A nonprofit distributes modular hydroponic kits to community centers (<loc_customer>) using electric cargo bikes (<capacity>). Centers must receive deliveries during their operating hours (<time_windows>), and bikes recharge at their last stop rather than returning to the depot (<loc_depot>). The challenge is to schedule routes that accommodate morning/afternoon availability variations across centers while maximizing the number of kits delivered per trip.",
+        "tags": [
+            "loc_customer",
+            "capacity",
+            "time_windows",
+            "loc_depot"
+        ]
+    },
+    {
+        "title": "Luxury Watch Showroom Appointments",
+        "content": "A Swiss watchmaker schedules armored trucks to transport high-value timepieces to temporary showrooms (<loc_customer>) for VIP viewings. Each showroom has a strict 1-hour setup window (<time_windows>) before appointments begin, and trucks have limited secure compartments (<capacity>). Vehicles remain on-site for security after the final delivery. The solution must minimize risk exposure time by optimizing routes that synchronize with showroom schedules.",
+        "tags": [
+            "loc_customer",
+            "time_windows",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Marine Conservation Equipment Deployment",
+        "content": "Researchers deploy tracking buoys to GPS coordinates (<loc_customer>) from a coastal base (<loc_depot>). Each buoy must be installed during specific tidal windows (<time_windows>), and boats have weight limits (<capacity>) due to equipment size. Crews stay overnight at the final deployment site. The problem requires routing that accounts for dynamic ocean conditions while respecting both payload constraints and narrow installation time frames.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "time_windows",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Mobile Vet Clinic for Rural Communities",
+        "content": "A veterinary organization operates mobile clinics to provide care for pets in remote villages. Each clinic vehicle (capacity = <capacity>) starts from a central hub (<loc_depot>) and visits <num_customer> villages (<loc_customer>), each with a scheduled appointment window (<time_windows>). Vehicles carry vaccines, medications, and equipment (<demand> per stop) and must arrive within strict time slots to avoid farmer conflicts. After the final appointment, vehicles remain onsite for outreach work rather than returning to base.",
+        "tags": [
+            "capacity",
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "time_windows",
+            "demand"
+        ]
+    },
+    {
+        "title": "High-Value Artwork Transport for Gallery Exhibitions",
+        "content": "An art logistics firm coordinates same-day deliveries of fragile sculptures/paintings from a storage facility (<loc_depot>) to <num_customer> galleries (<loc_customer>). Each vehicle (capacity = <capacity>) carries temperature-controlled crates (<demand>) and must arrive during pre-arranged installation windows (<time_windows>) when curators are present. Drivers depart after the last delivery to avoid unnecessary handling of empty vehicles.",
+        "tags": [
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "capacity",
+            "demand",
+            "time_windows"
+        ]
+    },
+    {
+        "title": "Pop-Up EV Charging for Urban Ride-Sharing Fleets",
+        "content": "A service deploys mobile charging units to replenish electric ride-share cars across <num_customer> parking zones (<loc_customer>). Each charger truck (capacity = <capacity> kWh) starts from a power station (<loc_depot>) and services vehicles during their drivers' mandated break periods (<time_windows>). Trucks carry modular batteries (<demand>) and remain at their final location overnight for next-day redeployment.",
+        "tags": [
+            "num_customer",
+            "loc_customer",
+            "capacity",
+            "loc_depot",
+            "time_windows",
+            "demand"
+        ]
+    },
+    {
+        "title": "Just-in-Time Aircraft De-Icing Fluid Delivery",
+        "content": "During winter storms, tanker trucks (capacity = <capacity> liters) distribute de-icing fluid from a central depot (<loc_depot>) to <num_customer> airport gates (<loc_customer>). Each gate has a narrow time window (<time_windows>) between flight arrivals/departures. Vehicles must deliver exact fluid quantities (<demand>) and can end routes at any gate to await next assignments without returning.",
+        "tags": [
+            "capacity",
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "time_windows",
+            "demand"
+        ]
+    },
+    {
+        "title": "Temporary Cell Tower Deployment for Disaster Recovery",
+        "content": "After a hurricane, telecom teams install portable cell towers at <num_customer> sites (<loc_customer>) using trucks (capacity = <capacity> equipment units) from a staging area (<loc_depot>). Each site has a priority window (<time_windows>) for activation based on emergency response needs. Trucks deliver tower components (<demand>) and remain at the last site to support local crews.  \n```  \n\nEach scenario emphasizes:  \n- **Capacity**: Vehicle load limits for specialized goods (art crates, medical supplies, etc.)  \n- **Open Routes**: Vehicles conclude operations at final destinations (e.g., disaster sites, galleries)  \n- **Time Windows**: Strict service intervals (medical appointments, flight schedules, etc.)  \n\nLet me know if you'd like further refinements!",
+        "tags": [
+            "num_customer",
+            "loc_customer",
+            "capacity",
+            "loc_depot",
+            "time_windows",
+            "demand"
+        ]
+    },
+    {
+        "title": "Mobile Health Screening Unit Deployment",
+        "content": "A public health initiative deploys mobile screening units from a central hub (<loc_depot>) to underserved neighborhoods (<loc_customer>). Each unit has limited medical equipment capacity (<capacity>), and each neighborhood has a specific demand (<demand>) for screenings (e.g., blood pressure, glucose tests). Time windows (<time_windows>) are strict due to community availability (e.g., 9 AM\u201312 PM at senior centers, 4 PM\u20137 PM at workplaces). Units conclude operations at their last site without returning to base. The goal is to maximize screenings served while minimizing travel distance between locations.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand",
+            "time_windows"
+        ]
+    },
+    {
+        "title": "Just-in-Time Fashion Sample Delivery for Buyers",
+        "content": "A designer showroom (<loc_depot>) delivers seasonal collections to luxury retail buyers (<loc_customer>) ahead of fashion week. Each vehicle carries fragile garment racks (<capacity>), and buyers have narrow appointment slots (<time_windows>) to review samples (<demand>). Drivers depart after final deliveries (e.g., to hotels or next-day venues). Constraints include avoiding early arrivals (buyers won\u2019t wait) and ensuring no vehicle exceeds sample capacity. Optimize routes to meet all time-critical appointments.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "time_windows",
+            "demand"
+        ]
+    },
+    {
+        "title": "Urban Tree Planting Logistics",
+        "content": "A sustainability NGO coordinates tree planting across city parks (<loc_customer>) from a nursery (<loc_depot>). Each truck transports saplings (<capacity>), and sites have planting time windows (<time_windows>) aligned with volunteer shifts (e.g., 8 AM\u201310 AM). Soil/water demands vary per site (<demand>). Trucks remain at the final park for unloading. The challenge is to route vehicles to maximize saplings delivered within volunteer availability while minimizing deadhead mileage.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "time_windows",
+            "demand"
+        ]
+    },
+    {
+        "title": "On-Demand Industrial Tool Rental Fulfillment",
+        "content": "A tool rental depot (<loc_depot>) services construction sites (<loc_customer>) with same-day equipment deliveries. Vehicles carry bulky tools (<capacity>), and sites specify delivery windows (<time_windows>) tied to project phases (e.g., \"before 7 AM concrete pour\"). Demands (<demand>) include generators, scaffolding, etc. Drivers end routes at their last site. Optimize for on-time deliveries without overloading vehicles, accounting for urban traffic delays.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "time_windows",
+            "demand"
+        ]
+    },
+    {
+        "title": "Pop-Up Theater Equipment Touring",
+        "content": "A traveling theater group transports stage gear (<capacity>) from a warehouse (<loc_depot>) to temporary venues (<loc_customer>). Each venue has a load-in window (<time_windows>) before performances (e.g., 2 PM\u20135 PM for evening shows). Gear demands (<demand>) include lighting, props, and sound systems. Trucks stay at the final venue for setup. The objective is to minimize travel costs while meeting rigid setup deadlines across multiple cities.",
+        "tags": [
+            "capacity",
+            "loc_depot",
+            "loc_customer",
+            "time_windows",
+            "demand"
+        ]
+    },
+    {
+        "title": "Mobile COVID-19 Booster Shot Clinics",
+        "content": "A health department deploys mobile clinics to administer booster shots across neighborhoods. Each clinic vehicle (capacity: `<capacity>` doses) starts at a central depot (`<loc_depot>`) and visits `<num_customer>` pop-up sites (`<loc_customer>`), each with a demand (`<demand>`) for doses. Sites have strict time windows (`<time_windows>`) due to local event schedules. Vehicles do not return to the depot after the final stop, instead remaining for standby at the last location. The goal is to maximize coverage while respecting cold-chain storage limits and appointment slots.",
+        "tags": [
+            "capacity",
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "demand",
+            "time_windows"
+        ]
+    },
+    {
+        "title": "Just-in-Time Fashion Sample Delivery for Buyers",
+        "content": "A fashion brand delivers samples (`<demand>` items per showroom) from a warehouse (`<loc_depot>`) to high-end showrooms (`<loc_customer>`) before buyer appointments. Vehicles (capacity: `<capacity>`) must arrive within narrow time windows (`<time_windows>`) to align with buyer schedules. After the final delivery, drivers are released (open routes). The challenge is to minimize delays while ensuring fragile samples (e.g., couture) are transported without overloading vehicles.",
+        "tags": [
+            "demand",
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "time_windows"
+        ]
+    },
+    {
+        "title": "Urban Tree Planting Logistics",
+        "content": "A city parks department plants trees across `<num_customer>` sites (`<loc_customer>`) using trucks (capacity: `<capacity>` saplings) from a nursery (`<loc_depot>`). Each site has a demand (`<demand>`) and a planting time window (`<time_windows>`) based on soil conditions and volunteer availability. Trucks depart after final planting without returning. Routes must optimize sapling survival (minimize transit time) while adhering to vehicle weight limits.",
+        "tags": [
+            "num_customer",
+            "loc_customer",
+            "capacity",
+            "loc_depot",
+            "demand",
+            "time_windows"
+        ]
+    },
+    {
+        "title": "On-Demand Industrial Tool Rental Fulfillment",
+        "content": "A tool rental company services same-day requests from construction sites (`<loc_customer>`). Vehicles (capacity: `<capacity>` tools) depart from a central hub (`<loc_depot>`) with heavy equipment (`<demand>` per site). Time windows (`<time_windows>`) reflect shift start/end times. Drivers end their shift after the last delivery. The goal is to minimize idle time while ensuring no vehicle exceeds weight limits for safe transport.",
+        "tags": [
+            "loc_customer",
+            "capacity",
+            "loc_depot",
+            "demand",
+            "time_windows"
+        ]
+    },
+    {
+        "title": "Pop-Up Theater Equipment Touring",
+        "content": "A theater troupe transports props and stage gear (`<demand>` per venue) to `<num_customer>` temporary venues (`<loc_customer>`) from a storage depot (`<loc_depot>`). Trucks (capacity: `<capacity>`) must arrive during load-in windows (`<time_windows>`) before performances. Vehicles remain at the final venue for setup. Routes must avoid overloading while prioritizing time-sensitive deliveries (e.g., perishable stage effects).",
+        "tags": [
+            "demand",
+            "num_customer",
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "time_windows"
+        ]
+    },
+    {
+        "title": "Mobile Coffee Truck Fleet Scheduling",
+        "content": "A specialty coffee chain operates a fleet of mobile trucks that serve corporate campuses, parks, and event venues across the city. Each truck (<capacity> kg of beans/supplies) departs from a central commissary (<loc_depot>) to visit <num_customer> pre-booked locations (<loc_customer>) with fixed service time windows (<time_windows>) for peak demand periods. Service times (<service_time>) include setup/breakdown. Trucks end their routes at their final stop to avoid empty return trips. The goal is to maximize served locations while respecting vehicle capacity and strict customer time constraints (e.g., office workers' 9 AM rush).",
+        "tags": [
+            "capacity",
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "time_windows",
+            "service_time"
+        ]
+    },
+    {
+        "title": "On-Demand Luxury Car Test Drive Coordination",
+        "content": "A high-end automaker offers personalized test drives from a showroom (<loc_depot>) to potential buyers' homes (<loc_customer>). Each demo vehicle (<capacity> = 1 customer + equipment) must arrive within 15-minute appointment windows (<time_windows>), with 45-minute test drives (<service_time>). Drivers leave vehicles at the last customer's location for retrieval later. The challenge is to schedule routes that accommodate VIP time sensitivities while minimizing total fleet mileage across a metropolitan area.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "time_windows",
+            "service_time"
+        ]
+    },
+    {
+        "title": "Temporary Urban Beehive Pollination Services",
+        "content": "An agro-tech company deploys portable beehives (<capacity> hives/vehicle) from a rural depot (<loc_depot>) to urban farms (<loc_customer>) during precise flowering periods (<time_windows> \u00b13 days). Each farm requires <demand> hives for 48-hour pollination (<service_time>). Vehicles remain at final locations to avoid disturbing hives with return trips. Optimization must balance hive capacity with tight biological time windows across scattered micro-farms.",
+        "tags": [
+            "capacity",
+            "loc_depot",
+            "loc_customer",
+            "time_windows",
+            "demand",
+            "service_time"
+        ]
+    },
+    {
+        "title": "Olympic Venue Medical Kit Restocking",
+        "content": "During the Games, emergency medical supplies are distributed from a central warehouse (<loc_depot>) to <num_customer> competition venues (<loc_customer>). Each refrigerated van (<capacity> kg) must restock AEDs and medications before daily opening (<time_windows> 6:00-8:00) with 30-minute unloading (<service_time>). Vehicles stay at venues post-delivery for emergency use. The solution must handle strict pre-event deadlines while navigating traffic-controlled zones.",
+        "tags": [
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "capacity",
+            "time_windows",
+            "service_time"
+        ]
+    },
+    {
+        "title": "Floating Bookstore Island Hopping",
+        "content": "A literacy NGO operates a boat (<capacity> books) visiting <num_customer> remote islands (<loc_customer>) on tidal schedules (<time_windows> \u00b11 hour around high tide). Each stop requires 2-hour pop-up operations (<service_time>). The boat docks overnight at its final island. Routing must synchronize with tidal access windows while maximizing book distribution across archipelagos, accounting for variable island demand (<demand>).",
+        "tags": [
+            "capacity",
+            "num_customer",
+            "loc_customer",
+            "time_windows",
+            "service_time",
+            "demand"
+        ]
+    },
+    {
+        "title": "Mobile EV Battery Swapping for Ride-Sharing Fleets",
+        "content": "A service provider operates mobile battery-swapping vans to support electric ride-sharing fleets in a metropolitan area. Each van (capacity = <capacity> batteries) starts at a charging hub (<loc_depot>) and visits designated swap points (<loc_customer>) where drivers request fresh batteries (<demand>) within specific time windows (<time_windows>) during shift changes. Vans do not return to the hub after the last swap, instead parking at high-demand zones for the next service cycle. The goal is to minimize total travel distance while ensuring no van exceeds its battery inventory and all swaps occur within the drivers' availability windows.",
+        "tags": [
+            "capacity",
+            "loc_depot",
+            "loc_customer",
+            "demand",
+            "time_windows"
+        ]
+    },
+    {
+        "title": "On-Demand Meal Kit Delivery for Corporate Offices",
+        "content": "A gourmet meal kit company delivers pre-ordered lunch boxes to office buildings (<loc_customer>) from a central kitchen (<loc_depot>). Each delivery vehicle (capacity = <capacity> kits) must arrive during strict lunchtime windows (<time_windows>) when reception desks are staffed. Drivers end their routes at the last delivery location to avoid empty return trips. With varying order sizes per building (<demand>), the challenge is to optimize routes that respect both time constraints and vehicle load limits while covering all offices in a single morning dispatch.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "time_windows",
+            "demand"
+        ]
+    },
+    {
+        "title": "Temporary Urban Air Quality Sensor Deployment",
+        "content": "An environmental agency deploys technicians to install air quality sensors across a city (<loc_customer>) from a equipment depot (<loc_depot>). Each technician van (capacity = <capacity> sensors) must arrive at installation sites during pre-arranged access windows (<time_windows>) when property managers are available. Installation takes <service_time> minutes per site. Technicians finish their day at the final installation point. The objective is to plan routes that deploy all sensors within their time slots without exceeding vehicle capacity or requiring return trips to the depot.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "time_windows",
+            "service_time"
+        ]
+    },
+    {
+        "title": "Pop-Up COVID-19 Booster Shot Clinics",
+        "content": "A health department coordinates mobile vaccination teams visiting temporary sites (<loc_customer>) from a central cold storage facility (<loc_depot>). Each refrigerated van (capacity = <capacity> doses) must arrive during scheduled clinic hours (<time_windows>), with setup taking <service_time> minutes. Teams remain overnight at their last location to serve nearby areas the next day. With varying dose requirements per site (<demand>), the system must optimize routes that ensure temperature-sensitive vaccines are delivered on time without overloading vehicles or wasting doses.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "time_windows",
+            "service_time",
+            "demand"
+        ]
+    },
+    {
+        "title": "Just-in-Time Fashion Sample Delivery for Buyers",
+        "content": "A fashion house delivers sample collections to luxury buyers' offices (<loc_customer>) from its design studio (<loc_depot>). Each courier van (capacity = <capacity> garment bags) must arrive during buyers' pre-booked viewing appointments (<time_windows>). Deliveries require <service_time> minutes for inspection sign-off. Couriers finish routes at the last appointment location. With high-value items and strict scheduling constraints, the goal is to minimize travel distance while meeting all time windows and preventing garment overloading in vehicles.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "time_windows",
+            "service_time"
+        ]
+    },
+    {
+        "title": "Mobile EV Charging for Urban Ride-Sharing Fleets",
+        "content": "A charging service provider must deploy mobile charging units to replenish electric ride-sharing vehicles (e.g., Uber/Lyft) across a city. Each ride-sharing vehicle (<loc_customer>) has a specific charging time window (<time_windows>) based on driver availability and a battery capacity demand (<demand>). Charging trucks (<capacity>) start from a central depot (<loc_depot>) but do not return after their last service. The goal is to minimize total travel distance while ensuring no truck exceeds its battery supply capacity and all vehicles are serviced within their operational time slots.",
+        "tags": [
+            "loc_customer",
+            "time_windows",
+            "demand",
+            "capacity",
+            "loc_depot"
+        ]
+    },
+    {
+        "title": "Just-in-Time Aircraft Catering Delivery",
+        "content": "An airline catering company must deliver meals to multiple aircraft (<loc_customer>) at an airport during tight turnaround windows (<time_windows>). Each flight requires a unique meal quantity (<demand>), and delivery trucks (<capacity>) start from the kitchen (<loc_depot>). Trucks cannot return to the depot after their final delivery due to airport traffic constraints (open routes). The objective is to optimize routes to meet all flight schedules without overloading trucks or missing time windows.",
+        "tags": [
+            "loc_customer",
+            "time_windows",
+            "demand",
+            "capacity",
+            "loc_depot"
+        ]
+    },
+    {
+        "title": "Pop-Up COVID-19 Booster Shot Clinics",
+        "content": "A health agency operates mobile vaccination teams that visit temporary clinics (<loc_customer>) in underserved neighborhoods. Each clinic has a strict operating window (<time_windows>) and vaccine demand (<demand>). Vans (<capacity>) depart from a central cold storage depot (<loc_depot>) but remain at the final clinic to avoid wasted trips. The challenge is to maximize coverage while ensuring vaccine cold chain capacity limits and clinic time constraints are met.",
+        "tags": [
+            "loc_customer",
+            "time_windows",
+            "demand",
+            "capacity",
+            "loc_depot"
+        ]
+    },
+    {
+        "title": "Luxury Watch Showroom Appointments",
+        "content": "A high-end watch brand hosts pop-up showrooms at luxury hotels (<loc_customer>). Each hotel has exclusive appointment slots (<time_windows>) and requires a specific number of demo watches (<demand>). Security vans (<capacity>) transport watches from a vault (<loc_depot>) but park overnight at the final location due to security protocols. Routes must minimize travel time while adhering to strict delivery windows and vehicle weight limits for valuable cargo.",
+        "tags": [
+            "loc_customer",
+            "time_windows",
+            "demand",
+            "capacity",
+            "loc_depot"
+        ]
+    },
+    {
+        "title": "Temporary Urban Beehive Pollination Services",
+        "content": "An agricultural cooperative deploys portable beehives to urban farms (<loc_customer>) during precise flowering periods (<time_windows>). Each farm needs a customized number of hives (<demand>). Transport trucks (<capacity>) start from an apiary (<loc_depot>) but end routes at the last farm to avoid disturbing bees with unnecessary movement. The solution must optimize hive distribution while respecting both truck capacity and narrow biological time windows for pollination.",
+        "tags": [
+            "loc_customer",
+            "time_windows",
+            "demand",
+            "capacity",
+            "loc_depot"
+        ]
+    },
+    {
+        "title": "Mobile EV Charging for Urban Ride-Sharing Fleets",
+        "content": "A charging service provider must deploy mobile charging units to replenish electric ride-sharing vehicles across a city. Each EV has a specific location (<loc_customer>), battery capacity (<demand> kWh), and a narrow charging window (<time_windows>) based on driver shifts. Charging trucks (<capacity> kWh) start at a depot (<loc_depot>) but remain at their final stop to avoid empty return trips. The goal is to minimize total travel distance while ensuring no truck exceeds its energy capacity and all vehicles are charged within their operational time slots.",
+        "tags": [
+            "loc_customer",
+            "demand",
+            "time_windows",
+            "capacity",
+            "loc_depot"
+        ]
+    },
+    {
+        "title": "Just-in-Time Aircraft Catering Delivery",
+        "content": "An airline catering company must deliver pre-ordered meals (<demand> kg) to multiple aircraft at an airport (<loc_customer>) during strict turnaround times (<time_windows>). Delivery trucks (<capacity> kg) depart from a central kitchen (<loc_depot>) but stay airside after final delivery. Routes must account for tarmac speed limits (<speed>), unloading times (<service_time>), and perishable meal constraints without overloading trucks. The objective is to minimize total tarmac congestion while meeting all flight schedules.",
+        "tags": [
+            "demand",
+            "loc_customer",
+            "time_windows",
+            "capacity",
+            "loc_depot",
+            "speed",
+            "service_time"
+        ]
+    },
+    {
+        "title": "Pop-Up COVID-19 Booster Shot Clinics",
+        "content": "A health department organizes mobile vaccination teams to visit temporary clinics (<loc_customer>) with daily appointment slots (<time_windows>). Each clinic requires a specific vaccine quantity (<demand> doses), and refrigerated vans (<capacity> doses) depart from a central storage facility (<loc_depot>). Teams conclude operations at their last site without returning. The challenge is to optimize routes that respect cold-chain capacity limits and ensure no clinic misses its allocated time window due to late arrivals.",
+        "tags": [
+            "loc_customer",
+            "time_windows",
+            "demand",
+            "capacity",
+            "loc_depot"
+        ]
+    },
+    {
+        "title": "Luxury Watch Showroom Appointments",
+        "content": "A high-end retailer schedules home demonstrations for VIP clients (<loc_customer>) during 1-hour appointment windows (<time_windows>). Sales reps carry sample kits (<demand> units) in secured vehicles (<capacity> units) from a flagship store (<loc_depot>). After the last appointment, reps park at secure locations near their final stop. Routes must ensure no vehicle exceeds its sample inventory while minimizing travel time between tightly scheduled appointments.",
+        "tags": [
+            "loc_customer",
+            "time_windows",
+            "demand",
+            "capacity",
+            "loc_depot"
+        ]
+    },
+    {
+        "title": "Temporary Urban Beehive Pollination Services",
+        "content": "An agritech firm deploys mobile beehives to pollinate urban farms (<loc_customer>) during specific flowering periods (<time_windows> days). Each farm requires a certain hive capacity (<demand> colonies), transported via climate-controlled trucks (<capacity> colonies) from a central apiary (<loc_depot>). Trucks remain at the last farm for ongoing maintenance. The optimization must balance hive capacity limits with precise pollination timing across scattered micro-farms while minimizing road miles.",
+        "tags": [
+            "loc_customer",
+            "time_windows",
+            "demand",
+            "capacity",
+            "loc_depot"
+        ]
+    },
+    {
+        "title": "Mobile COVID-19 Booster Shot Clinics",
+        "content": "A public health agency operates mobile vaccination units that must visit multiple temporary clinics (<loc_customer>) from a central depot (<loc_depot>). Each clinic has:  \n- A strict operating window (<time_windows>) due to staffing availability  \n- A predicted demand (<demand>) for vaccine doses  \n- A 15-minute setup/service time (<service_time>)  \nVans with cold storage (<capacity>) must deliver doses without exceeding capacity. After the final clinic, units park at their last location for overnight storage (open route). The goal is to maximize daily vaccinations while minimizing travel distance.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "time_windows",
+            "demand",
+            "service_time",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Just-in-Time Aircraft Catering Delivery",
+        "content": "An airport catering service must deliver meals from a central kitchen (<loc_depot>) to parked aircraft (<loc_customer>) before scheduled departures. Each aircraft has:  \n- A precise loading window (<time_windows>) based on flight schedules  \n- A specific meal count (<demand>)  \n- A 20-minute loading time (<service_time>)  \nElectric carts (<capacity>) must complete deliveries without overloading. Drivers finish shifts at their last aircraft (open route). The objective is to minimize late deliveries and total energy consumption.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "time_windows",
+            "demand",
+            "service_time",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Pop-Up Luxury Watch Showroom Appointments",
+        "content": "A luxury brand tours cities with high-value watches transported in armored vans (<capacity>) from a secure depot (<loc_depot>). Each pop-up location (<loc_customer>):  \n- Operates only during mall hours (<time_windows>)  \n- Requires exact inventory sets (<demand>)  \n- Needs 30-minute security checks (<service_time>)  \nAfter the final showroom, vans proceed to overnight storage (open route). The challenge is to coordinate deliveries across multiple cities while minimizing armored escort costs.",
+        "tags": [
+            "capacity",
+            "loc_depot",
+            "loc_customer",
+            "time_windows",
+            "demand",
+            "service_time"
+        ]
+    },
+    {
+        "title": "Temporary Urban Beehive Pollination Services",
+        "content": "An agricultural company deploys mobile beehives (<capacity>) from a rural depot (<loc_depot>) to urban farms (<loc_customer>) during specific pollination periods:  \n- Orchards have 2-hour optimal pollination windows (<time_windows>)  \n- Each requires 3-5 hives (<demand>)  \n- Takes 45 minutes to install (<service_time>)  \nTrucks remain at the final farm for hive monitoring (open route). The goal is to maximize pollination coverage while minimizing bee stress from transit time.",
+        "tags": [
+            "capacity",
+            "loc_depot",
+            "loc_customer",
+            "time_windows",
+            "demand",
+            "service_time"
+        ]
+    },
+    {
+        "title": "Olympic Venue Medical Kit Restocking",
+        "content": "During the Olympics, a logistics team must replenish first-aid kits from a central warehouse (<loc_depot>) to competition venues (<loc_customer>):  \n- Venues have narrow restocking windows (<time_windows>) between events  \n- Demand varies by venue size (<demand>)  \n- Requires 10-minute inventory checks (<service_time>)  \nElectric utility vehicles (<capacity>) stay at their last venue for rapid response (open route). The objective is to prevent stockouts while avoiding interference with athletic events.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "time_windows",
+            "demand",
+            "service_time",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Mobile Library Book Rotation for Rural Schools",
+        "content": "A county library system operates a mobile service that delivers books to remote schools (<loc_customer>) from a central distribution center (<loc_depot>). Each school has a specific demand (<demand>) for book rotations and must be visited during their operating hours (<time_windows>). The bookmobile has a limited capacity (<capacity>) and does not return to the depot after the last delivery, instead parking overnight at the final school. The goal is to minimize total travel distance while ensuring no school is missed and time windows are respected.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "demand",
+            "time_windows",
+            "capacity"
+        ]
+    },
+    {
+        "title": "On-Demand Medical Sample Collection for Homebound Patients",
+        "content": "A healthcare provider offers at-home blood sample collection for elderly patients across a metropolitan area. Nurses depart from a central lab (<loc_depot>) with cooled sample kits (<capacity> limit per vehicle). Each patient (<loc_customer>) has a strict time window (<time_windows>) for collection due to fasting requirements and clinic processing deadlines. After completing their route, nurses proceed directly to the testing facility rather than returning to the depot. The challenge is to optimize routes that respect both sample freshness (time windows) and vehicle capacity constraints.",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "loc_customer",
+            "time_windows"
+        ]
+    },
+    {
+        "title": "Pop-Up Urban Farm Produce Distribution",
+        "content": "An urban farming collective supplies fresh produce to neighborhood pickup points (<loc_customer>) from a central greenhouse (<loc_depot>). Each location has a unique demand (<demand>) and specific time windows (<time_windows>) when volunteers are available to receive deliveries. Electric cargo bikes (<capacity>) make deliveries and remain at the final stop for local promotions. The system requires routes that maximize produce freshness by minimizing transit time while adhering to both capacity and temporal constraints.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "demand",
+            "time_windows",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Temporary Wildlife Camera Maintenance in National Parks",
+        "content": "Park rangers must service motion-activated cameras (<loc_customer>) scattered across a protected area. Starting from a ranger station (<loc_depot>), each vehicle carries replacement batteries and memory cards (<capacity>). Cameras have maintenance time windows (<time_windows>) aligned with animal activity patterns to minimize disturbance. Rangers finish routes at the farthest camera to conduct field observations. The solution must optimize routes that service all cameras within their ecological time windows without exceeding vehicle supply limits.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "time_windows"
+        ]
+    },
+    {
+        "title": "Mobile Voting Unit Deployment for Local Elections",
+        "content": "A government agency dispatches voting vans (<capacity> ballots/equipment per vehicle) from an election office (<loc_depot>) to temporary polling sites (<loc_customer>). Each site has strict operating hours (<time_windows>) based on community availability. Vehicles remain at their final location to become stationary polling stations after the route. The routing must ensure all sites receive sufficient materials within their designated time frames while accounting for vehicle capacity constraints and one-way travel.",
+        "tags": [
+            "capacity",
+            "loc_depot",
+            "loc_customer",
+            "time_windows"
+        ]
+    },
+    {
+        "title": "Mobile EV Charging for Urban Ride-Sharing Fleets",
+        "content": "A service provider operates mobile charging units to replenish electric ride-sharing vehicles across a city. Each ride-sharing car (<loc_customer>) has a specific charging window (<time_windows>) based on driver availability and must receive a fixed energy amount (<demand> kWh). Charging trucks (<capacity> kWh) depart from a central hub (<loc_depot>) and do not return after their last charge. The goal is to minimize total distance while ensuring no truck exceeds capacity and all vehicles are serviced within their designated time slots.",
+        "tags": [
+            "loc_customer",
+            "time_windows",
+            "demand",
+            "capacity",
+            "loc_depot"
+        ]
+    },
+    {
+        "title": "Just-in-Time Aircraft Catering Delivery",
+        "content": "An airport catering company must deliver customized meal carts to parked aircraft (<loc_customer>) during strict turnaround times (<time_windows>). Each flight requires a unique meal quantity (<demand>), and refrigerated trucks (<capacity>) depart from the kitchen (<loc_depot>). Drivers finish shifts after their last delivery without returning. Routes must prevent perishable food spoilage by adhering to tight schedules while optimizing truck loads.",
+        "tags": [
+            "loc_customer",
+            "time_windows",
+            "demand",
+            "capacity",
+            "loc_depot"
+        ]
+    },
+    {
+        "title": "Pop-Up COVID-19 Booster Shot Clinics",
+        "content": "Health authorities deploy mobile vaccination teams to temporary sites (<loc_customer>) with daily operating hours (<time_windows>). Each clinic has a predicted vaccine demand (<demand> doses), and medical vans (<capacity>) start from a cold storage depot (<loc_depot>). Teams conclude at their final location to avoid wasted trips. The challenge is to maximize coverage while respecting both cold-chain capacity limits and community availability windows.",
+        "tags": [
+            "loc_customer",
+            "time_windows",
+            "demand",
+            "capacity",
+            "loc_depot"
+        ]
+    },
+    {
+        "title": "Luxury Watch Showroom Appointments",
+        "content": "A high-end retailer schedules trunk shows at boutique hotels (<loc_customer>) with exclusive viewing slots (<time_windows>). Each location requires a curated inventory (<demand> pieces) transported via armored vans (<capacity>) from a vault (<loc_depot>). Security teams disband after the final appointment. Routing must synchronize precise delivery times with client schedules while maintaining strict payload limits for valuable cargo.",
+        "tags": [
+            "loc_customer",
+            "time_windows",
+            "demand",
+            "capacity",
+            "loc_depot"
+        ]
+    },
+    {
+        "title": "Temporary Urban Beehive Pollination Services",
+        "content": "An agritech firm coordinates movable beehives to pollinate urban farms (<loc_customer>) during specific flowering periods (<time_windows>). Each farm needs a set number of hives (<demand>), transported on specialized trucks (<capacity>) from an apiary (<loc_depot>). Trucks remain at the last farm for hive monitoring. The solution must minimize travel distance while ensuring hive deliveries align with optimal pollination times and weight restrictions.",
+        "tags": [
+            "loc_customer",
+            "time_windows",
+            "demand",
+            "capacity",
+            "loc_depot"
+        ]
+    },
+    {
+        "title": "Mobile EV Charging for Urban Ride-Sharing Fleets",
+        "content": "A fleet of mobile EV charging trucks must replenish depleted ride-sharing vehicles across a city. Each ride-sharing car (<loc_customer>) has a specific charging window (<time_windows>) based on driver availability. Charging trucks (<capacity>) carry limited battery packs (<demand>) and must prioritize high-demand zones. After the final charge, trucks park at their last location (O) to avoid unnecessary returns. The goal is to maximize serviced vehicles while minimizing travel distance and respecting time constraints.",
+        "tags": [
+            "loc_customer",
+            "time_windows",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "Just-in-Time Aircraft Catering Delivery",
+        "content": "A catering company supplies fresh meals to aircraft at an airport\u2019s gates (<loc_customer>). Each flight has a strict loading window (<time_windows>) before departure. Delivery trucks (<capacity>) transport meals (<demand>) from a central kitchen (<loc_depot>) but remain at the last gate (O) to avoid congestion. Routes must ensure no truck exceeds capacity and all flights are served on time, minimizing delays and food waste.",
+        "tags": [
+            "loc_customer",
+            "time_windows",
+            "capacity",
+            "demand",
+            "loc_depot"
+        ]
+    },
+    {
+        "title": "Pop-Up COVID-19 Booster Shot Clinics",
+        "content": "Mobile vaccination units deploy to temporary sites (<loc_customer>) in underserved neighborhoods, each with a fixed operating window (<time_windows>). Vans (<capacity>) carry vaccines (<demand>) from a depot (<loc_depot>) and end routes at the final clinic (O) to avoid backtracking. The challenge is to optimize routes for equitable access while adhering to cold-chain capacity and time-sensitive clinic schedules.",
+        "tags": [
+            "loc_customer",
+            "time_windows",
+            "capacity",
+            "demand",
+            "loc_depot"
+        ]
+    },
+    {
+        "title": "Luxury Watch Showroom Appointments",
+        "content": "A high-end retailer sends consultants to clients\u2019 homes (<loc_customer>) for private watch showcases. Each appointment has a strict 1-hour slot (<time_windows>). Consultants carry demo kits (<demand>) in luxury cars (<capacity>) and finish their day after the last appointment (O). Routes must minimize travel time between clients while ensuring no kit exceeds vehicle capacity.",
+        "tags": [
+            "loc_customer",
+            "time_windows",
+            "demand",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Temporary Urban Beehive Pollination Services",
+        "content": "Beekeeping teams service rooftop beehives (<loc_customer>) across a city during specific pollination windows (<time_windows>). Trucks (<capacity>) transport hive supplies (<demand>) from a central apiary (<loc_depot>) and remain at the final site (O) to monitor colonies. Routes must balance hive capacity constraints and time-sensitive pollination cycles while minimizing travel distance.",
+        "tags": [
+            "loc_customer",
+            "time_windows",
+            "capacity",
+            "demand",
+            "loc_depot"
+        ]
+    },
+    {
+        "title": "Mobile COVID-19 Booster Shot Clinics",
+        "content": "A health department deploys mobile vaccination teams from a central depot (`<loc_depot>`) to administer booster shots at `<num_customer>` pop-up clinics (`<loc_customer>`). Each clinic has a demand (`<demand>`) for vaccine doses (limited by cold storage capacity) and strict operating hours (`<time_windows>`). Vehicles (capacity `<capacity>`) carry doses and staff but do not return to the depot after the final clinic. The goal is to minimize travel distance while ensuring no clinic runs out of doses or misses its time window.",
+        "tags": [
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "demand",
+            "time_windows",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Just-in-Time Aircraft Catering Delivery",
+        "content": "An airline catering service must deliver pre-ordered meals (`<demand>`) from a kitchen (`<loc_depot>`) to multiple aircraft (`<loc_customer>`) during tight turnaround windows (`<time_windows>`). Refrigerated trucks (capacity `<capacity>`) deliver meals directly to gates, with drivers ending shifts after the final delivery. Delays risk flight disruptions, so routes must optimize for both capacity and punctuality.",
+        "tags": [
+            "demand",
+            "loc_depot",
+            "loc_customer",
+            "time_windows",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Pop-Up Luxury Watch Showroom Appointments",
+        "content": "A high-end watch brand tours cities with a mobile showroom, visiting `<num_customer>` VIP clients (`<loc_customer>`) who booked private viewings (`<time_windows>`). Each stop requires transporting watches (`<demand>` \u2264 insured value limit `<capacity>`). The vehicle departs from a secure warehouse (`<loc_depot>`) but remains overnight at the last appointment. The goal is to maximize security (minimize travel time) while honoring all appointments.",
+        "tags": [
+            "num_customer",
+            "loc_customer",
+            "time_windows",
+            "demand",
+            "capacity",
+            "loc_depot"
+        ]
+    },
+    {
+        "title": "Temporary Urban Beehive Pollination Services",
+        "content": "An agritech company deploys portable beehives (`<demand>`) from a depot (`<loc_depot>`) to `<num_customer>` urban farms (`<loc_customer>`) during specific pollination periods (`<time_windows>`). Trucks (capacity `<capacity>`) deliver hives and leave them onsite for weeks. Routes must minimize travel distance while ensuring no farm misses its critical pollination window.",
+        "tags": [
+            "demand",
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "time_windows",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Olympic Venue Medical Kit Restocking",
+        "content": "During the Olympics, a logistics team restocks first-aid kits (`<demand>`) at `<num_customer>` venues (`<loc_customer>`) from a central warehouse (`<loc_depot>`). Deliveries must occur during pre-approved security windows (`<time_windows>`). Vehicles (capacity `<capacity>`) exit the venue complex after final deliveries to avoid congestion. The objective is to ensure all venues are serviced on time with minimal road disruption.",
+        "tags": [
+            "demand",
+            "num_customer",
+            "loc_customer",
+            "loc_depot",
+            "time_windows",
+            "capacity"
+        ]
+    }
+]

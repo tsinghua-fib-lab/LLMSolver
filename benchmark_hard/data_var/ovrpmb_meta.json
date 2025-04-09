@@ -1,0 +1,1093 @@
+[
+    {
+        "title": "Urban Waste Collection & Recycling Drop-Off",
+        "content": "A municipal waste management team operates trucks (capacity: `<capacity>`) from a central depot (`<loc_depot>`) to collect mixed waste (linehaul demand: `<demand_linehaul>`) from residential areas (`<loc_customer>`) and drop off recyclables (backhaul demand: `<demand_backhaul>`) at processing centers. Trucks can alternate between pickups and drop-offs dynamically, but must never exceed capacity. Routes end at the final stop to reduce operational costs.",
+        "tags": [
+            "capacity",
+            "loc_depot",
+            "demand_linehaul",
+            "loc_customer",
+            "demand_backhaul"
+        ]
+    },
+    {
+        "title": "Farm-to-Table Produce Distribution with Empty Crate Returns",
+        "content": "A farm cooperative delivers fresh produce (linehaul: `<demand_linehaul>`) to restaurants (`<loc_customer>`) and collects empty crates (backhaul: `<demand_backhaul>`) for reuse. Vehicles (capacity: `<capacity>`) depart from the farm (`<loc_depot>`), mix deliveries and collections freely, and terminate routes at the last stop. The goal is to minimize mileage while ensuring crates are collected without overloading trucks mid-route.",
+        "tags": [
+            "demand_linehaul",
+            "loc_customer",
+            "demand_backhaul",
+            "capacity",
+            "loc_depot"
+        ]
+    },
+    {
+        "title": "Construction Material Delivery & Debris Removal",
+        "content": "A construction logistics firm dispatches trucks (capacity: `<capacity>`) from a supply yard (`<loc_depot>`) to deliver materials (linehaul: `<demand_linehaul>`) to sites (`<loc_customer>`) and haul away debris (backhaul: `<demand_backhaul>`). Routes are open-ended, allowing drivers to finish at the last debris drop-off. Capacity must accommodate both materials and debris loads dynamically.",
+        "tags": [
+            "capacity",
+            "loc_depot",
+            "demand_linehaul",
+            "loc_customer",
+            "demand_backhaul"
+        ]
+    },
+    {
+        "title": "Retail Inventory Replenishment with Defective Returns",
+        "content": "A warehouse supplies products (linehaul: `<demand_linehaul>`) to retail stores (`<loc_customer>`) and retrieves defective items (backhaul: `<demand_backhaul>`) using vans (capacity: `<capacity>`). Routes start at the warehouse (`<loc_depot>`) but end at the final store, optimizing for distance while balancing delivery and return loads in any order.",
+        "tags": [
+            "demand_linehaul",
+            "loc_customer",
+            "demand_backhaul",
+            "capacity",
+            "loc_depot"
+        ]
+    },
+    {
+        "title": "E-Commerce Parcel Delivery & Customer Returns",
+        "content": "A logistics provider uses vans (capacity: `<capacity>`) to deliver online orders (linehaul: `<demand_linehaul>`) from a hub (`<loc_depot>`) to customers (`<loc_customer>`) while collecting returns (backhaul: `<demand_backhaul>`). Drivers can interleave deliveries and pickups flexibly, finishing routes at the last return pickup to reduce empty trips.",
+        "tags": [
+            "capacity",
+            "demand_linehaul",
+            "loc_depot",
+            "loc_customer",
+            "demand_backhaul"
+        ]
+    },
+    {
+        "title": "Pharmaceutical Distribution & Expired Drug Collection",
+        "content": "A pharmaceutical company distributes medicines to clinics (<loc_customer>) from a central warehouse (<loc_depot>) using refrigerated vans (<capacity>). Each clinic requires a specific quantity of medicines (<demand_linehaul>), while some clinics also have expired drugs (<demand_backhaul>) that must be collected for safe disposal. Vehicles can mix deliveries and pickups in any order but must ensure capacity is never exceeded. After the final stop, vans park at the last location (no return to depot). The goal is to minimize total travel distance while ensuring all deliveries and pickups are completed.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "demand_linehaul",
+            "demand_backhaul"
+        ]
+    },
+    {
+        "title": "Furniture Delivery & Assembly Waste Pickup",
+        "content": "A furniture retailer delivers products (<demand_linehaul>) to customers (<loc_customer>) from a distribution center (<loc_depot>) using trucks (<capacity>). After assembly, some customers have packaging waste (<demand_backhaul>) for recycling. Trucks can alternate deliveries and pickups dynamically but must avoid overloading. Drivers end their routes at the last customer location. Optimize routes to reduce fuel costs and ensure all deliveries/pickups are handled efficiently.",
+        "tags": [
+            "demand_linehaul",
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "demand_backhaul"
+        ]
+    },
+    {
+        "title": "Office Supply Delivery & Empty Toner Recycling",
+        "content": "A supplier delivers printers and office supplies (<demand_linehaul>) to corporate offices (<loc_customer>) from a hub (<loc_depot>) with vans (<capacity>). Some offices also return empty toner cartridges (<demand_backhaul>) for recycling. Vehicles can freely sequence deliveries and pickups, provided capacity constraints are respected. Routes terminate after the last stop. The objective is to minimize total distance traveled while serving all locations.",
+        "tags": [
+            "demand_linehaul",
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "demand_backhaul"
+        ]
+    },
+    {
+        "title": "Catering Service Delivery & Equipment Retrieval",
+        "content": "A catering company transports prepared meals (<demand_linehaul>) to event venues (<loc_customer>) from a kitchen (<loc_depot>) using temperature-controlled trucks (<capacity>). After events, some venues have rented equipment (<demand_backhaul>) to return. Trucks can interleave deliveries and pickups but must manage capacity. Drivers finish at the final venue. Plan routes to reduce idle time and ensure all items are transported without exceeding vehicle limits.",
+        "tags": [
+            "demand_linehaul",
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "demand_backhaul"
+        ]
+    },
+    {
+        "title": "Auto Parts Distribution & Core Returns",
+        "content": "An auto parts distributor ships new components (<demand_linehaul>) to repair shops (<loc_customer>) from a warehouse (<loc_depot>) via trucks (<capacity>). Some shops return used \"core\" parts (<demand_backhaul>) for refurbishment. Vehicles can flexibly combine deliveries and pickups, adjusting loads dynamically. Routes end at the last visited shop. Optimize for minimal travel distance while balancing part deliveries and core collections.",
+        "tags": [
+            "demand_linehaul",
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "demand_backhaul"
+        ]
+    },
+    {
+        "title": "Art Gallery Supply & Artwork Return Logistics",
+        "content": "An art supply company delivers fresh canvases, paints, and materials to galleries (<loc_customer>) from a central warehouse (<loc_depot>), while simultaneously collecting unsold artworks or damaged supplies for return. Each truck has a weight limit (<capacity>) for combined deliveries (<demand_linehaul>) and pickups (<demand_backhaul>). Routes must ensure galleries receive supplies first if needed, but pickups can occur in any order without returning to the depot. The goal is to minimize total distance while avoiding overloading trucks during mixed deliveries/collections.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "demand_linehaul",
+            "demand_backhaul"
+        ]
+    },
+    {
+        "title": "Maritime Cargo Delivery & Empty Container Relocation",
+        "content": "A shipping company uses vessels (<capacity>) to transport cargo containers from a port (<loc_depot>) to coastal warehouses (<loc_customer>), while relocating empty containers from warehouses back to other drop-off points. Deliveries (<demand_linehaul>) and empty-container pickups (<demand_backhaul>) can be interleaved, but vessels must never exceed weight limits. Routes end at the final stop (no return to port), optimizing fuel costs across open-sea routes.",
+        "tags": [
+            "capacity",
+            "loc_depot",
+            "loc_customer",
+            "demand_linehaul",
+            "demand_backhaul"
+        ]
+    },
+    {
+        "title": "Film Production Equipment Rental & Returns",
+        "content": "A film equipment rental service delivers cameras, lighting, and props (<demand_linehaul>) to movie sets (<loc_customer>) from a studio (<loc_depot>), while picking up rented items from wrap-up shoots (<demand_backhaul>). Vans (<capacity>) can mix deliveries and pickups in any order, ending at the last set location. The challenge is to balance equipment swaps without exceeding van capacity or backtracking.",
+        "tags": [
+            "demand_linehaul",
+            "loc_customer",
+            "loc_depot",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Brewery Keg Delivery & Empty Keg Collection",
+        "content": "A brewery distributes filled kegs (<demand_linehaul>) to bars (<loc_customer>) and collects empties (<demand_backhaul>) in the same trip. Trucks (<capacity>) start at the brewery (<loc_depot>) but finish routes at the last bar. Deliveries and pickups can be sequenced flexibly (e.g., drop full kegs at Bar A, pick up empties at Bar B, then deliver more to Bar C), provided capacity is never exceeded mid-route.",
+        "tags": [
+            "demand_linehaul",
+            "loc_customer",
+            "demand_backhaul",
+            "capacity",
+            "loc_depot"
+        ]
+    },
+    {
+        "title": "Solar Panel Installation & Old Panel Recycling",
+        "content": "A renewable energy company installs new solar panels (<demand_linehaul>) at homes (<loc_customer>) while removing old panels (<demand_backhaul>) for recycling. Installation vans (<capacity>) depart from a warehouse (<loc_depot>) and follow open routes (ending at the last job site). Mixed sequences (e.g., install at Home X, remove from Home Y) must ensure vans have space for both new panels and recycled loads at all times.",
+        "tags": [
+            "demand_linehaul",
+            "loc_customer",
+            "demand_backhaul",
+            "capacity",
+            "loc_depot"
+        ]
+    },
+    {
+        "title": "Mobile Vaccination Clinic Deployment",
+        "content": "A health organization deploys mobile vaccination teams from a central hub (<loc_depot>) to serve communities (<loc_customer>) with varying vaccine demands (<demand_linehaul>). Teams also collect used syringes and medical waste (<demand_backhaul>) for safe disposal. Vehicles (capacity <capacity>) can end routes at the final community without returning to the hub. The goal is to optimize routes to serve all locations while ensuring:  \n- Vaccine deliveries and waste pickups can occur in any order (MB).  \n- No vehicle exceeds its payload capacity (C).  \n- Total travel distance is minimized (O).",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Industrial Equipment Maintenance & Parts Recovery",
+        "content": "A service provider maintains machinery at factories (<loc_customer>) by delivering spare parts (<demand_linehaul>) and retrieving worn-out components (<demand_backhaul>) for refurbishment. Technicians depart from a warehouse (<loc_depot>) with vans (capacity <capacity>) and finish routes at their last job site (O). Challenges include:  \n- Mixed sequencing of deliveries and pickups (MB).  \n- Ensuring part retrieval loads never compromise outgoing deliveries (C).  \n- Minimizing fleet mileage across scattered industrial zones.",
+        "tags": [
+            "loc_customer",
+            "demand_linehaul",
+            "demand_backhaul",
+            "loc_depot",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Event Catering Supply & Waste Collection",
+        "content": "A catering company services multiple event venues (<loc_customer>) in a city, delivering fresh food (<demand_linehaul>) and collecting post-event organic waste (<demand_backhaul>) for composting. Trucks (capacity <capacity>) start at a kitchen (<loc_depot>) and may conclude routes at the final venue (O). Key constraints:  \n- Flexible order of deliveries and waste pickups (MB).  \n- Capacity must accommodate both food and waste volumes (C).  \n- Avoiding redundant travel between geographically dispersed venues.",
+        "tags": [
+            "loc_customer",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity",
+            "loc_depot"
+        ]
+    },
+    {
+        "title": "Textile Manufacturing Raw Material & Scrap Logistics",
+        "content": "A textile factory distributes raw fabric rolls (<demand_linehaul>) to subcontractors (<loc_customer>) and collects production scraps (<demand_backhaul>) for recycling. Vehicles (capacity <capacity>) depart from the main plant (<loc_depot>) and may remain at the last subcontractor (O). Requirements:  \n- Dynamic mixing of drop-offs and pickups (MB).  \n- Capacity limits for combined fabric/scrap loads (C).  \n- Optimizing routes across a cluster of small workshops.",
+        "tags": [
+            "demand_linehaul",
+            "loc_customer",
+            "demand_backhaul",
+            "capacity",
+            "loc_depot"
+        ]
+    },
+    {
+        "title": "Library Bookmobile & Donation Drive",
+        "content": "A bookmobile service delivers requested books (<demand_linehaul>) to neighborhoods (<loc_customer>) while accepting public book donations (<demand_backhaul>) for redistribution. Vans (capacity <capacity>) start at the central library (<loc_depot>) and end routes at the final stop (O). Considerations:  \n- Interleaving book drop-offs and donation pickups (MB).  \n- Weight limits for combined outgoing/incoming books (C).  \n- Minimizing detours across residential areas.",
+        "tags": [
+            "demand_linehaul",
+            "loc_customer",
+            "demand_backhaul",
+            "capacity",
+            "loc_depot"
+        ]
+    },
+    {
+        "title": "E-Waste Collection & New Device Deployment",
+        "content": "A tech company deploys new devices (e.g., laptops, tablets) to offices while collecting outdated electronics for recycling. Vehicles start at a central warehouse (`<loc_depot>`), deliver new devices (`<demand_linehaul>`), and pick up e-waste (`<demand_backhaul>`) from the same or different locations (`<loc_customer>`). Trucks have a fixed capacity (`<capacity>`) and do not return to the depot after the last stop. The goal is to minimize total distance while ensuring no truck exceeds capacity during mixed deliveries/pickups.",
+        "tags": [
+            "loc_depot",
+            "demand_linehaul",
+            "demand_backhaul",
+            "loc_customer",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Florist Supply Chain with Expired Flower Removal",
+        "content": "A floral distributor delivers fresh flowers to retailers (`<demand_linehaul>`) and simultaneously collects wilted flowers (`<demand_backhaul>`) from the same locations (`<loc_customer>`). Vehicles (`<capacity>`) depart from a greenhouse (`<loc_depot>`) and end routes at the final retailer. Routes must balance delivery/pickup loads dynamically to avoid exceeding capacity, prioritizing efficient sequencing to minimize travel distance.",
+        "tags": [
+            "demand_linehaul",
+            "demand_backhaul",
+            "loc_customer",
+            "capacity",
+            "loc_depot"
+        ]
+    },
+    {
+        "title": "Laundry Service for Hotels",
+        "content": "A linen service delivers clean linens to hotels (`<demand_linehaul>`) and picks up dirty laundry (`<demand_backhaul>`) from the same locations (`<loc_customer>`). Vans (`<capacity>`) start at a central facility (`<loc_depot>`) and finish routes at the last hotel. The challenge is to optimize mixed-load routes (clean vs. dirty linens) without exceeding van capacity, ensuring all hotels are served in a single trip.",
+        "tags": [
+            "demand_linehaul",
+            "demand_backhaul",
+            "loc_customer",
+            "capacity",
+            "loc_depot"
+        ]
+    },
+    {
+        "title": "Vending Machine Restocking & Cash Collection",
+        "content": "A vending operator restocks snacks/drinks (`<demand_linehaul>`) and collects cash (`<demand_backhaul>`) from machines across the city (`<loc_customer>`). Trucks (`<capacity>`) depart from a depot (`<loc_depot>`) and end at the final machine. Routes must account for mixed loads (new inventory + cash boxes) while avoiding capacity violations, minimizing total travel distance.",
+        "tags": [
+            "demand_linehaul",
+            "demand_backhaul",
+            "loc_customer",
+            "capacity",
+            "loc_depot"
+        ]
+    },
+    {
+        "title": "Hazardous Material Delivery & Contaminated Waste Retrieval",
+        "content": "A chemical company delivers sealed hazardous materials to labs (`<demand_linehaul>`) and retrieves contaminated waste (`<demand_backhaul>`) from the same sites (`<loc_customer>`). Specialized trucks (`<capacity>`) start at a secure depot (`<loc_depot>`) and remain at the final lab. Routes must ensure capacity is never exceeded during mixed deliveries/pickups, prioritizing safety and minimal travel distance.",
+        "tags": [
+            "demand_linehaul",
+            "demand_backhaul",
+            "loc_customer",
+            "capacity",
+            "loc_depot"
+        ]
+    },
+    {
+        "title": "Mobile Blood Donation Unit Deployment & Sample Collection",
+        "content": "A blood bank operates mobile donation units that visit neighborhoods (<loc_customer>) to collect donations (<demand_backhaul>) while simultaneously delivering emergency blood supplies (<demand_linehaul>) to hospitals. Vehicles (<capacity>) depart from the central hub (<loc_depot>) and follow optimized routes where deliveries and pickups can occur in any order. After the final stop, units park at nearby storage facilities (no return to depot). The goal is to maximize blood availability while minimizing travel distance and ensuring no vehicle exceeds its storage capacity for both fresh and collected blood.",
+        "tags": [
+            "loc_customer",
+            "demand_backhaul",
+            "demand_linehaul",
+            "capacity",
+            "loc_depot"
+        ]
+    },
+    {
+        "title": "Agricultural Seed Delivery & Harvest Collection",
+        "content": "A cooperative serves farms (<loc_customer>) by delivering seeds/fertilizers (<demand_linehaul>) and collecting harvested crops (<demand_backhaul>) in the same trip. Trucks (<capacity>) start from a distribution center (<loc_depot>) and may alternate deliveries and pickups based on farm readiness. Routes terminate at processing plants near the last farm served. Constraints include weight limits for mixed loads (e.g., avoiding seed contamination) and prioritizing perishable crop pickups without strict sequencing.",
+        "tags": [
+            "loc_customer",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity",
+            "loc_depot"
+        ]
+    },
+    {
+        "title": "Disaster Relief Supply Chain with Debris Clearance",
+        "content": "Following a hurricane, relief trucks (<capacity>) deploy from staging areas (<loc_depot>) to deliver food/water (<demand_linehaul>) to shelters (<loc_customer>) while collecting storm debris (<demand_backhaul>) for temporary disposal. Mixed routing allows debris pickup en route to delivery points if capacity permits. Vehicles end routes at debris processing sites, optimizing for fuel efficiency and avoiding overloading during combined delivery/collection operations.",
+        "tags": [
+            "capacity",
+            "loc_depot",
+            "demand_linehaul",
+            "loc_customer",
+            "demand_backhaul"
+        ]
+    },
+    {
+        "title": "Luxury Retail Pop-Up Shop Logistics",
+        "content": "A high-end brand uses temporary pop-up shops (<loc_customer>) requiring simultaneous delivery of new inventory (<demand_linehaul>) and return of unsold items (<demand_backhaul>) via secured vans (<capacity>). Routes start at a hidden warehouse (<loc_depot>) and prioritize discreet, efficient stops without returning to base. Mixed sequencing accommodates VIP requests (e.g., delivering to Shop A before picking up from Shop B) while respecting vehicle weight limits for fragile goods.",
+        "tags": [
+            "loc_customer",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity",
+            "loc_depot"
+        ]
+    },
+    {
+        "title": "Municipal Tree Planting & Maintenance Program",
+        "content": "City crews use trucks (<capacity>) to transport saplings (<demand_linehaul>) to planting sites (<loc_customer>) and collect diseased tree limbs (<demand_backhaul>) for composting. Starting from a nursery (<loc_depot>), routes combine deliveries and pickups based on geographic proximity and truck capacity (e.g., dropping saplings before collecting heavy limbs). Vehicles park overnight at the last serviced location to reduce idle time.",
+        "tags": [
+            "capacity",
+            "demand_linehaul",
+            "loc_customer",
+            "demand_backhaul",
+            "loc_depot"
+        ]
+    },
+    {
+        "title": "Mobile COVID-19 Testing & Sample Collection",
+        "content": "A healthcare provider operates mobile testing units that visit neighborhoods (<loc_customer>) to conduct COVID-19 tests and collect samples for lab analysis. Each unit starts at a central depot (<loc_depot>) with a limited supply of test kits (<capacity>). Some stops require delivering test kits (<demand_linehaul>), while others need sample collection vials picked up (<demand_backhaul>). Units can serve locations in any order but must avoid exceeding their carrying capacity. After the final stop, units proceed directly to the lab (no return to depot). The goal is to maximize coverage while minimizing total distance traveled.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "demand_linehaul",
+            "demand_backhaul"
+        ]
+    },
+    {
+        "title": "Industrial Gas Cylinder Distribution & Empty Recovery",
+        "content": "A gas supply company delivers full industrial gas cylinders to factories (<demand_linehaul>) and retrieves empty ones (<demand_backhaul>) from the same or different locations (<loc_customer>). Trucks with capacity <capacity> depart from a filling plant (<loc_depot>) and can mix deliveries/pickups freely, provided they never exceed weight limits. Drivers end their routes at the last customer, reducing unnecessary travel. Optimization focuses on balancing cylinder inventory flow while minimizing fleet operating costs.",
+        "tags": [
+            "demand_linehaul",
+            "demand_backhaul",
+            "loc_customer",
+            "capacity",
+            "loc_depot"
+        ]
+    },
+    {
+        "title": "Urban Tree Nursery Delivery & Diseased Plant Removal",
+        "content": "A municipal greening program delivers young trees (<demand_linehaul>) to parks and streets (<loc_customer>) while simultaneously removing diseased plants (<demand_backhaul>) for disposal. Electric trucks (<capacity>) start at a nursery (<loc_depot>) and can interleave drop-offs and pickups. Routes remain open-ended to allow trucks to recharge at nearby stations after final tasks. The challenge is to maximize green space coverage while ensuring trucks never carry combined loads exceeding battery weight restrictions.",
+        "tags": [
+            "demand_linehaul",
+            "loc_customer",
+            "demand_backhaul",
+            "capacity",
+            "loc_depot"
+        ]
+    },
+    {
+        "title": "Film Set Equipment Logistics & Wrap-Up Collection",
+        "content": "A movie production company transports cameras and gear (<demand_linehaul>) to shooting locations (<loc_customer>) while later collecting rented equipment (<demand_backhaul>) from wrap-up sites. Vehicles (<capacity>) depart from a rental warehouse (<loc_depot>) and can serve locations in any sequence. Crews keep vehicles at the last location for next-day use. The solution must prevent overloading when mixing outgoing and incoming equipment, prioritizing urgent shooting locations through route sequencing.",
+        "tags": [
+            "demand_linehaul",
+            "loc_customer",
+            "demand_backhaul",
+            "capacity",
+            "loc_depot"
+        ]
+    },
+    {
+        "title": "Reverse Vending Machine Service & Cash Handling",
+        "content": "A beverage company services automated recycling machines (<loc_customer>) that accept empty containers and dispense cash rewards. Service trucks (<capacity>) start from a processing center (<loc_depot>), delivering blank reward cards (<demand_linehaul>) and collecting both containers and cash deposits (<demand_backhaul>). Mixed stops are allowed, but vehicle weight limits must account for both heavy containers and secure cash compartments. After servicing the last machine, trucks proceed directly to a bank for deposit processing.",
+        "tags": [
+            "loc_customer",
+            "capacity",
+            "loc_depot",
+            "demand_linehaul",
+            "demand_backhaul"
+        ]
+    },
+    {
+        "title": "Mobile Pet Vaccination Clinic Routing",
+        "content": "A veterinary service operates mobile clinics to vaccinate pets at neighborhood hubs (<loc_customer>) while collecting expired medications for safe disposal. Each clinic vehicle (capacity <capacity>) starts at the central depot (<loc_depot>), delivers vaccines (<demand_linehaul>), and picks up expired drugs (<demand_backhaul>) in any order. Vehicles end their routes at the final stop without returning, minimizing travel distance while ensuring no overloading during mixed deliveries/pickups.",
+        "tags": [
+            "loc_customer",
+            "capacity",
+            "loc_depot",
+            "demand_linehaul",
+            "demand_backhaul"
+        ]
+    },
+    {
+        "title": "Reusable Packaging Logistics for Meal Kit Delivery",
+        "content": "A meal kit company delivers fresh ingredients to subscribers (<loc_customer>) and retrieves reusable ice packs/containers from previous deliveries. Trucks (capacity <capacity>) depart from the distribution center (<loc_depot>) with new kits (<demand_linehaul>) and collect returns (<demand_backhaul>) en route. Routes are optimized to balance outgoing/incoming loads dynamically, with drivers finishing at their last pickup location.",
+        "tags": [
+            "loc_customer",
+            "capacity",
+            "loc_depot",
+            "demand_linehaul",
+            "demand_backhaul"
+        ]
+    },
+    {
+        "title": "Scuba Tank Refill Service for Dive Shops",
+        "content": "A gas supplier services dive shops (<loc_customer>) by delivering pre-filled oxygen tanks (<demand_linehaul>) and collecting empty tanks for refilling (<demand_backhaul>). Vehicles (capacity <capacity>) from the filling station (<loc_depot>) plan flexible routes where deliveries and pickups are intermixed based on real-time capacity, terminating at the final shop without returning to base.",
+        "tags": [
+            "loc_customer",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity",
+            "loc_depot"
+        ]
+    },
+    {
+        "title": "Pop-Up Retail Inventory Rotation System",
+        "content": "A fashion brand cycles inventory between temporary pop-up stores (<loc_customer>), delivering new seasonal stock (<demand_linehaul>) while retrieving unsold items (<demand_backhaul>). Vans (capacity <capacity>) from the central warehouse (<loc_depot>) optimize routes to swap merchandise efficiently, allowing drivers to conclude trips at the last visited store without capacity violations during mixed transfers.",
+        "tags": [
+            "loc_customer",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity",
+            "loc_depot"
+        ]
+    },
+    {
+        "title": "Community Composting Network Logistics",
+        "content": "A sustainability initiative collects food scraps from residential hubs (<loc_customer>) while distributing fresh compost to community gardens. Trucks (capacity <capacity>) start at the processing facility (<loc_depot>), delivering compost (<demand_linehaul>) and collecting organic waste (<demand_backhaul>) in variable sequences. Routes minimize distance while ensuring collected waste never exceeds remaining capacity after prior deliveries.",
+        "tags": [
+            "loc_customer",
+            "capacity",
+            "loc_depot",
+            "demand_linehaul",
+            "demand_backhaul"
+        ]
+    },
+    {
+        "title": "Mobile Clinic Vaccination & Medical Waste Collection",
+        "content": "A mobile healthcare provider operates vaccination drives in rural areas, starting from a central hub (<loc_depot>). Vehicles with medical supplies (<capacity>) visit villages (<loc_customer>) to administer vaccines (delivering <demand_linehaul> doses) while simultaneously collecting used syringes and biohazard waste (<demand_backhaul>). Routes are optimized to ensure no vehicle exceeds capacity during mixed deliveries/pickups, and medical teams end their day at the final village without returning to the hub.",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "loc_customer",
+            "demand_linehaul",
+            "demand_backhaul"
+        ]
+    },
+    {
+        "title": "Renewable Energy Maintenance & Spare Parts Logistics",
+        "content": "A wind turbine maintenance company services remote wind farms (<loc_customer>) from a central warehouse (<loc_depot>). Trucks (<capacity>) transport replacement parts (<demand_linehaul>) and retrieve damaged components (<demand_backhaul>) for recycling. Routes allow mixed stops (deliveries before/after pickups) while respecting capacity constraints. Technicians conclude routes at the last turbine site to minimize unnecessary travel.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "demand_linehaul",
+            "demand_backhaul"
+        ]
+    },
+    {
+        "title": "Aquaculture Feed Delivery & Harvest Collection",
+        "content": "A fish farm operator distributes feed (<demand_linehaul>) to offshore aquaculture cages (<loc_customer>) from a coastal depot (<loc_depot>). Boats (<capacity>) collect harvested fish (<demand_backhaul>) during the same trip. The mixed sequence ensures feed deliveries never compromise harvest pickups due to capacity limits. Vessels remain at the final cage for overnight monitoring instead of returning.",
+        "tags": [
+            "demand_linehaul",
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "demand_backhaul"
+        ]
+    },
+    {
+        "title": "Refillable Cosmetics Delivery & Empty Container Returns",
+        "content": "A zero-waste cosmetics brand delivers bulk products (<demand_linehaul>) to stores (<loc_customer>) from a factory (<loc_depot>). Electric vans (<capacity>) collect empty containers (<demand_backhaul>) for refilling. Routes prioritize proximity over delivery/pickup order, ensuring capacity is never exceeded during mixed-load operations. Drivers end routes at the last store to recharge locally.",
+        "tags": [
+            "demand_linehaul",
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "demand_backhaul"
+        ]
+    },
+    {
+        "title": "Urban Beehive Honey Collection & Nutrient Delivery",
+        "content": "An urban beekeeping service maintains apiaries (<loc_customer>) across the city. Trucks (<capacity>) start from a processing center (<loc_depot>), delivering sugar syrup (<demand_linehaul>) to hives while collecting honeycombs (<demand_backhaul>). Mixed stops are allowed (e.g., deliver to Hive A, pick up from Hive B, deliver to Hive C). Vehicles park at the final hive for next-day operations.",
+        "tags": [
+            "loc_customer",
+            "capacity",
+            "loc_depot",
+            "demand_linehaul",
+            "demand_backhaul"
+        ]
+    },
+    {
+        "title": "Mobile COVID-19 Vaccine Distribution & Used Syringe Collection",
+        "content": "A health agency deploys mobile vaccination teams from a central hub (<loc_depot>) to administer vaccines at clinics, pharmacies, and pop-up sites (<loc_customer>). Each site requires a specific number of vaccine doses (<demand_linehaul>) and generates used syringes (<demand_backhaul>) for safe disposal. Vehicles (capacity <capacity>) must distribute vaccines and collect biohazard waste in any order, ending routes at the final site for team debriefing. The goal is to maximize coverage while ensuring no vehicle exceeds its capacity for combined vaccine/waste loads.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Reusable Packaging Logistics for Zero-Waste Groceries",
+        "content": "A sustainable grocery chain uses shared containers for bulk goods. Trucks depart from a fulfillment center (<loc_depot>) to deliver stocked containers (<demand_linehaul>) to stores (<loc_customer>) while collecting empty containers (<demand_backhaul>) from previous deliveries. Vehicles (capacity <capacity>) can freely mix delivery/pickup sequences but must avoid exceeding weight limits from combined outgoing/incoming loads. Routes terminate at the last serviced store to minimize unnecessary travel.",
+        "tags": [
+            "loc_depot",
+            "demand_linehaul",
+            "loc_customer",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Urban Tree Planting & Invasive Species Removal",
+        "content": "A municipal forestry department coordinates crews to plant new trees (<demand_linehaul>) at parks and streets (<loc_customer>) while removing invasive plants (<demand_backhaul>) from other locations. Crew trucks (capacity <capacity>) start at a nursery (<loc_depot>), can interleave planting/removal tasks, and finish routes at the last job site. Capacity constraints account for both saplings transported and invasive biomass collected during the route.",
+        "tags": [
+            "demand_linehaul",
+            "loc_customer",
+            "demand_backhaul",
+            "capacity",
+            "loc_depot"
+        ]
+    },
+    {
+        "title": "Mobile Electronics Repair & E-Waste Recovery",
+        "content": "A tech company operates mobile repair vans (capacity <capacity>) that depart from a service depot (<loc_depot>) to deliver refurbished devices (<demand_linehaul>) to customers (<loc_customer>) while collecting irreparable electronics (<demand_backhaul>) for recycling. Technicians can freely sequence deliveries and pickups but must ensure van capacity isn't exceeded by combined device shipments and e-waste. Routes end at the final service location.",
+        "tags": [
+            "capacity",
+            "loc_depot",
+            "demand_linehaul",
+            "loc_customer",
+            "demand_backhaul"
+        ]
+    },
+    {
+        "title": "Festival Equipment Rental & Post-Event Collection",
+        "content": "An event company supplies stages, tents, and sound systems (<demand_linehaul>) to festival sites (<loc_customer>) from a warehouse (<loc_depot>), later collecting used equipment (<demand_backhaul>). Trucks (capacity <capacity>) can mix setup/teardown tasks across locations during multi-day events. Routes are open-ended to allow crews to remain on-site, with capacity tracking both outgoing gear and returning dirty/damaged items.",
+        "tags": [
+            "demand_linehaul",
+            "loc_customer",
+            "loc_depot",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Mobile COVID-19 Testing & Medical Waste Collection",
+        "content": "A healthcare provider operates mobile testing units that visit neighborhoods (<loc_customer>) to conduct COVID-19 tests while simultaneously collecting biohazardous waste (e.g., used swabs, PPE). Vehicles start at a central depot (<loc_depot>) with a capacity of <capacity> for test kits and waste containers. Each stop has a delivery demand (<demand_linehaul>) for test supplies and a pickup demand (<demand_backhaul>) for waste. Routes are optimized to minimize travel distance, with vehicles ending at their final stop (no return to depot).",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "demand_linehaul",
+            "demand_backhaul"
+        ]
+    },
+    {
+        "title": "Urban Furniture Rental & Returns Logistics",
+        "content": "A furniture rental company delivers sofas, tables, and chairs to residential customers (<loc_customer>) and picks up expired rentals in the same trip. Trucks (<capacity>) depart from a warehouse (<loc_depot>), with mixed-order routing (deliveries and pickups can alternate). Each delivery has a demand (<demand_linehaul>), and each pickup has a load (<demand_backhaul>). The goal is to maximize fleet utilization while avoiding capacity violations.",
+        "tags": [
+            "loc_customer",
+            "capacity",
+            "loc_depot",
+            "demand_linehaul",
+            "demand_backhaul"
+        ]
+    },
+    {
+        "title": "Reusable Packaging Logistics for Zero-Waste Stores",
+        "content": "A zero-waste grocery chain uses reusable containers for bulk goods. Delivery trucks (<capacity>) start at a distribution center (<loc_depot>), drop off filled containers at stores (<loc_customer>, <demand_linehaul>), and collect empty containers (<demand_backhaul>) in any order. Routes are open-ended, with trucks parked at the last store to reduce empty mileage.",
+        "tags": [
+            "capacity",
+            "loc_depot",
+            "loc_customer",
+            "demand_linehaul",
+            "demand_backhaul"
+        ]
+    },
+    {
+        "title": "Aquaculture Feed Delivery & Harvest Collection",
+        "content": "A seafood farm supplies feed to offshore fish pens (<loc_customer>) and collects harvested fish in the same trip. Boats (<capacity>) depart from a coastal depot (<loc_depot>), with feed deliveries (<demand_linehaul>) and harvest pickups (<demand_backhaul>) dynamically sequenced. Routes prioritize minimizing nautical miles while ensuring no vessel exceeds weight limits.",
+        "tags": [
+            "loc_customer",
+            "capacity",
+            "loc_depot",
+            "demand_linehaul",
+            "demand_backhaul"
+        ]
+    },
+    {
+        "title": "Pop-Up Retail Inventory Rotation & Unsold Stock Retrieval",
+        "content": "A pop-up retail company rotates inventory between temporary locations (<loc_customer>). Vans (<capacity>) start at a storage hub (<loc_depot>), deliver new merchandise (<demand_linehaul>), and retrieve unsold items (<demand_backhaul>) in flexible order. Routes are optimized for distance, with drivers concluding at the final pop-up site.",
+        "tags": [
+            "loc_customer",
+            "capacity",
+            "loc_depot",
+            "demand_linehaul",
+            "demand_backhaul"
+        ]
+    },
+    {
+        "title": "Mobile Blood Donation Unit Deployment & Sample Collection",
+        "content": "A blood bank operates mobile donation units that travel to workplaces, schools, and community centers (<loc_customer>) to collect blood donations (<demand_backhaul>). Simultaneously, these units deliver pre-screened blood supplies (<demand_linehaul>) to hospitals in need. Vehicles start from a central depot (<loc_depot>) with a capacity of <capacity> units (blood bags/supplies). Routes must ensure no vehicle exceeds capacity when combining deliveries and pickups, and units can end their routes at the final collection point without returning to the depot. The goal is to maximize blood supply coverage while minimizing travel distance.",
+        "tags": [
+            "loc_customer",
+            "demand_backhaul",
+            "demand_linehaul",
+            "loc_depot",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Urban Furniture Rental & Returns Logistics",
+        "content": "A furniture rental company services urban customers (<loc_customer>) by delivering rented items (<demand_linehaul>) and picking up returned items (<demand_backhaul>) in the same trip. Trucks with capacity <capacity> start from a warehouse (<loc_depot>) and can visit customers in any order (mixed backhauls). Drivers finish routes at the last pickup location, avoiding empty return trips. The challenge is to balance delivery/pickup loads dynamically while ensuring no truck exceeds capacity during the route.",
+        "tags": [
+            "loc_customer",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity",
+            "loc_depot"
+        ]
+    },
+    {
+        "title": "Aquaculture Feed Delivery & Harvest Collection",
+        "content": "A seafood farm distributes feed (<demand_linehaul>) to offshore aquaculture sites (<loc_customer>) and collects harvested fish (<demand_backhaul>) for processing. Boats with capacity <capacity> depart from a coastal depot (<loc_depot>) and can alternate feed drop-offs and harvest pickups in any order. Routes are open (boats dock at the final harvest site), and capacity must account for both feed weight and harvest volume. The objective is to minimize fuel costs while ensuring all sites are serviced.",
+        "tags": [
+            "demand_linehaul",
+            "loc_customer",
+            "demand_backhaul",
+            "capacity",
+            "loc_depot"
+        ]
+    },
+    {
+        "title": "Refillable Cosmetics Delivery & Empty Container Returns",
+        "content": "A zero-waste cosmetics brand delivers refillable products (<demand_linehaul>) to stores (<loc_customer>) and collects empty containers (<demand_backhaul>) for sanitization. Electric vans (capacity <capacity>) start from a distribution center (<loc_depot>) and optimize mixed routes where deliveries and pickups are interleaved. Vans remain at the last store after completing their route. The goal is to maximize the number of containers recovered while minimizing emissions from travel.",
+        "tags": [
+            "demand_linehaul",
+            "loc_customer",
+            "demand_backhaul",
+            "capacity",
+            "loc_depot"
+        ]
+    },
+    {
+        "title": "Renewable Energy Maintenance & Spare Parts Logistics",
+        "content": "A wind turbine maintenance team services remote turbines (<loc_customer>) by delivering spare parts (<demand_linehaul>) and retrieving damaged components (<demand_backhaul>) for recycling. Service trucks (capacity <capacity>) depart from a regional hub (<loc_depot>) and follow open routes (ending at the last turbine). Mixed backhauls allow flexible sequencing of part deliveries and retrievals, but capacity must account for both outgoing and incoming loads. The aim is to reduce downtime by optimizing travel between turbines.",
+        "tags": [
+            "loc_customer",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity",
+            "loc_depot"
+        ]
+    },
+    {
+        "title": "Mobile COVID-19 Vaccine Distribution & Used Syringe Collection",
+        "content": "A health agency deploys mobile vaccination teams from a central depot (<loc_depot>) to administer vaccines at clinics (<loc_customer>). Each clinic requires a specific number of vaccine doses (<demand_linehaul>), and teams must also collect used syringes (<demand_backhaul>) for safe disposal. Vehicles (capacity <capacity>) can perform deliveries and pickups in any order but must not exceed their payload limit. Teams end their routes at the final clinic without returning to the depot, minimizing unnecessary travel.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Urban Furniture Rental & Returns Logistics",
+        "content": "A furniture rental company delivers items (e.g., sofas, tables) to customers (<loc_customer>) from a warehouse (<loc_depot>) and simultaneously picks up expired rentals (<demand_backhaul>). Each vehicle (capacity <capacity>) can mix deliveries (<demand_linehaul>) and pickups but must ensure capacity is never exceeded. Drivers finish routes at the last stop, avoiding depot returns.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "demand_backhaul",
+            "capacity",
+            "demand_linehaul"
+        ]
+    },
+    {
+        "title": "Aquaculture Feed Delivery & Harvest Collection",
+        "content": "A seafood farm operator distributes feed (<demand_linehaul>) to fish farms (<loc_customer>) from a processing center (<loc_depot>) while collecting harvested fish (<demand_backhaul>) for transport to markets. Trucks (capacity <capacity>) can interleave feed drop-offs and harvest pickups but must balance loads dynamically. Routes terminate at the final farm, reducing empty mileage.",
+        "tags": [
+            "demand_linehaul",
+            "loc_customer",
+            "loc_depot",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Refillable Cosmetics Delivery & Empty Container Returns",
+        "content": "A sustainable beauty brand delivers filled cosmetic containers (<demand_linehaul>) to stores (<loc_customer>) and retrieves empty ones (<demand_backhaul>) for refilling. Vehicles (capacity <capacity>) optimize mixed-load routes, ensuring capacity constraints are met. Drivers end trips at the last store, eliminating return trips to the depot.",
+        "tags": [
+            "demand_linehaul",
+            "loc_customer",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Renewable Energy Maintenance & Spare Parts Logistics",
+        "content": "A wind farm operator dispatches technicians from a base (<loc_depot>) to service turbines (<loc_customer>), delivering spare parts (<demand_linehaul>) and retrieving faulty components (<demand_backhaul>). Service vans (capacity <capacity>) handle both tasks in flexible sequences, finishing routes at the last turbine to maximize field efficiency.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Mobile COVID-19 Testing & Medical Waste Collection",
+        "content": "A healthcare provider operates mobile testing units that visit neighborhoods (<loc_customer>) to conduct COVID-19 tests while simultaneously collecting biohazard waste (used swabs, PPE) from clinics. Each unit starts at a central depot (<loc_depot>) with a capacity of <capacity> test kits and waste containers. Deliveries (test kits) and pickups (waste) can occur in any order, but the vehicle must not exceed capacity. After the final stop, units proceed to a disposal facility instead of returning to the depot. The goal is to minimize total distance while ensuring all locations are served.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Urban Furniture Rental & Returns Logistics",
+        "content": "A furniture rental company delivers sofas, tables, and chairs to residential customers (<loc_customer>) and picks up expired rentals in the same trip. Trucks (<capacity>) depart from a warehouse (<loc_depot>) and can interleave deliveries (<demand_linehaul>) and pickups (<demand_backhaul>), but must ensure capacity for new deliveries isn\u2019t compromised by early pickups. Drivers end routes at the last customer, reducing empty-mileage costs. Optimize for minimal travel distance while balancing mixed loads.",
+        "tags": [
+            "loc_customer",
+            "capacity",
+            "loc_depot",
+            "demand_linehaul",
+            "demand_backhaul"
+        ]
+    },
+    {
+        "title": "Aquaculture Feed Delivery & Harvest Collection",
+        "content": "A fish farm operator distributes feed to aquaculture sites (<loc_customer>) and collects harvested fish in return trips. Vehicles (<capacity>) start at a processing plant (<loc_depot>) and must dynamically balance feed deliveries (<demand_linehaul>) and harvest pickups (<demand_backhaul>), ensuring capacity for feed isn\u2019t exhausted before reaching critical farms. Routes terminate at the last site to avoid backtracking. The objective is to minimize fuel costs while serving all sites.",
+        "tags": [
+            "loc_customer",
+            "capacity",
+            "loc_depot",
+            "demand_linehaul",
+            "demand_backhaul"
+        ]
+    },
+    {
+        "title": "Refillable Cosmetics Delivery & Empty Container Returns",
+        "content": "A zero-waste cosmetics brand delivers filled bottles to stores (<loc_customer>) and collects empty containers for refilling. Vans (<capacity>) depart from a factory (<loc_depot>) and can alternate drop-offs (<demand_linehaul>) and pickups (<demand_backhaul>), but must reserve space for deliveries before accepting returns. Drivers finish routes at the last store. Optimize for route efficiency and load flexibility.",
+        "tags": [
+            "loc_customer",
+            "capacity",
+            "loc_depot",
+            "demand_linehaul",
+            "demand_backhaul"
+        ]
+    },
+    {
+        "title": "Renewable Energy Maintenance & Spare Parts Logistics",
+        "content": "A wind turbine service team delivers spare parts to wind farms (<loc_customer>) and retrieves defective components for repair. Service trucks (<capacity>) start at a central hub (<loc_depot>) and mix part deliveries (<demand_linehaul>) with pickups (<demand_backhaul>), ensuring capacity for critical parts isn\u2019t overridden by early collections. Routes end at the final turbine site. The goal is to minimize travel time while prioritizing part availability.",
+        "tags": [
+            "loc_customer",
+            "capacity",
+            "loc_depot",
+            "demand_linehaul",
+            "demand_backhaul"
+        ]
+    },
+    {
+        "title": "Mobile Vet Clinic & Animal Shelter Supply Chain",
+        "content": "A mobile veterinary service operates from a central hub (<loc_depot>), delivering medical supplies (<demand_linehaul>) to rural clinics while collecting rescued animals (<demand_backhaul>) for transport to shelters. Vehicles (capacity <capacity>) can mix deliveries and pickups in any order but must ensure live animal carriers are never overloaded. After the final stop, vehicles park at local bases rather than returning to the depot.",
+        "tags": [
+            "loc_depot",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Floating Market Goods Distribution & Organic Waste Collection",
+        "content": "In a riverine community, boats (capacity <capacity>) distribute fresh produce (<demand_linehaul>) from a central dock (<loc_depot>) to floating vendors (<loc_customer>), simultaneously collecting compostable waste (<demand_backhaul>) for biogas plants. Routes are open-ended, with boats docking at maintenance hubs near their last stop. Mixed sequencing allows waste collection before deliveries if capacity permits.",
+        "tags": [
+            "capacity",
+            "demand_linehaul",
+            "loc_depot",
+            "loc_customer",
+            "demand_backhaul"
+        ]
+    },
+    {
+        "title": "Antarctic Research Station Resupply & Equipment Retrieval",
+        "content": "A supply ship (capacity <capacity>) services remote research bases (<loc_customer>), delivering fuel/food (<demand_linehaul>) and retrieving decommissioned equipment (<demand_backhaul>). Harsh conditions require flexible sequencing\u2014critical deliveries may follow pickups if cargo space allows. Ships conclude routes at icebreaker rendezvous points without returning to the origin depot.",
+        "tags": [
+            "capacity",
+            "loc_customer",
+            "demand_linehaul",
+            "demand_backhaul"
+        ]
+    },
+    {
+        "title": "Reusable Packaging Network for Cloud Kitchens",
+        "content": "A shared container service supplies cloud kitchens (<loc_customer>) with sanitized meal containers (<demand_linehaul>) and retrieves used ones (<demand_backhaul>) from the same locations. Electric trikes (capacity <capacity>) optimize mixed stop sequences based on real-time container availability, ending routes at charging stations near the last kitchen served.",
+        "tags": [
+            "loc_customer",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Airborne Seed Dispersion & Invasive Plant Eradication",
+        "content": "Drones (capacity <capacity>) deploy native plant seeds (<demand_linehaul>) across ecological restoration sites (<loc_customer>) while uprooting invasive species (<demand_backhaul>). Mixed operations allow immediate invasive removal during seed drops if payload capacity permits. Drones recharge at field stations after their final mission point.",
+        "tags": [
+            "capacity",
+            "demand_linehaul",
+            "loc_customer",
+            "demand_backhaul"
+        ]
+    },
+    {
+        "title": "Mobile Art Gallery Exhibition & Artwork Returns",
+        "content": "A traveling art gallery operates a fleet of climate-controlled vans (capacity: `<capacity>`) to transport artworks from a central storage facility (`<loc_depot>`) to pop-up exhibitions (`<loc_customer>`). Each exhibition requires specific artworks (`<demand_linehaul>`) and may return unsold or rotated pieces (`<demand_backhaul>`). Routes must ensure artworks are delivered and collected without exceeding van capacity, and drivers end their day at the final exhibition venue (no depot return). The goal is to minimize total distance while preserving fragile cargo space utilization.",
+        "tags": [
+            "capacity",
+            "loc_depot",
+            "loc_customer",
+            "demand_linehaul",
+            "demand_backhaul"
+        ]
+    },
+    {
+        "title": "Urban Vertical Farm Produce Delivery & Compost Collection",
+        "content": "An urban farming startup delivers fresh produce (`<demand_linehaul>`) from rooftop greenhouses (`<loc_depot>`) to restaurants (`<loc_customer>`) using electric cargo bikes (capacity: `<capacity>`). Simultaneously, they collect food waste (`<demand_backhaul>`) for composting. Routes can mix deliveries and pickups dynamically, with bikes ending routes at the last stop. Optimization focuses on balancing perishable produce delivery with waste collection volumes while avoiding bike overloads.",
+        "tags": [
+            "demand_linehaul",
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand_backhaul"
+        ]
+    },
+    {
+        "title": "Floating Solar Panel Maintenance & Degraded Panel Retrieval",
+        "content": "A renewable energy company services floating solar farms across a reservoir (`<loc_customer>`). Technicians depart from a shore base (`<loc_depot>`) with repair kits (`<demand_linehaul>`) and retrieve degraded panels (`<demand_backhaul>`) using electric boats (capacity: `<capacity>`). Mixed sequences of drop-offs and pickups are allowed, with boats remaining at the final work site overnight. The challenge is to maximize panel servicing while respecting weight limits on unstable watercraft.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Antarctic Research Station Supply & Ice Core Sample Logistics",
+        "content": "A polar logistics team coordinates flights from a coastal base (`<loc_depot>`) to inland research stations (`<loc_customer>`). Aircraft (capacity: `<capacity>`) deliver supplies (`<demand_linehaul>`) and retrieve ice core samples (`<demand_backhaul>`) in any order due to unpredictable weather. Flights terminate at the last station visited. Planning must account for strict weight limits (to account for fuel constraints) while ensuring no station is left without critical supplies or sample storage overflow.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand_linehaul",
+            "demand_backhaul"
+        ]
+    },
+    {
+        "title": "Reusable Packaging Network for Cloud Kitchen Hubs",
+        "content": "A zero-waste initiative manages reusable food containers between cloud kitchens (`<loc_customer>`) and a sterilization hub (`<loc_depot>`). Electric trikes (capacity: `<capacity>`) distribute clean containers (`<demand_linehaul>`) and collect used ones (`<demand_backhaul>`) in flexible sequences, with riders finishing shifts at their last stop. The system requires dynamic load balancing to prevent container shortages at busy kitchens while avoiding trike overloading during peak hours.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "demand_linehaul",
+            "demand_backhaul"
+        ]
+    },
+    {
+        "title": "Mobile COVID-19 Testing & Medical Waste Collection",
+        "content": "A healthcare provider operates mobile testing units that visit neighborhoods (<loc_customer>) to conduct COVID-19 tests (<demand_linehaul> for test kits) and simultaneously collect biohazard waste (<demand_backhaul>). Vehicles start at a central depot (<loc_depot>) with a <capacity> limit for combined test supplies and waste containers. Routes are optimized to minimize travel distance, with units ending their shifts at the final stop (no return to depot). Mixed backhauls allow waste collection en route to testing sites if capacity permits.",
+        "tags": [
+            "loc_customer",
+            "demand_linehaul",
+            "demand_backhaul",
+            "loc_depot",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Reusable Packaging Network for Cloud Kitchens",
+        "content": "A zero-waste initiative delivers fresh ingredients in reusable containers to cloud kitchens (<loc_customer>) from a hub (<loc_depot>), then retrieves empty containers (<demand_backhaul>) during the same trip. Each vehicle (<capacity>) can freely mix deliveries (<demand_linehaul>) and pickups, ensuring real-time capacity checks. Drivers finish routes at the last kitchen, eliminating unnecessary returns. Optimized for fuel efficiency and container reuse cycles.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "demand_backhaul",
+            "capacity",
+            "demand_linehaul"
+        ]
+    },
+    {
+        "title": "Antarctic Research Station Resupply & Equipment Retrieval",
+        "content": "Supply ships distribute scientific equipment and provisions (<demand_linehaul>) to remote Antarctic bases (<loc_customer>) while collecting decommissioned gear (<demand_backhaul>). Vessels (<capacity>) depart from a coastal depot (<loc_depot>), with routes allowing mixed delivery/pickup sequences due to harsh weather windows. Ships remain at the final base after unloading, prioritizing payload flexibility over return trips.",
+        "tags": [
+            "demand_linehaul",
+            "loc_customer",
+            "demand_backhaul",
+            "capacity",
+            "loc_depot"
+        ]
+    },
+    {
+        "title": "Floating Market Goods Distribution & Organic Waste Collection",
+        "content": "Boats supply vendors (<loc_customer>) on a riverine market with perishable goods (<demand_linehaul>) and collect spoiled produce (<demand_backhaul>) for composting. Each boat (<capacity>) starts at a riverside depot (<loc_depot>), with routes optimized to balance fresh deliveries and waste pickups dynamically. Operators disembark at the last vendor, leveraging open routes to adapt to daily demand fluctuations.",
+        "tags": [
+            "loc_customer",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity",
+            "loc_depot"
+        ]
+    },
+    {
+        "title": "Mobile Vet Clinic & Animal Shelter Supply Chain",
+        "content": "Veterinary trucks visit shelters (<loc_customer>) to deliver medicines (<demand_linehaul>) and transport rescued animals (<demand_backhaul>) to foster homes. Vehicles (<capacity>) depart from a clinic (<loc_depot>), with mixed backhauls allowing animal pickups mid-route if space permits. Routes minimize travel distance, ending at the final shelter to prioritize animal welfare over depot returns.",
+        "tags": [
+            "loc_customer",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity",
+            "loc_depot"
+        ]
+    },
+    {
+        "title": "Mobile COVID-19 Testing & Medical Waste Collection",
+        "content": "A fleet of mobile testing vans operates across a city, starting from a central depot (`<loc_depot>`). Each van has a limited capacity (`<capacity>`) for test kits and personal protective equipment (PPE). The vans must visit testing sites (`<loc_customer>`) to deliver supplies (`<demand_linehaul>`) and simultaneously collect biohazard waste (`<demand_backhaul>`). Since vans end their routes at the final testing site (open routes), the goal is to optimize delivery/pickup sequences without exceeding capacity, ensuring all sites are served while minimizing total distance traveled.",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "loc_customer",
+            "demand_linehaul",
+            "demand_backhaul"
+        ]
+    },
+    {
+        "title": "Urban Furniture Rental & Returns Logistics",
+        "content": "A furniture rental company manages a fleet of trucks (`<capacity>`) that deliver rented items (e.g., tables, chairs) to customers (`<loc_customer>`) from a warehouse (`<loc_depot>`). Simultaneously, trucks collect returned items (`<demand_backhaul>`) from other customers during the same route. Deliveries and pickups can occur in any order (mixed backhauls), but trucks must never exceed capacity. Drivers finish their day at the last stop (open routes), requiring routes that minimize empty mileage while balancing delivery/pickup loads.",
+        "tags": [
+            "capacity",
+            "loc_customer",
+            "loc_depot",
+            "demand_backhaul"
+        ]
+    },
+    {
+        "title": "Aquaculture Feed Delivery & Harvest Collection",
+        "content": "A fish farm operator uses boats (`<capacity>`) to distribute feed (`<demand_linehaul>`) to offshore aquaculture cages (`<loc_customer>`) from a coastal depot (`<loc_depot>`). During the same trip, boats collect harvested fish (`<demand_backhaul>`) from designated cages. Routes must account for varying feed/harvest demands at each cage, ensuring boats never exceed weight limits. Boats remain at the final cage for unloading (open routes), prioritizing fuel-efficient paths across the water.",
+        "tags": [
+            "capacity",
+            "demand_linehaul",
+            "loc_customer",
+            "loc_depot",
+            "demand_backhaul"
+        ]
+    },
+    {
+        "title": "Refillable Cosmetics Delivery & Empty Container Returns",
+        "content": "A zero-waste cosmetics brand dispatches vans (`<capacity>`) from a production facility (`<loc_depot>`) to deliver refillable products (`<demand_linehaul>`) to stores (`<loc_customer>`). Vans also collect empty containers (`<demand_backhaul>`) from stores in any order (mixed backhauls). Since drivers end routes at the last store (open routes), the challenge is to sequence stops to avoid capacity violations (e.g., ensuring space for empties after deliveries) while minimizing urban driving distance.",
+        "tags": [
+            "capacity",
+            "loc_depot",
+            "demand_linehaul",
+            "loc_customer",
+            "demand_backhaul"
+        ]
+    },
+    {
+        "title": "Renewable Energy Maintenance & Spare Parts Logistics",
+        "content": "A wind turbine maintenance company operates service trucks (`<capacity>`) from a central hub (`<loc_depot>`). Trucks carry spare parts (`<demand_linehaul>`) to turbine sites (`<loc_customer>`) and retrieve defective components (`<demand_backhaul>`) during the same trip. Deliveries and pickups can be interleaved (mixed backhauls), but trucks must not exceed weight limits when carrying heavy parts. Technicians finish at the last turbine (open routes), requiring routes that balance part delivery/retrieval with minimal off-road travel.",
+        "tags": [
+            "capacity",
+            "loc_depot",
+            "demand_linehaul",
+            "loc_customer",
+            "demand_backhaul"
+        ]
+    },
+    {
+        "title": "Mobile Vaccine Clinic Deployment & Medical Waste Collection",
+        "content": "A healthcare provider operates mobile vaccination clinics that visit underserved neighborhoods (<loc_customer>) from a central depot (<loc_depot>). Each clinic delivers vaccines (<demand_linehaul>) and simultaneously collects biohazard waste (<demand_backhaul>) from previous stops. Vehicles (capacity <capacity>) do not return to the depot after the final stop, instead remaining at the last location for future redeployment. Routes must ensure no vehicle exceeds capacity when combining vaccine deliveries and waste pickups in any order.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Refillable Water Station Network Logistics",
+        "content": "A sustainable water company delivers filtered water to refill stations (<loc_customer>) using trucks (capacity <capacity>) from a treatment plant (<loc_depot>). Each station requires fresh water (<demand_linehaul>) and returns empty containers (<demand_backhaul>). Vehicles can serve deliveries and pickups in mixed sequences but must avoid overloading. Drivers end routes at the final station for maintenance, eliminating return trips.",
+        "tags": [
+            "loc_customer",
+            "capacity",
+            "loc_depot",
+            "demand_linehaul",
+            "demand_backhaul"
+        ]
+    },
+    {
+        "title": "Urban Tree Planting & Invasive Species Removal",
+        "content": "A municipal team plants saplings (<demand_linehaul>) at parks and streets (<loc_customer>) while removing invasive plants (<demand_backhaul>) for disposal. Trucks (capacity <capacity>) depart from a nursery (<loc_depot>) and do not return after the last job. Routes must balance sapling delivery weight and invasive plant volume, allowing mixed-order operations (e.g., removing weeds before planting at the same location).",
+        "tags": [
+            "demand_linehaul",
+            "loc_customer",
+            "demand_backhaul",
+            "capacity",
+            "loc_depot"
+        ]
+    },
+    {
+        "title": "Pop-Up Retail Inventory Rotation & Unsold Stock Retrieval",
+        "content": "A fashion brand cycles inventory between pop-up shops (<loc_customer>) from a central warehouse (<loc_depot>). Vehicles (capacity <capacity>) deliver new collections (<demand_linehaul>) and retrieve unsold items (<demand_backhaul>) in flexible sequences. After the final stop, trucks remain near high-demand areas for future rotations. Capacity constraints apply to combined new/returned stock.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "demand_linehaul",
+            "demand_backhaul"
+        ]
+    },
+    {
+        "title": "Antarctic Research Station Resupply & Ice Core Sample Logistics",
+        "content": "A polar logistics team delivers supplies (<demand_linehaul>) to remote research stations (<loc_customer>) from a coastal base (<loc_depot>), while collecting ice cores (<demand_backhaul>) for analysis. Snowcats (capacity <capacity>) traverse extreme terrain and cannot return to base due to fuel constraints. Routes must prioritize capacity for both inbound supplies and outbound samples, with no ordering restrictions between delivery/pickup tasks.",
+        "tags": [
+            "demand_linehaul",
+            "loc_customer",
+            "loc_depot",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Urban EV Charging Station Maintenance & Battery Swap Logistics",
+        "content": "A fleet of service vans (capacity `<capacity>`) departs from a central depot (`<loc_depot>`) to maintain electric vehicle charging stations across the city (`<loc_customer>`). Each station requires fresh batteries (`<demand_linehaul>`) and returns depleted ones (`<demand_backhaul>`). Technicians can service stations in any order (mixed backhauls) and end their shift at the last station (open routes). The goal is to minimize total distance while ensuring no van exceeds its battery transport capacity during swaps.",
+        "tags": [
+            "capacity",
+            "loc_depot",
+            "loc_customer",
+            "demand_linehaul",
+            "demand_backhaul"
+        ]
+    },
+    {
+        "title": "Modular Construction Site Delivery & Scaffolding Retrieval",
+        "content": "Trucks transport prefabricated building modules (`<demand_linehaul>`) from a factory (`<loc_depot>`) to multiple construction sites (`<loc_customer>`), while collecting reusable scaffolding (`<demand_backhaul>`) in any order. Vehicles (capacity `<capacity>`) may finish routes at the last site (open routes). The challenge is to balance module delivery and scaffolding pickup loads dynamically without exceeding capacity mid-route.",
+        "tags": [
+            "demand_linehaul",
+            "loc_depot",
+            "loc_customer",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Mobile Museum Exhibit Deployment & Artifact Rotation",
+        "content": "Specialized climate-controlled trucks (capacity `<capacity>`) distribute rotating exhibits (`<demand_linehaul>`) from a storage facility (`<loc_depot>`) to museums (`<loc_customer>`), simultaneously retrieving artifacts (`<demand_backhaul>`) for conservation. Routes can mix deliveries/pickups and end at the final museum (open routes). The solution must prevent capacity violations when handling fragile items of varying sizes.",
+        "tags": [
+            "capacity",
+            "demand_linehaul",
+            "loc_depot",
+            "loc_customer",
+            "demand_backhaul"
+        ]
+    },
+    {
+        "title": "Refillable Propane Tank Distribution for Campgrounds",
+        "content": "A supplier uses trucks (capacity `<capacity>`) to deliver full propane tanks (`<demand_linehaul>`) to remote campgrounds (`<loc_customer>`) while collecting empty ones (`<demand_backhaul>`). Drivers can visit sites in any order (mixed) and return directly home after the last stop (open routes). The objective is to optimize routes that accommodate fluctuating tank demands without overloading vehicles during exchanges.",
+        "tags": [
+            "capacity",
+            "demand_linehaul",
+            "loc_customer",
+            "demand_backhaul"
+        ]
+    },
+    {
+        "title": "Hybrid Mail Delivery & Document Shredding Service",
+        "content": "Courier vans (capacity `<capacity>`) start at a processing center (`<loc_depot>`), delivering parcels (`<demand_linehaul>`) to businesses (`<loc_customer>`) and collecting confidential documents (`<demand_backhaul>`) for shredding in flexible sequences (mixed). Vehicles conclude routes at their final stop (open routes). The system must ensure secure document transport capacity is never compromised by parcel volumes mid-route.",
+        "tags": [
+            "capacity",
+            "loc_depot",
+            "demand_linehaul",
+            "loc_customer",
+            "demand_backhaul"
+        ]
+    }
+]

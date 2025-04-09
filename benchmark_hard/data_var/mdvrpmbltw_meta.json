@@ -1,0 +1,1054 @@
+[
+    {
+        "title": "Perishable Flower Delivery & Vase Collection Network",
+        "content": "A floral company operates from multiple distribution centers (`<loc_depot>`) to deliver fresh flowers to customers (`<loc_customer>`) while collecting empty vases for reuse. Each vehicle has a `<capacity>` kg limit to accommodate floral arrangements and returned vases. Deliveries must occur within customers\u2019 specified time windows (`<time_windows>`) to ensure freshness, and pickups must follow deliveries to avoid capacity overflow. Routes must also respect a `<time_limit>` hour duration to prevent drivers from working overtime, balancing workload across depots.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "time_windows",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Cold Chain Medicine Delivery with Medical Waste Pickup",
+        "content": "A pharmaceutical firm uses `<loc_depot>` depots to distribute temperature-sensitive medications to hospitals (`<loc_customer>`) while collecting biohazard waste for disposal. Vehicles must maintain a `<capacity>` ton limit, ensuring medications (linehaul) and waste (backhaul) loads don\u2019t exceed capacity. Hospitals require deliveries within strict `<time_windows>` to preserve drug efficacy, and routes must finish within `<time_limit>` hours to avoid refrigeration system strain. Depot assignments must optimize geographic proximity and inventory availability.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "time_windows",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Grocery Home Delivery with Returns Processing",
+        "content": "A supermarket chain runs a multi-depot (`<loc_depot>`) delivery service for groceries (`<demand_linehaul>`) and collects returned items (`<demand_backhaul>`) from customers (`<loc_customer>`). Each truck holds `<capacity>` kg, prioritizing deliveries before pickups to prevent spoilage. Customers demand deliveries during specific `<time_windows>` (e.g., work hours or weekends), and all routes must conclude within `<time_limit>` hours to manage driver shifts efficiently. The challenge is to minimize detours while respecting depot-based vehicle pools.",
+        "tags": [
+            "loc_depot",
+            "demand_linehaul",
+            "demand_backhaul",
+            "loc_customer",
+            "capacity",
+            "time_windows",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Curbside Recycling Collection & Bin Redistribution",
+        "content": "A recycling company operates from `<loc_depot>` hubs to collect recyclables (`<demand_backhaul>`) from households and deliver new bins (`<demand_linehaul>`) to requesters (`<loc_customer>`). Trucks must not exceed `<capacity>` kg, with pickups and deliveries intermixed. Residents specify `<time_windows>` for accessibility (e.g., weekday mornings), and routes must stay under `<time_limit>` hours to cover all zones. The problem requires balancing depot workloads and ensuring bins are restocked promptly.",
+        "tags": [
+            "loc_depot",
+            "demand_backhaul",
+            "demand_linehaul",
+            "loc_customer",
+            "capacity",
+            "time_windows",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Electronics Warranty Service with Device Pickup",
+        "content": "A tech retailer uses `<loc_depot>` warehouses to dispatch technicians who deliver replacement devices (`<demand_linehaul>`) and collect faulty units (`<demand_backhaul>`) from customers (`<loc_customer>`). Each van has a `<capacity>` item limit, with pickups constrained to post-deliveries to avoid overloading. Customers demand service within `<time_windows>` (e.g., business hours), and routes must finish within `<time_limit>` hours to meet same-day service goals. Depot assignments depend on inventory and geographic zones to minimize cross-depot travel.",
+        "tags": [
+            "loc_depot",
+            "demand_linehaul",
+            "demand_backhaul",
+            "loc_customer",
+            "capacity",
+            "time_windows",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "E-commerce Fulfillment with Returns and Strict Deadlines",
+        "content": "An online retailer operates multiple regional distribution centers (<loc_depot>) to manage same-day deliveries and returns. Delivery trucks (<capacity>) must first drop off orders to customers (<loc_customer>) and then collect returned items from the same or other locations. Each delivery has a strict time window (<time_windows>) for customer convenience, while pickups must be scheduled after delivery runs to avoid capacity overloads. Additionally, drivers cannot exceed an 8-hour shift duration (<time_limit>), requiring route optimization to balance workload and ensure all parcels are processed efficiently.",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "loc_customer",
+            "time_windows",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Construction Material Redistribution & Equipment Pickup",
+        "content": "A construction firm uses multiple depots (<loc_depot>) to supply materials (e.g., lumber, cement) to active job sites (<loc_customer>) and retrieve unused equipment (e.g., scaffolding) from completed sites. Each truck (<capacity>) must prioritize deliveries before pickups to prevent capacity violations. Time windows (<time_windows>) are critical for aligning with site schedules, and routes must be planned within a 10-hour window (<time_limit>) to comply with labor regulations. The goal is to minimize fuel costs while ensuring materials arrive on time and equipment is returned promptly.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "time_windows",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Agricultural Inputs Delivery & Harvest Collection",
+        "content": "A cooperative manages multiple regional depots (<loc_depot>) to deliver seeds, fertilizers, and tools (<demand_linehaul>) to farmers during planting seasons and collect harvested crops (<demand_backhaul>) afterward. Trucks (<capacity>) must first complete deliveries before pickups to avoid overloading. Time windows (<time_windows>) align with farming deadlines (e.g., planting windows), and routes must be completed within a 12-hour period (<time_limit>) to accommodate seasonal labor availability. The challenge is to maximize truck utilization while meeting strict agricultural timelines.",
+        "tags": [
+            "loc_depot",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity",
+            "time_windows",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Event Logistics for Equipment Delivery & Post-Event Recovery",
+        "content": "A live event organizer coordinates multiple depots (<loc_depot>) to deliver staging equipment (e.g., tents, AV gear) to venues (<loc_customer>) and collect items afterward. Each truck (<capacity>) must arrive during setup time windows (<time_windows>) to avoid disrupting event schedules. Return trips must occur within a 14-hour window (<time_limit>) to clear venues post-event. The solution must balance delivery and pickup routes to minimize idle time and ensure all equipment is recovered without exceeding vehicle capacities.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "time_windows",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Medical Device Deployment & Maintenance Returns",
+        "content": "A healthcare supplier operates from several depots (<loc_depot>) to deliver new medical devices (e.g., MRI coils) to hospitals (<loc_customer>) and collect outdated equipment for recalibration. Delivery trucks (<capacity>) must first service linehaul customers before handling backhaul pickups to prevent capacity overflow. Hospitals enforce strict time windows (<time_windows>) for maintenance windows, and routes must be completed within an 8-hour shift (<time_limit>). The objective is to optimize routes for cost efficiency while adhering to strict healthcare operational constraints.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "time_windows",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Blood Bank Network Distribution & Waste Collection",
+        "content": "A regional blood bank operates multiple depots (`<loc_depot>`) to deliver life-saving blood products to hospitals (`<loc_customer>`) while collecting expired or unused units for disposal. Each vehicle has a `<capacity>` unit limit, balancing delivery demands (`<demand_linehaul>`) and pickup quotas (`<demand_backhaul>`). Routes must adhere to strict time windows (`<time_windows>`) for hospital schedules and duration limits (`<time_limit>`) to ensure blood viability. The goal is to optimize delivery efficiency while managing return logistics and depot assignments.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand_linehaul",
+            "demand_backhaul",
+            "time_windows",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Beverage Distribution with Container Recycling",
+        "content": "A multinational beverage company uses `<loc_depot>` depots to distribute bottled drinks to retail outlets (`<loc_customer>`) and collect empty containers for recycling. Trucks must carry `<capacity>` liters, accommodating both deliveries (`<demand_linehaul>`) and pickups (`<demand_backhaul>`). Time windows (`<time_windows>`) align with store operating hours, while duration limits (`<time_limit>`) prevent delays in perishable product deliveries. The challenge is to minimize fuel costs while ensuring efficient reverse logistics and depot workload balance.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand_linehaul",
+            "demand_backhaul",
+            "time_windows",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Enterprise IT Hardware Deployment & E-Waste Recovery",
+        "content": "An IT services firm deploys `<loc_depot>` regional hubs to deliver new servers/workstations (`<demand_linehaul>`) to corporate clients (`<loc_customer>`) and collect outdated equipment (`<demand_backhaul>`). Vehicles are constrained by `<capacity>` weight limits, and routes must respect client-mandated time windows (`<time_windows>`) for downtime minimization. Duration limits (`<time_limit>`) ensure technicians complete installations within shift hours, balancing workload across depots.",
+        "tags": [
+            "loc_depot",
+            "demand_linehaul",
+            "loc_customer",
+            "demand_backhaul",
+            "capacity",
+            "time_windows",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Agricultural Supply Delivery & Harvest Collection",
+        "content": "A farming cooperative operates `<loc_depot>` warehouses to supply fertilizers/seeds (`<demand_linehaul>`) to farms (`<loc_customer>`) and collect harvested crops (`<demand_backhaul>`). Trucks must not exceed `<capacity>` tonnage, while adhering to farmers\u2019 time windows (`<time_windows>`) for planting/harvesting schedules. Duration limits (`<time_limit>`) prevent produce spoilage during transport, requiring optimized routes across multi-depot regions.",
+        "tags": [
+            "loc_depot",
+            "demand_linehaul",
+            "loc_customer",
+            "demand_backhaul",
+            "capacity",
+            "time_windows",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Utility Grid Maintenance & Scrap Recovery",
+        "content": "A power utility company manages `<loc_depot>` service centers to deliver repair equipment (`<demand_linehaul>`) to outage sites (`<loc_customer>`) and collect damaged components (`<demand_backhaul>`). Vehicles are limited to `<capacity>` kg, and routes must align with emergency time windows (`<time_windows>`) and technician shift duration limits (`<time_limit>`). The system must dynamically assign depots to minimize response times while balancing mixed backhaul demands.",
+        "tags": [
+            "loc_depot",
+            "demand_linehaul",
+            "loc_customer",
+            "demand_backhaul",
+            "capacity",
+            "time_windows",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Renewable Energy Equipment Deployment & Battery Recycling Network",
+        "content": "A solar energy company must deploy solar panels to remote rural communities while collecting used batteries from decommissioned systems for recycling. Multiple regional depots (<loc_depot>) serve as hubs for trucks with a <capacity> kg limit. Each truck must first deliver panels (<demand_linehaul>) to sites, then collect batteries (<demand_backhaul>). Communities require service during daylight hours (<time_windows>), and routes must be completed within an 8-hour workday (<time_limit>). The goal is to minimize travel costs while ensuring no truck exceeds capacity and adhering to strict time constraints for both deliveries and pickups.",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "demand_linehaul",
+            "demand_backhaul",
+            "time_windows",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Urban Food Waste Collection & Compost Delivery Network",
+        "content": "A city\u2019s sustainability initiative requires trucks from decentralized depots (<loc_depot>) to collect food waste (<demand_backhaul>) from restaurants and deliver compost (<demand_linehaul>) to urban farms. Restaurants mandate pickups only during their evening closing hours (<time_windows>), while farms require deliveries before dawn. Each truck has a <capacity> ton limit, and routes must not exceed a 6-hour duration (<time_limit>). The challenge is to balance waste collection and compost distribution efficiently, ensuring no vehicle overloads and respecting tight operational windows.",
+        "tags": [
+            "loc_depot",
+            "demand_backhaul",
+            "demand_linehaul",
+            "time_windows",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Disaster Relief Supplies Redistribution & Salvage Collection",
+        "content": "After a hurricane, relief organizations must distribute emergency kits (<demand_linehaul>) to affected zones and collect salvageable materials (<demand_backhaul>) for recycling. Trucks depart from multiple regional depots (<loc_depot>), each with a <capacity> kg capacity. Affected areas have strict time windows (<time_windows>) for access due to security or weather, and all routes must be completed within a 12-hour window (<time_limit>). The logistics team must prioritize deliveries first, then pickups, while avoiding overloading vehicles and minimizing redundant travel.",
+        "tags": [
+            "demand_linehaul",
+            "demand_backhaul",
+            "loc_depot",
+            "capacity",
+            "time_windows",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Automotive Parts Delivery & Vehicle Battery Pickup",
+        "content": "An automotive retailer operates from multiple regional warehouses (<loc_depot>) to deliver new car parts (<demand_linehaul>) to dealerships and collect used batteries (<demand_backhaul>) for recycling. Dealerships have specific service hours (<time_windows>), and each truck must return to its starting depot within an 8-hour shift (<time_limit>). Capacity constraints (<capacity>) require balancing the weight of parts and batteries, ensuring deliveries precede pickups. The objective is to optimize routes to reduce fuel costs while meeting strict operational timelines.",
+        "tags": [
+            "loc_depot",
+            "demand_linehaul",
+            "demand_backhaul",
+            "time_windows",
+            "time_limit",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Offshore Wind Farm Maintenance & Tool Return Logistics",
+        "content": "A wind energy company sends service vessels from coastal depots (<loc_depot>) to maintain offshore turbines. Each vessel carries maintenance tools (<demand_linehaul>) and collects used components (<demand_backhaul>) for recycling. Operations are constrained by tidal windows (<time_windows>) and a 10-hour operational limit (<time_limit>), with vessels limited to <capacity> kg. Routes must prioritize tool delivery before component pickup, ensuring no overload and adherence to strict maritime safety schedules.",
+        "tags": [
+            "loc_depot",
+            "demand_linehaul",
+            "demand_backhaul",
+            "time_windows",
+            "time_limit",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Pharmaceutical Distribution & Expired Medicine Collection Network",
+        "content": "A national pharmaceutical chain operates from multiple regional depots to deliver critical medications to hospitals and pharmacies while collecting expired drugs for safe disposal. Each vehicle must depart and return to its assigned depot, adhering to strict delivery time windows for healthcare facilities. Mixed backhaul routes require prioritizing medication deliveries before collecting expired stock, ensuring capacity limits are never exceeded. All routes must conclude within an 8-hour shift duration to comply with driver regulations, balancing urgent medical supply demands with hazardous waste logistics.",
+        "tags": []
+    },
+    {
+        "title": "Urban Furniture Delivery & Rental Returns Network",
+        "content": "An urban furniture rental company uses city-based depots to deliver new furniture to commercial and residential customers while collecting returned rental items for redistribution. Trucks must balance bulky deliveries and pickups within capacity constraints. Deliveries to offices require precise morning time windows for business continuity, while pickups from residential areas are scheduled evenings. All routes must be completed within a 6-hour operational window to maximize daily service efficiency and avoid overtime costs.",
+        "tags": []
+    },
+    {
+        "title": "Automotive Parts Redistribution & Defective Component Recovery",
+        "content": "An automotive supplier manages regional warehouses to deliver replacement parts to dealerships and retrieve defective components for repair or recycling. Dealerships enforce strict time windows for service appointments, demanding precise delivery timing. Routes must accommodate mixed backhauls\u2014delivering parts first, then collecting defective items\u2014without overloading trucks. A 10-hour daily duration limit ensures timely processing and compliance with logistical workflows.",
+        "tags": []
+    },
+    {
+        "title": "Restaurant Ingredient Delivery & Kitchen Waste Collection",
+        "content": "A food supplier operates from urban depots to deliver fresh ingredients to restaurants before morning prep shifts (time windows) and collect organic waste for composting afterward. Vehicles must manage mixed backhauls: ensuring ingredient deliveries do not exceed capacity before waste pickups. All routes must be completed within a 12-hour operational window to align with kitchen schedules, optimize fuel use, and meet sustainability goals.",
+        "tags": []
+    },
+    {
+        "title": "Temporary Event Catering & Equipment Redistribution",
+        "content": "A catering company serves multiple event venues using regional depots. Trucks deliver catering supplies to venues with strict setup deadlines (time windows) and pick up equipment post-event. Routes must balance load capacity between deliveries and pickups, ensuring equipment is retrieved efficiently. A 14-hour duration limit accommodates event schedules, from morning setup to late-night teardown, while minimizing vehicle idle time and maximizing equipment reuse.",
+        "tags": []
+    },
+    {
+        "title": "Hotel Linen Delivery & Laundry Collection Network",
+        "content": "Hotels across a city require fresh linens delivered daily and soiled laundry collected for cleaning. Multiple linen distribution centers (`<loc_depot>`) serve `<num_customer>` hotels at `<loc_customer>`. Each truck (`capacity: <capacity> kg`) must balance carrying clean linens (delivery demand `<demand_linehaul>`) and soiled laundry (pickup demand `<demand_backhaul>`) without overloading. Routes must adhere to hotels\u2019 time windows `<time_windows>` (e.g., morning delivery, evening pickup) and ensure round-trip durations `<time_limit>` to avoid overtime. The challenge is to minimize travel costs while meeting cleanliness standards and operational constraints.",
+        "tags": [
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "capacity",
+            "demand_linehaul",
+            "demand_backhaul",
+            "time_windows",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Mobile Health Clinic Equipment Redistribution & Medical Supply Pickup",
+        "content": "Rural health clinics rely on mobile units to deliver medical equipment and supplies (`<demand_linehaul>`), while collecting expired medications and used supplies (`<demand_backhaul>`). Trucks depart from regional medical hubs (`<loc_depot>`) and must visit `<num_customer>` clinics at `<loc_customer>`. Each vehicle (`capacity: <capacity> liters/kg`) must prioritize deliveries before pickups, respecting clinics\u2019 operating hours `<time_windows>` and strict duration limits `<time_limit>` to serve multiple locations daily. The goal is to optimize routes for timely service while preventing equipment shortages or overloading.",
+        "tags": [
+            "demand_linehaul",
+            "demand_backhaul",
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "capacity",
+            "time_windows",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Seasonal Agriculture Harvest Support & Equipment Return Logistics",
+        "content": "Farmers in a region need seasonal tools (e.g., harvesters, irrigation kits) delivered (`<demand_linehaul>`) and returned post-harvest (`<demand_backhaul>`). Trucks from `<loc_depot>` distribution centers serve `<num_customer>` farms at `<loc_customer>`, balancing equipment transport with harvested produce pickup. Capacity constraints `<capacity>` must account for both machinery weight and perishable goods. Routes must align with farm schedules `<time_windows>` (e.g., dawn deliveries, dusk pickups) and ensure drivers complete tours within `<time_limit>` daily limits to maximize efficiency during peak harvest.",
+        "tags": [
+            "demand_linehaul",
+            "demand_backhaul",
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "capacity",
+            "time_windows",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Urban EV Charging Station Maintenance & Battery Swap Logistics",
+        "content": "Electric vehicle (EV) charging stations require regular battery swaps: delivering charged batteries (`<demand_linehaul>`) and collecting depleted ones (`<demand_backhaul>`). Maintenance teams operate from `<loc_depot>` depots to service `<num_customer>` stations at `<loc_customer>`. Each vehicle (`capacity: <capacity> batteries`) must avoid exceeding weight limits and adhere to time windows `<time_windows>` (e.g., non-peak hours for minimal disruption). Routes must also respect duration limits `<time_limit>` to ensure all stations are serviced within operational shifts.",
+        "tags": [
+            "demand_linehaul",
+            "demand_backhaul",
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "capacity",
+            "time_windows",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Retail Store Inventory Redistribution & Customer Return Processing",
+        "content": "A nationwide retailer uses `<loc_depot>` warehouses to restock `<num_customer>` stores with new inventory (`<demand_linehaul>`) and collect returned items (`<demand_backhaul>`). Trucks (`capacity: <capacity> cubic meters`) must handle mixed loads of incoming/outgoing goods while respecting store operating hours `<time_windows>`. Routes must be planned to avoid exceeding `<time_limit>` driving durations, ensuring efficient redistribution without straining drivers or missing store-specific deadlines. The goal is to minimize logistics costs while maintaining inventory accuracy and customer satisfaction.",
+        "tags": [
+            "loc_depot",
+            "num_customer",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity",
+            "time_windows",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Event Decor Setup & Removal Network",
+        "content": "A company provides temporary decor for corporate events across multiple cities. Using depots in strategic regional hubs (`<loc_depot>`), they must deliver decor kits to event venues (`<loc_customer>`) before setup deadlines and collect them afterward. Each truck has a `<capacity>` ton limit, and venues specify delivery (`<demand_linehaul>`) and pickup (`<demand_backhaul>`) quantities. Time windows enforce strict arrival times for setup (e.g., 8 AM) and removal (e.g., midnight). Routes must ensure no vehicle exceeds its capacity, adheres to time constraints, and returns to its depot within an 18-hour daily limit.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand_linehaul",
+            "demand_backhaul"
+        ]
+    },
+    {
+        "title": "Medical Imaging Equipment Rental Logistics",
+        "content": "A healthcare provider rents MRI and X-ray machines to hospitals and clinics. Equipment must be delivered (`<demand_linehaul>`) before scheduled patient scans and retrieved (`<demand_backhaul>`) afterward. Hospitals operate 24/7 but require equipment during specific time windows (`<time_windows>`). With depots in major cities (`<loc_depot>`), vehicles must traverse routes without exceeding `<capacity>` kg limits, service all requests within 12-hour shifts (`<duration_limit>`), and return to depots before shift ends.",
+        "tags": [
+            "demand_linehaul",
+            "demand_backhaul",
+            "time_windows",
+            "loc_depot",
+            "capacity",
+            "duration_limit"
+        ]
+    },
+    {
+        "title": "Automotive Rental Fleet Redistribution",
+        "content": "A car rental chain operates from multiple urban depots (`<loc_depot>`) and needs to rebalance its fleet daily. Trucks redistribute idle cars to high-demand locations (`<demand_linehaul>`) and collect returned rentals (`<demand_backhaul>`) from drop-off points. Each vehicle can carry up to `<capacity>` cars. Rentals have pickup/drop-off time windows (`<time_windows>`), and routes must conclude within an 8-hour workday (`<duration_limit>`). The goal is to minimize idle cars while respecting depot-specific fuel and labor constraints.",
+        "tags": [
+            "loc_depot",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity",
+            "time_windows",
+            "duration_limit"
+        ]
+    },
+    {
+        "title": "Food Truck Catering Supply Chain",
+        "content": "A catering network supplies food trucks with fresh ingredients (`<demand_linehaul>`) each morning and collects empty containers/dirty equipment (`<demand_backhaul>`) by evening. Trucks depart from regional distribution centers (`<loc_depot>`), adhering to strict delivery (`<time_windows_open>`) and pickup (`<time_windows_close>`) windows. With a `<capacity>` kg limit per truck, routes must loop back to depots within a 10-hour window (`<duration_limit>`) to avoid spoilage or contamination.",
+        "tags": [
+            "demand_linehaul",
+            "demand_backhaul",
+            "loc_depot",
+            "time_windows_open",
+            "time_windows_close",
+            "capacity",
+            "duration_limit"
+        ]
+    },
+    {
+        "title": "School Textbook Distribution & Collection",
+        "content": "A provincial education board manages textbook delivery to schools (`<demand_linehaul>`) and collects returned books (`<demand_backhaul>`) at year-end. Schools operate on strict schedules, requiring deliveries before\u5f00\u5b66 (start of term `<time_windows_open>`) and pickups after\u653e\u5047 (end of term `<time_windows_close>`). Using depots in education districts (`<loc_depot>`), trucks must carry `<capacity>` kg loads and complete routes within a 6-hour daily limit (`<duration_limit>`), ensuring books reach rural schools without overloading vehicles.",
+        "tags": [
+            "demand_linehaul",
+            "demand_backhaul",
+            "time_windows_open",
+            "time_windows_close",
+            "loc_depot",
+            "capacity",
+            "duration_limit"
+        ]
+    },
+    {
+        "title": "Event Equipment Rental Logistics Network",
+        "content": "A company rents stage equipment, lighting systems, and AV gear to event organizers across a region. They operate from three regional depots (`<loc_depot>`). Each vehicle has a `<capacity>` ton limit, must return to its origin depot, and handle both deliveries to event venues (`<demand_linehaul>`) and pickups of returned gear from post-event locations (`<demand_backhaul>`). Time windows (`<time_windows>`) are critical\u2014deliveries must arrive before setup deadlines, while pickups must occur after events conclude. Routes must also respect a `<time_limit>` shift duration to comply with driver regulations, ensuring no vehicle exceeds its allotted working hours.",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "demand_linehaul",
+            "demand_backhaul",
+            "time_windows",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Tech Hardware Deployment and Recycling Logistics",
+        "content": "A tech firm deploys servers to data centers (`<demand_linehaul>`) and recovers outdated equipment (`<demand_backhaul>`) for recycling. With multiple regional depots (`<loc_depot>`), trucks must efficiently route between facilities and customer sites (`<loc_customer>`), adhering to strict delivery deadlines (`<time_windows>`) to avoid service disruptions. Each vehicle\u2019s `<capacity>` must balance outgoing hardware and incoming recyclables, while total route duration (`<time_limit>`) ensures technicians can complete installations and pickups within a single shift.",
+        "tags": [
+            "demand_linehaul",
+            "demand_backhaul",
+            "loc_depot",
+            "loc_customer",
+            "time_windows",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Seasonal Agricultural Machinery Redistribution",
+        "content": "Farmers require seasonal machinery (e.g., harvesters) delivered to fields (`<demand_linehaul>`) and older models picked up for redistribution (`<demand_backhaul>`). The logistics team uses depots in three agricultural hubs (`<loc_depot>`), with `<capacity>`-limited tractors. Time windows (`<time_windows>`) align with planting/harvesting schedules, while routes must finish within a `<time_limit>` workday to accommodate farmers\u2019 timelines. Mixed backhauls ensure efficient reuse of machinery, minimizing idle time and fuel costs.",
+        "tags": [
+            "demand_linehaul",
+            "demand_backhaul",
+            "loc_depot",
+            "capacity",
+            "time_windows",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Airport Ground Support Services",
+        "content": "An airport logistics firm manages catering deliveries (`<demand_linehaul>`) to departing flights and waste pickup (`<demand_backhaul>`) from arriving aircraft. Vehicles depart from two warehouse depots (`<loc_depot>`), adhering to stringent flight-specific time windows (`<time_windows>`) to avoid delays. Each truck\u2019s `<capacity>` must accommodate meal carts and waste bins, while round-trip duration (`<time_limit>`) ensures ground crews complete tasks before flight departures or arrivals. Multi-depot coordination optimizes resource allocation across terminals.",
+        "tags": [
+            "demand_linehaul",
+            "demand_backhaul",
+            "loc_depot",
+            "time_windows",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Urban Construction Material and Waste Logistics",
+        "content": "A construction firm delivers building materials (`<demand_linehaul>`) to active sites and hauls debris (`<demand_backhaul>`) for recycling. They operate from five regional depots (`<loc_depot>`), using `<capacity>`-restricted trucks. Time windows (`<time_windows>`) align with site access hours, and route durations (`<time_limit>`) comply with labor regulations. Mixed backhauls allow trucks to offload materials first, then collect waste on the return trip, reducing total vehicle movements and emissions. Multi-depot planning ensures equitable workload distribution.",
+        "tags": [
+            "demand_linehaul",
+            "demand_backhaul",
+            "loc_depot",
+            "capacity",
+            "time_windows",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Car Rental Redistribution & Vehicle Pickup Logistics Network",
+        "content": "A national car rental company operates from multiple regional depots (MD) to balance vehicle supply across demand hotspots. Each depot dispatches trucks (C) to deliver rented cars to high-demand locations and collect returned rentals from drop-off points. Routes must handle both deliveries (linehaul) and pickups (backhaul) (MB). Customers expect vehicle exchanges during specific time windows (TW), and drivers must complete all tasks within an 8-hour workday (L). The challenge is to optimize vehicle routing across depots to minimize fuel costs while ensuring timely service and respecting capacity limits.",
+        "tags": []
+    },
+    {
+        "title": "Smart Meter Deployment & Collection Logistics Network",
+        "content": "A utility provider replaces analog meters with smart meters using regional depots (MD). Service vans (C) carry new meters (linehaul) and empty space for old meters (backhaul) (MB). Technicians must visit homes during pre-scheduled time windows (TW) for meter swaps. Routes must be planned to avoid overtime (L), as prolonged travel delays risk customer complaints. The goal is to maximize meter replacements while efficiently balancing van capacities and technician schedules.",
+        "tags": []
+    },
+    {
+        "title": "Bakery Fresh Bread Delivery & Crate Return Network",
+        "content": "A bakery chain uses multiple distribution hubs (MD) to supply fresh bread to retailers daily. Delivery trucks (C) transport loaves to stores (linehaul) and return empty crates collected from prior deliveries (backhaul) (MB). Retailers require bread delivery before morning opening hours (TW), and drivers must complete all stops within a 4-hour window (L) to ensure freshness. The task is to route trucks from depots to minimize detours while handling perishable goods and reusable crate logistics.",
+        "tags": []
+    },
+    {
+        "title": "Furniture Delivery & Disposal Logistics Network",
+        "content": "A furniture retailer operates from several warehouses (MD) to deliver new items to customers and collect old furniture for recycling. Delivery vehicles (C) must first drop off new furniture (linehaul) before picking up discarded pieces (backhaul) (MB). Customers specify delivery/pickup time slots (TW), and routes must fit within drivers\u2019 10-hour workday (L). The challenge is optimizing truck space for mixed cargo while meeting strict customer scheduling demands.",
+        "tags": []
+    },
+    {
+        "title": "Medical Sample Courier with Multi-Hub Operations",
+        "content": "A medical courier service uses regional depots (MD) to transport lab samples from hospitals to testing labs and return finalized results. Vehicles (C) first collect temperature-sensitive samples (backhaul) before delivering test reports (linehaul) (MB). Pickup/delivery stops have strict time windows (TW) to maintain sample viability, and routes must not exceed a 6-hour duration (L) to prevent delays. The objective is to coordinate cross-depot routes for rapid, reliable sample handling.",
+        "tags": []
+    },
+    {
+        "title": "Ride-Sharing Vehicle Repositioning and Maintenance Logistics",
+        "content": "A ride-sharing company operates from multiple regional depots (`<loc_depot>`) and must reposition idle vehicles to high-demand areas while collecting damaged vehicles for repair. Each depot sends trucks (capacity `<capacity>`) to deliver working cars to hotspots (`<loc_customer>`) and tow malfunctioning units back. Time windows `<time_windows>` dictate when drivers are available at depots, and routes must be completed within a technician\u2019s shift duration `<time_limit>`. The goal is to balance vehicle redistribution, ensure tow trucks don\u2019t exceed capacity, and meet urgent repositioning demands efficiently.",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "loc_customer",
+            "time_windows",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Construction Site Material Delivery and Waste Removal Network",
+        "content": "Construction firms use `<loc_depot>` depots to supply materials (e.g., steel beams, cement) to active sites (`<loc_customer>`) and collect demolition waste for recycling. Each truck (capacity `<capacity>`) must first deliver linehaul materials before picking up backhaul waste, adhering to site access windows `<time_windows>` and avoiding overtime beyond `<time_limit>` hours. The challenge is to cluster sites by proximity to depots, manage mixed cargo without overloading, and minimize delays caused by unpredictable site delays.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "time_windows",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Telecommunications Infrastructure Rollout and Recycling",
+        "content": "A telecom provider expands its network by deploying new fiber-optic equipment to remote locations (`<loc_customer>`) while collecting outdated hardware for recycling. Trucks from regional depots (`<loc_depot>`) must carry `<capacity>` kg of gear and follow strict time windows `<time_windows>` for site access (e.g., during maintenance hours). Routes are constrained by a maximum duration `<time_limit>` to ensure technicians finish shifts on time, balancing deployment and recycling tasks without exceeding vehicle limits.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "time_windows",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Museum Artifact Delivery and Exhibition Return Logistics",
+        "content": "A museum consortium operates from `<loc_depot>` storage hubs to deliver artifacts to temporary exhibitions (`<loc_customer>`) and retrieve returned pieces for conservation. Each truck (capacity `<capacity>`) must handle fragile items with time windows `<time_windows>` aligned with exhibition openings/closures. Routes must also respect a `<time_limit>` to prevent artifacts from being exposed to transit conditions for too long, while managing mixed backhauls of outgoing and incoming cargo without compromising stability.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "time_windows",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Postal Service Package Delivery and Mail Collection Network",
+        "content": "A postal service uses multiple sorting centers (`<loc_depot>`) to distribute parcels to residential/commercial addresses (`<loc_customer>`) and collect inbound mail for processing. Trucks (capacity `<capacity>`) must first complete deliveries before backhauling mail, adhering to strict time windows `<time_windows>` for drop-off/pick-up slots. Routes must be planned within a `<time_limit>` workday to meet postal deadlines, ensuring no vehicle exceeds weight limits while optimizing collection/delivery sequences for efficiency.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "time_windows",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Data Center Equipment Deployment & E-Waste Retrieval Network",
+        "content": "A tech company operates multiple regional depots (`<loc_depot>`) to deploy new servers and retrieve outdated hardware for recycling. Each vehicle must deliver `<demand_linehaul>` units of equipment to data centers (`<loc_customer>`) while collecting `<demand_backhaul>` kg of e-waste. Trucks have a `<capacity>` ton limit, requiring careful balancing of delivery and pickup loads. Time windows `<time_windows>` are critical for coordinating with data center maintenance schedules, and routes must be completed within an `<time_limit>` hour window to avoid overheating during transfers.",
+        "tags": [
+            "loc_depot",
+            "demand_linehaul",
+            "loc_customer",
+            "demand_backhaul",
+            "capacity",
+            "time_windows",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Urban Mobility Scooter Redistribution & Battery Swap Logistics",
+        "content": "A shared-scooter startup uses `<loc_depot>` hubs to manage scooter distribution across high-demand zones (`<loc_customer>`). Vehicles redistribute fully charged scooters (linehaul) while collecting depleted units (backhaul) for battery swaps. Each truck can carry `<capacity>` scooters, and routes must adhere to `<time_windows>` during peak hours. Trips cannot exceed `<time_limit>` hours to ensure drivers finish shifts on time, balancing workload across depots.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "time_windows",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Livestock Feed Delivery & Manure Collection Network",
+        "content": "A farming cooperative employs `<loc_depot>` warehouses to deliver feed (`<demand_linehaul>`) to farms (`<loc_customer>`) and collect manure (`<demand_backhaul>`) for biogas production. Vehicles must not exceed `<capacity>` kg to prevent contamination, and routes must finish within `<time_limit>` hours to avoid livestock stress. Farms require deliveries during `<time_windows>` aligned with feeding schedules, complicating depot assignment decisions.",
+        "tags": [
+            "loc_depot",
+            "demand_linehaul",
+            "loc_customer",
+            "demand_backhaul",
+            "capacity",
+            "time_limit",
+            "time_windows"
+        ]
+    },
+    {
+        "title": "Semiconductor Component Delivery & Contaminated Waste Retrieval",
+        "content": "A semiconductor manufacturer uses `<loc_depot>` cleanroom facilities to deliver precision components (`<demand_linehaul>`) to assembly lines while retrieving contaminated materials (`<demand_backhaul>`). Trucks with `<capacity>` kg capacity must maintain strict temperature controls, and routes must be completed within `<time_limit>` hours to prevent thermal degradation. Time windows `<time_windows>` align with factory shift schedules, adding urgency to mixed backhaul planning.",
+        "tags": [
+            "loc_depot",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity",
+            "time_limit",
+            "time_windows"
+        ]
+    },
+    {
+        "title": "Temporary Event Security Equipment Deployment & Recovery",
+        "content": "Event security firms deploy `<loc_depot>` regional teams to deliver barricades, cameras, and scanners (`<demand_linehaul>`) to venues (`<loc_customer>`) and recover them post-event (`<demand_backhaul>`). Vehicles must stay under `<capacity>` kg to avoid overloading, and routes must conclude within `<time_limit>` hours to ensure equipment is ready for next-day setups. Venue `<time_windows>` tightly align with event timelines, demanding precise synchronization across multiple depots.",
+        "tags": [
+            "loc_depot",
+            "demand_linehaul",
+            "loc_customer",
+            "demand_backhaul",
+            "capacity",
+            "time_limit",
+            "time_windows"
+        ]
+    },
+    {
+        "title": "National Park Equipment Redistribution & Waste Collection Network",
+        "content": "A national park agency uses multiple regional depots (<loc_depot>) to supply remote ranger stations with maintenance equipment and collect accumulated waste. Vehicles must first deliver gear (linehaul) before picking up waste (backhaul), adhering to vehicle capacity limits (<capacity>). Each station has a time window (<time_window>) for service during park operational hours, and routes must be completed within a maximum daily travel duration (<time_limit>) to avoid overnight stays. The challenge is to optimize routes across depots while balancing equipment delivery and waste pickup demands (<demand_linehaul> and <demand_backhaul>).",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "time_window",
+            "time_limit",
+            "demand_linehaul",
+            "demand_backhaul"
+        ]
+    },
+    {
+        "title": "Urban Library Book Delivery and Return Processing Network",
+        "content": "A municipal library system operates from multiple branch depots (<loc_depot>) to restock books at satellite locations and collect returned items for redistribution. Delivery vehicles (<capacity>) must prioritize book deliveries (linehaul) before processing returns (backhaul). Each branch has strict operating hours (<time_window>), and routes must conclude within an 8-hour workday (<time_limit>). The goal is to ensure all libraries receive fresh stock while efficiently consolidating returned books, considering the demand for both outgoing and incoming materials (<demand_linehaul>, <demand_backhaul>).",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "time_window",
+            "time_limit",
+            "demand_linehaul",
+            "demand_backhaul"
+        ]
+    },
+    {
+        "title": "Event Security Equipment Deployment & Post-Event Collection Logistics",
+        "content": "A security firm deploys teams from multiple regional depots (<loc_depot>) to supply temporary events with surveillance equipment and collect gear afterward. Vehicles must deliver devices (linehaul) before event start times (<time_window>) and return post-event to retrieve equipment (backhaul). Route durations (<time_limit>) are constrained by event schedules, and capacity limits (<capacity>) must accommodate both outgoing and returning loads. The firm aims to minimize total travel distance while ensuring all equipment is deployed and retrieved without exceeding depot-specific service windows.",
+        "tags": [
+            "loc_depot",
+            "time_window",
+            "time_limit",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Industrial Tool Rental with Pickups and Drop-Offs",
+        "content": "A tool rental company manages multiple regional hubs (<loc_depot>) to deliver equipment to construction sites (linehaul) and collect returned tools (backhaul). Rentals require precise drop-off (<time_window>) and pickup windows, while route durations (<time_limit>) must fit within technicians\u2019 workdays. Vehicle capacities (<capacity>) must handle mixed loads of new and returned gear, with demands varying by location (<demand_linehaul>, <demand_backhaul>). The objective is to balance depot workloads and minimize delays caused by overscheduling or underutilized trucks.",
+        "tags": [
+            "loc_depot",
+            "time_window",
+            "time_limit",
+            "capacity",
+            "demand_linehaul",
+            "demand_backhaul"
+        ]
+    },
+    {
+        "title": "Emergency Blood Plasma Delivery and Blood Donation Collection",
+        "content": "Blood banks across a region operate from multiple depots (<loc_depot>) to deliver plasma to hospitals (linehaul) and collect blood donations from mobile drives (backhaul). Plasma deliveries must arrive within hospitals\u2019 receiving hours (<time_window>), and donation pickups require coordination with drive schedules. Routes must adhere to strict duration limits (<time_limit>) to maintain plasma viability, while vehicle capacity (<capacity>) accommodates both perishable deliveries and donations. The challenge is to synchronize time-critical pickups and drop-offs across depots, ensuring all blood products are transported efficiently without exceeding capacity constraints.",
+        "tags": [
+            "loc_depot",
+            "time_window",
+            "time_limit",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Urban Electric Taxi Battery Swap Logistics Network",
+        "content": "A city operates multiple battery swap depots (MD) to service electric taxis. Each depot dispatches vehicles (capacity `<capacity>`) to deliver charged batteries to taxi stands and collect depleted ones. Taxis require swaps within strict time windows (TW) to avoid downtime. Routes must ensure deliveries precede pickups (MB) without overloading vehicles, and all operations must conclude within daily operational hours (L). The goal is to minimize taxi wait times while balancing depot workloads and adhering to capacity constraints.",
+        "tags": [
+            "capacity"
+        ]
+    },
+    {
+        "title": "Disaster Response Equipment Redistribution & Salvage Logistics",
+        "content": "After a flood, regional depots (MD) distribute rescue equipment (e.g., pumps, generators) to affected zones and collect salvageable materials (e.g., debris, reusable tools). Each zone has critical time windows (TW) for equipment delivery. Vehicles (capacity `<capacity>`) must return within 24 hours (L), ensuring capacity prioritizes life-saving gear before collecting salvage. Mixed backhaul allows flexible delivery-pickup sequences while respecting load limits.",
+        "tags": [
+            "capacity"
+        ]
+    },
+    {
+        "title": "Live Event Stage Setup & Equipment Recovery Logistics",
+        "content": "A concert tour uses multiple depots (MD) to deliver staging equipment (trusses, speakers) to venues and recover gear afterward. Venues mandate setup completion by specific time windows (TW) to meet event schedules. Vehicles (capacity `<capacity>`) must return to depots within a day (L), balancing delivery of new equipment (linehaul) and pickup of used gear (backhaul). Routes must avoid overloading trucks during mixed operations.",
+        "tags": [
+            "capacity"
+        ]
+    },
+    {
+        "title": "Medical Imaging Equipment Rental & Recycling Network",
+        "content": "A healthcare firm rents MRI/CT scanners from depots (MD) to hospitals and retrieves outdated units for recycling. Rentals must arrive before scheduled scans (TW), while pickups occur post-use. Vehicles (capacity `<capacity>`) handle both new and old equipment, ensuring delivery prioritization (MB). Routes must finish within clinic operating hours (L), minimizing downtime and maximizing fleet utilization.",
+        "tags": [
+            "capacity"
+        ]
+    },
+    {
+        "title": "Coastal Fresh Seafood Delivery & Ice Container Recycling Network",
+        "content": "A seafood company operates coastal depots (MD) to deliver fresh catches (e.g., fish, shellfish) to markets and collect empty ice containers. Markets demand deliveries by morning time windows (TW) to ensure freshness. Vehicles (capacity `<capacity>`) must return by noon (L), balancing perishable cargo (linehaul) and container pickups (backhaul). Mixed backhaul ensures ice containers don\u2019t reduce delivery capacity.",
+        "tags": [
+            "capacity"
+        ]
+    },
+    {
+        "title": "Pop-Up Retail Event Equipment Redistribution & Post-Event Recovery Network",
+        "content": "A company manages temporary pop-up retail events in multiple cities. They use regional warehouses (<loc_depot>) as depots to deliver modular store fixtures and inventory to event locations (<loc_customer>) while also collecting used equipment post-event. Each truck (<capacity> ton capacity) must first deliver linehaul items (e.g., displays, merchandise) and later backtrack to collect backhaul items (e.g., disassembled structures). Time windows (<time_windows>) enforce strict setup and teardown deadlines, while duration limits (<L>) ensure drivers complete routes within an 8-hour workday. The challenge is to balance depot assignments, avoid overloading vehicles, and synchronize deliveries with event schedules.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "time_windows",
+            "L"
+        ]
+    },
+    {
+        "title": "IT Hardware Deployment to Remote Work Locations with Collection Logistics",
+        "content": "A tech firm dispatches laptops and peripherals to remote employees from regional distribution centers (<loc_depot>). Trucks (<capacity> unit capacity) must first deliver linehaul devices and later retrieve returned hardware after contract expiration. Employees require deliveries within specific work hours (<time_windows>), while pickups must occur within a 48-hour window post-termination. Each vehicle\u2019s route must stay under a 6-hour duration limit (<L>), and depot selection depends on geographic proximity. Mixed backhauls require ensuring returned devices don\u2019t exceed remaining truck capacity after deliveries.",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "time_windows",
+            "L"
+        ]
+    },
+    {
+        "title": "Holiday Decoration Delivery & Post-Season Collection Network",
+        "content": "A home goods retailer stocks seasonal decorations (e.g., Christmas lights, ornaments) to retail stores (<loc_customer>) from regional warehouses (<loc_depot>). Trucks (<capacity> cubic meter capacity) must first deliver festive items before the holiday rush, then collect unsold inventory afterward. Stores enforce strict delivery (<time_windows_open>) and pickup (<time_windows_close>) windows, with duration limits (<L>) preventing overnight routes. The mixed backhaul requires optimizing truck space to carry both outbound and inbound loads without exceeding capacity during reverse logistics phases.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "time_windows_open",
+            "time_windows_close",
+            "L"
+        ]
+    },
+    {
+        "title": "Automotive Parts Supply Chain with Defective Component Retrieval",
+        "content": "An automotive supplier distributes new engine components to dealerships (<loc_customer>) while collecting defective parts from service centers. Multi-depot (<loc_depot>) operations prioritize regional efficiency. Linehaul deliveries must arrive before dealership operating hours end (<time_windows>), while backhaul pickups of faulty parts must occur within 48 hours of defect reporting. Each truck (<capacity> kg capacity) must handle mixed loads without exceeding limits, and route durations (<L>) must align with warranty service SLAs.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "time_windows",
+            "capacity",
+            "L"
+        ]
+    },
+    {
+        "title": "Film Production Equipment Delivery & Set Dismantling Logistics",
+        "content": "A film production company coordinates equipment transport for movie shoots across multiple locations. Gear (e.g., cameras, lighting) is distributed from equipment hubs (<loc_depot>) to film sets (<loc_customer>), then retrieved after filming concludes. Tight time windows (<time_windows>) govern setup and teardown timelines, while duration limits (<L>) ensure trucks complete round trips within shooting schedules. Mixed backhauls require vehicles to first deliver heavy equipment before returning with dismantled sets, adhering to payload constraints (<capacity>). Depot assignments depend on proximity to filming regions.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "time_windows",
+            "L",
+            "capacity"
+        ]
+    },
+    {
+        "title": "International Tech Expo Equipment Deployment and Retrieval Network",
+        "content": "An international tech expo requires rapid deployment of booths, screens, and networking gear to multiple venues across cities. Each venue (linehaul) must receive equipment by specified time windows, while post-event dismantling (backhaul) collects used items. Multiple depots in regional hubs supply and collect equipment, with vehicles constrained by cargo capacity. Routes must adhere to strict duration limits to ensure setup is completed before event start and teardown finishes within contracted hours.",
+        "tags": []
+    },
+    {
+        "title": "Urban EV Charging Station Maintenance and Battery Swap Logistics",
+        "content": "Electric vehicle charging stations across a city require regular maintenance and battery swaps. Technicians from multiple depots must deliver replacement parts (linehaul) to malfunctioning stations and collect faulty components (backhaul) for recycling. Each service call has a time window tied to off-peak hours to minimize disruption. Vehicles must not exceed their payload capacity (e.g., carrying both tools and batteries) and complete all tasks within an 8-hour shift duration limit.",
+        "tags": []
+    },
+    {
+        "title": "Hospital Linen and Medical Supply Redistribution Network",
+        "content": "A healthcare system operates from multiple depots to deliver clean linens and medical supplies to hospitals (linehaul) while simultaneously collecting soiled laundry and expired medical waste (backhaul). Each hospital has time windows for deliveries/pickups aligned with shift changes. Vehicles must respect strict capacity limits to avoid overloading, and routes must be completed within a 12-hour window to ensure overnight replenishment.",
+        "tags": []
+    },
+    {
+        "title": "Tourist Shuttle Services with Adventure Gear Rental Logistics",
+        "content": "A travel company manages shuttle buses that deliver snorkeling gear, hiking equipment, and cameras to tourist hotspots (linehaul) and collect them post-use (backhaul). Shuttles depart from regional depots and must adhere to tourists\u2019 booked time windows (e.g., beach visits between 9 AM\u201312 PM). Buses have limited storage space, and routes must be planned to avoid exceeding a 6-hour operational window to maximize daily service capacity.",
+        "tags": []
+    },
+    {
+        "title": "Agricultural Drone Battery Redistribution and Crop Sample Collection",
+        "content": "Farmers in a large agricultural region require drone batteries for crop monitoring and soil sampling. A logistics firm operates from multiple depots to deliver charged batteries (linehaul) to drone operators in the field and collect depleted batteries and crop samples (backhaul). Each farm has time windows for service based on irrigation schedules. Vehicles must stay under weight limits to accommodate both batteries and samples, and routes must be completed within a 4-hour window to ensure uninterrupted drone operations.",
+        "tags": []
+    },
+    {
+        "title": "Urban Microgrid Battery Redistribution & Solar Panel Pickup Network",
+        "content": "A network of solar-powered microgrids operates across a city, managed from multiple depots (`<loc_depot>`). Each depot dispatches electric vehicles (capacity `<capacity>`) to deliver charged batteries to solar energy stations during morning hours (TW: 6-9 AM) and collect discharged batteries for recharging in the evening (TW: 6-9 PM). Simultaneously, the same vehicles must pick up outdated solar panels (`demand_backhaul`) from rooftops during daylight (TW: 9 AM-3 PM) for recycling. Routes must ensure no vehicle exceeds its battery-carrying capacity (`<capacity>`) and completes all tasks within an 8-hour shift (`<time_limit>`), returning to their origin depot by 5 PM.",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Live Event Stage Equipment Deployment & Post-Show Recovery Logistics",
+        "content": "A touring theater production requires setting up elaborate stages in different cities, using multiple regional equipment depots (`<loc_depot>`). Trucks (capacity `<capacity>`) must deliver stage components (linehaul `<demand_linehaul>`) to venues before curtain-up (TW: 2 hours pre-show) and collect dismantled equipment (backhaul `<demand_backhaul>`) after the final performance (TW: midnight). Each route is constrained by a 12-hour working window (`<time_limit>`) to allow crew rest, and vehicles must return to their assigned depot for overnight storage. The challenge is balancing load capacities for both delivery and pickup while adhering to tight showtime deadlines.",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "demand_linehaul",
+            "demand_backhaul",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Pharmaceutical Cold Chain Distribution & Expired Drug Retrieval",
+        "content": "A global pharmaceutical company operates from three temperature-controlled depots (`<loc_depot>`) to deliver vaccines (linehaul `<demand_linehaul>`) and collect expired medications (backhaul `<demand_backhaul>`) across rural clinics (`<loc_customer>`). Vehicles have refrigeration units with a 10-hour operational limit (`<time_limit>`), requiring return to depots before battery depletion. Each clinic has strict delivery windows (TW: 8 AM-12 PM) for vaccine storage and pickup windows (TW: 3-5 PM) for waste disposal. The capacity (`<capacity>`) must account for both perishable deliveries and biohazard pickups, with no mixing of expired and active medications allowed.",
+        "tags": [
+            "loc_depot",
+            "demand_linehaul",
+            "demand_backhaul",
+            "loc_customer",
+            "time_limit",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Offshore Research Vessel Supply & Scientific Sample Collection",
+        "content": "Marine researchers use multiple coastal supply depots (`<loc_depot>`) to service offshore research vessels. Vessels require fuel and equipment deliveries (linehaul `<demand_linehaul>`) during daytime windows (TW: 9 AM-4 PM) and must return scientific samples (backhaul `<demand_backhaul>`) via pickup before sunset (TW: 6-8 PM). Supply boats (`<capacity>`) have a 12-hour operational limit (`<time_limit>`) due to tidal restrictions, necessitating round-trip returns to depots. Routes must prioritize urgent sample collections while ensuring fuel and cargo capacities are not exceeded during storm-prone evenings.",
+        "tags": [
+            "loc_depot",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "High-Speed Rail Maintenance & Worn Component Recovery",
+        "content": "A rail network\u2019s maintenance teams operate from five regional depots (`<loc_depot>`), dispatching trains to inspect track sections (`<loc_customer>`). Inspectors deliver replacement parts (linehaul `<demand_linehaul>`) during morning maintenance windows (TW: 6-10 AM) and collect worn components (backhaul `<demand_backhaul>`) post-inspection (TW: 2-6 PM). Each inspection train has a 10-hour operational limit (`<time_limit>`), enforced by mandatory safety checks at depots. Capacity (`<capacity>`) must accommodate both deliveries and pickups, with strict weight limits to prevent derailment risks on aging tracks.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand_linehaul",
+            "demand_backhaul",
+            "time_limit",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Renewable Energy Solar Panel Installation & Recycling Network",
+        "content": "A solar energy company operates multiple regional depots (`<loc_depot>`) to deploy installation teams. Each truck carries new panels (`<demand_linehaul>`) and collects old panels for recycling (`<demand_backhaul>`). Vehicles must not exceed `<capacity>` kg, serve all sites within their `<time_window>` (e.g., matching technician availability), and complete routes within an `<L>`-hour workday. The challenge is balancing load capacity while coordinating deliveries and pickups across scattered locations (`<loc_customer>`), ensuring timely installations and recycling pickups without overtime.",
+        "tags": [
+            "loc_depot",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity",
+            "time_window",
+            "L",
+            "loc_customer"
+        ]
+    },
+    {
+        "title": "Urban Electric Scooter Battery Swap Logistics with Peak Demand Constraints",
+        "content": "An e-scooter company manages `<loc_depot>` battery swap hubs in a city. During peak hours, trucks must deliver charged batteries (`<demand_linehaul>`) to low-stock stations and collect depleted ones (`<demand_backhaul>`) without exceeding `<capacity>` batteries per vehicle. Each swap station has a `<time_window>` during rush hour for service. Routes must finish within an `<L>`-hour shift, avoiding traffic delays, while optimizing battery redistribution across `<loc_customer>` locations.",
+        "tags": [
+            "loc_depot",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity",
+            "time_window",
+            "L",
+            "loc_customer"
+        ]
+    },
+    {
+        "title": "Disaster Relief Cargo Redistribution & Hazardous Waste Collection",
+        "content": "After a flood, aid agencies use `<loc_depot>` regional depots to send relief supplies (`<demand_linehaul>`) to disaster zones (`<loc_customer>`) and collect contaminated waste (`<demand_backhaul>`). Trucks must adhere to strict `<time_window>` delivery deadlines (e.g., before nightfall), return to depots within `<L>` hours to reload, and avoid overloading (`<capacity>` ton limit). The mixed backhaul routes require managing perishable supplies and hazardous materials while balancing multi-depot resource allocations.",
+        "tags": [
+            "loc_depot",
+            "demand_linehaul",
+            "loc_customer",
+            "demand_backhaul",
+            "time_window",
+            "L",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Airport Catering Supply & Waste Collection Network",
+        "content": "An airline caterer operates from `<loc_depot>` kitchens to deliver meals (`<demand_linehaul>`) to departing flights and collect unused food waste (`<demand_backhaul>`) from aircraft. Each vehicle\u2019s `<capacity>` must accommodate meal boxes and waste containers. Deliveries and pickups must align with flight schedules\u2019 `<time_window>` (e.g., 30 minutes pre-departure), while ensuring round-trip durations stay under `<L>` hours. Multi-depot coordination is critical for handling simultaneous gate operations across terminals.",
+        "tags": [
+            "loc_depot",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity",
+            "time_window",
+            "L"
+        ]
+    },
+    {
+        "title": "High-Tech Semiconductor Component Deployment & Defective Part Retrieval",
+        "content": "A semiconductor manufacturer uses `<loc_depot>` regional warehouses to deliver precision components (`<demand_linehaul>`) to assembly lines and retrieve defective parts (`<demand_backhaul>`). Trucks must maintain strict `<capacity>` limits to prevent damage, comply with factory `<time_window>` access periods (e.g., shift start/end), and complete all deliveries/pickups within an `<L>`-hour window to avoid production delays. Mixed backhaul routes must dynamically prioritize urgent orders while balancing multi-depot workflows.",
+        "tags": [
+            "loc_depot",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity",
+            "time_window",
+            "L"
+        ]
+    },
+    {
+        "title": "Medical Diagnostic Equipment Redistribution & Sample Collection Network",
+        "content": "A network of diagnostic laboratories operates from multiple regional hubs (`<loc_depot>`) to serve hospitals and clinics across a large area. Vehicles must deliver new medical equipment (linehaul) to facilities requiring upgrades while collecting blood samples and diagnostic specimens (backhaul) for analysis. Each hospital has strict time windows (`<time_windows>`) for receiving equipment and submitting samples, with service times (`<service_time>`) for equipment setup and sample collection. Routes must originate and end at their assigned depot, stay within an 8-hour shift duration (`<time_limit>`), and ensure that vehicle capacities (`<capacity>`) are not exceeded by the combined weight of equipment and samples.",
+        "tags": [
+            "loc_depot",
+            "time_windows",
+            "service_time",
+            "time_limit",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Urban Drone Courier Network with Time-Sensitive Deliveries & Returns",
+        "content": "A city-wide drone delivery service uses multiple launch sites (`<loc_depot>`) to handle both parcel deliveries (linehaul) and returns (backhaul). Drones must comply with strict time windows (`<time_windows>`) for customer pickups/drop-offs, adhering to service times (`<service_time>`) for package handling. Each drone has a maximum flight duration (`<time_limit>`) due to battery constraints and a payload capacity (`<capacity>`), limiting the number of packages carried per trip. Routes must start/end at the assigned depot and balance delivery and return stops without exceeding operational limits.",
+        "tags": [
+            "loc_depot",
+            "time_windows",
+            "service_time",
+            "time_limit",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Construction Prefabrication Module Delivery & Waste Retrieval",
+        "content": "A construction company with regional depots (`<loc_depot>`) delivers prefabricated building modules (linehaul) to active sites (`<loc_customer>`) while collecting scrap materials and excess waste (backhaul) for recycling. Each site has time windows (`<time_windows>`) for crane availability and waste pickup, with service times (`<service_time>`) for module installation coordination. Vehicles must return to their origin depot within an 8-hour window (`<time_limit>`) and cannot exceed their capacity (`<capacity>`) when carrying mixed loads of modules and waste.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "time_windows",
+            "service_time",
+            "time_limit",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Perishable Seafood Distribution & Ice Container Recycling",
+        "content": "A seafood distributor operates from multiple coastal depots (`<loc_depot>`) to deliver fresh catch (linehaul) to restaurants and supermarkets (`<loc_customer>`) while retrieving empty ice-filled containers (backhaul) for reuse. Time windows (`<time_windows>`) are critical to ensure seafood freshness, with service times (`<service_time>`) for loading/unloading perishables. Routes must stay within a 6-hour duration (`<time_limit>`) to maintain cold chain integrity and avoid overloading trucks (`<capacity>`) with combined seafood and container weights.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "time_windows",
+            "service_time",
+            "time_limit",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Automotive Showroom Inventory Redistribution & Defective Part Retrieval",
+        "content": "An automotive retailer with regional showrooms (`<loc_depot>`) redistributes new car parts (linehaul) to dealerships while collecting defective components (backhaul) for warranty repairs. Each dealership has time windows (`<time_windows>`) for parts delivery and pickup, with service times (`<service_time>`) for inventory checks. Routes must originate/end at the assigned depot, stay within a 10-hour working day (`<time_limit>`), and respect vehicle capacities (`<capacity>`) for the mixed load of new/defective parts.",
+        "tags": [
+            "loc_depot",
+            "time_windows",
+            "service_time",
+            "time_limit",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Medical Oxygen Delivery & Cylinder Pickup Network",
+        "content": "A network of regional medical depots (`<loc_depot>`) supplies hospitals (`<loc_customer>`) with oxygen tanks while collecting empty cylinders for recycling. Vehicles must deliver oxygen (linehaul) before picking up empties (backhaul) without exceeding `<capacity>` kg. Hospitals have strict `<time_windows>` for receiving deliveries during daytime and accepting pickups post-shift. Routes must be completed within `<time_limit>` hours to ensure oxygen availability for overnight critical care.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "time_windows",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Airport Catering and Waste Collection Logistics",
+        "content": "Multiple airport depots (`<loc_depot>`) coordinate to deliver fresh meals to departing flights (`<loc_customer>`) and collect food waste for disposal. Each vehicle\u2019s `<capacity>` must accommodate meal containers and waste bins. Flights impose `<time_windows>` for meal delivery before departure and waste pickup post-landing. Routes are constrained by `<time_limit>` to align with aircraft turnaround schedules, ensuring no delays.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "time_windows",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Urban Pharmacy Delivery & Expired Medicine Retrieval",
+        "content": "Pharmacies across a city (`<loc_depot>`) dispatch vans to restock neighborhood clinics (`<loc_customer>`) with medications and retrieve expired drugs. The `<capacity>` limits the combined weight of new stock and expired items. Clinics mandate `<time_windows>` for morning deliveries and afternoon pickups to avoid disrupting patient hours. Routes must finish within `<time_limit>` to accommodate evening inventory audits.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "time_windows",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Construction Site Tool Delivery & Equipment Pickup",
+        "content": "Regional tool warehouses (`<loc_depot>`) service construction sites (`<loc_customer>`) by delivering tools and collecting damaged equipment. Trucks have `<capacity>` constraints for bulky tools and scrap metal. Sites specify `<time_windows>` for morning deliveries and afternoon pickups to align with shift changes. Routes must adhere to `<time_limit>` to complete before evening safety shutdowns.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "time_windows",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Electric Bus Depot Battery Exchange Network",
+        "content": "Electric bus depots (`<loc_depot>`) in a metropolitan area redistribute charged batteries to bus terminals (`<loc_customer>`) and collect depleted ones for recharging. Vehicles must first deliver charged batteries (linehaul) before retrieving empties (backhaul), staying under `<capacity>` weight limits. Terminals enforce `<time_windows>` during shift swaps, and routes must finish within `<time_limit>` to ensure overnight charging capacity.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "time_windows",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Tech Event Equipment Deployment & Post-Event Recovery Network",
+        "content": "A global tech conference requires rapid setup and teardown of booths across multiple city venues. Regional warehouses (<loc_depot>) dispatch trucks with a maximum capacity of `<capacity>` units to deliver booth components (linehaul) to venues (<loc_customer>) within strict setup time windows. After the event, trucks must collect dismantled equipment (backhaul) without exceeding their capacity. Routes must adhere to daily driving limits (`<time_limit>` hours) to ensure crews finish within shift durations. Time windows for delivery and pickup are enforced to avoid disrupting event schedules, while ensuring all equipment is redistributed efficiently between depots.",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "loc_customer",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Urban Emergency Medical Supply Redistribution & Critical Waste Collection",
+        "content": "A city\u2019s emergency response system uses `<loc_depot>` medical hubs to distribute life-saving supplies (linehaul) to hospitals during a crisis. Simultaneously, trucks collect hazardous medical waste (backhaul) from affected sites (<loc_customer>). Each vehicle has a capacity limit of `<capacity>` kg to balance delivery and pickup loads. Routes must respect hospital-specific time windows for urgent deliveries and waste pickup schedules. Duration constraints (`<time_limit>` hours) ensure drivers comply with health-and-safety shift limits while covering all critical locations.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "International Trade Fair Equipment Delivery & Secure Retrieval",
+        "content": "A multinational trade fair in multiple cities demands rapid deployment of booth materials to venues (<loc_customer>) using depots (<loc_depot>) in each region. Trucks with `<capacity>`-unit capacity must deliver equipment (linehaul) within setup time windows and retrieve it post-event (backhaul) without exceeding load limits. Routes must fit within the fair\u2019s operational period (`<time_limit>` hours), and depots must coordinate to ensure timely retrieval while avoiding cross-regional overloads. Time windows align with venue access rules, and duration limits prevent overnight driving.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Urban Solar Panel Installation & Battery Recycling Network",
+        "content": "A renewable energy company operates from `<loc_depot>` distribution centers to deliver solar panels (linehaul) to residential rooftops (<loc_customer>) and collect retired batteries (backhaul) for recycling. Each truck\u2019s `<capacity>` must accommodate mixed loads, prioritizing panel deliveries before pickups. Time windows enforce daytime installation and battery collection schedules. Duration limits (`<time_limit>` hours) ensure technicians finish installations within work shifts, optimizing route efficiency while balancing depot workloads.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Live Event Catering Equipment Redistribution & Post-Event Recovery",
+        "content": "Catering firms use `<loc_depot>` central kitchens to supply equipment (linehaul) to event venues (<loc_customer>) and retrieve used gear afterward (backhaul). Trucks have a `<capacity>` limit to handle both deliveries and pickups. Time windows align with event start/end times, requiring precise scheduling to avoid disruptions. Routes must conclude within `<time_limit>` hours to accommodate same-day shifts, while multi-depot coordination ensures efficient coverage of simultaneous events across the city.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "time_limit"
+        ]
+    }
+]

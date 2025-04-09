@@ -1,0 +1,1097 @@
+[
+    {
+        "title": "E-Commerce Same-Day Delivery & Returns Management",
+        "content": "An e-commerce fulfillment center at `<loc_depot>` dispatches vans (capacity `<capacity>`) to handle both deliveries (`<demand_linehaul>`) and returns (`<demand_backhaul>`) for `<num_customer>` customers across the city (`<loc_customer>`). Each customer has a strict delivery/return time window (`<time_windows>`) and service time (`<service_time>`). Vans must dynamically alternate between dropping off orders and collecting returns while respecting capacity limits (e.g., avoiding overloads from combining heavy returns with deliveries). The goal is to minimize total travel time while meeting all time-sensitive commitments.",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "demand_linehaul",
+            "demand_backhaul",
+            "num_customer",
+            "loc_customer",
+            "time_windows",
+            "service_time"
+        ]
+    },
+    {
+        "title": "Farm-to-Table Produce Distribution with Surplus Collection",
+        "content": "A cooperative farm (`<loc_depot>`) supplies fresh produce to `<num_customer>` restaurants (`<loc_customer>`) with delivery demands (`<demand_linehaul>`) and simultaneously collects unsold surplus (`<demand_backhaul>`) for composting. Trucks (capacity `<capacity>`) must adhere to tight delivery windows (`<time_windows>`) to ensure freshness, while pickups are flexible but constrained by remaining capacity after deliveries. Routes must balance delivery urgency with efficient surplus collection to minimize spoilage and mileage.",
+        "tags": [
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity",
+            "time_windows"
+        ]
+    },
+    {
+        "title": "Pharmaceutical Cold-Chain Logistics for Clinics",
+        "content": "A pharmaceutical warehouse (`<loc_depot>`) distributes temperature-sensitive vaccines (`<demand_linehaul>`) to `<num_customer>` clinics (`<loc_customer>`) and retrieves expired medications (`<demand_backhaul>`). Each clinic has narrow time windows (`<time_windows>`) for deliveries (e.g., during staffed hours) and fixed service times (`<service_time>`) for unloading. Refrigerated trucks (capacity `<capacity>`) must prioritize deliveries to avoid vaccine spoilage but can interleave pickups if capacity allows. The objective is to minimize route duration while ensuring compliance with cold-chain protocols.",
+        "tags": [
+            "loc_depot",
+            "demand_linehaul",
+            "num_customer",
+            "loc_customer",
+            "demand_backhaul",
+            "time_windows",
+            "service_time",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Retail Store Replenishment with Recycling Pickups",
+        "content": "A retail distribution center (`<loc_depot>`) sends trucks (capacity `<capacity>`) to restock `<num_customer>` stores (`<loc_customer>`) with inventory (`<demand_linehaul>`) and collect recyclable packaging (`<demand_backhaul>`). Stores have strict receiving hours (`<time_windows>`) and unloading times (`<service_time>`). Mixed backhauls complicate routing\u2014e.g., a truck must avoid picking up bulky recyclables early if it compromises later deliveries. The aim is to optimize routes for fuel efficiency and on-time replenishment.",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "num_customer",
+            "loc_customer",
+            "demand_linehaul",
+            "demand_backhaul",
+            "time_windows",
+            "service_time"
+        ]
+    },
+    {
+        "title": "Library Bookmobile Service with Returns",
+        "content": "A mobile library service (`<loc_depot>`) visits `<num_customer>` neighborhoods (`<loc_customer>`) to lend books (`<demand_linehaul>`) and accept returns (`<demand_backhaul>`). Each stop has a scheduled time window (`<time_windows>`) for service (e.g., 30-minute slots) and fixed setup time (`<service_time>`). The bookmobile (capacity `<capacity>`) must dynamically adjust its load to accommodate returns without exceeding capacity, ensuring no neighborhood is skipped due to overloading. The goal is to maximize accessibility while minimizing detours.",
+        "tags": [
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "demand_linehaul",
+            "demand_backhaul",
+            "time_windows",
+            "service_time",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Hospital Lab Sample Collection & Supply Delivery",
+        "content": "A medical logistics company manages daily routes for vehicles that deliver sterile supplies to hospitals (<demand_linehaul>) while simultaneously collecting lab samples (<demand_backhaul>) for testing. Each vehicle (capacity <capacity>) must adhere to strict time windows (<time_windows>) for sample viability (e.g., 8:00\u201310:00 AM for oncology samples) and supply delivery deadlines (e.g., before morning surgeries). Mixed backhauls allow urgent samples to be prioritized even mid-route.",
+        "tags": [
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity",
+            "time_windows"
+        ]
+    },
+    {
+        "title": "Luxury Retail Concierge Service with Returns",
+        "content": "A high-end retailer offers white-glove delivery/return services for VIP clients. Vehicles (capacity <capacity>) deliver new purchases (<demand_linehaul>) and collect returns (<demand_backhaul>) in any order, accommodating client availability (<time_windows>). Time-critical constraints include 2-hour delivery slots for perishable gifts (e.g., champagne) and synchronized returns during client lunch breaks.",
+        "tags": [
+            "capacity",
+            "demand_linehaul",
+            "demand_backhaul",
+            "time_windows"
+        ]
+    },
+    {
+        "title": "Art Gallery Installation & Deinstallation Tours",
+        "content": "An art transport firm plans routes for trucks (capacity <capacity>) that deliver new exhibits (<demand_linehaul>) to galleries and retrieve loaned artworks (<demand_backhaul>). Mixed backhauls allow swapping pieces mid-route (e.g., deliver to Gallery A before picking up from nearby Gallery B). Time windows (<time_windows>) align with gallery opening hours and curator availability.",
+        "tags": [
+            "capacity",
+            "demand_linehaul",
+            "demand_backhaul",
+            "time_windows"
+        ]
+    },
+    {
+        "title": "Campus Catering & Compost Collection",
+        "content": "A university catering service uses electric vans (capacity <capacity>) to deliver pre-ordered meals (<demand_linehaul>) to departments while collecting food waste (<demand_backhaul>) for composting. Mixed backhauls enable waste pickups during delivery gaps (e.g., after a 9:00 AM breakfast drop-off but before an 11:00 AM lecture hall delivery). Time windows (<time_windows>) prevent late meal arrivals during class breaks.",
+        "tags": [
+            "capacity",
+            "demand_linehaul",
+            "demand_backhaul",
+            "time_windows"
+        ]
+    },
+    {
+        "title": "Film Set Equipment Logistics",
+        "content": "A movie production company coordinates trucks (capacity <capacity>) to transport filming gear (<demand_linehaul>) to shooting locations and retrieve rented equipment (<demand_backhaul>) from wrap sites. Mixed backhauls allow urgent equipment swaps (e.g., drop off cameras at Location X before picking up lenses from nearby Studio Y). Time windows (<time_windows>) enforce shoot schedules (e.g., gear must arrive before 5:00 AM call time).",
+        "tags": [
+            "capacity",
+            "demand_linehaul",
+            "demand_backhaul",
+            "time_windows"
+        ]
+    },
+    {
+        "title": "Urban Waste Collection & Recycling Bin Distribution",
+        "content": "A municipal service manages both waste collection (backhaul) and distributing new recycling bins (linehaul) to households. Each truck (capacity: <capacity>) starts at the depot (<loc_depot>), visits <num_customer> locations (<loc_customer>), and must adhere to strict time windows (<time_windows>) due to noise ordinances. Deliveries (bin distribution) and pickups (full waste bins) can occur in any order, but the vehicle must never exceed capacity during the route. Service times (<service_time>) account for bin installation/waste compaction.",
+        "tags": [
+            "capacity",
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "time_windows",
+            "service_time"
+        ]
+    },
+    {
+        "title": "Mobile Vaccination Clinic & Medical Waste Retrieval",
+        "content": "A healthcare provider operates mobile vaccination units that deliver vaccines (linehaul) to rural communities (<loc_customer>) while simultaneously collecting biohazard waste (backhaul) from clinics. Time windows (<time_windows>) reflect clinic operating hours, and service times (<service_time>) include patient administration. Vehicles (capacity: <capacity>) must balance cold-storage space for vaccines and sealed containers for waste, with mixed-order pickups/deliveries allowed.",
+        "tags": [
+            "loc_customer",
+            "time_windows",
+            "service_time",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Construction Material Delivery & Debris Removal",
+        "content": "A contractor coordinates trucks (capacity: <capacity>) to deliver building materials to construction sites (<demand_linehaul>) and haul away debris (<demand_backhaul>) across <num_customer> locations (<loc_customer>). Time windows (<time_windows>) are enforced to align with site work hours, and routes must account for varying load weights (e.g., heavy materials vs. lightweight debris) without exceeding capacity at any point.",
+        "tags": [
+            "capacity",
+            "demand_linehaul",
+            "demand_backhaul",
+            "num_customer",
+            "loc_customer",
+            "time_windows"
+        ]
+    },
+    {
+        "title": "Event Catering & Leftover Collection Service",
+        "content": "A catering company services corporate events (<loc_customer>) with food deliveries (linehaul) and post-event leftover collection (backhaul) using refrigerated trucks (capacity: <capacity>). Tight time windows (<time_windows>) match event schedules, and service times (<service_time>) include setup/breakdown. Routes may interleave deliveries and pickups (e.g., deliver lunch to Client A, collect breakfast trays from Client B, then deliver snacks to Client C).",
+        "tags": [
+            "loc_customer",
+            "capacity",
+            "time_windows",
+            "service_time"
+        ]
+    },
+    {
+        "title": "Tech Equipment Rental Fleet Management",
+        "content": "A tech rental company dispatches vans (capacity: <capacity>) to simultaneously deliver reserved equipment (linehaul) to businesses (<loc_customer>) and retrieve expired rentals (backhaul). Time windows (<time_windows>) align with business hours, and service times (<service_time>) include equipment testing. Mixed-order routing is critical (e.g., deliver laptops to Office X before picking up projectors from nearby Office Y to free up capacity).",
+        "tags": [
+            "capacity",
+            "loc_customer",
+            "time_windows",
+            "service_time"
+        ]
+    },
+    {
+        "title": "Perishable Seafood Market Delivery & Spoilage Collection",
+        "content": "A seafood distributor supplies fresh catch to restaurants (<loc_customer>) from a central dock (<loc_depot>) using refrigerated trucks (<capacity>). Each restaurant has:  \n- A delivery window (<time_windows>) for freshness compliance  \n- Variable order sizes (<demand_linehaul>)  \n- Spoiled inventory (<demand_backhaul>) needing same-day collection  \nRoutes must balance delivery priority with spoilage pickups while maintaining cold-chain integrity, with trucks dynamically switching between drop-offs and pickups based on time-sensitive constraints.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "time_windows",
+            "demand_linehaul",
+            "demand_backhaul"
+        ]
+    },
+    {
+        "title": "Industrial Gas Cylinder Exchange Program",
+        "content": "A gas supplier manages cylinder exchanges for manufacturing plants (<loc_customer>) with:  \n- Outbound deliveries of full cylinders (<demand_linehaul>)  \n- Inbound collections of empties (<demand_backhaul>)  \n- Strict exchange windows (<time_windows>) aligning with production schedules  \n- Vehicle payload limits (<capacity>) for hazardous material transport  \nThe mixed routing must account for plant shutdown periods and prioritize deliveries to facilities with critical gas shortages.",
+        "tags": [
+            "loc_customer",
+            "demand_linehaul",
+            "demand_backhaul",
+            "time_windows",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Mobile Blood Donation & Testing Unit Coordination",
+        "content": "A healthcare network deploys mobile blood units (<capacity>) that:  \n- Deliver testing supplies to clinics (<demand_linehaul>)  \n- Collect donations at temporary sites (<demand_backhaul>)  \n- Operate within strict time windows (<time_windows>) for perishable blood products  \nRoutes must optimize the dual workflow where some vehicles simultaneously transport samples to labs while delivering supplies, with priority given to emergency requests.",
+        "tags": [
+            "capacity",
+            "demand_linehaul",
+            "demand_backhaul",
+            "time_windows"
+        ]
+    },
+    {
+        "title": "Fashion Pop-Up Shop Inventory Rotation",
+        "content": "A luxury brand operates temporary boutiques (<loc_customer>) requiring:  \n- Morning deliveries of new collections (<demand_linehaul>)  \n- Evening pickups of unsold items (<demand_backhaul>)  \n- Tight display changeover windows (<time_windows>)  \n- Vehicle capacity limits (<capacity>) for high-value merchandise  \nRouting must synchronize with mall access hours while allowing mid-route inventory swaps between locations based on real-time sales data.",
+        "tags": [
+            "loc_customer",
+            "demand_linehaul",
+            "demand_backhaul",
+            "time_windows",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Film Festival Equipment Logistics",
+        "content": "A media company services simultaneous event venues (<loc_customer>) with:  \n- Outbound delivery of projection equipment (<demand_linehaul>)  \n- Inbound collection after screenings (<demand_backhaul>)  \n- Narrow setup/teardown windows (<time_windows>) between films  \n- Specialized transport capacity (<capacity>) for fragile gear  \nRoutes must accommodate last-minute program changes while preventing equipment bottlenecks across venues, with some trucks performing partial exchanges during festival hours.\n``` \n\nEach scenario emphasizes:  \n1) **Capacity management** - Physical/regulatory payload limits  \n2) **Mixed backhauls** - Seamless integration of delivery/pickup operations  \n3) **Time windows** - Hard constraints tied to operational requirements  \nThe descriptions avoid open routes, strict backhaul sequencing, and duration limits while highlighting industry-specific complexities.",
+        "tags": [
+            "loc_customer",
+            "demand_linehaul",
+            "demand_backhaul",
+            "time_windows",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Mobile Laundry Service for Hotels & Restaurants",
+        "content": "A fleet of vans (capacity `<capacity>`) collects dirty linens from hotels/restaurants (`<loc_customer>`) with time-sensitive pickup windows (`<time_windows>`) and delivers cleaned linens from a central facility (`<loc_depot>`). Each location has both delivery (`<demand_linehaul>`) and pickup (`<demand_backhaul>`) demands. Routes must optimize the mix of drop-offs and collections while respecting vehicle capacity and strict hygiene schedule constraints (e.g., kitchen linens must be delivered before breakfast service).",
+        "tags": [
+            "capacity",
+            "loc_customer",
+            "time_windows",
+            "loc_depot",
+            "demand_linehaul",
+            "demand_backhaul"
+        ]
+    },
+    {
+        "title": "Film Production Equipment Swaps",
+        "content": "A studio manages on-location shoots by rotating equipment (cameras, lighting) between active sets (`<loc_customer>`). Vehicles (capacity `<capacity>`) must deliver specialized gear to new sets (`<demand_linehaul>`) and retrieve idle equipment (`<demand_backhaul>`) within narrow time windows (`<time_windows>`) dictated by shooting schedules. Mixed backhauls are critical (e.g., a truck might deliver props to Set A before picking up costumes from nearby Set B), and capacity must account for fragile items requiring dedicated space.",
+        "tags": [
+            "loc_customer",
+            "capacity",
+            "demand_linehaul",
+            "demand_backhaul",
+            "time_windows"
+        ]
+    },
+    {
+        "title": "Urban Beehive Pollination & Honey Harvesting",
+        "content": "An apiary service deploys mobile beehives to farms (`<loc_customer>`) for crop pollination (delivery `<demand_linehaul>`) and later retrieves hives with harvested honey (pickup `<demand_backhaul>`). Time windows (`<time_windows>`) are strict (e.g., almond bloom periods), and vehicle capacity (`<capacity>`) must accommodate hive weight/volume. Routes may interleave deliveries to new farms and pickups from completed pollination sites while ensuring bees aren\u2019t stressed by excessive transit time.",
+        "tags": [
+            "loc_customer",
+            "demand_linehaul",
+            "demand_backhaul",
+            "time_windows",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Reusable Packaging Logistics for Grocery Chains",
+        "content": "A sustainability initiative replaces single-use packaging with reusable crates. Trucks (capacity `<capacity>`) deliver stocked crates to stores (`<demand_linehaul>`) and collect empty crates (`<demand_backhaul>`) from prior deliveries, all within store receiving hours (`<time_windows>`). Mixed backhauls allow same-stop exchanges (e.g., deliver 20 crates, pick up 15 empties), but capacity must account for nested empty crates occupying less space than loaded ones.",
+        "tags": [
+            "capacity",
+            "demand_linehaul",
+            "demand_backhaul",
+            "time_windows"
+        ]
+    },
+    {
+        "title": "Pop-Up COVID Testing & Vaccine Delivery",
+        "content": "Mobile medical units visit neighborhoods (`<loc_customer>`) to both administer vaccines (delivery `<demand_linehaul>` = doses) and collect completed test kits (pickup `<demand_backhaul>`). Time windows (`<time_windows>`) align with community availability (e.g., post-work hours), and cold-chain capacity (`<capacity>`) must preserve vaccines while accommodating biohazard containers. Mixed backhauls enable efficient use of staffed vehicles (e.g., vaccinate at a school before collecting tests from a nearby nursing home).",
+        "tags": [
+            "loc_customer",
+            "demand_linehaul",
+            "demand_backhaul",
+            "time_windows",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Mobile EV Charging & Battery Swap Service",
+        "content": "A fleet of mobile charging trucks services electric vehicles (EVs) across a city. Each truck (capacity <capacity>) starts at a depot (<loc_depot>), delivers charged batteries to EVs at designated locations (<loc_customer>), and collects depleted batteries (<demand_backhaul>)\u2014all within strict time windows (<time_windows>) to avoid disrupting users' schedules. Mixed-order visits are allowed (e.g., a truck can swap batteries at a delivery hub before servicing a stranded EV).",
+        "tags": [
+            "capacity",
+            "loc_depot",
+            "loc_customer",
+            "demand_backhaul",
+            "time_windows"
+        ]
+    },
+    {
+        "title": "Disaster Relief Supply Chain with Donation Collection",
+        "content": "After a hurricane, aid trucks (capacity <capacity>) distribute emergency kits (<demand_linehaul>) to shelters (<loc_customer>) while collecting surplus donations (e.g., clothing, canned goods; <demand_backhaul>) from community centers. Time windows (<time_windows>) enforce alignment with shelter operating hours and volunteer availability. Mixed backhauls allow prioritization (e.g., deliver water to a high-need shelter before collecting donations en route).",
+        "tags": [
+            "capacity",
+            "demand_linehaul",
+            "loc_customer",
+            "demand_backhaul",
+            "time_windows"
+        ]
+    },
+    {
+        "title": "Luxury Hotel Linen & Amenity Logistics",
+        "content": "A service provider manages linen deliveries (<demand_linehaul>) and soiled laundry pickups (<demand_backhaul>) for high-end hotels (<loc_customer>). Vehicles (capacity <capacity>) must adhere to narrow time windows (<time_windows>) (e.g., during housekeeping gaps) and may interleave deliveries/pickups (e.g., drop fresh towels before collecting laundry from a neighboring hotel). Delays risk disrupting guest experiences.",
+        "tags": [
+            "demand_linehaul",
+            "demand_backhaul",
+            "loc_customer",
+            "capacity",
+            "time_windows"
+        ]
+    },
+    {
+        "title": "Urban Farming Seedling Distribution & Harvest Collection",
+        "content": "A vertical farm supplies seedlings (<demand_linehaul>) to rooftop gardens (<loc_customer>) and collects mature produce (<demand_backhaul>) for markets. Tight time windows (<time_windows>) reflect daylight hours and perishability constraints. Mixed backhauls enable efficient routes (e.g., deliver seedlings to a downtown restaurant, then collect harvested greens from a nearby grocer before returning).",
+        "tags": [
+            "demand_linehaul",
+            "loc_customer",
+            "demand_backhaul",
+            "time_windows"
+        ]
+    },
+    {
+        "title": "Film Festival Equipment Logistics with Time-Sensitive Swaps",
+        "content": "A rental company manages cameras and lighting gear for a film festival. Vehicles (capacity <capacity>) deliver equipment to venues (<demand_linehaul>) and retrieve rented items (<demand_backhaul>) between screenings, with strict time windows (<time_windows>) to avoid disrupting events. Mixed backhauls allow urgent swaps (e.g., retrieve a lens from Venue A mid-route to deliver it to Venue B for a matinee).",
+        "tags": [
+            "capacity",
+            "demand_linehaul",
+            "demand_backhaul",
+            "time_windows"
+        ]
+    },
+    {
+        "title": "Mobile Pet Grooming & Adoption Event Logistics",
+        "content": "A pet service company operates mobile grooming vans that visit neighborhoods to provide grooming services (deliveries) while also collecting surrendered pets (pickups) for adoption events. Each van has a capacity of <capacity> pets and must adhere to strict appointment windows (<time_windows>) at residential locations (<loc_customer>). Deliveries (grooming appointments) and pickups (pet collections) can occur in any order, but the van must never exceed its live animal capacity. The depot (<loc_depot>) serves as the central hub for equipment sterilization between stops.",
+        "tags": [
+            "capacity",
+            "time_windows",
+            "loc_customer",
+            "loc_depot"
+        ]
+    },
+    {
+        "title": "Industrial Parts Just-in-Time Delivery with Core Returns",
+        "content": "An automotive supplier manages same-day deliveries of custom machined parts (<demand_linehaul>) to assembly plants while collecting used \"core\" components (<demand_backhaul>) for remanufacturing. Vehicles (<capacity>) must arrive during precise production line changeover windows (<time_windows>) at each factory (<loc_customer>). The mixed nature allows urgent deliveries to bypass the usual \"deliveries-first\" rule when plants have immediate core returns available. Routes originate from a regional processing center (<loc_depot>).",
+        "tags": [
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity",
+            "time_windows",
+            "loc_customer",
+            "loc_depot"
+        ]
+    },
+    {
+        "title": "Wedding Event Supply Chain with Decor Setup/Tear-down",
+        "content": "A luxury event company coordinates simultaneous deliveries of floral arrangements and rentals (<demand_linehaul>) to wedding venues while scheduling pickups of used items (<demand_backhaul>) from previous events. Temperature-controlled trucks (<capacity>) must arrive during narrow venue access periods (<time_windows>) at scattered locations (<loc_customer>). The mixed backhaul capability allows picking up perishable flowers from morning ceremonies for afternoon reuse at new events. Operations are managed from a climate-controlled warehouse (<loc_depot>).",
+        "tags": [
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity",
+            "time_windows",
+            "loc_customer",
+            "loc_depot"
+        ]
+    },
+    {
+        "title": "Marine Research Vessel Sampling & Equipment Resupply",
+        "content": "A scientific organization deploys research boats (<capacity>) to visit ocean monitoring buoys (<loc_customer>) during optimal tidal windows (<time_windows>). Each stop involves both delivering fresh sensors (<demand_linehaul>) and retrieving water samples/data pods (<demand_backhaul>). The mixed routing is critical when urgent sample collections from failing buoys must precede scheduled deliveries to priority stations. All routes originate from a coastal base (<loc_depot>) with limited docking space.",
+        "tags": [
+            "capacity",
+            "loc_customer",
+            "time_windows",
+            "demand_linehaul",
+            "demand_backhaul",
+            "loc_depot"
+        ]
+    },
+    {
+        "title": "High-Security Cash Logistics with ATM Servicing",
+        "content": "An armored vehicle fleet (<capacity>) services bank branches (<loc_customer>) during their opening hours (<time_windows>), delivering cash (<demand_linehaul>) while collecting deposits (<demand_backhaul>). The mixed routing allows prioritizing high-risk locations regardless of delivery/pickup designation. Security protocols require precise timing to align with branch staff availability and police patrol schedules. Vehicles depart from a fortified cash center (<loc_depot>) with mandatory check-in after each stop.\n```  \n\nEach scenario emphasizes:  \n1. **Capacity challenges** - Specialized vehicle constraints (live animals, cash security, etc.)  \n2. **Mixed backhaul flexibility** - Urgent pickups/deliveries breaking traditional sequencing  \n3. **Time-critical operations** - Biological samples, wedding timelines, or security protocols  \n4. **Real-world complexity** - Incorporates industry-specific constraints beyond basic parameters  \n\nThe descriptions avoid simple retail/warehouse contexts, instead featuring niche applications that demonstrate the algorithm's versatility in constrained environments.",
+        "tags": [
+            "capacity",
+            "loc_customer",
+            "time_windows",
+            "demand_linehaul",
+            "demand_backhaul",
+            "loc_depot"
+        ]
+    },
+    {
+        "title": "Mobile Library & Donation Book Collection Service",
+        "content": "A city operates a fleet of mobile library vans that deliver reserved books to neighborhoods (<loc_customer>) while simultaneously collecting donated books for redistribution. Each van has a capacity of <capacity> books. Deliveries (<demand_linehaul>) must occur during residents' availability windows (<time_windows>), and donations (<demand_backhaul>) are collected from drop-off points with afternoon time slots. Routes must optimize both delivery/pickup sequencing and strict adherence to library operating hours at each stop.",
+        "tags": [
+            "loc_customer",
+            "capacity",
+            "demand_linehaul",
+            "time_windows",
+            "demand_backhaul"
+        ]
+    },
+    {
+        "title": "Brewery Draft System Maintenance & Keg Rotation",
+        "content": "A craft brewery services bar accounts (<loc_customer>) by delivering fresh kegs (<demand_linehaul>) and retrieving empty kegs (<demand_backhaul>) using temperature-controlled trucks (<capacity>). Service must occur during bars' pre-opening hours (<time_windows>), with strict time limits for perishable IPA deliveries. Mixed backhauls allow efficient same-stop exchanges, but routes must account for varying keg sizes and real-time inventory updates from accounts.",
+        "tags": [
+            "loc_customer",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity",
+            "time_windows"
+        ]
+    },
+    {
+        "title": "Floating Market Vendor Supply Chain",
+        "content": "In a riverine community, boats (<capacity>) depart from a central wharf (<loc_depot>) to deliver fresh produce to floating vendors (<demand_linehaul>) while collecting unsold items for discount redistribution (<demand_backhaul>). Tidal patterns create narrow time windows (<time_windows>) for safe navigation between stilt-house markets. Routes must balance morning delivery urgency with afternoon collection flexibility while respecting weight limits on narrow waterways.",
+        "tags": [
+            "capacity",
+            "loc_depot",
+            "demand_linehaul",
+            "demand_backhaul",
+            "time_windows"
+        ]
+    },
+    {
+        "title": "Film Festival Equipment Logistics with Director Swaps",
+        "content": "A media company coordinates equipment transfers between <num_customer> festival venues (<loc_customer>), delivering cameras (<demand_linehaul>) for morning shoots and retrieving them for evening edits (<demand_backhaul>). Vehicles (<capacity>) must accommodate last-minute director requests while adhering to strict time windows (<time_windows>) between screenings. Mixed backhauls enable mid-route equipment swaps when directors change locations unexpectedly.",
+        "tags": [
+            "num_customer",
+            "loc_customer",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity",
+            "time_windows"
+        ]
+    },
+    {
+        "title": "Zero-Waste Grocery Loop System",
+        "content": "A sustainable grocer operates reusable container logistics where trucks (<capacity>) deliver stocked containers (<demand_linehaul>) to households (<loc_customer>) during morning time windows (<time_windows>), then collect dirty containers (<demand_backhaul>) from previous deliveries in the afternoon. Routes must dynamically adjust to customers' alternating delivery/collection weeks while preventing container shortages at the depot.",
+        "tags": [
+            "capacity",
+            "demand_linehaul",
+            "loc_customer",
+            "time_windows",
+            "demand_backhaul"
+        ]
+    },
+    {
+        "title": "Mobile Electronics Repair & E-Waste Collection Service",
+        "content": "A tech company operates a fleet of mobile repair vans (capacity: `<capacity>`) that simultaneously deliver repaired devices to customers (`<demand_linehaul>`) and collect e-waste for recycling (`<demand_backhaul>`). Each service stop (`<locs>`) has strict appointment windows (`<time_windows>`) for device handovers, and technicians must account for variable repair verification times (`<service_time>`). Routes must optimize the mix of deliveries and pickups while avoiding capacity overflows during battery/component transports.",
+        "tags": [
+            "capacity",
+            "demand_linehaul",
+            "demand_backhaul",
+            "locs",
+            "time_windows",
+            "service_time"
+        ]
+    },
+    {
+        "title": "Floating Restaurant Supply Chain in Venice",
+        "content": "Barges (capacity: `<capacity>`) depart from a central market (`<loc_depot>`) to deliver fresh ingredients to waterside restaurants (`<demand_linehaul>`) and collect organic waste for compost (`<demand_backhaul>`). Narrow canals impose strict delivery windows (`<time_windows>`) between tourist gondola traffic peaks. Routes must sequence mixed deliveries/pickups at `<num_customer>` locations (`<locs>`) while accounting for tide-dependent unloading times (`<service_time>`).",
+        "tags": [
+            "capacity",
+            "loc_depot",
+            "demand_linehaul",
+            "demand_backhaul",
+            "time_windows",
+            "num_customer",
+            "locs",
+            "service_time"
+        ]
+    },
+    {
+        "title": "Antarctic Research Station Resupply Missions",
+        "content": "Icebreaker ships (capacity: `<capacity>`) must deliver scientific equipment to `<num_customer>` research bases (`<demand_linehaul>`) and retrieve ice core samples (`<demand_backhaul>`) during brief summer thaw periods. Each base (`<locs>`) has rigid time windows (`<time_windows>`) dictated by weather satellites, with prolonged unloading times (`<service_time>`) due to polar bear safety protocols. Routes must balance sample preservation and fuel efficiency.",
+        "tags": [
+            "capacity",
+            "num_customer",
+            "demand_linehaul",
+            "demand_backhaul",
+            "locs",
+            "time_windows",
+            "service_time"
+        ]
+    },
+    {
+        "title": "Formula 1 Pit Crew Logistics",
+        "content": "Team trucks (capacity: `<capacity>`) at `<loc_depot>` must deliver tires/parts to `<num_customer>` global race circuits (`<demand_linehaul>`) while collecting used components for refurbishment (`<demand_backhaul>`). Each circuit (`<locs>`) has practice/qualifying session windows (`<time_windows>`), and customs clearance creates variable delays (`<service_time>`). Routes must dynamically mix deliveries and collections based on real-time race schedules.",
+        "tags": [
+            "capacity",
+            "loc_depot",
+            "num_customer",
+            "demand_linehaul",
+            "demand_backhaul",
+            "locs",
+            "time_windows",
+            "service_time"
+        ]
+    },
+    {
+        "title": "Vertical Farm Harvest & Seedling Distribution",
+        "content": "Elevated delivery drones (capacity: `<capacity>`) transport harvested produce from urban skyscraper farms (`<demand_backhaul>`) to rooftop restaurants while delivering new seedling trays (`<demand_linehaul>`). Each location (`<locs>`) has strict time windows (`<time_windows>`) aligned with chef prep schedules and daylight growing cycles, with payload-sensitive flight times (`<service_time>`). Routes must prevent mid-air capacity conflicts during mixed cargo operations.",
+        "tags": [
+            "capacity",
+            "demand_backhaul",
+            "demand_linehaul",
+            "locs",
+            "time_windows",
+            "service_time"
+        ]
+    },
+    {
+        "title": "Mobile COVID-19 Testing & Vaccine Waste Collection",
+        "content": "A healthcare provider operates mobile testing units that visit neighborhoods (<loc_customer>) to administer COVID-19 tests and vaccines while simultaneously collecting biohazard waste (e.g., used syringes). Each vehicle (capacity <capacity>) departs from a central depot (<loc_depot>), must arrive at testing sites within strict time windows (<time_windows>) to align with local schedules, and must balance deliveries (vaccines/test kits: <demand_linehaul>) with pickups (waste: <demand_backhaul>). Waste collection can occur at any point in the route if capacity permits.",
+        "tags": [
+            "loc_customer",
+            "capacity",
+            "loc_depot",
+            "time_windows",
+            "demand_linehaul",
+            "demand_backhaul"
+        ]
+    },
+    {
+        "title": "Sustainable Fashion Pop-Up Inventory Rotation",
+        "content": "A clothing brand operates pop-up shops (<loc_customer>) with time-sensitive inventory swaps (<time_windows>) to match foot traffic patterns. Vehicles (capacity <capacity>) deliver new seasonal stock (<demand_linehaul>) and retrieve unsold items (<demand_backhaul>) for redistribution, with mixed-order visits allowed (e.g., deliver to Shop A \u2192 pick up from Shop B \u2192 deliver to Shop C). Depot location: <loc_depot>.",
+        "tags": [
+            "loc_customer",
+            "time_windows",
+            "capacity",
+            "demand_linehaul",
+            "demand_backhaul",
+            "loc_depot"
+        ]
+    },
+    {
+        "title": "Smart City Sensor Maintenance & Data Retrieval",
+        "content": "Municipal vehicles service IoT sensors (<loc_customer>) across the city, replacing faulty units (<demand_linehaul>) and collecting data storage modules (<demand_backhaul>) within maintenance windows (<time_windows>). Vehicles (capacity <capacity>) from <loc_depot> can freely sequence deliveries/pickups but must avoid sensor downtime by adhering to strict time constraints.",
+        "tags": [
+            "loc_customer",
+            "demand_linehaul",
+            "demand_backhaul",
+            "time_windows",
+            "capacity",
+            "loc_depot"
+        ]
+    },
+    {
+        "title": "Festival Food Truck Resupply & Compost Collection",
+        "content": "During a multi-day festival, food trucks (<loc_customer>) require just-in-time ingredient deliveries (<demand_linehaul>) and compost pickups (<demand_backhaul>) within narrow time slots (<time_windows>) between customer rushes. Vehicles (capacity <capacity>) from a central kitchen (<loc_depot>) optimize routes to handle both tasks in mixed order while avoiding peak crowd hours.",
+        "tags": [
+            "loc_customer",
+            "demand_linehaul",
+            "demand_backhaul",
+            "time_windows",
+            "capacity",
+            "loc_depot"
+        ]
+    },
+    {
+        "title": "Offshore Wind Turbine Maintenance & Part Recycling",
+        "content": "Service vessels (capacity <capacity>) depart from a coastal base (<loc_depot>) to perform time-sensitive turbine repairs (<time_windows> dictated by tidal conditions). They deliver spare parts (<demand_linehaul>) and retrieve decommissioned components (<demand_backhaul>) for recycling, with mixed-order routing required to minimize costly offshore time.",
+        "tags": [
+            "capacity",
+            "loc_depot",
+            "time_windows",
+            "demand_linehaul",
+            "demand_backhaul"
+        ]
+    },
+    {
+        "title": "Mobile COVID-19 Testing & Vaccine Waste Collection",
+        "content": "A healthcare provider operates mobile testing units that visit designated sites (<loc_customer>) to administer COVID-19 tests and vaccines within strict time windows (<time_windows>). Each unit has a limited storage capacity (<capacity>) for test kits and vaccines (deliveries, <demand_linehaul>) and must simultaneously collect biohazard waste (pickups, <demand_backhaul>) from prior stops. Routes must ensure no capacity violations while adhering to time-sensitive medical protocols.",
+        "tags": [
+            "loc_customer",
+            "time_windows",
+            "capacity",
+            "demand_linehaul",
+            "demand_backhaul"
+        ]
+    },
+    {
+        "title": "Urban Vertical Farm Harvest & Seedling Distribution",
+        "content": "An urban vertical farm uses electric vans to deliver fresh produce to restaurants (<demand_linehaul>) and collect empty hydroponic trays for reuse (<demand_backhaul>) across the city (<loc_customer>). Each van has a weight limit (<capacity>), and deliveries/pickups must align with restaurant opening hours (<time_windows>). Mixed backhauls allow trays to be collected en route to deliveries if capacity permits.",
+        "tags": [
+            "demand_linehaul",
+            "demand_backhaul",
+            "loc_customer",
+            "capacity",
+            "time_windows"
+        ]
+    },
+    {
+        "title": "Smart City IoT Sensor Maintenance & Data Retrieval",
+        "content": "A tech company services IoT sensors (air quality, traffic) at fixed locations (<loc_customer>) with maintenance time slots (<time_windows>). Vehicles carry replacement parts (<demand_linehaul>) and retrieve stored sensor data (<demand_backhaul>) within a single trip. Capacity (<capacity>) limits the combined weight of parts and data drives, and routes must prioritize sensors with urgent maintenance windows.",
+        "tags": [
+            "loc_customer",
+            "time_windows",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Luxury Hotel Linen & Amenity Logistics",
+        "content": "A central laundry facility (<loc_depot>) dispatches vans to deliver fresh linens (<demand_linehaul>) and collect used ones (<demand_backhaul>) from hotels (<loc_customer>). Each van\u2019s capacity (<capacity>) must accommodate both clean and soiled linens, and deliveries are constrained by hotels\u2019 narrow receiving hours (<time_windows>). Mixed backhauls allow pickups before deliveries if capacity allows.",
+        "tags": [
+            "loc_depot",
+            "demand_linehaul",
+            "demand_backhaul",
+            "loc_customer",
+            "capacity",
+            "time_windows"
+        ]
+    },
+    {
+        "title": "Antarctic Research Station Resupply Missions",
+        "content": "A supply ship visits remote research bases (<loc_customer>) to deliver equipment/food (<demand_linehaul>) and collect ice core samples (<demand_backhaul>) during brief weather windows (<time_windows>). The ship\u2019s hold (<capacity>) must balance outgoing and incoming cargo, and routes must account for unpredictable ice conditions delaying travel times.",
+        "tags": [
+            "loc_customer",
+            "demand_linehaul",
+            "demand_backhaul",
+            "time_windows",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Mobile COVID-19 Testing & Vaccine Waste Collection",
+        "content": "A healthcare provider operates mobile testing units that visit neighborhoods (<loc_customer>) to administer COVID-19 tests and vaccines within strict time windows (<time_windows>). Each vehicle (capacity <capacity>) delivers fresh medical supplies (<demand_linehaul>) to testing sites while simultaneously collecting biohazard waste (<demand_backhaul>) for safe disposal. Routes must ensure no vehicle exceeds capacity and all stops are serviced during their designated time slots (e.g., school testing during morning hours, elderly communities in the afternoon).",
+        "tags": [
+            "loc_customer",
+            "time_windows",
+            "capacity",
+            "demand_linehaul",
+            "demand_backhaul"
+        ]
+    },
+    {
+        "title": "Smart City IoT Sensor Maintenance & Data Retrieval",
+        "content": "A municipal team services IoT sensors (<loc_customer>) monitoring air quality, traffic, and noise across the city. Vehicles (capacity <capacity>) carry replacement parts (<demand_linehaul>) and collect full data storage units (<demand_backhaul>). Each sensor has a maintenance time window (<time_windows>) based on criticality (e.g., rush-hour traffic sensors require morning visits). Mixed backhauls allow prioritizing high-priority sensors while opportunistically retrieving data from others along the route.",
+        "tags": [
+            "loc_customer",
+            "capacity",
+            "demand_linehaul",
+            "demand_backhaul",
+            "time_windows"
+        ]
+    },
+    {
+        "title": "Antarctic Research Station Resupply Missions",
+        "content": "A supply ship stationed at <loc_depot> coordinates helicopter deliveries to remote research bases (<loc_customer>). Each helicopter (capacity <capacity>) delivers fuel and food (<demand_linehaul>) and retrieves ice core samples (<demand_backhaul>) within narrow weather-dependent time windows (<time_windows>). Mixed backhauls enable flexible routing when sudden storms disrupt schedules, ensuring no capacity violations during combined deliveries/pickups.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand_linehaul",
+            "demand_backhaul",
+            "time_windows"
+        ]
+    },
+    {
+        "title": "Luxury Hotel Linen & Amenity Logistics",
+        "content": "A boutique linen service supplies high-end hotels (<loc_customer>) with fresh towels and toiletries (<demand_linehaul>) while collecting used items for laundering (<demand_backhaul>). Vehicles (capacity <capacity>) must adhere to strict delivery windows (<time_windows>) (e.g., before 7 AM for morning turndown services) and avoid mixing clean/dirty loads. Mixed backhauls allow optimizing routes where some hotels require only deliveries while others need both services.",
+        "tags": [
+            "loc_customer",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity",
+            "time_windows"
+        ]
+    },
+    {
+        "title": "Festival Food Truck Resupply & Compost Collection",
+        "content": "During a multi-day festival, refrigerated trucks (capacity <capacity>) replenish food vendors (<loc_customer>) with ingredients (<demand_linehaul>) and collect organic waste (<demand_backhaul>) for composting. Time windows (<time_windows>) are tied to vendor operating hours (e.g., breakfast trucks serviced 5\u20137 AM, late-night vendors 10 PM\u2013midnight). Mixed backhauls enable efficient \"milk runs\" where half-empty trucks switch to waste collection mid-route.",
+        "tags": [
+            "capacity",
+            "loc_customer",
+            "demand_linehaul",
+            "demand_backhaul",
+            "time_windows"
+        ]
+    },
+    {
+        "title": "Mobile COVID-19 Testing & Vaccine Waste Collection",
+        "content": "A healthcare provider operates mobile testing units that visit designated sites (<loc_customer>) to administer COVID-19 tests and vaccines (<demand_linehaul>). Simultaneously, the units collect biohazard waste (e.g., used syringes, test kits) from prior visits (<demand_backhaul>). Each vehicle (capacity <capacity>) must adhere to strict time windows (<time_windows>) at each site due to staffing schedules and cold-chain requirements for vaccines. The mixed backhaul constraint ensures waste collection only occurs after sufficient space is freed via deliveries.",
+        "tags": [
+            "loc_customer",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity",
+            "time_windows"
+        ]
+    },
+    {
+        "title": "Smart City IoT Sensor Maintenance & Data Retrieval",
+        "content": "A municipal team services IoT sensors (air quality, traffic) across the city (<loc_customer>), delivering replacement parts (<demand_linehaul>) and retrieving full data storage units (<demand_backhaul>). Vehicles (capacity <capacity>) must service sensors during off-peak hours (<time_windows>) to minimize urban disruption. Mixed backhauls allow prioritization of critical sensor repairs before data pickups, while capacity constraints prevent overloading with bulky storage devices.",
+        "tags": [
+            "loc_customer",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity",
+            "time_windows"
+        ]
+    },
+    {
+        "title": "Antarctic Research Station Resupply Missions",
+        "content": "A supply ship visits remote Antarctic bases (<loc_customer>) to deliver food/fuel (<demand_linehaul>) and collect research samples/equipment (<demand_backhaul>) during short summer weather windows (<time_windows>). Vessels (capacity <capacity>) must dynamically reorder visits due to ice conditions, with mixed backhauls enabling sample pickups mid-route if capacity allows. Strict time windows avoid winter storms.",
+        "tags": [
+            "loc_customer",
+            "demand_linehaul",
+            "demand_backhaul",
+            "time_windows",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Luxury Hotel Linen & Amenity Logistics",
+        "content": "A service replenishes premium linens and toiletries (<demand_linehaul>) to high-end hotels (<loc_customer>) during designated 2-hour morning slots (<time_windows>), while collecting used items for laundering (<demand_backhaul>). Vehicles (capacity <capacity>) optimize routes to handle mixed backhauls\u2014e.g., delivering fresh towels before picking up dirty ones from the same hotel\u2014without exceeding linen weight limits.",
+        "tags": [
+            "demand_linehaul",
+            "loc_customer",
+            "time_windows",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Festival Food Truck Resupply & Compost Collection",
+        "content": "During a multi-day festival, trucks restock food vendors (<loc_customer>) with ingredients (<demand_linehaul>) and collect organic waste (<demand_backhaul>) for composting. Vehicles (capacity <capacity>) operate within narrow nighttime time windows (<time_windows>) when vendors close. Mixed backhauls allow waste pickups en route if space permits after deliveries, while avoiding odor cross-contamination.  \n```  \n\nEach scenario emphasizes:  \n- **Capacity (C)**: Physical limits (weight/volume) for combined deliveries/pickups.  \n- **Mixed Backhauls (MB)**: Flexible sequencing of deliveries and collections.  \n- **Time Windows (TW)**: Service constraints tied to operational or external factors.  \n\nNo open routes, strict backhaul ordering, or duration limits are included.",
+        "tags": [
+            "loc_customer",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity",
+            "time_windows"
+        ]
+    },
+    {
+        "title": "Mobile Vaccine Clinic & Used Syringe Collection",
+        "content": "*Description:*  \nA healthcare provider operates mobile vaccination units that visit schools, nursing homes, and community centers (<loc_customer>) within strict time windows (<time_windows>). Each unit delivers vaccines (<demand_linehaul>) and collects biohazard waste (<demand_backhaul>) in any order, constrained by refrigerated truck capacity (<capacity>). Service times (<service_time>) include setup/cleanup. Routes must minimize travel time while ensuring no expired vaccines or overfilled waste containers.",
+        "tags": [
+            "loc_customer",
+            "time_windows",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity",
+            "service_time"
+        ]
+    },
+    {
+        "title": "Floating Market Vendor Supply Chain in Southeast Asia",
+        "content": "*Description:*  \nBoats depart from a central river depot (<loc_depot>) to deliver fresh produce to floating market stalls (<loc_customer>) during morning trading hours (<time_windows>). Simultaneously, they collect unsold perishables (<demand_backhaul>) for composting. Boats have weight limits (<capacity>) and must navigate tidal schedules. Mixed backhauls allow efficient use of space (e.g., delivering mangoes while picking up spoiled fish).",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "time_windows",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Space Station Resupply with Scientific Sample Returns",
+        "content": "*Description:*  \nA lunar shuttle must visit multiple research outposts (<loc_customer>) during optimal orbital alignment windows (<time_windows>). It delivers equipment (<demand_linehaul>) and retrieves experiment samples (<demand_backhaul>) in flexible sequences, constrained by payload capacity (<capacity>). Strict timing avoids shadow periods where solar power is unavailable, with service times accounting for airlock cycling (<service_time>).",
+        "tags": [
+            "loc_customer",
+            "time_windows",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity",
+            "service_time"
+        ]
+    },
+    {
+        "title": "High-Fashion Atelier Courier Service",
+        "content": "*Description:*  \nLuxury brands coordinate hand-delivery of custom garments (<demand_linehaul>) to VIP clients (<loc_customer>) during fitting appointments (<time_windows>), while collecting alterations (<demand_backhaul>). Temperature-controlled vans (<capacity>) follow mixed routes to accommodate last-minute changes. Time windows tighten during Fashion Week, with service times (<service_time>) including quality checks.",
+        "tags": [
+            "demand_linehaul",
+            "loc_customer",
+            "time_windows",
+            "demand_backhaul",
+            "capacity",
+            "service_time"
+        ]
+    },
+    {
+        "title": "Coral Reef Restoration Logistics",
+        "content": "*Description:*  \nMarine conservation teams deploy from island bases (<loc_depot>) to deliver lab-grown coral fragments (<demand_linehaul>) to reef sites (<loc_customer>) during low-tide windows (<time_windows>). Simultaneously, they retrieve damaged specimens (<demand_backhaul>) for rehabilitation. Boat capacity (<capacity>) considers both weight and oxygen tank limits, with service times (<service_time>) for diver safety protocols.",
+        "tags": [
+            "loc_depot",
+            "demand_linehaul",
+            "loc_customer",
+            "time_windows",
+            "demand_backhaul",
+            "capacity",
+            "service_time"
+        ]
+    },
+    {
+        "title": "Mobile EV Battery Swap & Degraded Cell Collection",
+        "content": "A fleet of service vans (<capacity> battery units) operates across a city to replace depleted EV batteries at charging stations (<loc_customer>) while collecting degraded cells for recycling. Each station has a time-sensitive demand (<demand_linehaul> for fresh batteries, <demand_backhaul> for old ones) and strict operating windows (<time_windows>). Routes must balance immediate swap requests with scheduled recycling pickups, ensuring no van exceeds capacity during mixed-load operations.",
+        "tags": [
+            "capacity",
+            "loc_customer",
+            "demand_linehaul",
+            "demand_backhaul",
+            "time_windows"
+        ]
+    },
+    {
+        "title": "Biotech Lab Courier Network for Specimen Transport",
+        "content": "Specialized refrigerated trucks (<capacity> liters) distribute sterile containers to hospitals (<loc_customer>) and collect time-sensitive biological samples (<demand_backhaul>) within narrow viability windows (<time_windows>). Priority deliveries (e.g., organ transplant materials) must coexist with urgent sample retrievals, requiring dynamic load balancing to prevent cross-contamination while meeting <service_time> constraints at each node.",
+        "tags": [
+            "capacity",
+            "loc_customer",
+            "demand_backhaul",
+            "time_windows",
+            "service_time"
+        ]
+    },
+    {
+        "title": "Floating Hydroponic Farm Harvest & Nutrient Resupply",
+        "content": "Boats (<capacity> kg) service aquatic farms in a canal network (<loc_customer>), collecting ripe produce (<demand_backhaul>) during morning harvest windows and delivering liquid nutrients (<demand_linehaul>) before afternoon feeding times (<time_windows>). Tidal currents impose variable <speed> constraints, and mixed cargoes (perishables + chemicals) require careful capacity partitioning.",
+        "tags": [
+            "capacity",
+            "loc_customer",
+            "demand_backhaul",
+            "demand_linehaul",
+            "time_windows",
+            "speed"
+        ]
+    },
+    {
+        "title": "Aerospace Tooling Logistics for Assembly Lines",
+        "content": "Automated guided vehicles (<capacity> tool sets) shuttle between aircraft manufacturing stations (<loc_customer>), delivering calibrated instruments (<demand_linehaul>) and retrieving worn tools (<demand_backhaul>) within synchronized production cycle windows (<time_windows>). Strict FIFO violation penalties apply if tool exchanges disrupt <service_time> thresholds at robotic workcells.",
+        "tags": [
+            "capacity",
+            "loc_customer",
+            "demand_linehaul",
+            "demand_backhaul",
+            "time_windows",
+            "service_time"
+        ]
+    },
+    {
+        "title": "Dark Store Grocery Fulfillment with Expired Food Recovery",
+        "content": "Electric cargo bikes (<capacity> cubic meters) execute dual missions: delivering online grocery orders (<demand_linehaul>) to residential hubs and collecting near-expiry items (<demand_backhaul>) from micro-fulfillment centers (<loc_customer>). All operations must align with 15-minute delivery promise windows (<time_windows>) while avoiding mixed-load temperature conflicts (e.g., ice cream with hot prepared meals).",
+        "tags": [
+            "capacity",
+            "demand_linehaul",
+            "demand_backhaul",
+            "loc_customer",
+            "time_windows"
+        ]
+    },
+    {
+        "title": "Mobile COVID-19 Testing & Vaccine Waste Collection",
+        "content": "A fleet of mobile testing units operates across a city, providing COVID-19 tests and vaccinations at scheduled stops (<loc_customer>). Each stop has a strict time window (<time_windows>) for service due to appointment schedules. Vehicles start and end at a central depot (<loc_depot>) with a limited capacity (<capacity>) for medical supplies (deliveries) and biohazard waste (pickups). The challenge is to optimize routes while ensuring:  \n- No vehicle exceeds capacity (combined supplies and waste).  \n- All stops are serviced within their time windows.  \n- Waste is collected only after supplies are delivered (mixed backhaul logic).  \n```\n\n```\n**Scenario 2:** Smart City IoT Sensor Maintenance & Data Retrieval  \nA municipality deploys trucks to maintain IoT sensors (e.g., air quality monitors) across urban areas. Each sensor location (<loc_customer>) requires:  \n- Delivery of replacement parts (<demand_linehaul>).  \n- Collection of stored data (<demand_backhaul>).  \n- Service within maintenance time windows (<time_windows>) to avoid disruptions.  \nTrucks (<capacity>) must balance part deliveries and data pickups in any order while respecting sensor-specific time constraints and vehicle capacity.  \n```\n\n```\n**Scenario 3:** Antarctic Research Station Resupply Missions  \nA supply ship stationed at a coastal depot (<loc_depot>) dispatches helicopters (<capacity>) to deliver equipment to remote research stations (<loc_customer>) and retrieve ice core samples. Missions must:  \n- Adhere to narrow time windows (<time_windows>) due to extreme weather.  \n- Handle mixed loads (deliveries and pickups in any order).  \n- Account for weight limits (sample boxes reduce available capacity for deliveries).  \n```\n\n```\n**Scenario 4:** Luxury Hotel Linen & Amenity Logistics  \nA high-end hotel chain uses vans (<capacity>) to:  \n- Deliver fresh linens and toiletries to properties (<loc_customer>).  \n- Collect used items for laundering (<demand_backhaul>).  \nTime windows (<time_windows>) are strict (e.g., before guest check-ins). Vehicles must dynamically balance deliveries and pickups without exceeding capacity or missing time slots.  \n```\n\n```\n**Scenario 5:** Festival Food Truck Resupply & Compost Collection  \nDuring a multi-day festival, trucks (<capacity>) restock food vendors (<loc_customer>) with ingredients (<demand_linehaul>) and collect organic waste (<demand_backhaul>). Challenges include:  \n- Tight time windows (<time_windows>) between peak hours.  \n- Mixed-order pickups/deliveries (e.g., waste collected en route to next delivery).  \n- Capacity management (waste volume reduces available space for deliveries).  \n``` \n\nThese scenarios emphasize **mixed backhauls** (any order), **time windows**, and **capacity constraints** while avoiding open routes, strict backhaul sequencing, or duration limits. Each integrates unique real-world complexities like perishable goods, hazardous materials, or remote logistics.",
+        "tags": [
+            "loc_customer",
+            "time_windows",
+            "loc_depot",
+            "capacity",
+            "loc_customer",
+            "demand_linehaul",
+            "demand_backhaul",
+            "time_windows",
+            "capacity",
+            "loc_depot",
+            "capacity",
+            "loc_customer",
+            "time_windows",
+            "capacity",
+            "loc_customer",
+            "demand_backhaul",
+            "time_windows",
+            "capacity",
+            "loc_customer",
+            "demand_linehaul",
+            "demand_backhaul",
+            "time_windows"
+        ]
+    },
+    {
+        "title": "Mobile EV Charging & Battery Swap Service",
+        "content": "A fleet of mobile charging trucks operates in a metropolitan area, providing on-demand charging or battery swaps for electric vehicles (EVs). Each truck (capacity <capacity>) starts at a depot (<loc_depot>), delivers charged batteries to EV owners (<demand_linehaul>), and collects depleted batteries (<demand_backhaul>)\u2014all within strict customer time windows (<time_windows>). The mixed backhaul constraint ensures trucks never run out of charged batteries mid-route, while time windows reflect appointment-based service slots.",
+        "tags": [
+            "capacity",
+            "loc_depot",
+            "demand_linehaul",
+            "demand_backhaul",
+            "time_windows"
+        ]
+    },
+    {
+        "title": "Coral Reef Restoration Logistics",
+        "content": "A marine conservation team delivers lab-grown coral fragments to reef restoration sites (<loc_customer>) while collecting damaged coral for research (<demand_backhaul>). Trucks (capacity <capacity>) must adhere to tidal time windows (<time_windows>) for safe diver access. Mixed backhauls allow opportunistic sample collection during deliveries, optimizing limited boat capacity across scattered island locations.",
+        "tags": [
+            "loc_customer",
+            "demand_backhaul",
+            "capacity",
+            "time_windows"
+        ]
+    },
+    {
+        "title": "Aerospace Tooling Logistics for Assembly Lines",
+        "content": "Aircraft manufacturers shuttle specialized tools between hangars (<loc_customer>) for time-critical assembly phases. Each vehicle (capacity <capacity>) delivers tools (<demand_linehaul>) and retrieves unused ones (<demand_backhaul>) under strict shift-based time windows (<time_windows>). Mixed sequencing is essential as tools are needed/returned at overlapping intervals across parallel production lines.",
+        "tags": [
+            "loc_customer",
+            "capacity",
+            "demand_linehaul",
+            "demand_backhaul",
+            "time_windows"
+        ]
+    },
+    {
+        "title": "Dark Store Grocery Fulfillment with Expired Food Recovery",
+        "content": "Automated micro-fulfillment centers (<loc_customer>) receive perishable restocks (<demand_linehaul>) while returning near-expiry items (<demand_backhaul>) via shared refrigerated trucks (capacity <capacity>). Tight 2-hour delivery windows (<time_windows>) align with robotic picking schedules, and mixed backhauls prevent wasted trips by combining inbound/outbound flows.",
+        "tags": [
+            "loc_customer",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity",
+            "time_windows"
+        ]
+    },
+    {
+        "title": "Floating Hydroponic Farm Harvest & Nutrient Resupply",
+        "content": "Service boats navigate urban canals to harvest mature crops from floating farms (<loc_customer>) and deliver liquid nutrients (<demand_linehaul>). Time windows (<time_windows>) coincide with daylight hours and tidal currents, while mixed backhauls balance harvest weight (<demand_backhaul>) against nutrient tank capacity (<capacity>) during each stop.",
+        "tags": [
+            "loc_customer",
+            "demand_linehaul",
+            "time_windows",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Mobile Artisanal Coffee Service & Used Grounds Recycling",
+        "content": "A specialty coffee company operates mobile barista trucks that deliver fresh coffee beans to boutique cafes (<demand_linehaul>) while collecting used coffee grounds (<demand_backhaul>) for composting. Each electric van (capacity <capacity>) must visit <num_customer> locations (<loc_customer>) during strict morning hours (<time_windows>) when cafes are prepping for opening. The mixed-order routing must account for:  \n- Bean deliveries before cafes open (TW)  \n- Grounds collection after peak service hours (TW)  \n- Van weight limits when carrying both full bean sacks and wet grounds (C)  \n- Flexible pickup/delivery sequencing to avoid congestion (MB)",
+        "tags": [
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity",
+            "num_customer",
+            "loc_customer",
+            "time_windows"
+        ]
+    },
+    {
+        "title": "Floating Bookstore & Library Returns in Canal Cities",
+        "content": "In Venice-style waterway cities, book barges simultaneously deliver new inventory to waterside shops (<demand_linehaul>) and retrieve overdue rentals (<demand_backhaul>) using narrow boats (capacity <capacity>). Each stop (<loc_customer>) has:  \n- Tight 15-minute docking windows due to tidal patterns (TW)  \n- Space constraints requiring precise cargo balancing (C)  \n- Mixed-order visits where some shops need both delivery and pickup (MB)  \nRoutes must synchronize with lock schedules and avoid tourist traffic peaks.",
+        "tags": [
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity",
+            "loc_customer"
+        ]
+    },
+    {
+        "title": "High-Altitude Glacial Research Supply Chain",
+        "content": "Scientists at remote mountain stations (<loc_customer>) require weekly deliveries of liquid nitrogen tanks (<demand_linehaul>) and simultaneous retrieval of ice core samples (<demand_backhaul>) via helicopter (capacity <capacity>). Challenges include:  \n- 30-minute landing windows dictated by avalanche risk (TW)  \n- Weight limits that change with altitude (C)  \n- Mixed-load sequencing to prevent sample thawing (MB)  \nRoutes must account for variable payload effects on fuel consumption.",
+        "tags": [
+            "loc_customer",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Luxury Watch Showroom Appointments & Servicing",
+        "content": "A Swiss watchmaker schedules home visits (<loc_customer>) for high-net-worth clients using armored vans (capacity <capacity>). Each route combines:  \n- Delivery of new timepieces (<demand_linehaul>) during 1-hour appointment slots (TW)  \n- Collection of watches needing maintenance (<demand_backhaul>)  \n- Dynamic sequencing where some clients require both services (MB)  \nSecurity protocols require never exceeding cargo value limits (C) mid-route.",
+        "tags": [
+            "loc_customer",
+            "capacity",
+            "demand_linehaul",
+            "demand_backhaul"
+        ]
+    },
+    {
+        "title": "Coral Reef Restoration Dives & Debris Collection",
+        "content": "Marine conservation teams use dive boats (capacity <capacity>) to:  \n- Deliver coral fragments to restoration sites (<demand_linehaul>) during slack tides (TW)  \n- Retrieve ghost fishing nets (<demand_backhaul>)  \n- Handle mixed sequences where some sites need both delivery and cleanup (MB)  \nRoutes must respect:  \n- 45-minute dive windows for safe decompression (TW)  \n- Buoyancy limits when carrying both heavy fragments and bulky nets (C)  \n- Current patterns affecting travel time between sites",
+        "tags": [
+            "capacity",
+            "demand_linehaul",
+            "demand_backhaul"
+        ]
+    },
+    {
+        "title": "Mobile Museum Exhibit Logistics & Artifact Returns",
+        "content": "A traveling museum exhibit visits multiple cities, delivering fragile artifacts to galleries (<demand_linehaul>) while simultaneously collecting loaned items (<demand_backhaul>) from previous locations. Each climate-controlled truck (<capacity>) must adhere to strict time windows (<time_windows>) for installation appointments and avoid overnight parking in high-risk areas. Mixed backhauls allow efficient routing between galleries with varying return schedules.",
+        "tags": [
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity",
+            "time_windows"
+        ]
+    },
+    {
+        "title": "Gourmet Food Truck Festival Resupply & Waste Recovery",
+        "content": "During a multi-day festival, vendors require just-in-time deliveries of premium ingredients (<demand_linehaul>) while returning compostable waste (<demand_backhaul>) to centralized processing facilities. Refrigerated vehicles (<capacity>) navigate urban traffic between 4am-8am (<time_windows>) before crowds arrive, optimizing routes that combine fresh deliveries with waste pickups at participating food stalls.",
+        "tags": [
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity",
+            "time_windows"
+        ]
+    },
+    {
+        "title": "Semiconductor Fab Cleanroom Supply Chain",
+        "content": "Specialized carriers transport wafer cassettes (<demand_linehaul>) to chip fabrication plants and retrieve empty containers (<demand_backhaul>) under strict contamination protocols. Vehicles (<capacity>) must synchronize with 24/7 production cycles, entering cleanroom docks during precisely scheduled maintenance windows (<time_windows>). Mixed routing accommodates urgent cassette deliveries alongside planned container retrievals.",
+        "tags": [
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity",
+            "time_windows"
+        ]
+    },
+    {
+        "title": "Live Broadcast Sports Equipment Rotation",
+        "content": "Broadcast networks deploy mobile production units (<capacity>) to stadiums, delivering camera gear (<demand_linehaul>) for morning setup while collecting equipment (<demand_backhaul>) from previous night games. Tight pre-game time windows (<time_windows>) require mixed routing that prioritizes critical deliveries but allows opportunistic pickups when capacity permits.",
+        "tags": [
+            "capacity",
+            "demand_linehaul",
+            "demand_backhaul",
+            "time_windows"
+        ]
+    },
+    {
+        "title": "Floating Plastic Waste Harvesting & Recycling Bin Distribution",
+        "content": "Ecological vessels (<capacity>) patrol waterways collecting plastic waste (<demand_backhaul>) from sensor-equipped traps while distributing empty collection bins (<demand_linehaul>) to marina partners. Operations are constrained by tidal access windows (<time_windows>) and require dynamic routing that interleaves trash pickups with bin drop-offs based on real-time capacity.  \n```  \n\nThese scenarios emphasize:  \n- **Temporal precision**: Alignment with operational windows (e.g., tidal cycles, broadcast schedules)  \n- **Bidirectional flows**: Seamless integration of forward/reverse logistics (e.g., artifacts & waste)  \n- **Specialized capacity**: Unique vehicle constraints (cleanroom compliance, refrigeration)  \n- **Sector diversity**: Applications in culture, sustainability, tech, and media industries  \n\nAll scenarios exclude open routes, pure backhaul sequencing, and duration limits per your specifications.",
+        "tags": [
+            "capacity",
+            "demand_backhaul",
+            "demand_linehaul",
+            "time_windows"
+        ]
+    },
+    {
+        "title": "Mobile COVID-19 Testing & Vaccine Waste Collection",
+        "content": "A fleet of mobile clinics operates across a metropolitan area, providing COVID-19 testing and vaccinations at scheduled stops (<loc_customer>). Each clinic vehicle has a limited capacity (<capacity>) for test kits, vaccines, and biohazard containers. Time windows (<time_windows>) are strict due to appointment schedules. After administering tests/vaccines, the same vehicles collect used syringes and samples (mixed backhaul <demand_backhaul>) for safe disposal. Routes must ensure no vehicle exceeds capacity while adhering to health facility schedules.",
+        "tags": [
+            "loc_customer",
+            "capacity",
+            "time_windows",
+            "demand_backhaul"
+        ]
+    },
+    {
+        "title": "Coral Reef Restoration Dives & Debris Collection",
+        "content": "Marine conservation teams deploy from a central harbor (<loc_depot>) to multiple reef sites (<loc_customer>) with time-sensitive diving windows (<time_windows> dictated by tides). Each boat carries restoration materials (<demand_linehaul>) and collects marine debris (<demand_backhaul>), with weight limits (<capacity>) to ensure safety. The mixed sequence of delivering coral fragments and retrieving trash must account for buoyancy constraints and underwater work durations (<service_time>).",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "time_windows",
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity",
+            "service_time"
+        ]
+    },
+    {
+        "title": "Luxury Watch Showroom Appointments & Servicing",
+        "content": "A high-end watchmaker services clients across a city with in-home appointments. Vehicles transport new watches (<demand_linehaul>) and collect timepieces for servicing (<demand_backhaul>), with strict 1-hour time windows (<time_windows>) for each VIP client. Each armored van has limited secure storage (<capacity>). Routes must interleave deliveries and pickups while accommodating clients' availability and real-time security escorts.",
+        "tags": [
+            "demand_linehaul",
+            "demand_backhaul",
+            "time_windows",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Floating Plastic Waste Harvesting & Recycling Bin Distribution",
+        "content": "Environmental teams navigate waterways in electric barges (<capacity>), distributing empty recycling bins to riverside communities (<demand_linehaul>) and collecting plastic waste (<demand_backhaul>) from floating traps. Time windows (<time_windows>) align with tidal currents and community access hours. The mixed operation requires careful load balancing to prevent capsizing when switching between light bin deliveries and heavy waste pickups.",
+        "tags": [
+            "capacity",
+            "demand_linehaul",
+            "demand_backhaul",
+            "time_windows"
+        ]
+    },
+    {
+        "title": "Semiconductor Fab Cleanroom Supply Chain",
+        "content": "Automated guided vehicles (AGVs) transport wafer cassettes (<demand_linehaul>) to production tools and retrieve processed wafers (<demand_backhaul>) within a semiconductor factory. Each AGV has a contamination-controlled payload limit (<capacity>). Strict time windows (<time_windows>) prevent production tool idle time, with service durations (<service_time>) varying by process step. Routes must dynamically alternate deliveries and pickups to maintain just-in-time manufacturing flow.\n```  \n\nEach scenario emphasizes:  \n- **Capacity challenges**: Physical/regulatory load limits  \n- **Mixed backhauls**: Seamless integration of delivery/pickup in any order  \n- **Time windows**: Operational, environmental, or customer-driven scheduling constraints  \n- **Real-world nuance**: Industry-specific constraints (e.g., buoyancy, contamination control) not present in generic examples",
+        "tags": [
+            "demand_linehaul",
+            "demand_backhaul",
+            "capacity",
+            "time_windows",
+            "service_time"
+        ]
+    }
+]

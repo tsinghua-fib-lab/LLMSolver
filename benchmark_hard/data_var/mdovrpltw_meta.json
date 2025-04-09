@@ -1,0 +1,1143 @@
+[
+    {
+        "title": "Catering Services for Multiple Events with Time-Sensitive Deliveries",
+        "content": "Catering companies operate from several regional kitchens (`<loc_depot>`) to deliver meals to event venues (`<loc_customer>`). Each truck can carry up to `<capacity>` kilograms of food. Events have strict start times requiring deliveries to arrive within their time windows (`<time_windows>`). Routes must avoid exceeding a `<time_limit>` to ensure food freshness and comply with health regulations. Trucks need not return to depots after their final drop-off, but must adhere to service times (`<service_time>`) for unloading. The goal is to minimize total travel distance while balancing workloads across depots and meeting all constraints.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "time_windows",
+            "time_limit",
+            "service_time"
+        ]
+    },
+    {
+        "title": "Solar Panel Installation with Weather and Sunset Constraints",
+        "content": "Solar installation firms use `<loc_depot>` depots to dispatch crews to residential rooftops (`<loc_customer>`). Each truck carries panels up to `<capacity>` kg. Installations must occur before `<time_windows_close>` (weather forecasts) and finish by sunset (`<time_limit>`). Teams cannot return to depots post-installation, so routes must end at the last site. Service times (`<service_time>`) include panel setup and safety checks. The objective is to optimize route distances while ensuring timely completion of installations across multiple regions.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "time_windows_close",
+            "time_limit",
+            "service_time"
+        ]
+    },
+    {
+        "title": "Mobile Healthcare Clinics for Home Visits with Appointment Slots",
+        "content": "A network of clinics (`<loc_depot>`) deploys medical vans to conduct home visits for patients (`<loc_customer>`). Each van\u2019s storage holds `<capacity>` units of medical equipment. Appointments require `<time_windows>` (patient availability), and service durations (`<service_time>`) include consultations. Vans must complete all visits within an 8-hour workday (`<time_limit>`) without returning to base. Routes must minimize travel distance while prioritizing high-priority cases and balancing clinic workloads.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "time_windows",
+            "service_time",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "High-Tech Equipment Delivery to Data Centers with Precision Timing",
+        "content": "A tech firm with `<loc_depot>` warehouses delivers servers (`<demand>` units) to data centers (`<loc_customer>`). Trucks have `<capacity>` storage limits and must arrive within `<time_windows>` (data center maintenance windows). Delivery times must not exceed `<time_limit>` to prevent overheating during transit. Routes end at the final destination, and service times (`<service_time>`) account for installation coordination. The goal is to minimize total mileage while synchronizing with data center schedules across multiple regions.",
+        "tags": [
+            "loc_depot",
+            "demand",
+            "loc_customer",
+            "capacity",
+            "time_windows",
+            "time_limit",
+            "service_time"
+        ]
+    },
+    {
+        "title": "Urban Farm Compost Delivery with Environmental Compliance",
+        "content": "A sustainability company operates `<loc_depot>` depots to supply compost (`<demand>` kg) to urban farms (`<loc_customer>`). Trucks cannot exceed `<capacity>` and must deliver within `<time_windows>` (farm staff availability). Routes must conclude at the last farm and stay under a `<time_limit>` to prevent compost degradation. Service times (`<service_time>`) include unloading and coordination. The aim is to reduce emissions by optimizing paths while meeting environmental and operational standards.",
+        "tags": [
+            "loc_depot",
+            "demand",
+            "loc_customer",
+            "capacity",
+            "time_windows",
+            "time_limit",
+            "service_time"
+        ]
+    },
+    {
+        "title": "Blood Bank Distribution Network",
+        "content": "A network of regional blood banks (`<loc_depot>`) must deliver critical blood supplies to hospitals (`<loc_customer>`), each requiring specific blood types and quantities (`<demand>`). Vehicles have a `<capacity>` unit limit to prevent overloading. Deliveries must arrive within strict time windows (`<time_windows>`) to ensure viability, as blood degrades over time. Routes must not exceed a `<time_limit>` duration to avoid delays, and trucks are not required to return to depots after completing their final delivery. The goal is to coordinate departures from multiple depots to meet urgent medical needs while optimizing fuel and time efficiency.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand",
+            "capacity",
+            "time_windows",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Event Security Deployment Scheduling",
+        "content": "Security firms operating from `<loc_depot>` regional offices must deploy guards to venues (`<loc_customer>`) for high-profile events. Each vehicle carries a maximum of `<capacity>` personnel and equipment. Guards must arrive within designated time windows (`<time_windows>`) to set up before events begin. Routes must adhere to a `<time_limit>` to ensure staff can work full shifts without exhaustion. Vehicles end their routes at the final venue, freeing drivers to assist on-site. The challenge is balancing depot assignments, vehicle loads, and timing to secure all locations efficiently.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "time_windows",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Rural Internet Installation Logistics",
+        "content": "A telecom company uses `<loc_depot>` regional warehouses to dispatch technicians to remote areas (`<loc_customer>`). Each van carries `<capacity>` installation kits (modems, cables) for households requiring service (`<demand>`). Technicians must arrive during daytime work hours (`<time_windows>`), and routes must finish within `<time_limit>` hours to avoid overtime costs. Vehicles terminate at the last installation site, allowing crews to return via alternative routes. The goal is to maximize coverage while respecting equipment limits and technician availability.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand",
+            "time_windows",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Disaster Relief Meal Deliveries",
+        "content": "During crises, aid organizations coordinate `<loc_depot>` distribution hubs to supply `<loc_customer>` shelters with pre-packaged meals (`<demand>`). Trucks (`<capacity>` ton capacity) must deliver perishable food within `<time_windows>` to ensure meals are served before spoilage. Routes must not exceed `<time_limit>` travel durations to prioritize urgent deliveries. Vehicles conclude at the final shelter, where drivers assist in meal distribution. The focus is on rapid, equitable resource allocation across multiple depots.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand",
+            "capacity",
+            "time_windows",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Medical Equipment Rental Dispatch",
+        "content": "A medical equipment rental firm with `<loc_depot>` warehouses serves clinics (`<loc_customer>`) needing respirators, wheelchairs, or imaging machines (`<demand>`). Delivery trucks (`<capacity>` kg limit) must arrive during clinic operating hours (`<time_windows>`) and complete routes within `<time_limit>` hours to avoid delays. Routes end at the final customer site, streamlining driver workflows. The company aims to minimize travel costs while ensuring all equipment arrives safely and on time.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand",
+            "capacity",
+            "time_windows",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Flower Delivery Network with Perishable Constraints",
+        "content": "A nationwide florist operates from multiple regional depots (`<loc_depot>`) to deliver fresh bouquets to flower shops and events (`<loc_customer>`). Each delivery van has a `<capacity>` cubic meter limit to preserve freshness.\u82b1\u5e97\u9700\u8981\u5728\u6307\u5b9a\u65f6\u95f4\u7a97\u53e3\uff08\u65f6\u95f4\u7a97\u53e3\uff09\u5185\u4ea4\u4ed8\uff0c\u4ee5\u786e\u4fdd\u9c9c\u82b1\u7684\u65b0\u9c9c\u5ea6\u3002Each bouquet order has a `<demand>` volume and must be delivered by a specified time window `<time_window>` to avoid wilting. Drivers must complete all deliveries within an 8-hour shift (`<duration_limit>`) without returning to the depot, optimizing routes to minimize travel while respecting floral freshness deadlines.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand",
+            "time_window",
+            "duration_limit"
+        ]
+    },
+    {
+        "title": "Construction Material Logistics for Urban Renovations",
+        "content": "A construction firm uses multiple material depots (`<loc_depot>`) to supply `<num_customer>` renovation sites (`<loc_customer>`). Each truck carries `<capacity>` tons of materials (e.g., steel beams, tiles) and must adhere to strict site access windows `<time_window>` (e.g., 9 AM\u20133 PM for crane availability). Routes are open-ended, ending at the final site to avoid idle return trips, while ensuring no vehicle exceeds a 6-hour working window (`<duration_limit>`). The goal is to coordinate deliveries across depots to meet construction timelines efficiently.",
+        "tags": [
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "capacity",
+            "time_window",
+            "duration_limit"
+        ]
+    },
+    {
+        "title": "Airport Ground Transport for International Passengers",
+        "content": "An airport ground service manages multiple shuttle depots (`<loc_depot>`) at terminal hubs to transport arriving passengers to hotels (`<loc_customer>`). Each shuttle has `<capacity>` seats and must pick up passengers only during their flight\u2019s arrival window `<time_window>`. Drivers cannot exceed an 8-hour shift (`<duration_limit>`) and end routes at the final destination (hotels), avoiding depot returns. Routes must balance passenger pickup timing with minimal detours to reduce operational costs.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "time_window",
+            "duration_limit"
+        ]
+    },
+    {
+        "title": "Grocery Store Restocking Across Metropolitan Areas",
+        "content": "A grocery chain uses distributed distribution centers (`<loc_depot>`) to restock `<num_customer>` stores (`<loc_customer>`) with perishables like dairy and produce. Each refrigerated truck holds `<capacity>` pallets and must deliver before store closing hours (`<time_window>`). Routes are designed to terminate at the final store (open-ended) to save fuel, while ensuring no driver works beyond a 10-hour daily limit (`<duration_limit>`). The challenge is to align depot assignments with store schedules and minimize refrigeration downtime.",
+        "tags": [
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "capacity",
+            "time_window",
+            "duration_limit"
+        ]
+    },
+    {
+        "title": "Event Staff Transportation for Multi-Site Conventions",
+        "content": "A conference organizer coordinates staff transport from multiple event venues (`<loc_depot>`) to `<num_customer>` satellite locations (`<loc_customer>`). Each shuttle bus carries `<capacity>` employees and must arrive precisely during staff shift start windows (`<time_window>`). Routes are planned to finish at the final venue (no return to depots) within a 4-hour timeframe (`<duration_limit>`), avoiding overtime costs. The solution must balance depot workload and staff punctuality across concurrent events.",
+        "tags": [
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "capacity",
+            "time_window",
+            "duration_limit"
+        ]
+    },
+    {
+        "title": "Tech Support Field Service with Time-Sensitive Visits and Regional Depots",
+        "content": "A nationwide IT company operates from multiple regional service centers (<loc_depot>) to deploy technicians to resolve critical equipment failures at client sites (<loc_customer>). Each service van carries a limited toolkit capacity (<capacity>) for different repair scenarios. Technicians must arrive within strict time windows (<time_windows>) to minimize downtime, while adhering to an 8-hour workday limit (<time_limit>). Routes are open-ended, allowing teams to end their shift at their final client site instead of returning to base. The goal is to balance workload across depots, respect client schedules, and prevent overloading trucks with excessive tool requirements.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "time_windows",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Seasonal Festival Food Truck Logistics with Weather and Setup Windows",
+        "content": "A food truck network uses seasonal micro-depots (<loc_depot>) to deliver fresh ingredients to concession stands at scattered outdoor festivals (<loc_customer>). Each truck has a refrigerated capacity (<capacity>) for perishable supplies. Festivals impose strict setup windows (<time_windows>) before crowds arrive, while trucks must complete deliveries within a 6-hour daylight window (<time_limit>) to avoid heat exposure. Routes are designed as one-way paths ending at the final festival site, ensuring no return trips waste fuel or spoil perishables.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "time_windows",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Urban Package Delivery with Micro-Hubs and Rush Hour Constraints",
+        "content": "A last-mile delivery startup operates from decentralized micro-hubs (<loc_depot>) in a megacity to serve high-density residential zones (<loc_customer>). Electric delivery vans (<capacity>) must deliver parcels during early morning or late evening time windows (<time_windows>) to avoid traffic congestion. Drivers are restricted to 6-hour shifts (<time_limit>), and routes terminate at their last stop to maximize daytime productivity. The challenge is to coordinate depot assignments, respect tight delivery windows, and prevent overloading vans with oversized packages.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "time_windows",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Renewable Energy Equipment Installation with Weather and Grid Connection Windows",
+        "content": "A solar energy firm coordinates teams from regional warehouses (<loc_depot>) to install rooftop panels at client sites (<loc_customer>). Each truck carries a limited capacity (<capacity>) of solar panels and mounting hardware. Installations must occur during cloud-free windows (<time_windows>) and be completed within a 10-hour workday (<time_limit>). Routes end at the final site to allow technicians to stay for grid connection inspections. The problem involves balancing depot resource allocation and ensuring no truck exceeds its payload while meeting climate-sensitive deadlines.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "time_windows",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Livestock Transport Between Regional Farms and Auction Markets",
+        "content": "A livestock transport company operates from regional farming hubs (<loc_depot>) to deliver cattle to auction markets (<loc_customer>). Trucks have strict weight capacities (<capacity>) to comply with animal welfare regulations. Deliveries must occur during early morning or late afternoon (<time_windows>) to avoid heat stress, and drivers cannot exceed 12-hour driving limits (<time_limit>). Routes conclude at the market, eliminating return trips to depots. The challenge is to coordinate multi-depot operations, respect animal welfare constraints, and optimize routes without overloading trailers.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "time_windows",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Regional Waste Collection with Time-Sensitive Pickup Windows",
+        "content": "A municipal waste management company operates from multiple depots (<loc_depot>) to collect trash from residential and commercial sites (<loc_customer>). Each collection point has a specific time window (<time_windows>) when staff are present to assist. Garbage trucks (<capacity> ton capacity) must adhere to strict service times (<service_time>) and cannot exceed their load limits. Additionally, drivers are limited to an 8-hour shift (<time_limit>), after which they must stop work. Routes must end at the last collection point without returning to depots, ensuring all pickups occur within their scheduled windows while minimizing total travel distance.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "time_windows",
+            "capacity",
+            "service_time",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "E-commerce Returns Shuttle Network with Regional Hubs",
+        "content": "An online retailer uses regional distribution centers (<loc_depot>) to collect returned items from customers (<loc_customer>). Each customer specifies a preferred pickup window (<time_windows>) and the return package's weight (<demand>). Shuttle vans (<capacity> kg capacity) must visit addresses in optimal sequences, respecting time windows and not overloading. Drivers have a maximum working duration of <time_limit> hours before needing rest. Routes conclude at the final pickup location, avoiding unnecessary depot returns, while ensuring all returns are collected efficiently.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "time_windows",
+            "demand",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Agricultural Pesticide Delivery with Application Deadlines",
+        "content": "Agricultural suppliers operate from multiple regional warehouses (<loc_depot>) to deliver pesticides to farms (<loc_customer>). Each farm requires a specific pesticide quantity (<demand>) and has a strict application window (<time_windows>) to coincide with crop cycles. Delivery trucks (<capacity> liters capacity) must reach farms before their deadlines and within driver shift limits (<time_limit>). Routes end at the last farm, with no return to depots, to ensure timely pesticide application and minimize operational costs.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand",
+            "time_windows",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "School Lunch Distribution with Nutritional Freshness Constraints",
+        "content": "A school district uses centrally located kitchens (<loc_depot>) to deliver hot meals to schools (<loc_customer>). Each school has a meal service time (<time_windows>) to ensure food remains fresh. Delivery trucks (<capacity> meals capacity) must depart kitchens, deliver to schools within service windows, and finish routes at the last school without returning. Drivers have a maximum 4-hour route duration (<time_limit>) to maintain food quality. The goal is to minimize travel distance while respecting capacity, time windows, and freshness constraints.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "time_windows",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Emergency Evacuation Shuttles for Flood Zones",
+        "content": "During flood emergencies, rescue teams from multiple evacuation centers (<loc_depot>) deploy shuttles (<capacity> passengers) to evacuate residents from stranded areas (<loc_customer>). Each evacuation site has a priority window (<time_windows>) based on rising water levels. Shuttles must complete their routes within a 6-hour window (<time_limit>), ending at safe zones without returning to depots. The challenge is to coordinate routes across depots, respect passenger capacity, and prioritize high-risk areas while minimizing evacuation time.",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "loc_customer",
+            "time_windows",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Coastal Marine Rescue Operations with Emergency Time Constraints",
+        "content": "Marine rescue teams stationed at multiple coastal depots (`<loc_depot>`) must respond to distress calls at scattered maritime locations (`<loc_customer>`). Each rescue boat has a `<capacity>` passenger/cargo limit and must reach emergencies within critical time windows (`<time_windows>`) dictated by weather or survival thresholds. Routes must originate from the nearest depot and terminate at the rescue site (no return), while ensuring total travel duration (`<duration_limit>`) allows for safe operation before daylight or tidal restrictions. Teams must balance workload across depots while avoiding overloading vessels.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "time_windows",
+            "duration_limit"
+        ]
+    },
+    {
+        "title": "Urban EV Charging Station Maintenance with Peak Hour Constraints",
+        "content": "An EV charging network operates across a city with regional maintenance hubs (`<loc_depot>`). Technicians in service vans (`<capacity>` kg payload) must repair malfunctioning stations (`<loc_customer>`) during off-peak hours (`<time_windows>`), when traffic is lighter and demand is low. Each van\u2019s route starts at a depot but ends at the final station to avoid overtime penalties (`<duration_limit>` hours). Maintenance requires `<demand>` kg of tools per site, and depots must be assigned efficiently to minimize total travel while respecting van capacities and shift limits.",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "loc_customer",
+            "time_windows",
+            "duration_limit",
+            "demand"
+        ]
+    },
+    {
+        "title": "Airport Ground Crew Turnaround Logistics with Flight Schedules",
+        "content": "Airport ground crews manage aircraft turnarounds from multiple terminal depots (`<loc_depot>`). Teams must clean, refuel, and restock aircraft (`<loc_customer>`) within strict time windows (`<time_windows>`) aligned with flight departure schedules. Each crew has a `<capacity>` of tasks they can handle (e.g., 3 aircraft per shift) and cannot exceed a `<duration_limit>` hour window to complete all tasks. Routes start at terminals but end at the last gate to allow crews to rest, avoiding return trips. Depots must be optimally assigned to gates to prevent bottlenecks.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "time_windows",
+            "capacity",
+            "duration_limit"
+        ]
+    },
+    {
+        "title": "Offshore Wind Farm Maintenance During Tidal Windows",
+        "content": "Wind farm operators use service vessels from coastal depots (`<loc_depot>`) to inspect turbines (`<loc_customer>`) during narrow tidal windows (`<time_windows>`). Each boat carries `<capacity>` tons of equipment and must complete inspections within a `<duration_limit>` hour window to avoid unsafe tides. Routes originate from the nearest depot but terminate at the final turbine to await next-day transport. Maintenance demands (`<demand>`) vary by turbine, requiring precise load planning to avoid overcapacity. Operators must balance depot assignments to maximize turbine coverage.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "time_windows",
+            "capacity",
+            "duration_limit",
+            "demand"
+        ]
+    },
+    {
+        "title": "Mountain Wilderness Search and Rescue with Daylight Limits",
+        "content": "Search and rescue (SAR) teams deploy from multiple mountain basecamps (`<loc_depot>`) to locate hikers (`<loc_customer>`) stranded in remote areas. Helicopters have `<capacity>` passenger limits and must reach victims within `<time_windows>` before nightfall or worsening weather. Routes begin at bases but end at rescue sites to stage overnight operations, with total flight duration (`<duration_limit>`) constrained by fuel and visibility. Teams must prioritize depot assignments to minimize travel while ensuring each helicopter stays within payload and time limits.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "time_windows",
+            "duration_limit"
+        ]
+    },
+    {
+        "title": "Emergency Medical Drone Delivery Network",
+        "content": "A network of medical depots (`<loc_depot>`) across a disaster-affected region dispatches drones to deliver critical supplies like defibrillators or oxygen tanks to emergency sites (`<loc_customer>`). Each drone has a maximum payload capacity of `<capacity>` kg and a battery life limit (`<time_limit>` minutes), requiring routes to end at their final delivery without returning to base. Incidents have urgent time windows (`<time_windows>`) for delivery, and drones must prioritize shortest paths within their operational range. The goal is to maximize coverage while ensuring no drone exceeds its capacity or battery life constraints.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "time_limit",
+            "time_windows"
+        ]
+    },
+    {
+        "title": "Urban Food Delivery with Multiple Hubs",
+        "content": "A food delivery startup uses `<loc_depot>` hubs to dispatch riders to `<num_customer>` restaurants and customers across a city. Each rider\u2019s vehicle can carry up to `<capacity>` orders, and deliveries must arrive within customer-specified time windows (`<time_windows>`). Riders must complete all deliveries within a 4-hour window (`<time_limit>`) during peak lunch hours. Routes are designed to end at the final drop-off location (no return to hubs), minimizing total travel distance while respecting capacity and time constraints.",
+        "tags": [
+            "loc_depot",
+            "num_customer",
+            "capacity",
+            "time_windows",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Emergency Response Teams Deployment",
+        "content": "Regional emergency command centers (`<loc_depot>`) deploy response teams to incidents like wildfires or accidents (`<loc_customer>`). Each vehicle carries `<capacity>` crew members and equipment. Incidents require arrival within strict time windows (`<time_windows>`) after reporting, and all tasks must be completed within an 8-hour shift (`<time_limit>`). Routes are finalized at the last incident site (open-ended), ensuring teams aren\u2019t overworked while covering all critical zones efficiently.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "time_windows",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Tech Support Field Visits with Regional Teams",
+        "content": "A tech firm operates from `<loc_depot>` service centers, sending vans to `<num_customer>` client sites for IT repairs. Each van has a `<capacity>` limit for technicians and tools. Clients demand service within business-hour time windows (`<time_windows>`), and all visits must finish within an 8-hour workday (`<time_limit>`). Routes end at the final site (no depot return), optimizing travel to reduce idle time and ensure all equipment malfunctions are resolved on schedule.",
+        "tags": [
+            "loc_depot",
+            "num_customer",
+            "capacity",
+            "time_windows",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Renewable Energy Site Maintenance",
+        "content": "A renewable energy company maintains solar farms and wind turbines from `<loc_depot>` regional depots. Technicians must service sites (`<loc_customer>`) during weather-permitted time windows (`<time_windows>`), such as calm days for wind turbines. Vehicles carry `<capacity>` tons of tools and spare parts, and maintenance must be completed within a 6-hour window (`<time_limit>`) to avoid peak energy generation periods. Routes conclude at the last site (open-ended), balancing workload across depots and adhering to environmental constraints.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "time_windows",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Regional Satellite Dish Installation with Time-Sensitive Deployments",
+        "content": "A telecommunications firm must deploy satellite dishes to remote rural locations. Multiple regional warehouses (<loc_depot>) serve as depots, dispatching trucks (capacity <capacity> kg) carrying installation kits. Each site (<loc_customer>) requires specific equipment quantities (<demand>), and technicians must arrive within precise time windows (<time_windows>) to synchronize with network activation schedules. Routes are open-ended, concluding at the final installation site, while ensuring drivers do not exceed an 8-hour workday (<time_limit>). The challenge is to balance depot assignments, avoid overloading trucks, and meet all time constraints while minimizing travel distance.",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "loc_customer",
+            "demand",
+            "time_windows",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Exam Material Distribution for National Testing Centers",
+        "content": "A national testing agency operates from multiple regional hubs (<loc_depot>) to deliver sealed exam kits to testing venues (<loc_customer>). Each truck can carry up to <capacity> boxes, and venues require deliveries during specific hours (<time_windows>) to align with exam schedules. Drivers must complete their routes within a 10-hour shift (<time_limit>), ending at the last venue without returning to the depot. The solution must ensure precise depot-customer pairings, respect kit capacities, and avoid late deliveries while optimizing fuel efficiency.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "time_windows",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Environmental Sensor Deployment in Protected Ecosystems",
+        "content": "Researchers deploy climate sensors across fragile ecosystems using teams based at scattered field stations (<loc_depot>). Each vehicle carries a limited payload (<capacity> kg) of sensors and equipment to remote monitoring sites (<loc_customer>). Deployments must occur during narrow time windows (<time_windows>) to minimize wildlife disruption. Field crews cannot exceed a 6-hour operational window (<time_limit>), ending their route at the final site. The goal is to maximize sensor coverage while adhering to ecological constraints and vehicle capacity limits.",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "loc_customer",
+            "time_windows",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Renewable Energy Solar Panel Array Maintenance",
+        "content": "A solar energy provider maintains panel arrays at remote farms using crews dispatched from regional service centers (<loc_depot>). Each truck holds up to <capacity> kg of tools and replacement parts. Maintenance must be scheduled during non-operational hours (<time_windows>) to avoid interrupting energy production. Technicians have an 8-hour workday (<time_limit>), with routes ending at the final farm. The challenge is to route teams efficiently across depots, respect part capacities, and ensure timely repairs without overtime.",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "time_windows",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Urban EV Charging Station Emergency Repair Network",
+        "content": "An EV charging network operator manages urgent repairs using crews from distributed service depots (<loc_depot>). Each repair truck carries a limited inventory (<capacity> units) of replacement components. Stations report failures requiring immediate fixes (<time_windows>) before peak charging periods. Technicians must complete repairs within a 12-hour window (<time_limit>), ending their route at the last station. The solution must prioritize depot assignments, avoid part shortages, and ensure rapid resolution while minimizing travel distances.",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "time_windows",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Eco-Tourism Shuttle Coordination",
+        "content": "An eco-tourism company operates multiple depots across a national park to transport visitors to scenic viewpoints. Shuttles (capacity `<capacity>`) must pick up tourists at lodges (`<loc_customer>`) within time windows (`<time_windows>`) aligned with guided tours. Routes end at the final destination (open routes, O), and drivers must complete trips within an 8-hour shift (duration limit `<time_limit>`). The goal is to minimize passenger wait times while respecting vehicle capacities and driver work hours.",
+        "tags": [
+            "capacity",
+            "loc_customer",
+            "time_windows",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Museum Artifact Transport for Temporary Exhibitions",
+        "content": "A consortium of museums uses regional depots (`<loc_depot>`) to transport artifacts between locations. Vehicles (capacity `<capacity>`) carry fragile items with strict size limits. Artifacts must be moved during museum closure hours (`<time_windows>`), and routes (O) terminate at exhibition venues. Each route must finish within 10 hours (`<time_limit>`) to comply with security protocols.",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "time_windows",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Rural Internet Hotspot Activation",
+        "content": "A telecom company deploys teams from regional depots (`<loc_depot>`) to activate rural internet hotspots. Each vehicle (capacity `<capacity>`) carries equipment for `<num_customer>` installations. Deployments must occur during daylight hours (`<time_windows>`) for safety, and technicians finish at the last site (O). Routes must be completed within 8 hours (`<time_limit>`) to ensure team availability for emergencies.",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "num_customer",
+            "time_windows",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Wildlife Tracking Device Installation",
+        "content": "Conservationists use multiple depots (`<loc_depot>`) to deploy wildlife tracking devices in remote ecosystems. Vehicles (capacity `<capacity>`) transport sensors to sites (`<loc_customer>`), with installations scheduled during animal activity windows (`<time_windows>`). Routes (O) end at the final site, and teams must complete work within 6 hours (`<time_limit>`) to avoid adverse weather.",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "loc_customer",
+            "time_windows",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Temporary Medical Clinic Setup in Crisis Zones",
+        "content": "A NGO sets up mobile clinics in disaster-affected regions using depots (`<loc_depot>`) near aid hubs. Vehicles (capacity `<capacity>`) carry medical supplies to `<num_customer>` sites, which must be operational by specific deadlines (`<time_windows>`). Clinics are set up permanently (O), and routes must be completed within 12 hours (`<time_limit>`) to ensure timely aid delivery.",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "num_customer",
+            "time_windows",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Medical Sample Transport Network",
+        "content": "Medical laboratories operate from multiple regional hubs (`<loc_depot>`) to collect time-sensitive biological samples from healthcare centers (`<loc_customer>`). Each sample requires refrigeration (`<demand>` units of space) and must reach the lab within strict deadlines (`<time_windows>`). Vehicles (`capacity` `<capacity>`) have limited battery life (`<time_limit>`) to maintain cold storage, necessitating optimized routes. Routes must start at depots, avoid overloading, and ensure samples arrive before degradation, with drivers ending shifts at final destinations.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand",
+            "time_windows",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Road Safety Inspection Crew Scheduling",
+        "content": "Highway maintenance crews depart from regional depots (`<loc_depot>`) to inspect critical road sections (`<loc_customer>`). Each inspection requires specialized equipment (`<demand>` units) and must occur during scheduled maintenance windows (`<time_windows>`). Vehicles (`capacity` `<capacity>`) cannot exceed 8-hour shifts (`<time_limit>`), and crews finish at their last inspection site. The goal is to balance depot workloads while adhering to time constraints and equipment limits.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand",
+            "time_windows",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "IT Emergency Support Deployment",
+        "content": "A tech firm manages regional service depots (`<loc_depot>`) to respond to critical network outages (`<loc_customer>`). Each outage requires specific tools (`<demand>` units) and must be resolved within strict SLA windows (`<time_windows>`). Support vans (`capacity` `<capacity>`) have 4-hour response windows (`<time_limit>`) before escalating issues. Technicians conclude their routes at the final resolved site, ensuring minimal downtime and optimal depot resource allocation.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand",
+            "time_windows",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "International Convention Equipment Logistics",
+        "content": "A conference organizer coordinates equipment transport from multiple storage warehouses (`<loc_depot>`) to global event venues (`<loc_customer>`). Each venue needs specific gear (`<demand>` units) delivered before setup deadlines (`<time_windows>`). Trucks (`capacity` `<capacity>`) must complete deliveries within 12-hour transit windows (`<time_limit>`) and end routes at venues to streamline on-site assembly. The challenge is to balance depot assignments and avoid overloading while meeting tight timelines.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand",
+            "time_windows",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Wildlife Monitoring Sensor Deployment",
+        "content": "Conservation teams deploy environmental sensors from multiple research bases (`<loc_depot>`) to remote wildlife habitats (`<loc_customer>`). Sensors must be installed within weather-safe windows (`<time_windows>`) and require battery packs (`<demand>` units) that fit within drone payloads (`capacity` `<capacity>`). Drones have limited flight duration (`<time_limit>`) and cannot return to depots after deployment. Routes must ensure all sites are equipped before adverse conditions disrupt operations.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "time_windows",
+            "demand",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Precision Agriculture Drone Spraying with Weather and Battery Constraints",
+        "content": "Agricultural cooperatives use drones to spray pesticides across scattered fields. Drones depart from multiple regional depots (e.g., farm hubs `<loc_depot>`) and must spray fields (`<loc_customer>`) within strict time windows when weather conditions (e.g., wind speed `<time_windows>`) are optimal. Each drone carries a limited pesticide payload (`<capacity>` kg) and has a battery life restricting flight duration (`<duration_limit>` minutes). Routes must ensure all fields are sprayed within their time windows without exceeding battery or capacity limits. Drones end their routes at the last field (no return to depot required).",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "time_windows",
+            "capacity",
+            "duration_limit"
+        ]
+    },
+    {
+        "title": "Perishable Seafood Distribution with Multiple Ports and Tide Constraints",
+        "content": "A seafood distributor operates from coastal depots (`<loc_depot>`) to deliver live seafood to urban markets (`<loc_customer>`). Each truck has a refrigerated capacity (`<capacity>` kg) and must reach markets during their operating hours (`<time_windows>`). Routes must be completed within a duration limit (`<duration_limit>`) to maintain freshness. Vehicles start at their assigned port but finish at the final market, avoiding return trips to depots. This ensures rapid delivery to maximize shelf life and market demand.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "time_windows",
+            "duration_limit"
+        ]
+    },
+    {
+        "title": "Wildfire Evacuation Shuttle Coordination",
+        "content": "Emergency response teams operate from regional bases (`<loc_depot>`) to evacuate residents from fire-affected zones (`<loc_customer>`). Shuttles have passenger limits (`<capacity>`), and evacuations must occur during safe travel windows (`<time_windows>`) when roads are accessible. Each route must be completed within a duration limit (`<duration_limit>`) to ensure timely escape. Vehicles depart from their assigned depot but terminate at evacuation centers, freeing resources for subsequent emergencies.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "time_windows",
+            "duration_limit"
+        ]
+    },
+    {
+        "title": "Infrastructure Repair Logistics During Natural Disasters",
+        "content": "After an earthquake, repair crews from multiple depots (`<loc_depot>`) deliver materials (`<demand>` tons) to damaged sites (`<loc_customer>`). Trucks have capacity limits (`<capacity>`), and deliveries must occur during daylight or road-clearance windows (`<time_windows>`). Routes must finish within a duration limit (`<duration_limit>`) to meet urgent rebuilding deadlines. Vehicles start at depots but end their routes at the last site, prioritizing immediate repairs over return logistics.",
+        "tags": [
+            "loc_depot",
+            "demand",
+            "loc_customer",
+            "capacity",
+            "time_windows",
+            "duration_limit"
+        ]
+    },
+    {
+        "title": "Offshore Wind Farm Maintenance with Tidal and Weather Windows",
+        "content": "Maintenance crews from coastal depots (`<loc_depot>`) service offshore wind turbines (`<loc_customer>`). Boats carry technicians and equipment (`<capacity>` tons) and must dock during tidal safety windows (`<time_windows>`) and calm seas. Each voyage is constrained by fuel duration (`<duration_limit>`), allowing crews to end at the final turbine without returning to base. This maximizes operational efficiency while adhering to harsh environmental constraints.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "time_windows",
+            "duration_limit"
+        ]
+    },
+    {
+        "title": "Offshore Wind Farm Component Delivery",
+        "content": "Wind farm operators must transport turbine components from multiple ports (<loc_depot>) to offshore construction sites (<loc_customer>). Each transport vessel has a limited capacity (<capacity> tons) for oversized cargo and must adhere to tidal access windows (<time_window>). Crew shifts are restricted to an 8-hour workday (<duration_limit>), and routes are open-ended to end at the installation site. The challenge is to coordinate deliveries across depots to meet installation deadlines while avoiding overloading vessels and respecting tidal constraints.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "time_window",
+            "duration_limit"
+        ]
+    },
+    {
+        "title": "HVAC Maintenance Scheduling for Commercial Buildings",
+        "content": "A service company manages HVAC repairs in a city using technicians based at multiple regional depots (<loc_depot>). Each technician\u2019s van can carry a maximum of <capacity> kg of tools/parts. Clients require service within specific time windows (<time_window>) for building access, and crews cannot work beyond an 8-hour shift (<duration_limit>). Routes must be planned to visit all <num_customer> sites without returning to depots, ensuring optimal tool allocation and minimizing travel overlap between depots.",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "time_window",
+            "duration_limit",
+            "num_customer"
+        ]
+    },
+    {
+        "title": "Large-Scale Conference Equipment Transport",
+        "content": "An event logistics firm must deliver audiovisual equipment to multiple conference venues (<loc_customer>) from three warehouses (<loc_depot>). Each truck has a <capacity> m\u00b3 cargo limit. Venues require setup completion by specific deadlines (<time_window>), and drivers cannot exceed a 10-hour daily drive time (<duration_limit>). Routes must originate from the nearest depot and terminate at the final venue, avoiding backtracking to warehouses.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "time_window",
+            "duration_limit"
+        ]
+    },
+    {
+        "title": "Airport Ground Crew Shift Coordination",
+        "content": "Airport ground crews must shuttle luggage between terminals (<loc_depot>) and aircraft gates (<loc_customer>). Each cart can carry up to <capacity> kg of luggage, and shifts are capped at 6 hours (<duration_limit>). Flight schedules impose strict time windows (<time_window>) for loading/unloading. Routes start and end at terminal hubs but must prioritize flights with imminent departure times while adhering to vehicle weight limits and shift duration constraints.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "duration_limit",
+            "time_window"
+        ]
+    },
+    {
+        "title": "Flood Relief Tent Distribution",
+        "content": "During a flood crisis, aid organizations deploy teams from multiple regional depots (<loc_depot>) to deliver emergency tents (<demand> units) to evacuation centers (<loc_customer>). Each vehicle has a <capacity> unit limit and must complete deliveries within a 12-hour window (<duration_limit>). Evacuation sites require supplies by specific deadlines (<time_window>), and routes must terminate at the last delivery point without returning to depots, ensuring equitable resource allocation across disaster zones.",
+        "tags": [
+            "loc_depot",
+            "demand",
+            "loc_customer",
+            "capacity",
+            "duration_limit",
+            "time_window"
+        ]
+    },
+    {
+        "title": "Solar Panel Maintenance Across Remote Sites",
+        "content": "A solar energy company operates multiple regional depots (<loc_depot>) to service remote solar farms (<loc_customer>). Each maintenance truck has a limited capacity (<capacity>) for carrying replacement panels and tools. Technicians must complete repairs within a customer-specified maintenance window (<time_windows>) to avoid disrupting energy production. Additionally, each vehicle\u2019s route must not exceed an 8-hour working day (<time_limit>), and routes terminate at the final site (no return to depot). The goal is to minimize total travel distance while adhering to capacity, time windows, and duration constraints.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "time_windows",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Satellite Dish Installation for Rural Broadband Expansion",
+        "content": "A telecommunications firm deploys teams from distributed depots (<loc_depot>) to install satellite dishes (<loc_customer>) in rural areas. Each installation van can carry a maximum of <capacity> dishes and tools. Installations must occur during pre-approved time windows (<time_windows>) when residents are available. Crews cannot work beyond a 10-hour shift (<time_limit>), and routes end at the last installation site. The challenge is to optimize vehicle assignments and routes to minimize travel costs while meeting all constraints.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "time_windows",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Emergency Medical Supply Distribution During Pandemic Outbreaks",
+        "content": "Health authorities coordinate with multiple regional warehouses (<loc_depot>) to rush critical supplies (<demand>) to overwhelmed hospitals (<loc_customer>). Each delivery vehicle has a limited capacity (<capacity>), and hospitals demand urgent deliveries within strict time windows (<time_windows>). Drivers must complete their routes within a 12-hour window (<time_limit>) to avoid fatigue. Routes terminate at the final hospital, ensuring no unnecessary return trips. The objective is to prioritize high-risk areas while minimizing total travel distance.",
+        "tags": [
+            "loc_depot",
+            "demand",
+            "loc_customer",
+            "capacity",
+            "time_windows",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Perishable Flower Export Logistics with Airport Time Constraints",
+        "content": "A flower exporter operates from several regional hubs (<loc_depot>) to transport fragile blooms (<demand>) to international airports (<loc_customer>). Refrigerated trucks have a capacity limit (<capacity>), and exports must reach airports within strict time windows (<time_windows>) to avoid spoilage. Drivers cannot exceed an 18-hour journey (<time_limit>), and routes end at the airport (no return to the hub). The goal is to optimize routes to minimize fuel costs while ensuring all shipments arrive fresh and on time.",
+        "tags": [
+            "loc_depot",
+            "demand",
+            "loc_customer",
+            "capacity",
+            "time_windows",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Airport Ground Crew Coordination for Flight Turnaround Scheduling",
+        "content": "An airport\u2019s ground operations team manages baggage handling crews from multiple depots (<loc_depot>) assigned to aircraft at different terminals (<loc_customer>). Each baggage cart has a limited capacity (<capacity>), and crews must complete loading/unloading within flight turnaround time windows (<time_windows>). Crew shifts are capped at 10 hours (<time_limit>), and routes end at the final gate. The task is to coordinate routes to minimize passenger delays while adhering to capacity and time constraints.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "time_windows",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Offshore Supply Vessel Logistics",
+        "content": "An oil company operates multiple coastal supply depots (`<loc_depot>`) to deliver equipment and provisions to offshore drilling platforms (`<loc_customer>`). Each vessel has a cargo capacity of `<capacity>` tons and must adhere to strict operational windows for platform access (`<time_windows>`). Platforms require `<demand>` tons of supplies, and voyages cannot exceed a 12-hour duration (`<time_limit>`) due to crew safety regulations. Routes must originate from the nearest depot, respect platform-specific time windows for crane availability, and avoid returning vessels to port until all scheduled stops are complete.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "time_windows",
+            "demand",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Urban Emergency Ambulance Routing",
+        "content": "A metropolitan ambulance service manages multiple regional hospitals (`<loc_depot>`) to respond to emergency calls (`<loc_customer>`). Each ambulance can carry up to `<capacity>` patients and must reach incidents within critical time windows (`<time_windows>`) to comply with medical protocols. Ambulances have an 8-hour shift duration (`<time_limit>`) and are allowed to end their routes at any hospital after their last call. The system must balance workload across depots while ensuring no ambulance exceeds its patient capacity or response time constraints.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "time_windows",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Data Center Cooling Maintenance Scheduling",
+        "content": "A global tech firm requires technicians to service overheating cooling units at scattered data centers (`<loc_customer>`) using regional maintenance hubs (`<loc_depot>`). Each service truck carries `<capacity>` kg of replacement parts and must arrive during scheduled downtime (`<time_windows>`). Technicians cannot work more than 6 hours (`<time_limit>`) due to heat exposure risks, and routes must terminate at the final data center without returning to base. The goal is to minimize total travel distance while ensuring all repairs occur within operational windows.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "time_windows",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Wind Turbine Technician Deployment",
+        "content": "A renewable energy firm dispatches technicians from service bases (`<loc_depot>`) to inspect offshore wind turbines (`<loc_customer>`). Each technician\u2019s vessel can carry `<capacity>` kg of tools and must reach turbines during daylight hours (`<time_windows>`) for safety. Trips are restricted to a 10-hour window (`<time_limit>`) to avoid night operations. Routes start and end at depots but allow technicians to finish at their last turbine site. The challenge is to assign turbines to depots efficiently while respecting tool capacity limits and tidal constraints.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "time_windows",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Airport Ground Support Equipment Coordination",
+        "content": "An international airport coordinates fuel trucks, baggage carts, and catering vehicles (`<capacity>`-ton capacity) from terminal-specific depots (`<loc_depot>`) to aircraft parked at remote gates (`<loc_customer>`). Each aircraft has strict docking time windows (`<time_windows>`) for refueling/loading before departure. Crew shifts are capped at 6 hours (`<time_limit>`), and vehicles may end routes at their final gate assignment. The system must prevent overloading equipment while ensuring all services align with flight schedules across multiple terminals.",
+        "tags": [
+            "capacity",
+            "loc_depot",
+            "loc_customer",
+            "time_windows",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Perishable Blood Plasma Transport to Hospitals",
+        "content": "Blood plasma must be delivered from multiple regional blood banks (<loc_depot>) to hospitals (<loc_customer>) within strict time windows to maintain viability. Each hospital requires a specific volume of plasma (<demand> liters), and transport trucks have a capacity limit of `<capacity>` liters. Drivers must complete deliveries within an 8-hour shift (<time_limit>), adhering to each hospital\u2019s time window for receiving perishable medical supplies. Routes end at the last hospital visited to avoid return trips, ensuring rapid deployment of life-saving resources.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Event Catering Equipment Delivery for Music Festivals",
+        "content": "A catering company must deliver bulky equipment (grills, refrigeration units) from multiple warehouses (<loc_depot>) to music festival venues (<loc_customer>) before event setup begins. Each venue has a strict time window (<time_windows>) for equipment delivery to avoid disrupting stage preparations. Trucks can carry up to `<capacity>` kg of equipment, and drivers must complete routes within a 10-hour window (<time_limit>) to align with festival schedules. Routes conclude at the final venue, eliminating return trips to depots.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "time_windows",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Offshore Wind Turbine Component Delivery During Tidal Windows",
+        "content": "Wind energy firms must transport turbine components from coastal depots (<loc_depot>) to offshore platforms (<loc_customer>) during narrow tidal windows (<time_windows>). Each platform requires `<demand>` tons of equipment, and transport barges have a `<capacity>` ton limit. Crews have an 8-hour operational window (<time_limit>) per shift due to safety regulations. Routes end at the last platform to ensure timely installation before tidal conditions change.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "time_windows",
+            "demand",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Urban Bakery Delivery to Caf\u00e9s with Morning Time Windows",
+        "content": "A bakery chain delivers fresh bread and pastries from multiple distribution hubs (<loc_depot>) to caf\u00e9s (<loc_customer>) that demand deliveries before opening hours. Each caf\u00e9\u2019s time window (<time_windows>) ensures products are fresh for morning customers. Delivery vans have a `<capacity>` kg limit for baked goods, and drivers must finish routes within a 4-hour morning window (<time_limit>). Routes terminate at the last caf\u00e9 to avoid post-delivery detours.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "time_windows",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Emergency Firefighting Equipment to Wildfire Zones",
+        "content": "Wildfire response teams deploy critical equipment (fire retardants, pumps) from regional emergency depots (<loc_depot>) to active wildfire sites (<loc_customer>). Sites have critical time windows (<time_windows>) for equipment arrival to maximize containment efforts. Trucks carry `<capacity>` kg of gear and must complete routes within a 12-hour shift (<time_limit>). Routes end at the final site to prioritize immediate deployment over return logistics.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "time_windows",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "University Field Trip Transportation with School Bus Capacity and Timetables",
+        "content": "Universities and school districts operate multiple depots (e.g., campuses or regional hubs) to organize field trips. Each school bus has a capacity limit `<capacity>` for student passengers. Field trip destinations (e.g., museums, factories, parks) require arrivals within specific time windows `<time_windows>` to align with activity schedules. Routes are open-ended (`O`), ending at the final destination without returning to the depot. Additionally, each bus route must adhere to a duration limit `<time_limit>` to ensure the trip concludes within the school day or driver shift constraints. The goal is to minimize total travel distance while respecting all constraints.",
+        "tags": [
+            "capacity",
+            "time_windows",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Mobile Library Delivery with Time-Sensitive Drop-Offs",
+        "content": "A public library system manages `<num_depot>` depots across a city to deliver bookmobiles to temporary outdoor locations (e.g., parks, festivals). Each vehicle carries `<capacity>` books and must arrive at each site `<loc_customer>` within its designated time window `<time_windows>` for setup and operation. Routes are open (`O`), terminating at the last stop to avoid unnecessary backtracking. The system also imposes a duration limit `<time_limit>` per route to ensure all deliveries occur during daylight hours. The challenge is to optimize routes for efficiency while meeting community demand.",
+        "tags": [
+            "num_depot",
+            "capacity",
+            "loc_customer",
+            "time_windows",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Agricultural Drone Spraying with Weather and Battery Constraints",
+        "content": "Farmers use `<num_depot>` drone bases to deploy pesticide-spraying drones across `<num_customer>` crop fields. Each drone has a battery-powered capacity `<capacity>` for carrying spray solution. Spraying must occur within strict time windows `<time_windows>` when weather conditions (e.g., no wind) are optimal. Routes are open (`O`), ending at the last field to recharge. Drones must complete all assigned fields within a duration limit `<time_limit>` before battery depletion. The objective is to maximize coverage while minimizing battery recharges and missed spraying windows.",
+        "tags": [
+            "num_depot",
+            "num_customer",
+            "capacity",
+            "time_windows",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Wildlife Conservation Team Deployments with Strict Time Windows",
+        "content": "Conservation organizations operate `<num_depot>` regional bases to deploy field teams to `<num_customer>` wildlife sites for monitoring or rescue missions. Each vehicle carries specialized equipment with a `<capacity>` limit. Deployments must occur within narrow time windows `<time_windows>` (e.g., mating seasons, low-tide periods). Routes are open (`O`), concluding at the final site to avoid disrupting animal behavior. Teams must also complete their missions within a duration limit `<time_limit>` dictated by permits or environmental regulations.",
+        "tags": [
+            "num_depot",
+            "num_customer",
+            "capacity",
+            "time_windows",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "International Student Airport Transfers with Visa Time Constraints",
+        "content": "A university coordinates `<num_depot>` shuttle hubs to transport international students from `<num_customer>` airports to campuses. Each shuttle has a `<capacity>` passenger limit and must arrive at each airport within time windows `<time_windows>` aligned with flight arrivals. Routes are open (`O`), ending at the destination campus to streamline student entry. Transfers must be completed within a duration limit `<time_limit>` to ensure compliance with visa entry requirements and minimize student waiting times. The solution must balance efficiency with strict immigration protocol adherence.",
+        "tags": [
+            "num_depot",
+            "num_customer",
+            "capacity",
+            "time_windows",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Urban Electric Vehicle Battery Swapping Network",
+        "content": "Electric vehicle (EV) charging stations (depots) across a city need to redistribute depleted batteries to fully charged ones using service vehicles. Each vehicle can carry a maximum of `<capacity>` batteries (C). Swapping operations must occur within strict time windows (`<time_windows>`) at stations to meet peak demand periods. Vehicles start from regional depots (`<loc_depot>`) but do not return (O), ensuring routes end at the final station. Drivers are limited to an 8-hour shift (`<time_limit>`) (L), and all deliveries must align with station availability windows (TW).",
+        "tags": [
+            "capacity",
+            "time_windows",
+            "loc_depot",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Film Production Equipment Logistics",
+        "content": "A film studio operates multiple regional warehouses (`<loc_depot>`) to deliver equipment to film sets (`<loc_customer>`). Each truck has a weight capacity of `<capacity>` tons (C) and must arrive at locations by their setup deadlines (`<time_windows>`). Routes originate from depots but terminate at the final delivery site (O), avoiding return trips. Crews cannot exceed an 8-hour working day (`<time_limit>`) (L), requiring optimized paths to meet tight scheduling demands (TW).",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "time_windows",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Agricultural Pollination Services",
+        "content": "Beekeepers must deploy beehives from apiaries (`<loc_depot>`) to orchards (`<loc_customer>`) during precise bloom periods (`<time_windows>`). Each vehicle can transport `<capacity>` hives (C). Routes must conclude before sunset (`<time_limit>`) to ensure safe hive placement (L) and cannot return to depots (O). Delivery timing is critical (TW) to align with flowering schedules, requiring multi-depot coordination (MD).",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "time_windows",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Offshore Research Vessel Resupply",
+        "content": "Research vessels anchored in remote marine zones (`<loc_customer>`) require urgent resupply from coastal depots (`<loc_depot>`). Supply boats carry `<capacity>` tons of cargo (C) and must reach vessels within tidal windows (`<time_windows>`). Routes end at the final vessel (O), and journeys must finish before fuel depletion (`<time_limit>`) (L). Multi-depot coordination (MD) ensures timely delivery without return trips.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "time_windows",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Emergency Blood Plasma Distribution During a Pandemic",
+        "content": "Blood banks (`<loc_depot>`) distribute life-saving plasma to hospitals (`<loc_customer>`) using refrigerated trucks limited to `<capacity>` liters (C). Deliveries must occur during hospital operating hours (`<time_windows>`) to maintain plasma viability. Routes terminate at the last hospital (O), and drivers cannot exceed a 12-hour shift (`<time_limit>`) (L). Multi-depot coordination (MD) ensures urgent supplies reach all locations efficiently.  \n```",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "time_windows",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Coastal Cleanup Operations with Tidal and Capacity Constraints",
+        "content": "Coastal cleanup crews operate from multiple regional depots (<loc_depot>) to collect marine debris from scattered beaches and harbors (<loc_customer>). Each cleanup site requires a specific effort level (<demand>), and the work must occur during tidal windows (<time_windows>) when water levels expose debris. Cleanup boats have limited capacity (<capacity>) for hauling waste, and crews must complete their routes within shift durations (<time_limit>) to avoid overtime. Routes begin at a depot, service sites within tidal windows, and end at disposal sites without returning. The goal is to maximize cleanup coverage while respecting operational constraints.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand",
+            "time_windows",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Mountain Rescue Team Deployment with Weather and Shift Limits",
+        "content": "Mountain rescue teams are stationed at multiple depots (<loc_depot>) and must deploy to emergency sites (<loc_customer>), such as hikers trapped during storms. Each rescue mission requires specialized gear (<demand>), and the rescue window (<time_windows>) depends on weather forecasts (e.g., before nightfall or worsening conditions). Rescue vehicles have limited capacity (<capacity>), and teams must complete their routes within shift durations (<time_limit>) to ensure crew safety. Routes start from a depot, proceed to the rescue site, and end there to establish a base, avoiding unnecessary return trips.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand",
+            "time_windows",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Urban Food Bank Distribution with Perishable Goods and Time Sensitive Donations",
+        "content": "A network of urban food banks (<loc_depot>) dispatches trucks to collect perishable donations (e.g., fresh produce) from farms and deliver them to shelters (<loc_customer>). Each donation pickup has a time window (<time_windows>) to ensure freshness, and shelters require specific quantities (<demand>). Trucks must not exceed their refrigerated capacity (<capacity>) and finish deliveries within drivers\u2019 shift limits (<time_limit>). Routes are open-ended, ending at the final shelter to avoid idle return trips, while minimizing wasted food and maximizing coverage.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "time_windows",
+            "demand",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Satellite Dish Installation in Remote Villages with Communication Windows",
+        "content": "A telecommunications company installs satellite dishes in remote villages (<loc_customer>) using teams from regional depots (<loc_depot>). Each installation requires equipment (<demand>), and the work must occur during satellite alignment windows (<time_windows>). Installation trucks have limited capacity (<capacity>) for gear, and technicians must finish deployments within shift durations (<time_limit>). Routes originate from depots, service villages during their allocated windows, and end at the final site without returning to base, ensuring efficient use of limited technical resources.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "demand",
+            "time_windows",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Film Equipment Transport Between Movie Sets with Shooting Schedules",
+        "content": "A film production company coordinates equipment transport between multiple film sets (<loc_customer>) using depots (<loc_depot>) as storage hubs. Each set requires specific gear (<demand>), and deliveries must arrive precisely during setup windows (<time_windows>) to avoid delaying shoots. Transport vehicles have limited capacity (<capacity>), and drivers must complete their routes within shift limits (<time_limit>). Routes start at a depot, deliver equipment to sets in sequence, and end at the final location, ensuring crews can begin filming on schedule.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "demand",
+            "time_windows",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Airport Shuttle Services for International Conventions",
+        "content": "Multiple airports (<loc_depot>) operate shuttle buses to transport delegates to a central convention center. Each bus has a capacity limit (<capacity>) to accommodate passengers. Shuttles must depart from their assigned airport and drop delegates at the venue by their time window (<time_window>), ensuring no delays to session starts. Drivers cannot exceed an 8-hour shift (<time_limit>), and routes are open-ended\u2014buses terminate at the convention center without returning. The challenge is to minimize total travel distance while respecting passenger limits, arrival windows, and driver work hours.",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "time_window",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Hospital Blood Sample Collection Network",
+        "content": "Hospitals across a region act as depots (<loc_depot>), dispatching refrigerated vans to collect blood samples from remote clinics (<loc_customer>). Each van has a temperature-controlled capacity (<capacity>) and must return to its origin hospital within 4 hours (<time_limit>) to preserve sample integrity. Clinics demand specific sample volumes (<demand>), and collection must occur between morning and afternoon slots (<time_window>). Vans follow open routes, ending at the originating hospital after the final pickup. The goal is to optimize routes to meet all time constraints while avoiding overloading vehicles.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "time_limit",
+            "demand",
+            "time_window"
+        ]
+    },
+    {
+        "title": "Tourist Shuttle Coordination for Mountain Resorts",
+        "content": "A tourism company operates shuttle buses from three mountain base stations (<loc_depot>) to high-altitude attractions (<loc_customer>). Each bus can carry up to <capacity> passengers. Tourists must arrive at viewpoints by their booked time windows (<time_window>), and drivers must finish all runs within a 6-hour window (<time_limit>). Buses terminate at the attractions, avoiding return trips to depots. The problem requires balancing depot assignments, adhering to passenger limits, and ensuring scenic access times without exceeding driver fatigue limits.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "time_window",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Agricultural Harvest Collection from Diverse Regions",
+        "content": "Farm cooperatives use multiple regional processing hubs (<loc_depot>) to collect perishable crops (<demand>) from farms (<loc_customer>). Trucks have a maximum load capacity (<capacity>) and must deliver harvests within 12 hours (<time_limit>) to prevent spoilage. Farmers specify delivery time windows (<time_window>) based on harvest completion schedules. Routes are open-ended, ending at the nearest processing center. The objective is to coordinate multi-depot assignments, respect capacity and time constraints, and minimize total transport distance.",
+        "tags": [
+            "loc_depot",
+            "demand",
+            "loc_customer",
+            "capacity",
+            "time_limit",
+            "time_window"
+        ]
+    },
+    {
+        "title": "University Exam Proctor Deployment for Distributed Campuses",
+        "content": "A university uses its exam centers (<loc_depot>) as hubs to dispatch vehicles transporting proctors to satellite campuses (<loc_customer>). Each vehicle carries up to <capacity> proctors and must arrive at testing sites 1 hour before exam starts (<time_window>). Proctors cannot exceed a 10-hour workday (<time_limit>), and vehicles terminate routes at exam locations. The challenge is to assign depots, avoid overloading vehicles, and ensure timely deployment while minimizing travel costs across the university\u2019s network.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "time_window",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Urban EV Battery Swap Network Optimization",
+        "content": "Electric vehicle (EV) operators must manage a network of battery swap stations (`<loc_depot>`) across the city to service EVs needing rapid battery replacements. Each swap truck has a `<capacity>` battery limit and must collect requests from `<num_customer>` EV drivers at `<loc_customer>`, each requiring `<demand>` batteries. Drivers specify time windows `<time_windows>` for their swaps, while routes must ensure no vehicle exceeds a `<time_limit>` travel duration. Trucks depart from regional depots but do not return, ending at the final swap location to maximize coverage without overworking technicians.",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "num_customer",
+            "loc_customer",
+            "demand",
+            "time_windows",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Hazardous Waste Collection with Regional Depots",
+        "content": "A hazardous waste management firm operates from `<loc_depot>` depots to collect toxic materials from `<num_customer>` industrial sites (`<loc_customer>`). Each site demands `<demand>` liters of waste, and trucks must adhere to strict `<time_windows>` for pickups to comply with environmental regulations. Vehicles have a `<capacity>` tonnage limit and cannot exceed a `<time_limit>` working duration due to crew safety protocols. Routes originate from depots but terminate at centralized processing facilities, avoiding return trips to minimize exposure risks.",
+        "tags": [
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "demand",
+            "time_windows",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Wildlife Monitoring Sensor Deployment",
+        "content": "Conservationists deploy environmental sensors to monitor endangered species in remote regions. Teams depart from `<loc_depot>` field stations to install `<num_customer>` sensors (`<loc_customer>`), each requiring `<demand>` kg of equipment. Sensors must be deployed during `<time_windows>` to avoid disrupting animal activity (e.g., mating seasons). Vehicles cannot exceed `<capacity>` kg payload or `<time_limit>` travel time before sunset to ensure safe returns. Routes end at the final sensor site to minimize habitat disruption.",
+        "tags": [
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "demand",
+            "time_windows",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Flood Emergency Boat Rescue Operations",
+        "content": "During a flood crisis, rescue teams operate from `<loc_depot>` riverfront depots to evacuate `<num_customer>` stranded locations (`<loc_customer>`). Boats carry `<demand>` passengers each but are limited to `<capacity>` people. Evacuations must occur within `<time_windows>` aligned with flood peak predictions, while ensuring `<time_limit>` travel durations to avoid running out of fuel. Boats end their routes at safe zones instead of returning to depots to prioritize continuous rescue efforts.",
+        "tags": [
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "demand",
+            "capacity",
+            "time_windows",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Satellite Maintenance in Remote Locations",
+        "content": "A space agency dispatches technicians from `<loc_depot>` regional hubs to service `<num_customer>` satellite ground stations (`<loc_customer>`). Each site requires `<demand>` kg of specialized tools, and vehicles must stay under `<capacity>` kg to navigate rough terrain. Maintenance windows `<time_windows>` align with optimal weather conditions for equipment access, while routes must complete within `<time_limit>` daylight hours. Teams remain at the final site post-maintenance to await further deployments, avoiding return trips to depots.",
+        "tags": [
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "demand",
+            "capacity",
+            "time_windows",
+            "time_limit"
+        ]
+    }
+]

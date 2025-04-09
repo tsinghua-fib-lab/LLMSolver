@@ -1,0 +1,1150 @@
+[
+    {
+        "title": "Mobile Vaccination Clinic Deployment",
+        "content": "A health organization needs to deploy mobile vaccination teams from a central hub (<loc_depot>) to remote villages (<loc_customer>). Each team operates a van with a limited vaccine storage capacity (<capacity> doses) and must visit villages with varying population demands (<demand>). Due to vaccine stability, each van can only operate for a maximum of <time_limit> hours before returning to the hub. The goal is to ensure all villages are served while minimizing total travel distance, with teams allowed to end their routes at the last village (no return required).",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Construction Material Delivery for Disaster Relief",
+        "content": "After a hurricane, a construction company must deliver materials (e.g., plywood, tarps) from a warehouse (<loc_depot>) to damaged neighborhoods (<loc_customer>). Each truck has a weight limit (<capacity> tons) and a fuel constraint limiting trips to <distance_limit> km. Deliveries are one-way (trucks remain at the last site to assist), and each neighborhood requires a specific material quantity (<demand>). Optimize routes to maximize coverage while respecting capacity and distance limits.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "distance_limit",
+            "demand"
+        ]
+    },
+    {
+        "title": "Wildlife Conservation Sensor Deployment",
+        "content": "A research team must place environmental sensors across a national park. Starting from a ranger station (<loc_depot>), off-road vehicles carry sensors (<demand> units per location) to GPS coordinates (<loc_customer>). Each vehicle can hold <capacity> sensors and has a battery life allowing <time_limit> hours of travel. Vehicles may end routes at the last deployment site. Minimize total distance while ensuring all sensor locations are visited without exceeding battery or weight limits.",
+        "tags": [
+            "loc_depot",
+            "demand",
+            "loc_customer",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "On-Demand Laundry Pickup Service",
+        "content": "A laundry service uses vans to collect bags of clothes from customers (<loc_customer>) scattered across a city. Vans start at a processing facility (<loc_depot>) with a capacity of <capacity> kg per trip. Each customer\u2019s laundry weighs <demand> kg. Drivers work shifts of <time_limit> hours and finish routes at their last pickup (no return). Design routes to serve all customers while minimizing driving time and avoiding overloaded vans.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "demand",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Floating Market Supply Logistics",
+        "content": "In a riverine community, vendors use boats to deliver goods from a central market (<loc_depot>) to floating shops (<loc_customer>). Each boat can carry <capacity> kg of supplies, and shops order varying amounts (<demand>). Boats have fuel constraints (<distance_limit> km per trip) and may end routes at the last shop. Optimize delivery paths to reduce total travel distance while respecting weight and fuel limits.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand",
+            "distance_limit"
+        ]
+    },
+    {
+        "title": "Urban Waste Collection Routing",
+        "content": "A city sanitation department manages waste collection from public bins located at <loc_customer> across the district. Trucks start from the depot (<loc_depot>) with a maximum capacity of <capacity> tons. Each bin has a varying waste volume (<demand>). Due to strict shift schedules, each truck must complete its route within <time_limit> hours to avoid overtime costs. After the last bin is emptied, drivers park at the nearest depot branch instead of returning to the origin. The goal is to minimize total distance while ensuring no truck exceeds capacity or duration limits.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "demand",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Electric Vehicle Charging Station Maintenance",
+        "content": "A utility company services <num_customer> remote EV charging stations (<loc_customer>) from a central hub (<loc_depot>). Each service van carries spare parts weighing up to <capacity> kg, with stations requiring specific parts (<demand>). Due to battery constraints, vans can operate for only <time_limit> hours before needing recharge. Technicians end their shift at the last serviced station. Optimize routes to cover all stations without exceeding weight or battery limits, minimizing total travel time.",
+        "tags": [
+            "num_customer",
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "demand",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Festival Food Truck Supply Chain",
+        "content": "During a multi-day festival, food trucks stationed at <loc_customer> require daily ingredient restocking from a central kitchen (<loc_depot>). Delivery vehicles have a cold storage limit of <capacity> kg and must complete all deliveries within <time_limit> hours to maintain food freshness. Drivers finish routes at festival grounds without returning. Balance efficient routing with perishable goods constraints, ensuring no truck exceeds capacity or spoilage deadlines.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Offshore Wind Turbine Maintenance",
+        "content": "A wind farm operator must service <num_customer> turbines (<loc_customer>) from a coastal base (<loc_depot>). Crew boats carry up to <capacity> tons of equipment, with each turbine needing specific tools (<demand>). Due to weather windows, each boat must finish within <time_limit> hours and may dock at the last turbine. Plan routes to service all turbines while respecting weight limits and safe operational durations in open water.",
+        "tags": [
+            "num_customer",
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "demand",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Rural Postal Courier Network",
+        "content": "A postal service delivers packages to <num_customer> villages (<loc_customer>) from a regional hub (<loc_depot>). Motorcycles have a load limit of <capacity> kg and fuel for <time_limit> hours of travel. Couriers leave packages at village drop points and proceed homeward after their last stop. Design routes that deliver all parcels without overloading vehicles or stranding couriers, minimizing total distance across remote terrain.",
+        "tags": [
+            "num_customer",
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Mobile COVID-19 Testing Unit Deployment",
+        "content": "A health agency needs to deploy mobile testing units from a central hub (<loc_depot>) to high-risk neighborhoods (<loc_customer>). Each unit can carry up to <capacity> test kits, and each neighborhood requires <demand> kits per day. Vehicles must complete their routes within <time_limit> hours to ensure timely sample processing. After the final stop, units remain on-site to assist local clinics rather than returning to the hub. The goal is to maximize coverage while minimizing total travel distance and adhering to capacity/duration constraints.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Agricultural Seed Distribution for Small Farms",
+        "content": "A cooperative distributes seeds from a warehouse (<loc_depot>) to <num_customer> remote farms (<loc_customer>), each requiring <demand> kg of seeds. Trucks have a <capacity> kg limit and must finish routes within <distance_limit> km due to perishability constraints. Drivers end their shifts at the last farm to reduce idle time. Routes must ensure no farm is skipped and no truck exceeds weight/distance limits.",
+        "tags": [
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "demand",
+            "capacity",
+            "distance_limit"
+        ]
+    },
+    {
+        "title": "Disaster Relief Tent Delivery",
+        "content": "After an earthquake, aid teams must deliver tents from a staging area (<loc_depot>) to evacuation sites (<loc_customer>). Each vehicle carries <capacity> tents, and sites need <demand> tents. Routes must be completed within <time_limit> hours due to impending storms. Vehicles remain at the last site to support relief efforts. Optimize for minimal travel time while meeting urgent demand.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Urban Tree Planting Logistics",
+        "content": "A city parks department plants trees using trucks (<capacity> saplings/vehicle) from a nursery (<loc_depot>) to <num_customer> planting sites (<loc_customer>), each needing <demand> trees. Routes must finish within <time_limit> hours to align with volunteer shifts. Trucks stay at the final site for cleanup. Balance route durations and avoid overloading vehicles.",
+        "tags": [
+            "capacity",
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "demand",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Blood Sample Collection for Rural Clinics",
+        "content": "A medical lab collects blood samples from <num_customer> clinics (<loc_customer>) using vans with <capacity> sample coolers. Each clinic provides <demand> samples. Vans must return to the lab within <time_limit> hours to preserve sample integrity but can end routes at any clinic. Minimize total distance while ensuring no cooler overflows and all samples arrive on time.",
+        "tags": [
+            "num_customer",
+            "loc_customer",
+            "capacity",
+            "demand",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Mobile Blood Donation Unit Deployment",
+        "content": "A blood bank operates mobile donation units that travel to workplaces, universities, and community centers (<loc_customer>) from a central hub (<loc_depot>). Each unit has a limited storage capacity (<capacity> liters) for collected blood and must complete its route within a strict operational window (<time_limit> hours) to ensure blood freshness. The goal is to maximize donations while ensuring no unit exceeds its capacity or duration limit, with vehicles ending their routes at the final donation site (no return required).",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Urban Art Installation Logistics",
+        "content": "A city plans to install temporary art sculptures at <num_customer> parks and plazas (<loc_customer>). Crews transport fragile sculptures from a warehouse (<loc_depot>) using trucks with weight limits (<capacity> tons). Each installation takes fixed time, and routes must finish within <time_limit> hours to avoid overtime costs. Trucks are not required to return after the final installation. Optimize routes to minimize travel distance while respecting capacity and crew shift durations.",
+        "tags": [
+            "num_customer",
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Drone-Based Coral Reef Monitoring",
+        "content": "Marine biologists deploy drones from a research vessel (<loc_depot>) to survey coral reefs at <num_customer> GPS coordinates (<loc_customer>). Each drone carries sensors weighing <demand> kg (total capacity: <capacity> kg) and has a battery life allowing <time_limit> hours of flight. Drones must complete all assigned surveys in one trip without returning to the vessel. Plan routes to cover all sites while minimizing total flight distance and ensuring no drone exceeds weight or battery limits.",
+        "tags": [
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "demand",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Temporary Election Ballot Collection",
+        "content": "During elections, secure vehicles transport sealed ballots from <num_customer> polling stations (<loc_customer>) to a counting center (<loc_depot>). Each vehicle has a tamper-proof compartment (<capacity> ballot boxes) and must complete its route within <time_limit> hours to meet legal deadlines. Vehicles end routes at the counting center after their last pickup. Design routes to collect all ballots while minimizing distance and ensuring no vehicle exceeds capacity or time constraints.",
+        "tags": [
+            "num_customer",
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Antarctic Research Equipment Resupply",
+        "content": "Scientists stationed at remote Antarctic bases (<loc_customer>) require periodic resupply from a coastal hub (<loc_depot>). Snowmobiles tow sleds with capacity (<capacity> kg) and have fuel for <time_limit> hours in extreme cold. Each base needs specific equipment (<demand> kg). Vehicles cannot return to the hub due to fuel constraints and remain at the final base. Optimize routes to serve all bases while respecting payload limits and fuel-based duration constraints.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "time_limit",
+            "demand"
+        ]
+    },
+    {
+        "title": "Mobile Library Book Rotation",
+        "content": "A county library system operates mobile units that rotate book collections between branches (<loc_customer>) from a central storage depot (<loc_depot>). Each vehicle has a shelf capacity of <capacity> books, and branches request specific quantities (<demand>) based on local demand. Drivers follow optimized routes to redistribute books, finishing their shifts at the last branch without returning to the depot. Routes must respect a <time_limit>-hour daily driving cap to comply with labor regulations while ensuring all branches receive their allocations.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "demand",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Urban Furniture Delivery Service",
+        "content": "A furniture retailer dispatches trucks (<capacity>) from a warehouse (<loc_depot>) to deliver bulky items (sofas, tables, etc.) to <num_customer> residential addresses (<loc_customer>), each with unique weight/volume requirements (<demand>). Due to urban traffic congestion, each route must conclude within <time_limit> hours to avoid overtime costs. Drivers end their routes at the final delivery point, eliminating inefficient return trips. The goal is to maximize daily deliveries while respecting vehicle weight limits and minimizing total mileage.",
+        "tags": [
+            "capacity",
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "demand",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Remote Medical Clinic Supply Drops",
+        "content": "A humanitarian organization uses helicopters to deliver medical supplies from a regional hub (<loc_depot>) to isolated clinics (<loc_customer>). Each helicopter can carry <capacity> kg of supplies, with clinics requiring specific amounts (<demand>). Due to fuel constraints, flight paths cannot exceed <distance_limit> km per sortie. Pilots remain at the last clinic for subsequent missions rather than returning empty. The challenge is to cover all clinics with minimal total flight distance while adhering to payload and range limits.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand",
+            "distance_limit"
+        ]
+    },
+    {
+        "title": "Solar Farm Maintenance Crew Dispatch",
+        "content": "A renewable energy company services <num_customer> solar farms (<loc_customer>) from a central operations center (<loc_depot>). Crew vans (<capacity>) transport tools/parts (<demand> per site) for panel repairs. Strict <time_limit>-hour shift durations prevent worker fatigue in extreme climates. Teams overnight near their last job site to begin fresh the next day. Optimized routes must ensure all farms receive timely maintenance without exceeding vehicle capacity or shift duration constraints.",
+        "tags": [
+            "num_customer",
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "demand",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Film Production Equipment Logistics",
+        "content": "A movie studio coordinates equipment transfers between <num_customer> shooting locations (<loc_customer>) from a rental warehouse (<loc_depot>). Specialty trucks (<capacity>) transport cameras, lighting, etc. (<demand> per site). To meet tight production schedules, each route must complete within <time_limit> hours before crews wrap for the day. Vehicles remain on set after final deliveries for next-day use. The solution minimizes total mileage while ensuring no truck is overloaded and all locations receive gear on schedule.",
+        "tags": [
+            "num_customer",
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "demand",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Mobile Dental Clinic Outreach",
+        "content": "A nonprofit operates mobile dental clinics that visit underserved communities (<loc_customer>) from a central hub (<loc_depot>). Each clinic van has limited medical supply capacity (<capacity>) and must serve patients at each stop (<demand>). Due to staff shifts, routes cannot exceed <time_limit> hours. Clinics end their day at the final community without returning to the hub. Optimize routes to maximize served communities while respecting supply limits and shift durations.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "demand",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Autonomous Grocery Delivery in Remote Areas",
+        "content": "An autonomous vehicle fleet delivers groceries from a distribution center (<loc_depot>) to remote villages (<loc_customer>). Each vehicle has a payload limit (<capacity>) and battery life allowing <distance_limit> km per trip. Vehicles remain at their last delivery point for overnight recharging. Design routes ensuring all villages receive supplies (<demand>) without exceeding battery range or cargo capacity, minimizing total fleet mileage.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "distance_limit",
+            "demand"
+        ]
+    },
+    {
+        "title": "Urban Streetlight Maintenance Patrol",
+        "content": "A city dispatches repair crews from a depot (<loc_depot>) to maintain faulty streetlights at intersections (<loc_customer>). Each truck carries <capacity> replacement bulbs and tools, with work shifts limited to <time_limit> hours. Crews clock out after their last repair. Plan routes to fix all reported outages (<demand> bulbs per location) while adhering to shift durations and vehicle capacity constraints.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "time_limit",
+            "demand"
+        ]
+    },
+    {
+        "title": "Airborne Seed Dispersion for Reforestation",
+        "content": "Aircraft take off from an airstrip (<loc_depot>) to disperse seed packets over deforested zones (<loc_customer>). Each plane carries <capacity> kg of seeds, and flight paths cannot exceed <distance_limit> km due to fuel constraints. Plan open routes (planes land at nearby airstrips after final drop) to cover all zones (<demand> seeds per zone) while minimizing total flight distance.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "distance_limit",
+            "demand"
+        ]
+    },
+    {
+        "title": "Mobile Pop-Up Retail Van Deployment",
+        "content": "A fashion brand uses vans to host pop-up shops at event venues (<loc_customer>) from a warehouse (<loc_depot>). Each van stocks <capacity> units of merchandise, and daily tours must finish within <time_limit> hours. Vans stay overnight at their last venue. Optimize routes to visit all venues (<demand> inventory per stop) without overloading vans or exceeding operating hours, maximizing sales opportunities.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "time_limit",
+            "demand"
+        ]
+    },
+    {
+        "title": "Mobile Vet Clinic Outreach Program",
+        "content": "A veterinary organization operates mobile clinics to provide care for pets in underserved neighborhoods. Each clinic starts at a central hub (<loc_depot>) and visits multiple locations (<loc_customer>), where demand (<demand>) represents the estimated number of pets needing treatment per stop. Vehicles have limited medical supply capacity (<capacity>) and must complete their route within a strict shift duration (<time_limit>) to ensure staff can return home afterward. Routes should minimize total travel distance while ensuring no vehicle exceeds capacity or duration limits, and clinics do not return to the hub after the final stop.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Urban Green Space Irrigation Patrol",
+        "content": "A city parks department deploys water trucks to maintain public gardens and planters. Trucks depart from a water station (<loc_depot>) and visit green spaces (<loc_customer>), each requiring a specific water volume (<demand>). Vehicles have tank capacities (<capacity>) and must finish routes within <time_limit> hours due to daylight constraints. Since drivers end their shifts at the last location, routes are open. The goal is to cover all sites without refills while minimizing total distance traveled.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Remote Area Textbook Distribution",
+        "content": "An NGO delivers educational materials to rural schools from a regional warehouse (<loc_depot>). Each school (<loc_customer>) orders textbooks (<demand> in kg), and vehicles (<capacity>) must distribute loads within a fuel-limited range (<distance_limit> km). Drivers stay overnight at their final destination for follow-up work, eliminating return trips. Plan routes to serve all schools without overloading vehicles or exceeding range limits.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand",
+            "capacity",
+            "distance_limit"
+        ]
+    },
+    {
+        "title": "Coastal Buoy Maintenance Fleet Routing",
+        "content": "A maritime agency maintains navigation buoys along a coastline. Crew boats (<capacity> for tools/parts) launch from a dock (<loc_depot>) to service buoys (<loc_customer>), each requiring specific repairs (<demand>). Due to tidal conditions, each route must conclude within <time_limit> hours, with boats mooring at the last buoy. Optimize routes to service all buoys while respecting capacity and duration constraints.",
+        "tags": [
+            "capacity",
+            "loc_depot",
+            "loc_customer",
+            "demand",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Pop-Up COVID-19 Booster Shot Campaign",
+        "content": "A health agency sets up temporary vaccination sites across a city. Nurses start at a central storage facility (<loc_depot>), visit sites (<loc_customer>) with estimated vaccine demand (<demand> doses), and end shifts at their final site. Cooler capacity (<capacity>) limits doses per vehicle, and routes must finish within <time_limit> hours to maintain vaccine efficacy. Minimize total travel distance while ensuring full coverage.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Mobile Solar Panel Installation Crew Dispatch",
+        "content": "A renewable energy company deploys crews to install solar panels at remote homesteads (<loc_customer>) from a central warehouse (<loc_depot>). Each crew vehicle has a limited cargo capacity (<capacity>) for panels and tools, and each homestead requires a specific number of panels (<demand>). Crews must complete installations within a strict daylight window (<time_limit> hours) due to safety protocols. After the final installation, crews may stay overnight at the last site rather than returning to the depot. The goal is to minimize total travel distance while ensuring no vehicle exceeds capacity or workday duration.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "demand",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Alpine Hut Resupply by Pack Animals",
+        "content": "A national park uses mule trains to deliver supplies (food, fuel) to backcountry huts (<loc_customer>) from a base camp (<loc_depot>). Each mule can carry up to <capacity> kg, and huts have varying needs (<demand>). Due to animal welfare rules, mule trains cannot travel more than <distance_limit> km/day before resting at the final hut. Routes are open-ended, with handlers staying at the last hut overnight. The challenge is to resupply all huts while minimizing total distance and ensuring no mule is overloaded or overworked.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "demand",
+            "distance_limit"
+        ]
+    },
+    {
+        "title": "Urban Billboard Maintenance Fleet Routing",
+        "content": "An advertising agency maintains digital billboards across a city (<loc_customer>) from a central garage (<loc_depot>). Service vans (<capacity> for spare parts/tools) must repair malfunctioning billboards (<demand> parts per site). Due to union rules, each van\u2019s shift cannot exceed <time_limit> hours, including travel. Technicians end their shift at the last billboard serviced. Optimize routes to minimize total travel time while respecting both capacity and shift duration constraints.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "demand",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Desert Archaeological Site Documentation Teams",
+        "content": "Researchers document artifacts at remote desert sites (<loc_customer>) from a field base (<loc_depot>). Each team vehicle carries <capacity> kg of equipment (cameras, drones), and sites require varying gear (<demand>). Extreme heat limits daily travel to <time_limit> hours; teams camp at their final site. Plan routes to cover all sites without exceeding vehicle capacity or heat exposure limits, minimizing total distance across the fragile ecosystem.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "demand",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Coastal Lighthouse Refueling Mission",
+        "content": "A maritime authority must deliver fuel to automated lighthouses (<loc_customer>) from a mainland depot (<loc_depot>). Supply boats (<capacity> liters) face volatile weather, restricting each trip to <distance_limit> nautical miles before seeking safe harbor. Each lighthouse needs a unique fuel amount (<demand>). Boats may dock at the final lighthouse until conditions improve. Design routes to refuel all lighthouses while respecting capacity and storm-safe travel distances.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "distance_limit",
+            "demand"
+        ]
+    },
+    {
+        "title": "Mobile COVID-19 Vaccine Booster Campaign",
+        "content": "A health organization launches a mobile vaccination campaign to administer booster shots in underserved neighborhoods. Teams depart from a central hub (<loc_depot>) with refrigerated vans (<capacity> doses per vehicle) to visit <num_customer> pop-up sites (<loc_customer>), each requiring a specific number of doses (<demand>). Due to vaccine stability constraints, each van\u2019s route must conclude within <time_limit> hours. After the final stop, vans proceed directly to a cold storage facility (no return to depot). Optimize routes to maximize coverage while respecting dose limits and time-sensitive logistics.",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "num_customer",
+            "loc_customer",
+            "demand",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Autonomous Drone-Based Medicine Delivery in Remote Islands",
+        "content": "A drone fleet delivers emergency medicines from a coastal base (<loc_depot>) to isolated island clinics (<loc_customer>). Each drone carries up to <capacity> kg of supplies, with clinics requesting varying quantities (<demand>). Drones must complete deliveries within <time_limit> minutes due to battery constraints and land at a charging station on the final island (open routes). Design energy-efficient flight paths to ensure all clinics receive critical supplies without mid-route failures.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Urban Flower Delivery for Same-Day Events",
+        "content": "A florist coordinates same-day deliveries for weddings/events across a metropolitan area. Vans loaded with floral arrangements (<capacity> bouquets per vehicle) depart from a greenhouse (<loc_depot>) to <num_customer> venues (<loc_customer>), each ordering unique quantities (<demand>). To preserve freshness, each route must finish within <time_limit> hours, with drivers ending their shift at the last venue. Minimize total travel distance while ensuring no van exceeds capacity or floral viability windows.",
+        "tags": [
+            "capacity",
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "demand",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Mobile Repair Kits for Offshore Oil Rigs",
+        "content": "A maintenance company services offshore oil rigs (<loc_customer>) from a port (<loc_depot>) using helicopters with limited cargo space (<capacity> kg of tools/parts). Each rig requires specialized equipment (<demand>), and helicopters must complete their assigned route within <time_limit> hours due to fuel constraints. After the final rig, helicopters divert to a refueling platform (open route). Plan fuel-optimal routes that prioritize urgent repairs without overloading aircraft.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "demand",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Reforestation Seedling Distribution in Fire-Damaged Regions",
+        "content": "A conservation group replants forests by distributing seedlings from a nursery (<loc_depot>) to <num_customer> drop points (<loc_customer>) via trucks (<capacity> seedlings per vehicle). Each site demands specific seedling quantities (<demand>), and routes must conclude within <time_limit> hours to ensure planting crews finish before dusk. Trucks remain at the final site to support planting efforts. Optimize routes to minimize travel distance while adhering to payload and ecological restoration timelines.",
+        "tags": [
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "capacity",
+            "demand",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Mobile Museum Exhibit Transport",
+        "content": "A traveling museum exhibit needs to transport artifacts from a central storage facility (<loc_depot>) to <num_customer> temporary display sites (<loc_customer>). Each site requires specific artifacts with varying weights (<demand>). Transport trucks have a strict weight limit (<capacity>) and a maximum daily operating time (<time_limit>) due to driver regulations. After the final delivery, trucks park at the last site overnight. The goal is to minimize total travel time while ensuring no truck exceeds its capacity or duration limit.",
+        "tags": [
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "demand",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Autonomous Underwater Glider Deployment",
+        "content": "A marine research team must deploy autonomous gliders from a coastal base (<loc_depot>) to monitor ocean conditions at <num_customer> waypoints (<loc_customer>). Each glider can carry sensors weighing up to <capacity> kg and has a battery life allowing <time_limit> hours of operation. Gliders are not recovered after deployment (open routes). The challenge is to assign waypoints to gliders such that all monitoring points are covered without exceeding weight or battery constraints, while minimizing total navigation distance.",
+        "tags": [
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Urban Streetlight Bulb Replacement",
+        "content": "A city maintenance department needs to replace burnt-out bulbs across <num_customer> streetlight locations (<loc_customer>) starting from a central warehouse (<loc_depot>). Service vans carry fragile bulbs with a maximum load of <capacity> units. Due to union rules, each crew's shift cannot exceed <time_limit> hours. Crews end their shifts at their final replacement location. The objective is to replace all bulbs while respecting vehicle capacity and shift duration limits, optimizing for shortest total travel time.",
+        "tags": [
+            "num_customer",
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "High-Altitude Balloon Payload Delivery",
+        "content": "A scientific organization launches weather balloons from a mountain base (<loc_depot>) to deliver instrument packages to <num_customer> remote atmospheric research sites (<loc_customer>). Each balloon can carry up to <capacity> kg of equipment and remains airborne for exactly <time_limit> hours before bursting. Packages are released at target locations without balloon recovery (open routes). The goal is to plan balloon trajectories that deliver all payloads within flight duration limits while minimizing total flight distance across all balloons.",
+        "tags": [
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Mobile Voting Booth Logistics",
+        "content": "During an election, a fleet of mobile voting booths must visit <num_customer> neighborhoods (<loc_customer>) from an election commission office (<loc_depot>). Each vehicle transports voting machines with a combined weight limit (<capacity>) and must complete its route within <time_limit> hours to meet election day deadlines. Vehicles remain at their final neighborhood for vote collection. The challenge is to assign neighborhoods to vehicles such that all areas are served without exceeding capacity or time constraints, while minimizing the total distance traveled by the fleet.",
+        "tags": [
+            "num_customer",
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Mobile COVID-19 Vaccine Booster Campaign",
+        "content": "A health organization launches a mobile vaccination campaign to administer booster shots in underserved communities. Teams depart from a central hub (<loc_depot>) with refrigerated vans (capacity: <capacity> doses) to visit <num_customer> pop-up clinics (<loc_customer>), each requiring a specific number of doses (<demand>). Due to vaccine stability constraints, each van must complete its route within <time_limit> hours. After the final stop, vans proceed to a nearby storage facility (no return to depot). The goal is to maximize coverage while minimizing total travel time and ensuring no van exceeds its dose capacity or time limit.",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "num_customer",
+            "loc_customer",
+            "demand",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Autonomous Drone-Based Medicine Delivery in Remote Islands",
+        "content": "A drone fleet delivers emergency medicines from a coastal base (<loc_depot>) to <num_customer> isolated island clinics (<loc_customer>). Each drone carries up to <capacity> kg of supplies, with clinic demands ranging from insulin to antibiotics (<demand>). Drones have a strict <time_limit>-hour battery life and cannot return to base; instead, they land at designated charging stations after their last delivery. Routes must ensure all clinics receive critical supplies while minimizing total flight distance and adhering to payload and battery constraints.",
+        "tags": [
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "capacity",
+            "demand",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Urban Flower Delivery for Same-Day Events",
+        "content": "A florist coordinates last-minute flower deliveries for weddings/events across a metropolitan area. Vans loaded at a central warehouse (<loc_depot>) transport fragile arrangements (<capacity> bouquets per van) to <num_customer> venues (<loc_customer>), each with unique order sizes (<demand>). To preserve freshness, each route must conclude within <time_limit> hours, with drivers ending their shift at the final delivery point. The challenge is to optimize routes that avoid overloading vans, meet tight freshness windows, and minimize total mileage.",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "num_customer",
+            "loc_customer",
+            "demand",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Mobile Repair Kits for Offshore Oil Rigs",
+        "content": "A maintenance company services offshore oil rigs by dispatching helicopters from a coastal base (<loc_depot>). Each helicopter carries specialized repair kits (max weight: <capacity> tons) to <num_customer> rigs (<loc_customer>), with varying equipment needs (<demand>). Due to fuel constraints, helicopters must complete their route within <time_limit> hours and land at the final rig for crew rotations. The objective is to cover all rigs without exceeding weight limits or flight durations while minimizing total airtime.",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "num_customer",
+            "loc_customer",
+            "demand",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Reforestation Seedling Distribution in Fire-Damaged Regions",
+        "content": "A conservation group replants wildfire-affected zones using trucks to distribute seedlings from a nursery (<loc_depot>). Each truck holds up to <capacity> saplings and visits <num_customer> planting sites (<loc_customer>), with site-specific needs (<demand>). To ensure seedling survival, routes must finish within <time_limit> hours (to avoid heat exposure), and trucks remain on-site for overnight crew lodging. The goal is to optimize routes that respect payload limits, biological time constraints, and total distance traveled.",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "num_customer",
+            "loc_customer",
+            "demand",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Mobile COVID-19 Vaccine Booster Campaign",
+        "content": "A health organization launches a mobile vaccination campaign to administer booster shots in underserved neighborhoods. Teams depart from a central hub (<loc_depot>) with refrigerated vans (capacity: <capacity> doses) to visit <num_customer> pop-up sites (<loc_customer>), each requiring a specific number of doses (<demand>). Due to vaccine stability, each van must complete its route within <time_limit> hours. After the final stop, vans proceed to a nearby storage facility (no return to depot). The goal is to maximize coverage while minimizing travel time and ensuring no van exceeds its dose capacity or duration limit.",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "num_customer",
+            "loc_customer",
+            "demand",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Autonomous Drone-Based Medicine Delivery in Remote Islands",
+        "content": "A drone fleet delivers emergency medicines from a coastal base (<loc_depot>) to isolated island clinics (<loc_customer>). Each drone carries up to <capacity> kg of supplies, with clinics requesting varying weights (<demand>). Drones have a strict battery life allowing <distance_limit> km of travel per charge and do not return to base after delivery (landing at clinics for retrieval). Optimize routes to serve all clinics without exceeding payload or battery limits while minimizing total flight distance.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand",
+            "distance_limit"
+        ]
+    },
+    {
+        "title": "Urban Flower Delivery for Same-Day Events",
+        "content": "A florist coordinates same-day deliveries for weddings/events across a city. Vans (capacity: <capacity> bouquets) depart from a greenhouse (<loc_depot>) to <num_customer> venues (<loc_customer>), each ordering a unique quantity (<demand>). Drivers finish shifts after their last delivery (open routes). To ensure freshness, each route must conclude within <time_limit> hours. Design routes that avoid overloading vans, meet deadlines, and reduce total mileage.",
+        "tags": [
+            "capacity",
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "demand",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Mobile Repair Kits for Offshore Oil Rigs",
+        "content": "A maintenance company dispatches helicopters from an onshore base (<loc_depot>) to deliver repair kits to offshore rigs (<loc_customer>). Each kit weighs <demand> tons, and helicopters have a max payload of <capacity> tons. Due to fuel constraints, each helicopter can fly for only <time_limit> hours before landing at the final rig (no return). Plan routes to service all rigs without exceeding weight or flight duration, minimizing total airtime.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Reforestation Seedling Distribution in Fire-Damaged Regions",
+        "content": "A conservation group replants forests using trucks to distribute seedlings from a nursery (<loc_depot>) to burn sites (<loc_customer>). Each truck holds <capacity> seedlings, with sites needing varying amounts (<demand>). Drivers end routes at the last site to assist planting (open routes). To prevent seedling wilting, routes must finish within <time_limit> hours. Optimize distribution to minimize travel distance while respecting capacity and time constraints.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Mobile COVID-19 Vaccine Booster Campaign",
+        "content": "A health organization launches a mobile vaccination campaign to administer booster shots in underserved neighborhoods. Teams depart from a central hub (<loc_depot>) with refrigerated vans (capacity: <capacity> doses) to visit <num_customer> pop-up clinics (<loc_customer>), each requiring <demand> doses. Due to vaccine stability, each van must complete its route within <time_limit> hours. After the final stop, vans proceed to a nearby storage facility (no return to depot). The goal is to maximize coverage while minimizing travel time and ensuring no van exceeds its payload or operational window.",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "num_customer",
+            "loc_customer",
+            "demand",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Autonomous Drone-Based Medicine Delivery in Remote Islands",
+        "content": "A drone fleet delivers emergency medicines from a coastal base (<loc_depot>) to <num_customer> island clinics (<loc_customer>). Each drone carries up to <capacity> kg of supplies, with clinics needing <demand> kg. Drones have a strict battery limit (<time_limit> hours) and terminate routes at the last clinic for retrieval by boat. Routes must ensure all clinics receive critical supplies without mid-flight battery depletion, prioritizing minimal total flight distance.",
+        "tags": [
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "capacity",
+            "demand",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Urban Flower Delivery for Same-Day Events",
+        "content": "A florist coordinates same-day deliveries for event venues (<loc_customer>) from a warehouse (<loc_depot>) using electric cargo bikes (capacity: <capacity> bouquets). Each venue orders <demand> bouquets, and bikes must complete deliveries within <time_limit> hours to ensure freshness. Riders end their shift at the last venue to avoid unnecessary returns. The challenge is to optimize bouquet distribution across bikes while respecting payload limits and tight delivery windows.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "demand",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Mobile Repair Kits for Offshore Oil Rigs",
+        "content": "A maintenance company dispatches helicopters from an onshore base (<loc_depot>) to deliver repair kits to <num_customer> offshore rigs (<loc_customer>). Each kit weighs <demand> kg, and helicopters have a payload limit of <capacity> kg. Due to fuel constraints, each route must conclude within <time_limit> flight hours, with helicopters remaining at the final rig for crew rotations. The objective is to service all rigs with minimal total flight time while adhering to weight and duration constraints.",
+        "tags": [
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "demand",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Reforestation Seedling Distribution in Fire-Damaged Regions",
+        "content": "A conservation group replants forests using trucks (capacity: <capacity> seedlings) from a nursery (<loc_depot>) to <num_customer> burn sites (<loc_customer>), each needing <demand> seedlings. Trucks must distribute seedlings within <time_limit> hours to prevent root drying. Drivers finish at the last site to assist with planting, eliminating return trips. Routes must balance seedling loads and minimize travel distance while meeting ecological deadlines.",
+        "tags": [
+            "capacity",
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "demand",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Autonomous Drone-Based Wildlife Tracking Tag Deployment",
+        "content": "A conservation team needs to deploy GPS tracking tags on wildlife across a vast national park. Drones launch from a central base (<loc_depot>) and must visit <num_customer> animal habitats (<loc_customer>), each requiring a specific number of tags (<demand>). Each drone can carry up to <capacity> tags and has a battery life limiting flight time to <time_limit> hours. After deploying tags at the final habitat, drones land at a charging station near that location (no return to depot). The goal is to minimize total flight distance while ensuring all habitats are covered without exceeding drone capacity or battery limits.",
+        "tags": [
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "demand",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Mobile COVID-19 Testing Unit Deployment in Rural Areas",
+        "content": "Health authorities must dispatch mobile testing vans from a regional hub (<loc_depot>) to <num_customer> remote villages (<loc_customer>), each requiring <demand> test kits. Vans have a <capacity> test kit limit and drivers can work for a maximum of <time_limit> hours per shift before resting at their final village. Routes must ensure all villages receive testing supplies without overloading vans or exceeding shift durations, while minimizing total travel distance for the fleet.",
+        "tags": [
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "demand",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Urban Street Food Vendor Resupply Network",
+        "content": "A commissary kitchen (<loc_depot>) supplies fresh ingredients to <num_customer> food carts (<loc_customer>) across the city before dawn. Each cart orders <demand> kg of ingredients, and electric trikes (capacity <capacity> kg) must complete deliveries within <time_limit> hours to ensure carts open on time. Drivers finish shifts at their last cart location. Optimize routes to prevent trike overloads, respect time constraints, and reduce total mileage across the fleet.",
+        "tags": [
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "demand",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Arctic Research Station Equipment Delivery",
+        "content": "A supply ship (<loc_depot>) must deliver heavy equipment to <num_customer> remote research stations (<loc_customer>) using helicopters with <capacity> ton payload limits. Each station needs <demand> tons of gear, and helicopters must complete missions within <time_limit> hours due to extreme weather windows. After final delivery, helicopters land at the nearest safe zone (no return to ship). Plan fuel-efficient routes that respect payload and flight duration constraints while serving all stations.",
+        "tags": [
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "capacity",
+            "demand",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Temporary Event WiFi Hotspot Deployment",
+        "content": "An ISP needs to deploy portable WiFi hotspots from a tech van (<loc_depot>) to <num_customer> locations (<loc_customer>) for a marathon event. Each hotspot weighs <demand> kg, and technicians on foot can carry up to <capacity> kg of equipment for <time_limit> hours before ending their shift. Routes must ensure all locations receive coverage without exceeding individual load capacities or work duration limits, minimizing total walking distance for the team.",
+        "tags": [
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "demand",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Mobile EV Charging Station Deployment",
+        "content": "A city is deploying mobile electric vehicle (EV) charging stations to underserved neighborhoods. Starting from a central depot (<loc_depot>), trucks with battery capacity (<capacity>) must deliver charging pods to <num_customer> locations (<loc_customer>), each requiring a specific number of pods (<demand>). Due to limited operational hours (<time_limit>), trucks must complete deliveries without returning to the depot. The goal is to minimize total travel distance while ensuring no truck exceeds its battery capacity or route duration.",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "num_customer",
+            "loc_customer",
+            "demand",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Underwater Pipeline Inspection Robot Routing",
+        "content": "A marine engineering firm uses autonomous underwater robots to inspect pipelines across offshore oil fields. Robots depart from a base station (<loc_depot>) with limited battery life (<time_limit> hours) and sensor payload capacity (<capacity>). Each pipeline segment (<loc_customer>) requires inspection equipment (<demand>). Robots must inspect all segments without returning to base, and routes must account for currents that affect travel speed (<speed>). Optimize for minimal total distance while adhering to battery and payload limits.",
+        "tags": [
+            "loc_depot",
+            "time_limit",
+            "capacity",
+            "loc_customer",
+            "demand",
+            "speed"
+        ]
+    },
+    {
+        "title": "Post-Wildfire Tree Replanting Logistics",
+        "content": "After a wildfire, a conservation group replants trees using trucks carrying saplings (<capacity>). Starting from a nursery (<loc_depot>), trucks must visit burn sites (<loc_customer>) with specific sapling needs (<demand>). Due to daylight constraints (<time_limit>), routes must end at the final site. Plan fuel-efficient routes that avoid overloading trucks and complete all deliveries within the allowed time.",
+        "tags": [
+            "capacity",
+            "loc_depot",
+            "loc_customer",
+            "demand",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Autonomous Taxi Fleet Relocation",
+        "content": "A ride-sharing company relocates idle autonomous taxis from low-demand zones to high-demand hotspots (<loc_customer>). Taxis depart from a charging hub (<loc_depot>) with energy limits (<time_limit>) and passenger capacity (<capacity>). Each hotspot requires a minimum number of taxis (<demand>). Taxis remain at their final destination. Optimize routes to minimize total relocation distance while respecting battery life and vehicle capacity.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "time_limit",
+            "capacity",
+            "demand"
+        ]
+    },
+    {
+        "title": "Rural School Meal Delivery",
+        "content": "A nonprofit delivers fresh meals from a central kitchen (<loc_depot>) to remote schools (<loc_customer>) using refrigerated vans (<capacity>). Each school has a daily meal requirement (<demand>), and vans must complete deliveries before meals spoil (<time_limit>). Drivers finish their shifts at the last school. Design routes that minimize travel distance, avoid overloading vans, and ensure timely deliveries.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Mobile COVID-19 Vaccine Booster Campaign",
+        "content": "A health organization launches a mobile vaccination campaign to administer booster shots in underserved neighborhoods. Teams depart from a central hub (<loc_depot>) with refrigerated vans (capacity: <capacity> doses) to visit <num_customer> pop-up clinics (<loc_customer>), each requiring <demand> doses. Due to vaccine stability, each van must complete its route within <time_limit> hours. After the final stop, vans park at the last clinic for restocking rather than returning to the hub. Optimize routes to maximize coverage while respecting cold chain logistics and time constraints.",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "num_customer",
+            "loc_customer",
+            "demand",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Autonomous Drone-Based Medicine Delivery in Remote Islands",
+        "content": "A drone fleet delivers emergency medicines from a coastal base (<loc_depot>) to <num_customer> island clinics (<loc_customer>). Each drone carries up to <capacity> kg of supplies, with clinic demands ranging from <demand>. Limited battery life restricts each drone to <time_limit> minutes of flight. Drones recharge at their final delivery point instead of returning. Design routes ensuring all clinics receive critical supplies while minimizing total flight distance and avoiding drone stranding.",
+        "tags": [
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "capacity",
+            "demand",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Urban Flower Delivery for Same-Day Events",
+        "content": "A florist coordinates last-minute flower deliveries for weddings/events across a metropolitan area. Vans (capacity: <capacity> bouquets) depart from a greenhouse (<loc_depot>) to <num_customer> venues (<loc_customer>), each requiring <demand> arrangements. To maintain freshness, each route must conclude within <time_limit> hours. Drivers end their shifts after the final delivery. Plan routes that prevent bouquet wilting while optimizing fleet utilization.",
+        "tags": [
+            "capacity",
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "demand",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Mobile Repair Kits for Offshore Oil Rigs",
+        "content": "A maintenance company services offshore oil rigs by helicopter from a coastal depot (<loc_depot>). Each helicopter can carry <capacity> kg of repair parts to <num_customer> rigs (<loc_customer>), with customized toolkits weighing <demand>. Due to fuel limits, each sortie cannot exceed <time_limit> hours airborne. Helicopters remain at the last serviced rig for crew rotation. Schedule flights to minimize total airtime while ensuring all rigs receive critical maintenance supplies.",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "num_customer",
+            "loc_customer",
+            "demand",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Reforestation Seedling Distribution in Fire-Damaged Regions",
+        "content": "A conservation group replants forests using trucks from a nursery (<loc_depot>) to deliver seedlings to <num_customer> burn sites (<loc_customer>). Each truck holds <capacity> saplings, with sites needing <demand> plants. To ensure survival, seedlings must be planted within <time_limit> hours of loading. Trucks stay at the final site to assist planting crews. Design routes that maximize sapling viability while minimizing travel through rough terrain.",
+        "tags": [
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "capacity",
+            "demand",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Mobile COVID-19 Vaccine Booster Campaign",
+        "content": "A health organization launches a mobile vaccination campaign to administer booster shots in underserved neighborhoods. Teams depart from a central hub (<loc_depot>) with refrigerated vans (capacity: <capacity> doses) to visit <num_customer> pop-up clinics (<loc_customer>), each requiring <demand> doses. Due to vaccine stability, each van\u2019s route must conclude within <time_limit> hours. After the final stop, vans proceed to a nearby storage facility (no return to depot). The goal is to maximize coverage while minimizing travel time and ensuring no van exceeds its payload or operational window.",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "num_customer",
+            "loc_customer",
+            "demand",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Autonomous Drone-Based Medicine Delivery in Remote Islands",
+        "content": "A drone fleet delivers urgent medications from a coastal base (<loc_depot>) to <num_customer> island clinics (<loc_customer>). Each drone carries up to <capacity> kg of supplies, and clinics request varying amounts (<demand>). Drones have a strict battery life allowing <time_limit> hours of flight. Since charging stations are scattered, drones land at the last clinic\u2019s location. Optimize routes to ensure all deliveries are completed without exceeding weight or battery limits, minimizing total flight distance.",
+        "tags": [
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "capacity",
+            "demand",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Urban Flower Delivery for Same-Day Events",
+        "content": "A florist fulfills last-minute wedding/event orders across a city. Delivery vans (capacity: <capacity> bouquets) start at the warehouse (<loc_depot>) and visit <num_customer> venues (<loc_customer>), each needing <demand> arrangements. To guarantee freshness, each route must finish within <time_limit> hours. Drivers end their shift at the final delivery point. Design routes that avoid overloading vans, meet deadlines, and reduce unnecessary mileage.",
+        "tags": [
+            "capacity",
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "demand",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Mobile Repair Kits for Offshore Oil Rigs",
+        "content": "A maintenance company dispatches helicopters from an onshore base (<loc_depot>) to service <num_customer> oil rigs (<loc_customer>). Each helicopter can carry <capacity> kg of tools/parts, with rigs requiring varying kits (<demand>). Due to fuel constraints, flights must conclude within <time_limit> hours, and crews stay overnight at the final rig. Plan routes to cover all rigs efficiently without exceeding payload or flight duration.",
+        "tags": [
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "capacity",
+            "demand",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Reforestation Seedling Distribution in Fire-Damaged Regions",
+        "content": "A conservation group replants forests using trucks (capacity: <capacity> seedlings) from a nursery (<loc_depot>) to <num_customer> burn sites (<loc_customer>), each needing <demand> saplings. Trucks must complete deliveries within <time_limit> hours to avoid heat damage to plants. Drivers finish at the last site to assist with planting. Optimize routes to distribute all seedlings while respecting capacity and time limits.",
+        "tags": [
+            "capacity",
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "demand",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Mobile COVID-19 Vaccine Booster Campaign",
+        "content": "A health organization launches a mobile vaccination campaign to administer booster shots in underserved neighborhoods. Teams depart from a central hub (<loc_depot>) with refrigerated vans (capacity: <capacity> doses) to visit <num_customer> pop-up clinics (<loc_customer>), each requiring <demand> doses. Each van must complete its route within <time_limit> hours to maintain vaccine efficacy. After the final stop, vans proceed to a nearby storage facility (no return to depot). The goal is to minimize total travel time while ensuring no van exceeds its dose capacity or temperature-controlled duration.",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "num_customer",
+            "loc_customer",
+            "demand",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Autonomous Drone-Based Medicine Delivery in Remote Islands",
+        "content": "A drone fleet delivers urgent medications from a coastal base (<loc_depot>) to <num_customer> isolated island clinics (<loc_customer>). Each drone carries up to <capacity> kg of supplies, and each clinic needs <demand> kg. Drones have a battery life allowing <time_limit> hours of flight. After the last delivery, drones land on charging pads at the final island (open routes). Optimize routes to serve all clinics without exceeding payload or battery limits while minimizing total flight distance.",
+        "tags": [
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "capacity",
+            "demand",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Urban Flower Delivery for Same-Day Events",
+        "content": "A florist coordinates same-day deliveries for weddings/events across a city. Vans (capacity: <capacity> bouquets) start at a greenhouse (<loc_depot>) to deliver to <num_customer> venues (<loc_customer>), each requiring <demand> arrangements. Drivers must finish within <time_limit> hours to ensure freshness and can end their shift after the last delivery. Design routes that avoid overloading vans, meet deadlines, and reduce total mileage.",
+        "tags": [
+            "capacity",
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "demand",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Mobile Repair Kits for Offshore Oil Rigs",
+        "content": "A maintenance company dispatches helicopters from an onshore base (<loc_depot>) to deliver repair kits to <num_customer> offshore rigs (<loc_customer>). Each kit weighs <demand> kg, and helicopters have a payload limit of <capacity> kg and fuel for <time_limit> hours. After the last drop, helicopters divert to the nearest refueling station. Plan routes to cover all rigs without exceeding weight or fuel constraints while minimizing airtime.",
+        "tags": [
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "demand",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Reforestation Seedling Distribution in Fire-Damaged Regions",
+        "content": "A conservation group replants forests using trucks (capacity: <capacity> seedlings) from a nursery (<loc_depot>) to <num_customer> burn sites (<loc_customer>), each needing <demand> saplings. Trucks must complete planting within <time_limit> hours to avoid seedling stress and can park overnight at the final site. Optimize routes to distribute all seedlings efficiently within biological and vehicle constraints.",
+        "tags": [
+            "capacity",
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "demand",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Mobile COVID-19 Vaccine Booster Campaign",
+        "content": "A health organization launches a mobile vaccination campaign to administer booster shots in underserved neighborhoods. Teams depart from a central clinic (<loc_depot>) with refrigerated vans (capacity: <capacity> doses) to visit <num_customer> pop-up sites (<loc_customer>), each requiring <demand> doses. Due to vaccine stability, each van must complete its route within <time_limit> hours before returning to base. Routes should minimize total travel distance while ensuring no van exceeds its dose capacity or time limit, and teams may end their day at the final site.",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "num_customer",
+            "loc_customer",
+            "demand",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Autonomous Drone-Based Medicine Delivery in Remote Islands",
+        "content": "A drone fleet delivers emergency medicines from a coastal hub (<loc_depot>) to <num_customer> island clinics (<loc_customer>), each needing <demand> kg of supplies. Drones have a payload limit of <capacity> kg and battery life allowing <time_limit> hours of flight. Since charging stations are scarce, drones must complete deliveries in one trip without returning. Optimize routes to cover all clinics while respecting battery and weight constraints, minimizing total flight distance.",
+        "tags": [
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "demand",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Urban Flower Delivery for Same-Day Events",
+        "content": "A florist fulfills last-minute wedding/event orders from a central warehouse (<loc_depot>) using vans (capacity: <capacity> bouquets). Each of <num_customer> venues (<loc_customer>) orders <demand> bouquets. To ensure freshness, deliveries must conclude within <time_limit> hours after departure. Drivers finish at the last venue. Design routes that avoid overloading vans, meet the time limit, and minimize total mileage.",
+        "tags": [
+            "loc_depot",
+            "capacity",
+            "num_customer",
+            "loc_customer",
+            "demand",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Mobile Repair Kits for Offshore Oil Rigs",
+        "content": "A maintenance company dispatches helicopters from a port (<loc_depot>) to deliver repair kits to <num_customer> offshore rigs (<loc_customer>), each needing <demand> kg of equipment. Helicopters can carry up to <capacity> kg and must complete trips within <time_limit> hours due to fuel limits. Crews may stay at the final rig. Plan fuel-efficient routes that serve all rigs without exceeding weight or flight duration constraints.",
+        "tags": [
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "demand",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Reforestation Seedling Distribution in Fire-Damaged Regions",
+        "content": "A conservation group coordinates seedling deliveries from a nursery (<loc_depot>) to <num_customer> burn sites (<loc_customer>), each requiring <demand> saplings. Trucks (capacity: <capacity> plants) must distribute seedlings within <time_limit> hours to ensure survival. Drivers end routes at the final site. Optimize paths to cover all locations while respecting vehicle capacity and time limits, minimizing total distance traveled.",
+        "tags": [
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "demand",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Mobile COVID-19 Testing Unit Deployment in Rural Areas",
+        "content": "A health organization needs to deploy mobile testing units from a central hub (<loc_depot>) to remote villages (<loc_customer>) with limited road access. Each unit can carry up to <capacity> test kits, and each village requires <demand> kits. Due to harsh terrain, vehicles must complete their routes within <time_limit> hours before returning to base. The goal is to maximize coverage while minimizing total travel distance, allowing units to remain in the last village for follow-up testing if needed.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "demand",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Urban Street Food Vendor Resupply Network",
+        "content": "A food distributor supplies fresh ingredients to street vendors (<loc_customer>) across a city from a central market (<loc_depot>). Delivery trucks have a perishable goods capacity of <capacity> kg, and each vendor orders <demand> kg daily. To ensure freshness, each route must finish within <time_limit> hours. Drivers end their shifts at the last vendor, reducing unnecessary returns. Optimize routes to minimize spoilage and fuel costs.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "demand",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Arctic Research Station Equipment Delivery",
+        "content": "A logistics team must deliver heavy equipment (<demand> tons per station) from a coastal base (<loc_depot>) to remote Arctic research stations (<loc_customer>) using ice-road trucks with a <capacity> ton limit. Due to extreme weather, each route cannot exceed <time_limit> hours to avoid dangerous overnight travel. Trucks park at the final station until the next mission. Plan routes to minimize fuel use while ensuring all stations receive supplies.",
+        "tags": [
+            "demand",
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Temporary Event WiFi Hotspot Deployment",
+        "content": "An ISP deploys portable WiFi hotspots (<demand> units per location) to event venues (<loc_customer>) from a tech depot (<loc_depot>). Installation vans carry <capacity> hotspots each and must finish setups within <time_limit> hours to meet service agreements. Technicians stay at the last venue for troubleshooting. Design routes to cover all events with minimal travel distance.",
+        "tags": [
+            "demand",
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Mobile EV Charging Station Deployment",
+        "content": "An energy company dispatches mobile charging trucks (<capacity> kWh per vehicle) to stranded EVs at <loc_customer> from a central garage (<loc_depot>). Each stranded vehicle requires <demand> kWh. Trucks must complete rescues within <time_limit> hours due to battery limits and remain at the final location. Optimize routes to assist the maximum number of EVs with minimal energy waste.",
+        "tags": [
+            "capacity",
+            "loc_customer",
+            "loc_depot",
+            "demand",
+            "time_limit"
+        ]
+    }
+]

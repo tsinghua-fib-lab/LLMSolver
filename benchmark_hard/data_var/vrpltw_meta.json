@@ -1,0 +1,1222 @@
+[
+    {
+        "title": "Elderly Meal Delivery Service with Time-Sensitive Slots",
+        "content": "A nonprofit organization delivers hot meals to homebound seniors across the city, starting from a central kitchen at `<loc_depot>`. Each senior\u2019s residence (`<loc_customer>`) has a strict mealtime window (`<time_windows>`) to ensure food is delivered warm, and unloading takes `<service_time>` minutes. Delivery vans have a refrigerated capacity of `<capacity>` meals and must return to the kitchen within `<time_limit>` hours to avoid driver overtime. The goal is to minimize total route distance while ensuring no meal is delivered late or spoiled due to overcrowded vehicles.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "time_windows",
+            "service_time",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Mobile COVID-19 Testing Unit Deployment",
+        "content": "A health agency dispatches mobile testing vans from a depot (`<loc_depot>`) to high-risk neighborhoods (`<loc_customer>`), each with a demand for `<demand>` test kits. Vans have a `<capacity>`-kit limit and must arrive during pre-scheduled time windows (`<time_windows>`) to align with community availability. Due to lab processing deadlines, each van\u2019s route cannot exceed `<time_limit>` hours. Optimize routes to maximize daily testing coverage while respecting time windows and avoiding van overloads.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand",
+            "capacity",
+            "time_windows",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Luxury Hotel Concierge Chauffeuring",
+        "content": "A five-star hotel offers chauffeur services for guests using electric limousines (capacity: `<capacity>` passengers) from the hotel (`<loc_depot>`). Each guest\u2019s itinerary includes pickup/drop-off locations (`<loc_customer>`) and fixed time windows (`<time_windows>`) for events (e.g., flights, dinners). Limousines must return to the hotel within `<time_limit>` hours to recharge. Design routes to minimize idle time and ensure no guest is left waiting, balancing battery life and punctuality.",
+        "tags": [
+            "capacity",
+            "loc_depot",
+            "loc_customer",
+            "time_windows",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Perishable Flower Market Deliveries",
+        "content": "A floral distributor at `<loc_depot>` supplies fresh flowers to `<num_customer>` florists (`<loc_customer>`) before their shop openings (`<time_windows>`). Each order weighs `<demand>` kg, and refrigerated trucks (`<capacity>` kg) must complete deliveries within `<time_limit>` hours to preserve freshness. Unloading takes `<service_time>` minutes per stop. Optimize routes to minimize wilting risk by reducing travel time while adhering to strict delivery windows and truck capacity.",
+        "tags": [
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "time_windows",
+            "demand",
+            "capacity",
+            "time_limit",
+            "service_time"
+        ]
+    },
+    {
+        "title": "Rural Postal Service with Limited Fuel",
+        "content": "A postal service delivers packages from a central hub (`<loc_depot>`) to remote villages (`<loc_customer>`), each with a `<demand>` parcel volume. Vehicles have a `<capacity>`-parcel limit and a fuel range of `<distance_limit>` km. Villages accept deliveries only during daylight hours (`<time_windows>`). Plan routes to ensure all packages are delivered within operational hours, vehicles return to the hub without refueling, and no route exceeds fuel constraints.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "demand",
+            "capacity",
+            "distance_limit",
+            "time_windows"
+        ]
+    },
+    {
+        "title": "Hospital Pharmacy Courier Service",
+        "content": "A central hospital pharmacy at <loc_depot> must deliver time-sensitive medications (e.g., chemotherapy drugs) to <num_customer> satellite clinics (<loc_customer>). Each clinic has:  \n- A strict delivery window (<time_windows>) due to staff availability.  \n- A refrigerated transport requirement (each vehicle has a <capacity> limit for temperature-controlled compartments).  \n- A service time (<service_time>) for inventory handover.  \nVehicles must return to the depot within <time_limit> hours to avoid drug spoilage. The goal is to minimize travel time while ensuring no clinic misses its critical delivery window.",
+        "tags": [
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "time_windows",
+            "capacity",
+            "service_time",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Disaster Relief Shelter Supply Runs",
+        "content": "After a hurricane, relief teams must distribute supplies (food, water, blankets) from a central warehouse (<loc_depot>) to <num_customer> emergency shelters (<loc_customer>). Constraints include:  \n- Shelters have urgent time windows (<time_windows>) based on peak demand (e.g., before nightfall).  \n- Vehicles (capacity: <capacity>) face flooded roads, limiting daily travel to <distance_limit> km.  \n- Service times (<service_time>) vary by shelter size.  \nObjective: Maximize deliveries within time windows while adhering to vehicle constraints.",
+        "tags": [
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "time_windows",
+            "capacity",
+            "distance_limit",
+            "service_time"
+        ]
+    },
+    {
+        "title": "Corporate Campus Shuttle System",
+        "content": "A tech campus operates electric shuttles (battery limit: <time_limit> hours) to transport employees from <loc_depot> to <num_customer> office buildings (<loc_customer>). Key constraints:  \n- Buildings have peak arrival windows (<time_windows>) aligned with meeting schedules.  \n- Shuttles seat up to <capacity> passengers and must avoid detours that risk battery depletion.  \n- Service times (<service_time>) account for passenger boarding.  \nGoal: Minimize wait times while ensuring shuttles return to charging stations.",
+        "tags": [
+            "time_limit",
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "time_windows",
+            "capacity",
+            "service_time"
+        ]
+    },
+    {
+        "title": "Art Gallery Exhibition Logistics",
+        "content": "An art museum at <loc_depot> loans fragile sculptures to <num_customer> galleries (<loc_customer>). Each gallery has:  \n- A narrow installation window (<time_windows>) to align with curator availability.  \n- A vehicle capacity limit (<capacity>) to ensure safe transport (no stacking).  \n- A <service_time> for careful unloading.  \nSpecialized trucks must complete routes within <time_limit> hours to minimize vibration damage. Objective: Schedule routes to preserve art and meet gallery deadlines.",
+        "tags": [
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "time_windows",
+            "capacity",
+            "service_time",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Urban Waste Collection with Noise Restrictions",
+        "content": "A sanitation company must collect organic waste from <num_customer> restaurants (<loc_customer>) using compactors (capacity: <capacity>). Unique constraints:  \n- Noise ordinances restrict collections to <time_windows> (e.g., 9 AM\u20135 PM).  \n- Vehicles must return to the processing plant (<loc_depot>) within <time_limit> hours to prevent odor buildup.  \n- Service times (<service_time>) depend on dumpster size.  \nGoal: Optimize routes to comply with noise laws and capacity limits.",
+        "tags": [
+            "num_customer",
+            "loc_customer",
+            "capacity",
+            "time_windows",
+            "loc_depot",
+            "time_limit",
+            "service_time"
+        ]
+    },
+    {
+        "title": "Urban Grocery Delivery with Peak-Time Slots",
+        "content": "A grocery chain operates a fleet of electric vans (capacity: <capacity>) from a central warehouse (<loc_depot>) to deliver online orders to <num_customer> households (<loc_customer>). Each order has a demand (<demand>) and a strict 2-hour delivery window (<time_windows>) during peak evening hours (5\u20139 PM). Vans must return to the depot within <time_limit> hours to recharge, and routes must avoid traffic congestion zones. The goal is to maximize on-time deliveries while minimizing energy consumption.",
+        "tags": [
+            "capacity",
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "demand",
+            "time_windows",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Wildlife Conservation Patrol Routing",
+        "content": "Rangers at a national park (<loc_depot>) must patrol <num_customer> remote sensor stations (<loc_customer>) to collect data (each station requires <demand> kg of equipment). Patrol vehicles have a <capacity> kg payload limit and a <time_limit>-hour duration due to fuel constraints. Stations must be visited during daylight (<time_windows>: 6 AM\u20136 PM), and some require synchronized visits (e.g., for anti-poaching checks). Optimize routes to cover all stations with minimal off-road travel.",
+        "tags": [
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "demand",
+            "capacity",
+            "time_limit",
+            "time_windows"
+        ]
+    },
+    {
+        "title": "Fashion Pop-Up Store Inventory Replenishment",
+        "content": "A luxury brand operates temporary pop-up stores (<loc_customer>) across a city, each with dynamic inventory demands (<demand>). Delivery trucks (<capacity>) depart from a logistics hub (<loc_depot>) and must restock stores during their opening hours (<time_windows>), which vary daily. Routes cannot exceed <time_limit> hours due to driver shift rules. The challenge is to adapt routes daily while balancing urgent stock shortages and high-priority locations.",
+        "tags": [
+            "loc_customer",
+            "demand",
+            "capacity",
+            "loc_depot",
+            "time_windows",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Industrial Gas Cylinder Swap Service",
+        "content": "A gas supplier must replace empty cylinders at <num_customer> factories (<loc_customer>), each requesting <demand> cylinders per visit. Trucks (<capacity>) carry fragile cylinders and have a <time_limit>-hour route limit due to safety regulations. Factories enforce strict delivery windows (<time_windows>) to align with production pauses. Design routes that minimize detours (to reduce cylinder vibration) while meeting all time constraints.",
+        "tags": [
+            "num_customer",
+            "loc_customer",
+            "demand",
+            "capacity",
+            "time_limit",
+            "time_windows"
+        ]
+    },
+    {
+        "title": "Mobile Vaccination Clinic Scheduling",
+        "content": "A health agency deploys mobile clinics (<loc_customer>) to underserved neighborhoods, with each site requiring <demand> vaccine doses. Refrigerated vans (<capacity>) start at a cold storage depot (<loc_depot>) and must complete routes within <time_limit> hours to maintain vaccine efficacy. Clinics operate during fixed time slots (<time_windows>), often overlapping. Optimize routes to maximize doses delivered while accounting for setup times (<service_time>) at each site.",
+        "tags": [
+            "loc_customer",
+            "demand",
+            "capacity",
+            "loc_depot",
+            "time_limit",
+            "time_windows",
+            "service_time"
+        ]
+    },
+    {
+        "title": "On-Demand Blood Plasma Courier Service",
+        "content": "A medical logistics company transports time-sensitive blood plasma samples from hospitals (<loc_customer>) to a central testing lab (<loc_depot>). Each hospital has a strict pickup window (<time_windows>) due to plasma degradation, and samples require <service_time> for secure handoff. Refrigerated vans (<capacity>) must complete routes within <time_limit> hours to maintain sample integrity. The goal is to minimize total distance while ensuring no van exceeds capacity or violates time constraints.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "time_windows",
+            "service_time",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Smart City Sensor Maintenance Patrol",
+        "content": "Technicians service IoT environmental sensors across a metropolitan area (<loc_customer>) from a central garage (<loc_depot>). Each sensor has:  \n- A maintenance window (<time_windows>) aligning with low-traffic periods  \n- Unique calibration equipment needs (<demand>)  \n- <service_time> for diagnostics  \nElectric service vehicles (<capacity>) have battery limits allowing <distance_limit> km per shift. Objectives include minimizing missed time windows while balancing route durations across teams.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "time_windows",
+            "demand",
+            "service_time",
+            "capacity",
+            "distance_limit"
+        ]
+    },
+    {
+        "title": "Film Production Equipment Logistics",
+        "content": "A studio coordinates gear deliveries to <num_customer> shooting locations (<loc_customer>) from a rental warehouse (<loc_depot>). Each location:  \n- Requires specific equipment sets (<demand>)  \n- Has narrow delivery windows (<time_windows>) matching scene schedules  \n- Needs <service_time> for setup supervision  \nSpecialized trucks (<capacity>) must complete deliveries within <time_limit> to avoid production delays. The challenge is optimizing both spatial routing and temporal coordination across concurrent shoots.",
+        "tags": [
+            "num_customer",
+            "loc_customer",
+            "loc_depot",
+            "demand",
+            "time_windows",
+            "service_time",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Vertical Farm Produce Distribution",
+        "content": "An urban aeroponic farm (<loc_depot>) delivers live herbs to high-end restaurants (<loc_customer>). Constraints include:  \n- Delivery must occur within 2-hour harvest windows (<time_windows>)  \n- Temperature-controlled bikes (<capacity>) have 4-hour freshness limits (<time_limit>)  \n- Each restaurant order (<demand>) requires <service_time> for quality checks  \nThe system must maximize delivery punctuality while minimizing spoilage risk through optimized routing.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "time_windows",
+            "capacity",
+            "time_limit",
+            "demand",
+            "service_time"
+        ]
+    },
+    {
+        "title": "Mobile Library Service for Remote Villages",
+        "content": "A regional library operates bookmobiles serving <num_customer> villages (<loc_customer>) from a central hub (<loc_depot>). Key constraints:  \n- Each village has fixed weekly visitation slots (<time_windows>)  \n- Vehicles (<capacity>) carry mixed media (<demand>)  \n- Route durations capped at <time_limit> due to driver regulations  \n- <service_time> per stop includes reader advisory  \nThe objective is equitable access optimization, ensuring all villages receive regular visits within operational constraints.",
+        "tags": [
+            "num_customer",
+            "loc_customer",
+            "loc_depot",
+            "time_windows",
+            "capacity",
+            "demand",
+            "time_limit",
+            "service_time"
+        ]
+    },
+    {
+        "title": "Urban Electric Vehicle Charging Station Maintenance",
+        "content": "A fleet of electric maintenance vans (capacity: <capacity> tools/parts) must service charging stations at <num_customer> locations (<loc_customer>). Each station requires a unique set of components (<demand>) and has a strict service window (<time_windows>) due to peak usage schedules. Vans have a maximum shift duration of <time_limit> hours to comply with labor laws. The goal is to minimize total energy consumption while ensuring no station misses its maintenance slot.",
+        "tags": [
+            "capacity",
+            "num_customer",
+            "loc_customer",
+            "demand",
+            "time_windows",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "High-Value Artisanal Cheese Distribution",
+        "content": "A dairy coordinates same-day deliveries of temperature-sensitive cheeses to <num_customer> gourmet retailers (<loc_customer>) using refrigerated vans (capacity: <capacity> kg). Each shop specifies a 2-hour delivery window (<time_windows>) to align with staff availability. Vans must return to the creamery (<loc_depot>) within <time_limit> hours to avoid product spoilage. Routes must balance freshness preservation with retailer time constraints.",
+        "tags": [
+            "num_customer",
+            "loc_customer",
+            "capacity",
+            "time_windows",
+            "loc_depot",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Offshore Wind Turbine Technician Deployment",
+        "content": "Helicopters (capacity: <capacity> technicians + gear) deploy crews from a coastal base (<loc_depot>) to service <num_customer> turbines (<loc_customer>). Each turbine has a 4-hour maintenance window (<time_windows>) dictated by tidal conditions. Aircraft have a maximum flight duration of <time_limit> hours due to fuel constraints. The challenge is to maximize daily turbine uptime while respecting both safety and meteorological constraints.",
+        "tags": [
+            "capacity",
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "time_windows",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Festival Beverage Vendor Restocking",
+        "content": "During a multi-stage music festival, electric carts (capacity: <capacity> kegs) resupply beverage stalls at <num_customer> locations (<loc_customer>). Each stall provides 30-minute restocking windows (<time_windows>) between performance sets. Carts must return to the central depot (<loc_depot>) every <time_limit> hours for battery swaps. The system must prevent stockouts while minimizing interference with attendee flow.",
+        "tags": [
+            "capacity",
+            "num_customer",
+            "loc_customer",
+            "time_windows",
+            "loc_depot",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Biopharmaceutical Clinical Trial Sample Collection",
+        "content": "Medical couriers transport temperature-controlled sample boxes (capacity: <capacity> vials) from <num_customer> clinics (<loc_customer>) to a central lab (<loc_depot>). Samples expire if not delivered within strict biological stability windows (<time_windows>). Vehicles have a maximum route duration of <time_limit> hours to maintain sample integrity. The priority is minimizing degradation risk through precision timing, not just distance.",
+        "tags": [
+            "capacity",
+            "num_customer",
+            "loc_customer",
+            "loc_depot",
+            "time_windows",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Urban Laundry Service with Peak-Time Pickups",
+        "content": "A commercial laundry service operates a fleet of vans (capacity: <capacity>) to collect dirty linens from hotels (<loc_customer>) and return them to a central facility (<loc_depot>). Each hotel has strict pickup time windows (<time_windows>) due to staff availability, and vans must complete routes within <time_limit> hours to meet same-day processing deadlines. The service aims to minimize idle waiting time while ensuring no van exceeds weight limits from linen volume (<demand>).",
+        "tags": [
+            "capacity",
+            "loc_customer",
+            "loc_depot",
+            "time_windows",
+            "time_limit",
+            "demand"
+        ]
+    },
+    {
+        "title": "Cold Chain Vaccine Distribution to Remote Clinics",
+        "content": "A health agency coordinates refrigerated trucks (max capacity: <capacity>) to deliver temperature-sensitive vaccines from a regional hub (<loc_depot>) to rural clinics (<loc_customer>). Each clinic has narrow delivery windows (<time_windows>) aligned with staffed hours, and trucks must complete deliveries within <time_limit> hours to prevent vaccine spoilage. Routes must account for mountainous terrain (affecting <speed>) while ensuring payloads never exceed cold storage capacity.",
+        "tags": [
+            "capacity",
+            "loc_depot",
+            "loc_customer",
+            "time_windows",
+            "time_limit",
+            "speed"
+        ]
+    },
+    {
+        "title": "Luxury Retail Same-Day Delivery with Appointment Slots",
+        "content": "A high-end retailer offers white-glove delivery for furniture (<demand> per customer) using specialized trucks (<capacity>). Customers (<loc_customer>) select 2-hour appointment slots (<time_windows>), and drivers must complete all deliveries within <time_limit> hours to avoid overtime costs. The challenge lies in optimizing routes for bulky items while honoring strict time windows and vehicle weight limits.",
+        "tags": [
+            "demand",
+            "capacity",
+            "loc_customer",
+            "time_windows",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Mobile Vet Clinic for Livestock Farms",
+        "content": "A veterinary team dispatches mobile clinics (equipment capacity: <capacity>) from a central office (<loc_depot>) to service dairy farms (<loc_customer>). Each farm specifies morning/afternoon availability (<time_windows>), and clinics must return within <time_limit> hours to restock medications. Routes must balance travel time through rural roads with vehicle payload limits from medical supplies (<demand>).",
+        "tags": [
+            "capacity",
+            "loc_depot",
+            "loc_customer",
+            "time_windows",
+            "time_limit",
+            "demand"
+        ]
+    },
+    {
+        "title": "School Meal Program for Disaster Zones",
+        "content": "An NGO delivers hot meals (<demand>) from a central kitchen (<loc_depot>) to temporary schools (<loc_customer>) in flood-affected areas. Vehicles (<capacity>) must arrive during lunch periods (<time_windows>) and complete routes within <time_limit> hours to maintain food safety. The solution must optimize for both perishable cargo limits and road closures affecting travel duration.",
+        "tags": [
+            "demand",
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "time_windows",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Urban Electric Scooter Battery Swap Service",
+        "content": "A micromobility company operates a fleet of electric scooters across a city. Each scooter station (<loc_customer>) has a specific battery swap demand (<demand>), and technicians must replace depleted batteries within strict time windows (<time_windows>) to avoid service disruptions. Service vans (<capacity>) depart from a central depot (<loc_depot>) and must complete routes within <time_limit> hours due to shift constraints. The goal is to minimize total travel time while ensuring no van exceeds capacity and all swaps occur within operational windows.",
+        "tags": [
+            "loc_customer",
+            "demand",
+            "time_windows",
+            "capacity",
+            "loc_depot",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "High-Priority Legal Document Courier Service",
+        "content": "A law firm requires same-day delivery of sensitive legal documents to <num_customer> courthouses (<loc_customer>), each with rigid filing deadlines (<time_windows>). Courier vehicles (<capacity>) must depart from the firm's office (<loc_depot>) and complete deliveries within <time_limit> hours to meet court operating hours. Documents have varying sizes (<demand>), and routes must account for security protocols that add <service_time> at each stop. The objective is to maximize on-time deliveries while minimizing route overlap.",
+        "tags": [
+            "num_customer",
+            "loc_customer",
+            "time_windows",
+            "capacity",
+            "loc_depot",
+            "time_limit",
+            "demand",
+            "service_time"
+        ]
+    },
+    {
+        "title": "Alpine Ski Resort Supply Chain",
+        "content": "A mountain resort must deliver fresh food and equipment to <num_customer> lodges (<loc_customer>) via snowcats (<capacity>) before breakfast service windows (<time_windows>). Routes from the base depot (<loc_depot>) are constrained by <time_limit> due to avalanche risk after midday. Each lodge's order weight (<demand>) varies daily, and narrow mountain roads impose strict capacity limits. The challenge is to optimize routes that respect both delivery deadlines and vehicle constraints in harsh terrain.",
+        "tags": [
+            "num_customer",
+            "loc_customer",
+            "capacity",
+            "time_windows",
+            "loc_depot",
+            "time_limit",
+            "demand"
+        ]
+    },
+    {
+        "title": "Mobile STEM Lab for Rural Schools",
+        "content": "An educational nonprofit deploys mobile science labs (<capacity>) to <num_customer> remote schools (<loc_customer>), each requiring specific equipment (<demand>) during designated class periods (<time_windows>). Vehicles must return to the central warehouse (<loc_depot>) within <time_limit> hours due to driver regulations. Setup times (<service_time>) vary by school, and routes must account for unpaved road conditions that affect travel speed. The goal is to maximize school visits per week while minimizing fuel costs.",
+        "tags": [
+            "capacity",
+            "num_customer",
+            "loc_customer",
+            "demand",
+            "time_windows",
+            "loc_depot",
+            "time_limit",
+            "service_time"
+        ]
+    },
+    {
+        "title": "Luxury Wine Tasting Tour Logistics",
+        "content": "A vineyard coordinates premium tasting tours for <num_customer> exclusive hotels (<loc_customer>), delivering rare vintages (<demand>) in temperature-controlled vans (<capacity>) during precise sommelier availability windows (<time_windows>). Tours originate from the winery (<loc_depot>) and must conclude within <time_limit> hours to preserve wine quality. Each stop involves a <service_time> minute presentation. The objective is to create routes that maximize customer experience while adhering to strict scheduling and capacity constraints.",
+        "tags": [
+            "num_customer",
+            "loc_customer",
+            "demand",
+            "capacity",
+            "time_windows",
+            "loc_depot",
+            "time_limit",
+            "service_time"
+        ]
+    },
+    {
+        "title": "Mobile Dental Clinic for Underserved Communities",
+        "content": "A nonprofit operates mobile dental clinics to serve rural areas with limited healthcare access. Each clinic van (capacity: `<capacity>` patients) departs from a central hub (`<loc_depot>`) to visit `<num_customer>` villages (`<loc_customer>`). Villages have strict time windows (`<time_windows>`) due to local events or school schedules, and each appointment requires `<service_time>` minutes. Vans must return to the hub within `<time_limit>` hours to avoid overtime costs. The goal is to maximize served patients while minimizing travel distance.",
+        "tags": [
+            "capacity",
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "time_windows",
+            "service_time",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Urban EV Battery Swapping for Ride-Hailing Fleets",
+        "content": "An electric vehicle (EV) service provider manages battery-swap stations for ride-hailing drivers. Swap trucks (capacity: `<capacity>` batteries) start at a charging depot (`<loc_depot>`) and visit `<num_customer>` hotspots (`<loc_customer>`) where drivers request swaps. Each hotspot has peak demand windows (`<time_windows>`), and swaps take `<service_time>` minutes. Trucks must complete routes within `<distance_limit>` km due to battery constraints. Optimize routes to minimize downtime for drivers and ensure trucks return to recharge.",
+        "tags": [
+            "capacity",
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "time_windows",
+            "service_time",
+            "distance_limit"
+        ]
+    },
+    {
+        "title": "Coral Reef Monitoring with Autonomous Underwater Vehicles",
+        "content": "Marine researchers deploy AUVs to monitor `<num_customer>` reef sites (`<loc_customer>`) from a research vessel (`<loc_depot>`). Each AUV has a `<capacity>`-hour battery life (`<time_limit>`) and must collect `<demand>` GB of data per site. Sites have tidal time windows (`<time_windows>`) for safe navigation, and data collection takes `<service_time>` hours. Plan routes to cover all sites while minimizing AUV deployment cycles.",
+        "tags": [
+            "num_customer",
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "time_limit",
+            "demand",
+            "time_windows",
+            "service_time"
+        ]
+    },
+    {
+        "title": "High-Security Cash-in-Transit for Retail Chains",
+        "content": "An armored truck service delivers cash to `<num_customer>` retail stores (`<loc_customer>`) from a vault (`<loc_depot>`). Each truck carries up to `<capacity>` kg of currency, and stores have strict delivery windows (`<time_windows>`) aligned with shift changes. Routes must finish within `<time_limit>` hours due to insurance policies, and unloading takes `<service_time>` minutes. Optimize for risk reduction (minimizing stops in high-crime zones) and fuel efficiency.",
+        "tags": [
+            "num_customer",
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "time_windows",
+            "time_limit",
+            "service_time"
+        ]
+    },
+    {
+        "title": "Satellite Ground Station Data Collection",
+        "content": "A space agency coordinates ground stations (`<loc_customer>`) to download data from `<num_customer>` satellites passing overhead. Each station (`<capacity>` simultaneous connections) has visibility windows (`<time_windows>`) and requires `<service_time>` minutes per download. Mobile receiver vans depart from HQ (`<loc_depot>`) and must return within `<distance_limit>` km due to maintenance schedules. Maximize data throughput while minimizing vehicle movements.",
+        "tags": [
+            "loc_customer",
+            "num_customer",
+            "capacity",
+            "time_windows",
+            "service_time",
+            "loc_depot",
+            "distance_limit"
+        ]
+    },
+    {
+        "title": "Mobile Blood Donation Unit Routing",
+        "content": "A nonprofit organization operates mobile blood donation units that visit corporate campuses, universities, and community centers (<loc_customer>) to collect donations. Each site has a strict time window (<time_windows>) due to facility availability, and the mobile unit must spend <service_time> hours on-site. Vehicles have a <capacity> limit for storing blood bags and a maximum operational duration of <time_limit> hours per shift (including travel and setup). The goal is to maximize collections while adhering to time constraints and avoiding vehicle overload.",
+        "tags": [
+            "loc_customer",
+            "time_windows",
+            "service_time",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Sustainable Seafood Delivery for High-End Restaurants",
+        "content": "A supplier delivers fresh, sustainably caught seafood from a central dock (<loc_depot>) to Michelin-starred restaurants (<loc_customer>), each with narrow delivery windows (<time_windows>) to align with kitchen prep schedules. Delivery vans have refrigeration units with a <capacity> limit (kg) and perishability constraints requiring routes to finish within <time_limit> hours. Each restaurant\u2019s order (<demand>) must be delivered exactly once without compromising quality.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "time_windows",
+            "capacity",
+            "time_limit",
+            "demand"
+        ]
+    },
+    {
+        "title": "Autonomous Security Robot Patrols in Smart Cities",
+        "content": "Autonomous security robots patrol high-risk urban areas (<loc_customer>) from a central hub (<loc_depot>). Each location requires <service_time> minutes for surveillance and has vulnerability-based time windows (<time_windows>). Robots have a battery life limiting routes to <time_limit> hours and a sensor payload capacity of <capacity> units (e.g., cameras, environmental sensors). The objective is to minimize risk exposure gaps while respecting energy and equipment constraints.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "service_time",
+            "time_windows",
+            "time_limit",
+            "capacity"
+        ]
+    },
+    {
+        "title": "On-Demand Oxygen Cylinder Delivery for Home Patients",
+        "content": "A medical service delivers oxygen cylinders to homebound patients (<loc_customer>) from a depot (<loc_depot>). Each patient has a critical time window (<time_windows>) based on prescription schedules, and deliveries require <service_time> minutes for safety checks. Vehicles carry a maximum of <capacity> cylinders due to weight restrictions and must complete routes within <time_limit> hours to ensure emergency availability. Delays are life-threatening, so route efficiency is prioritized.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "time_windows",
+            "service_time",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Event-Driven Satellite Data Retrieval for Climate Research",
+        "content": "A ground station (<loc_depot>) dispatches drones to collect data from remote environmental sensors (<loc_customer>) during brief satellite overpass windows (<time_windows>). Each sensor has a <demand> (GB) of data, and drones have a <capacity> storage limit and <time_limit>-minute flight endurance. Data must be retrieved within strict overpass intervals to avoid loss. The challenge is to synchronize routes with orbital mechanics while minimizing energy use.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "time_windows",
+            "demand",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Mobile EV Charging Service for Urban Fleets",
+        "content": "A startup deploys mobile charging trucks to replenish electric delivery vans across a city. Each van (located at <loc_customer>) has a fixed parking window (<time_windows>) for charging and requires <demand> kWh. Charging trucks (capacity <capacity> kWh) depart from a depot (<loc_depot>) and must complete routes within <time_limit> hours due to shift constraints. The goal is to maximize served vehicles while minimizing idle time and travel distance.",
+        "tags": [
+            "loc_customer",
+            "time_windows",
+            "demand",
+            "capacity",
+            "loc_depot",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "High-Altitude Medical Sample Collection in the Andes",
+        "content": "A research team collects biological samples from remote villages (<loc_customer>) in mountainous terrain. Helicopters (capacity <capacity> kg) must depart from a base (<loc_depot>), complete collections during villagers' availability windows (<time_windows>), and return within <time_limit> hours due to fuel constraints. Each village has sample demand (<demand> kg) and strict collection times to align with local schedules.",
+        "tags": [
+            "loc_customer",
+            "capacity",
+            "loc_depot",
+            "time_windows",
+            "time_limit",
+            "demand"
+        ]
+    },
+    {
+        "title": "Sustainable Fish Market Delivery with Live Storage Limits",
+        "content": "A fishery supplies live seafood to restaurants (<loc_customer>) using refrigerated trucks (capacity <capacity> kg). Restaurants impose strict delivery windows (<time_windows>) to align with meal prep schedules. Trucks must return to the depot (<loc_depot>) within <time_limit> hours to maintain product viability. Each stop has demand (<demand> kg) and unloading time (<service_time>).",
+        "tags": [
+            "loc_customer",
+            "capacity",
+            "time_windows",
+            "loc_depot",
+            "time_limit",
+            "demand",
+            "service_time"
+        ]
+    },
+    {
+        "title": "AI-Assisted Museum Artifact Transport Network",
+        "content": "A national museum network rotates fragile artifacts between locations (<loc_customer>). Climate-controlled trucks (capacity <capacity> items) must adhere to: 1) strict loading/unloading windows (<time_windows>) at each museum, 2) maximum route durations (<time_limit>) to limit vibration exposure, and 3) depot returns (<loc_depot>) after each trip. Each artifact has unique handling time (<service_time>).",
+        "tags": [
+            "loc_customer",
+            "capacity",
+            "time_windows",
+            "time_limit",
+            "loc_depot",
+            "service_time"
+        ]
+    },
+    {
+        "title": "Lunar Rover Science Mission Planning",
+        "content": "NASA plans routes for autonomous rovers to collect samples at lunar sites (<loc_customer>). Each rover (capacity <capacity> kg) must: 1) operate within daylight windows (<time_windows>) at sites, 2) return to base (<loc_depot>) before battery depletion (<time_limit> hours), and 3) respect site-specific collection times (<service_time>). Sample demands vary (<demand> kg) per site.",
+        "tags": [
+            "loc_customer",
+            "capacity",
+            "time_windows",
+            "loc_depot",
+            "time_limit",
+            "service_time",
+            "demand"
+        ]
+    },
+    {
+        "title": "Urban Fresh Juice Bar Ingredient Delivery",
+        "content": "A network of premium juice bars requires daily deliveries of perishable fruits and vegetables from a central warehouse (<loc_depot>) to <num_customer> locations (<loc_customer>). Each juice bar has a strict delivery time window (<time_windows>) to align with their pre-opening prep schedules, and ingredients (<demand>) must arrive fresh. Delivery vans have a refrigerated capacity of <capacity> kg and a maximum route duration of <time_limit> hours to prevent spoilage. The goal is to minimize total travel time while ensuring no van exceeds capacity or violates time constraints.",
+        "tags": [
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "time_windows",
+            "demand",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "High-Altitude Glacial Sensor Maintenance",
+        "content": "Scientists must service environmental sensors (<loc_customer>) placed across glaciers, accessible only by helicopter from a base camp (<loc_depot>). Each sensor has a battery-dependent maintenance window (<time_windows>) during daylight hours, and servicing takes <service_time> minutes. Helicopters can carry <capacity> kg of equipment and have <time_limit> hours of flight time due to fuel constraints. Routes must prioritize sensors nearing critical battery failure while respecting weight limits and alpine weather conditions.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "time_windows",
+            "service_time",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Luxury Hotel Linen Service with VIP Floor Constraints",
+        "content": "A textile company delivers pressed linens to <num_customer> luxury hotels (<loc_customer>) using temperature-controlled trucks (<capacity>). High-profile clients demand deliveries during narrow overnight windows (<time_windows>) when staff are available (e.g., 2:00\u20133:30 AM). Each hotel requires <demand> kg of linens, and trucks must return to the depot within <time_limit> hours to prepare for next-day operations. The challenge is synchronizing routes to avoid early arrivals that risk linen wrinkling.",
+        "tags": [
+            "num_customer",
+            "loc_customer",
+            "capacity",
+            "time_windows",
+            "demand",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Mobile 3D Printing Lab for Rural Schools",
+        "content": "A STEM education initiative dispatches mobile labs (<capacity> printers/van) to remote schools (<loc_customer>) from a regional hub (<loc_depot>). Each school books sessions during specific hours (<time_windows>), with setup taking <service_time> minutes. Vans have <time_limit> hours of daily operation due to educator shifts. The objective is to maximize the number of schools served per day while adhering to time windows and printer inventory limits.",
+        "tags": [
+            "capacity",
+            "loc_customer",
+            "loc_depot",
+            "time_windows",
+            "service_time",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Live Concert Equipment Tour Routing",
+        "content": "A touring band\u2019s gear must be transported between <num_customer> stadiums (<loc_customer>) from a logistics hub (<loc_depot>). Each venue has rigid load-in windows (<time_windows>) before soundchecks, and trucks (<capacity>) carry fragile instruments requiring <service_time> hours to unload. Drivers are legally limited to <time_limit> hours/day. The solution must synchronize routes with tour dates while accounting for traffic patterns near venues.",
+        "tags": [
+            "num_customer",
+            "loc_customer",
+            "loc_depot",
+            "time_windows",
+            "capacity",
+            "service_time",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Urban Fresh Sushi Delivery for High-End Restaurants",
+        "content": "A premium sushi supplier must deliver fresh, temperature-controlled ingredients to high-end restaurants across a metropolitan area. Each restaurant has strict delivery windows (<time_windows>) to align with meal prep schedules, and the supplier\u2019s refrigerated vans (<capacity>) can only carry a limited volume of perishable goods. Routes must account for traffic patterns (duration limits <time_limit>) to ensure freshness and avoid spoilage. The goal is to minimize total travel time while meeting all time-sensitive deliveries.",
+        "tags": [
+            "time_windows",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Mobile Solar Panel Cleaning Service for Remote Farms",
+        "content": "A service company deploys teams to clean solar panels on scattered agricultural farms. Each farm has a preferred cleaning window (<time_windows>) to avoid peak sunlight hours. Cleaning trucks carry water and equipment (<capacity>) and must complete routes within a workday (<time_limit>) due to crew shift constraints. Farms in arid regions may also require prioritization based on dust accumulation (<demand>). The objective is to maximize the number of farms serviced per trip while adhering to time and capacity limits.",
+        "tags": [
+            "time_windows",
+            "capacity",
+            "time_limit",
+            "demand"
+        ]
+    },
+    {
+        "title": "On-Demand Ice Cream Truck Routing for Events",
+        "content": "An ice cream vendor operates a fleet of trucks to serve scheduled events (e.g., weddings, corporate gatherings) with strict serving windows (<time_windows>). Each truck has limited freezer space (<capacity>) and must return to the depot for restocking if demand exceeds capacity. Routes are constrained by the melting risk of products (<time_limit> per trip). The vendor aims to minimize missed deliveries while optimizing fuel costs for multiple events in a single day.",
+        "tags": [
+            "time_windows",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Emergency Roadside EV Charging Assistance",
+        "content": "A roadside assistance service deploys mobile charging units to stranded electric vehicles (EVs) in a city. Each distressed EV reports its location (<loc_customer>) and battery level, which translates to urgency (<time_windows>). Charging vans have limited battery packs (<capacity>) and must complete all rescues within their shift duration (<time_limit>). The service prioritizes minimizing response time and ensuring no van exhausts its own charge during operations.",
+        "tags": [
+            "loc_customer",
+            "time_windows",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Fragile Antique Furniture Relocation Service",
+        "content": "A specialty logistics company moves fragile antiques between museums and private collectors. Each item has a pickup/delivery window (<time_windows>) to align with curatorial schedules, and vehicles are equipped with custom padding (<capacity> limits item count per trip). Routes must avoid bumpy roads and adhere to strict travel duration limits (<time_limit>) to minimize vibration damage. The goal is to ensure zero breakages while optimizing route efficiency.",
+        "tags": [
+            "time_windows",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Urban Fresh Bakery Delivery with Morning Rush Constraints",
+        "content": "A gourmet bakery must deliver freshly baked goods to <num_customer> cafes and grocery stores (<loc_customer>) before their morning opening times (<time_windows>). Each vehicle has a refrigerated capacity of <capacity> kg, and routes must be completed within <time_limit> hours to ensure product freshness. Delays are unacceptable as customers reject stale deliveries. The bakery seeks to minimize fleet size while meeting all time-sensitive demands (<demand>).",
+        "tags": [
+            "num_customer",
+            "loc_customer",
+            "time_windows",
+            "capacity",
+            "time_limit",
+            "demand"
+        ]
+    },
+    {
+        "title": "Mobile Mammography Clinic Scheduling for Rural Areas",
+        "content": "A healthcare provider operates mobile clinics (<capacity> patients/day) to screen women in remote villages (<loc_customer>). Each village has a strict 2-hour service window (<time_windows>) based on local schedules, and clinics must return to the regional hospital (<loc_depot>) within <time_limit> hours due to staff shift constraints. Travel distances between mountainous villages require careful routing to maximize screenings (<demand>) without exceeding vehicle range or missing appointments.",
+        "tags": [
+            "capacity",
+            "loc_customer",
+            "time_windows",
+            "loc_depot",
+            "time_limit",
+            "demand"
+        ]
+    },
+    {
+        "title": "Just-in-Time Aircraft Catering Service at Major Hub",
+        "content": "An airline catering company must deliver <demand> customized meal carts to <num_customer> aircraft gates (<loc_customer>) during 45-minute turnaround windows (<time_windows>) between flights. Electric trams (<capacity> carts/vehicle) have battery limits allowing <time_limit> hours of continuous operation. Late deliveries cause flight delays with severe penalties, requiring precise synchronization with gate availability.",
+        "tags": [
+            "demand",
+            "num_customer",
+            "loc_customer",
+            "time_windows",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Endangered Species Egg Collection for Conservation Breeding",
+        "content": "Biologists need to collect fragile eggs from <num_customer> nest sites (<loc_customer>) in a wildlife reserve within critical temperature-controlled time windows (<time_windows>). Specialized vehicles with <capacity> incubator slots must complete routes within <time_limit> hours to maintain embryo viability. Some nests require detours through rough terrain, adding duration complexity to time-sensitive pickups (<demand>).",
+        "tags": [
+            "num_customer",
+            "loc_customer",
+            "time_windows",
+            "capacity",
+            "time_limit",
+            "demand"
+        ]
+    },
+    {
+        "title": "Time-Critical Semiconductor Wafer Transport Between Cleanrooms",
+        "content": "A chip manufacturer must shuttle sensitive silicon wafers (<demand> lots) between <num_customer> fabrication facilities (<loc_customer>) using contamination-controlled vehicles (<capacity>). Each transfer has nano-scale precision timing windows (<time_windows>) aligned with production cycles, and vehicles must undergo decontamination within <time_limit> hours. Delays disrupt billion-dollar production lines, making route efficiency critical.",
+        "tags": [
+            "demand",
+            "num_customer",
+            "loc_customer",
+            "capacity",
+            "time_windows",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Urban Fresh Sushi Ingredient Delivery for High-End Restaurants",
+        "content": "A premium sushi supplier must deliver ultra-fresh seafood and ingredients to high-end restaurants across the city. Each restaurant (<loc_customer>) has strict delivery time windows (<time_windows>) when chefs are prepared to receive ingredients, and delays would compromise quality. Delivery vans (<capacity>) must account for traffic patterns and perishability constraints (<duration_limit> for maximum route duration). The goal is to minimize total distance while ensuring no restaurant receives spoiled ingredients due to late deliveries or over-capacity loading.",
+        "tags": [
+            "loc_customer",
+            "time_windows",
+            "capacity",
+            "duration_limit"
+        ]
+    },
+    {
+        "title": "Mobile Pediatric Vaccination Clinic for Remote Villages",
+        "content": "A healthcare NGO operates mobile clinics to vaccinate children in isolated villages (<loc_customer>). Each clinic van (<capacity> for vaccine doses and staff) must complete its route within <duration_limit> hours due to cold-chain storage limits for vaccines. Villages have narrow time windows (<time_windows>) based on school schedules and local events. Routes must maximize vaccinated children while avoiding nighttime travel on unsafe roads.",
+        "tags": [
+            "loc_customer",
+            "capacity",
+            "duration_limit",
+            "time_windows"
+        ]
+    },
+    {
+        "title": "Just-in-Time Aircraft Catering at a Major Airport",
+        "content": "A catering service must deliver customized meals (<demand> per flight) from a central kitchen (<loc_depot>) to parked aircraft gates (<loc_customer>) during precise turnaround times (<time_windows>). Electric catering trucks (<capacity>) have limited battery life (<duration_limit> per shift). Delays risk flight disruptions, while early arrivals waste energy idling. Optimize for on-time deliveries with minimal fleet size.",
+        "tags": [
+            "demand",
+            "loc_depot",
+            "loc_customer",
+            "time_windows",
+            "capacity",
+            "duration_limit"
+        ]
+    },
+    {
+        "title": "Fragile Museum Artifact Transport for International Exhibitions",
+        "content": "A fine art logistics company must move priceless artifacts from storage (<loc_depot>) to multiple museums (<loc_customer>) using climate-controlled trucks (<capacity>). Each museum has rigid time windows (<time_windows>) for unloading (e.g., during low-visitation hours). Routes are constrained by maximum vibration exposure duration (<duration_limit>) to prevent damage. Balance route efficiency with ultra-strict conservation protocols.",
+        "tags": [
+            "loc_depot",
+            "loc_customer",
+            "capacity",
+            "time_windows",
+            "duration_limit"
+        ]
+    },
+    {
+        "title": "Mobile EV Charging Service for Ride-Hailing Fleets",
+        "content": "A service deploys mobile charging units to top up electric ride-hailing vehicles at designated meetpoints (<loc_customer>). Each charging truck (<capacity> in kWh) must complete its route within <duration_limit> hours (battery constraints). Drivers specify availability windows (<time_windows>) between rides. Optimize for minimal detours while ensuring no EV runs out of charge before servicing.",
+        "tags": [
+            "loc_customer",
+            "capacity",
+            "duration_limit",
+            "time_windows"
+        ]
+    },
+    {
+        "title": "Urban Vertical Farm Harvest Collection with Shelf-Life Constraints",
+        "content": "A vertical farming company operates multiple urban farms (<loc_customer>) that require daily harvest collection. Each farm has a time-sensitive harvest window (<time_windows>) due to rapid spoilage of leafy greens. Delivery trucks (capacity: <capacity>) must collect produce from farms and return to a central processing hub (<loc_depot>) within <time_limit> hours to ensure freshness. Each farm's harvest volume (<demand>) varies, and unloading takes <service_time> minutes. The goal is to minimize total distance while ensuring no truck exceeds capacity or misses harvest windows.",
+        "tags": [
+            "loc_customer",
+            "time_windows",
+            "capacity",
+            "loc_depot",
+            "time_limit",
+            "demand",
+            "service_time"
+        ]
+    },
+    {
+        "title": "Mobile Astronomy Classroom for Remote Schools",
+        "content": "An educational NGO deploys mobile planetariums to rural schools (<loc_customer>) with strict scheduling constraints (<time_windows>). Each vehicle (capacity: <capacity> equipment sets) carries fragile astronomy equipment and must complete all daily visits within <time_limit> hours due to driver shift regulations. Schools have varying equipment needs (<demand>) and setup times (<service_time>). Routes must start/end at the regional base (<loc_depot>) while accommodating narrow mountain road travel times and school bell schedules.",
+        "tags": [
+            "loc_customer",
+            "time_windows",
+            "capacity",
+            "time_limit",
+            "demand",
+            "service_time",
+            "loc_depot"
+        ]
+    },
+    {
+        "title": "Hyperlocal Seafood Delivery for Michelin-Starred Restaurants",
+        "content": "A premium seafood supplier delivers live crustaceans from coastal docks (<loc_customer>) to high-end restaurants with exacting 15-minute delivery slots (<time_windows>). Refrigerated vans (capacity: <capacity> kg) must complete routes within <time_limit> hours to maintain product viability. Each restaurant's order weight (<demand>) and unloading time (<service_time>) vary. The depot (<loc_depot>) is a tidal-dependent harbor, adding urgency to morning departure schedules.",
+        "tags": [
+            "loc_customer",
+            "time_windows",
+            "capacity",
+            "time_limit",
+            "demand",
+            "service_time",
+            "loc_depot"
+        ]
+    },
+    {
+        "title": "Antarctic Research Station Resupply with Weather Windows",
+        "content": "A polar logistics team must deliver supplies (<demand>) to remote research stations (<loc_customer>) during brief safe-weather periods (<time_windows>). Snowcats (capacity: <capacity> tons) face strict <time_limit>-hour route durations due to extreme cold exposure risks. Stations require specialized unloading procedures (<service_time>). All routes originate from McMurdo Base (<loc_depot>), with detours forbidden once Antarctic night begins.",
+        "tags": [
+            "demand",
+            "loc_customer",
+            "time_windows",
+            "capacity",
+            "time_limit",
+            "service_time",
+            "loc_depot"
+        ]
+    },
+    {
+        "title": "Luxury Watch Boutique Security Courier Network",
+        "content": "An armored vehicle service transports high-value watches between Swiss boutiques (<loc_customer>) during precise inventory audit windows (<time_windows>). Each truck (capacity: <capacity> safes) must complete its circuit within <time_limit> hours to sync with bank vault schedules. Boutiques have varying transfer quantities (<demand>) and biometric verification times (<service_time>). The Zurich vault (<loc_depot>) serves as the hub, with mandatory return after each route due to insurance requirements.",
+        "tags": [
+            "loc_customer",
+            "time_windows",
+            "capacity",
+            "time_limit",
+            "demand",
+            "service_time",
+            "loc_depot"
+        ]
+    },
+    {
+        "title": "Urban Fresh Flower Wholesale Delivery",
+        "content": "A wholesale flower distributor must deliver fresh-cut flowers to <num_customer> florists across the city from a central greenhouse (<loc_depot>). Each florist has a strict delivery window (<time_windows>) to ensure flowers are fresh for morning arrangements. Delivery vans have a <capacity> kg limit (to prevent crushing delicate blooms) and a <time_limit>-hour shift duration (to avoid driver fatigue). Routes must minimize travel time while respecting florists' opening hours and perishability constraints.",
+        "tags": [
+            "num_customer",
+            "loc_depot",
+            "time_windows",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Mobile Child Vaccination Clinic Routing",
+        "content": "A healthcare NGO operates mobile clinics to vaccinate children in <num_customer> remote villages (<loc_customer>). Each clinic van carries <capacity> vaccine doses (with cold storage limits) and must return to the central depot (<loc_depot>) within <time_limit> hours (to maintain refrigeration). Villages have narrow time windows (<time_windows>) based on school schedules. The goal is to maximize vaccinated children while adhering to\u51b7\u94fe (cold chain) logistics and clinic availability.",
+        "tags": [
+            "num_customer",
+            "loc_customer",
+            "capacity",
+            "loc_depot",
+            "time_limit",
+            "time_windows"
+        ]
+    },
+    {
+        "title": "Luxury Hotel Breakfast Buffet Restocking",
+        "content": "A 5-star hotel chain must restock daily breakfast buffets at <num_customer> satellite locations (<loc_customer>) from a central kitchen (<loc_depot>). Delivery trucks (<capacity> kg) must arrive during 30-minute time slots (<time_windows>) before each hotel's breakfast service. Routes are constrained by <time_limit>-hour shifts to ensure food safety. The challenge: synchronize deliveries of temperature-sensitive items (e.g., champagne, seafood) without overlapping time windows.",
+        "tags": [
+            "num_customer",
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "time_windows",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Antarctic Penguin Colony Monitoring",
+        "content": "Scientists must visit <num_customer> penguin colonies (<loc_customer>) from a research base (<loc_depot>) using snowmobiles with <capacity> kg equipment limits. Each colony has a <time_windows> observation window (avoiding breeding disturbances) and must be surveyed within <time_limit> hours (due to extreme weather). Routes must minimize fuel consumption while collecting biological samples without disrupting wildlife cycles.",
+        "tags": [
+            "num_customer",
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "time_windows",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "High-Frequency Trading Data Courier Network",
+        "content": "A financial firm delivers encrypted trading algorithms to <num_customer> server hubs (<loc_customer>) from a secure data center (<loc_depot>). Armored vehicles (<capacity> TB storage) must arrive during <time_windows> matching market pre-openings. Each route is capped at <time_limit> minutes to prevent data latency. The objective: synchronize updates across all hubs within milliseconds while avoiding traffic peaks.",
+        "tags": [
+            "num_customer",
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "time_windows",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Urban Fresh Seafood Delivery for High-End Sushi Restaurants",
+        "content": "A gourmet seafood supplier must deliver ultra-fresh fish (e.g., tuna, uni) from a central hub (<loc_depot>) to <num_customer> high-end sushi restaurants (<loc_customer>). Each restaurant has:  \n- A strict delivery time window (<time_windows>) to align with prep schedules.  \n- A unique order weight (<demand>) requiring temperature-controlled transport.  \nRefrigerated vans (<capacity>) have a max route duration (<time_limit>) to prevent spoilage. The goal is to minimize travel time while ensuring no delivery is late or early (fish quality degrades if held idle).",
+        "tags": [
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "time_windows",
+            "demand",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Mobile Autism Therapy Unit Scheduling",
+        "content": "A healthcare provider dispatches specialized vans (<capacity>) from a clinic (<loc_depot>) to <num_customer> in-home therapy sessions (<loc_customer>). Each session:  \n- Must start within a 15-minute window (<time_windows>) to avoid disrupting child routines.  \n- Requires <demand> kg of equipment (sensory tools, tablets).  \nTherapists can work up to <time_limit> hours/day. Optimize routes to maximize daily sessions while respecting time windows and vehicle capacity.",
+        "tags": [
+            "capacity",
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "time_windows",
+            "demand",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Luxury Hotel Breakfast Buffet Restocking",
+        "content": "A 5-star hotel\u2019s central kitchen (<loc_depot>) must restock <num_customer> satellite buffet stations (<loc_customer>) before 6 AM (<time_windows_close>). Each station:  \n- Needs perishables (e.g., smoked salmon, pastries) weighing <demand> kg.  \n- Requires <service_time> mins for setup.  \nElectric carts (<capacity>) have a battery limit (<distance_limit> km). Design routes to ensure all stations are stocked precisely on time without mid-route battery failures.",
+        "tags": [
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "time_windows_close",
+            "demand",
+            "service_time",
+            "capacity",
+            "distance_limit"
+        ]
+    },
+    {
+        "title": "Glacier Monitoring Drone Deployment",
+        "content": "Scientists deploy drones from a base camp (<loc_depot>) to collect data from <num_customer> sensors on melting glaciers (<loc_customer>). Each sensor:  \n- Must be serviced during daylight (<time_windows>).  \n- Requires <demand> kg of calibration tools.  \nDrones (<capacity>) have a <time_limit>-hour flight duration due to battery constraints. Plan routes to cover all sensors while avoiding nighttime landings.",
+        "tags": [
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "time_windows",
+            "demand",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Same-Day Luxury Watch Repair Courier",
+        "content": "A boutique uses electric bikes (<capacity>) to pick up/deliver watches from <num_customer> clients (<loc_customer>). Each client:  \n- Specifies a 1-hour pickup window (<time_windows>).  \n- Has <demand> fragile items (max 2 watches/bike).  \nBikes must return to the workshop (<loc_depot>) within <time_limit> hours for repairs. Minimize travel distance while guaranteeing on-time pickups.",
+        "tags": [
+            "capacity",
+            "num_customer",
+            "loc_customer",
+            "time_windows",
+            "demand",
+            "loc_depot",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Urban Fresh Sushi Ingredient Delivery for High-End Restaurants",
+        "content": "A premium seafood supplier must deliver ultra-fresh sushi ingredients (e.g., tuna, uni) to high-end restaurants (<loc_customer>) from a central fish market (<loc_depot>). Each restaurant has a strict delivery time window (<time_windows>) coinciding with prep hours, and ingredients spoil if unloaded late. Delivery vans (<capacity>) must account for traffic delays (<speed>) and return to the depot within <time_limit> hours to avoid overtime costs. The goal is to minimize total distance while ensuring no van exceeds capacity or misses a time window.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "time_windows",
+            "capacity",
+            "speed",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Mobile EV Charging Service for Urban Ride-Hailing Fleets",
+        "content": "An on-demand charging service deploys mobile charging units (<capacity> kWh) to recharge stranded electric ride-hailing vehicles (<loc_customer>) during their drivers\u2019 mandated break periods (<time_windows>). Chargers depart from a central hub (<loc_depot>) and must complete all jobs within <time_limit> hours due to battery constraints. Each EV requires <demand> kWh, and chargers must avoid backtracking to minimize urban congestion.",
+        "tags": [
+            "capacity",
+            "loc_customer",
+            "time_windows",
+            "loc_depot",
+            "time_limit",
+            "demand"
+        ]
+    },
+    {
+        "title": "Antarctic Penguin Colony Health Monitoring",
+        "content": "Scientists must visit remote penguin colonies (<loc_customer>) via snowmobiles (<capacity> kg for equipment) from a research base (<loc_depot>). Each colony has a narrow monitoring window (<time_windows>) during optimal daylight/weather conditions. Snowmobiles must return within <time_limit> hours due to extreme cold exposure risks. The challenge is to cover all colonies while balancing equipment loads (e.g., blood sample storage) and respecting time-sensitive biological sampling schedules.",
+        "tags": [
+            "loc_customer",
+            "capacity",
+            "loc_depot",
+            "time_windows",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Same-Day Luxury Watch Repair Courier",
+        "content": "A boutique watchmaker offers same-day repairs by collecting timepieces from clients (<loc_customer>) within 1-hour pickup windows (<time_windows>). Couriers (<capacity> watches per vehicle) must transport fragile items to the workshop (<loc_depot>) and return repaired watches within <time_limit> hours to meet service guarantees. Routes must account for secure parking delays (<service_time>) at high-rise apartments and avoid overloading to prevent damage.",
+        "tags": [
+            "loc_customer",
+            "time_windows",
+            "capacity",
+            "loc_depot",
+            "time_limit",
+            "service_time"
+        ]
+    },
+    {
+        "title": "Mobile Autism Therapy Unit Scheduling",
+        "content": "A healthcare provider dispatches customized therapy vans (<capacity> seats for specialists/equipment) to schools (<loc_customer>) for scheduled sessions (<time_windows>). Each school has unique demand (<demand> hours of therapy), and vans must return to the clinic (<loc_depot>) within <time_limit> hours to comply with staff shift rules. The objective is to maximize served schools while adhering to strict session timings and vehicle capacity for sensory-friendly equipment.",
+        "tags": [
+            "capacity",
+            "loc_customer",
+            "time_windows",
+            "demand",
+            "loc_depot",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Urban Fresh Sushi Ingredient Delivery for High-End Restaurants",
+        "content": "A premium seafood distributor must deliver ultra-fresh sushi ingredients (e.g., tuna, uni, live prawns) from a central hub (<loc_depot>) to <num_customer> high-end restaurants (<loc_customer>). Each restaurant has:  \n- A strict delivery time window (<time_windows>) to align with prep schedules.  \n- A unique order (<demand>) with temperature-controlled packaging requirements.  \n- Vehicles have a <capacity> limit for weight and refrigerated space.  \nRoutes must minimize travel time to preserve freshness while respecting time windows and avoiding traffic peaks.",
+        "tags": [
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "time_windows",
+            "demand",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Mobile Autism Therapy Unit Scheduling",
+        "content": "A healthcare provider operates mobile therapy vans (<capacity> patients/day) serving children with autism across <num_customer> rural communities (<loc_customer>). Each appointment:  \n- Must start within a 15-minute window (<time_windows>) to avoid disrupting routines.  \n- Requires <service_time> for sessions (including setup).  \n- Vans have a max daily operation limit (<time_limit>) to prevent therapist burnout.  \nThe goal is to maximize the number of daily sessions while minimizing travel time between dispersed households.",
+        "tags": [
+            "capacity",
+            "num_customer",
+            "loc_customer",
+            "time_windows",
+            "service_time",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Antarctic Penguin Colony Health Monitoring",
+        "content": "Scientists must visit <num_customer> penguin colonies (<loc_customer>) via snowmobiles from a research base (<loc_depot>). Constraints include:  \n- Narrow time windows (<time_windows>) during daylight/optimal weather.  \n- <demand> kg of equipment per site (e.g., drones, lab kits).  \n- Snowmobiles have <capacity> weight limits and <distance_limit> range due to extreme cold.  \nRoutes must ensure all colonies are surveyed before fuel depletion or sunset.",
+        "tags": [
+            "num_customer",
+            "loc_customer",
+            "loc_depot",
+            "time_windows",
+            "demand",
+            "capacity",
+            "distance_limit"
+        ]
+    },
+    {
+        "title": "Luxury Watch Boutique Security Courier Network",
+        "content": "A high-value watch brand transports inventory between <num_customer> boutiques (<loc_customer>) and a vault (<loc_depot>) using armored vans. Each transfer:  \n- Must occur within guarded time slots (<time_windows>) to mitigate theft risk.  \n- Has <demand> units (watches) with strict <capacity> limits per van.  \n- Total route duration is capped at <time_limit> for insurance compliance.  \nObjective: Minimize exposure time on roads while meeting boutique stock rotation schedules.",
+        "tags": [
+            "num_customer",
+            "loc_customer",
+            "loc_depot",
+            "time_windows",
+            "demand",
+            "capacity",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Mobile EV Charging Service for Urban Ride-Hailing Fleets",
+        "content": "A startup deploys mobile charging trucks to refuel stranded ride-hailing EVs at <num_customer> locations (<loc_customer>). Challenges:  \n- Drivers request charging within <time_windows> (e.g., before next shift).  \n- Each truck carries <capacity> kWh and takes <service_time> per charge.  \n- Daily shifts are capped at <time_limit> due to labor laws.  \nRoutes must prioritize high-demand zones while avoiding gridlock during peak hours.",
+        "tags": [
+            "num_customer",
+            "loc_customer",
+            "time_windows",
+            "capacity",
+            "service_time",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Urban Fresh Sushi Ingredient Delivery for High-End Restaurants",
+        "content": "A premium seafood distributor must deliver ultra-fresh sushi ingredients (e.g., tuna, uni) from a central hub (<loc_depot>) to <num_customer> high-end restaurants (<loc_customer>). Each restaurant has a strict 30-minute delivery window (<time_windows>) before meal prep begins, and ingredients spoil if unloaded late. Refrigerated vans (<capacity>) must account for traffic delays (<speed>) while ensuring no route exceeds 4 hours (<time_limit>) to maintain freshness.",
+        "tags": [
+            "loc_depot",
+            "num_customer",
+            "loc_customer",
+            "time_windows",
+            "capacity",
+            "speed",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Mobile EV Charging Service for Urban Ride-Hailing Fleets",
+        "content": "An energy company operates mobile charging trucks (<capacity> kWh) to recharge stranded electric ride-hailing vehicles across a city (<loc_customer>). Each stranded EV reports its location and remaining battery (<demand>), with urgency tiers (<time_windows>). Charging trucks depart from a depot (<loc_depot>) and must complete all jobs within 8-hour shifts (<time_limit>), prioritizing critical-low batteries.",
+        "tags": [
+            "capacity",
+            "loc_customer",
+            "demand",
+            "time_windows",
+            "loc_depot",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Antarctic Penguin Colony Health Monitoring",
+        "content": "Scientists must visit <num_customer> remote penguin colonies (<loc_customer>) from a research base (<loc_depot>) using snowmobiles (<capacity> equipment weight). Each colony has a narrow monitoring window (<time_windows>) during peak activity hours, and routes are constrained by extreme weather (<time_limit> daylight hours). Blood samples must be returned to the base before freezing temperatures damage them.",
+        "tags": [
+            "num_customer",
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "time_windows",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Luxury Watch Boutique Security Courier Network",
+        "content": "A high-security logistics firm transports luxury watches between boutiques (<loc_customer>) and a vault (<loc_depot>). Armored vehicles (<capacity> watches) operate under strict 15-minute arrival windows (<time_windows>) for store openings. Routes are time-limited (<time_limit> hours) to minimize theft risk, with detours forbidden due to pre-approved security corridors.",
+        "tags": [
+            "loc_customer",
+            "loc_depot",
+            "capacity",
+            "time_windows",
+            "time_limit"
+        ]
+    },
+    {
+        "title": "Mobile Autism Therapy Unit Scheduling",
+        "content": "A healthcare provider dispatches customized therapy vans (<capacity> equipment) to <num_customer> homes (<loc_customer>) for children with autism. Sessions must start within 10-minute windows (<time_windows>) to avoid meltdowns, and therapists cannot work over 6 hours/day (<time_limit>). Routes optimize for minimal travel time between appointments to reduce patient anxiety.",
+        "tags": [
+            "capacity",
+            "num_customer",
+            "loc_customer",
+            "time_windows",
+            "time_limit"
+        ]
+    }
+]

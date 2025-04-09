@@ -1,8 +1,33 @@
 [
     {
-        "title": "Grocery Delivery for Elderly Residents with Meal-Time Windows",
-        "content": "A local grocery store delivers fresh meals to elderly residents who rely on timely deliveries for lunch and dinner. The delivery points are at <locs>, and each resident has a strict mealtime window <time_windows> (e.g., \"Lunch must arrive between 11:30 AM and 12:30 PM\"). Each delivery van has a refrigerated capacity of <capacity> meals and travels at <speed> km/h. Unloading takes <service_time> minutes per stop. The goal is to ensure no meal arrives late while minimizing fuel costs and travel time.",
+        "title": "Perishable Food Distribution in Urban Areas with Shelf-Life Constraints",
+        "content": "A grocery distributor must deliver perishable goods to retail stores using refrigerated trucks. Each store\u2019s location is specified in <locs>, with a demand <demand> representing the volume of goods required. Stores have strict time windows <time_windows> to ensure products are stocked before their shelf-life expires. Each truck has a refrigeration capacity of <capacity> cubic meters and travels at <speed> km/h. The distributor must plan routes starting and ending at the central warehouse, ensuring deliveries commence within each store\u2019s time window and service time <service_time> for unloading is respected. The goal is to minimize total travel distance while avoiding overloading trucks.",
         "tags": [
+            "locs",
+            "demand",
+            "time_windows",
+            "capacity",
+            "speed",
+            "service_time"
+        ]
+    },
+    {
+        "title": "Emergency Medical Supply Deployment During Natural Disasters",
+        "content": "A disaster relief agency must deliver critical medical supplies to affected zones using emergency vehicles. Locations <locs> represent evacuation centers or hospitals, each requiring a specific supply volume <demand>. Due to logistical urgency, each site has a time window <time_windows> during which supplies must arrive to maximize their impact. Vehicles have a capacity <capacity> in kilograms and travel at <speed> km/h, with service time <service_time> for setup/distribution. Routes must originate and return to the central depot, avoiding exceeding vehicle capacity or missing time windows. The objective is to minimize travel distance while ensuring timely delivery of life-saving resources.",
+        "tags": [
+            "locs",
+            "demand",
+            "time_windows",
+            "capacity",
+            "speed",
+            "service_time"
+        ]
+    },
+    {
+        "title": "Manufacturing Component Delivery for Just-in-Time Production",
+        "content": "A factory relies on on-time delivery of parts to assembly lines using delivery vans. Component demand <demand> for each workstation (locations <locs>) must align with production schedules, which define strict time windows <time_windows> for part arrival. Each van has a payload capacity <capacity> kg and travels at <speed> km/h, with service time <service_time> for precise unloading. The depot operates within a fixed shift (modeled as depot\u2019s time window), and routes must start/end there. The aim is to minimize total distance while preventing production delays caused by missed time windows or overloading.",
+        "tags": [
+            "demand",
             "locs",
             "time_windows",
             "capacity",
@@ -11,10 +36,11 @@
         ]
     },
     {
-        "title": "School Bus Routing for Special Needs Students with Pickup/Drop-off Windows",
-        "content": "A school district must transport special needs students to and from school while accommodating strict pickup/drop-off times based on individual education plans. The homes and school are at <locs>, and each student has a unique time window <time_windows> (e.g., \"Student A must arrive at school by 8:15 AM\"). Buses have a seating capacity of <capacity> and travel at <speed> km/h. Loading/unloading takes <service_time> minutes per stop. The objective is to minimize total bus travel distance while ensuring no student is late.",
+        "title": "Waste Collection in Smart Cities with Dynamic Scheduling",
+        "content": "A municipal waste management system uses automated garbage trucks to collect refuse from smart bins. Each bin\u2019s location <locs> has a fill-level sensor determining its demand <demand> (weight to collect). Bins have time windows <time_windows> based on neighborhood activity patterns (e.g., avoiding rush hours). Trucks have a maximum capacity <capacity> tons and travel at <speed> km/h, with service time <service_time> for emptying. Routes must start/end at the waste processing facility. The goal is to minimize travel distance while adhering to time windows and preventing overflow by not exceeding truck capacity.",
         "tags": [
             "locs",
+            "demand",
             "time_windows",
             "capacity",
             "speed",
@@ -22,32 +48,234 @@
         ]
     },
     {
-        "title": "E-Commerce Same-Day Delivery with Customer Availability Slots",
-        "content": "An online retailer promises same-day delivery but must respect customers' selected delivery slots (e.g., \"3:00 PM\u20135:00 PM\"). Warehouses at <locs> dispatch vans with a cargo limit of <capacity> parcels. Each stop takes <service_time> minutes for unloading, and vans move at <speed> km/h. If a van runs out of parcels, it must return to the warehouse, costing <depot_service_time> minutes. The goal is to maximize on-time deliveries while minimizing fleet distance.",
+        "title": "Event Equipment Redistribution for Live Concert Tours",
+        "content": "A touring concert organizer must redeploy staging equipment between venues using specialized trucks. Each venue (locations <locs>) requires a specific equipment load <demand> (e.g., speakers, lighting rigs) and has a setup window <time_windows> before performances begin. Trucks have a capacity <capacity> tons and travel at <speed> km/h, with service time <service_time> for equipment offloading. The central logistics hub acts as the depot, requiring routes to start/end there. The objective is to minimize travel distance while ensuring equipment arrives on time and truck capacities are not exceeded during multi-stop routes.",
         "tags": [
             "locs",
+            "demand",
+            "time_windows",
             "capacity",
+            "speed",
+            "service_time"
+        ]
+    },
+    {
+        "title": "Agricultural Produce Delivery to Farmers' Markets with Perishability Constraints",
+        "content": "A cooperative transports fresh produce from farms to farmers' markets using refrigerated trucks. The market locations are <locs>, each requiring a specific quantity <demand> of goods. Markets operate within strict time windows <time_windows> to ensure produce freshness, with unloading taking <service_time> minutes. Each truck has a refrigeration capacity of <capacity> kg and travels at <speed> km/h. The goal is to minimize total distance while ensuring all deliveries occur within market operating hours and without overloading trucks.",
+        "tags": [
+            "locs",
+            "demand",
+            "time_windows",
             "service_time",
+            "capacity",
+            "speed"
+        ]
+    },
+    {
+        "title": "Sports Venue Equipment Redistribution for Multi-Event Stadiums",
+        "content": "A logistics company must deliver sports equipment (e.g., goalposts, bleachers) to multiple stadiums hosting back-to-back events. Each venue <locs> specifies a setup deadline <time_windows> and requires a specific number of items <demand>. Trucks have a maximum payload capacity <capacity> and travel at <speed> km/h. Service times <service_time> include unloading and coordination with venue staff. Routes must start/end at the central warehouse and avoid exceeding time windows to prevent event delays.",
+        "tags": [
+            "locs",
+            "time_windows",
+            "demand",
+            "capacity",
+            "speed",
+            "service_time"
+        ]
+    },
+    {
+        "title": "Blood Sample Transportation to Diagnostic Labs Under Regulatory Timelines",
+        "content": "A healthcare logistics firm transports temperature-sensitive blood samples from collection centers <locs> to diagnostic labs. Each sample must reach labs within a narrow time window <time_windows> to preserve viability, with handling time <service_time> at each center. Vehicles are equipped with refrigeration units and have a capacity limit <capacity> for sample containers. The objective is to minimize travel distance while adhering to strict lab operating hours and vehicle storage constraints.",
+        "tags": [
+            "locs",
+            "time_windows",
+            "service_time",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Urgent Legal Document Delivery for Court Deadlines",
+        "content": "A courier service delivers time-sensitive legal documents to law firms and courts <locs> that require strict delivery deadlines <time_windows>. Each document bundle has a volume <demand>, and couriers can carry a maximum load <capacity>. Vehicles travel at <speed> km/h, with service time <service_time> for signature verification. Routes must originate and terminate at the central office, ensuring all documents arrive before court filing cutoffs.",
+        "tags": [
+            "locs",
+            "time_windows",
+            "demand",
+            "capacity",
+            "speed",
+            "service_time"
+        ]
+    },
+    {
+        "title": "Festival Kiosk Supply Redistribution Across Multiple Venues",
+        "content": "A festival organizer redistributes supplies (e.g., merchandise, food stalls) between temporary venues <locs> during setup phases. Each venue has a designated setup window <time_windows> and requires a specific supply quantity <demand>. Delivery trucks have a capacity limit <capacity> and travel at <speed> km/h. Service times <service_time> include unloading and coordination with venue staff. The goal is to complete all deliveries before venues open while minimizing total route distance.",
+        "tags": [
+            "locs",
+            "time_windows",
+            "demand",
+            "capacity",
+            "speed",
+            "service_time"
+        ]
+    },
+    {
+        "title": "Construction Material Delivery to Active Sites with Daily Time Windows",
+        "content": "A construction firm must deliver materials (e.g., concrete, steel beams) to multiple active building sites using trucks. The sites are located at <locs>, with material demands <demand> tons. Each site has a time window <time_windows> during which deliveries are permitted due to crane availability or crew schedules. Trucks have a capacity of <capacity> tons and travel at <speed> km/h. The service time <service_time> accounts for unloading. Routes must originate and terminate at the central depot. The objective is to minimize total travel distance while adhering to time windows and capacity limits.",
+        "tags": [
+            "locs",
+            "demand",
+            "time_windows",
+            "capacity",
+            "speed",
+            "service_time"
+        ]
+    },
+    {
+        "title": "Same-Day E-commerce Deliveries with Urban Traffic Time Windows",
+        "content": "An online retailer must deliver time-sensitive packages to urban customers within strict time windows <time_windows>, reflecting customer availability. The warehouse and delivery points are at <locs>, with package demands <demand>. Delivery vans have a capacity of <capacity> cubic meters and travel at <speed> km/h. Each stop requires a service time <service_time> for unloading. Routes must start and end at the warehouse. The goal is to optimize delivery routes to minimize distance while ensuring all packages arrive within their time windows.",
+        "tags": [
+            "time_windows",
+            "locs",
+            "demand",
+            "capacity",
+            "speed",
+            "service_time"
+        ]
+    },
+    {
+        "title": "Floral Bouquet Delivery with Perishability and Time Constraints",
+        "content": "A florist must deliver fresh bouquets to customers for events or appointments. Locations are <locs>, with bouquet demands <demand>. Each delivery must arrive within a time window <time_windows> to ensure freshness. Delivery vehicles have a capacity of <capacity> bouquets and travel at <speed> km/h. Service time <service_time> includes arranging deliveries. All routes must begin and end at the flower shop. The objective is to minimize travel distance while meeting time windows and capacity constraints to prevent flower wilting.",
+        "tags": [
+            "locs",
+            "demand",
+            "time_windows",
+            "capacity",
+            "speed",
+            "service_time"
+        ]
+    },
+    {
+        "title": "School Meal Delivery with Nutritional Time Windows",
+        "content": "A school district requires hot meals delivered to campuses before lunchtime. Meal demands <demand> are specified for each school at <locs>. Each school has a time window <time_windows> to ensure meals are served fresh and hot. Delivery trucks have a capacity of <capacity> meals and travel at <speed> km/h. Service time <service_time> includes unloading and temperature checks. Routes must start and end at the central kitchen. The goal is to deliver all meals on time without exceeding vehicle capacity, minimizing total travel distance.",
+        "tags": [
+            "demand",
+            "locs",
+            "time_windows",
+            "capacity",
+            "speed",
+            "service_time"
+        ]
+    },
+    {
+        "title": "Beverage Delivery to Restaurants with Operating Time Constraints",
+        "content": "A beverage supplier must deliver alcohol and non-alcoholic drinks to restaurants, which have strict operating hours as time windows <time_windows>. Delivery points are <locs>, with demands <demand> cases. Delivery trucks have a capacity of <capacity> cases and travel at <speed> km/h. Service time <service_time> accounts for unloading and inventory checks. All routes must originate and terminate at the central warehouse. The objective is to plan routes that align with restaurant operating hours while minimizing total distance and respecting vehicle capacity.",
+        "tags": [
+            "time_windows",
+            "locs",
+            "demand",
+            "capacity",
+            "speed",
+            "service_time"
+        ]
+    },
+    {
+        "title": "Theme Park Attraction Restocking with Maintenance Time Windows",
+        "content": "A theme park uses service trucks to replenish attractions (e.g., ride tokens, safety equipment) during scheduled maintenance closures. The locations of attractions are given as <locs>, each with a demand <demand> for supplies. Each attraction has a maintenance window <time_windows> during which restocking must occur, and a service time <service_time> for unloading. Trucks depart from and return to the central depot, traveling at <speed> km/h. Each truck has a capacity <capacity> units, and routes must ensure supplies are delivered without exceeding capacity or violating time windows.",
+        "tags": [
+            "locs",
+            "demand",
+            "time_windows",
+            "service_time",
+            "speed",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Airport Ground Support Equipment Redistribution",
+        "content": "An airport operates a fleet of trucks to redistribute ground support equipment (e.g., baggage carts, refueling trucks) between terminals. Each terminal requires equipment within specific operational windows <time_windows>, and the depot must track delivery times. Trucks travel at <speed> km/h, with a capacity <capacity> units of equipment. Service time <service_time> is needed to unload or transfer equipment. Routes must originate and terminate at the central equipment depot, ensuring all terminals receive their allocated resources within time constraints.",
+        "tags": [
+            "time_windows",
+            "speed",
+            "capacity",
+            "service_time"
+        ]
+    },
+    {
+        "title": "School Supplies Delivery to Remote Classrooms with Academic Schedules",
+        "content": "A rural education authority dispatches trucks to deliver textbooks and materials to schools in remote areas. Each school\u2019s academic calendar defines a delivery time window <time_windows> (e.g., before morning classes start), and the depot is the central warehouse. Trucks have a capacity <capacity> items and travel at <speed> km/h. Service time <service_time> includes unloading supplies. Routes must start/end at the depot, ensuring timely delivery without overloading trucks.",
+        "tags": [
+            "time_windows",
+            "capacity",
+            "speed",
+            "service_time"
+        ]
+    },
+    {
+        "title": "Restaurant Chain Ingredient Delivery with Peak Operating Hours",
+        "content": "A culinary supplier delivers fresh ingredients to a chain of restaurants. Each restaurant specifies a delivery window <time_windows> aligned with pre-peak-hour preparation schedules (e.g., before lunch/dinner rushes). Trucks depart from the central distribution hub, traveling at <speed> km/h, with a capacity <capacity> kg of perishable goods. Service time <service_time> accounts for unloading. Routes must return to the depot, prioritizing on-time delivery to avoid stock shortages.",
+        "tags": [
+            "time_windows",
+            "speed",
+            "capacity",
+            "service_time"
+        ]
+    },
+    {
+        "title": "Data Center Hardware Deployment with Scheduled Maintenance Windows",
+        "content": "A tech firm deploys specialized trucks to deliver server racks and components to data centers undergoing scheduled maintenance. Each facility has a maintenance window <time_windows> during which hardware must be installed, and a service time <service_time> for setup. Trucks originate and return to a central depot, traveling at <speed> km/h. Each vehicle has a capacity <capacity> units of hardware, and routes must ensure deliveries align with maintenance timelines while respecting weight limits.",
+        "tags": [
+            "time_windows",
+            "service_time",
+            "speed",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Municipal Snow Plow Route Optimization with Resource Constraints",
+        "content": "A city\u2019s public works department must clear snow from critical roadways using plows with limited salt/sand capacity. Each road segment (node) has a time window during which it must be cleared (e.g., before morning rush hour). The location coordinates of road segments are <locs>, and each segment requires a service time <service_time> for clearing. Plows start and end at the central depot, which has a fixed operating window. Each plow has a maximum load capacity <capacity> tons of material and travels at <speed> km/h. The goal is to minimize total travel distance while ensuring all roads are cleared within their assigned time windows and without exceeding plow capacities.",
+        "tags": [
+            "locs",
+            "service_time",
+            "capacity",
+            "speed"
+        ]
+    },
+    {
+        "title": "Hospital Linen Supply Logistics with Daily Time Windows",
+        "content": "A hospital network requires daily linen delivery to multiple wards, with each ward specifying a time window for delivery (e.g., between 6:00 AM and 8:00 AM to align with morning shift changes). The linen trucks have a capacity <capacity> kg and travel at <speed> km/h. Each ward\u2019s demand <demand> corresponds to soiled linens to be replaced, and service times <service_time> account for loading/unloading. The central laundry depot operates within <depot_service_time> hours. The objective is to design routes starting/ending at the depot that meet all time windows while avoiding overloading any truck.",
+        "tags": [
+            "capacity",
+            "speed",
+            "demand",
+            "service_time",
+            "depot_service_time"
+        ]
+    },
+    {
+        "title": "Food Truck Restocking Under Operating Time Limits",
+        "content": "Mobile food vendors operating in urban areas require restocking deliveries before their daily service hours. Each truck\u2019s operating window (time window <time_windows>) is fixed (e.g., 11:00 AM\u20138:00 PM), and deliveries must arrive by their opening time. The delivery vehicles have a capacity <capacity> kg for ingredients and travel at <speed> km/h. The central kitchen has a service time <depot_service_time> for loading. The goal is to plan routes ensuring all food trucks are restocked within their time windows without exceeding vehicle capacities, while minimizing total travel distance.",
+        "tags": [
+            "time_windows",
+            "capacity",
             "speed",
             "depot_service_time"
         ]
     },
     {
-        "title": "Mobile Library Book Returns with Neighborhood Time Constraints",
-        "content": "A county library operates a mobile service to collect returned books from neighborhood drop-off points. Each stop at <locs> has a time window <time_windows> (e.g., \"10:00 AM\u201312:00 PM\") based on staff availability. The bookmobile has a storage limit of <capacity> books and drives at <speed> km/h. Each pickup takes <service_time> minutes. The route must start/end at the central library, ensuring all returns are collected within their windows while minimizing travel time.",
+        "title": "Automotive Service Parts Delivery with Workshop Hours",
+        "content": "An automotive repair chain needs parts delivered to workshops that operate only during specific hours (time windows <time_windows>). Each workshop\u2019s demand <demand> corresponds to parts for scheduled repairs, and service times <service_time> account for unloading. Delivery trucks have a capacity <capacity> cubic feet and travel at <speed> km/h. The central warehouse has a fixed operating window <depot_service_time>. Routes must start/end at the warehouse, respect workshop time windows, and prevent overloading any vehicle. The aim is to minimize total travel distance while meeting all constraints.",
         "tags": [
-            "locs",
             "time_windows",
+            "demand",
+            "service_time",
             "capacity",
             "speed",
-            "service_time"
+            "depot_service_time"
         ]
     },
     {
-        "title": "Waste Collection for Businesses with Noise-Restricted Hours",
-        "content": "A waste management company collects recyclables from businesses in a noise-sensitive urban area. Pickups at <locs> must occur within designated hours <time_windows> (e.g., \"7:00 AM\u20139:00 AM\" before noise ordinances take effect). Each truck carries <capacity> tons and moves at <speed> km/h. Loading takes <service_time> minutes per stop. The depot opens for <depot_service_time> hours. The objective is to minimize route distance while complying with time and noise regulations.",
+        "title": "Theater Set Redistribution for Venue Rotations",
+        "content": "A theater company must relocate set pieces between multiple venues for rotating productions. Each venue\u2019s setup window (time window <time_windows>) aligns with pre-show schedules, requiring deliveries to arrive precisely. The transport trucks have a capacity <capacity> tons (weight) and dimensions (volume) constraints, traveling at <speed> km/h. Service times <service_time> include unloading/loading at each venue. The central storage depot operates within <depot_service_time> hours. The goal is to design routes that start/end at the depot, adhere to venue time windows, and avoid exceeding truck capacities, while minimizing travel distance.",
         "tags": [
-            "locs",
             "time_windows",
             "capacity",
             "speed",
@@ -56,408 +284,281 @@
         ]
     },
     {
-        "title": "Ice Cream Truck Routing with Melt-Risk Time Windows",
-        "content": "An ice cream vendor must visit neighborhoods <locs> to sell treats before they melt. Each stop has a demand of <demand> units (based on pre-orders) and a strict time window <time_windows> (e.g., \"after school but before dinner\"). The truck\u2019s freezer holds <capacity> units and travels at <speed>. Melting starts if delivery exceeds <time_windows_close>, so the goal is to minimize detours while hitting all time slots.",
+        "title": "Hospital Equipment Redistribution During Surge Events",
+        "content": "In a scenario where hospitals need to share critical medical equipment (e.g., ventilators) during a health crisis, the locations of hospitals are represented as <locs>. Each hospital has a demand for equipment <demand>, a time window <time_windows> during which staff are available to receive transfers, and a service time <service_time> for setup. Redistribution vehicles have a capacity <capacity> units and travel at <speed> km/h. The goal is to plan routes starting/ending at a central logistics hub, ensuring all equipment is redistributed within time windows while minimizing total distance.",
         "tags": [
             "locs",
             "demand",
             "time_windows",
-            "capacity",
-            "speed",
-            "time_windows_close"
-        ]
-    },
-    {
-        "title": "Farm-to-Table Produce Delivery with Freshness Windows",
-        "content": "A local farm delivers perishable veggies to restaurants <locs>. Each order weighs <demand> kg, and restaurants accept deliveries only during prep hours <time_windows>. The delivery van (<capacity> kg capacity, <speed> km/h) must avoid midday heat to preserve freshness. Service time <service_time> includes unloading crates. Optimize routes to keep spinach crisp and chefs happy!",
-        "tags": [
-            "locs",
-            "demand",
-            "time_windows",
-            "capacity",
-            "speed",
-            "service_time"
-        ]
-    },
-    {
-        "title": "Laundry Pickup for Hotels with Checkout Deadlines",
-        "content": "A laundromat serves hotels <locs> that need linens collected by <time_windows_close> (before guest check-ins). Each hotel\u2019s dirty laundry weighs <demand> kg; the truck (<capacity> kg) takes <service_time> per stop. Late pickups mean unhappy housekeeping! Routes must start/end at the laundromat and respect all deadlines.",
-        "tags": [
-            "locs",
-            "time_windows_close",
-            "demand",
-            "capacity",
-            "service_time"
-        ]
-    },
-    {
-        "title": "Mobile Vet Clinic for Rural Pets with Appointment Slots",
-        "content": "A vet drives to farms <locs> to vaccinate livestock. Each farm has <demand> animals (max <capacity> per trip) and a strict 1-hour slot <time_windows> (e.g., \"9\u201310 AM before milking\"). The van travels at <speed>, and each exam takes <service_time>. Missed slots mean rescheduling\u2014costly for farmers! Minimize travel to keep cows (and owners) calm.",
-        "tags": [
-            "locs",
-            "demand",
-            "capacity",
-            "time_windows",
-            "speed",
-            "service_time"
-        ]
-    },
-    {
-        "title": "Courier for Legal Documents with Court Deadline Constraints",
-        "content": "A law firm needs sensitive papers delivered to courthouses <locs> by exact filing times <time_windows_close>. Each envelope counts as <demand> \"units\" (max <capacity> per courier bike). Traffic slows bikes to <speed> km/h, and signing receipts takes <service_time>. Late deliveries risk case dismissals\u2014so prioritize punctuality over distance!",
-        "tags": [
-            "locs",
-            "time_windows_close",
-            "demand",
-            "capacity",
-            "speed",
-            "service_time"
-        ]
-    },
-    {
-        "title": "Flower Shop Valentine\u2019s Day Rush Delivery",
-        "content": "(\"A local flower shop has 50 Valentine\u2019s Day orders to deliver across town starting from their shop (node 0).  \nDelivery addresses are at <locs>, each with a bouquet demand of <demand> stems.  \nCustomers expect deliveries within 2-hour windows <time_windows> (e.g., 9-11 AM for offices).  \nEach delivery van fits <capacity> bouquets and takes <service_time> minutes to park/unload.  \nVans drive at <speed> km/h in city traffic.  \nGoal: Deliver all orders on time while minimizing frantic driver zig-zagging across town!\")",
-        "tags": [
-            "locs",
-            "demand",
-            "time_windows",
-            "capacity",
             "service_time",
+            "capacity",
             "speed"
         ]
     },
     {
-        "title": "Food Bank Fresh Produce Distribution",
-        "content": "(\"A food bank coordinates daily vegetable deliveries to 30 soup kitchens from a central warehouse (node 0).  \nKitchens are at <locs> with perishable food demand <demand> (crates).  \nEach kitchen has strict receiving hours <time_windows> (e.g., \u20186-8 AM before meal prep\u2019).  \nRefrigerated trucks (<capacity> crates, <speed> km/h) take <service_time> minutes to unload.  \nIf a truck runs low, it must return to the warehouse (adding <depot_service_time>).  \nGoal: Get veggies delivered fresh without kitchens waiting!\")",
+        "title": "Perishable Seafood Delivery to Coastal Restaurants",
+        "content": "A seafood distributor must deliver fresh catches to coastal restaurants using refrigerated trucks. Locations of restaurants are <locs>, with each requiring a specific quantity <demand> of seafood. Restaurants have strict time windows <time_windows> aligned with their daily menu preparation schedules and a service time <service_time> for unloading. Trucks have a refrigeration capacity limit <capacity> kg and travel at <speed> km/h. The objective is to optimize routes from the distribution center to ensure seafood freshness and timely delivery while minimizing travel distance.",
         "tags": [
             "locs",
             "demand",
             "time_windows",
+            "service_time",
+            "capacity",
+            "speed"
+        ]
+    },
+    {
+        "title": "Urgent Lab Specimen Transport Between Research Facilities",
+        "content": "A medical research network requires rapid transport of temperature-sensitive lab specimens between facilities. Specimen pickup/drop-off points are at <locs>, with each node having a time window <time_windows> to prevent sample degradation. Each facility requires a service time <service_time> for handling. Transport vehicles have a capacity <capacity> specimens and travel at <speed> km/h. Routes must originate and terminate at a central bio-storage depot, adhering to time constraints to preserve sample viability while minimizing distance.",
+        "tags": [
+            "locs",
+            "time_windows",
+            "service_time",
+            "capacity",
+            "speed"
+        ]
+    },
+    {
+        "title": "IT Hardware Deployment to Remote Data Centers",
+        "content": "A tech company deploys servers to remote data centers during scheduled maintenance windows. Data center locations are <locs>, with each requiring a specific number of servers <demand>. Each data center has a narrow time window <time_windows> when power outages are permitted for installation, plus a service time <service_time>. Delivery trucks have a payload capacity <capacity> units and travel at <speed> km/h. The goal is to plan routes from the central warehouse, ensuring servers arrive precisely during maintenance windows while minimizing total travel distance.",
+        "tags": [
+            "locs",
+            "demand",
+            "time_windows",
+            "service_time",
+            "capacity",
+            "speed"
+        ]
+    },
+    {
+        "title": "Exam Material Delivery to Regional Testing Centers",
+        "content": "An educational institution must deliver standardized exam kits to testing centers across a region. Testing centers are located at <locs>, each requiring a specific number of exam bundles <demand>. Centers have strict time windows <time_windows> to ensure exams start on schedule, with a service time <service_time> for security checks. Delivery vans have a capacity <capacity> bundles and travel at <speed> km/h. Routes must originate/end at the exam distribution hub, avoiding capacity overloads and late deliveries while minimizing distance.",
+        "tags": [
+            "locs",
+            "demand",
+            "time_windows",
+            "service_time",
+            "capacity",
+            "speed"
+        ]
+    },
+    {
+        "title": "Film Equipment Redistribution for On-Schedule Shoot Schedules",
+        "content": "A film production company must deliver camera gear, lighting rigs, and props to multiple filming locations. Each location has a strict start time for the shoot (time window `[e_i, l_i]`), and the equipment must be unloaded within its service time `s_i`. Delivery trucks have a maximum capacity `Q` due to space and weight limits for fragile equipment. The goal is to minimize total travel distance while ensuring all equipment arrives on time for each scene\u2019s scheduled start.",
+        "tags": []
+    },
+    {
+        "title": "Solar Panel Component Delivery to Remote Installation Sites",
+        "content": "A renewable energy firm transports solar panel modules and mounting hardware to remote construction sites. Each site has a time window `[e_i, l_i]` aligned with the availability of installation crews. The service time `s_i` includes unloading and preliminary setup. Delivery trucks are constrained by `Q`, the maximum weight they can carry over rugged terrain. The objective is to optimize routes to meet all deadlines while minimizing fuel consumption and vehicle usage.",
+        "tags": []
+    },
+    {
+        "title": "Wedding Florist Bouquet Delivery with Floral Perishability and Venue Timelines",
+        "content": "A high-end florist delivers custom bouquets and floral arrangements to multiple wedding venues. Each venue has a time window `[e_i, l_i]` tied to the ceremony start time, and floral freshness requires refrigerated trucks with limited capacity `Q` (due to space and cooling constraints). Service time `s_i` accounts for precise unloading and setup. The goal is to ensure timely deliveries while maximizing bouquet freshness and minimizing mileage.",
+        "tags": []
+    },
+    {
+        "title": "Aircraft Cabin Crew Supply Redistribution for Flight Turnarounds",
+        "content": "An airline operates a hub where cabin crew supplies (amenity kits, meals, safety gear) must be redistributed to departing aircraft. Each aircraft has a time window `[e_i, l_i]` during its turnaround period (e.g., 30 minutes between landing and takeoff). Delivery vehicles have a capacity `Q` restricted by payload limits and must service multiple gates simultaneously. The objective is to complete all deliveries within turnaround windows while minimizing idle time and fuel costs.",
+        "tags": []
+    },
+    {
+        "title": "Precision Semiconductor Wafer Transport with Temperature-Controlled Delivery Windows",
+        "content": "A semiconductor manufacturer ships fragile silicon wafers between fabrication facilities. Each destination has a time window `[e_i, l_i]` to maintain cleanroom alignment and temperature-controlled environments. Service time `s_i` includes specialized unloading procedures. Trucks are constrained by `Q`, limited by the number of climate-controlled racks they can carry. The goal is to ensure zero delays in wafer delivery while adhering to strict environmental and capacity constraints.",
+        "tags": []
+    },
+    {
+        "title": "Vaccine Delivery to Remote Health Clinics with Refrigeration Constraints",
+        "content": "A pharmaceutical distributor must deliver temperature-sensitive vaccines to remote health clinics using refrigerated trucks. The clinic locations are <locs>, with each requiring a specific number of doses (<demand>). Each clinic has a time window <time_windows> during which the vaccine must be administered to avoid expiration, and a service time <service_time> for unloading. Trucks have a refrigeration capacity of <capacity> doses and travel at <speed> km/h. Routes must start/end at the central depot, ensuring all clinics are serviced within their windows while minimizing total travel distance.",
+        "tags": [
+            "locs",
+            "demand",
+            "time_windows",
+            "service_time",
+            "capacity",
+            "speed"
+        ]
+    },
+    {
+        "title": "Live Event Server Redistribution for Tech Conferences",
+        "content": "A tech conference organizer needs to deploy servers to multiple venues for simultaneous workshops. Server delivery locations (<locs>) must align with venue setup schedules, with time windows <time_windows> to ensure readiness. Each venue requires <demand> servers, and service time <service_time> includes setup coordination. Delivery trucks can carry up to <capacity> servers and travel at <speed> km/h. The goal is to route trucks from the central staging area to all venues, respecting time constraints and maximizing server delivery efficiency.",
+        "tags": [
+            "locs",
+            "time_windows",
+            "demand",
+            "service_time",
+            "capacity",
+            "speed"
+        ]
+    },
+    {
+        "title": "Seasonal Ornament Redistribution for Holiday Retailers",
+        "content": "A retail chain must restock seasonal ornaments to multiple stores before holiday deadlines. Stores (<locs>) have time windows <time_windows> based on local shopping trends, with unloading taking <service_time>. Each truck has a capacity <capacity> for ornament boxes and travels at <speed> km/h. The depot\u2019s loading dock operates for <depot_service_time> hours, requiring optimized routes to ensure all stores receive stock before their promotional windows.",
+        "tags": [
+            "locs",
+            "time_windows",
+            "service_time",
             "capacity",
             "speed",
-            "service_time",
             "depot_service_time"
         ]
     },
     {
-        "title": "Citywide Moving Crew Scheduling",
-        "content": "(\"A moving company has 10 crews to help families relocate across the city today.  \nHomes are at <locs> with furniture volume <demand> (cubic meters).  \nEach family booked a 3-hour slot <time_windows> (e.g., \u20181-4 PM after their lease starts\u2019).  \nMoving trucks hold <capacity> m\u00b3 and drive at <speed> km/h (slower when loaded!).  \nLoading/unloading takes <service_time> hours per stop.  \nGoal: Schedule crews so no family gets stuck waiting with their sofa on the sidewalk!\")",
+        "title": "Medical Device Delivery Under Regulatory Compliance Timelines",
+        "content": "A medical supply company delivers specialized diagnostic equipment to hospitals under strict regulatory timelines. Each hospital (<locs>) has a mandated <time_windows> for receiving devices to avoid compliance penalties, with unloading taking <service_time>. Delivery vans can carry <capacity> devices and travel at <speed> km/h. Routes must originate and terminate at the central warehouse, prioritizing on-time delivery while minimizing total distance traveled.",
         "tags": [
             "locs",
-            "demand",
             "time_windows",
+            "service_time",
             "capacity",
+            "speed"
+        ]
+    },
+    {
+        "title": "Urgent Laboratory Equipment Redistribution for Research Institutions",
+        "content": "A research consortium requires rapid redistribution of precision lab equipment between facilities for time-sensitive experiments. Each lab (<locs>) has a <time_windows> window for equipment arrival to maintain operational continuity, with setup time <service_time>. Transport vehicles have a capacity <capacity> for equipment weight/volume and travel at <speed> km/h. The objective is to design routes starting/ending at the central hub, ensuring all labs receive equipment within their windows while adhering to vehicle load limits.",
+        "tags": [
+            "locs",
+            "time_windows",
+            "service_time",
+            "capacity",
+            "speed"
+        ]
+    },
+    {
+        "title": "Perishable Grocery Delivery to Urban Micro-Warehouses with Daily Restocking Time Windows",
+        "content": "A grocery retailer uses electric trucks to restock urban micro-warehouses with perishable goods. Each warehouse has a daily restocking time window <time_windows> to avoid disrupting customer pickup hours. The warehouses demand specific quantities <demand>, but trucks have a maximum cargo capacity <capacity> due to refrigeration unit limitations. Delivery vehicles travel at <speed> and require <service_time> minutes per stop to unload perishables. Routes must originate and return to the central distribution hub, minimizing total distance while adhering to strict perishability timelines and capacity limits.",
+        "tags": [
+            "time_windows",
+            "demand",
+            "capacity",
+            "speed",
+            "service_time"
+        ]
+    },
+    {
+        "title": "Satellite Component Delivery to Remote Launch Sites with Government-Regulated Windows",
+        "content": "A aerospace logistics firm transports precision satellite components to isolated launch facilities. Each facility has government-mandated access windows <time_windows> for security and operational reasons. The fragile components have individual weights <demand> that must not exceed the truck\u2019s weight capacity <capacity>, which also accommodates climate-controlled shipping containers. Vehicles move at <speed> and spend <service_time> minutes at each site for safety inspections. Routes must start/end at the base depot, ensuring components arrive undamaged and within regulated timeframes to avoid launch schedule delays.",
+        "tags": [
+            "time_windows",
+            "demand",
+            "capacity",
+            "speed",
+            "service_time"
+        ]
+    },
+    {
+        "title": "Seasonal Ornamental Tree Delivery for Holiday Landscaping Projects",
+        "content": "A landscaping company delivers live Christmas trees to commercial properties during peak season. Each client specifies a delivery time window <time_windows> to coincide with pre-decorating setup periods. The trees have bulk dimensions <demand> requiring trucks with volume capacity <capacity>, and vehicles travel at <speed>. Loading/unloading takes <service_time> minutes per location. Routes must originate/return to the nursery, balancing tree density to avoid overloading while meeting clients\u2019 urgent timelines to ensure tree freshness.",
+        "tags": [
+            "time_windows",
+            "demand",
+            "capacity",
+            "speed",
+            "service_time"
+        ]
+    },
+    {
+        "title": "Industrial Gas Cylinder Redistribution for Manufacturing Plants",
+        "content": "A gas supplier redistributes oxygen/acetylene cylinders between industrial facilities. Each plant has a maintenance shutdown window <time_windows> when cylinders must be replaced. Cylinder demands <demand> vary by facility, but trucks cannot exceed their weight/size capacity <capacity> due to vehicle specifications. Travel speed is <speed>, and swaps take <service_time> minutes. Routes must start/end at the central gas depot, ensuring no facility is left without cylinders during critical production halts while optimizing route efficiency.",
+        "tags": [
+            "time_windows",
+            "demand",
+            "capacity",
+            "speed",
+            "service_time"
+        ]
+    },
+    {
+        "title": "Art Exhibit Artifact Transportation Between Museums with Conservation Timelines",
+        "content": "A cultural heritage organization transports fragile art artifacts between museums for a traveling exhibition. Each museum imposes strict handling time windows <time_windows> to minimize artifact exposure to environmental risks. Artifact weights/volumes <demand> must stay within the climate-controlled truck\u2019s capacity <capacity>. Vehicles move at <speed>, with <service_time> spent on delicate loading/unloading. Routes must begin/end at the logistics hub, ensuring artifacts arrive undamaged and within conservation-prescribed schedules to avoid preservation penalties.",
+        "tags": [
+            "time_windows",
+            "demand",
+            "capacity",
+            "speed",
+            "service_time"
+        ]
+    },
+    {
+        "title": "Automotive Retail Vehicle Delivery with Time Windows and Spatial Constraints",
+        "content": "A car dealership must deliver newly purchased vehicles to customers using transport trucks. Each truck has a maximum capacity <capacity> in terms of the number of vehicles it can carry. Each customer specifies a time window <time_windows> during which the delivery must occur, as they are only available at those times. The delivery process at each location requires <service_time> minutes for paperwork and handover. Trucks travel at <speed> km/h. The objective is to plan routes that start and end at the dealership, ensuring all deliveries are made within time windows and without exceeding truck capacities, while minimizing total travel distance.",
+        "tags": [
+            "capacity",
+            "time_windows",
+            "service_time",
+            "speed"
+        ]
+    },
+    {
+        "title": "University Campus Supply Redistribution with Academic Schedule Constraints",
+        "content": "A university's central warehouse must distribute office supplies to campus departments. Each department has a time window <time_windows> corresponding to their operational hours (e.g., when staff are present), and each delivery requires <service_time> minutes for unloading. Delivery trucks have a capacity <capacity> in kg and travel at <speed> km/h. The goal is to route trucks such that all departments receive supplies within their time windows, without exceeding vehicle capacities, while minimizing the total distance traveled.",
+        "tags": [
+            "time_windows",
+            "service_time",
+            "capacity",
+            "speed"
+        ]
+    },
+    {
+        "title": "Drone-Based Medical Sample Transportation in Urban Areas",
+        "content": "A medical lab uses drones to transport urgent blood and tissue samples from collection centers to diagnostic facilities. Each drone has a limited payload capacity <capacity> in grams and must deliver samples within strict time windows <time_windows> to maintain sample integrity. The flight speed is <speed> km/h, and each landing/processing at a location takes <service_time> minutes. Drones must start and end at the lab's central hub. The aim is to plan routes ensuring all samples are delivered on time without exceeding drone capacities, while minimizing total flight distance.",
+        "tags": [
+            "capacity",
+            "time_windows",
             "speed",
             "service_time"
         ]
     },
     {
-        "title": "Beach Ice Delivery for Fish Markets",
-        "content": "(\"An ice factory supplies crushed ice to 25 coastal fish markets before dawn.  \nMarkets are at <locs> with daily ice demand <demand> (kg).  \nDeliveries must arrive <time_windows> (e.g., \u20183-5 AM before fishing boats dock\u2019).  \nTrucks carry <capacity> kg and drive at <speed> km/h (slower on sandy roads!).  \nEach stop takes <service_time> minutes to unload melting ice.  \nGoal: Keep the fish fresh without trucks getting stuck at low tide!\")",
+        "title": "Festival Ride Setup Redistribution with Event Timelines",
+        "content": "A carnival company must relocate amusement rides between festival locations using trucks. Each truck has a capacity <capacity> tons for transporting ride components. Each festival site has a setup time window <time_windows> during which the ride must be delivered and assembled, requiring <service_time> hours. Trucks travel at <speed> km/h. The goal is to schedule routes starting and ending at the central warehouse, ensuring all rides are delivered within time windows without overloading trucks, while minimizing total travel distance.",
         "tags": [
-            "locs",
-            "demand",
-            "time_windows",
             "capacity",
-            "speed",
-            "service_time"
+            "time_windows",
+            "service_time",
+            "speed"
         ]
     },
     {
-        "title": "Library Bookmobile Summer Tour",
-        "content": "(\"A county library\u2019s bookmobile visits 15 rural towns weekly from the central branch (node 0).  \nStops are at <locs> with expected book returns <demand> (items).  \nEach town has a 1-hour window <time_windows> (e.g., \u20182-3 PM after school\u2019).  \nThe bookmobile fits <capacity> books and drives at <speed> km/h (backroads speed!).  \nSpends <service_time> minutes per stop for check-in/out.  \nGoal: Maximize kids\u2019 summer reading access while keeping the schedule predictable!\")",
-        "tags": [
-            "locs",
-            "demand",
-            "time_windows",
-            "capacity",
-            "speed",
-            "service_time"
-        ]
-    },
-    {
-        "title": "Mobile COVID-19 Testing Unit Routing with Appointment Slots",
-        "content": "A city health department operates mobile testing vans to visit neighborhoods with high infection rates. The testing sites are at <locs>, each with a scheduled time window <time_windows> when residents are available. Each van carries <capacity> test kits and takes <service_time> minutes per stop. Vans must return to the depot for restocking if they run out. The goal is to minimize total travel time while ensuring all appointments are met.",
-        "tags": [
-            "locs",
-            "time_windows",
-            "capacity",
-            "service_time"
-        ]
-    },
-    {
-        "title": "Coffee Bean Delivery to Caf\u00e9s with Brewing Schedules",
-        "content": "A roastery supplies fresh coffee beans to local caf\u00e9s, which must receive deliveries before their morning rush (<time_windows>). Each caf\u00e9\u2019s order size is <demand> kg, and the delivery truck holds <capacity> kg. Unloading takes <service_time> minutes per stop. The roastery wants to minimize fuel costs while ensuring no caf\u00e9 runs out of beans during peak hours.",
+        "title": "Post Office Last-Mile Delivery with Customer-Specified Time Windows",
+        "content": "A postal service delivers packages to residential customers with individually requested delivery time windows <time_windows> (e.g., daytime or evening slots). Each package has a weight <demand>, and delivery trucks have a maximum capacity <capacity> kg. The service time at each stop is <service_time> minutes for unloading, and vehicles travel at <speed> km/h. Routes must originate and return to the central post office, ensuring all deliveries occur within time windows while staying under capacity limits and minimizing total distance.",
         "tags": [
             "time_windows",
             "demand",
             "capacity",
-            "service_time"
-        ]
-    },
-    {
-        "title": "Ambulance Non-Emergency Patient Transport with Hospital Slots",
-        "content": "A hospital coordinates non-urgent patient transfers (e.g., dialysis appointments) using ambulances. Patients are at <locs> with strict arrival windows <time_windows> (e.g., 9:00\u20139:15 AM). Each ambulance fits <capacity> patients and takes <service_time> minutes for pickup/drop-off. The depot must optimize routes to avoid delays, as late arrivals disrupt hospital schedules.",
-        "tags": [
-            "locs",
-            "time_windows",
-            "capacity",
-            "service_time"
-        ]
-    },
-    {
-        "title": "Wedding Cake Deliveries with Ceremony Deadlines",
-        "content": "A bakery delivers fragile wedding cakes to venues (<locs>) with exact delivery windows (<time_windows>)\u2014too early risks melting, too late ruins the event. Each van carries <capacity> cakes (each weighs <demand> kg) and spends <service_time> minutes setting up. The bakery aims to minimize distance (to reduce vibration damage) while meeting all time slots.",
-        "tags": [
-            "locs",
-            "time_windows",
-            "capacity",
-            "demand",
-            "service_time"
-        ]
-    },
-    {
-        "title": "Reusable Container Pickup for Zero-Waste Groceries",
-        "content": "A zero-waste grocery chain collects empty containers from customers (<locs>) for refilling. Customers leave containers outside only during <time_windows> (e.g., 7\u201310 AM). Each truck holds <capacity> containers, and pickup takes <service_time> minutes. The depot must plan routes to avoid missed pickups (containers left outside get stolen or rained on).",
-        "tags": [
-            "locs",
-            "time_windows",
-            "capacity",
-            "service_time"
-        ]
-    },
-    {
-        "title": "Mobile Charging Station Routing for Electric Scooters",
-        "content": "A company operates mobile charging vans to collect and recharge depleted e-scooters scattered across the city (<locs>). Each van has battery-swapping capacity for <capacity> scooters and moves at <speed> km/h. Scooter hubs must be visited during their operational hours (<time_windows>) with <service_time> minutes needed per swap. Vans start/end at the depot. Goal: minimize total distance while keeping scooters charged before rush hour demand peaks.",
-        "tags": [
-            "locs",
-            "capacity",
-            "speed",
-            "time_windows",
-            "service_time"
-        ]
-    },
-    {
-        "title": "Art Gallery Installation Team Scheduling",
-        "content": "An art transport company must deliver sculptures to <num_customer> galleries (<locs>) for a citywide exhibition. Each fragile piece requires <service_time> hours to install, and galleries only accept deliveries during their prep hours (<time_windows>). Trucks have temperature-controlled compartments fitting <capacity> artworks and travel at <speed>. The depot is the museum warehouse. Objective: ensure all installations are completed before opening night with minimal mileage.",
-        "tags": [
-            "num_customer",
-            "locs",
-            "service_time",
-            "time_windows",
-            "capacity",
-            "speed"
-        ]
-    },
-    {
-        "title": "Pop-Up Vaccination Clinic for Rural Towns",
-        "content": "A health department dispatches mobile clinics to vaccinate residents in remote villages (<locs>). Each clinic van carries <capacity> vaccine doses and takes <service_time> hours per stop. Villages have strict time windows (<time_windows>) due to local market days or weather constraints (e.g., avoiding midday heat). Vans travel at <speed> km/h on mountain roads. Goal: maximize vaccinated communities while returning to the central depot before nightfall.",
-        "tags": [
-            "locs",
-            "capacity",
-            "service_time",
-            "time_windows",
-            "speed"
-        ]
-    },
-    {
-        "title": "Bakery Truck Route for Fresh Donut Deliveries",
-        "content": "A donut shop supplies cafes (<locs>) with hourly-batch deliveries before customers' breakfast times (<time_windows>). Each truck fits <capacity> boxes (1 box per cafe), travels at <speed>, and spends <service_time> minutes per drop-off. Depot is the central kitchen. Objective: minimize driving time so all cafes get piping-hot donuts by 7 AM.",
-        "tags": [
-            "locs",
-            "time_windows",
-            "capacity",
-            "speed",
-            "service_time"
-        ]
-    },
-    {
-        "title": "Pool Cleaning Service for Vacation Rentals",
-        "content": "A maintenance company services <num_customer> Airbnb pools (<locs>) weekly. Each technician\u2019s truck carries <capacity> liters of chemicals and takes <service_time> hours per clean. Rentals enforce strict windows (<time_windows>) between guest check-outs and arrivals. Technicians drive at <speed> km/h starting from the depot. Goal: complete all cleans without disrupting guests while minimizing fuel costs.",
-        "tags": [
-            "num_customer",
-            "locs",
-            "capacity",
-            "service_time",
-            "time_windows",
-            "speed"
-        ]
-    },
-    {
-        "title": "Mobile EV Charging for Ride-Sharing Fleets with Shift Windows",
-        "content": "A charging company deploys mobile charging vans to top up electric ride-sharing cars overnight. The cars are parked at <locs>, each needing <demand> kWh.  \nEach van carries <capacity> kWh and moves at <speed>. Cars must be charged within their driver\u2019s shift windows <time_windows> (e.g., 10 PM\u20136 AM), and each charge takes <service_time> minutes.  \nThe goal is to cover all cars with the fewest vans while minimizing total driving distance.",
-        "tags": [
-            "locs",
-            "demand",
-            "capacity",
-            "speed",
-            "time_windows",
-            "service_time"
-        ]
-    },
-    {
-        "title": "Perishable Seafood Delivery to Restaurants with Prep-Time Deadlines",
-        "content": "A fish market delivers fresh catch to <num_customer> restaurants at <locs>. Each order weighs <demand> kg and must arrive before the kitchen\u2019s prep window <time_windows_close> (e.g., \"by 8 AM for lunch service\").  \nTrucks have a cold storage limit of <capacity> kg and drive at <speed>. Unloading takes <service_time> per stop.  \nObjective: Ensure no seafood spoils by meeting time windows while minimizing fleet distance.",
-        "tags": [
-            "num_customer",
-            "locs",
-            "demand",
-            "time_windows_close",
-            "capacity",
-            "speed",
-            "service_time"
-        ]
-    },
-    {
-        "title": "Campus Mail Courier with Departmental Availability Slots",
-        "content": "A university mailroom uses electric carts to deliver packages across <locs> (labs, offices). Each department has strict pickup windows <time_windows> (e.g., \"9\u201311 AM only\").  \nCarts hold <capacity> parcels, move at <speed>, and take <service_time> per stop.  \nGoal: Deliver all mail on time with the fewest carts and shortest routes.",
-        "tags": [
-            "locs",
-            "time_windows",
-            "capacity",
-            "speed",
-            "service_time"
-        ]
-    },
-    {
-        "title": "Mobile Hair Salon for Nursing Homes with Appointment Blocks",
-        "content": "A stylist visits <num_customer> nursing homes (<locs>) to cut residents\u2019 hair. Each home has a 2-hour slot <time_windows> (e.g., \"1\u20133 PM Tuesday\") and <demand> appointments (each taking <service_time> mins).  \nThe van carries <capacity> tools/supplies and travels at <speed>. Overbooking risks fines.  \nObjective: Maximize served appointments while respecting time windows and capacity.",
-        "tags": [
-            "num_customer",
-            "locs",
-            "time_windows",
-            "demand",
-            "service_time",
-            "capacity",
-            "speed"
-        ]
-    },
-    {
-        "title": "Festival Food Truck Routing with Vendor Time Slots",
-        "content": "During a city festival, food trucks must restock from a central kitchen to serve <locs> (stalls). Each stall has a 30-minute restock window <time_windows> before crowds peak (e.g., \"11:30\u201312:00\").  \nTrucks carry <capacity> meals, drive at <speed>, and take <service_time> to unload. Late deliveries cause lost sales.  \nGoal: Schedule refill trips to avoid stockouts while minimizing traffic delays.",
-        "tags": [
-            "locs",
-            "time_windows",
-            "capacity",
-            "speed",
-            "service_time"
-        ]
-    },
-    {
-        "title": "Mobile Car Wash Service for Office Parks with Lunch-Break Slots",
-        "content": "A mobile car wash company services employees at corporate office parks during their lunch breaks. Locations are <locs>, and each wash takes <service_time> minutes. Workers must have their cars cleaned within their 1-hour lunch windows <time_windows>. Each wash van carries <capacity> liters of water and travels at <speed>. The goal is to minimize total driving time while ensuring no employee misses their break.",
-        "tags": [
-            "locs",
-            "service_time",
-            "time_windows",
-            "capacity",
-            "speed"
-        ]
-    },
-    {
-        "title": "School Laptop Repair Van for Remote Learning with Class Schedules",
-        "content": "A tech van repairs school-issued laptops for students in rural areas. Each stop (<locs>) must align with the student\u2019s remote class schedule <time_windows> to avoid disrupting lessons. The van carries <capacity> spare parts, takes <service_time> minutes per repair, and drives at <speed>. The route must start/end at the district office while meeting all time constraints.",
-        "tags": [
-            "locs",
-            "time_windows",
-            "capacity",
             "service_time",
             "speed"
         ]
     },
     {
-        "title": "Farmers\u2019 Market Stall Restocking with Perishable Goods Deadlines",
-        "content": "A distributor restocks fresh produce for stalls (<locs>) before markets open. Each stall has a strict deadline <time_windows_close> (e.g., \"berries must arrive by 5 AM\"). The truck has <capacity> kg capacity, travels at <speed>, and takes <service_time> minutes per unload. Spoilage risk increases if deliveries are late, so the goal is to minimize tardiness.",
-        "tags": [
-            "locs",
-            "time_windows_close",
-            "capacity",
-            "speed",
-            "service_time"
-        ]
+        "title": "Perishable Dairy Product Delivery to Urban Caf\u00e9s with Morning Time Windows",
+        "content": "A dairy company must deliver fresh milk, cheese, and yogurt to multiple caf\u00e9s in a city. Each caf\u00e9 has a morning time window (e.g., 6:00 AM to 8:30 AM) during which deliveries must be made to ensure product freshness before opening. Delivery trucks have a refrigerated capacity limit :math:`Q`, restricting the total volume of crates they can carry at any point. Each caf\u00e9 has a time window :math:`[e_i, l_i]` and a service time :math:`s_i` for unloading. Vehicles must arrive within the caf\u00e9's time window; early arrivals must wait until :math:`e_i`. The goal is to plan routes minimizing total distance while respecting capacity and time constraints.",
+        "tags": []
     },
     {
-        "title": "Mobile Notary Service for Homebuyers with Closing Appointments",
-        "content": "A notary visits homebuyers (<locs>) to sign mortgage documents during their scheduled slots <time_windows>. Each appointment takes <service_time> minutes. The notary\u2019s car fits <capacity> document bundles and drives at <speed>. Late arrivals could delay closings, so the route must prioritize punctuality over distance.",
-        "tags": [
-            "locs",
-            "time_windows",
-            "service_time",
-            "capacity",
-            "speed"
-        ]
+        "title": "Medical Imaging Equipment Redistribution for Hospital Shifts",
+        "content": "A healthcare logistics provider redistributes MRI, CT, and X-ray equipment between hospitals and clinics. Each facility has a time window :math:`[e_i, l_i]` aligned with shift changes (e.g., 7:00 AM - 9:00 AM) to ensure equipment availability. Delivery trucks have a maximum capacity :math:`Q` based on equipment weight and dimensions. Service times :math:`s_i` vary per facility. Vehicles must arrive within the facility's time window; early arrivals must wait until :math:`e_i`. The objective is to minimize travel distance while adhering to capacity and timing requirements.",
+        "tags": []
     },
     {
-        "title": "Pet Adoption Transport for Shelter Rescues with Vet Checkup Windows",
-        "content": "A volunteer driver transports rescue animals (<locs>) from shelters to vet clinics for pre-adoption checkups. Each clinic has limited slots <time_windows>, and each animal takes <service_time> minutes to process. The van holds <capacity> crates and drives at <speed>. The aim is to maximize the number of animals served while avoiding clinic overtime.",
-        "tags": [
-            "locs",
-            "time_windows",
-            "service_time",
-            "capacity",
-            "speed"
-        ]
+        "title": "Seasonal Firework Delivery to Festive Venues with Strict Time Windows",
+        "content": "A fireworks company delivers pyrotechnic displays to multiple venues hosting holiday events. Each venue has a strict time window (e.g., 4:00 PM - 5:30 PM on New Year's Eve) to allow setup and safety checks before performances. Delivery trucks have a capacity :math:`Q` limiting the number of fireworks they can transport due to safety regulations. Each venue's time window :math:`[e_i, l_i]` and service time :math:`s_i` for unloading must be respected. Early arrivals must wait until :math:`e_i`. The goal is to optimize routes minimizing distance while meeting capacity and timing constraints.",
+        "tags": []
     },
     {
-        "title": "Mobile Blood Donation Unit Routing with Donor Appointments",
-        "content": "A blood bank operates mobile donation vans that visit corporate offices, schools, and community centers (<locs>). Each site has a scheduled time window (<time_windows>) based on donor availability, and each stop requires <service_time> minutes for setup and donations. Each van carries limited cold storage (<capacity> units) and travels at <speed> km/h. The goal is to route vans from the blood bank (node 0) to collect maximum donations while honoring appointment slots and minimizing travel time.",
-        "tags": [
-            "locs",
-            "time_windows",
-            "service_time",
-            "capacity",
-            "speed"
-        ]
+        "title": "Corporate Event Floral Arrangement Delivery with Time-Sensitive Windows",
+        "content": "A floral service delivers centerpieces and decorations to corporate events across a city. Each event has a time window (e.g., 1 hour before the event starts) to allow setup. Delivery vehicles have a capacity :math:`Q` based on the number of floral arrangements they can carry. Each event's time window :math:`[e_i, l_i]` and service time :math:`s_i` must be adhered to. Vehicles arriving early must wait until :math:`e_i`. The objective is to minimize total route distance while complying with capacity limits and time windows.",
+        "tags": []
     },
     {
-        "title": "Furniture Assembly Team Dispatch for Online Retail",
-        "content": "An online retailer promises same-day furniture assembly. Crews in vans (<capacity> tools/parts per van) depart from a warehouse (<node 0>) to customer homes (<locs>). Each customer specifies a 2-hour delivery window (<time_windows>) and requires <service_time> minutes for assembly. Vans move at <speed> km/h in urban traffic. The challenge is to schedule crews to meet all time promises while minimizing fuel costs.",
-        "tags": [
-            "capacity",
-            "locs",
-            "time_windows",
-            "service_time",
-            "speed"
-        ]
+        "title": "Temporary Office Setup Material Delivery for Corporate Events",
+        "content": "A logistics company provides temporary office equipment (desks, projectors, chairs) to venues hosting corporate conferences. Each venue has a time window :math:`[e_i, l_i]` (e.g., 8:00 AM - 10:00 AM) to receive materials for setup before events begin. Delivery trucks have a capacity :math:`Q` limiting the total weight and volume they can transport. Service times :math:`s_i` depend on unloading complexity. Vehicles must arrive within the venue's time window; early arrivals wait until :math:`e_i`. The goal is to plan routes minimizing travel distance while respecting capacity and timing constraints.",
+        "tags": []
     },
     {
-        "title": "Mobile Solar Panel Cleaning for Rural Farms",
-        "content": "A cleaning service uses water trucks (<capacity> liters) to service solar farms (<locs>) during daylight hours (<time_windows> based on sunlight). Each farm takes <service_time> hours to clean and requires <demand> liters of water. Trucks depart from a central depot (node 0) at <speed> km/h on dirt roads. The objective is to clean all farms before sunset while conserving water and travel distance.",
-        "tags": [
-            "capacity",
-            "locs",
-            "time_windows",
-            "service_time",
-            "demand",
-            "speed"
-        ]
-    },
-    {
-        "title": "Festival Portable Toilet Servicing with Peak-Usage Windows",
-        "content": "During a 3-day music festival, sanitation trucks (<capacity> waste tanks) must service portable toilets (<locs>) during low-attendance windows (<time_windows> to avoid disruptions). Each toilet takes <service_time> minutes to pump and requires servicing every <demand> hours. Trucks travel at <speed> km/h between crowded stages. The goal is to maintain hygiene standards while minimizing attendee inconvenience.",
-        "tags": [
-            "capacity",
-            "locs",
-            "time_windows",
-            "service_time",
-            "demand",
-            "speed"
-        ]
-    },
-    {
-        "title": "Urban Tree Pruning Crew Scheduling with Noise Restrictions",
-        "content": "A city parks department must prune trees (<locs>) in residential areas during permitted hours (<time_windows> 9AM-5PM to avoid noise complaints). Each tree takes <service_time> minutes to prune, and chipper trucks (<capacity> branches per load) travel at <speed> km/h. When trucks fill up, they must dump at a recycling center (node 0). The aim is to service all trees within legal hours while optimizing dump trips.",
-        "tags": [
-            "locs",
-            "time_windows",
-            "service_time",
-            "capacity",
-            "speed"
-        ]
-    },
-    {
-        "title": "Mobile Bookstore for Rural Schools with Recess-Time Slots",
-        "content": "A mobile bookstore visits remote schools to sell educational books during recess breaks. The schools are located at <locs>, each with a demand of <demand> books.  \nDue to tight schedules, each school only allows visits during their recess window <time_windows>, and unloading takes <service_time> minutes.  \nThe van carries up to <capacity> books and drives at <speed> km/h.  \nThe goal is to serve all schools within their time slots while minimizing total travel distance.",
+        "title": "Emergency Power Generator Delivery During Regional Blackouts",
+        "content": "A utility company must deliver portable generators to critical facilities (hospitals, emergency shelters) following a regional blackout. The locations of these facilities are <locs>, each with a demand <demand> (number of generators required). Each facility has a time window <time_windows> during which the generators must be delivered to prevent system failure. The service time at each facility is <service_time> minutes to unload and set up. Delivery trucks have a maximum capacity of <capacity> generators and travel at <speed> km/h. The goal is to plan routes starting and ending at the central depot, ensuring all generators are delivered within time windows while minimizing total travel distance.",
         "tags": [
             "locs",
             "demand",
@@ -468,56 +569,8 @@
         ]
     },
     {
-        "title": "Emergency Plumbing Repair Routing with Appointment Blocks",
-        "content": "A plumbing company dispatches vans to fix burst pipes across the city. Customers are at <locs>, each with a severity-based time window <time_windows> (e.g., \"must fix within 4 hours\").  \nEach van holds <capacity> repair kits and takes <service_time> minutes per job.  \nVans move at <speed> km/h but must return to the depot by <depot_close_time>.  \nObjective: Minimize delays by respecting urgency windows and van capacity.",
-        "tags": [
-            "locs",
-            "time_windows",
-            "capacity",
-            "service_time",
-            "speed",
-            "depot_close_time"
-        ]
-    },
-    {
-        "title": "Organic Milk Delivery to Subscriptions with Breakfast Deadlines",
-        "content": "A dairy farm delivers fresh milk to homes before breakfast. Subscribers are at <locs>, with strict \"6:00\u20138:00 AM\" delivery windows <time_windows> and demand <demand> bottles.  \nEach refrigerated truck carries <capacity> bottles, drives at <speed> km/h, and takes <service_time> minutes per stop.  \nLate deliveries spoil customer trust\u2014routes must prioritize on-time arrivals while minimizing distance.",
-        "tags": [
-            "locs",
-            "time_windows",
-            "demand",
-            "capacity",
-            "speed",
-            "service_time"
-        ]
-    },
-    {
-        "title": "Mobile Post Office for Remote Villages with Weekly Slots",
-        "content": "A government van delivers mail to isolated villages, each with a designated weekly 2-hour window <time_windows> (e.g., \"Wed 10 AM\u201312 PM\").  \nVillages are at <locs>, with mail demand <demand> (parcels + letters).  \nThe van fits <capacity> kg, travels at <speed> km/h, and spends <service_time> minutes per stop.  \nGoal: Visit all villages within their weekly slots without overloading the van.",
-        "tags": [
-            "time_windows",
-            "locs",
-            "demand",
-            "capacity",
-            "speed",
-            "service_time"
-        ]
-    },
-    {
-        "title": "City Park Trash Collection with Noise-Free Hours",
-        "content": "A cleanup crew services park trash bins at <locs> before 7 AM (to avoid disturbing visitors).  \nEach bin has a time window <time_windows> (e.g., \"5:00\u20136:50 AM\") and waste volume <demand>.  \nTrucks hold <capacity> cubic meters, drive at <speed> km/h, and take <service_time> minutes to empty a bin.  \nObjective: Collect all waste within noise-restricted hours while minimizing fuel costs.",
-        "tags": [
-            "locs",
-            "time_windows",
-            "demand",
-            "capacity",
-            "speed",
-            "service_time"
-        ]
-    },
-    {
-        "title": "Mobile Dentist Van for Rural Schools with Recess-Time Slots",
-        "content": "A dental clinic sends a van to provide checkups for students in remote schools. The schools are located at <locs>, each with a demand of <demand> appointments.  \nDue to class schedules, each school can only host the van during recess (<time_windows>), and each checkup takes <service_time> minutes.  \nThe van carries enough supplies for <capacity> patients per trip and travels at <speed> km/h.  \nThe goal is to plan routes starting/ending at the clinic, ensuring no student misses recess while minimizing total travel time.",
+        "title": "Antique Furniture Redistribution for Auction Houses",
+        "content": "An auction house chain needs to redistribute antique furniture between locations for upcoming sales. The furniture items are located at <locs>, with each item having a weight <demand> that must be transported. Each auction venue has a time window <time_windows> during which the furniture must arrive for setup. The service time <service_time> accounts for unloading and cataloging. Transport trucks have a maximum load capacity of <capacity> kg and travel at <speed> km/h. The objective is to design routes starting and ending at the central warehouse, adhering to all time windows while optimizing route efficiency.",
         "tags": [
             "locs",
             "demand",
@@ -528,20 +581,8 @@
         ]
     },
     {
-        "title": "Organic Farm Egg Delivery to Caf\u00e9s with Breakfast Prep Windows",
-        "content": "A small farm delivers fresh eggs to local caf\u00e9s before they open. The caf\u00e9s are at <locs>, each needing <demand> egg cartons.  \nCaf\u00e9s must receive deliveries by their prep time (<time_windows_close>), and unloading takes <service_time> minutes.  \nThe delivery truck has a refrigerated capacity of <capacity> cartons and moves at <speed> km/h to avoid traffic.  \nRoutes must start/end at the farm, prioritize freshness, and minimize detours to keep eggs intact.",
-        "tags": [
-            "locs",
-            "demand",
-            "time_windows_close",
-            "service_time",
-            "capacity",
-            "speed"
-        ]
-    },
-    {
-        "title": "Citywide Scaffolding Rental Pickup with Construction Site Deadlines",
-        "content": "A rental company dispatches trucks to collect scaffolding from construction sites. Sites are at <locs>, each with <demand> units to return.  \nSites only allow pickups during non-peak hours (<time_windows>) to avoid disrupting workers, and loading takes <service_time> hours.  \nEach truck holds <capacity> units and drives at <speed> km/h.  \nThe objective is to retrieve all scaffolding on time while minimizing fuel costs and empty trips.",
+        "title": "Seasonal Apparel Redistribution for Retail Outlets",
+        "content": "A clothing retailer must redistribute seasonal stock between regional stores to align with promotional events. The stores' locations are <locs>, each requiring a specific number of items <demand>. Each store has a time window <time_windows> when staff is available to receive deliveries. The service time <service_time> includes unpacking and restocking. Delivery trucks can carry up to <capacity> cubic meters of clothing and travel at <speed> km/h. The aim is to schedule routes from the central distribution center, ensuring all deliveries occur within time windows while minimizing travel distance.",
         "tags": [
             "locs",
             "demand",
@@ -552,8 +593,8 @@
         ]
     },
     {
-        "title": "Mobile ATM for Cash-Strapped Neighborhoods with Payday Windows",
-        "content": "A bank deploys a mobile ATM to serve areas with limited branch access. Stops are at <locs>, each with a <demand> for cash withdrawals.  \nThe ATM can only operate during safe hours (<time_windows>), and each stop takes <service_time> minutes to set up.  \nThe armored van carries <capacity> in cash and moves at <speed> km/h for security.  \nRoutes must start/end at the bank vault, avoid high-crime times, and maximize served customers.",
+        "title": "Educational Lab Equipment Redistribution for University Campuses",
+        "content": "A university system needs to move specialized lab equipment between campuses for scheduled research projects. The equipment locations are <locs>, each with a weight <demand> that must be transported. Each receiving lab has a time window <time_windows> when the equipment must arrive to avoid project delays. The service time <service_time> includes setup and calibration. The transport vehicles have a maximum capacity of <capacity> kg and travel at <speed> km/h. The task is to plan routes starting and ending at the main campus depot, respecting all time constraints while optimizing route length.",
         "tags": [
             "locs",
             "demand",
@@ -564,77 +605,11 @@
         ]
     },
     {
-        "title": "Festival Beer Keg Delivery with Taproom Opening Deadlines",
-        "content": "A brewery supplies kegs to pop-up beer gardens during a city festival. Gardens are at <locs>, each needing <demand> kegs.  \nDeliveries must arrive before taprooms open (<time_windows_close>), and unloading takes <service_time> minutes per stop.  \nThe delivery truck has a capacity of <capacity> kegs and navigates crowds at <speed> km/h.  \nThe goal is to ensure no beer garden runs dry while optimizing routes for the shortest travel time.",
+        "title": "Construction Equipment Redistribution for Multi-Site Projects",
+        "content": "A construction company must redistribute heavy machinery (cranes, excavators) between active job sites. The equipment is located at <locs>, with each piece having a weight <demand>. Each site has a time window <time_windows> during which the equipment is needed for specific tasks. The service time <service_time> includes deployment and coordination. Transport trucks have a maximum capacity of <capacity> tons and travel at <speed> km/h. The goal is to design routes starting and ending at the central equipment yard, ensuring all equipment is delivered on time while minimizing total travel distance.",
         "tags": [
             "locs",
             "demand",
-            "time_windows_close",
-            "service_time",
-            "capacity",
-            "speed"
-        ]
-    },
-    {
-        "title": "Mobile Toy Repair Van for Daycare Centers with Nap-Time Windows",
-        "content": "A toy repair service visits daycare centers to fix broken toys. The locations are <locs>, and each center has a strict time window <time_windows> when children are napping (to avoid disruptions). Each van carries <capacity> repair kits and travels at <speed>. Repairs take <service_time> per center. The goal is to minimize travel distance while ensuring repairs happen only during nap times.",
-        "tags": [
-            "locs",
-            "time_windows",
-            "capacity",
-            "speed",
-            "service_time"
-        ]
-    },
-    {
-        "title": "Wedding Bouquet Deliveries with Ceremony Start Deadlines",
-        "content": "A florist delivers fresh bouquets to bridal parties across town. Venues are at <locs>, each with a \"must arrive by\" time <time_windows_close> (e.g., 2 hours before the ceremony). Each refrigerated van fits <capacity> bouquets and drives at <speed>. Unloading takes <service_time>. Bouquets left too long in heat lose freshness. Optimize routes to avoid late deliveries and minimize wilt risk.",
-        "tags": [
-            "locs",
-            "time_windows_close",
-            "capacity",
-            "speed",
-            "service_time"
-        ]
-    },
-    {
-        "title": "Mobile Bike Repair for City Bike-Sharing Stations with Commuter Rush Hours",
-        "content": "A repair team services bike-share docks during peak usage gaps. Stations (<locs>) have time windows <time_windows> (e.g., 9:30\u201311:00 AM after morning rush). Each truck carries <capacity> spare parts and travels at <speed>. Repairs take <service_time>. The goal is to maximize serviced stations during their available windows while minimizing downtown traffic delays.",
-        "tags": [
-            "locs",
-            "time_windows",
-            "capacity",
-            "speed",
-            "service_time"
-        ]
-    },
-    {
-        "title": "Rural Newspaper Delivery with Subscriber Morning Windows",
-        "content": "A newspaper distributor delivers to remote homes (<locs>) where subscribers expect papers by breakfast (e.g., 6:00\u20138:00 AM <time_windows>). Each delivery van holds <capacity> papers and drives at <speed> on gravel roads. Stops take <service_time> (including driveway turns). Optimize routes to ensure no one misses their morning news while minimizing fuel costs.",
-        "tags": [
-            "locs",
-            "time_windows",
-            "capacity",
-            "speed",
-            "service_time"
-        ]
-    },
-    {
-        "title": "Mobile Car Detailer for Corporate Fleets with Lunchtime Slots",
-        "content": "A detailing service cleans company cars during employees' lunch breaks (12:00\u20131:30 PM <time_windows>). Office parking lots are at <locs>. Each van carries <capacity> cleaning supplies and moves at <speed>. Each wash takes <service_time>. The challenge: squeeze in as many locations as possible during the tight midday windows without overtime pay.",
-        "tags": [
-            "time_windows",
-            "locs",
-            "capacity",
-            "speed",
-            "service_time"
-        ]
-    },
-    {
-        "title": "Mobile COVID-19 Testing Unit Routing with Appointment Slots",
-        "content": "A city health department deploys mobile testing vans to neighborhoods with high infection rates. The vans must visit testing sites at <locs>, each with a scheduled appointment block <time_windows> and estimated processing time <service_time>. Each van carries <capacity> test kits, travels at <speed>, and must return to the depot for restocking. The goal is to serve all appointments on time while minimizing total miles driven.",
-        "tags": [
-            "locs",
             "time_windows",
             "service_time",
             "capacity",
@@ -642,176 +617,93 @@
         ]
     },
     {
-        "title": "Coffee Bean Delivery to Caf\u00e9s with Brewing Schedules",
-        "content": "A roastery supplies fresh beans to local caf\u00e9s (<locs>), each requiring deliveries before their morning rush (<time_windows_close>). Delivery trucks (<capacity> bags per truck, <speed> mph) must account for unloading time (<service_time>) and caf\u00e9 demand (<demand>). Late deliveries disrupt brewing schedules, so routes must prioritize time windows over distance.",
-        "tags": [
-            "locs",
-            "time_windows_close",
-            "capacity",
-            "speed",
-            "service_time",
-            "demand"
-        ]
+        "title": "Fresh Bakery Goods Delivery with Perishability Constraints",
+        "content": "A bakery must deliver time-sensitive baked goods (e.g., bread, pastries) to multiple retail stores using refrigerated vans. Each store has a strict time window :math:`[e_i, l_i]` to ensure freshness, as products must arrive before morning opening hours. The vans have a maximum capacity :math:`Q` limiting the total weight of goods they can carry. Service time :math:`s_i` includes unloading and refrigeration setup. The objective is to minimize total travel distance while ensuring deliveries occur within time windows and capacity constraints.",
+        "tags": []
     },
     {
-        "title": "Mobile Hair Salon for Nursing Homes with Appointment Blocks",
-        "content": "A mobile salon serves elderly residents at nursing homes (<locs>), where each facility has strict visitation hours (<time_windows>) and a set number of haircuts (<demand>). The stylist\u2019s van fits <capacity> tools/supplies, travels at <speed>, and spends <service_time> per stop. Routes must align with residents\u2019 routines (e.g., avoiding nap times).",
+        "title": "Emergency Medical Oxygen Delivery to Hospitals During Crises",
+        "content": "During a public health crisis, a logistics provider must deliver oxygen cylinders to hospitals using specialized trucks. Each hospital has a critical time window :math:`[e_i, l_i]` to align with patient demand peaks. Trucks have a capacity :math:`Q` defined by the number of cylinders they can transport. Service time :math:`s_i` involves unloading and cylinder installation. The goal is to optimize routes to meet all time windows and capacity limits while prioritizing high-demand facilities.",
+        "tags": []
+    },
+    {
+        "title": "Data Center Server Maintenance with Scheduled Downtime Windows",
+        "content": "A tech firm must perform maintenance on servers across distributed data centers. Each data center has a predefined downtime window :math:`[e_i, l_i]` to avoid service disruptions. Maintenance crews are transported in vehicles with a capacity :math:`Q` limiting the number of technicians or equipment per vehicle. Service time :math:`s_i` includes hardware replacement and testing. The aim is to plan routes that respect downtime constraints and crew capacity, minimizing total travel time.",
+        "tags": []
+    },
+    {
+        "title": "Nightly Retail Store Restocking with Store Operating Time Windows",
+        "content": "A retail chain requires overnight restocking of grocery stores using delivery trucks. Each store must be serviced within a time window :math:`[e_i, l_i]` during their late-night operating hours. Trucks have a capacity :math:`Q` restricting the total volume of goods they can carry. Service time :math:`s_i` includes unloading perishables and shelf preparation. The objective is to minimize travel distance while ensuring all stores are restocked within their allocated windows.",
+        "tags": []
+    },
+    {
+        "title": "Airport Baggage Redistribution Between Terminals with Flight Schedules",
+        "content": "An airport\u2019s logistics team must redistribute luggage between terminals based on flight schedules. Each transfer has a time window :math:`[e_i, l_i]` tied to flight arrival/departure times. Baggage carts have a capacity :math:`Q` limiting the number of bags they can haul. Service time :math:`s_i` includes loading/unloading and conveyor coordination. The goal is to plan routes that adhere to flight schedules and cart capacities, minimizing delays and operational costs.",
+        "tags": []
+    },
+    {
+        "title": "Art Museum Artifact Transport with Conservation Timelines",
+        "content": "A consortium of art museums requires transporting fragile artifacts between institutions for temporary exhibitions. The artifacts' locations are <locs>, each with a demand (weight/volume) <demand>. Each artifact must be handled within a time window <time_windows> to avoid environmental exposure (e.g., humidity fluctuations). The service time <service_time> includes careful unloading and climate control checks. Vehicles have a maximum capacity <capacity> and travel at <speed> km/h. Routes must start/end at the central depot, ensuring all artifacts are delivered within their time windows while minimizing total travel distance.",
         "tags": [
             "locs",
-            "time_windows",
             "demand",
-            "capacity",
-            "speed",
-            "service_time"
-        ]
-    },
-    {
-        "title": "Festival Portable Toilet Servicing with Peak-Usage Windows",
-        "content": "During a music festival, sanitation trucks must clean portable toilets (<locs>) during lulls in foot traffic (<time_windows>). Each truck carries <capacity> waste tanks, moves at <speed>, and takes <service_time> per stop. Overflows are unacceptable, so time windows are stricter than distance optimization.",
-        "tags": [
-            "locs",
-            "time_windows",
-            "capacity",
-            "speed",
-            "service_time"
-        ]
-    },
-    {
-        "title": "Organic Milk Delivery to Subscriptions with Breakfast Deadlines",
-        "content": "A dairy farm delivers glass bottles to subscribers (<locs>) who expect milk by 7 AM (<time_windows_close>). Electric trucks (<capacity> bottles, <speed> mph) account for <service_time> per stop (including empty bottle returns). Routes must balance freshness (shortest path) and punctuality (tight windows).",
-        "tags": [
-            "locs",
-            "time_windows_close",
-            "capacity",
-            "speed",
-            "service_time"
-        ]
-    },
-    {
-        "title": "Mobile Preschool Snack Delivery with Nap-Time Windows",
-        "content": "A catering service delivers fresh snacks to daycare centers across town. Each center has a strict 30-minute window (<time_windows>) right before naptime when snacks must arrive (<locs>). The delivery van (<capacity> coolers) keeps food at safe temperatures while driving at <speed>. Each stop takes <service_time> to unload without disrupting classes. Routes must start/end at the kitchen, hitting all centers during their narrow windows while minimizing driving time.",
-        "tags": [
-            "time_windows",
-            "locs",
-            "capacity",
-            "speed",
-            "service_time"
-        ]
-    },
-    {
-        "title": "Historic District Tour Guide Shuttle with Visitor Capacity Limits",
-        "content": "A UNESCO heritage site offers guided tours where groups of <capacity> visitors are shuttled between landmarks (<locs>). Each stop has timed entry slots (<time_windows>) and a <service_time> narration period. Electric shuttles (<speed>) must avoid overlapping at crowded sites. The goal is to maximize daily tours without exceeding location capacities or making guests wait beyond their booked slots.",
-        "tags": [
-            "capacity",
-            "locs",
             "time_windows",
             "service_time",
+            "capacity",
             "speed"
         ]
     },
     {
-        "title": "Urban Beehive Honey Collection with Pollination Windows",
-        "content": "Beekeepers collect honey from rooftop apiaries (<locs>) during specific daylight hours (<time_windows>) when bees are least active. Each truck (<capacity> hives) moves at <speed> to avoid honey melting. Processing at each stop takes <service_time> (including suit-up). Routes must hit all locations during their safe windows while minimizing neighborhood disruptions.",
+        "title": "Emergency Flood Relief Supplies Delivery with Dynamic Windows",
+        "content": "A disaster relief organization must distribute emergency supplies to flood-affected communities. Each distribution point <locs> has a time window <time_windows> based on evacuation schedules and road accessibility. The demand <demand> represents the number of kits, and service time <service_time> includes unloading and coordination. Vehicles have a capacity <capacity> and travel at <speed>. Routes must start/end at the depot, ensuring timely delivery while minimizing travel distance.",
         "tags": [
             "locs",
             "time_windows",
-            "capacity",
-            "speed",
-            "service_time"
-        ]
-    },
-    {
-        "title": "Movie Set Catering for Crew Meal Breaks",
-        "content": "A food truck feeds film crews at shooting locations (<locs>) during tightly scheduled 45-minute meal breaks (<time_windows>). The truck (<capacity> meals) stocks different menus per stop (<demand>), with <service_time> for setup. It must arrive precisely during breaks (late arrivals delay million-dollar shoots!) while navigating at <speed> between scattered sets.",
-        "tags": [
-            "locs",
-            "time_windows",
-            "capacity",
             "demand",
             "service_time",
+            "capacity",
             "speed"
         ]
     },
     {
-        "title": "Floating Market Stall Restocking with Tide-Dependent Windows",
-        "content": "A boat delivers produce to floating vendors (<locs>) in a tidal river. Each stall can only be accessed during specific tide-height windows (<time_windows>). The cargo boat (<capacity> crates) moves at <speed> with <service_time> per unloading. Routes must sync with tide charts to reach all stalls when water levels permit, minimizing detours.",
-        "tags": [
-            "locs",
-            "time_windows",
-            "capacity",
-            "speed",
-            "service_time"
-        ]
-    },
-    {
-        "title": "Mobile Preschool Snack Delivery with Nap-Time Windows",
-        "content": "A catering service delivers fresh snacks to daycare centers across town. Each center has a strict 30-minute \"nap-time window\" (<time_windows>) when snacks must arrive\u2014too early wakes the kids, too late disrupts activities. The delivery van (<capacity> snack boxes) starts at the kitchen (<locs>[0]), visits centers (<locs>[1:]), and returns. Each stop takes <service_time> minutes to unload. The goal? Ensure every center gets their goldfish crackers and apple slices on time while minimizing driving distance.",
-        "tags": [
-            "time_windows",
-            "capacity",
-            "locs",
-            "locs",
-            "service_time"
-        ]
-    },
-    {
-        "title": "Historic District Tour Guide Shuttle with Visitor Capacity Limits",
-        "content": "A vintage trolley shuttles tourists between historic landmarks (<locs>). Each site allows entry only during specific hours (<time_windows>) and has a max group size (<demand> visitors). The trolley holds <capacity> people, moves at <speed>, and spends <service_time> minutes at each stop for photos. Starting/ending at the visitor center, the challenge is to schedule routes so no site is overcrowded, no tourists miss their time slots, and the trolley isn\u2019t running empty.",
+        "title": "Live Event AV Equipment Redistribution for Concurrent Conventions",
+        "content": "An audiovisual rental company redistributes equipment between convention centers hosting simultaneous events. Each venue <locs> has a time window <time_windows> for setup, and equipment demand <demand> varies by event size. Service time <service_time> accounts for setup assistance. Vehicles have a capacity <capacity> (weight/volume) and speed <speed>. Routes must start/end at the warehouse, adhering to strict time windows to avoid event delays.",
         "tags": [
             "locs",
             "time_windows",
             "demand",
+            "service_time",
             "capacity",
-            "speed",
-            "service_time"
+            "speed"
         ]
     },
     {
-        "title": "Urban Beehive Honey Collection with Pollination Windows",
-        "content": "A beekeeper tends rooftop hives (<locs>) for local honey. Each hive can only be opened during short \"bee-quiet\" periods (<time_windows>\u2014usually early morning) to avoid disturbing pollination. The electric truck (<capacity> kg of honeycomb) takes <service_time> minutes per hive to extract honey. Since bees get agitated if visited too late, the route must hit all hives within their windows while minimizing travel through downtown traffic.",
+        "title": "Fresh Fish Delivery to Sushi Restaurants with Morning Time Windows",
+        "content": "A seafood supplier delivers fresh fish to sushi restaurants requiring delivery before morning opening hours. Each restaurant <locs> has a time window <time_windows> ending at their opening time. Demand <demand> is the order quantity, and service time <service_time> includes unloading and quality checks. Refrigerated trucks have a capacity <capacity> and travel at <speed>. The goal is to minimize total distance while ensuring all deliveries are made on time.",
         "tags": [
             "locs",
             "time_windows",
-            "capacity",
-            "service_time"
-        ]
-    },
-    {
-        "title": "Movie Set Catering for Crew Meal Breaks",
-        "content": "A food truck feeds actors and crew on a film shoot with scattered locations (<locs>). Each set has a tight 20-minute meal break (<time_windows>) between scenes. The truck (<capacity> meals) must arrive on time\u2014stars won\u2019t wait! Servicing a set takes <service_time> minutes (those craft service tables don\u2019t set up themselves). Starting from the kitchen base, optimize routes so no one goes hangry during their break, and the truck avoids crossing into active shots.",
-        "tags": [
-            "locs",
-            "time_windows",
-            "capacity",
-            "service_time"
-        ]
-    },
-    {
-        "title": "Floating Market Stall Restocking with Tide-Dependent Windows",
-        "content": "A boat delivers produce to vendors in a river market (<locs>). Each floating stall can only be accessed at low tide (<time_windows>\u2014varies by location). The boat carries <capacity> crates, moves at <speed> (currents slow some stretches!), and takes <service_time> minutes to unload. Miss a tide window? That stall goes without bananas until tomorrow. Plan routes to hit all stalls during their \"wet parking spots\" while dodging other boats.",
-        "tags": [
-            "locs",
-            "time_windows",
-            "capacity",
-            "speed",
-            "service_time"
-        ]
-    },
-    {
-        "title": "Mobile Preschool Snack Delivery with Nap-Time Windows",
-        "content": "A catering company delivers fresh snacks to daycare centers across town. Each center has strict nap-time windows (<time_windows>) when deliveries must arrive to avoid disrupting children. The delivery van (<capacity> snack boxes) starts at the kitchen (<locs>[0]). Centers (<locs>[1:]) have varying demands (<demand>) and unloading times (<service_time>). The goal is to deliver all snacks during nap periods while minimizing driving distance.",
-        "tags": [
-            "time_windows",
-            "capacity",
-            "locs",
-            "locs",
             "demand",
-            "service_time"
+            "service_time",
+            "capacity",
+            "speed"
         ]
     },
     {
-        "title": "Historic District Tour Guide Shuttle with Visitor Capacity Limits",
-        "content": "A tourism agency runs guided shuttle tours through a historic district with 15-minute departure slots. Each stop (<locs>) has:  \n- A max group size (<demand>) to preserve sites  \n- Fixed time windows (<time_windows>) when tours can occur  \n- Brief narration periods (<service_time>)  \nShuttles (<capacity> visitors) start/end at the visitor center. Objective: Maximize daily tours served without exceeding site capacities or missing time slots.",
+        "title": "Medical Cannabis Delivery with Regulatory and Perishability Constraints",
+        "content": "A licensed cannabis distributor delivers medical products to patients and dispensaries. Each location <locs> has a time window <time_windows> due to regulatory delivery hours and product shelf life. Demand <demand> is the order size, and service time <service_time> includes compliance checks. Vehicles have a capacity <capacity> limited by legal and physical constraints, traveling at <speed>. Routes must originate/return to the licensed depot, minimizing distance while respecting all constraints.",
+        "tags": [
+            "locs",
+            "time_windows",
+            "demand",
+            "service_time",
+            "capacity",
+            "speed"
+        ]
+    },
+    {
+        "title": "Live Aquatic Animal Transport for Aquarium Exhibitions",
+        "content": "Aquariums need to relocate marine species between facilities using temperature-controlled vehicles. Each facility's location is listed in <locs>, with demands <demand> representing the number of animals. Facilities require services strictly within <time_windows> to avoid stress from prolonged transportation. Service time <service_time> includes acclimation procedures. Vehicles have a capacity <capacity> limited by tank space and water volume, with species compatibility constraints. The objective is to minimize total travel distance while respecting time windows and capacity limits.",
         "tags": [
             "locs",
             "demand",
@@ -821,439 +713,266 @@
         ]
     },
     {
-        "title": "Urban Beehive Honey Collection with Pollination Windows",
-        "content": "A beekeeper services rooftop hives (<locs>) during specific pollination hours (<time_windows>) when bees are least active. Each hive yields <demand> kg of honey and takes <service_time> minutes to harvest. The electric harvest truck (<capacity> kg) charges at the depot between trips. Goal: Collect all honey during safe windows while minimizing road time to reduce carbon emissions.",
-        "tags": [
-            "locs",
-            "time_windows",
-            "demand",
-            "service_time",
-            "capacity"
-        ]
-    },
-    {
-        "title": "Movie Set Catering for Crew Meal Breaks",
-        "content": "A food truck must deliver hot meals to film crew locations (<locs>) during their staggered 30-minute breaks (<time_windows>). Each site orders <demand> meals requiring <service_time> minutes to serve. The truck (<capacity> meals) returns to the kitchen to restock. Challenge: Ensure no crew misses their break window while keeping food fresh (prioritize earliest deadlines).",
-        "tags": [
-            "locs",
-            "time_windows",
-            "demand",
-            "service_time",
-            "capacity"
-        ]
-    },
-    {
-        "title": "Floating Market Stall Restocking with Tide-Dependent Windows",
-        "content": "A supplier restocks vendors in a tidal river market where docks are only accessible at specific tide levels (<time_windows>). Each stall (<locs>[1:]) needs <demand> crates; unloading takes <service_time> minutes per stall. The barge (<capacity> crates) must navigate narrow waterways. Twist: Time windows shrink during neap tides - routes must adapt to daily tidal changes.\n",
-        "tags": [
-            "time_windows",
-            "locs",
-            "demand",
-            "service_time",
-            "capacity"
-        ]
-    },
-    {
-        "title": "Mobile Vet Clinic for Rural Pets with Appointment Slots",
-        "content": "A traveling veterinary team visits remote farms to vaccinate livestock and pets. Their van carries <capacity> doses of vaccines and drives at <speed> km/h. Each farm (<locs>) has a strict 1-hour appointment window (<time_windows>) when owners are available, and exams take <service_time> minutes. The team must start/end at the county office while ensuring no anxious animals (or farmers!) are left waiting past their slots.",
-        "tags": [
-            "capacity",
-            "speed",
-            "locs",
-            "time_windows",
-            "service_time"
-        ]
-    },
-    {
-        "title": "Wedding Cake Deliveries with Ceremony Deadlines",
-        "content": "A bakery must deliver fragile tiered cakes to <num_customer> wedding venues (<locs>) before ceremonies begin (<time_windows_close>). Each refrigerated truck (<capacity> cakes) drives at <speed> to prevent frosting damage. Loading takes <depot_service_time> hours, and delicate unloading at each venue requires <service_time>. One late delivery could ruin a bride\u2019s big moment!",
-        "tags": [
-            "num_customer",
-            "locs",
-            "time_windows_close",
-            "capacity",
-            "speed",
-            "depot_service_time",
-            "service_time"
-        ]
-    },
-    {
-        "title": "Pool Cleaning Service for Vacation Rentals",
-        "content": "A pool maintenance company services <num_customer> Airbnb properties (<locs>) between guest check-out/in times (<time_windows>). Each truck carries <capacity> liters of chemicals and cleans at <speed> properties/hour. Cleaning takes <service_time> hours per pool. Routes must avoid midday heat (11am-3pm) when chemicals evaporate too quickly.",
-        "tags": [
-            "num_customer",
-            "locs",
-            "time_windows",
-            "capacity",
-            "speed",
-            "service_time"
-        ]
-    },
-    {
-        "title": "Mobile Preschool Snack Delivery with Nap-Time Windows",
-        "content": "A nutrition program delivers fresh snacks to <num_customer> daycare centers (<locs>) during 30-minute nap periods (<time_windows>). Their electric cart (<capacity> snack boxes) moves at <speed> km/h to avoid waking children. Unloading noisy ice packs takes <service_time> minutes. Late deliveries mean toddlers miss their energy boost for afternoon activities!",
-        "tags": [
-            "num_customer",
-            "locs",
-            "time_windows",
-            "capacity",
-            "speed",
-            "service_time"
-        ]
-    },
-    {
-        "title": "Festival Beer Keg Delivery with Taproom Opening Deadlines",
-        "content": "During a city beer festival, a distributor must replenish kegs at <num_customer> pop-up taprooms (<locs>) before their daily openings (<time_windows_close>). Each truck (<capacity> kegs) navigates crowded streets at <speed> km/h. Tapping each keg takes <service_time> minutes. A single late delivery could leave thirsty festival-goers waiting at dry bars!",
-        "tags": [
-            "num_customer",
-            "locs",
-            "time_windows_close",
-            "capacity",
-            "speed",
-            "service_time"
-        ]
-    },
-    {
-        "title": "Mobile Preschool Snack Delivery with Nap-Time Windows",
-        "content": "A catering service delivers fresh snacks to daycare centers across town. Each center has a strict 30-minute nap-time window (<time_windows>) when snacks must arrive to avoid disrupting activities. The delivery van carries <capacity> insulated boxes (each holding one center\u2019s order) and travels at <speed>. Stops take <service_time> to unload. The route must start/end at the kitchen, hitting all centers during their quiet hours while minimizing driving time.",
-        "tags": [
-            "time_windows",
-            "capacity",
-            "speed",
-            "service_time"
-        ]
-    },
-    {
-        "title": "Historic District Tour Guide Shuttle with Visitor Capacity Limits",
-        "content": "A shuttle service transports tourists between historic sites (<locs>), each with a max visitor capacity per hour (<demand>). Tours must arrive during site-specific time slots (<time_windows>) to avoid overcrowding. Each shuttle holds <capacity> people and moves at <speed>, with <service_time> for disembarking. The goal is to design routes that respect site capacities and time windows while reducing shuttle fleet size.",
+        "title": "Satellite Component Delivery to Remote Launch Sites with Celestial Windows",
+        "content": "A space agency must deliver sensitive satellite components to remote launch pads using specialized trucks. Each pad\u2019s location is in <locs>, with demands <demand> (component weight). Launch windows <time_windows> are dictated by orbital mechanics, allowing only narrow timeframes for delivery. Service time <service_time> includes secure unloading. Trucks have a capacity <capacity> constrained by weight and vibration tolerance. The goal is to minimize travel distance while ensuring components arrive within celestial-aligned time windows.",
         "tags": [
             "locs",
             "demand",
-            "time_windows",
-            "capacity",
-            "speed",
-            "service_time"
-        ]
-    },
-    {
-        "title": "Urban Beehive Honey Collection with Pollination Windows",
-        "content": "A beekeeper services rooftop hives (<locs>) during specific pollination periods (<time_windows>) when bees are least active. Their truck carries <capacity> empty honey supers (boxes) and drives at <speed>. Each hive takes <service_time> to harvest. Routes must start/end at the honey processing plant, collect all hives during their safe windows, and minimize travel to reduce stress on the bees.",
-        "tags": [
-            "locs",
-            "time_windows",
-            "capacity",
-            "speed",
-            "service_time"
-        ]
-    },
-    {
-        "title": "Movie Set Catering for Crew Meal Breaks",
-        "content": "A food truck delivers hot meals to film crew units (<locs>) during their staggered 45-minute meal breaks (<time_windows>). The truck\u2019s fridge holds <capacity> meal kits, and it drives at <speed>. Each stop takes <service_time> to serve. Routes must depart from the central kitchen, serve all units during their breaks without delay, and avoid backtracking to keep food fresh.",
-        "tags": [
-            "locs",
-            "time_windows",
-            "capacity",
-            "speed",
-            "service_time"
-        ]
-    },
-    {
-        "title": "Floating Market Stall Restocking with Tide-Dependent Windows",
-        "content": "A boat resupplies vendors at a river market (<locs>), where stalls are only accessible during high tide (<time_windows>). The boat carries <capacity> crates of goods and moves at <speed> (slower against currents). Unloading takes <service_time> per stall. Routes must launch from the docks, hit all stalls during tidal access, and return before low tide strands the boat.",
-        "tags": [
-            "locs",
-            "time_windows",
-            "capacity",
-            "speed",
-            "service_time"
-        ]
-    },
-    {
-        "title": "Mobile Laundromat Pickup for Apartment Complexes with Work-Hour Constraints",
-        "content": "A laundry service picks up dirty clothes from apartment buildings (<locs>) using vans that hold up to <capacity> kg. Each building has a 2-hour window (<time_windows>) when residents are home (before/after work). Vans travel at <speed> km/h, take <service_time> minutes per pickup, and must return to the facility by 8 PM. Goal: minimize detours while catching all pickups during availability windows.",
-        "tags": [
-            "locs",
-            "capacity",
-            "time_windows",
-            "speed",
-            "service_time"
-        ]
-    },
-    {
-        "title": "Community Fridge Restocking with Spoilage Prevention Deadlines",
-        "content": "Volunteers deliver perishable groceries (<demand> in kg) to neighborhood fridges (<locs>) using refrigerated bikes (<capacity>). Each fridge has a \"restock-by\" time (<time_windows_close>) to avoid food sitting in heat. Bikes move at <speed> km/h, take <service_time> minutes to unload, and start/end at the food bank. Objective: ensure no delivery arrives late while using the fewest bike-miles.",
-        "tags": [
-            "demand",
-            "locs",
-            "capacity",
-            "time_windows_close",
-            "speed",
-            "service_time"
-        ]
-    },
-    {
-        "title": "Mobile Carpet Cleaning for Office Towers with Lunchtime-Only Access",
-        "content": "A cleaning company services office floors (<locs>) during their 12-2 PM lunch break (<time_windows>). Each truck (<capacity> floors/day) takes <service_time> hours per floor and moves at <speed> km/h downtown. Late arrivals mean rescheduling fees. Goal: maximize floors cleaned per day without missing any time slots.",
-        "tags": [
-            "locs",
-            "time_windows",
-            "capacity",
-            "service_time",
-            "speed"
-        ]
-    },
-    {
-        "title": "Rural Textbook Delivery to Schools with Class Period Windows",
-        "content": "A county education van delivers textbooks (<demand> boxes) to schools (<locs>) during their 30-minute recess (<time_windows>). The van fits <capacity> boxes, drives at <speed> km/h on backroads, and takes <service_time> minutes per unload. Late deliveries disrupt classes. Objective: complete all deliveries within recess windows using the shortest route.",
-        "tags": [
-            "demand",
-            "locs",
-            "time_windows",
-            "capacity",
-            "speed",
-            "service_time"
-        ]
-    },
-    {
-        "title": "Food Truck Fuel Resupply During Rush Hour Parking Breaks",
-        "content": "A fuel truck refills food trucks (<locs>) during their 20-minute parking breaks (<time_windows>). It carries <capacity> liters, moves at <speed> km/h in traffic, and takes <service_time> minutes per refill. Missed breaks mean lost sales for vendors. Goal: refill as many food trucks as possible without being late.",
-        "tags": [
-            "locs",
-            "time_windows",
-            "capacity",
-            "speed",
-            "service_time"
-        ]
-    },
-    {
-        "title": "Mobile Preschool Snack Delivery with Nap-Time Windows",
-        "content": "A catering company delivers fresh snacks to daycare centers across town. Each center has a strict 30-minute \"nap time\" window (<time_windows>) when snacks must arrive to avoid disrupting activities. The delivery van (<capacity> snack boxes) starts at the kitchen (<locs>[0]), visits centers (<locs>[1:]), and returns. Each stop takes <service_time> minutes to unload. The goal is to hit all nap times while driving the shortest possible route.",
-        "tags": [
-            "time_windows",
-            "capacity",
-            "locs",
-            "locs",
-            "service_time"
-        ]
-    },
-    {
-        "title": "Historic District Tour Guide Shuttle with Visitor Capacity Limits",
-        "content": "A tour company runs electric shuttles through a historic district with 15-minute departure windows (<time_windows>) at each landmark. Each shuttle fits <capacity> tourists and starts/ends at the visitor center (<locs>[0]). Landmarks (<locs>[1:]) have dwell times (<service_time>) for storytelling. Since too many people damage old sites, each landmark must be visited exactly once. Optimize routes to minimize shuttle fleet size and total mileage.",
-        "tags": [
-            "time_windows",
-            "capacity",
-            "locs",
-            "locs",
-            "service_time"
-        ]
-    },
-    {
-        "title": "Urban Beehive Honey Collection with Pollination Windows",
-        "content": "A beekeeper services rooftop hives (<locs>) across the city during 2-hour \"pollination breaks\" (<time_windows>) when bees are least active. Their truck (<capacity> kg honey) starts at the honey plant (<locs>[0]). Each hive takes <service_time> minutes to harvest and can't be revisited (to avoid disturbing colonies). With hives producing <demand> kg each, plan routes that collect all honey within pollination windows while minimizing travel.",
-        "tags": [
-            "locs",
-            "time_windows",
-            "capacity",
-            "locs",
-            "service_time",
-            "demand"
-        ]
-    },
-    {
-        "title": "Movie Set Catering for Crew Meal Breaks",
-        "content": "A food truck feeds film crews at shooting locations (<locs>) during strict 45-minute meal breaks (<time_windows>). The truck (<capacity> meals) starts at the commissary (<locs>[0]). Each stop takes <service_time> minutes to serve <demand> meals. Since crews eat simultaneously, locations can't be revisited. Optimize routes so all crews get hot meals on time with minimal driving between sets.",
-        "tags": [
-            "locs",
-            "time_windows",
-            "capacity",
-            "locs",
-            "service_time",
-            "demand"
-        ]
-    },
-    {
-        "title": "Floating Market Stall Restocking with Tide-Dependent Windows",
-        "content": "A supplier restocks floating market vendors (<locs>) via boat during 90-minute \"high tide\" windows (<time_windows>) when docks are accessible. The boat (<capacity> crates) starts at the warehouse (<locs>[0]). Each vendor needs <demand> crates and takes <service_time> minutes to unload. With tides changing hourly, design routes that serve all vendors during their specific tidal windows while minimizing nautical miles traveled.\n",
-        "tags": [
-            "locs",
-            "time_windows",
-            "capacity",
-            "locs",
-            "demand",
-            "service_time"
-        ]
-    },
-    {
-        "title": "Mobile COVID-19 Booster Shot Clinics for Office Parks",
-        "content": "A city health department deploys nurse teams in vans to administer booster shots at corporate campuses. Each office building (<locs>) has a lunch-hour time slot (<time_windows>) when employees are available. Each van carries <capacity> vaccine doses, travels at <speed>, and spends <service_time> minutes per site. Teams must return to the central refrigeration hub by 5 PM to avoid vaccine spoilage. The goal is to vaccinate the most employees while respecting building access windows.",
-        "tags": [
-            "locs",
-            "time_windows",
-            "capacity",
-            "speed",
-            "service_time"
-        ]
-    },
-    {
-        "title": "Artisanal Bread Delivery to High-End Restaurants",
-        "content": "A sourdough bakery must deliver fresh loaves to <num_customer> restaurants before their morning prep time (<time_windows_close>). Each delivery van (<capacity> loaves) leaves the bakery at 4 AM (<depot_open_time>), travels at <speed>, and takes <service_time> minutes per stop. Some restaurants require double the standard delivery time due to difficult parking. The bakery wants to minimize driving time while ensuring no bread arrives after chefs start cooking.",
-        "tags": [
-            "num_customer",
-            "time_windows_close",
-            "capacity",
-            "depot_open_time",
-            "speed",
-            "service_time"
-        ]
-    },
-    {
-        "title": "Mobile Washing Machine Service for Apartment Complexes",
-        "content": "A startup offers shared laundry service where trucks with <capacity> washers visit buildings (<locs>) during resident availability windows (<time_windows>). Each stop takes <service_time> hours for loading/unloading. Trucks travel at <speed> between locations and must return to the service depot by midnight. The challenge is scheduling routes so all buildings get weekly service during their preferred 4-hour windows while using the fewest trucks.",
-        "tags": [
-            "capacity",
-            "locs",
-            "time_windows",
-            "service_time",
-            "speed"
-        ]
-    },
-    {
-        "title": "Live Lobster Delivery to Cruise Ships",
-        "content": "A seafood supplier must deliver <demand> crates of lobsters to docked cruise ships (<locs>) during narrow unloading windows (<time_windows>) when ships' kitchens accept deliveries. Each refrigerated truck (<capacity> crates) travels at <speed> and takes <service_time> minutes per ship due to strict food safety checks. With tides affecting dock access times, the supplier needs to minimize driving distance while ensuring no lobster misses its ship's 30-minute receiving window.",
-        "tags": [
-            "demand",
-            "locs",
-            "time_windows",
-            "capacity",
-            "speed",
-            "service_time"
-        ]
-    },
-    {
-        "title": "Library Book Returns for Homebound Seniors",
-        "content": "A county library sends vans (<capacity> books each) to collect returns from homebound patrons (<locs>) during their preferred 2-hour windows (<time_windows>). Each stop takes <service_time> minutes for social interaction. Vans travel at <speed> between homes and must return to the library by closing time (<depot_close_time>). The system prioritizes patrons who haven't had visits in the longest time while respecting their availability windows.",
-        "tags": [
-            "capacity",
-            "locs",
-            "time_windows",
-            "service_time",
-            "speed",
-            "depot_close_time"
-        ]
-    },
-    {
-        "title": "Mobile Preschool Snack Delivery with Nap-Time Windows",
-        "content": "A catering service delivers fresh snacks to daycare centers across town. Locations are <locs>, each requiring <demand> snack boxes.  \nDaycares only accept deliveries during nap-time windows <time_windows> to avoid disrupting activities.  \nEach delivery van fits <capacity> boxes and takes <service_time> minutes per stop to unload quietly.  \nVans travel at <speed> km/h and must return to the kitchen by <depot_close_time>.  \nGoal: Ensure no child misses snack time while minimizing fuel costs.",
-        "tags": [
-            "locs",
-            "demand",
-            "time_windows",
-            "capacity",
-            "service_time",
-            "speed",
-            "depot_close_time"
-        ]
-    },
-    {
-        "title": "Floating Market Stall Restocking with Tide-Dependent Windows",
-        "content": "A boat replenishes produce for vendors in a riverine market where stalls are only accessible at low tide.  \nStall locations <locs> have narrow tidal windows <time_windows> and demand <demand> crates.  \nThe boat carries <capacity> crates, moves at <speed> knots, and takes <service_time> minutes per stall.  \nLate arrivals mean stranded inventory\u2014routes must align with tide charts.  \nObjective: Minimize spoiled goods by hitting all tidal deadlines.",
-        "tags": [
-            "locs",
-            "time_windows",
-            "demand",
-            "capacity",
-            "speed",
-            "service_time"
-        ]
-    },
-    {
-        "title": "Mobile Washing Machine Service for Apartment Complexes",
-        "content": "A company rents portable washing machines to apartment buildings with shared laundry rooms.  \nEach building <locs> books a 2-hour slot <time_windows> for servicing <demand> machines.  \nTrucks carry <capacity> machines and take <service_time> minutes per stop to install.  \nDrivers avoid rush hours (travel speed drops to <speed> km/h).  \nGoal: Maximize same-day servicing while avoiding overtime pay.",
-        "tags": [
-            "locs",
-            "time_windows",
-            "demand",
-            "capacity",
-            "service_time",
-            "speed"
-        ]
-    },
-    {
-        "title": "Live Lobster Delivery to Cruise Ships",
-        "content": "A seafood supplier delivers live lobsters to docked cruise ships before their kitchens open.  \nShip berths <locs> have strict boarding windows <time_windows> and orders <demand> lbs.  \nRefrigerated trucks (<capacity> lbs) drive at <speed> km/h; unloading takes <service_time> minutes.  \nLate deliveries mean dead lobsters\u2014routes must account for port security checks.  \nObjective: Ensure all ships get fresh stock with minimal refrigeration costs.",
-        "tags": [
-            "locs",
-            "time_windows",
-            "demand",
-            "capacity",
-            "speed",
-            "service_time"
-        ]
-    },
-    {
-        "title": "Community Fridge Restocking with Spoilage Prevention Deadlines",
-        "content": "A nonprofit restocks neighborhood fridges with perishable meals before they spoil.  \nFridge locations <locs> have demand <demand> meals and freshness deadlines <time_windows>.  \nVolunteer cars (capacity <capacity>) travel at <speed> km/h; stocking takes <service_time> minutes.  \nMeals expire if delivered too early or late.  \nGoal: Minimize waste while covering all fridges in one shift.",
-        "tags": [
-            "locs",
-            "demand",
-            "time_windows",
-            "capacity",
-            "speed",
-            "service_time"
-        ]
-    },
-    {
-        "title": "Mobile Preschool Snack Delivery with Nap-Time Windows",
-        "content": "(\"A catering service delivers fresh snacks to daycare centers starting from their kitchen at node 0.\\nThe centers are located at <locs> and each requires <demand> snack boxes.\\nDeliveries must arrive during strict nap-time windows <time_windows> when kids are awake, with <service_time> minutes needed to unload.\\nEach delivery van carries max <capacity> boxes and drives at <speed>.\\nThe goal is to ensure all centers get snacks right before nap-time ends while minimizing driving distance.\")",
-        "tags": [
-            "locs",
-            "demand",
-            "time_windows",
-            "service_time",
-            "capacity",
-            "speed"
-        ]
-    },
-    {
-        "title": "Historic District Tour Guide Shuttle with Visitor Capacity Limits",
-        "content": "(\"A tour company runs shuttles from the visitor center (node 0) to <locs> historic sites.\\nEach site allows entry only during specific hours <time_windows> and needs <service_time> minutes for guided tours.\\nShuttles hold max <capacity> tourists and drive at <speed>.\\nSome sites like the old church get crowded, so they can't handle back-to-back tour groups.\\nWe must schedule routes so no site gets overwhelmed while showing all landmarks before closing times.\")",
-        "tags": [
-            "locs",
-            "time_windows",
-            "service_time",
-            "capacity",
-            "speed"
-        ]
-    },
-    {
-        "title": "Urban Beehive Honey Collection with Pollination Windows",
-        "content": "(\"A beekeeper tends rooftop hives at <locs> buildings downtown starting from their workshop (node 0).\\nEach hive can only be harvested during <time_windows> when bees are least active (usually dawn).\\nCollection takes <service_time> minutes per hive, and the truck carries max <capacity> honey jars.\\nBees get agitated if hives are visited too close together, so we need routes that respect both time windows and bee behavior patterns.\")",
-        "tags": [
-            "locs",
             "time_windows",
             "service_time",
             "capacity"
         ]
     },
     {
-        "title": "Movie Set Catering for Crew Meal Breaks",
-        "content": "(\"A food truck feeds <locs> film crew units shooting around the city, starting from the commissary at node 0.\\nEach unit has a strict <time_windows> meal break between scenes and needs <demand> meals.\\nThe truck fits <capacity> hot meal containers and drives at <speed> in traffic.\\nLate deliveries mean grumpy crews - we must hit every 30-minute break window while keeping food hot and minimizing detours.\")",
+        "title": "Emergency Blood Plasma Transfers During Disaster Response",
+        "content": "A disaster relief organization must deliver blood plasma to affected regions using refrigerated vans. Each distribution point\u2019s location is in <locs>, with demands <demand> (liters required). Plasma viability requires strict time windows <time_windows> to avoid spoilage, while service time <service_time> includes unloading and documentation. Vehicles have a capacity <capacity> limited by refrigeration capacity and blood storage requirements. The aim is to minimize travel distance while adhering to time and capacity constraints.",
         "tags": [
             "locs",
-            "time_windows",
             "demand",
+            "time_windows",
+            "service_time",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Vintage Wine Redistribution to Auction Houses with Climate Constraints",
+        "content": "A luxury logistics firm transports fragile wine crates between cellars and auction venues. Each venue\u2019s location is in <locs>, with demands <demand> (number of crates). Venues enforce <time_windows> to align with auction schedules, while service time <service_time> includes climate checks. Vehicles have a capacity <capacity> restricted by crate dimensions and temperature control systems. The objective is to minimize travel distance while maintaining climate conditions and respecting time windows.",
+        "tags": [
+            "locs",
+            "demand",
+            "time_windows",
+            "service_time",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Precision Surgical Instrument Redistribution for Hospital Networks",
+        "content": "A medical supply company must deliver sterilized surgical tools to hospitals for urgent procedures. Each hospital\u2019s location is in <locs>, with demands <demand> (tool sets). Time windows <time_windows> align with scheduled surgeries, while service time <service_time> includes inventory verification. Vehicles have a capacity <capacity> limited by sterilization chamber space and toolset weight. The goal is to minimize travel distance while ensuring timely delivery and avoiding overloading vehicles.",
+        "tags": [
+            "locs",
+            "demand",
+            "time_windows",
+            "service_time",
+            "capacity"
+        ]
+    },
+    {
+        "title": "Live Aquarium Fish Delivery to Aquatic Retailers with Oxygenation Constraints",
+        "content": "A specialized logistics company transports live ornamental fish to aquatic retailers using temperature-controlled trucks. The retailers' locations are <locs>, each requiring a specific quantity of fish <demand> with a time window <time_windows> to ensure oxygenation systems are operational. Each truck has a capacity <capacity> in terms of water volume and fish biomass, and travels at <speed> km/h. Service time <service_time> includes unloading and acclimating fish to new tanks. The goal is to design routes starting/ending at the central aquarium facility, minimizing total distance while adhering to retailers' time windows and preventing fish mortality from overcrowding or delayed delivery.",
+        "tags": [
+            "locs",
+            "demand",
+            "time_windows",
             "capacity",
+            "speed",
+            "service_time"
+        ]
+    },
+    {
+        "title": "Precision Laboratory Instrument Redistribution for University Research Labs",
+        "content": "A university\u2019s logistics team redistributes high-precision lab equipment (e.g., mass spectrometers, microscopes) between research labs. Each lab\u2019s location is <locs>, with instrument demand <demand> and strict time windows <time_windows> to avoid disrupting ongoing experiments. Vehicles have a capacity <capacity> based on instrument weight and dimensional constraints, traveling at <speed> km/h. Service time <service_time> includes equipment setup and calibration. Routes must originate/return to the central storage facility, minimizing travel distance while ensuring instruments are delivered within labs\u2019 operational schedules.",
+        "tags": [
+            "locs",
+            "demand",
+            "time_windows",
+            "capacity",
+            "speed",
+            "service_time"
+        ]
+    },
+    {
+        "title": "Emergency Firefighting Equipment Redistribution During Wildfire Season",
+        "content": "During wildfire season, a fire department must redistribute water pumps, hoses, and other equipment to multiple hotspots. Each fire site\u2019s location is <locs>, with equipment demand <demand> and time windows <time_windows> dictated by evacuation timelines and fire progression forecasts. Trucks have a capacity <capacity> in terms of weight and volume, traveling at <speed> km/h. Service time <service_time> accounts for equipment deployment coordination. Routes must start/end at the central depot, minimizing response time while adhering to dynamic time windows and ensuring no vehicle exceeds its load limit.",
+        "tags": [
+            "locs",
+            "demand",
+            "time_windows",
+            "capacity",
+            "speed",
+            "service_time"
+        ]
+    },
+    {
+        "title": "High-Value Artwork Transport Between Auction Houses with Insurance Windows",
+        "content": "An art logistics firm transports valuable paintings and sculptures between auction houses in a major city. Each destination\u2019s location is <locs>, with artwork dimensions/weight <demand> and time windows <time_windows> imposed by insurance policies requiring deliveries before appraisal deadlines. Vehicles have a capacity <capacity> based on secure cargo space and structural load limits, traveling at <speed> km/h. Service time <service_time> includes climate-controlled unloading and security checks. The goal is to minimize total distance while meeting strict deadlines and preventing overloading.",
+        "tags": [
+            "locs",
+            "demand",
+            "time_windows",
+            "capacity",
+            "speed",
+            "service_time"
+        ]
+    },
+    {
+        "title": "Perishable Coffee Bean Delivery to Specialty Roasters with Roast Timing Windows",
+        "content": "A coffee supplier delivers freshly harvested green coffee beans to specialty roasters, who require beans to arrive just before their scheduled roast times. Roaster locations are <locs>, with bean quantities <demand> and time windows <time_windows> aligned with roasting schedules. Delivery trucks have a refrigerated capacity <capacity> and travel at <speed> km/h. Service time <service_time> includes temperature verification and unloading. Routes must originate/end at the bean processing facility, minimizing travel distance while ensuring beans are delivered before their optimal roast window closes to preserve flavor profiles.",
+        "tags": [
+            "locs",
+            "demand",
+            "time_windows",
+            "capacity",
+            "speed",
+            "service_time"
+        ]
+    },
+    {
+        "title": "High-Precision Optical Lens Transport for Observatory Installations",
+        "content": "A network of observatories requires urgent delivery of large, fragile optical lenses to telescope sites. Each site has a critical time window <time_windows> to align with celestial observation schedules. Transport vehicles have a limited capacity <capacity> due to the lenses' weight and size. Locations are <locs>, with demands <demand> (each lens is a single unit), service times <service_time> for installation coordination, and travel at <speed>. Routes must start/end at the central warehouse. The objective is to minimize total travel distance while ensuring lenses arrive within their time windows and without overloading vehicles.",
+        "tags": [
+            "time_windows",
+            "capacity",
+            "locs",
+            "demand",
+            "service_time",
             "speed"
         ]
     },
     {
-        "title": "Floating Market Stall Restocking with Tide-Dependent Windows",
-        "content": "(\"A boat delivers produce to <locs> floating market stalls from the riverside warehouse (node 0).\\nEach stall can only receive goods at low tide <time_windows> when boats can dock safely, taking <service_time> minutes to unload.\\nThe barge carries max <capacity> crates and moves at <speed> with the current.\\nMissed tide windows mean waiting 6 hours - routes must sync perfectly with tidal schedules.\")  \n\nEach scenario emphasizes unique time window constraints (nature, infrastructure, or human behavior) while keeping the \"neighbor explanation\" approach. Let me know if you'd like any adjusted for more technical detail!",
+        "title": "Live Event Catering Supply Redistribution for Concert Venues",
+        "content": "A catering company must deliver perishable food items to multiple concert venues. Each venue has a strict time window <time_windows> tied to event start times. Refrigerated trucks have a capacity <capacity> constrained by cooling unit space. Locations are <locs>, with demands <demand> (e.g., crates of prepped meals), service times <service_time> for unloading, and travel speed <speed>. The goal is to minimize delivery distance while ensuring all food arrives on time and within vehicle capacity limits.",
         "tags": [
-            "locs",
             "time_windows",
-            "service_time",
             "capacity",
+            "locs",
+            "demand",
+            "service_time",
+            "speed"
+        ]
+    },
+    {
+        "title": "Emergency Construction Material Delivery for Post-Disaster Infrastructure",
+        "content": "After a natural disaster, a logistics team delivers critical construction materials (e.g., steel beams, generators) to damaged sites. Each site has a time window <time_windows> to meet rebuilding deadlines. Heavy-duty trucks have a capacity <capacity> limited by weight and volume constraints. Locations are <locs>, with demands <demand>, service times <service_time>, and travel speed <speed>. The objective is to minimize total travel distance while adhering to time windows and capacity limits to ensure timely delivery.",
+        "tags": [
+            "time_windows",
+            "capacity",
+            "locs",
+            "demand",
+            "service_time",
+            "speed"
+        ]
+    },
+    {
+        "title": "Live Insect Redistribution for Entomological Research Facilities",
+        "content": "A research institution transports live insect specimens to multiple laboratories for urgent studies. Each lab has a time window <time_windows> to maintain specimen viability. Temperature-controlled vehicles have a capacity <capacity> for insect containment units. Locations are <locs>, with demands <demand> (e.g., crates of insects), service times <service_time>, and travel speed <speed>. The goal is to minimize travel distance while ensuring insects arrive within time windows and vehicle capacities are not exceeded.",
+        "tags": [
+            "time_windows",
+            "capacity",
+            "locs",
+            "demand",
+            "service_time",
+            "speed"
+        ]
+    },
+    {
+        "title": "Live Aquatic Specimen Transport for Marine Research Expeditions",
+        "content": "A marine research team delivers live aquatic specimens (e.g., coral samples, fish) to research vessels. Each vessel has a time window <time_windows> to align with dive schedules. Transport vehicles have a capacity <capacity> limited by oxygenation systems and water tanks. Locations are <locs>, with demands <demand>, service times <service_time>, and travel speed <speed>. The objective is to minimize travel distance while ensuring specimens arrive within time windows and survival conditions are maintained via vehicle capacity constraints.",
+        "tags": [
+            "time_windows",
+            "capacity",
+            "locs",
+            "demand",
+            "service_time",
+            "speed"
+        ]
+    },
+    {
+        "title": "Medical Isotope Transport for Cancer Treatment Facilities",
+        "content": "A specialized logistics company transports radioactive isotopes used in cancer treatments to hospitals. Each isotope has a limited half-life, necessitating strict delivery time windows :math:`[e_i, l_i]`. The vehicle capacity :math:`Q` restricts the number of isotopes that can be transported simultaneously due to radiation shielding constraints. Hospitals require immediate handling, so service times :math:`s_i` include unloading and safety protocols. Vehicles must depart from and return to a central nuclear facility, adhering to speed limits and ensuring no isotope expires before delivery.",
+        "tags": []
+    },
+    {
+        "title": "Secure Financial Document Delivery for Global Transactions",
+        "content": "Banks require urgent delivery of encrypted transaction documents to meet regulatory deadlines. Each document package has a time window aligning with market opening/closing times. Vehicles with capacity :math:`Q` can carry a limited number of document boxes due to security vault space constraints. Service times :math:`s_i` include biometric authentication at delivery sites. Routes must start/end at a central security hub, avoiding non-secure routes while minimizing total distance.",
+        "tags": []
+    },
+    {
+        "title": "Renewable Energy Component Delivery to Remote Wind Farms",
+        "content": "Wind turbine blades and generators are transported to offshore construction sites. Each site has installation time windows dictated by tidal conditions. Vehicle capacity :math:`Q` is constrained by barge weight limits for transporting oversized components. Service times :math:`s_i` include crane setup for unloading. Vessels must return to the mainland depot daily, optimizing routes to avoid delays caused by weather-induced window shifts.",
+        "tags": []
+    },
+    {
+        "title": "Perishable Live Plant Redistribution for Botanical Conservatories",
+        "content": "Rare tropical plants are transported between botanical gardens under strict humidity-controlled conditions. Each plant has a time window to ensure arrival before temperature deviations cause damage. Capacity :math:`Q` limits the number of plants per vehicle due to specialized climate chambers. Service times :math:`s_i` include climate verification at each garden. Vehicles must originate/return to a central nursery, adhering to seasonal daylight travel constraints for plant survival.",
+        "tags": []
+    },
+    {
+        "title": "High-Precision Electronics Delivery for Tech Conference Exhibits",
+        "content": "Cutting-edge semiconductor chips and demonstration equipment are delivered to tech conference venues. Each exhibit has a setup time window to ensure displays are operational before public access. Vehicle capacity :math:`Q` is restricted by electromagnetic shielding requirements for sensitive components. Service times :math:`s_i` include anti-static handling procedures. Trucks must start/end at a staging warehouse, avoiding urban congestion during peak event hours to meet delivery deadlines.",
+        "tags": []
+    },
+    {
+        "title": "Agricultural Equipment Redistribution for Seasonal Harvests",
+        "content": "A farm equipment rental company must deliver tractors, harvesters, and other machinery to various farms during the peak harvest season. Each farm has a specific time window during which the equipment must arrive to avoid missing the optimal harvest period. The vehicles transporting the equipment have limited capacity, so each route must ensure that the total weight or size of equipment does not exceed the vehicle's maximum capacity. The objective is to plan routes that start and end at the depot, minimize total travel distance, and ensure all equipment is delivered within the required time frames.",
+        "tags": []
+    },
+    {
+        "title": "Temporary Event Infrastructure Delivery for Large Festivals",
+        "content": "A company specializing in event management needs to transport stages, lighting rigs, and other large equipment to multiple festival locations. Each festival site has a specific setup window during which the equipment must arrive to ensure timely installation. The delivery trucks have limited capacity, so each route must not exceed the vehicle's weight and space constraints. The goal is to design routes starting and ending at the warehouse, minimizing travel distance while ensuring all equipment is delivered within each site's time window.",
+        "tags": []
+    },
+    {
+        "title": "Live Animal Transport for Zoos with Conservation Timelines",
+        "content": "A wildlife conservation organization must transport endangered species between zoos for breeding programs. Each zoo has a time window during which the animals must arrive to minimize stress and ensure compatibility with existing animals. The transport vehicles have limited capacity, so each route must not exceed the number of animals or the space required. The objective is to plan routes that start and end at the central zoo, minimizing travel distance while adhering to each zoo's time constraints and ensuring animal welfare standards are met.",
+        "tags": []
+    },
+    {
+        "title": "High-Value Gemstone Transport to Auction Houses with Security Timelines",
+        "content": "A gemstone logistics company must deliver high-value gemstones to auction houses for scheduled sales. Each auction house has a strict time window during which the gems must arrive to ensure timely display and sale. The transport vehicles have limited capacity to accommodate the secure containers required for each shipment. The goal is to plan routes starting and ending at the security depot, minimizing travel distance while adhering to each auction house's time window and ensuring no overloading of vehicles.",
+        "tags": []
+    },
+    {
+        "title": "Live Coral Transport for Marine Conservation Projects",
+        "content": "A marine conservation organization must deliver live coral fragments to restoration sites in fragile ecosystems. Each site has a time window during which the corals must be planted to ensure survival, based on tidal and environmental conditions. The transport vessels have limited capacity to carry the corals and their protective containers. The goal is to plan routes starting and ending at the coral nursery, minimizing travel distance while adhering to each site's time window and capacity limits.",
+        "tags": []
+    },
+    {
+        "title": "Live Wildlife Transport for Conservation Breeding Programs",
+        "content": "A wildlife conservation organization must transport endangered animals between breeding facilities. Each facility has a time window <time_windows> for receiving animals to minimize stress and ensure health. Each vehicle has a maximum capacity of <capacity> animals, restricting the total load that can be transported in a single route. The service time <service_time> includes unloading and health checks. Vehicles travel at <speed> km/h and must start/end at the central depot. The goal is to minimize travel distance while adhering to time windows and capacity constraints.",
+        "tags": [
+            "time_windows",
+            "capacity",
+            "service_time",
+            "speed"
+        ]
+    },
+    {
+        "title": "High-Security Document Delivery for Government Agencies",
+        "content": "A government agency needs to deliver classified documents between secure facilities. Each location has a strict time window <time_windows> for document receipt to comply with security protocols. Vehicles have a maximum capacity of <capacity> documents (by weight/volume), ensuring no overloading. The service time <service_time> involves secure handoff procedures. Vehicles travel at <speed> km/h and must return to the central depot after delivery. The objective is to optimize routes to minimize travel distance while meeting time windows and security requirements.",
+        "tags": [
+            "time_windows",
+            "capacity",
+            "service_time",
+            "speed"
+        ]
+    },
+    {
+        "title": "Emergency Medical Equipment Redistribution During Disease Outbreaks",
+        "content": "During a disease outbreak, medical equipment (e.g., ventilators, testing kits) must be rapidly distributed to hospitals. Each hospital has a time window <time_windows> for receiving supplies to avoid critical shortages. Vehicles have a maximum capacity of <capacity> units of equipment. The service time <service_time> includes unloading and coordination with staff. Vehicles travel at <speed> km/h and must originate/return to the central warehouse. The aim is to minimize total travel distance while ensuring timely delivery and capacity compliance.",
+        "tags": [
+            "time_windows",
+            "capacity",
+            "service_time",
+            "speed"
+        ]
+    },
+    {
+        "title": "Live Event Lighting Redistribution for Theatre Tours",
+        "content": "A touring theatre production must redistribute lighting equipment between venues for performances. Each venue has a time window <time_windows> for setup to avoid delays. Vehicles have a maximum capacity of <capacity> units (e.g., lights, cables), limiting the weight/volume per trip. The service time <service_time> includes equipment setup coordination. Vehicles travel at <speed> km/h and must start/end at the tour\u2019s central hub. The goal is to minimize travel distance while adhering to time constraints and equipment limits.",
+        "tags": [
+            "time_windows",
+            "capacity",
+            "service_time",
+            "speed"
+        ]
+    },
+    {
+        "title": "Wildlife Rescue Equipment Redistribution During Natural Disasters",
+        "content": "During natural disasters, rescue teams need to deploy specialized equipment (e.g., traps, medical kits) to wildlife rescue sites. Each site has a time window <time_windows> for equipment arrival to maximize survival chances. Vehicles have a maximum capacity of <capacity> units of equipment. The service time <service_time> includes unloading and coordination with on-site teams. Vehicles travel at <speed> km/h and must return to the central command center. The objective is to minimize travel distance while ensuring timely delivery and capacity adherence.",
+        "tags": [
+            "time_windows",
+            "capacity",
+            "service_time",
             "speed"
         ]
     }
