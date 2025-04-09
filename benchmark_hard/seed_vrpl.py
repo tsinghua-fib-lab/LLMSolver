@@ -42,7 +42,7 @@ vrpl_data_seed = [
             "capacity": [30],
             "speed": [1],
             "distance_limit": [2.74],
-            "num_depot": [1],
+            "num_depots": [1],
         },
         "user_template": {
             "loc_depot": [[0.8964, 0.7059]],
@@ -113,7 +113,7 @@ vrpl_data_seed = [
             "capacity": [10],
             "speed": [1],
             "distance_limit": [2.5],
-            "num_depot": [1],
+            "num_depots": [1],
         },
         "user_template": {
             "locs": [[0.8004, 0.6360],
@@ -182,7 +182,7 @@ vrpl_data_seed = [
         0.0667, 0.0333],
             "capacity": [30],
             "distance_limit": [2.5395],
-            "num_depot": [1],
+            "num_depots": [1],
         },
         "user_template": {
             "loc_depot": [[0.1992, 0.1014]],
@@ -248,7 +248,7 @@ vrpl_data_seed = [
             "distance_limit": [2.2027],
             "demand_linehaul": [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0],
             "capacity": [30],
-            "num_depot": [1],
+            "num_depots": [1],
         },
         "user_template": {
             "loc_depot": [[0.1419, 0.1857]],
@@ -312,7 +312,7 @@ vrpl_data_seed = [
             "demand_linehaul": [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0],
             "capacity": [10],
             "distance_limit": [2.2921],
-            "num_depot": [1],
+            "num_depots": [1],
         },
         "user_template": {
             "loc_depot": [[0.0704, 0.4355]],

@@ -37,7 +37,7 @@ ovrp_data_seed = [
                      [18.7545, 1.5324], ],
             "demand_linehaul": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
             "capacity": [20],
-            "num_depot": [1],
+            "num_depots": [1],
             "open_route": [1]
         },
         "user_template": {
@@ -98,7 +98,7 @@ ovrp_data_seed = [
             "demand_linehaul": [1.3333, 2.0000, 5.3333, 3.3333, 1.3333, 0.6667, 1.3333, 0.6667, 3.3333,
                                 4.6667, 6.0000, 2.6667, 6.0000, 2.6667],
             "capacity": [10],
-            "num_depot": [1],
+            "num_depots": [1],
             "open_route": [1]
         },
         "user_template": {
@@ -152,7 +152,7 @@ ovrp_data_seed = [
             "demand_linehaul": [0.8000, 1.8000, 1.8000, 0.4000, 1.8000, 0.2000, 1.2000, 1.8000, 0.2000,
                                 0.2000, 1.8000, 0.8000, 1.2000, 1.2000],
             "capacity": [4],
-            "num_depot": [1],
+            "num_depots": [1],
             "open_route": [1]
         },
         "user_template": {
@@ -207,7 +207,7 @@ ovrp_data_seed = [
             "demand_linehaul": [0.6667, 0.3333, 2.0000, 3.0000, 1.6667, 2.3333, 1.0000, 1.3333, 1.0000,
                                 0.3333, 3.0000, 1.0000, 1.6667, 1.3333, 0.3333, 1.3333],
             "capacity": [5],
-            "num_depot": [1],
+            "num_depots": [1],
             "open_route": [1]
         },
         "user_template": {
@@ -268,7 +268,7 @@ ovrp_data_seed = [
             "demand_linehaul": [0.6667, 0.3333, 2.3333, 1.3333, 3.0000, 2.0000, 2.6667, 2.0000, 2.0000,
                                 3.0000, 2.0000, 2.6667, 2.0000, 1.6667, 0.6667, 3.0000],
             "capacity": [5],
-            "num_depot": [1],
+            "num_depots": [1],
             "open_route": [1]
         },
         "user_template": {

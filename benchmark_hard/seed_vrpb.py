@@ -45,7 +45,7 @@ vrpb_data_seed = [
                 0.0, 0.0, 0.16666667, 0.0, 0.0, 0.0, 0.26666668
             ],
             "capacity": [1],
-            "num_depot": [1],
+            "num_depots": [1],
             "backhaul_class": [1],
         },
         "label": "vrpb"
@@ -78,7 +78,7 @@ vrpb_data_seed = [
             "demand_backhaul": [0.0000, 0.2667, 0.0333, 0.0000, 0.2000, 0.2333, 0.0000, 0.0000, 0.0000,
                                 0.0000],
             "capacity": [1],
-            "num_depot": [1],
+            "num_depots": [1],
             "backhaul_class": [1],
         },
         "label": "vrpb"
@@ -108,7 +108,7 @@ vrpb_data_seed = [
             "demand_linehaul": [0.0333, 0.1667, 0.2000, 0.2333, 0.2333, 0.1333, 0.0000, 0.0667, 0.0000, 0.0000],
             "demand_backhaul": [0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.2000, 0.0000, 0.1000, 0.0333],
             "capacity": [1],
-            "num_depot": [1],
+            "num_depots": [1],
             "backhaul_class": [1],
         },
         "label": "vrpb"
@@ -140,7 +140,7 @@ vrpb_data_seed = [
             "demand_linehaul": [0.2333, 0.3000, 0.3000, 0.0667, 0.1333, 0.0000, 0.1333, 0.3000, 0.0333, 0.1000],
             "demand_backhaul": [0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.2667, 0.0000, 0.0000, 0.0000, 0.0000],
             "capacity": [1],
-            "num_depot": [1],
+            "num_depots": [1],
             "backhaul_class": [1],
         },
         "label": "vrpb"
@@ -173,7 +173,7 @@ vrpb_data_seed = [
             "demand_backhaul": [0.0000, 0.2667, 0.0000, 0.0000, 0.0000, 0.0000, 0.2000, 0.0000, 0.0000,
                                 0.3000],
             "capacity": [1],
-            "num_depot": [1],
+            "num_depots": [1],
             "backhaul_class": [1],
         },
         "label": "vrpb"
@@ -181,13 +181,27 @@ vrpb_data_seed = [
 ]
 
 if __name__ == '__main__':
-    problem_type = "vrpb"
-    generator = MTVRPGenerator(num_loc=10, variant_preset=problem_type)
+    # problem_type = "vrpb"
+    # generator = MTVRPGenerator(num_loc=10, variant_preset=problem_type)
+    #
+    # env = MTVRPEnv(generator, check_solution=False)
+    # td_data = env.generator(1)
+    # td_data_dict = td_data.to_dict()
+    # for key in td_data_dict.keys():
+    #     print(key)
+    #     print((td_data_dict[key]))
+    # print()
 
-    env = MTVRPEnv(generator, check_solution=False)
-    td_data = env.generator(1)
-    td_data_dict = td_data.to_dict()
-    for key in td_data_dict.keys():
-        print(key)
-        print((td_data_dict[key]))
-    print()
+    import numpy as np
+
+    # 示例数据
+    locs = np.array([[1, 2], [3, 4], [5, 6], [7, 8], [9, 10]])  # shape [5, 2]
+    demand = np.array([0, 1, 0, 3, 2])  # shape [5]
+
+    # 获取 demand > 0 的索引
+    nonzero_indices = np.where(demand > 0)[0]
+
+    # 提取对应的 locs
+    selected_locs = locs[nonzero_indices].tolist()
+
+    print("Selected locations:\n", selected_locs)

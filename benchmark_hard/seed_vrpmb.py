@@ -48,7 +48,7 @@ vrpmb_data_seed = [
                 0.0, 0.0, 0.16666667, 0.0, 0.0, 0.0, 0.26666668
             ],
             "capacity": [1],
-            "num_depot": [1],
+            "num_depots": [1],
             "backhaul_class": [2],
         },
         "label": "vrpmb"
@@ -79,7 +79,7 @@ vrpmb_data_seed = [
             "demand_linehaul": [0.0333, 0.1667, 0.2000, 0.2333, 0.2333, 0.1333, 0.0000, 0.0667, 0.0000, 0.0000],
             "demand_backhaul": [0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.2000, 0.0000, 0.1000, 0.0333],
             "capacity": [1],
-            "num_depot": [1],
+            "num_depots": [1],
             "backhaul_class": [2],
         },
         "label": "vrpmb"
@@ -108,7 +108,7 @@ vrpmb_data_seed = [
             "demand_linehaul": [0.2333, 0.3000, 0.3000, 0.0667, 0.1333, 0.0000, 0.1333, 0.3000, 0.0333, 0.1000],
             "demand_backhaul": [0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.2667, 0.0000, 0.0000, 0.0000, 0.0000],
             "capacity": [1],
-            "num_depot": [1],
+            "num_depots": [1],
             "backhaul_class": [2],
         },
         "label": "vrpmb"
@@ -128,7 +128,7 @@ vrpmb_data_seed = [
             "demand_linehaul": [],
             "demand_backhaul": [],
             "capacity": [1],
-            "num_depot": [1],
+            "num_depots": [1],
             "backhaul_class": [2],
         },
         "label": "vrpmb"
@@ -159,7 +159,7 @@ vrpmb_data_seed = [
             "demand_backhaul": [0.0000, 0.2667, 0.0000, 0.0000, 0.0000, 0.0000, 0.2000, 0.0000, 0.0000,
                                 0.3000],
             "capacity": [1],
-            "num_depot": [1],
+            "num_depots": [1],
             "backhaul_class": [2],
         },
         "label": "vrpmb"

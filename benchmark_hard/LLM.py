@@ -19,7 +19,7 @@ class LLM_api:
 
         self.payload = {
             "model": api_config_dict[model]['model'],
-            "stream": False,
+            "stream": api_config_dict[model]['stream'],
             "max_tokens": max_tokens,
             "temperature": temperature,
             "top_p": top_p,
@@ -55,24 +55,7 @@ class LLM_api:
         messages = [{'role': 'user', 'content': content.strip()}, ]
         for try_num in range(max_try):
             try:
-                if self.payload["model"] == "gpt-4o-mini":
-                    response = self.client.chat.completions.create(
-                        model="gpt-4o-mini",
-                        messages=self.payload["messages"],
-                        max_tokens=self.payload["max_tokens"],
-                        temperature=self.payload["temperature"],
-                        top_p=self.payload["top_p"],
-                        frequency_penalty=self.payload["frequency_penalty"],
-                        n=self.payload["n"],
-                        timeout=60
-                    )
-                    content = response.choices[0].message.content
-                    self.q_token += response.usage.prompt_tokens
-                    self.a_token += response.usage.completion_tokens
-                    if content:
-                        return {"choices": [{"message": {"content": content}}]}
-
-                elif self.payload["model"].startswith("DeepSeek") or self.payload["model"] == "deepseek-chat":
+                if self.payload["model"].startswith("DeepSeek") or self.payload["model"] == "deepseek-chat":
                     response = self.client.chat.completions.create(
                         model=self.payload["model"],
                         messages=messages,
@@ -110,7 +93,36 @@ class LLM_api:
                                 "choices": [{"message": {"content": content, "reasoning_content": reasoning_content}}]}
                         else:
                             return {"choices": [{"message": {"content": content}}]}
+                elif self.payload["model"] in ["qwq-plus-latest"]:
+                    reasoning_content = ""  # 定义完整思考过程
+                    answer_content = ""  # 定义完整回复
+                    is_answering = True  # 判断是否结束思考过程并开始回复
 
+                    response = self.client.chat.completions.create(
+                        model=self.payload["model"],
+                        messages=messages,
+                        stream=self.payload["stream"],
+                    )
+
+                    for chunk in response:
+                        # 如果chunk.choices为空，则打印usage
+                        if not chunk.choices:
+                            print("\nUsage:")
+                            print(chunk.usage)
+                        else:
+                            delta = chunk.choices[0].delta
+                            # 打印思考过程
+                            if hasattr(delta, 'reasoning_content') and delta.reasoning_content != None:
+                                reasoning_content += delta.reasoning_content
+                            else:
+                                # 开始回复
+                                answer_content += delta.content
+                    if answer_content:
+                        if reasoning_content:
+                            return {
+                                "choices": [{"message": {"content": answer_content, "reasoning_content": reasoning_content}}]}
+                        else:
+                            return {"choices": [{"message": {"content": answer_content}}]}
                 else:
                     response = requests.request("POST", self.url, json=self.payload, headers=self.headers)
                     response = response.json()
