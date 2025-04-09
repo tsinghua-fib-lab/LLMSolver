@@ -29031,7 +29031,7 @@
             ]
         },
         "label": "cvrp"
-    }
+    },
     {
         "title": "Mobile Vaccination Clinic Scheduling Problem",
         "desc_split": "The county health department operates mobile vaccination vans (capacity: <capacity> doses) from a central storage facility (<loc_depot>) to serve <num_customer> neighborhoods. Each stop (<loc_customer>) has a pre-registered number of patients (<demand> doses needed). Since vaccines spoil quickly, teams must visit all locations in one day without exceeding van capacity, while minimizing travel time between stops to maximize daily coverage.",
