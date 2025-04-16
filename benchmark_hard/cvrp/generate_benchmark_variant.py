@@ -124,25 +124,25 @@ problem_type_features_dict = {
 
 def generate_problem_base_desc(feature: str):
     if feature == "C":
-        from seed_cvrp import cvrp_data_seed
+        from benchmark_hard.cvrp.seed_cvrp import cvrp_data_seed
         problem_data_seed = cvrp_data_seed
     elif feature == 'O':
-        from seed_ovrp import ovrp_data_seed
+        from benchmark_hard.cvrp.seed_ovrp import ovrp_data_seed
         problem_data_seed = ovrp_data_seed
     elif feature == 'L':
-        from seed_vrpl import vrpl_data_seed
+        from benchmark_hard.cvrp.seed_vrpl import vrpl_data_seed
         problem_data_seed = vrpl_data_seed
     elif feature == 'B':
-        from seed_vrpb import vrpb_data_seed
+        from benchmark_hard.cvrp.seed_vrpb import vrpb_data_seed
         problem_data_seed = vrpb_data_seed
     elif feature == 'MB':
-        from seed_vrpmb import vrpmb_data_seed
+        from benchmark_hard.cvrp.seed_vrpmb import vrpmb_data_seed
         problem_data_seed = vrpmb_data_seed
     elif feature == 'TW':
-        from seed_vrptw import vrptw_data_seed
+        from benchmark_hard.cvrp.seed_vrptw import vrptw_data_seed
         problem_data_seed = vrptw_data_seed
     elif feature == 'MD':
-        from seed_mdcvrp import mdcvrp_data_seed
+        from benchmark_hard.cvrp.seed_mdcvrp import mdcvrp_data_seed
         problem_data_seed = mdcvrp_data_seed
     else:
         raise ValueError(f"Unknown problem feature: {feature}")
