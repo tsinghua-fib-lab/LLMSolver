@@ -40,9 +40,9 @@ def get_user_template_data(data_template_dict: dict, tags: list) -> dict:
             user_template_dict[tag] = data_template_dict['service_time'][:num_depots]
         elif tag in ['time_window', 'time_windows', "TW"]:
             user_template_dict[tag] = data_template_dict['time_windows']
-        elif tag in ['time_windows_open', 'time_window_start', 'time_windows_start']:
+        elif tag in ['time_windows_open', 'time_window_start', 'time_windows_start', 'time_window_open']:
             user_template_dict[tag] = [[row[0]] for row in data_template_dict['time_windows']]
-        elif tag in ['time_windows_close', 'time_window_end', 'time_windows_end']:
+        elif tag in ['time_windows_close', 'time_window_end', 'time_windows_end', 'time_window_close']:
             user_template_dict[tag] = [[row[1]] for row in data_template_dict['time_windows']]
         elif tag == 'depot_open_time':
             num_depots = data_template_dict['num_depots'][0]
