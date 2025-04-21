@@ -1,11 +1,9 @@
-import os, sys
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-
 from tensordict.tensordict import TensorDict
 import torch
 import time
 from recognition.LLM import LLM_api
 from collections import defaultdict
+from recognition.variants import VRP_VARIANTS, SP_VARIANTS
 
 
 class Agent:
@@ -23,6 +21,8 @@ class Agent:
         :return: A dictionary containing the parsed result
         """
         try:
+            # Remove markdown code block syntax if present
+            text = text.replace('```json', '').replace('```', '').strip()
             json_format = eval(text)
             result = json_format.get('result', None)
             reason = json_format.get('reason', None)
@@ -40,36 +40,61 @@ class Classifier(Agent):
     A VRP problem classifier agent: 
     Given a VRP problem description in natural language, 
     """
-    def run(self, problem_desc: str, reason=None) -> str:
-        """
-        :param problem_desc: The user's natural language VRP problem description
-        :return: A string, one of [CVRP, OVRP, VRPB, VRPL, VRPTW, OVRPTW, OVRPB, OVRPL, VRPBL, VRPBTW, VRPLTW, OVRPBL, OVRPBTW, OVRPLTW, VRPBLTW, OVRPBLTW]
-        """
-        prompt = f"You are a VRP problem judger agent. The user has provided the following VRP problem description:\n"
+    def add_prompt(self, problem_desc: str, reason=None):
+        # prompt = f"You are a VRP problem judger agent. The user has provided the following VRP problem description:\n"
+        # prompt += f"{problem_desc}\n"
+        # prompt += "You need to choose one category for the description from the following list:\n"
+        # prompt += f"{VRP_VARIANTS}\n"
+        # prompt += "Where:\n"
+        # prompt += "- 'VRP' is the basic Vehicle Routing Problem\n"
+        # prompt += "- 'O' represents Open Route (routes can be open)\n"
+        # prompt += "- 'B' represents backhaul demand, and the backhaul demand can be only satisfied after all the linehual demand are satisfied. \n"
+        # prompt += "- 'MB' represents mixed backhaul, which means backhaul demand and linehaul demand can be sttisfied simultaneously.\n"
+        # prompt += "- 'L' represents Distance Limits\n"
+        # prompt += "- 'TW' represents Time Window constraints\n"
+        # prompt += "If the description contains any attribute in 'O', 'B', 'MB', 'L' or 'TW', the most likely corresponding classification is given, otherwise is 'C'.\n"
+        # prompt += "Your output should be a string in json format as follows:\n"
+        # prompt += "{\n"
+        # prompt += "    'reason': <string>,\n"
+        # prompt += "    'result': <string>\n"
+        # prompt += "}\n"
+        # prompt += "Where 'reason' is a string explaining why you chose this category, and 'result' must be one of the elements in the list.\n"
+        
+        
+        prompt = f"You are a Scheduling Problem judger agent. The user has provided the following scheduling problem description:\n"
         prompt += f"{problem_desc}\n"
-        # prompt += "You only need to return one category from [cvrp, ovrp, vrpb, vrpl, vrptw].\n"
         prompt += "You need to choose one category for the description from the following list:\n"
-        prompt += "[CVRP, OVRP, VRPB, VRPL, VRPTW]\n"
-        prompt += "Where 'C' represents Capacity, which means the vehicle has a capacity limit."
-        prompt += " 'O' represents Open Route, which means routes can be open."
-        prompt += " 'B' represents Backhaul or Linehaul demand."
-        prompt += " 'L' represents Distance Limits."
-        prompt += " 'TW' represents Time Window, which means the vehicle has a time window to visit each customer.\n"
-        prompt += "Your output should be in json format as follows:\n"
+        prompt += f"{SP_VARIANTS}\n"
+        prompt += "Where:\n"
+        prompt += "- 'Job Shop Scheduling Problem (JSSP) - fixed machine per operation, predefined operation order'\n"
+        prompt += "- 'Flexible Job Shop Scheduling Problem (FJSSP) - flexible machine choice per operation, predefined operation order'\n"
+        prompt += "- 'Flow-Shop Scheduling Problem (FSSP) - all jobs follow the same machine sequence'\n"
+        prompt += "- 'Hybrid Flow-shop Scheduling Problem (HFSSP) - multiple stages with parallel machines in at least one stage'\n"
+        prompt += "- 'Open Shop Scheduling Problem (OSSP) - no predefined operation order'\n"
+        prompt += "- 'Assembly Scheduling Problem (ASP) - operations have precedence constraints (DAG)'\n"
+        prompt += "Carefully read the problem description and identify the key features that match one of the scheduling problem variants listed above.\n"
+        prompt += "Your output should be a string in JSON format as follows:\n"
         prompt += "{\n"
         prompt += "    'reason': <string>,\n"
         prompt += "    'result': <string>\n"
         prompt += "}\n"
-        prompt += "Where 'reason' is a string explaining why you chose this category, and 'result' must be one of the elements in the list.\n"
-        # prompt += "Return nothing else."
-
-        text = self.llm_api.get_text(content=prompt)
-        result = self.get_result(text)
-        if isinstance(result, tuple):
-            choice, reason = result
-            return (choice.strip(), reason.strip())
-        else:
-            return f"<Error> {result}"
+        prompt += f"Where 'reason' is a string explaining why you chose this category, and 'result' must be one of the {SP_VARIANTS}.\n"
+        
+        return prompt
+    
+    def run(self, problem_desc: list, reason=None, num_threads=1) -> list:
+        prompt = [self.add_prompt(problem_desc[i], reason) for i in range(min(num_threads, len(problem_desc)))]
+        text = self.llm_api.get_multi_text(prompt, max_workers=num_threads)
+        
+        tuples = []
+        for t in text:
+            result = self.get_result(t)
+            if isinstance(result, tuple):
+                choice, reason = result
+                tuples.append((choice.strip(), reason.strip()))
+            else:
+                tuples.append(("<Error>", str(result)))
+        return tuples
 
 
 class Checker(Agent):
@@ -80,7 +105,7 @@ class Checker(Agent):
     If correct, it should return True and an empty string.
     If incorrect, it should return False and a reason.
     """
-    def run(self, problem_desc: str, classification: str) -> (bool, str):
+    def run(self, problem_desc: str, classification: str) -> str:
         """
         :param problem_desc: The user's natural language VRP problem description
         :param classification: The classification result from the Classifier
@@ -97,9 +122,10 @@ class Checker(Agent):
         prompt += 'Below are the letters that may appear in the VRP category and their corresponding meanings:\n'
         prompt += " 'C' represents Capacity, which means the vehicle has a capacity limit."
         prompt += " 'O' represents Open Route, which means routes can be open."
-        prompt += " 'B' represents Backhaul or Linehaul demand."
+        prompt += " 'B' represents backhaul demand."
         prompt += " 'L' represents Distance Limits."
         prompt += " 'TW' represents Time Window, which means the vehicle has a time window to visit each customer.\n"
+        prompt += "If the description contains any attribute in 'O', 'B', 'L' or 'TW', the most likely corresponding classification is given, otherwise is 'C'.\n"
         prompt += "Your output should be in json format as follows:\n"
         prompt += "{\n"
         prompt += "    'reason': <string>,\n"

@@ -1,9 +1,10 @@
 import requests
 import time
 import httpx
-import asyncio
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from openai import OpenAI, AzureOpenAI
 from recognition.API_key import api_key_dict
+import copy
 
 class OverloadError(Exception):
     pass
@@ -92,7 +93,96 @@ class LLM_api:
     def get_token(self):
         return self.q_token, self.a_token
 
-    def get_response(self):
+    # def get_response(self):
+    #     """Handles API requests with retry mechanism"""
+    #     max_try = 10
+    #     sleep_time = 5
+    #     max_sleep = 20
+
+    #     for try_num in range(max_try):
+    #         try:
+    #             if self.payload["model"] == "gpt-4o-mini":
+    #                 response = self.client.chat.completions.create(
+    #                     model="gpt-4o-mini",
+    #                     messages=self.payload["messages"],
+    #                     max_tokens=self.payload["max_tokens"],
+    #                     temperature=self.payload["temperature"],
+    #                     top_p=self.payload["top_p"],
+    #                     frequency_penalty=self.payload["frequency_penalty"],
+    #                     n=self.payload["n"],
+    #                     timeout=60
+    #                 )
+    #                 content = response.choices[0].message.content
+    #                 self.q_token += response.usage.prompt_tokens
+    #                 self.a_token += response.usage.completion_tokens
+    #                 if content:
+    #                     return {"choices": [{"message": {"content": content}}]}
+                
+    #             elif self.payload["model"].startswith("DeepSeek") or self.payload["model"] == "deepseek-chat":
+    #                 response = self.client.chat.completions.create(
+    #                     model=self.payload["model"],
+    #                     messages=self.payload["messages"],
+    #                     max_tokens=self.payload["max_tokens"],
+    #                     temperature=self.payload["temperature"],
+    #                     top_p=self.payload["top_p"],
+    #                     frequency_penalty=self.payload["frequency_penalty"],
+    #                     n=self.payload["n"],
+    #                     timeout=60
+    #                 )
+    #                 content = response.choices[0].message.content
+    #                 self.q_token += response.usage.prompt_tokens
+    #                 self.a_token += response.usage.completion_tokens
+    #                 if content:
+    #                     return {"choices": [{"message": {"content": content}}]}
+
+    #             elif self.payload["model"] == "deepseek-reasoner":
+    #                 response = self.client.chat.completions.create(
+    #                     model=self.payload["model"],
+    #                     messages=self.payload["messages"],
+    #                     max_tokens=self.payload["max_tokens"],
+    #                     temperature=self.payload["temperature"],
+    #                     top_p=self.payload["top_p"],
+    #                     frequency_penalty=self.payload["frequency_penalty"],
+    #                     n=self.payload["n"],
+    #                     timeout=60
+    #                 )
+    #                 content = response.choices[0].message.content
+    #                 reasoning_content = response.choices[0].message.reasoning_content
+    #                 self.q_token += response.usage.prompt_tokens
+    #                 self.a_token += response.usage.completion_tokens
+    #                 if content:
+    #                     if reasoning_content:
+    #                         return {"choices": [{"message": {"content": content, "reasoning_content": reasoning_content}}]}
+    #                     else:
+    #                         return {"choices": [{"message": {"content": content}}]}
+                        
+    #             else:
+    #                 response = requests.request("POST", self.url, json=self.payload, headers=self.headers)
+    #                 response = response.json()
+    #                 content = response["choices"][0]["message"]["content"]
+    #                 self.q_token += response["usage"]["prompt_tokens"]
+    #                 self.a_token += response["usage"]["completion_tokens"]
+    #                 if content:
+    #                     return {"choices": [{"message": {"content": content}}]}
+
+    #         except requests.RequestException as e:
+    #             print(f"API request failed (attempt {try_num + 1}/{max_try}): {e}")
+    #         except KeyError as e:
+    #             print(f"Unexpected API response structure: {e}")
+
+    #         time.sleep(sleep_time)
+    #         sleep_time = min(sleep_time * 2, max_sleep)
+
+    #     print("Warning: TOO MANY TRIES, EMPTY RESPONSE")
+    #     return {"choices": [{"message": {"content": ""}}]}
+
+    # def get_text(self, content=""):
+    #     """Gets text response from LLM API"""
+    #     self.set_content(content)
+    #     response = self.get_response()
+    #     return response.get('choices', [{}])[0].get('message', {}).get('content', "")
+
+    def get_response(self, payload):
         """Handles API requests with retry mechanism"""
         max_try = 10
         sleep_time = 5
@@ -100,15 +190,15 @@ class LLM_api:
 
         for try_num in range(max_try):
             try:
-                if self.payload["model"] == "gpt-4o-mini":
+                if payload["model"] == "gpt-4o-mini":
                     response = self.client.chat.completions.create(
                         model="gpt-4o-mini",
-                        messages=self.payload["messages"],
-                        max_tokens=self.payload["max_tokens"],
-                        temperature=self.payload["temperature"],
-                        top_p=self.payload["top_p"],
-                        frequency_penalty=self.payload["frequency_penalty"],
-                        n=self.payload["n"],
+                        messages=payload["messages"],
+                        max_tokens=payload["max_tokens"],
+                        temperature=payload["temperature"],
+                        top_p=payload["top_p"],
+                        frequency_penalty=payload["frequency_penalty"],
+                        n=payload["n"],
                         timeout=60
                     )
                     content = response.choices[0].message.content
@@ -117,15 +207,15 @@ class LLM_api:
                     if content:
                         return {"choices": [{"message": {"content": content}}]}
                 
-                elif self.payload["model"].startswith("DeepSeek") or self.payload["model"] == "deepseek-chat":
+                elif payload["model"].startswith("DeepSeek") or payload["model"] == "deepseek-chat":
                     response = self.client.chat.completions.create(
-                        model=self.payload["model"],
-                        messages=self.payload["messages"],
-                        max_tokens=self.payload["max_tokens"],
-                        temperature=self.payload["temperature"],
-                        top_p=self.payload["top_p"],
-                        frequency_penalty=self.payload["frequency_penalty"],
-                        n=self.payload["n"],
+                        model=payload["model"],
+                        messages=payload["messages"],
+                        max_tokens=payload["max_tokens"],
+                        temperature=payload["temperature"],
+                        top_p=payload["top_p"],
+                        frequency_penalty=payload["frequency_penalty"],
+                        n=payload["n"],
                         timeout=60
                     )
                     content = response.choices[0].message.content
@@ -134,15 +224,15 @@ class LLM_api:
                     if content:
                         return {"choices": [{"message": {"content": content}}]}
 
-                elif self.payload["model"] == "deepseek-reasoner":
+                elif payload["model"] == "deepseek-reasoner":
                     response = self.client.chat.completions.create(
-                        model=self.payload["model"],
-                        messages=self.payload["messages"],
-                        max_tokens=self.payload["max_tokens"],
-                        temperature=self.payload["temperature"],
-                        top_p=self.payload["top_p"],
-                        frequency_penalty=self.payload["frequency_penalty"],
-                        n=self.payload["n"],
+                        model=payload["model"],
+                        messages=payload["messages"],
+                        max_tokens=payload["max_tokens"],
+                        temperature=payload["temperature"],
+                        top_p=payload["top_p"],
+                        frequency_penalty=payload["frequency_penalty"],
+                        n=payload["n"],
                         timeout=60
                     )
                     content = response.choices[0].message.content
@@ -154,9 +244,9 @@ class LLM_api:
                             return {"choices": [{"message": {"content": content, "reasoning_content": reasoning_content}}]}
                         else:
                             return {"choices": [{"message": {"content": content}}]}
-                        
+                            
                 else:
-                    response = requests.request("POST", self.url, json=self.payload, headers=self.headers)
+                    response = requests.request("POST", self.url, json=payload, headers=self.headers)
                     response = response.json()
                     content = response["choices"][0]["message"]["content"]
                     self.q_token += response["usage"]["prompt_tokens"]
@@ -174,12 +264,37 @@ class LLM_api:
 
         print("Warning: TOO MANY TRIES, EMPTY RESPONSE")
         return {"choices": [{"message": {"content": ""}}]}
-
+    
     def get_text(self, content=""):
         """Gets text response from LLM API"""
-        self.set_content(content)
-        response = self.get_response()
+        payload_copy = copy.deepcopy(self.payload)
+        payload_copy["messages"] = [{"role": "user", "content": content}]
+        response = self.get_response(payload_copy)
         return response.get('choices', [{}])[0].get('message', {}).get('content', "")
+    
+    def get_multi_text(self, contents=[""], max_workers=5):
+        """
+        Handles multiple API requests concurrently using threads.
+        
+        Args:
+            contents (list): A list of strings, each representing content to send to the API.
+        
+        Returns:
+            list: A list of responses corresponding to the input contents.
+        """
+        results_with_index = {}
+        with ThreadPoolExecutor(max_workers=max_workers) as executor:
+            future_to_index = {executor.submit(self.get_text, content): i for i, content in enumerate(contents)}
+            for future in as_completed(future_to_index):
+                index = future_to_index[future]
+                try:
+                    result = future.result()
+                    results_with_index[index] = result
+                except Exception as e:
+                    print(f"Error processing content '{contents[index]}': {e}")
+                    results_with_index[index] = ""
+        
+        return [results_with_index[i] for i in range(len(contents))]
 
     def extract_state(self, res_string):
         """Extracts predefined scores from the response string"""
@@ -208,5 +323,13 @@ class LLM_api:
 
 if __name__ == "__main__":
     llm = LLM_api(model="Qwen/Qwen2.5-7B-Instruct", key_idx=0)
+    # 单线程调用示例
     text = llm.get_text(content="你好")
-    print(text)
+    print("单线程结果:", text)
+
+    # 多线程调用示例
+    contents = ["你好", "こんにちは", "Hello", "안녕하세요", "Bonjour", "Hola", "Ciao", "Привет", "مرحبا", "你好"]
+    responses = llm.get_multi_text(contents)
+    print("多线程结果:")
+    for i, response in enumerate(responses):
+        print(f"内容 {contents[i]} 的响应: {response}")
