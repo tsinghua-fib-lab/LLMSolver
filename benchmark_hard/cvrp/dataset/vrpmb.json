@@ -1,7 +1,7 @@
 [
     {
         "title": "Electronics Recycling & Component Delivery Optimization",
-        "desc_split": "A tech company needs to deliver new electronic components to manufacturing sites while collecting outdated devices for recycling. Each truck must balance the weight of outgoing shipments (components) and incoming recyclables (old devices). The route sequence can prioritize either delivery or pickup stops first, as long as the total load (components + recyclables) stays under the vehicle\u2019s capacity <capacity>. The locations of the distribution center and 20 customer sites are <locs>, with delivery demands <demand_linehaul> and pickup demands <demand_backhaul>. The goal is to minimize transportation costs while ensuring no vehicle overloads and all sites are serviced efficiently.",
+        "desc_split": "A tech company needs to deliver new electronic components to manufacturing sites while collecting outdated devices for recycling. Each truck must balance the weight of outgoing shipments (components) and incoming recyclables (old devices). The route sequence can prioritize either delivery or pickup stops first, as long as the total load (components + recyclables) stays under the vehicle’s capacity <capacity>. The locations of the distribution center and 20 customer sites are <locs>, with delivery demands <demand_linehaul> and pickup demands <demand_backhaul>. The goal is to minimize transportation costs while ensuring no vehicle overloads and all sites are serviced efficiently.",
         "data_template": {
             "num_depots": [
                 1
@@ -280,11 +280,12 @@
                 0.0
             ]
         },
-        "label": "vrpmb"
+        "label": "vrpmb",
+        "index": 0
     },
     {
         "title": "Construction Material Supply & Waste Collection Route Planning",
-        "desc_split": "A construction firm dispatches trucks to deliver building materials (e.g., cement, lumber) to job sites and simultaneously collect waste debris (e.g., scrap metal, packaging) for disposal. The vehicles can interleave deliveries and pickups in any sequence, provided the combined weight of materials and waste does not exceed the truck\u2019s capacity <capacity>. The depot locations and 20 construction sites are <locs>, with delivery demands <demand_linehaul> and pickup demands <demand_backhaul>. The challenge is to design routes that optimize fuel usage and reduce idle time while adhering to weight limits.",
+        "desc_split": "A construction firm dispatches trucks to deliver building materials (e.g., cement, lumber) to job sites and simultaneously collect waste debris (e.g., scrap metal, packaging) for disposal. The vehicles can interleave deliveries and pickups in any sequence, provided the combined weight of materials and waste does not exceed the truck’s capacity <capacity>. The depot locations and 20 construction sites are <locs>, with delivery demands <demand_linehaul> and pickup demands <demand_backhaul>. The challenge is to design routes that optimize fuel usage and reduce idle time while adhering to weight limits.",
         "data_template": {
             "num_depots": [
                 1
@@ -801,11 +802,12 @@
                 0.0
             ]
         },
-        "label": "vrpmb"
+        "label": "vrpmb",
+        "index": 1
     },
     {
         "title": "E-commerce Returns & Fresh Product Delivery Logistics",
-        "desc_split": "An online retailer must deliver fresh groceries to customers while also collecting returned items from the same geographic area. Trucks start at a central warehouse, carrying perishable goods (linehaul) and returning empty packaging or damaged products (backhaul). The order of stops can be flexible\u2014deliveries can precede pickups or vice versa\u2014as long as the total volume (fresh goods + returns) stays within the truck\u2019s capacity <capacity>. The warehouse and 20 customer locations are <locs>, with delivery demands <demand_linehaul> and pickup demands <demand_backhaul>. The aim is to maximize route efficiency while avoiding overloading.",
+        "desc_split": "An online retailer must deliver fresh groceries to customers while also collecting returned items from the same geographic area. Trucks start at a central warehouse, carrying perishable goods (linehaul) and returning empty packaging or damaged products (backhaul). The order of stops can be flexible—deliveries can precede pickups or vice versa—as long as the total volume (fresh goods + returns) stays within the truck’s capacity <capacity>. The warehouse and 20 customer locations are <locs>, with delivery demands <demand_linehaul> and pickup demands <demand_backhaul>. The aim is to maximize route efficiency while avoiding overloading.",
         "data_template": {
             "num_depots": [
                 1
@@ -1186,11 +1188,12 @@
                 0.0
             ]
         },
-        "label": "vrpmb"
+        "label": "vrpmb",
+        "index": 2
     },
     {
         "title": "Agricultural Supply Distribution & Crate Retrieval Optimization",
-        "desc_split": "A farming cooperative supplies seeds, fertilizers, and tools to local farms while retrieving empty crates and packaging for reuse. Each truck\u2019s route can alternate between delivering supplies and collecting empty containers, as long as the combined weight of outbound and inbound cargo does not surpass capacity <capacity>. The central depot and 20 farm locations are <locs>, with delivery demands <demand_linehaul> and pickup demands <demand_backhaul>. The goal is to minimize travel distance and ensure all farms receive their supplies while efficiently recycling materials.",
+        "desc_split": "A farming cooperative supplies seeds, fertilizers, and tools to local farms while retrieving empty crates and packaging for reuse. Each truck’s route can alternate between delivering supplies and collecting empty containers, as long as the combined weight of outbound and inbound cargo does not surpass capacity <capacity>. The central depot and 20 farm locations are <locs>, with delivery demands <demand_linehaul> and pickup demands <demand_backhaul>. The goal is to minimize travel distance and ensure all farms receive their supplies while efficiently recycling materials.",
         "data_template": {
             "num_depots": [
                 1
@@ -1622,11 +1625,12 @@
                 0.0
             ]
         },
-        "label": "vrpmb"
+        "label": "vrpmb",
+        "index": 3
     },
     {
         "title": "Automotive Parts Delivery & Used Components Collection",
-        "desc_split": "An auto parts supplier delivers new components (e.g., engines, tires) to repair shops and collects used or defective parts for recycling or redistribution. Trucks can visit customers in any order\u2014deliveries may follow pickups or vice versa\u2014as long as the total weight of new parts plus reclaimed components remains under capacity <capacity>. The depot and 20 repair shops are <locs>, with delivery demands <demand_linehaul> and pickup demands <demand_backhaul>. The task is to design routes that balance load constraints while streamlining both outbound and inbound logistics.",
+        "desc_split": "An auto parts supplier delivers new components (e.g., engines, tires) to repair shops and collects used or defective parts for recycling or redistribution. Trucks can visit customers in any order—deliveries may follow pickups or vice versa—as long as the total weight of new parts plus reclaimed components remains under capacity <capacity>. The depot and 20 repair shops are <locs>, with delivery demands <demand_linehaul> and pickup demands <demand_backhaul>. The task is to design routes that balance load constraints while streamlining both outbound and inbound logistics.",
         "data_template": {
             "num_depots": [
                 1
@@ -2007,7 +2011,8 @@
                 0.0
             ]
         },
-        "label": "vrpmb"
+        "label": "vrpmb",
+        "index": 4
     },
     {
         "title": "HVAC System Delivery & Recycling of Old Units",
@@ -2358,7 +2363,8 @@
                 1.0
             ]
         },
-        "label": "vrpmb"
+        "label": "vrpmb",
+        "index": 5
     },
     {
         "title": "Landscaping Supply Delivery & Organic Waste Collection",
@@ -2913,11 +2919,12 @@
                 1.0
             ]
         },
-        "label": "vrpmb"
+        "label": "vrpmb",
+        "index": 6
     },
     {
         "title": "Textile Fabric Delivery & Scrap Pickup",
-        "desc_split": "A textile manufacturer supplies raw fabric rolls (linehaul) to garment factories while collecting scrap fabric and defective materials (backhaul) for recycling. The factory depot and customer locations are <locs>, with delivery demands <demand_linehaul> and pickup demands <demand_backhaul>. Each truck\u2019s capacity <capacity> must accommodate both outgoing fabric and incoming scraps, which may differ in density and volume. Routes can sequence stops freely\u2014for example, delivering fabric to a factory and then collecting scrap from another\u2014without prioritizing deliveries first.",
+        "desc_split": "A textile manufacturer supplies raw fabric rolls (linehaul) to garment factories while collecting scrap fabric and defective materials (backhaul) for recycling. The factory depot and customer locations are <locs>, with delivery demands <demand_linehaul> and pickup demands <demand_backhaul>. Each truck’s capacity <capacity> must accommodate both outgoing fabric and incoming scraps, which may differ in density and volume. Routes can sequence stops freely—for example, delivering fabric to a factory and then collecting scrap from another—without prioritizing deliveries first.",
         "data_template": {
             "num_depots": [
                 1
@@ -3349,7 +3356,8 @@
                 1.0
             ]
         },
-        "label": "vrpmb"
+        "label": "vrpmb",
+        "index": 7
     },
     {
         "title": "Rental Equipment Logistics & Return Management",
@@ -3904,11 +3912,12 @@
                 1.0
             ]
         },
-        "label": "vrpmb"
+        "label": "vrpmb",
+        "index": 8
     },
     {
         "title": "Mail Delivery & Package Collection Optimization",
-        "desc_split": "A postal service delivers letters, parcels, and printed materials (linehaul) to homes and businesses while collecting oversized packages for shipment (backhaul). The central hub and customer locations are <locs>, with delivery demands <demand_linehaul> and pickup demands <demand_backhaul>. Each vehicle\u2019s capacity <capacity> must handle both outgoing mail and incoming parcels, which may vary in size. Planners can optimize routes by interleaving stops, such as delivering mail to a residential area and then collecting a large package from a commercial client, ensuring no vehicle overloads.",
+        "desc_split": "A postal service delivers letters, parcels, and printed materials (linehaul) to homes and businesses while collecting oversized packages for shipment (backhaul). The central hub and customer locations are <locs>, with delivery demands <demand_linehaul> and pickup demands <demand_backhaul>. Each vehicle’s capacity <capacity> must handle both outgoing mail and incoming parcels, which may vary in size. Planners can optimize routes by interleaving stops, such as delivering mail to a residential area and then collecting a large package from a commercial client, ensuring no vehicle overloads.",
         "data_template": {
             "num_depots": [
                 1
@@ -4442,7 +4451,8 @@
                 1.0
             ]
         },
-        "label": "vrpmb"
+        "label": "vrpmb",
+        "index": 9
     },
     {
         "title": "Industrial Equipment Delivery & Used Components Recycling",
@@ -4994,11 +5004,12 @@
                 0.0
             ]
         },
-        "label": "vrpmb"
+        "label": "vrpmb",
+        "index": 10
     },
     {
         "title": "Furniture Delivery & Old Furniture Recycling Pickup",
-        "desc_split": "A furniture retailer operates a program where new items are delivered to customers\u2019 homes while collecting old furniture for recycling. Each truck must manage both outbound deliveries and inbound pickups without exceeding its capacity :math:`Q`. Since pickups and deliveries can be intermixed, planners can optimize routes by arranging stops in any sequence to balance load distribution. The warehouse and 20 customer locations are at <locs>, with delivery demands of <demand_linehaul> and pickup needs of <demand_backhaul>. The challenge is ensuring all items are transported efficiently while preventing vehicle overload.",
+        "desc_split": "A furniture retailer operates a program where new items are delivered to customers’ homes while collecting old furniture for recycling. Each truck must manage both outbound deliveries and inbound pickups without exceeding its capacity :math:`Q`. Since pickups and deliveries can be intermixed, planners can optimize routes by arranging stops in any sequence to balance load distribution. The warehouse and 20 customer locations are at <locs>, with delivery demands of <demand_linehaul> and pickup needs of <demand_backhaul>. The challenge is ensuring all items are transported efficiently while preventing vehicle overload.",
         "data_template": {
             "num_depots": [
                 1
@@ -5223,7 +5234,8 @@
                 0.0
             ]
         },
-        "label": "vrpmb"
+        "label": "vrpmb",
+        "index": 11
     },
     {
         "title": "Telecommunications Equipment Deployment & Obsolete Hardware Collection",
@@ -5571,7 +5583,8 @@
                 0.0
             ]
         },
-        "label": "vrpmb"
+        "label": "vrpmb",
+        "index": 12
     },
     {
         "title": "Livestock Feed Distribution & Manure Collection Route Planning",
@@ -5902,7 +5915,8 @@
                 0.0
             ]
         },
-        "label": "vrpmb"
+        "label": "vrpmb",
+        "index": 13
     },
     {
         "title": "Event Logistics",
@@ -6335,11 +6349,12 @@
                 0.0
             ]
         },
-        "label": "vrpmb"
+        "label": "vrpmb",
+        "index": 14
     },
     {
         "title": "Restaurant Supply Delivery & Kitchen Waste Collection Optimization",
-        "desc_split": "A logistics firm services restaurants by delivering fresh ingredients and supplies while collecting used cooking oil and food waste for recycling or disposal. Each truck has a capacity <capacity>, requiring that the combined weight of deliveries and pickups never exceeds this limit. The order of stops can be arranged flexibly\u2014deliveries and pickups can be interleaved to optimize routes. The depot and 20 restaurant locations are at <locs>, with delivery demands <demand_linehaul> and waste pickup requirements <demand_backhaul>. The goal is to plan routes that balance load efficiency and minimize travel costs while ensuring all customers are serviced.",
+        "desc_split": "A logistics firm services restaurants by delivering fresh ingredients and supplies while collecting used cooking oil and food waste for recycling or disposal. Each truck has a capacity <capacity>, requiring that the combined weight of deliveries and pickups never exceeds this limit. The order of stops can be arranged flexibly—deliveries and pickups can be interleaved to optimize routes. The depot and 20 restaurant locations are at <locs>, with delivery demands <demand_linehaul> and waste pickup requirements <demand_backhaul>. The goal is to plan routes that balance load efficiency and minimize travel costs while ensuring all customers are serviced.",
         "data_template": {
             "num_depots": [
                 1
@@ -6669,7 +6684,8 @@
                 0.0
             ]
         },
-        "label": "vrpmb"
+        "label": "vrpmb",
+        "index": 15
     },
     {
         "title": "Home Appliance Delivery & E-waste Recycling Route Planning",
@@ -7054,7 +7070,8 @@
                 0.0
             ]
         },
-        "label": "vrpmb"
+        "label": "vrpmb",
+        "index": 16
     },
     {
         "title": "Fashion Retail Stock Delivery & Returned Merchandise Pickup Optimization",
@@ -7371,7 +7388,8 @@
                 0.0
             ]
         },
-        "label": "vrpmb"
+        "label": "vrpmb",
+        "index": 17
     },
     {
         "title": "Garden Supply Delivery & Compost Pickup Route Planning",
@@ -7926,7 +7944,8 @@
                 0.0
             ]
         },
-        "label": "vrpmb"
+        "label": "vrpmb",
+        "index": 18
     },
     {
         "title": "School Supply Delivery & Used Textbook Collection Optimization",
@@ -8260,7 +8279,8 @@
                 0.0
             ]
         },
-        "label": "vrpmb"
+        "label": "vrpmb",
+        "index": 19
     },
     {
         "title": "Office Supply Delivery & Used Equipment Collection",
@@ -8812,7 +8832,8 @@
                 0.0
             ]
         },
-        "label": "vrpmb"
+        "label": "vrpmb",
+        "index": 20
     },
     {
         "title": "Event Equipment Rental & Return Logistics",
@@ -9143,11 +9164,12 @@
                 0.0
             ]
         },
-        "label": "vrpmb"
+        "label": "vrpmb",
+        "index": 21
     },
     {
         "title": "Tool Rental Logistics & Return Management",
-        "desc_split": "A tool rental business operates a fleet to deliver specialized equipment (e.g., drills, generators) to customers and collect rented tools for restocking. Each truck\u2019s capacity :math:`Q` must accommodate both outgoing rentals and incoming returns, which can be arranged in any order. The warehouse and 20 customer locations are <locs>, with delivery demands <demand_linehaul> and pickup demands <demand_backhaul>. Planners must balance load distribution to avoid overloading while maximizing route efficiency.",
+        "desc_split": "A tool rental business operates a fleet to deliver specialized equipment (e.g., drills, generators) to customers and collect rented tools for restocking. Each truck’s capacity :math:`Q` must accommodate both outgoing rentals and incoming returns, which can be arranged in any order. The warehouse and 20 customer locations are <locs>, with delivery demands <demand_linehaul> and pickup demands <demand_backhaul>. Planners must balance load distribution to avoid overloading while maximizing route efficiency.",
         "data_template": {
             "num_depots": [
                 1
@@ -9610,7 +9632,8 @@
                 0.20588235557079315
             ]
         },
-        "label": "vrpmb"
+        "label": "vrpmb",
+        "index": 22
     },
     {
         "title": "Pharmaceutical Cold Chain Delivery & Empty Container Return",
@@ -9941,7 +9964,8 @@
                 0.0
             ]
         },
-        "label": "vrpmb"
+        "label": "vrpmb",
+        "index": 23
     },
     {
         "title": "Fresh Seafood Delivery & Ice Recycling Logistics",
@@ -10272,7 +10296,8 @@
                 0.0
             ]
         },
-        "label": "vrpmb"
+        "label": "vrpmb",
+        "index": 24
     },
     {
         "title": "Appliance Repair & Replacement Parts Logistics Optimization",
@@ -10463,11 +10488,12 @@
             ]
         },
         "user_template": {},
-        "label": "vrpmb"
+        "label": "vrpmb",
+        "index": 25
     },
     {
         "title": "Municipal Waste Collection & Recycling Container Delivery Optimization",
-        "desc_split": "A city\u2019s waste management division needs to deliver empty recycling bins to households and collect filled trash bins. Trucks can intermingle deliveries and pickups in any sequence, provided the combined weight of containers and waste stays under vehicle capacity :math:`Q`. The depot, customer locations, delivery demands (recycling containers), and pickup demands (trash bins) are specified. The task is to design routes that optimize fuel efficiency and reduce operational costs while adhering to capacity limits.",
+        "desc_split": "A city’s waste management division needs to deliver empty recycling bins to households and collect filled trash bins. Trucks can intermingle deliveries and pickups in any sequence, provided the combined weight of containers and waste stays under vehicle capacity :math:`Q`. The depot, customer locations, delivery demands (recycling containers), and pickup demands (trash bins) are specified. The task is to design routes that optimize fuel efficiency and reduce operational costs while adhering to capacity limits.",
         "data_template": {
             "num_depots": [
                 1
@@ -10676,7 +10702,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrpmb"
+        "label": "vrpmb",
+        "index": 26
     },
     {
         "title": "Solar Panel Installation & Old Panel Recycling Route Planning",
@@ -11043,11 +11070,12 @@
             ]
         },
         "user_template": {},
-        "label": "vrpmb"
+        "label": "vrpmb",
+        "index": 27
     },
     {
         "title": "Rental Camping Equipment Delivery & Return Logistics Optimization",
-        "desc_split": "An outdoor gear rental service delivers tents, sleeping bags, and equipment to campers and collects them after use. Vehicles can alternate between drop-offs and pickups freely, ensuring the combined volume of rented gear and returned items doesn\u2019t surpass vehicle capacity :math:`Q`. The depot, customer locations, delivery (equipment) and pickup (returned gear) demands are known. The goal is to minimize travel distance and maximize vehicle utilization while adhering to capacity limits.",
+        "desc_split": "An outdoor gear rental service delivers tents, sleeping bags, and equipment to campers and collects them after use. Vehicles can alternate between drop-offs and pickups freely, ensuring the combined volume of rented gear and returned items doesn’t surpass vehicle capacity :math:`Q`. The depot, customer locations, delivery (equipment) and pickup (returned gear) demands are known. The goal is to minimize travel distance and maximize vehicle utilization while adhering to capacity limits.",
         "data_template": {
             "num_depots": [
                 1
@@ -11377,7 +11405,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrpmb"
+        "label": "vrpmb",
+        "index": 28
     },
     {
         "title": "Art Gallery Exhibit Delivery & Returned Art Collection Logistics",
@@ -11568,11 +11597,12 @@
             ]
         },
         "user_template": {},
-        "label": "vrpmb"
+        "label": "vrpmb",
+        "index": 29
     },
     {
         "title": "Event Catering & Leftover Food Collection Logistics",
-        "desc_split": "A catering company needs to deliver meals to event venues and collect uneaten food for donation or composting. Each vehicle must balance the weight and volume of perishable deliveries (e.g., food trays) with the pickup of leftovers. The mixed backhaul constraint allows drivers to interleave deliveries and pickups in any sequence, such as dropping off food at a park and immediately collecting leftovers from a nearby conference center. The total load of delivered meals plus collected waste must not exceed the vehicle\u2019s capacity <capacity>. The locations of the central kitchen and 20 event sites are <locs>, with delivery demands <demand_linehaul> and pickup demands <demand_backhaul>.",
+        "desc_split": "A catering company needs to deliver meals to event venues and collect uneaten food for donation or composting. Each vehicle must balance the weight and volume of perishable deliveries (e.g., food trays) with the pickup of leftovers. The mixed backhaul constraint allows drivers to interleave deliveries and pickups in any sequence, such as dropping off food at a park and immediately collecting leftovers from a nearby conference center. The total load of delivered meals plus collected waste must not exceed the vehicle’s capacity <capacity>. The locations of the central kitchen and 20 event sites are <locs>, with delivery demands <demand_linehaul> and pickup demands <demand_backhaul>.",
         "data_template": {
             "num_depots": [
                 1
@@ -11970,7 +12000,8 @@
                 0.0
             ]
         },
-        "label": "vrpmb"
+        "label": "vrpmb",
+        "index": 30
     },
     {
         "title": "Aerospace Component Delivery & Scrap Metal Recycling",
@@ -12355,11 +12386,12 @@
                 0.03333333507180214
             ]
         },
-        "label": "vrpmb"
+        "label": "vrpmb",
+        "index": 31
     },
     {
         "title": "Marine Equipment Supply & Gear Retrieval",
-        "desc_split": "A marine services firm supplies fishing vessels with equipment like nets and buoys while retrieving damaged or outdated gear for recycling. The mixed backhaul model allows drivers to alternate between delivering new gear to docks and collecting old gear from fishing ports. For example, a truck might deliver anchors to one harbor and then pick up discarded nets from another. The vehicle\u2019s capacity <capacity> must account for both the bulky new equipment and the compacted waste. Locations <locs> include coastal depots and fishing hubs, with delivery and pickup demands specified as <demand_linehaul> and <demand_backhaul>.",
+        "desc_split": "A marine services firm supplies fishing vessels with equipment like nets and buoys while retrieving damaged or outdated gear for recycling. The mixed backhaul model allows drivers to alternate between delivering new gear to docks and collecting old gear from fishing ports. For example, a truck might deliver anchors to one harbor and then pick up discarded nets from another. The vehicle’s capacity <capacity> must account for both the bulky new equipment and the compacted waste. Locations <locs> include coastal depots and fishing hubs, with delivery and pickup demands specified as <demand_linehaul> and <demand_backhaul>.",
         "data_template": {
             "num_depots": [
                 1
@@ -12655,11 +12687,12 @@
                 0.0
             ]
         },
-        "label": "vrpmb"
+        "label": "vrpmb",
+        "index": 32
     },
     {
         "title": "Office Furniture Delivery & E-waste Collection",
-        "desc_split": "An office solutions provider delivers new desks and chairs to corporate clients while collecting outdated electronics like printers and monitors for recycling. The mixed backhaul approach enables drivers to serve delivery and pickup stops in any order, such as furnishing a startup\u2019s workspace and then collecting e-waste from a neighboring law firm. The vehicle capacity <capacity> must balance the volume of large furniture items with the weight of electronics. Locations <locs> include office buildings and warehouses, with delivery demands <demand_linehaul> and e-waste pickup targets <demand_backhaul>.",
+        "desc_split": "An office solutions provider delivers new desks and chairs to corporate clients while collecting outdated electronics like printers and monitors for recycling. The mixed backhaul approach enables drivers to serve delivery and pickup stops in any order, such as furnishing a startup’s workspace and then collecting e-waste from a neighboring law firm. The vehicle capacity <capacity> must balance the volume of large furniture items with the weight of electronics. Locations <locs> include office buildings and warehouses, with delivery demands <demand_linehaul> and e-waste pickup targets <demand_backhaul>.",
         "data_template": {
             "num_depots": [
                 1
@@ -13057,7 +13090,8 @@
                 0.0
             ]
         },
-        "label": "vrpmb"
+        "label": "vrpmb",
+        "index": 33
     },
     {
         "title": "Farm Equipment Distribution & Agricultural Byproduct Retrieval",
@@ -13595,11 +13629,12 @@
                 0.0
             ]
         },
-        "label": "vrpmb"
+        "label": "vrpmb",
+        "index": 34
     },
     {
         "title": "Home Improvement Supply Delivery & Salvage Material Retrieval Optimization",
-        "desc_split": "A home improvement retailer delivers lumber, tools, and fixtures to customer job sites while collecting reusable salvaged materials (e.g., leftover tiles, scrap wood) from renovation projects. Each truck must balance the outbound delivery weight/volume with the inbound salvage load. The mixed backhaul flexibility allows drivers to serve delivery and pickup stops in any sequence, optimizing fuel efficiency and route density. Capacity constraints require that the sum of delivered items (linehaul) and retrieved salvage (backhaul) does not exceed the truck\u2019s rated load limit. The central warehouse acts as the depot, with stops spanning residential areas. The goal is to minimize total distance while ensuring no vehicle overloads.",
+        "desc_split": "A home improvement retailer delivers lumber, tools, and fixtures to customer job sites while collecting reusable salvaged materials (e.g., leftover tiles, scrap wood) from renovation projects. Each truck must balance the outbound delivery weight/volume with the inbound salvage load. The mixed backhaul flexibility allows drivers to serve delivery and pickup stops in any sequence, optimizing fuel efficiency and route density. Capacity constraints require that the sum of delivered items (linehaul) and retrieved salvage (backhaul) does not exceed the truck’s rated load limit. The central warehouse acts as the depot, with stops spanning residential areas. The goal is to minimize total distance while ensuring no vehicle overloads.",
         "data_template": {
             "num_depots": [
                 1
@@ -13830,11 +13865,12 @@
             ]
         },
         "user_template": {},
-        "label": "vrpmb"
+        "label": "vrpmb",
+        "index": 35
     },
     {
         "title": "Florist Delivery & Compostable Waste Collection Route Planning",
-        "desc_split": "A floral service delivers fresh flower bouquets to residential and commercial customers while collecting expired floral arrangements and plant clippings for composting. Each vehicle carries both outbound perishables (linehaul) and inbound organic waste (backhaul). The mixed backhaul allows drivers to alternate deliveries and pickups based on route efficiency, rather than strict delivery-first sequences. Capacity constraints mandate that the total weight of fresh flowers plus compostables remains under the truck\u2019s capacity. The central floral depot serves as the starting point, with stops across urban and suburban zones. The challenge is maintaining flower freshness while maximizing compost collection without exceeding load limits.",
+        "desc_split": "A floral service delivers fresh flower bouquets to residential and commercial customers while collecting expired floral arrangements and plant clippings for composting. Each vehicle carries both outbound perishables (linehaul) and inbound organic waste (backhaul). The mixed backhaul allows drivers to alternate deliveries and pickups based on route efficiency, rather than strict delivery-first sequences. Capacity constraints mandate that the total weight of fresh flowers plus compostables remains under the truck’s capacity. The central floral depot serves as the starting point, with stops across urban and suburban zones. The challenge is maintaining flower freshness while maximizing compost collection without exceeding load limits.",
         "data_template": {
             "num_depots": [
                 1
@@ -14076,11 +14112,12 @@
             ]
         },
         "user_template": {},
-        "label": "vrpmb"
+        "label": "vrpmb",
+        "index": 36
     },
     {
         "title": "Event Decoration Delivery & Post-Event Materials Recycling Route Optimization",
-        "desc_split": "An event services company transports tables, chairs, and decor items to venues for weddings/conventions and later collects used materials for recycling or storage. Each truck must manage outbound decor deliveries (linehaul) and inbound recyclables (backhaul), which vary in weight and bulk. The mixed backhaul allows drivers to intermingle stops for setup and teardown phases. Capacity constraints ensure that bulky decor items (e.g., foldable tables) plus dense recyclables (e.g., metal frames) do not exceed the truck\u2019s volume or weight capacity. All routes originate and terminate at the central storage depot, with stops at diverse event locations.",
+        "desc_split": "An event services company transports tables, chairs, and decor items to venues for weddings/conventions and later collects used materials for recycling or storage. Each truck must manage outbound decor deliveries (linehaul) and inbound recyclables (backhaul), which vary in weight and bulk. The mixed backhaul allows drivers to intermingle stops for setup and teardown phases. Capacity constraints ensure that bulky decor items (e.g., foldable tables) plus dense recyclables (e.g., metal frames) do not exceed the truck’s volume or weight capacity. All routes originate and terminate at the central storage depot, with stops at diverse event locations.",
         "data_template": {
             "num_depots": [
                 1
@@ -14410,11 +14447,12 @@
             ]
         },
         "user_template": {},
-        "label": "vrpmb"
+        "label": "vrpmb",
+        "index": 37
     },
     {
         "title": "Printing Press Supply Delivery & Post-Production Scrap Retrieval Logistics",
-        "desc_split": "A printing company delivers ink cartridges, paper rolls, and printing supplies to client facilities while collecting scrap paper, cardboard, and used cartridges for recycling. Each truck must handle outbound supplies (linehaul) and inbound recyclables (backhaul), with mixed sequencing permitted. Capacity constraints require that the combined weight of heavy ink cartridges and lightweight scrap materials stays within the vehicle\u2019s limits. The central print hub is the depot, with stops at corporate offices and print shops. The objective is to reduce waste disposal costs and material shortages while avoiding overloading trucks.",
+        "desc_split": "A printing company delivers ink cartridges, paper rolls, and printing supplies to client facilities while collecting scrap paper, cardboard, and used cartridges for recycling. Each truck must handle outbound supplies (linehaul) and inbound recyclables (backhaul), with mixed sequencing permitted. Capacity constraints require that the combined weight of heavy ink cartridges and lightweight scrap materials stays within the vehicle’s limits. The central print hub is the depot, with stops at corporate offices and print shops. The objective is to reduce waste disposal costs and material shortages while avoiding overloading trucks.",
         "data_template": {
             "num_depots": [
                 1
@@ -14579,11 +14617,12 @@
             ]
         },
         "user_template": {},
-        "label": "vrpmb"
+        "label": "vrpmb",
+        "index": 38
     },
     {
         "title": "Apartment Complex Supply Delivery & Tenant Move-Out Item Retrieval Optimization",
-        "desc_split": "A property management firm delivers furniture, appliances, and cleaning supplies to newly leased apartments while collecting discarded items (e.g., old mattresses, electronics) from tenants moving out. Each truck must transport new supplies (linehaul) and retrieve bulky move-out items (backhaul). The mixed backhaul enables drivers to alternate between deliveries and pickups for efficiency. Capacity constraints ensure that the total volume/weight of delivered goods plus retrieved waste does not exceed the truck\u2019s capacity. Routes begin/end at the central storage facility, with stops across multiple apartment complexes. The aim is to streamline move-in/move-out logistics while preventing vehicle overloads.",
+        "desc_split": "A property management firm delivers furniture, appliances, and cleaning supplies to newly leased apartments while collecting discarded items (e.g., old mattresses, electronics) from tenants moving out. Each truck must transport new supplies (linehaul) and retrieve bulky move-out items (backhaul). The mixed backhaul enables drivers to alternate between deliveries and pickups for efficiency. Capacity constraints ensure that the total volume/weight of delivered goods plus retrieved waste does not exceed the truck’s capacity. Routes begin/end at the central storage facility, with stops across multiple apartment complexes. The aim is to streamline move-in/move-out logistics while preventing vehicle overloads.",
         "data_template": {
             "num_depots": [
                 1
@@ -14847,7 +14886,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrpmb"
+        "label": "vrpmb",
+        "index": 39
     },
     {
         "title": "Industrial Chemical Delivery & Empty Drum Return Logistics Optimization",
@@ -15348,11 +15388,12 @@
                 0.0
             ]
         },
-        "label": "vrpmb"
+        "label": "vrpmb",
+        "index": 40
     },
     {
         "title": "Restaurant Equipment Delivery & Used Cooking Oil Collection Route Planning",
-        "desc_split": "A commercial kitchen supplier delivers new equipment to restaurants while simultaneously collecting used cooking oil from clients for recycling. Each truck\u2019s route must alternate between linehaul stops (equipment deliveries) and backhaul stops (oil pickups), adhering strictly to the vehicle\u2019s capacity limit :math:`Q`. The order of visits is flexible, but total load must stay within :math:`Q`. With 20 client locations (<locs>), the goal is to minimize travel costs while ensuring all delivery and pickup demands (<demand_linehaul> and <demand_backhaul>) are met without exceeding capacity.",
+        "desc_split": "A commercial kitchen supplier delivers new equipment to restaurants while simultaneously collecting used cooking oil from clients for recycling. Each truck’s route must alternate between linehaul stops (equipment deliveries) and backhaul stops (oil pickups), adhering strictly to the vehicle’s capacity limit :math:`Q`. The order of visits is flexible, but total load must stay within :math:`Q`. With 20 client locations (<locs>), the goal is to minimize travel costs while ensuring all delivery and pickup demands (<demand_linehaul> and <demand_backhaul>) are met without exceeding capacity.",
         "data_template": {
             "num_depots": [
                 1
@@ -15764,11 +15805,12 @@
                 0.14705882966518402
             ]
         },
-        "label": "vrpmb"
+        "label": "vrpmb",
+        "index": 41
     },
     {
         "title": "Home Theater Equipment Rental & Return Logistics Optimization",
-        "desc_split": "A home entertainment company rents out high-end audiovisual equipment to customers while managing returns of previously rented gear. Trucks must navigate mixed routes where some stops are deliveries (new rentals) and others are pickups (returned equipment). Each vehicle\u2019s capacity :math:`Q` must account for the combined weight and bulk of outgoing and incoming items. The challenge is to plan routes for 20 customers (<locs>) such that all rental requests are fulfilled and returns are collected efficiently, with no capacity overflows.",
+        "desc_split": "A home entertainment company rents out high-end audiovisual equipment to customers while managing returns of previously rented gear. Trucks must navigate mixed routes where some stops are deliveries (new rentals) and others are pickups (returned equipment). Each vehicle’s capacity :math:`Q` must account for the combined weight and bulk of outgoing and incoming items. The challenge is to plan routes for 20 customers (<locs>) such that all rental requests are fulfilled and returns are collected efficiently, with no capacity overflows.",
         "data_template": {
             "num_depots": [
                 1
@@ -16149,7 +16191,8 @@
                 ]
             ]
         },
-        "label": "vrpmb"
+        "label": "vrpmb",
+        "index": 42
     },
     {
         "title": "School Lab Supplies Delivery & Hazardous Waste Pickup Route Planning",
@@ -16582,11 +16625,12 @@
                 0.0
             ]
         },
-        "label": "vrpmb"
+        "label": "vrpmb",
+        "index": 43
     },
     {
         "title": "Marine Boat Supplies Delivery & Engine Oil Recycling Logistics",
-        "desc_split": "A marina delivers boat maintenance supplies (e.g., fuel filters, lubricants) to docked vessels while collecting used engine oil from clients for recycling. Each truck\u2019s route must blend deliveries and pickups in any sequence, ensuring that the combined weight of outgoing supplies and incoming waste does not exceed capacity :math:`Q`. With 20 client locations (<locs>), the objective is to optimize routes to minimize travel distance while fulfilling all supply demands (<demand_linehaul>) and recycling pickups (<demand_backhaul>).",
+        "desc_split": "A marina delivers boat maintenance supplies (e.g., fuel filters, lubricants) to docked vessels while collecting used engine oil from clients for recycling. Each truck’s route must blend deliveries and pickups in any sequence, ensuring that the combined weight of outgoing supplies and incoming waste does not exceed capacity :math:`Q`. With 20 client locations (<locs>), the objective is to optimize routes to minimize travel distance while fulfilling all supply demands (<demand_linehaul>) and recycling pickups (<demand_backhaul>).",
         "data_template": {
             "num_depots": [
                 1
@@ -17083,11 +17127,12 @@
                 0.0
             ]
         },
-        "label": "vrpmb"
+        "label": "vrpmb",
+        "index": 44
     },
     {
         "title": "Temporary Storage Container Delivery & Collection Logistics",
-        "desc_split": "A company specializes in renting out temporary storage containers to customers for home renovations, events, or emergency storage. Their trucks must deliver empty containers to customers and retrieve filled containers for redistribution. The vehicles can sequence deliveries and pickups in any order along their route, provided the combined weight of containers being delivered (demand) and retrieved (pickup) does not exceed the truck\u2019s capacity <capacity>. The locations of the central depot and 20 customer sites are <locs>, with each container requiring <demand_linehaul> for delivery and <demand_backhaul> for retrieval. The challenge is to plan routes that maximize container turnover while ensuring no truck overloads.",
+        "desc_split": "A company specializes in renting out temporary storage containers to customers for home renovations, events, or emergency storage. Their trucks must deliver empty containers to customers and retrieve filled containers for redistribution. The vehicles can sequence deliveries and pickups in any order along their route, provided the combined weight of containers being delivered (demand) and retrieved (pickup) does not exceed the truck’s capacity <capacity>. The locations of the central depot and 20 customer sites are <locs>, with each container requiring <demand_linehaul> for delivery and <demand_backhaul> for retrieval. The challenge is to plan routes that maximize container turnover while ensuring no truck overloads.",
         "data_template": {
             "num_depots": [
                 1
@@ -17587,11 +17632,12 @@
                 0.0
             ]
         },
-        "label": "vrpmb"
+        "label": "vrpmb",
+        "index": 45
     },
     {
         "title": "Hotel Linen Delivery & Laundry Collection Route Optimization",
-        "desc_split": "A linen supply company serves multiple hotels, delivering fresh linens (towels, bedsheets) and collecting used ones for washing. Each truck starts at a central laundry facility, carrying a capacity <capacity>. The route can mix deliveries and pickups in any sequence, as long as the total weight of linens loaded (deliveries) plus the collected used linens (pickups) stays within the truck\u2019s limit. The locations of the depot and 20 hotels are <locs>, with delivery demand <demand_linehaul> and pickup demand <demand_backhaul>. The goal is to minimize travel costs while ensuring hotels receive fresh linens and used ones are promptly retrieved.",
+        "desc_split": "A linen supply company serves multiple hotels, delivering fresh linens (towels, bedsheets) and collecting used ones for washing. Each truck starts at a central laundry facility, carrying a capacity <capacity>. The route can mix deliveries and pickups in any sequence, as long as the total weight of linens loaded (deliveries) plus the collected used linens (pickups) stays within the truck’s limit. The locations of the depot and 20 hotels are <locs>, with delivery demand <demand_linehaul> and pickup demand <demand_backhaul>. The goal is to minimize travel costs while ensuring hotels receive fresh linens and used ones are promptly retrieved.",
         "data_template": {
             "num_depots": [
                 1
@@ -17955,11 +18001,12 @@
                 0.0
             ]
         },
-        "label": "vrpmb"
+        "label": "vrpmb",
+        "index": 46
     },
     {
         "title": "Book Distribution & Returned Merchandise Collection Logistics",
-        "desc_split": "A publishing distributor delivers newly printed books to retail stores and collects returned or outdated stock for recycling. Trucks depart from a central warehouse with a capacity <capacity>, servicing a mix of stores requiring deliveries and those with returns. The order of stops can be arbitrary, as long as the combined volume of outgoing books (demand_linehaul) and incoming returns (demand_backhaul) does not exceed the truck\u2019s capacity. The depot and 20 customer locations are at <locs>, and the solution must balance efficient route planning with strict capacity adherence.",
+        "desc_split": "A publishing distributor delivers newly printed books to retail stores and collects returned or outdated stock for recycling. Trucks depart from a central warehouse with a capacity <capacity>, servicing a mix of stores requiring deliveries and those with returns. The order of stops can be arbitrary, as long as the combined volume of outgoing books (demand_linehaul) and incoming returns (demand_backhaul) does not exceed the truck’s capacity. The depot and 20 customer locations are at <locs>, and the solution must balance efficient route planning with strict capacity adherence.",
         "data_template": {
             "num_depots": [
                 1
@@ -18328,7 +18375,8 @@
                 ]
             ]
         },
-        "label": "vrpmb"
+        "label": "vrpmb",
+        "index": 47
     },
     {
         "title": "Bakery Supply Delivery & Empty Container Return Logistics",
@@ -18686,11 +18734,12 @@
                 ]
             ]
         },
-        "label": "vrpmb"
+        "label": "vrpmb",
+        "index": 48
     },
     {
         "title": "Tire Delivery & Recycling Collection Route Planning",
-        "desc_split": "A tire retailer delivers new tires to automotive shops and residential customers while collecting old tires for recycling. Trucks start at a central warehouse with capacity <capacity>, servicing a mix of linehaul (deliveries) and backhaul (pickups) stops. The route sequence is flexible, but the total weight of new tires loaded (demand_linehaul) plus the recycled tires collected (demand_backhaul) must stay under the vehicle\u2019s limit. Locations are specified at <locs>, and the goal is to minimize fuel and time costs while adhering to capacity constraints.",
+        "desc_split": "A tire retailer delivers new tires to automotive shops and residential customers while collecting old tires for recycling. Trucks start at a central warehouse with capacity <capacity>, servicing a mix of linehaul (deliveries) and backhaul (pickups) stops. The route sequence is flexible, but the total weight of new tires loaded (demand_linehaul) plus the recycled tires collected (demand_backhaul) must stay under the vehicle’s limit. Locations are specified at <locs>, and the goal is to minimize fuel and time costs while adhering to capacity constraints.",
         "data_template": {
             "num_depots": [
                 1
@@ -19119,11 +19168,12 @@
                 ]
             ]
         },
-        "label": "vrpmb"
+        "label": "vrpmb",
+        "index": 49
     },
     {
         "title": "Car Rental Delivery & Returned Vehicle Collection Optimization",
-        "desc_split": "A car rental company needs to deliver newly rented vehicles to customers and collect returned rentals from drop-off locations. Each truck must balance the weight and volume of outbound rentals (deliveries) with inbound returned vehicles (pickups). The vehicles\u2019 mixed loads require careful route planning to avoid overloading trucks. The central depot\u2019s trucks have a capacity <capacity>, and locations <locs> include both delivery and pickup points. The delivery demand (new rentals) and pickup demand (returned cars) at each customer location are <demand_linehaul> and <demand_backhaul>, respectively. Routes must be designed to serve customers in any sequence\u2014whether delivering first, collecting first, or interleaving both\u2014to minimize operational costs while respecting capacity limits.",
+        "desc_split": "A car rental company needs to deliver newly rented vehicles to customers and collect returned rentals from drop-off locations. Each truck must balance the weight and volume of outbound rentals (deliveries) with inbound returned vehicles (pickups). The vehicles’ mixed loads require careful route planning to avoid overloading trucks. The central depot’s trucks have a capacity <capacity>, and locations <locs> include both delivery and pickup points. The delivery demand (new rentals) and pickup demand (returned cars) at each customer location are <demand_linehaul> and <demand_backhaul>, respectively. Routes must be designed to serve customers in any sequence—whether delivering first, collecting first, or interleaving both—to minimize operational costs while respecting capacity limits.",
         "data_template": {
             "num_depots": [
                 1
@@ -19487,7 +19537,8 @@
                 0.0
             ]
         },
-        "label": "vrpmb"
+        "label": "vrpmb",
+        "index": 50
     },
     {
         "title": "Aquaculture Feed Supply & Harvest Collection Route Planning",
@@ -19872,7 +19923,8 @@
                 0.0
             ]
         },
-        "label": "vrpmb"
+        "label": "vrpmb",
+        "index": 51
     },
     {
         "title": "Photography Equipment Rental & Return Logistics for Event Use",
@@ -20121,11 +20173,12 @@
                 0.0
             ]
         },
-        "label": "vrpmb"
+        "label": "vrpmb",
+        "index": 52
     },
     {
         "title": "Holiday Decoration Delivery & Post-Season Materials Recycling",
-        "desc_split": "A festive decor company distributes holiday ornaments to retail stores and collects used decorations for recycling. Trucks must transport new decorations (deliveries) and haul back discarded items (pickups). Each truck has a capacity <capacity>, and locations <locs> include both distribution and collection sites. The delivery demand (ornament quantities) and pickup demand (recycling volumes) are <demand_linehaul> and <demand_backhaul>. Routes may serve customers in any order\u2014delivering first, collecting first, or alternating\u2014to maximize efficiency while adhering to capacity constraints.",
+        "desc_split": "A festive decor company distributes holiday ornaments to retail stores and collects used decorations for recycling. Trucks must transport new decorations (deliveries) and haul back discarded items (pickups). Each truck has a capacity <capacity>, and locations <locs> include both distribution and collection sites. The delivery demand (ornament quantities) and pickup demand (recycling volumes) are <demand_linehaul> and <demand_backhaul>. Routes may serve customers in any order—delivering first, collecting first, or alternating—to maximize efficiency while adhering to capacity constraints.",
         "data_template": {
             "num_depots": [
                 1
@@ -20404,11 +20457,12 @@
                 0.0
             ]
         },
-        "label": "vrpmb"
+        "label": "vrpmb",
+        "index": 53
     },
     {
         "title": "Mobile Medical Clinic Equipment Delivery & Used Supplies Collection",
-        "desc_split": "A healthcare organization operates mobile clinics that require regular restocking of medical supplies and retrieval of used equipment. Trucks must deliver fresh supplies (deliveries) and collect contaminated or expired materials (pickups). Each truck\u2019s capacity <capacity> must accommodate both outbound and inbound loads across the 20 clinic locations <locs>. The delivery demand (medical kits) and pickup demand (waste/used items) at each site are <demand_linehaul> and <demand_backhaul>. Routes can be structured flexibly\u2014such as delivering to one clinic, collecting from another, or combining tasks\u2014to optimize logistics while ensuring capacity limits are never breached.",
+        "desc_split": "A healthcare organization operates mobile clinics that require regular restocking of medical supplies and retrieval of used equipment. Trucks must deliver fresh supplies (deliveries) and collect contaminated or expired materials (pickups). Each truck’s capacity <capacity> must accommodate both outbound and inbound loads across the 20 clinic locations <locs>. The delivery demand (medical kits) and pickup demand (waste/used items) at each site are <demand_linehaul> and <demand_backhaul>. Routes can be structured flexibly—such as delivering to one clinic, collecting from another, or combining tasks—to optimize logistics while ensuring capacity limits are never breached.",
         "data_template": {
             "num_depots": [
                 1
@@ -20721,7 +20775,8 @@
                 0.23333333432674408
             ]
         },
-        "label": "vrpmb"
+        "label": "vrpmb",
+        "index": 54
     },
     {
         "title": "Rental Sports Equipment Delivery & Return Management",
@@ -20879,7 +20934,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrpmb"
+        "label": "vrpmb",
+        "index": 55
     },
     {
         "title": "Event Rental Party Supplies & Post-Event Recovery",
@@ -21169,11 +21225,12 @@
             ]
         },
         "user_template": {},
-        "label": "vrpmb"
+        "label": "vrpmb",
+        "index": 56
     },
     {
         "title": "Rental Medical Equipment Delivery & Return Logistics",
-        "desc_split": "A medical equipment rental service delivers wheelchairs, hospital beds, and mobility aids to patients and collects them after use. Each truck\u2019s capacity :math:`Q` must accommodate both the weight of new equipment and the volume of returned items. The mixed backhaul allows drivers to arrange deliveries and pickups in any order, provided the total load remains under capacity. The goal is to design cost-effective routes that serve all customers without exceeding vehicle limits.",
+        "desc_split": "A medical equipment rental service delivers wheelchairs, hospital beds, and mobility aids to patients and collects them after use. Each truck’s capacity :math:`Q` must accommodate both the weight of new equipment and the volume of returned items. The mixed backhaul allows drivers to arrange deliveries and pickups in any order, provided the total load remains under capacity. The goal is to design cost-effective routes that serve all customers without exceeding vehicle limits.",
         "data_template": {
             "num_depots": [
                 1
@@ -21327,7 +21384,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrpmb"
+        "label": "vrpmb",
+        "index": 57
     },
     {
         "title": "Rental Construction Safety Gear Delivery & Return",
@@ -21639,11 +21697,12 @@
             ]
         },
         "user_template": {},
-        "label": "vrpmb"
+        "label": "vrpmb",
+        "index": 58
     },
     {
         "title": "Rental Event Lighting & Sound Equipment Delivery & Recovery",
-        "desc_split": "A company specializing in event lighting and sound systems delivers equipment to venues and recovers it post-event. Each vehicle\u2019s capacity :math:`Q` must handle the weight of outgoing gear plus the volume of returned items. The mixed backhaul allows drivers to interleave deliveries and pickups in any sequence, as long as the total load stays within capacity. The challenge is creating optimized routes that minimize travel costs while ensuring all equipment is delivered and retrieved without overloading trucks.",
+        "desc_split": "A company specializing in event lighting and sound systems delivers equipment to venues and recovers it post-event. Each vehicle’s capacity :math:`Q` must handle the weight of outgoing gear plus the volume of returned items. The mixed backhaul allows drivers to interleave deliveries and pickups in any sequence, as long as the total load stays within capacity. The challenge is creating optimized routes that minimize travel costs while ensuring all equipment is delivered and retrieved without overloading trucks.",
         "data_template": {
             "num_depots": [
                 1
@@ -21819,7 +21878,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrpmb"
+        "label": "vrpmb",
+        "index": 59
     },
     {
         "title": "Winery Supply Delivery and Empty Bottle Return Logistics",
@@ -22175,7 +22235,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrpmb"
+        "label": "vrpmb",
+        "index": 60
     },
     {
         "title": "Museum Artifact Transport and Exhibit Return Logistics",
@@ -22377,11 +22438,12 @@
             ]
         },
         "user_template": {},
-        "label": "vrpmb"
+        "label": "vrpmb",
+        "index": 61
     },
     {
         "title": "Laboratory Equipment Delivery and Used Glassware Collection",
-        "desc_split": "A scientific supply company delivers lab equipment to research facilities while collecting used glassware for recycling. Each vehicle\u2019s capacity :math:`Q` restricts the total load of equipment (deliveries) and glassware (pickups). The mixed backhaul model allows visits to be arranged in any order\u2014for instance, dropping off microscopes at a university lab before picking up contaminated beakers from a hospital lab\u2014ensuring efficient route planning without exceeding weight limits.",
+        "desc_split": "A scientific supply company delivers lab equipment to research facilities while collecting used glassware for recycling. Each vehicle’s capacity :math:`Q` restricts the total load of equipment (deliveries) and glassware (pickups). The mixed backhaul model allows visits to be arranged in any order—for instance, dropping off microscopes at a university lab before picking up contaminated beakers from a hospital lab—ensuring efficient route planning without exceeding weight limits.",
         "data_template": {
             "num_depots": [
                 1
@@ -22744,7 +22806,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrpmb"
+        "label": "vrpmb",
+        "index": 62
     },
     {
         "title": "Construction Site Tool Rental and Return Management",
@@ -22979,11 +23042,12 @@
             ]
         },
         "user_template": {},
-        "label": "vrpmb"
+        "label": "vrpmb",
+        "index": 63
     },
     {
         "title": "Agricultural Pesticide Delivery and Empty Container Recycling",
-        "desc_split": "An agricultural supply company distributes pesticide containers to farmers and collects empty ones for recycling. Each truck\u2019s capacity :math:`Q` must not be exceeded by the combined weight of pesticide deliveries and empty container pickups. The mixed backhaul strategy allows drivers to sequence stops in any order. A truck might first deliver pesticides to a farm, then backtrack to collect empty containers from a neighboring orchard, optimizing routes while adhering to environmental regulations and capacity limits.",
+        "desc_split": "An agricultural supply company distributes pesticide containers to farmers and collects empty ones for recycling. Each truck’s capacity :math:`Q` must not be exceeded by the combined weight of pesticide deliveries and empty container pickups. The mixed backhaul strategy allows drivers to sequence stops in any order. A truck might first deliver pesticides to a farm, then backtrack to collect empty containers from a neighboring orchard, optimizing routes while adhering to environmental regulations and capacity limits.",
         "data_template": {
             "num_depots": [
                 1
@@ -23302,11 +23366,12 @@
             ]
         },
         "user_template": {},
-        "label": "vrpmb"
+        "label": "vrpmb",
+        "index": 64
     },
     {
         "title": "Utility Meter Installation & Old Meter Collection Logistics",
-        "desc_split": "A utility company needs to install new meters at residential and commercial locations while collecting outdated meters for recycling. Each vehicle can intermix delivery and pickup tasks in any sequence, ensuring the combined weight of new meters (linehaul) and old meters (backhaul) does not exceed the vehicle\u2019s capacity. The goal is to optimize routes for cost efficiency while managing meter exchanges across the service area.",
+        "desc_split": "A utility company needs to install new meters at residential and commercial locations while collecting outdated meters for recycling. Each vehicle can intermix delivery and pickup tasks in any sequence, ensuring the combined weight of new meters (linehaul) and old meters (backhaul) does not exceed the vehicle’s capacity. The goal is to optimize routes for cost efficiency while managing meter exchanges across the service area.",
         "data_template": {
             "num_depots": [
                 1
@@ -23537,7 +23602,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrpmb"
+        "label": "vrpmb",
+        "index": 65
     },
     {
         "title": "Emergency Response Equipment Delivery & Hazardous Debris Collection",
@@ -23893,11 +23959,12 @@
             ]
         },
         "user_template": {},
-        "label": "vrpmb"
+        "label": "vrpmb",
+        "index": 66
     },
     {
         "title": "Rental Camping Equipment Delivery & Seasonal Gear Return Management",
-        "desc_split": "A camping rental service delivers gear (tents, stoves) to customers and collects used equipment for maintenance. Each truck\u2019s route can blend deliveries and pickups in any order, provided the total weight of outgoing gear and returned items does not exceed capacity. The aim is to streamline seasonal logistics while maximizing vehicle utilization.",
+        "desc_split": "A camping rental service delivers gear (tents, stoves) to customers and collects used equipment for maintenance. Each truck’s route can blend deliveries and pickups in any order, provided the total weight of outgoing gear and returned items does not exceed capacity. The aim is to streamline seasonal logistics while maximizing vehicle utilization.",
         "data_template": {
             "num_depots": [
                 1
@@ -24238,7 +24305,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrpmb"
+        "label": "vrpmb",
+        "index": 67
     },
     {
         "title": "Academic Lab Equipment Delivery & Expired Chemicals Retrieval",
@@ -24462,11 +24530,12 @@
             ]
         },
         "user_template": {},
-        "label": "vrpmb"
+        "label": "vrpmb",
+        "index": 68
     },
     {
         "title": "Urban Compost Collection & Organic Delivery Route Planning",
-        "desc_split": "A city\u2019s sustainability division collects organic waste from residential bins while delivering compost-ready soil to community gardens and farms. Trucks can alternate between pickups and deliveries along their route, ensuring the combined load of waste and soil remains within capacity limits to support eco-friendly logistics.",
+        "desc_split": "A city’s sustainability division collects organic waste from residential bins while delivering compost-ready soil to community gardens and farms. Trucks can alternate between pickups and deliveries along their route, ensuring the combined load of waste and soil remains within capacity limits to support eco-friendly logistics.",
         "data_template": {
             "num_depots": [
                 1
@@ -24653,7 +24722,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrpmb"
+        "label": "vrpmb",
+        "index": 69
     },
     {
         "title": "Film Production Equipment Delivery & Post-Production Return Logistics",
@@ -24933,7 +25003,8 @@
                 0.0
             ]
         },
-        "label": "vrpmb"
+        "label": "vrpmb",
+        "index": 70
     },
     {
         "title": "Electric Vehicle Charging Station Delivery & Used Battery Collection Route Optimization",
@@ -25468,7 +25539,8 @@
                 0.22857142984867096
             ]
         },
-        "label": "vrpmb"
+        "label": "vrpmb",
+        "index": 71
     },
     {
         "title": "Disaster Relief Supplies Delivery & Post-Relief Material Retrieval Logistics",
@@ -25714,7 +25786,8 @@
                 0.06666667014360428
             ]
         },
-        "label": "vrpmb"
+        "label": "vrpmb",
+        "index": 72
     },
     {
         "title": "Temporary Medical Testing Equipment Delivery & Post-Campaign Retrieval Logistics",
@@ -25943,7 +26016,8 @@
                 0.0
             ]
         },
-        "label": "vrpmb"
+        "label": "vrpmb",
+        "index": 73
     },
     {
         "title": "Holiday Retail Inventory Delivery & Post-Seasonal Return Logistics",
@@ -26478,11 +26552,12 @@
                 0.0
             ]
         },
-        "label": "vrpmb"
+        "label": "vrpmb",
+        "index": 74
     },
     {
         "title": "Library Book Delivery & Returned Materials Collection",
-        "desc_split": "A public library system uses a fleet to deliver new books to branch locations and collect returned books from community drop-off points. Each vehicle has a maximum capacity, balancing the weight and volume of outgoing deliveries and incoming returns. Routes can visit delivery and pickup stops in any sequence, as long as the combined load of books (linehaul and backhaul) does not exceed the vehicle\u2019s capacity. The challenge is to minimize travel distance while ensuring all branches receive fresh stock and returned items are retrieved efficiently.",
+        "desc_split": "A public library system uses a fleet to deliver new books to branch locations and collect returned books from community drop-off points. Each vehicle has a maximum capacity, balancing the weight and volume of outgoing deliveries and incoming returns. Routes can visit delivery and pickup stops in any sequence, as long as the combined load of books (linehaul and backhaul) does not exceed the vehicle’s capacity. The challenge is to minimize travel distance while ensuring all branches receive fresh stock and returned items are retrieved efficiently.",
         "data_template": {
             "num_depots": [
                 1
@@ -26823,11 +26898,12 @@
             ]
         },
         "user_template": {},
-        "label": "vrpmb"
+        "label": "vrpmb",
+        "index": 75
     },
     {
         "title": "Home Security System Installation & Old Hardware Recycling",
-        "desc_split": "A security company deploys trucks to install new surveillance systems at customer homes and collect outdated equipment for recycling. The vehicles must manage the space for bulky new devices and the weight of discarded hardware. Since deliveries and pickups can be sequenced flexibly, planners must optimize routes that serve both types of stops without exceeding the truck\u2019s capacity. The goal is to balance resource allocation and reduce operational costs by efficiently routing mixed-load vehicles.",
+        "desc_split": "A security company deploys trucks to install new surveillance systems at customer homes and collect outdated equipment for recycling. The vehicles must manage the space for bulky new devices and the weight of discarded hardware. Since deliveries and pickups can be sequenced flexibly, planners must optimize routes that serve both types of stops without exceeding the truck’s capacity. The goal is to balance resource allocation and reduce operational costs by efficiently routing mixed-load vehicles.",
         "data_template": {
             "num_depots": [
                 1
@@ -27080,11 +27156,12 @@
             ]
         },
         "user_template": {},
-        "label": "vrpmb"
+        "label": "vrpmb",
+        "index": 76
     },
     {
         "title": "Pharmacy Prescription Delivery & Used Syringe Collection",
-        "desc_split": "A pharmacy\u2019s delivery fleet transports prescription medications to patients\u2019 homes and collects used medical supplies (e.g., syringes) for safe disposal. Each vehicle\u2019s capacity limits require careful coordination between outbound deliveries and inbound pickups. Since stops can be ordered freely, routes might first drop off prescriptions to suburban areas before picking up waste from urban centers, or vice versa. The system must ensure no vehicle overloads while maximizing route efficiency.",
+        "desc_split": "A pharmacy’s delivery fleet transports prescription medications to patients’ homes and collects used medical supplies (e.g., syringes) for safe disposal. Each vehicle’s capacity limits require careful coordination between outbound deliveries and inbound pickups. Since stops can be ordered freely, routes might first drop off prescriptions to suburban areas before picking up waste from urban centers, or vice versa. The system must ensure no vehicle overloads while maximizing route efficiency.",
         "data_template": {
             "num_depots": [
                 1
@@ -27436,11 +27513,12 @@
             ]
         },
         "user_template": {},
-        "label": "vrpmb"
+        "label": "vrpmb",
+        "index": 77
     },
     {
         "title": "Catering Equipment Rental & Post-Event Recovery Logistics",
-        "desc_split": "A rental company provides catering equipment (e.g., tables, linens) to event venues and recovers used items afterward. Vehicles must handle the dual tasks of delivering clean equipment and retrieving soiled or used items. The mixed backhaul nature allows planners to interleave deliveries and pickups along the same route, as long as the total load (clean + dirty items) stays within each truck\u2019s capacity. This reduces the number of trips and optimizes fuel usage.",
+        "desc_split": "A rental company provides catering equipment (e.g., tables, linens) to event venues and recovers used items afterward. Vehicles must handle the dual tasks of delivering clean equipment and retrieving soiled or used items. The mixed backhaul nature allows planners to interleave deliveries and pickups along the same route, as long as the total load (clean + dirty items) stays within each truck’s capacity. This reduces the number of trips and optimizes fuel usage.",
         "data_template": {
             "num_depots": [
                 1
@@ -27594,7 +27672,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrpmb"
+        "label": "vrpmb",
+        "index": 78
     },
     {
         "title": "Automotive Repair Parts Delivery & Used Part Retrieval",
@@ -27785,7 +27864,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrpmb"
+        "label": "vrpmb",
+        "index": 79
     },
     {
         "title": "Rental Furniture Logistics for Event Spaces & Return Management",
@@ -28170,11 +28250,12 @@
                 0.0
             ]
         },
-        "label": "vrpmb"
+        "label": "vrpmb",
+        "index": 80
     },
     {
         "title": "Home Appliance Rental for Short-Term Rentals & Return Optimization",
-        "desc_split": "A rental service provides appliances (fridges, washing machines) to vacation rental properties. Trucks must deliver appliances to newly rented homes and collect them when tenants vacate. Each truck\u2019s capacity <capacity> must accommodate both outgoing deliveries and incoming pickups in any sequence. The depot and customer locations are <locs>, with appliance delivery needs <demand_linehaul> and pickup requirements <demand_backhaul>. The goal is to minimize route costs while respecting capacity limits.",
+        "desc_split": "A rental service provides appliances (fridges, washing machines) to vacation rental properties. Trucks must deliver appliances to newly rented homes and collect them when tenants vacate. Each truck’s capacity <capacity> must accommodate both outgoing deliveries and incoming pickups in any sequence. The depot and customer locations are <locs>, with appliance delivery needs <demand_linehaul> and pickup requirements <demand_backhaul>. The goal is to minimize route costs while respecting capacity limits.",
         "data_template": {
             "num_depots": [
                 1
@@ -28470,7 +28551,8 @@
                 0.0
             ]
         },
-        "label": "vrpmb"
+        "label": "vrpmb",
+        "index": 81
     },
     {
         "title": "Catering Equipment Rental for Pop-Up Events & Return Logistics",
@@ -28804,7 +28886,8 @@
                 0.0
             ]
         },
-        "label": "vrpmb"
+        "label": "vrpmb",
+        "index": 82
     },
     {
         "title": "Industrial Tool Rental & Return Logistics for Construction Sites",
@@ -29342,7 +29425,8 @@
                 0.0
             ]
         },
-        "label": "vrpmb"
+        "label": "vrpmb",
+        "index": 83
     },
     {
         "title": "Art Supplies Delivery & Empty Packaging Collection for Creative Studios",
@@ -29829,7 +29913,8 @@
                 0.0
             ]
         },
-        "label": "vrpmb"
+        "label": "vrpmb",
+        "index": 84
     },
     {
         "title": "Renewable Energy Equipment Delivery & Used Component Recycling Route Planning",
@@ -30167,7 +30252,8 @@
                 1.0
             ]
         },
-        "label": "vrpmb"
+        "label": "vrpmb",
+        "index": 85
     },
     {
         "title": "Temporary Event Infrastructure Delivery & Post-Event Dismantling Logistics",
@@ -30384,11 +30470,12 @@
                 1.0
             ]
         },
-        "label": "vrpmb"
+        "label": "vrpmb",
+        "index": 86
     },
     {
         "title": "IT Equipment Rental & E-waste Collection Route Optimization",
-        "desc_split": "An IT equipment rental firm delivers servers, laptops, and networking gear to businesses and collects outdated electronics for recycling. The mixed backhaul model allows drivers to visit clients for deliveries (linehaul) and pickups (backhaul) in any sequence, as long as the total load stays within the truck\u2019s capacity <capacity>. The challenge is to balance the outbound and inbound shipments while reducing logistics costs and environmental impact.",
+        "desc_split": "An IT equipment rental firm delivers servers, laptops, and networking gear to businesses and collects outdated electronics for recycling. The mixed backhaul model allows drivers to visit clients for deliveries (linehaul) and pickups (backhaul) in any sequence, as long as the total load stays within the truck’s capacity <capacity>. The challenge is to balance the outbound and inbound shipments while reducing logistics costs and environmental impact.",
         "data_template": {
             "num_depots": [
                 1
@@ -30546,11 +30633,12 @@
                 1.0
             ]
         },
-        "label": "vrpmb"
+        "label": "vrpmb",
+        "index": 87
     },
     {
         "title": "Agricultural Irrigation System Delivery & Empty Container Return Logistics",
-        "desc_split": "A farm supply company provides irrigation pipes, sprinklers, and pumps to agricultural customers while retrieving empty containers used for transporting bulk materials. Each vehicle must handle both deliveries (linehaul) and pickups (backhaul) in flexible sequences. With a capacity limit of <capacity>, the routes must ensure that the combined weight of irrigation equipment and returned containers does not exceed the vehicle\u2019s maximum load.",
+        "desc_split": "A farm supply company provides irrigation pipes, sprinklers, and pumps to agricultural customers while retrieving empty containers used for transporting bulk materials. Each vehicle must handle both deliveries (linehaul) and pickups (backhaul) in flexible sequences. With a capacity limit of <capacity>, the routes must ensure that the combined weight of irrigation equipment and returned containers does not exceed the vehicle’s maximum load.",
         "data_template": {
             "num_depots": [
                 1
@@ -30752,7 +30840,8 @@
                 1.0
             ]
         },
-        "label": "vrpmb"
+        "label": "vrpmb",
+        "index": 88
     },
     {
         "title": "Film Set Construction Equipment Delivery & Post-Shoot Retrieval Route Planning",
@@ -30925,7 +31014,8 @@
                 1.0
             ]
         },
-        "label": "vrpmb"
+        "label": "vrpmb",
+        "index": 89
     },
     {
         "title": "Rental of Temporary Medical Supplies for Vaccination Campaigns & Post-Campaign Retrieval",
@@ -31409,11 +31499,12 @@
                 0.17142857611179352
             ]
         },
-        "label": "vrpmb"
+        "label": "vrpmb",
+        "index": 90
     },
     {
         "title": "Rental of Temporary Film Set Construction Equipment & Post-Shoot Collection",
-        "desc_split": "A film production company rents equipment (lights, scaffolding, props) to build temporary film sets at remote locations. Trucks deliver the gear to set locations and later retrieve it for reuse. The route design allows deliveries and pickups to occur in any order, provided the vehicle\u2019s capacity <capacity> is not exceeded. The depot and 20 filming locations are at <locs>, with set-up demands <demand_linehaul> and retrieval demands <demand_backhaul>.",
+        "desc_split": "A film production company rents equipment (lights, scaffolding, props) to build temporary film sets at remote locations. Trucks deliver the gear to set locations and later retrieve it for reuse. The route design allows deliveries and pickups to occur in any order, provided the vehicle’s capacity <capacity> is not exceeded. The depot and 20 filming locations are at <locs>, with set-up demands <demand_linehaul> and retrieval demands <demand_backhaul>.",
         "data_template": {
             "num_depots": [
                 1
@@ -31862,7 +31953,8 @@
                 0.0
             ]
         },
-        "label": "vrpmb"
+        "label": "vrpmb",
+        "index": 91
     },
     {
         "title": "Rental of Temporary Farmers' Market Stalls & Post-Event Return Management",
@@ -32196,7 +32288,8 @@
                 0.0
             ]
         },
-        "label": "vrpmb"
+        "label": "vrpmb",
+        "index": 92
     },
     {
         "title": "Rental of Temporary Outdoor Concert Infrastructure & Post-Event Recovery",
@@ -32612,7 +32705,8 @@
                 0.0
             ]
         },
-        "label": "vrpmb"
+        "label": "vrpmb",
+        "index": 93
     },
     {
         "title": "Rental of Temporary Art Installation Materials & Post-Exhibition Collection Logistics",
@@ -33116,11 +33210,12 @@
                 0.0
             ]
         },
-        "label": "vrpmb"
+        "label": "vrpmb",
+        "index": 94
     },
     {
         "title": "Rental of Temporary Medical Equipment for Sports Events & Post-Event Recovery",
-        "desc_split": "A company provides medical equipment rentals for large-scale sports events, delivering items like defibrillators, first-aid kits, and stretchers to venues and later retrieving them after the event. Each truck must balance delivering equipment to event locations and collecting used gear, with no fixed sequence required. The total combined weight of deliveries (linehaul) and pickups (backhaul) on each route must not exceed the vehicle\u2019s capacity Q. For example, a truck might first pick up returned equipment from a stadium, then deliver fresh supplies to a nearby marathon checkpoint, optimizing the route to minimize fuel use while respecting capacity limits.",
+        "desc_split": "A company provides medical equipment rentals for large-scale sports events, delivering items like defibrillators, first-aid kits, and stretchers to venues and later retrieving them after the event. Each truck must balance delivering equipment to event locations and collecting used gear, with no fixed sequence required. The total combined weight of deliveries (linehaul) and pickups (backhaul) on each route must not exceed the vehicle’s capacity Q. For example, a truck might first pick up returned equipment from a stadium, then deliver fresh supplies to a nearby marathon checkpoint, optimizing the route to minimize fuel use while respecting capacity limits.",
         "data_template": {
             "num_depots": [
                 1
@@ -33461,11 +33556,12 @@
             ]
         },
         "user_template": {},
-        "label": "vrpmb"
+        "label": "vrpmb",
+        "index": 95
     },
     {
         "title": "Home Improvement Tool Rental & Return Logistics",
-        "desc_split": "A tool rental service delivers power tools, ladders, and equipment to homeowners for DIY projects and later collects them after use. Each vehicle must handle both deliveries (e.g., sending a drill set to a customer\u2019s home) and pickups (reclaiming returned tools) in any order. The mixed backhaul allows trucks to sequence stops flexibly, such as dropping off a generator for a backyard project before picking up a borrowed pressure washer from another customer. The vehicle\u2019s capacity Q must accommodate the combined weight of outgoing tools and incoming returns without overloading.",
+        "desc_split": "A tool rental service delivers power tools, ladders, and equipment to homeowners for DIY projects and later collects them after use. Each vehicle must handle both deliveries (e.g., sending a drill set to a customer’s home) and pickups (reclaiming returned tools) in any order. The mixed backhaul allows trucks to sequence stops flexibly, such as dropping off a generator for a backyard project before picking up a borrowed pressure washer from another customer. The vehicle’s capacity Q must accommodate the combined weight of outgoing tools and incoming returns without overloading.",
         "data_template": {
             "num_depots": [
                 1
@@ -33630,11 +33726,12 @@
             ]
         },
         "user_template": {},
-        "label": "vrpmb"
+        "label": "vrpmb",
+        "index": 96
     },
     {
         "title": "Seasonal Garden Equipment Rental & Return Management",
-        "desc_split": "A garden supply company rents equipment like lawnmowers, snowblowers, and leaf blowers to households during peak seasons. Trucks must deliver equipment to customers and later collect it when the season ends. Since the mixed backhaul allows any order, a truck might first pick up a snowblower from a customer\u2019s driveway, then deliver a lawnmower to a nearby home. The route must ensure that the total weight of outgoing gear (linehaul) and returned items (backhaul) stays within each vehicle\u2019s capacity Q, avoiding overloads.",
+        "desc_split": "A garden supply company rents equipment like lawnmowers, snowblowers, and leaf blowers to households during peak seasons. Trucks must deliver equipment to customers and later collect it when the season ends. Since the mixed backhaul allows any order, a truck might first pick up a snowblower from a customer’s driveway, then deliver a lawnmower to a nearby home. The route must ensure that the total weight of outgoing gear (linehaul) and returned items (backhaul) stays within each vehicle’s capacity Q, avoiding overloads.",
         "data_template": {
             "num_depots": [
                 1
@@ -33832,11 +33929,12 @@
             ]
         },
         "user_template": {},
-        "label": "vrpmb"
+        "label": "vrpmb",
+        "index": 97
     },
     {
         "title": "Film Festival Equipment Rental & Post-Event Recovery",
-        "desc_split": "A rental firm supplies projectors, screens, and audio systems to venues hosting film festivals. After the events conclude, the same trucks must retrieve the equipment. The mixed backhaul enables trucks to interleave deliveries and pickups\u2014for instance, delivering a projector to a theater while collecting a screen from a nearby outdoor venue. Capacity constraints ensure the combined weight of equipment being deployed and collected never exceeds Q, optimizing routes to minimize travel while adhering to limits.",
+        "desc_split": "A rental firm supplies projectors, screens, and audio systems to venues hosting film festivals. After the events conclude, the same trucks must retrieve the equipment. The mixed backhaul enables trucks to interleave deliveries and pickups—for instance, delivering a projector to a theater while collecting a screen from a nearby outdoor venue. Capacity constraints ensure the combined weight of equipment being deployed and collected never exceeds Q, optimizing routes to minimize travel while adhering to limits.",
         "data_template": {
             "num_depots": [
                 1
@@ -34056,11 +34154,12 @@
             ]
         },
         "user_template": {},
-        "label": "vrpmb"
+        "label": "vrpmb",
+        "index": 98
     },
     {
         "title": "Temporary Art Installation Equipment Rental & Return Logistics",
-        "desc_split": "An art rental service delivers specialized equipment like scaffolding, lighting rigs, and exhibition stands to venues hosting temporary art installations. After the exhibitions close, the company collects the equipment. Routes can mix deliveries and pickups freely, such as dropping off a sculpture\u2019s mounting hardware before retrieving a dismantled installation\u2019s components. Each truck\u2019s capacity Q must account for both outgoing gear (linehaul) and returned items (backhaul), ensuring no overloads while streamlining logistics.",
+        "desc_split": "An art rental service delivers specialized equipment like scaffolding, lighting rigs, and exhibition stands to venues hosting temporary art installations. After the exhibitions close, the company collects the equipment. Routes can mix deliveries and pickups freely, such as dropping off a sculpture’s mounting hardware before retrieving a dismantled installation’s components. Each truck’s capacity Q must account for both outgoing gear (linehaul) and returned items (backhaul), ensuring no overloads while streamlining logistics.",
         "data_template": {
             "num_depots": [
                 1
@@ -34379,6 +34478,7 @@
             ]
         },
         "user_template": {},
-        "label": "vrpmb"
+        "label": "vrpmb",
+        "index": 99
     }
 ]

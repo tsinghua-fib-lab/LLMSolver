@@ -617,7 +617,8 @@
                 1.8026211261749268
             ]
         },
-        "label": "vrpbltw"
+        "label": "vrpbltw",
+        "index": 0
     },
     {
         "title": "Same-Day Grocery Delivery and Customer Returns",
@@ -1167,7 +1168,8 @@
                 2.2786271572113037
             ]
         },
-        "label": "vrpbltw"
+        "label": "vrpbltw",
+        "index": 1
     },
     {
         "title": "Electric Vehicle Battery Swap Station Refilling and Collection",
@@ -1673,7 +1675,8 @@
                 2.660907745361328
             ]
         },
-        "label": "vrpbltw"
+        "label": "vrpbltw",
+        "index": 2
     },
     {
         "title": "Perishable Produce Harvesting and Farm Supply Delivery",
@@ -2268,11 +2271,12 @@
                 1.766049861907959
             ]
         },
-        "label": "vrpbltw"
+        "label": "vrpbltw",
+        "index": 3
     },
     {
         "title": "Apparel Store Inventory Replenishment and Returns Logistics",
-        "desc_split": "A fashion retailer\u2019s distribution center (<loc_depot>) must restock regional stores with new inventory while retrieving returned items. Stores operate during specific hours (<time_windows>), and deliveries (e.g., seasonal clothing) must precede pickups of returned garments (backhaul). Trucks (<capacity> cubic meters) must avoid overloading, and routes must stay within a <distance_limit> km limit to minimize fuel costs. The retailer also needs to ensure returned items are collected promptly to free up storage space at stores.",
+        "desc_split": "A fashion retailer’s distribution center (<loc_depot>) must restock regional stores with new inventory while retrieving returned items. Stores operate during specific hours (<time_windows>), and deliveries (e.g., seasonal clothing) must precede pickups of returned garments (backhaul). Trucks (<capacity> cubic meters) must avoid overloading, and routes must stay within a <distance_limit> km limit to minimize fuel costs. The retailer also needs to ensure returned items are collected promptly to free up storage space at stores.",
         "data_template": {
             "num_depots": [
                 1
@@ -2605,7 +2609,8 @@
                 2.2143378257751465
             ]
         },
-        "label": "vrpbltw"
+        "label": "vrpbltw",
+        "index": 4
     },
     {
         "title": "Construction Site Material Supply and Debris Collection",
@@ -2950,7 +2955,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrpbltw"
+        "label": "vrpbltw",
+        "index": 5
     },
     {
         "title": "Hotel Linen Logistics with Time-Sensitive Service",
@@ -3229,7 +3235,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrpbltw"
+        "label": "vrpbltw",
+        "index": 6
     },
     {
         "title": "Agricultural Equipment Deployment and Crop Harvesting Support",
@@ -3574,7 +3581,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrpbltw"
+        "label": "vrpbltw",
+        "index": 7
     },
     {
         "title": "Event Equipment Rental and Timely Retrieval",
@@ -3831,7 +3839,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrpbltw"
+        "label": "vrpbltw",
+        "index": 8
     },
     {
         "title": "E-commerce Package Delivery with Customer Returns",
@@ -4187,7 +4196,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrpbltw"
+        "label": "vrpbltw",
+        "index": 9
     },
     {
         "title": "Solar Panel Installation and Recycling Logistics",
@@ -4532,7 +4542,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrpbltw"
+        "label": "vrpbltw",
+        "index": 10
     },
     {
         "title": "Event Catering and Dish Collection",
@@ -4866,11 +4877,12 @@
             ]
         },
         "user_template": {},
-        "label": "vrpbltw"
+        "label": "vrpbltw",
+        "index": 11
     },
     {
         "title": "Medical Imaging Equipment Distribution and Retrieval",
-        "desc_split": "A healthcare logistics firm delivers MRI and X-ray equipment to hospitals for urgent diagnostics and retrieves outdated machines for recycling. Hospitals have time windows for receiving equipment (aligned with patient schedules), and the depot enforces a distance limit to ensure trucks return before evening curfews. Each vehicle\u2019s capacity is constrained by the weight and size of medical equipment, requiring careful sequencing of deliveries (linehaul) before pickups (backhaul) to avoid overloading.",
+        "desc_split": "A healthcare logistics firm delivers MRI and X-ray equipment to hospitals for urgent diagnostics and retrieves outdated machines for recycling. Hospitals have time windows for receiving equipment (aligned with patient schedules), and the depot enforces a distance limit to ensure trucks return before evening curfews. Each vehicle’s capacity is constrained by the weight and size of medical equipment, requiring careful sequencing of deliveries (linehaul) before pickups (backhaul) to avoid overloading.",
         "data_template": {
             "num_depots": [
                 1
@@ -5068,11 +5080,12 @@
             ]
         },
         "user_template": {},
-        "label": "vrpbltw"
+        "label": "vrpbltw",
+        "index": 12
     },
     {
         "title": "Retail Store Equipment Maintenance and Tool Collection",
-        "desc_split": "A retail chain\u2019s maintenance team services store equipment (e.g., cash registers, HVAC units) while collecting broken tools for repair. Technicians must arrive during store operating hours (time windows) and cannot exceed a daily driving distance to comply with labor regulations. Each van carries spare parts (linehaul) and empty toolboxes (backhaul) for returned equipment. The route must prioritize deliveries to ensure critical repairs occur before collecting non-urgent items.",
+        "desc_split": "A retail chain’s maintenance team services store equipment (e.g., cash registers, HVAC units) while collecting broken tools for repair. Technicians must arrive during store operating hours (time windows) and cannot exceed a daily driving distance to comply with labor regulations. Each van carries spare parts (linehaul) and empty toolboxes (backhaul) for returned equipment. The route must prioritize deliveries to ensure critical repairs occur before collecting non-urgent items.",
         "data_template": {
             "num_depots": [
                 1
@@ -5435,7 +5448,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrpbltw"
+        "label": "vrpbltw",
+        "index": 13
     },
     {
         "title": "Tech Support Services for Office Upgrades",
@@ -5758,7 +5772,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrpbltw"
+        "label": "vrpbltw",
+        "index": 14
     },
     {
         "title": "Hospital Medical Supply Delivery and Waste Retrieval",
@@ -6037,7 +6052,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrpbltw"
+        "label": "vrpbltw",
+        "index": 15
     },
     {
         "title": "Disaster Relief Aid Delivery and Debris Collection",
@@ -6206,11 +6222,12 @@
             ]
         },
         "user_template": {},
-        "label": "vrpbltw"
+        "label": "vrpbltw",
+        "index": 16
     },
     {
         "title": "School Meal Delivery and Leftover Food Collection",
-        "desc_split": "A school district partners with a catering service to deliver freshly prepared lunches to schools and collect uneaten portions for composting. The caterer\u2019s refrigerated trucks must first deliver meals (linehaul) within strict time windows to align with lunch periods, then return to the depot with leftovers (backhaul). Each truck has limited cooling capacity and must complete routes within a 6-hour window to comply with food safety regulations and daily driving limits for drivers.",
+        "desc_split": "A school district partners with a catering service to deliver freshly prepared lunches to schools and collect uneaten portions for composting. The caterer’s refrigerated trucks must first deliver meals (linehaul) within strict time windows to align with lunch periods, then return to the depot with leftovers (backhaul). Each truck has limited cooling capacity and must complete routes within a 6-hour window to comply with food safety regulations and daily driving limits for drivers.",
         "data_template": {
             "num_depots": [
                 1
@@ -6364,7 +6381,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrpbltw"
+        "label": "vrpbltw",
+        "index": 17
     },
     {
         "title": "Automotive Parts Delivery and Vehicle Return Logistics",
@@ -6522,11 +6540,12 @@
             ]
         },
         "user_template": {},
-        "label": "vrpbltw"
+        "label": "vrpbltw",
+        "index": 18
     },
     {
         "title": "E-waste Collection and Electronics Delivery",
-        "desc_split": "An electronics retailer offers a \"trade-in\" program, delivering new devices to customers while collecting outdated electronics for recycling. Delivery drivers must first transport new gadgets (linehaul) to homes/offices within scheduled time windows, then return to the warehouse with collected e-waste (backhaul). Each van has limited space for both new and old devices, and routes must stay within a 100-mile radius to meet same-day service guarantees and comply with drivers\u2019 working-hour regulations.",
+        "desc_split": "An electronics retailer offers a \"trade-in\" program, delivering new devices to customers while collecting outdated electronics for recycling. Delivery drivers must first transport new gadgets (linehaul) to homes/offices within scheduled time windows, then return to the warehouse with collected e-waste (backhaul). Each van has limited space for both new and old devices, and routes must stay within a 100-mile radius to meet same-day service guarantees and comply with drivers’ working-hour regulations.",
         "data_template": {
             "num_depots": [
                 1
@@ -6801,7 +6820,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrpbltw"
+        "label": "vrpbltw",
+        "index": 19
     },
     {
         "title": "Recycling and Compostable Product Delivery Service",
@@ -7003,7 +7023,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrpbltw"
+        "label": "vrpbltw",
+        "index": 20
     },
     {
         "title": "Medical Device Deployment and Legacy Equipment Retrieval",
@@ -7315,11 +7336,12 @@
             ]
         },
         "user_template": {},
-        "label": "vrpbltw"
+        "label": "vrpbltw",
+        "index": 21
     },
     {
         "title": "Event Staging Equipment Rental and Rapid Retrieval",
-        "desc_split": "An event rental company deploys staging equipment (linehaul) such as tents and sound systems to venues and collects used gear (backhaul) post-event. Each truck\u2019s capacity (C) must accommodate both outbound and return loads. Routes are limited by distance (L) to enable same-day servicing of multiple events. Venues impose tight time windows (TW), demanding precise delivery before setup starts and pickup after teardown, often within a few hours of event conclusion.",
+        "desc_split": "An event rental company deploys staging equipment (linehaul) such as tents and sound systems to venues and collects used gear (backhaul) post-event. Each truck’s capacity (C) must accommodate both outbound and return loads. Routes are limited by distance (L) to enable same-day servicing of multiple events. Venues impose tight time windows (TW), demanding precise delivery before setup starts and pickup after teardown, often within a few hours of event conclusion.",
         "data_template": {
             "num_depots": [
                 1
@@ -7473,7 +7495,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrpbltw"
+        "label": "vrpbltw",
+        "index": 22
     },
     {
         "title": "Vineyard Supply Logistics and Harvest Collection",
@@ -7785,7 +7808,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrpbltw"
+        "label": "vrpbltw",
+        "index": 23
     },
     {
         "title": "High-Value Jewelry Delivery and Secure Returns",
@@ -7976,7 +8000,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrpbltw"
+        "label": "vrpbltw",
+        "index": 24
     },
     {
         "title": "Automotive Rental Vehicle Deployment and Return Logistics",
@@ -8152,7 +8177,8 @@
                 2.5669326782226562
             ]
         },
-        "label": "vrpbltw"
+        "label": "vrpbltw",
+        "index": 25
     },
     {
         "title": "Event Infrastructure Setup and Post-Event Dismantling",
@@ -8449,11 +8475,12 @@
                 2.580369710922241
             ]
         },
-        "label": "vrpbltw"
+        "label": "vrpbltw",
+        "index": 26
     },
     {
         "title": "Municipal Recycling Bin Distribution and Collection Service",
-        "desc_split": "A city\u2019s recycling program requires distributing empty bins to commercial zones (linehaul) and collecting filled ones (backhaul). Each bin has a weight/dimension demand, and trucks (<capacity>) must prioritize deliveries before pickups. Time windows align with business operating hours to avoid disruptions. Routes must stay within distance limits (<distance_limit>), and delays risk missing collection schedules. The solution must minimize total mileage while ensuring all bins are serviced on time.",
+        "desc_split": "A city’s recycling program requires distributing empty bins to commercial zones (linehaul) and collecting filled ones (backhaul). Each bin has a weight/dimension demand, and trucks (<capacity>) must prioritize deliveries before pickups. Time windows align with business operating hours to avoid disruptions. Routes must stay within distance limits (<distance_limit>), and delays risk missing collection schedules. The solution must minimize total mileage while ensuring all bins are serviced on time.",
         "data_template": {
             "num_depots": [
                 1
@@ -8713,7 +8740,8 @@
                 2.6052112579345703
             ]
         },
-        "label": "vrpbltw"
+        "label": "vrpbltw",
+        "index": 27
     },
     {
         "title": "Utility Meter Replacement and Waste Retrieval",
@@ -8944,7 +8972,8 @@
                 2.6781320571899414
             ]
         },
-        "label": "vrpbltw"
+        "label": "vrpbltw",
+        "index": 28
     },
     {
         "title": "Mobile Healthcare Unit Supply Delivery and Specimen Retrieval",
@@ -9153,7 +9182,8 @@
                 1.5177345275878906
             ]
         },
-        "label": "vrpbltw"
+        "label": "vrpbltw",
+        "index": 29
     },
     {
         "title": "Blood Bank Product Delivery and Donation Collection",
@@ -9520,7 +9550,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrpbltw"
+        "label": "vrpbltw",
+        "index": 30
     },
     {
         "title": "Tech Rental Equipment Deployment and Retrieval",
@@ -9722,7 +9753,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrpbltw"
+        "label": "vrpbltw",
+        "index": 31
     },
     {
         "title": "Industrial Hazardous Waste Pickup and Container Delivery",
@@ -9913,7 +9945,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrpbltw"
+        "label": "vrpbltw",
+        "index": 32
     },
     {
         "title": "Event Infrastructure Container Logistics",
@@ -10115,7 +10148,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrpbltw"
+        "label": "vrpbltw",
+        "index": 33
     },
     {
         "title": "Livestock Feed Distribution and Manure Collection",
@@ -10482,7 +10516,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrpbltw"
+        "label": "vrpbltw",
+        "index": 34
     },
     {
         "title": "Meal Kit Delivery and Sustainable Packaging Retrieval",
@@ -10794,7 +10829,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrpbltw"
+        "label": "vrpbltw",
+        "index": 35
     },
     {
         "title": "Pop-Up Retail Event Logistics with Dynamic Deadlines",
@@ -11051,7 +11087,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrpbltw"
+        "label": "vrpbltw",
+        "index": 36
     },
     {
         "title": "School Supply Redistribution and Archival Material Retrieval",
@@ -11253,7 +11290,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrpbltw"
+        "label": "vrpbltw",
+        "index": 37
     },
     {
         "title": "Agricultural Seed Distribution and Crop Sample Collection",
@@ -11499,7 +11537,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrpbltw"
+        "label": "vrpbltw",
+        "index": 38
     },
     {
         "title": "Urgent Medical Sample Transport and Lab Supply Delivery",
@@ -11800,7 +11839,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrpbltw"
+        "label": "vrpbltw",
+        "index": 39
     },
     {
         "title": "Airport Ground Services with Equipment Deployment and Waste Retrieval",
@@ -12002,7 +12042,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrpbltw"
+        "label": "vrpbltw",
+        "index": 40
     },
     {
         "title": "Perishable Flower Delivery and Compost Collection for Event Venues",
@@ -12336,7 +12377,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrpbltw"
+        "label": "vrpbltw",
+        "index": 41
     },
     {
         "title": "Rental Car Fleet Redistribution and Return Logistics",
@@ -12615,7 +12657,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrpbltw"
+        "label": "vrpbltw",
+        "index": 42
     },
     {
         "title": "Library System Book Distribution and Returns Processing",
@@ -12784,7 +12827,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrpbltw"
+        "label": "vrpbltw",
+        "index": 43
     },
     {
         "title": "Mobile Food Truck Supply Chain with Time-Sensitive Logistics",
@@ -13129,7 +13173,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrpbltw"
+        "label": "vrpbltw",
+        "index": 44
     },
     {
         "title": "High-Altitude Rescue Equipment Deployment and Gear Retrieval",
@@ -13597,7 +13642,8 @@
                 ]
             ]
         },
-        "label": "vrpbltw"
+        "label": "vrpbltw",
+        "index": 45
     },
     {
         "title": "Museum Artifact Transport and Exhibition Return Logistics",
@@ -13900,7 +13946,8 @@
                 2.1267220973968506
             ]
         },
-        "label": "vrpbltw"
+        "label": "vrpbltw",
+        "index": 46
     },
     {
         "title": "Urban Vertical Farm Delivery and Compost Collection",
@@ -14407,7 +14454,8 @@
                 ]
             ]
         },
-        "label": "vrpbltw"
+        "label": "vrpbltw",
+        "index": 47
     },
     {
         "title": "Cruise Ship Provisions Delivery and Waste Collection",
@@ -14750,7 +14798,8 @@
                 1.9535210132598877
             ]
         },
-        "label": "vrpbltw"
+        "label": "vrpbltw",
+        "index": 48
     },
     {
         "title": "Offshore Wind Farm Maintenance and Tool Retrieval",
@@ -15314,7 +15363,8 @@
                 1.0
             ]
         },
-        "label": "vrpbltw"
+        "label": "vrpbltw",
+        "index": 49
     },
     {
         "title": "Maritime Vessel Provisions Delivery and Waste Retrieval",
@@ -15566,7 +15616,8 @@
                 2.6970784664154053
             ]
         },
-        "label": "vrpbltw"
+        "label": "vrpbltw",
+        "index": 50
     },
     {
         "title": "Spaceport Rocket Component Delivery and Used Equipment Retrieval",
@@ -16129,7 +16180,8 @@
                 2.6214499473571777
             ]
         },
-        "label": "vrpbltw"
+        "label": "vrpbltw",
+        "index": 51
     },
     {
         "title": "Flood Response Team Equipment Deployment and Debris Collection",
@@ -16721,7 +16773,8 @@
                 1.8548060655593872
             ]
         },
-        "label": "vrpbltw"
+        "label": "vrpbltw",
+        "index": 52
     },
     {
         "title": "Semiconductor Factory Raw Material Delivery and Hazardous Waste Pickup",
@@ -17334,7 +17387,8 @@
                 2.343162775039673
             ]
         },
-        "label": "vrpbltw"
+        "label": "vrpbltw",
+        "index": 53
     },
     {
         "title": "Wildlife Research Station Supply Drops and Data Module Retrieval",
@@ -17743,7 +17797,8 @@
                 2.433688163757324
             ]
         },
-        "label": "vrpbltw"
+        "label": "vrpbltw",
+        "index": 54
     },
     {
         "title": "Event Tech Rental and Timed Retrieval Logistics",
@@ -17978,7 +18033,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrpbltw"
+        "label": "vrpbltw",
+        "index": 55
     },
     {
         "title": "Sustainable Construction Material Delivery and Waste Retrieval",
@@ -18191,7 +18247,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrpbltw"
+        "label": "vrpbltw",
+        "index": 56
     },
     {
         "title": "Offshore Oil Platform Supply and Waste Transport Logistics",
@@ -18415,7 +18472,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrpbltw"
+        "label": "vrpbltw",
+        "index": 57
     },
     {
         "title": "Seasonal Retail Pop-Up Store Inventory Deployment and Return Logistics",
@@ -18639,7 +18697,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrpbltw"
+        "label": "vrpbltw",
+        "index": 58
     },
     {
         "title": "Agricultural Drone Supply and Battery Collection Logistics",
@@ -18841,7 +18900,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrpbltw"
+        "label": "vrpbltw",
+        "index": 59
     },
     {
         "title": "Film Set Equipment Logistics with Time-Sensitive Deliveries and Retrievals",
@@ -19054,7 +19114,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrpbltw"
+        "label": "vrpbltw",
+        "index": 60
     },
     {
         "title": "Renewable Energy Maintenance Logistics for Offshore Wind Farms",
@@ -19355,11 +19416,12 @@
             ]
         },
         "user_template": {},
-        "label": "vrpbltw"
+        "label": "vrpbltw",
+        "index": 61
     },
     {
         "title": "High-Tech Server Relocation and Recycling for Data Centers",
-        "desc_split": "A tech firm relocates outdated servers from legacy data centers to new facilities (backhaul) while delivering cutting-edge hardware to clients (linehaul). Servers and components must be moved within clients\u2019 scheduled maintenance windows (time windows) to minimize downtime. Trucks must balance capacity constraints\u2014carrying both delicate new equipment and bulky obsolete servers\u2014while adhering to strict route duration limits imposed by facility access hours.",
+        "desc_split": "A tech firm relocates outdated servers from legacy data centers to new facilities (backhaul) while delivering cutting-edge hardware to clients (linehaul). Servers and components must be moved within clients’ scheduled maintenance windows (time windows) to minimize downtime. Trucks must balance capacity constraints—carrying both delicate new equipment and bulky obsolete servers—while adhering to strict route duration limits imposed by facility access hours.",
         "data_template": {
             "num_depots": [
                 1
@@ -19656,7 +19718,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrpbltw"
+        "label": "vrpbltw",
+        "index": 62
     },
     {
         "title": "Emergency Medical Supplies Redistribution and Waste Retrieval in Pandemic Response",
@@ -19825,7 +19888,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrpbltw"
+        "label": "vrpbltw",
+        "index": 63
     },
     {
         "title": "Temporary Art Installation Deployment and Retrieval for Urban Exhibitions",
@@ -20181,7 +20245,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrpbltw"
+        "label": "vrpbltw",
+        "index": 64
     },
     {
         "title": "Satellite Maintenance and Waste Retrieval Logistics",
@@ -20459,7 +20524,8 @@
                 ]
             ]
         },
-        "label": "vrpbltw"
+        "label": "vrpbltw",
+        "index": 65
     },
     {
         "title": "In-Flight Catering and Waste Collection for Airports",
@@ -20938,7 +21004,8 @@
                 1.0
             ]
         },
-        "label": "vrpbltw"
+        "label": "vrpbltw",
+        "index": 66
     },
     {
         "title": "Festival Infrastructure Deployment and Dismantling",
@@ -21389,7 +21456,8 @@
                 1.0
             ]
         },
-        "label": "vrpbltw"
+        "label": "vrpbltw",
+        "index": 67
     },
     {
         "title": "Urban Drone Delivery and Battery Swap Network",
@@ -21698,7 +21766,8 @@
                 1.0
             ]
         },
-        "label": "vrpbltw"
+        "label": "vrpbltw",
+        "index": 68
     },
     {
         "title": "Offshore Research Vessel Supply and Sample Retrieval",
@@ -22075,7 +22144,8 @@
                 2.550520896911621
             ]
         },
-        "label": "vrpbltw"
+        "label": "vrpbltw",
+        "index": 69
     },
     {
         "title": "Marine Conservation Equipment Deployment and Coral Sample Retrieval",
@@ -22387,7 +22457,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrpbltw"
+        "label": "vrpbltw",
+        "index": 70
     },
     {
         "title": "Film Set Equipment Rental and Scheduled Retrieval for Movie Production",
@@ -22666,11 +22737,12 @@
             ]
         },
         "user_template": {},
-        "label": "vrpbltw"
+        "label": "vrpbltw",
+        "index": 71
     },
     {
         "title": "High-Altitude Weather Station Resupply and Sensor Retrieval",
-        "desc_split": "Scientists must resupply remote mountain weather stations with maintenance tools (linehaul) and collect data-laden sensors (backhaul). Each station has a narrow time window for access during calm weather conditions. Vehicles are constrained by fuel capacity, requiring return to base before reaching distance limits. The route must balance payload limits\u2014tools are heavy, sensors fragile\u2014while avoiding delays caused by unpredictable weather delays.",
+        "desc_split": "Scientists must resupply remote mountain weather stations with maintenance tools (linehaul) and collect data-laden sensors (backhaul). Each station has a narrow time window for access during calm weather conditions. Vehicles are constrained by fuel capacity, requiring return to base before reaching distance limits. The route must balance payload limits—tools are heavy, sensors fragile—while avoiding delays caused by unpredictable weather delays.",
         "data_template": {
             "num_depots": [
                 1
@@ -23022,7 +23094,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrpbltw"
+        "label": "vrpbltw",
+        "index": 72
     },
     {
         "title": "Winter Sports Rental Equipment Distribution and Timed Collection",
@@ -23224,7 +23297,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrpbltw"
+        "label": "vrpbltw",
+        "index": 73
     },
     {
         "title": "Astronaut Training Facility Gear Delivery and Post-Session Retrieval",
@@ -23536,7 +23610,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrpbltw"
+        "label": "vrpbltw",
+        "index": 74
     },
     {
         "title": "Maritime Research Station Supply and Sample Collection",
@@ -23716,7 +23791,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrpbltw"
+        "label": "vrpbltw",
+        "index": 75
     },
     {
         "title": "Aircraft Maintenance Parts Delivery and Recycling",
@@ -24017,7 +24093,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrpbltw"
+        "label": "vrpbltw",
+        "index": 76
     },
     {
         "title": "Urban Vertical Farm Nutrient Delivery and Compost Retrieval",
@@ -24230,7 +24307,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrpbltw"
+        "label": "vrpbltw",
+        "index": 77
     },
     {
         "title": "Emergency Blood Plasma Transport and Medical Equipment Retrieval",
@@ -24509,7 +24587,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrpbltw"
+        "label": "vrpbltw",
+        "index": 78
     },
     {
         "title": "Museum Artifact Exchange Logistics",
@@ -24832,7 +24911,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrpbltw"
+        "label": "vrpbltw",
+        "index": 79
     },
     {
         "title": "Temporary Art Exhibition Logistics with Strict Deadlines",
@@ -25045,7 +25125,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrpbltw"
+        "label": "vrpbltw",
+        "index": 80
     },
     {
         "title": "Wildfire Firefighting Equipment Deployment and Post-Event Retrieval",
@@ -25357,7 +25438,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrpbltw"
+        "label": "vrpbltw",
+        "index": 81
     },
     {
         "title": "Olympic Infrastructure Setup and Dismantling Logistics",
@@ -25592,11 +25674,12 @@
             ]
         },
         "user_template": {},
-        "label": "vrpbltw"
+        "label": "vrpbltw",
+        "index": 82
     },
     {
         "title": "Film Production Equipment Rentals with Timed Deliveries and Retrievals",
-        "desc_split": "A movie production company requires precise delivery of camera gear, lighting setups, and props to remote film locations (linehaul) based on the shooting schedule\u2019s tight time windows. After filming concludes at each site, trucks must collect the equipment (backhaul) and return it to the warehouse. Vehicles must adhere to daily distance limits to avoid overtime costs and ensure equipment availability for simultaneous shoots at other locations.",
+        "desc_split": "A movie production company requires precise delivery of camera gear, lighting setups, and props to remote film locations (linehaul) based on the shooting schedule’s tight time windows. After filming concludes at each site, trucks must collect the equipment (backhaul) and return it to the warehouse. Vehicles must adhere to daily distance limits to avoid overtime costs and ensure equipment availability for simultaneous shoots at other locations.",
         "data_template": {
             "num_depots": [
                 1
@@ -25893,7 +25976,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrpbltw"
+        "label": "vrpbltw",
+        "index": 83
     },
     {
         "title": "Temporary Medical Field Hospital Supply and Waste Retrieval",
@@ -26128,7 +26212,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrpbltw"
+        "label": "vrpbltw",
+        "index": 84
     },
     {
         "title": "Remote Mining Camp Supply and Empty Container Retrieval",
@@ -26308,7 +26393,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrpbltw"
+        "label": "vrpbltw",
+        "index": 85
     },
     {
         "title": "Urban Food Bank Delivery and Perishable Waste Collection",
@@ -26543,7 +26629,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrpbltw"
+        "label": "vrpbltw",
+        "index": 86
     },
     {
         "title": "Offshore Wind Farm Turbine Maintenance and Tool Retrieval",
@@ -26811,7 +26898,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrpbltw"
+        "label": "vrpbltw",
+        "index": 87
     },
     {
         "title": "Temporary Medical Testing Site Logistics",
@@ -27024,7 +27112,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrpbltw"
+        "label": "vrpbltw",
+        "index": 88
     },
     {
         "title": "High-Altitude Weather Station Resupply and Data Retrieval",
@@ -27270,7 +27359,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrpbltw"
+        "label": "vrpbltw",
+        "index": 89
     },
     {
         "title": "Underwater Cable Maintenance and Equipment Retrieval",
@@ -27579,7 +27669,8 @@
                 2.476452350616455
             ]
         },
-        "label": "vrpbltw"
+        "label": "vrpbltw",
+        "index": 90
     },
     {
         "title": "Satellite Ground Station Equipment Deployment and Data Retrieval",
@@ -28007,7 +28098,8 @@
                 2.756314277648926
             ]
         },
-        "label": "vrpbltw"
+        "label": "vrpbltw",
+        "index": 91
     },
     {
         "title": "Urban Drone Parcel Delivery and Battery Swap Logistics",
@@ -28361,11 +28453,12 @@
                 1.0
             ]
         },
-        "label": "vrpbltw"
+        "label": "vrpbltw",
+        "index": 92
     },
     {
         "title": "Polar Research Expedition Supply Drops and Sample Collection",
-        "desc_split": "A research team in the Arctic requires supplies (<demand_linehaul>) delivered to remote ice stations (<loc_customer>) during summer\u2019s brief window (<time_windows>). After collecting ice core samples (<demand_backhaul>), the team must return to the base camp (<loc_depot>) within <distance_limit> km to avoid encroaching winter storms. Snowmobiles (<capacity> kg capacity) must first drop off equipment, then retrieve samples, ensuring no overload while navigating unpredictable ice conditions.",
+        "desc_split": "A research team in the Arctic requires supplies (<demand_linehaul>) delivered to remote ice stations (<loc_customer>) during summer’s brief window (<time_windows>). After collecting ice core samples (<demand_backhaul>), the team must return to the base camp (<loc_depot>) within <distance_limit> km to avoid encroaching winter storms. Snowmobiles (<capacity> kg capacity) must first drop off equipment, then retrieve samples, ensuring no overload while navigating unpredictable ice conditions.",
         "data_template": {
             "num_depots": [
                 1
@@ -28917,7 +29010,8 @@
                 1.0
             ]
         },
-        "label": "vrpbltw"
+        "label": "vrpbltw",
+        "index": 93
     },
     {
         "title": "High-Speed Rail Maintenance and Component Recycling",
@@ -29203,11 +29297,12 @@
                 2.181433916091919
             ]
         },
-        "label": "vrpbltw"
+        "label": "vrpbltw",
+        "index": 94
     },
     {
         "title": "Offshore Wind Farm Turbine Maintenance and Tool Retrieval",
-        "desc_split": "A renewable energy company must service offshore wind turbines, delivering maintenance tools to repair sites and retrieving\u5e9f\u65e7\u90e8\u4ef6 for recycling. Each turbine has a time window for access based on weather and tidal conditions. Maintenance vessels, with a maximum cargo capacity, must complete all deliveries before initiating pickups to avoid overloading. Routes must stay within a fuel range limit to ensure safe return to the port. The challenge is to balance tool distribution and retrieval while respecting strict operational windows and vessel constraints.",
+        "desc_split": "A renewable energy company must service offshore wind turbines, delivering maintenance tools to repair sites and retrieving废旧部件 for recycling. Each turbine has a time window for access based on weather and tidal conditions. Maintenance vessels, with a maximum cargo capacity, must complete all deliveries before initiating pickups to avoid overloading. Routes must stay within a fuel range limit to ensure safe return to the port. The challenge is to balance tool distribution and retrieval while respecting strict operational windows and vessel constraints.",
         "data_template": {
             "num_depots": [
                 1
@@ -29416,11 +29511,12 @@
             ]
         },
         "user_template": {},
-        "label": "vrpbltw"
+        "label": "vrpbltw",
+        "index": 95
     },
     {
         "title": "Arctic Research Station Resupply and Data Retrieval",
-        "desc_split": "A polar research team must resupply remote Arctic stations with scientific equipment and retrieve critical data modules for analysis. Each station has a narrow time window for access due to extreme daylight conditions and icebreaker availability. The icebreaker\u2019s cargo capacity is limited, and its route must not exceed a distance threshold to conserve fuel. Deliveries must precede pickups to avoid exceeding weight limits, while ensuring all stations are serviced before harsh winter conditions return.",
+        "desc_split": "A polar research team must resupply remote Arctic stations with scientific equipment and retrieve critical data modules for analysis. Each station has a narrow time window for access due to extreme daylight conditions and icebreaker availability. The icebreaker’s cargo capacity is limited, and its route must not exceed a distance threshold to conserve fuel. Deliveries must precede pickups to avoid exceeding weight limits, while ensuring all stations are serviced before harsh winter conditions return.",
         "data_template": {
             "num_depots": [
                 1
@@ -29761,7 +29857,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrpbltw"
+        "label": "vrpbltw",
+        "index": 96
     },
     {
         "title": "Data Center Hardware Deployment and E-Waste Recycling",
@@ -29985,11 +30082,12 @@
             ]
         },
         "user_template": {},
-        "label": "vrpbltw"
+        "label": "vrpbltw",
+        "index": 97
     },
     {
         "title": "Electric Vehicle Charging Station Maintenance and Component Retrieval",
-        "desc_split": "A network of EV charging stations requires urgent part replacements and faulty component collection. Technicians must deliver replacement parts to stations during their designated service windows, then return to the depot with defective hardware. Each van has limited space and range, so technicians must prioritize deliveries before pickups and ensure routes stay within the vehicle\u2019s battery limit. The goal is to maximize station uptime while minimizing travel distance and adhering to strict operational timelines.",
+        "desc_split": "A network of EV charging stations requires urgent part replacements and faulty component collection. Technicians must deliver replacement parts to stations during their designated service windows, then return to the depot with defective hardware. Each van has limited space and range, so technicians must prioritize deliveries before pickups and ensure routes stay within the vehicle’s battery limit. The goal is to maximize station uptime while minimizing travel distance and adhering to strict operational timelines.",
         "data_template": {
             "num_depots": [
                 1
@@ -30308,7 +30406,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrpbltw"
+        "label": "vrpbltw",
+        "index": 98
     },
     {
         "title": "Film Production Equipment Rental and Set-Specific Retrieval",
@@ -30609,6 +30708,7 @@
             ]
         },
         "user_template": {},
-        "label": "vrpbltw"
+        "label": "vrpbltw",
+        "index": 99
     }
 ]

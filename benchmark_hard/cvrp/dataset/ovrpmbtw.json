@@ -1,6 +1,6 @@
 [
     {
-        "title": "Farmer\u2019s Market Produce Delivery and Organic Waste Collection",
+        "title": "Farmer’s Market Produce Delivery and Organic Waste Collection",
         "desc_split": "A cooperative needs to deliver fresh produce to farmers' markets (<loc_customer>) while also collecting organic waste from those same locations for composting. Trucks depart from a central warehouse (<loc_depot>) with a maximum capacity (<capacity>), balancing both deliveries and pickups. Markets operate during specific hours (<time_windows>), requiring timely arrivals. The goal is to design routes that efficiently mix delivery and pickup stops in any order, ensure all produce is delivered and waste collected within time windows, and end routes at the last customer without returning to the depot.",
         "data_template": {
             "num_depots": [
@@ -348,7 +348,8 @@
                 ]
             ]
         },
-        "label": "ovrpmbtw"
+        "label": "ovrpmbtw",
+        "index": 0
     },
     {
         "title": "Construction Material Delivery and Scrap Metal Pickup",
@@ -826,11 +827,12 @@
                 1.0
             ]
         },
-        "label": "ovrpmbtw"
+        "label": "ovrpmbtw",
+        "index": 1
     },
     {
         "title": "E-Commerce Package Delivery and Return Logistics",
-        "desc_split": "An online retailer\u2019s trucks depart from a distribution center (<loc_depot>) to deliver new packages and collect returned items from customers (<loc_customer>). Customers specify preferred time windows (<time_windows>) for service. The challenge is to balance delivery and pickup demands across vehicles (<capacity>), ensuring no overloads while respecting timing constraints. Routes should be designed to conclude at the last customer stop, eliminating return journeys to the depot.",
+        "desc_split": "An online retailer’s trucks depart from a distribution center (<loc_depot>) to deliver new packages and collect returned items from customers (<loc_customer>). Customers specify preferred time windows (<time_windows>) for service. The challenge is to balance delivery and pickup demands across vehicles (<capacity>), ensuring no overloads while respecting timing constraints. Routes should be designed to conclude at the last customer stop, eliminating return journeys to the depot.",
         "data_template": {
             "num_depots": [
                 1
@@ -1158,7 +1160,8 @@
                 1.0
             ]
         },
-        "label": "ovrpmbtw"
+        "label": "ovrpmbtw",
+        "index": 2
     },
     {
         "title": "Meal Delivery and Food Waste Recovery",
@@ -1541,7 +1544,8 @@
                 1.0
             ]
         },
-        "label": "ovrpmbtw"
+        "label": "ovrpmbtw",
+        "index": 3
     },
     {
         "title": "Business Recycling Pickup and Processing Facility Transport",
@@ -1797,7 +1801,8 @@
                 1.0
             ]
         },
-        "label": "ovrpmbtw"
+        "label": "ovrpmbtw",
+        "index": 4
     },
     {
         "title": "Pharmaceutical Cold Chain Delivery and Returns",
@@ -1977,7 +1982,8 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpmbtw"
+        "label": "ovrpmbtw",
+        "index": 5
     },
     {
         "title": "Rental Equipment Delivery and Pickup for Construction Sites",
@@ -2179,11 +2185,12 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpmbtw"
+        "label": "ovrpmbtw",
+        "index": 6
     },
     {
         "title": "Same-Day Courier Service with Flexible Routes",
-        "desc_split": "A courier service provides urgent same-day delivery and pickup for parcels, with customers setting time windows for availability. Couriers\u2019 vehicles must handle mixed tasks (deliveries and pickups) in any order while staying under capacity limits. Routes are designed to conclude at the final stop, ensuring all tasks are completed within specified time frames while maximizing vehicle utilization and minimizing detours.",
+        "desc_split": "A courier service provides urgent same-day delivery and pickup for parcels, with customers setting time windows for availability. Couriers’ vehicles must handle mixed tasks (deliveries and pickups) in any order while staying under capacity limits. Routes are designed to conclude at the final stop, ensuring all tasks are completed within specified time frames while maximizing vehicle utilization and minimizing detours.",
         "data_template": {
             "num_depots": [
                 1
@@ -2370,7 +2377,8 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpmbtw"
+        "label": "ovrpmbtw",
+        "index": 7
     },
     {
         "title": "Scheduled Waste Container Exchange Logistics",
@@ -2561,7 +2569,8 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpmbtw"
+        "label": "ovrpmbtw",
+        "index": 8
     },
     {
         "title": "Event Equipment Deployment and Retrieval",
@@ -2928,7 +2937,8 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpmbtw"
+        "label": "ovrpmbtw",
+        "index": 9
     },
     {
         "title": "Home Appliance Delivery and Pickup Service",
@@ -3119,7 +3129,8 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpmbtw"
+        "label": "ovrpmbtw",
+        "index": 10
     },
     {
         "title": "Event Catering and Equipment Logistics",
@@ -3299,10 +3310,11 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpmbtw"
+        "label": "ovrpmbtw",
+        "index": 11
     },
     {
-        "title": "Online Retailer\u2019s Same-Day Delivery and Returns with Time Windows",
+        "title": "Online Retailer’s Same-Day Delivery and Returns with Time Windows",
         "desc_split": "A fast-fashion retailer offers same-day delivery of clothing orders and returns pick-up in the same visit. Customers select time windows (TW) for doorstep service. Delivery vans (C) must balance space for outgoing packages (linehaul) and incoming returns (backhaul), ensuring neither exceeds vehicle capacity. Routes terminate at the last stop (O), and drivers may alternate between drop-offs and pickups (MB) to maximize efficiency.",
         "data_template": {
             "num_depots": [
@@ -3468,7 +3480,8 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpmbtw"
+        "label": "ovrpmbtw",
+        "index": 12
     },
     {
         "title": "Medical Equipment Rental and Collection",
@@ -3626,11 +3639,12 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpmbtw"
+        "label": "ovrpmbtw",
+        "index": 13
     },
     {
         "title": "Municipal Recycling Collection and Drop-off Points",
-        "desc_split": "A city\u2019s recycling program deploys trucks to collect household recyclables (backhaul) and deliver sorted materials to processing centers (linehaul). Residential pickups (TW) are scheduled during morning or evening hours, while drop-offs require daytime facility access. Vehicles (C) must balance cargo weights and volumes, with drivers choosing route order (MB) to minimize detours. Routes conclude at the final facility (O), avoiding unnecessary return trips.",
+        "desc_split": "A city’s recycling program deploys trucks to collect household recyclables (backhaul) and deliver sorted materials to processing centers (linehaul). Residential pickups (TW) are scheduled during morning or evening hours, while drop-offs require daytime facility access. Vehicles (C) must balance cargo weights and volumes, with drivers choosing route order (MB) to minimize detours. Routes conclude at the final facility (O), avoiding unnecessary return trips.",
         "data_template": {
             "num_depots": [
                 1
@@ -3784,7 +3798,8 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpmbtw"
+        "label": "ovrpmbtw",
+        "index": 14
     },
     {
         "title": "Perishable Grocery Delivery and Compost Pickup",
@@ -4157,11 +4172,12 @@
                 0.0
             ]
         },
-        "label": "ovrpmbtw"
+        "label": "ovrpmbtw",
+        "index": 15
     },
     {
         "title": "Event Rental Equipment Deployment and Post-Event Retrieval",
-        "desc_split": "An event rental company deploys trucks (<capacity>) from a storage facility (<loc_depot>) to set up temporary stages, chairs, and AV equipment for festivals and corporate events. Each event site (<loc_customer>) has a linehaul demand (<demand_linehaul>) for setup materials and a backhaul demand (<demand_backhaul>) for equipment retrieval after the event. Time windows are critical: setups must finish before event start times, and pickups must occur within a narrow post-event window to avoid fines. Trucks can intermingle deliveries and pickups but must respect each location\u2019s schedule, ending routes at the last served site.",
+        "desc_split": "An event rental company deploys trucks (<capacity>) from a storage facility (<loc_depot>) to set up temporary stages, chairs, and AV equipment for festivals and corporate events. Each event site (<loc_customer>) has a linehaul demand (<demand_linehaul>) for setup materials and a backhaul demand (<demand_backhaul>) for equipment retrieval after the event. Time windows are critical: setups must finish before event start times, and pickups must occur within a narrow post-event window to avoid fines. Trucks can intermingle deliveries and pickups but must respect each location’s schedule, ending routes at the last served site.",
         "data_template": {
             "num_depots": [
                 1
@@ -4510,7 +4526,8 @@
                 0.1666666716337204
             ]
         },
-        "label": "ovrpmbtw"
+        "label": "ovrpmbtw",
+        "index": 16
     },
     {
         "title": "Medical Lab Sample Collection and Emergency Kit Delivery",
@@ -4865,11 +4882,12 @@
                 0.0
             ]
         },
-        "label": "ovrpmbtw"
+        "label": "ovrpmbtw",
+        "index": 17
     },
     {
         "title": "Tech Support Laptop Delivery and Faulty Unit Collection",
-        "desc_split": "A tech support team provides on-site laptop repairs by delivering replacement units (<demand_linehaul>) and collecting faulty devices (<demand_backhaul>) for recycling. Each customer (<loc_customer>) specifies a time window for service (e.g., office hours for businesses or evenings for households). Vehicles (<capacity>) must balance load constraints\u2014new laptops are lighter than bulky returned units\u2014and can choose any stop sequence as long as time windows are met. Technicians finish routes at the last customer\u2019s location to reduce idle travel.",
+        "desc_split": "A tech support team provides on-site laptop repairs by delivering replacement units (<demand_linehaul>) and collecting faulty devices (<demand_backhaul>) for recycling. Each customer (<loc_customer>) specifies a time window for service (e.g., office hours for businesses or evenings for households). Vehicles (<capacity>) must balance load constraints—new laptops are lighter than bulky returned units—and can choose any stop sequence as long as time windows are met. Technicians finish routes at the last customer’s location to reduce idle travel.",
         "data_template": {
             "num_depots": [
                 1
@@ -5144,11 +5162,12 @@
                 1.0
             ]
         },
-        "label": "ovrpmbtw"
+        "label": "ovrpmbtw",
+        "index": 18
     },
     {
         "title": "Winery Bottle Delivery and Cork Recycling Pickup",
-        "desc_split": "A winery distributes wine bottles (<demand_linehaul>) to retail partners while collecting used corks (<demand_backhaul>) for eco-friendly recycling. Retailers demand deliveries before opening hours to stock shelves, and cork pickups must occur during their weekly waste collection periods. Trucks (<capacity>) must manage mixed loads\u2014bottles are fragile and space-heavy, while corks are lightweight but voluminous. Routes can alternate deliveries and pickups freely but must respect each stop\u2019s time window, with drivers ending their day at the final customer\u2019s location.",
+        "desc_split": "A winery distributes wine bottles (<demand_linehaul>) to retail partners while collecting used corks (<demand_backhaul>) for eco-friendly recycling. Retailers demand deliveries before opening hours to stock shelves, and cork pickups must occur during their weekly waste collection periods. Trucks (<capacity>) must manage mixed loads—bottles are fragile and space-heavy, while corks are lightweight but voluminous. Routes can alternate deliveries and pickups freely but must respect each stop’s time window, with drivers ending their day at the final customer’s location.",
         "data_template": {
             "num_depots": [
                 1
@@ -5538,11 +5557,12 @@
                 1.0
             ]
         },
-        "label": "ovrpmbtw"
+        "label": "ovrpmbtw",
+        "index": 19
     },
     {
         "title": "Home Healthcare Supplies Delivery and Equipment Retrieval",
-        "desc_split": "A home healthcare provider must deliver medical supplies like oxygen tanks to patients\u2019 residences and simultaneously collect used medical equipment (e.g., infusion kits) for sterilization. Each patient\u2019s appointment must start within their specified time window (e.g., daytime for elderly patients). The service vehicles, with a maximum load capacity of <capacity> kg, can interleave deliveries and pickups in any sequence. The goal is to minimize travel distance while ensuring all stops are completed within time constraints, with drivers ending their routes at their final destination.",
+        "desc_split": "A home healthcare provider must deliver medical supplies like oxygen tanks to patients’ residences and simultaneously collect used medical equipment (e.g., infusion kits) for sterilization. Each patient’s appointment must start within their specified time window (e.g., daytime for elderly patients). The service vehicles, with a maximum load capacity of <capacity> kg, can interleave deliveries and pickups in any sequence. The goal is to minimize travel distance while ensuring all stops are completed within time constraints, with drivers ending their routes at their final destination.",
         "data_template": {
             "num_depots": [
                 1
@@ -5898,7 +5918,8 @@
                 1.0
             ]
         },
-        "label": "ovrpmbtw"
+        "label": "ovrpmbtw",
+        "index": 20
     },
     {
         "title": "Urgent Document Courier with Flexible Routes and Time-Sensitive Pickups",
@@ -6071,7 +6092,8 @@
                 1.0
             ]
         },
-        "label": "ovrpmbtw"
+        "label": "ovrpmbtw",
+        "index": 21
     },
     {
         "title": "Electric Scooter Redistribution and Maintenance Pickup",
@@ -6294,11 +6316,12 @@
                 1.0
             ]
         },
-        "label": "ovrpmbtw"
+        "label": "ovrpmbtw",
+        "index": 22
     },
     {
         "title": "Bakery Delivery and Flour Collection from Partner Stores",
-        "desc_split": "A bakery delivers freshly baked goods to partner grocery stores and collects empty flour sacks for reuse. Stores mandate delivery windows (e.g., early mornings before opening) and pickup times aligned with their inventory cycles. The bakery\u2019s vans (<capacity> kg capacity) must balance load constraints while sequencing stops in any order. Routes end at the farthest store to avoid unnecessary backtracking, ensuring timely service and efficient flour recycling.",
+        "desc_split": "A bakery delivers freshly baked goods to partner grocery stores and collects empty flour sacks for reuse. Stores mandate delivery windows (e.g., early mornings before opening) and pickup times aligned with their inventory cycles. The bakery’s vans (<capacity> kg capacity) must balance load constraints while sequencing stops in any order. Routes end at the farthest store to avoid unnecessary backtracking, ensuring timely service and efficient flour recycling.",
         "data_template": {
             "num_depots": [
                 1
@@ -6665,7 +6688,8 @@
                 1.0
             ]
         },
-        "label": "ovrpmbtw"
+        "label": "ovrpmbtw",
+        "index": 23
     },
     {
         "title": "Agricultural Feed Delivery and Manure Collection",
@@ -6968,7 +6992,8 @@
                 1.0
             ]
         },
-        "label": "ovrpmbtw"
+        "label": "ovrpmbtw",
+        "index": 24
     },
     {
         "title": "Hotel Linen Service with Time-Windowed Pickups and Deliveries",
@@ -7280,11 +7305,12 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpmbtw"
+        "label": "ovrpmbtw",
+        "index": 25
     },
     {
         "title": "IT Hardware Deployment and Recycling Pickup",
-        "desc_split": "An IT solutions firm deploys new servers and monitors to corporate offices while retrieving outdated equipment for recycling. Offices demand specific time windows (e.g., during business hours or after-hours maintenance slots). Each truck must manage mixed payloads\u2014delivering heavy hardware and hauling back e-waste\u2014without exceeding capacity limits. Routes are open-ended, allowing drivers to conclude at their last stop. The goal is to sequence deliveries and pickups efficiently to avoid delays, ensure compliance with environmental regulations, and reduce idle time during mandatory wait periods at client sites.",
+        "desc_split": "An IT solutions firm deploys new servers and monitors to corporate offices while retrieving outdated equipment for recycling. Offices demand specific time windows (e.g., during business hours or after-hours maintenance slots). Each truck must manage mixed payloads—delivering heavy hardware and hauling back e-waste—without exceeding capacity limits. Routes are open-ended, allowing drivers to conclude at their last stop. The goal is to sequence deliveries and pickups efficiently to avoid delays, ensure compliance with environmental regulations, and reduce idle time during mandatory wait periods at client sites.",
         "data_template": {
             "num_depots": [
                 1
@@ -7438,7 +7464,8 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpmbtw"
+        "label": "ovrpmbtw",
+        "index": 26
     },
     {
         "title": "Pharmaceutical Drug Delivery and Expired Medication Collection",
@@ -7651,11 +7678,12 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpmbtw"
+        "label": "ovrpmbtw",
+        "index": 27
     },
     {
         "title": "Meal Kit Delivery with Compostable Waste Retrieval",
-        "desc_split": "A meal kit subscription service delivers fresh ingredients to customers\u2019 homes and collects compostable packaging for organic recycling. Customers specify preferred delivery windows (e.g., workday evenings or weekends). Trucks must balance the weight of perishables (linehaul) with the bulk of returned packaging (backhaul) without overloading. Routes end at the last delivery/pickup point. The challenge is to synchronize timing with customer availability, minimize refrigeration energy use during delays, and maximize truck efficiency by clustering stops with complementary load requirements.",
+        "desc_split": "A meal kit subscription service delivers fresh ingredients to customers’ homes and collects compostable packaging for organic recycling. Customers specify preferred delivery windows (e.g., workday evenings or weekends). Trucks must balance the weight of perishables (linehaul) with the bulk of returned packaging (backhaul) without overloading. Routes end at the last delivery/pickup point. The challenge is to synchronize timing with customer availability, minimize refrigeration energy use during delays, and maximize truck efficiency by clustering stops with complementary load requirements.",
         "data_template": {
             "num_depots": [
                 1
@@ -7864,11 +7892,12 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpmbtw"
+        "label": "ovrpmbtw",
+        "index": 28
     },
     {
         "title": "Craft Brewery Keg Delivery and Empty Keg Pickup",
-        "desc_split": "A craft brewery distributes full kegs to bars and restaurants while retrieving empty kegs for sterilization. Each venue requires deliveries during specific operating hours (e.g., pre-opening or post-closing). Trucks must manage the mixed task of offloading heavy kegs (linehaul) and hauling empties (backhaul) within capacity constraints. Routes conclude at the final stop, with drivers dispersing to nearby facilities for keg cleaning. The solution must account for variable keg weights, time-sensitive pickup/drop-off windows, and the geographic spread of clients to reduce total mileage and CO\u2082 emissions.",
+        "desc_split": "A craft brewery distributes full kegs to bars and restaurants while retrieving empty kegs for sterilization. Each venue requires deliveries during specific operating hours (e.g., pre-opening or post-closing). Trucks must manage the mixed task of offloading heavy kegs (linehaul) and hauling empties (backhaul) within capacity constraints. Routes conclude at the final stop, with drivers dispersing to nearby facilities for keg cleaning. The solution must account for variable keg weights, time-sensitive pickup/drop-off windows, and the geographic spread of clients to reduce total mileage and CO₂ emissions.",
         "data_template": {
             "num_depots": [
                 1
@@ -8187,11 +8216,12 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpmbtw"
+        "label": "ovrpmbtw",
+        "index": 29
     },
     {
         "title": "Event Logistics for Music Festivals and Trade Shows",
-        "desc_split": "A festival organizer must deploy sound systems, stages, and equipment to multiple venues (<loc_customer>) for events with strict setup deadlines (<time_windows>). After events conclude, rented gear must be collected. Vehicles (<capacity>) can mix deliveries (e.g., speakers) and pickups (e.g., tents) in any sequence, as long as total load stays within capacity. Each venue\u2019s setup and teardown windows must be respected, and trucks finish at their last stop without returning to the depot (<loc_depot>).",
+        "desc_split": "A festival organizer must deploy sound systems, stages, and equipment to multiple venues (<loc_customer>) for events with strict setup deadlines (<time_windows>). After events conclude, rented gear must be collected. Vehicles (<capacity>) can mix deliveries (e.g., speakers) and pickups (e.g., tents) in any sequence, as long as total load stays within capacity. Each venue’s setup and teardown windows must be respected, and trucks finish at their last stop without returning to the depot (<loc_depot>).",
         "data_template": {
             "num_depots": [
                 1
@@ -8462,11 +8492,12 @@
                 ]
             ]
         },
-        "label": "ovrpmbtw"
+        "label": "ovrpmbtw",
+        "index": 30
     },
     {
         "title": "Home Improvement Contractor Services",
-        "desc_split": "A home renovation company delivers construction materials (linehaul) to clients\u2019 homes and collects old fixtures (backhaul) for recycling. Each job has a scheduled service window (<time_windows>) to accommodate homeowners\u2019 availability. Contractors use vans (<capacity>) that can handle mixed tasks (e.g., dropping off lumber and picking up demolition debris) in any order. Routes end at the final customer site to minimize idle time.",
+        "desc_split": "A home renovation company delivers construction materials (linehaul) to clients’ homes and collects old fixtures (backhaul) for recycling. Each job has a scheduled service window (<time_windows>) to accommodate homeowners’ availability. Contractors use vans (<capacity>) that can handle mixed tasks (e.g., dropping off lumber and picking up demolition debris) in any order. Routes end at the final customer site to minimize idle time.",
         "data_template": {
             "num_depots": [
                 1
@@ -8955,7 +8986,8 @@
                 1.0
             ]
         },
-        "label": "ovrpmbtw"
+        "label": "ovrpmbtw",
+        "index": 31
     },
     {
         "title": "Automotive Repair Chain Parts Supply and Collection",
@@ -9343,11 +9375,12 @@
                 ]
             ]
         },
-        "label": "ovrpmbtw"
+        "label": "ovrpmbtw",
+        "index": 32
     },
     {
         "title": "Academic Textbook Distribution and Collection",
-        "desc_split": "A university supplies course materials (<demand_linehaul>) to campus departments during registration periods and collects returned books (<demand_backhaul>) at semester\u2019s end. Delivery and pickup routes must respect time windows (<time_windows>) tied to academic deadlines. Trucks (<capacity>) can mix tasks (e.g., dropping off new books and collecting used ones) in any order. Drivers end routes at the final stop to avoid redundant travel.",
+        "desc_split": "A university supplies course materials (<demand_linehaul>) to campus departments during registration periods and collects returned books (<demand_backhaul>) at semester’s end. Delivery and pickup routes must respect time windows (<time_windows>) tied to academic deadlines. Trucks (<capacity>) can mix tasks (e.g., dropping off new books and collecting used ones) in any order. Drivers end routes at the final stop to avoid redundant travel.",
         "data_template": {
             "num_depots": [
                 1
@@ -9626,7 +9659,8 @@
                 1.0
             ]
         },
-        "label": "ovrpmbtw"
+        "label": "ovrpmbtw",
+        "index": 33
     },
     {
         "title": "Seasonal Holiday Decoration Redistribution",
@@ -10218,7 +10252,8 @@
                 1.0
             ]
         },
-        "label": "ovrpmbtw"
+        "label": "ovrpmbtw",
+        "index": 34
     },
     {
         "title": "Food Bank Delivery and Grocery Donation Pickup",
@@ -10431,7 +10466,8 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpmbtw"
+        "label": "ovrpmbtw",
+        "index": 35
     },
     {
         "title": "Medical Sample Transport and Lab Equipment Collection",
@@ -10611,11 +10647,12 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpmbtw"
+        "label": "ovrpmbtw",
+        "index": 36
     },
     {
         "title": "Floral Delivery and Compostable Waste Pickup",
-        "desc_split": "A florist delivers fresh floral arrangements to customers (deliveries) and collects wilted flowers for composting (pickups). Each truck\u2019s capacity is strictly limited. The sequence of stops is flexible, but must align with time windows set by clients to ensure flower freshness and timely waste collection. Routes terminate at the final stop to minimize travel distance.",
+        "desc_split": "A florist delivers fresh floral arrangements to customers (deliveries) and collects wilted flowers for composting (pickups). Each truck’s capacity is strictly limited. The sequence of stops is flexible, but must align with time windows set by clients to ensure flower freshness and timely waste collection. Routes terminate at the final stop to minimize travel distance.",
         "data_template": {
             "num_depots": [
                 1
@@ -10857,7 +10894,8 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpmbtw"
+        "label": "ovrpmbtw",
+        "index": 37
     },
     {
         "title": "Film Production Equipment Delivery and Set Prop Pickup",
@@ -11202,7 +11240,8 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpmbtw"
+        "label": "ovrpmbtw",
+        "index": 38
     },
     {
         "title": "Tech Device Delivery and E-Waste Collection",
@@ -11536,7 +11575,8 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpmbtw"
+        "label": "ovrpmbtw",
+        "index": 39
     },
     {
         "title": "Agricultural Input Delivery and Crop Waste Collection",
@@ -11749,7 +11789,8 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpmbtw"
+        "label": "ovrpmbtw",
+        "index": 40
     },
     {
         "title": "Meal Delivery Service with Reusable Container Retrieval",
@@ -11984,7 +12025,8 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpmbtw"
+        "label": "ovrpmbtw",
+        "index": 41
     },
     {
         "title": "Car Rental Fleet Redistribution and Maintenance Pickup",
@@ -12307,7 +12349,8 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpmbtw"
+        "label": "ovrpmbtw",
+        "index": 42
     },
     {
         "title": "HVAC Installation Delivery and Old Unit Recycling Pickup",
@@ -12553,7 +12596,8 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpmbtw"
+        "label": "ovrpmbtw",
+        "index": 43
     },
     {
         "title": "Data Center Hardware Delivery and E-Waste Recycling Pickup",
@@ -12788,7 +12832,8 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpmbtw"
+        "label": "ovrpmbtw",
+        "index": 44
     },
     {
         "title": "Electronics Recycling and Delivery Service",
@@ -13107,11 +13152,12 @@
                 ]
             ]
         },
-        "label": "ovrpmbtw"
+        "label": "ovrpmbtw",
+        "index": 45
     },
     {
         "title": "Furniture Delivery and Reclamation Service",
-        "desc_split": "A furniture retailer offers a \"swap\" service: delivering new furniture to customers while collecting their old pieces for donation or recycling. Trucks start from the warehouse <loc_depot> and must respect each customer\u2019s time window <time_windows> for availability. The mixed load of new furniture (demand: <demand_linehaul>) and bulky reclaimed items (demand: <demand_backhaul>) must not exceed the truck\u2019s capacity <capacity>. Routes may alternate between deliveries and pickups, with drivers concluding their day at the final stop to minimize operational costs.",
+        "desc_split": "A furniture retailer offers a \"swap\" service: delivering new furniture to customers while collecting their old pieces for donation or recycling. Trucks start from the warehouse <loc_depot> and must respect each customer’s time window <time_windows> for availability. The mixed load of new furniture (demand: <demand_linehaul>) and bulky reclaimed items (demand: <demand_backhaul>) must not exceed the truck’s capacity <capacity>. Routes may alternate between deliveries and pickups, with drivers concluding their day at the final stop to minimize operational costs.",
         "data_template": {
             "num_depots": [
                 1
@@ -13498,7 +13544,8 @@
                 1.0
             ]
         },
-        "label": "ovrpmbtw"
+        "label": "ovrpmbtw",
+        "index": 46
     },
     {
         "title": "Construction Equipment Rental and Retrieval with Time Windows",
@@ -13838,11 +13885,12 @@
                 ]
             ]
         },
-        "label": "ovrpmbtw"
+        "label": "ovrpmbtw",
+        "index": 47
     },
     {
         "title": "Temporary Storage Container Deployment and Retrieval",
-        "desc_split": "A logistics provider deploys storage containers to businesses needing short-term space (e.g., during renovations) and retrieves them after use. Containers are heavy and space-consuming, so trucks must adhere to capacity limits <capacity>. Customers specify delivery deadlines <time_windows_open> and return windows <time_windows_close>. Trucks can mix deployment and retrieval stops, such as dropping off containers for a new client while collecting empties from another. Drivers finish at the last container\u2019s location, avoiding redundant return trips.",
+        "desc_split": "A logistics provider deploys storage containers to businesses needing short-term space (e.g., during renovations) and retrieves them after use. Containers are heavy and space-consuming, so trucks must adhere to capacity limits <capacity>. Customers specify delivery deadlines <time_windows_open> and return windows <time_windows_close>. Trucks can mix deployment and retrieval stops, such as dropping off containers for a new client while collecting empties from another. Drivers finish at the last container’s location, avoiding redundant return trips.",
         "data_template": {
             "num_depots": [
                 1
@@ -14308,11 +14356,12 @@
                 ]
             ]
         },
-        "label": "ovrpmbtw"
+        "label": "ovrpmbtw",
+        "index": 48
     },
     {
         "title": "Car Sharing Vehicle Deployment and Retrieval with Time Windows",
-        "desc_split": "A car-sharing platform uses trucks to deploy vehicles to pickup points <loc_customer> by members\u2019 requested times <time_windows_open> and collect returned cars before they expire from use <time_windows_close>. Each truck can carry up to <capacity> vehicles (e.g., compact cars) and may combine deployment and retrieval tasks. For instance, a truck might deliver three cars to a downtown hub, then pick up two returned vehicles from an airport lot. Routes end at the final stop to streamline operations and reduce fuel costs.  \n```  \n\nEach scenario integrates **C** (capacity constraints), **O** (open routes), **MB** (mixed deliveries and pickups), and **TW** (time windows), while avoiding excluded constraints like backhaul sequencing rules or multi-depot setups. The descriptions emphasize flexibility in route sequencing and real-world operational challenges.",
+        "desc_split": "A car-sharing platform uses trucks to deploy vehicles to pickup points <loc_customer> by members’ requested times <time_windows_open> and collect returned cars before they expire from use <time_windows_close>. Each truck can carry up to <capacity> vehicles (e.g., compact cars) and may combine deployment and retrieval tasks. For instance, a truck might deliver three cars to a downtown hub, then pick up two returned vehicles from an airport lot. Routes end at the final stop to streamline operations and reduce fuel costs.  \n```  \n\nEach scenario integrates **C** (capacity constraints), **O** (open routes), **MB** (mixed deliveries and pickups), and **TW** (time windows), while avoiding excluded constraints like backhaul sequencing rules or multi-depot setups. The descriptions emphasize flexibility in route sequencing and real-world operational challenges.",
         "data_template": {
             "num_depots": [
                 1
@@ -14939,7 +14988,8 @@
                 1.0
             ]
         },
-        "label": "ovrpmbtw"
+        "label": "ovrpmbtw",
+        "index": 49
     },
     {
         "title": "Mobile Health Clinic Supply and Sample Collection",
@@ -15141,7 +15191,8 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpmbtw"
+        "label": "ovrpmbtw",
+        "index": 50
     },
     {
         "title": "University Campus Book Delivery and Textbook Return Logistics",
@@ -15376,7 +15427,8 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpmbtw"
+        "label": "ovrpmbtw",
+        "index": 51
     },
     {
         "title": "IT Hardware Delivery and E-Waste Collection with Time Windows",
@@ -15644,7 +15696,8 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpmbtw"
+        "label": "ovrpmbtw",
+        "index": 52
     },
     {
         "title": "Event Venue Setup and Equipment Retrieval with Time Constraints",
@@ -15879,7 +15932,8 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpmbtw"
+        "label": "ovrpmbtw",
+        "index": 53
     },
     {
         "title": "Solar Panel Installation and Recycling Logistics with Time Windows",
@@ -16136,7 +16190,8 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpmbtw"
+        "label": "ovrpmbtw",
+        "index": 54
     },
     {
         "title": "School Supplies Redistribution and Textbook Collection",
@@ -16513,7 +16568,8 @@
                 1.0
             ]
         },
-        "label": "ovrpmbtw"
+        "label": "ovrpmbtw",
+        "index": 55
     },
     {
         "title": "Airport Ground Handling for Time-Sensitive Cargo",
@@ -16904,11 +16960,12 @@
                 ]
             ]
         },
-        "label": "ovrpmbtw"
+        "label": "ovrpmbtw",
+        "index": 56
     },
     {
         "title": "Utility Meter Deployment and Recycling Logistics",
-        "desc_split": "A utility company rolls out smart meters to residential areas while recycling outdated analog meters. Technicians in service vans (<capacity>) start from a depot (<loc_depot>), delivering new meters (<demand_linehaul>) and retrieving old ones (<demand_backhaul>). Customers request installations during specific time windows (<time_windows>), often aligned with work hours or technician availability. Vans must balance meter sizes and weights to avoid overloading, with pickups and deliveries sequenced flexibly. Routes terminate at the last customer\u2019s location, reducing idle return travel.",
+        "desc_split": "A utility company rolls out smart meters to residential areas while recycling outdated analog meters. Technicians in service vans (<capacity>) start from a depot (<loc_depot>), delivering new meters (<demand_linehaul>) and retrieving old ones (<demand_backhaul>). Customers request installations during specific time windows (<time_windows>), often aligned with work hours or technician availability. Vans must balance meter sizes and weights to avoid overloading, with pickups and deliveries sequenced flexibly. Routes terminate at the last customer’s location, reducing idle return travel.",
         "data_template": {
             "num_depots": [
                 1
@@ -17465,7 +17522,8 @@
                 ]
             ]
         },
-        "label": "ovrpmbtw"
+        "label": "ovrpmbtw",
+        "index": 57
     },
     {
         "title": "Conference Equipment Rental and Post-Event Recovery",
@@ -17720,7 +17778,8 @@
                 0.0
             ]
         },
-        "label": "ovrpmbtw"
+        "label": "ovrpmbtw",
+        "index": 58
     },
     {
         "title": "Agricultural Pesticide Delivery and Crop Waste Collection",
@@ -18077,7 +18136,8 @@
                 ]
             ]
         },
-        "label": "ovrpmbtw"
+        "label": "ovrpmbtw",
+        "index": 59
     },
     {
         "title": "Offshore Wind Farm Maintenance and Waste Retrieval",
@@ -18301,11 +18361,12 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpmbtw"
+        "label": "ovrpmbtw",
+        "index": 60
     },
     {
         "title": "Airport VIP Ground Support with Time-Sensitive Cargo and Equipment Retrieval",
-        "desc_split": "An airport\u2019s luxury services division must deliver high-priority luggage and perishable cargo to departing private jets while collecting unused equipment from arriving aircraft. Each aircraft\u2019s docking slot has a tight time window (TW) for ground crew access. The specialized vans (C) handle mixed backhauls (MB), such as loading fresh supplies first then unloading outdated materials. Vehicles conclude routes at the last aircraft gate (O), streamlining VIP service efficiency.",
+        "desc_split": "An airport’s luxury services division must deliver high-priority luggage and perishable cargo to departing private jets while collecting unused equipment from arriving aircraft. Each aircraft’s docking slot has a tight time window (TW) for ground crew access. The specialized vans (C) handle mixed backhauls (MB), such as loading fresh supplies first then unloading outdated materials. Vehicles conclude routes at the last aircraft gate (O), streamlining VIP service efficiency.",
         "data_template": {
             "num_depots": [
                 1
@@ -18646,7 +18707,8 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpmbtw"
+        "label": "ovrpmbtw",
+        "index": 61
     },
     {
         "title": "Urban Home Renovation Services with Material Delivery and Debris Collection",
@@ -18958,11 +19020,12 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpmbtw"
+        "label": "ovrpmbtw",
+        "index": 62
     },
     {
         "title": "Maritime Port Container Logistics with Ship-to-Shore Time Windows",
-        "desc_split": "A port operator coordinates container deliveries to outbound cargo ships and pickups of empty containers from inland depots. Each vessel\u2019s berth allocation has a strict time window (TW) for loading/unloading. The port\u2019s reach stackers and trucks (C) handle mixed backhauls (MB), moving full containers to ships while retrieving empties from satellite terminals. Routes terminate at the final destination (O) to optimize quay crane utilization.",
+        "desc_split": "A port operator coordinates container deliveries to outbound cargo ships and pickups of empty containers from inland depots. Each vessel’s berth allocation has a strict time window (TW) for loading/unloading. The port’s reach stackers and trucks (C) handle mixed backhauls (MB), moving full containers to ships while retrieving empties from satellite terminals. Routes terminate at the final destination (O) to optimize quay crane utilization.",
         "data_template": {
             "num_depots": [
                 1
@@ -19303,7 +19366,8 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpmbtw"
+        "label": "ovrpmbtw",
+        "index": 63
     },
     {
         "title": "Enterprise Tech Hardware Rollout with E-Waste Collection",
@@ -19494,7 +19558,8 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpmbtw"
+        "label": "ovrpmbtw",
+        "index": 64
     },
     {
         "title": "Temporary Event Infrastructure Delivery and Post-Event Retrieval with Time Windows",
@@ -19850,7 +19915,8 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpmbtw"
+        "label": "ovrpmbtw",
+        "index": 65
     },
     {
         "title": "Emergency Shelter Supplies Deployment and Waste Collection with Time Constraints",
@@ -20096,11 +20162,12 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpmbtw"
+        "label": "ovrpmbtw",
+        "index": 66
     },
     {
         "title": "University Campus Mobile Lab Equipment Delivery and Sample Retrieval with Time Windows",
-        "desc_split": "A university\u2019s field research program requires transporting lab equipment (e.g., sensors, testing kits) to remote campus locations for environmental studies (linehaul) and collecting soil/water samples afterward (backhaul). Researchers at each site specify time windows for setup and sample collection. Vehicles must optimize routes to handle both deliveries and pickups without exceeding weight limits, ending routes at the final research site to streamline operations.",
+        "desc_split": "A university’s field research program requires transporting lab equipment (e.g., sensors, testing kits) to remote campus locations for environmental studies (linehaul) and collecting soil/water samples afterward (backhaul). Researchers at each site specify time windows for setup and sample collection. Vehicles must optimize routes to handle both deliveries and pickups without exceeding weight limits, ending routes at the final research site to streamline operations.",
         "data_template": {
             "num_depots": [
                 1
@@ -20254,11 +20321,12 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpmbtw"
+        "label": "ovrpmbtw",
+        "index": 67
     },
     {
         "title": "Airport Ground Support Equipment Redistribution and Maintenance Pickup with Time Windows",
-        "desc_split": "An airport\u2019s ground support team must deploy equipment (e.g., boarding bridges, baggage carts) to aircraft gates for arriving flights (linehaul) and retrieve worn-out gear for maintenance (backhaul). Each gate has time windows aligned with flight schedules, and equipment loads must stay within vehicle capacity. Routes conclude at the last gate served to minimize downtime for incoming aircraft.",
+        "desc_split": "An airport’s ground support team must deploy equipment (e.g., boarding bridges, baggage carts) to aircraft gates for arriving flights (linehaul) and retrieve worn-out gear for maintenance (backhaul). Each gate has time windows aligned with flight schedules, and equipment loads must stay within vehicle capacity. Routes conclude at the last gate served to minimize downtime for incoming aircraft.",
         "data_template": {
             "num_depots": [
                 1
@@ -20555,7 +20623,8 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpmbtw"
+        "label": "ovrpmbtw",
+        "index": 68
     },
     {
         "title": "Mobile Healthcare Clinic Supply Delivery and Medical Waste Retrieval with Time Constraints",
@@ -20779,7 +20848,8 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpmbtw"
+        "label": "ovrpmbtw",
+        "index": 69
     },
     {
         "title": "Cruise Ship Provisions Delivery and Waste Retrieval with Time Windows",
@@ -21025,7 +21095,8 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpmbtw"
+        "label": "ovrpmbtw",
+        "index": 70
     },
     {
         "title": "Petrochemical Plant Chemical Delivery and Waste Container Retrieval",
@@ -21359,7 +21430,8 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpmbtw"
+        "label": "ovrpmbtw",
+        "index": 71
     },
     {
         "title": "Temporary Art Installation Material Delivery and Collection",
@@ -21572,7 +21644,8 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpmbtw"
+        "label": "ovrpmbtw",
+        "index": 72
     },
     {
         "title": "Pop-Up Retail Inventory Delivery and Return Logistics",
@@ -21906,7 +21979,8 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpmbtw"
+        "label": "ovrpmbtw",
+        "index": 73
     },
     {
         "title": "Music Venue Equipment Deployment and Retrieval with Time Windows",
@@ -22152,7 +22226,8 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpmbtw"
+        "label": "ovrpmbtw",
+        "index": 74
     },
     {
         "title": "Tech Equipment Rental and Recycling Logistics",
@@ -22474,7 +22549,8 @@
                 ]
             ]
         },
-        "label": "ovrpmbtw"
+        "label": "ovrpmbtw",
+        "index": 75
     },
     {
         "title": "Airport Perishable Cargo and Container Logistics",
@@ -22983,11 +23059,12 @@
                 1.0
             ]
         },
-        "label": "ovrpmbtw"
+        "label": "ovrpmbtw",
+        "index": 76
     },
     {
-        "title": "Mobile Farmers\u2019 Market Services with Compost Collection",
-        "desc_split": "A food cooperative operates pop-up farmers\u2019 markets in urban areas, delivering fresh produce (<demand_linehaul>) to temporary sites (<loc_customer>) and collecting compostable waste (<demand_backhaul>) afterward. Markets operate only during specified hours (<time_windows>), and service times (<service_time>) include unloading and waste collection. Trucks (<capacity> ton capacity) must balance loads of perishables and organic waste without exceeding limits. Routes end at the final market location, allowing drivers to finish their day locally. The challenge is to coordinate deliveries and pickups within tight time windows while optimizing fuel use.",
+        "title": "Mobile Farmers’ Market Services with Compost Collection",
+        "desc_split": "A food cooperative operates pop-up farmers’ markets in urban areas, delivering fresh produce (<demand_linehaul>) to temporary sites (<loc_customer>) and collecting compostable waste (<demand_backhaul>) afterward. Markets operate only during specified hours (<time_windows>), and service times (<service_time>) include unloading and waste collection. Trucks (<capacity> ton capacity) must balance loads of perishables and organic waste without exceeding limits. Routes end at the final market location, allowing drivers to finish their day locally. The challenge is to coordinate deliveries and pickups within tight time windows while optimizing fuel use.",
         "data_template": {
             "num_depots": [
                 1
@@ -23578,11 +23655,12 @@
                 1.0
             ]
         },
-        "label": "ovrpmbtw"
+        "label": "ovrpmbtw",
+        "index": 77
     },
     {
         "title": "Renewable Energy Installation and Retrofit Logistics",
-        "desc_split": "A solar energy company deploys trucks (<capacity> m\u00b3 capacity) to install solar panels (<demand_linehaul>) at remote sites (<loc_customer>) and collect decommissioned equipment (<demand_backhaul>). Each site has a time window (<time_windows>) based on weather forecasts or site accessibility. Service times (<service_time>) vary by installation complexity. Trucks may sequence deliveries and pickups freely but must not overload. Routes conclude at the last site to streamline post-installation inspections. The objective is to minimize travel distance while meeting urgent project deadlines and capacity constraints.",
+        "desc_split": "A solar energy company deploys trucks (<capacity> m³ capacity) to install solar panels (<demand_linehaul>) at remote sites (<loc_customer>) and collect decommissioned equipment (<demand_backhaul>). Each site has a time window (<time_windows>) based on weather forecasts or site accessibility. Service times (<service_time>) vary by installation complexity. Trucks may sequence deliveries and pickups freely but must not overload. Routes conclude at the last site to streamline post-installation inspections. The objective is to minimize travel distance while meeting urgent project deadlines and capacity constraints.",
         "data_template": {
             "num_depots": [
                 1
@@ -23953,11 +24031,12 @@
                 0.16269144415855408
             ]
         },
-        "label": "ovrpmbtw"
+        "label": "ovrpmbtw",
+        "index": 78
     },
     {
         "title": "Seasonal Event Decoration Deployment and Recovery",
-        "desc_split": "An event production company coordinates the setup and teardown of holiday markets and festivals. Trucks (<capacity> m\u00b3) deliver festive decorations (<demand_linehaul>) to venues (<loc_customer>) and recover used materials (<demand_backhaul>). Each event has strict setup (<time_windows_open>) and teardown (<time_windows_close>) windows. Service times (<service_time>) depend on crew availability. Routes must blend deliveries and pickups without exceeding capacity, ending at the final venue to avoid empty returns. The focus is on minimizing delays and optimizing resource reuse across multiple concurrent events.",
+        "desc_split": "An event production company coordinates the setup and teardown of holiday markets and festivals. Trucks (<capacity> m³) deliver festive decorations (<demand_linehaul>) to venues (<loc_customer>) and recover used materials (<demand_backhaul>). Each event has strict setup (<time_windows_open>) and teardown (<time_windows_close>) windows. Service times (<service_time>) depend on crew availability. Routes must blend deliveries and pickups without exceeding capacity, ending at the final venue to avoid empty returns. The focus is on minimizing delays and optimizing resource reuse across multiple concurrent events.",
         "data_template": {
             "num_depots": [
                 1
@@ -24672,7 +24751,8 @@
                 0.17059941589832306
             ]
         },
-        "label": "ovrpmbtw"
+        "label": "ovrpmbtw",
+        "index": 79
     },
     {
         "title": "Medical Oxygen Cylinder Delivery and Recycling Collection",
@@ -24874,7 +24954,8 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpmbtw"
+        "label": "ovrpmbtw",
+        "index": 80
     },
     {
         "title": "Sustainable Construction Material Logistics",
@@ -25054,7 +25135,8 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpmbtw"
+        "label": "ovrpmbtw",
+        "index": 81
     },
     {
         "title": "Event Stage Equipment Deployment and Post-Event Retrieval",
@@ -25355,11 +25437,12 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpmbtw"
+        "label": "ovrpmbtw",
+        "index": 82
     },
     {
         "title": "University Lab Supply Delivery and Hazardous Waste Pickup",
-        "desc_split": "A university\u2019s logistics team delivers chemical reagents and lab equipment to research facilities while collecting expired hazardous materials for disposal. Each van has strict capacity limits (C) for handling both supplies and waste. Deliveries must align with lab operating hours (TW), while pickups require coordination with safety protocols. Routes can terminate at the final lab (O), and the order of stops (MB) must balance load distribution to prevent overloading. The priority is timely service to support research without compromising safety.",
+        "desc_split": "A university’s logistics team delivers chemical reagents and lab equipment to research facilities while collecting expired hazardous materials for disposal. Each van has strict capacity limits (C) for handling both supplies and waste. Deliveries must align with lab operating hours (TW), while pickups require coordination with safety protocols. Routes can terminate at the final lab (O), and the order of stops (MB) must balance load distribution to prevent overloading. The priority is timely service to support research without compromising safety.",
         "data_template": {
             "num_depots": [
                 1
@@ -25579,7 +25662,8 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpmbtw"
+        "label": "ovrpmbtw",
+        "index": 83
     },
     {
         "title": "Temporary Road Safety Equipment Redistribution",
@@ -25781,11 +25865,12 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpmbtw"
+        "label": "ovrpmbtw",
+        "index": 84
     },
     {
         "title": "Urban Recycling Bin Distribution and Collection",
-        "desc_split": "A city\u2019s recycling authority must deliver empty recycling bins to businesses and collect filled ones for processing. Each business has designated time windows for service (e.g., after business hours) to avoid disrupting operations. Recycling trucks with a <capacity> ton capacity must balance the weight of empty bins (deliveries) and collected waste (pickups) without overloading. Routes can end at the last stop, as not all trucks need to return to the central depot. The goal is to optimize fuel efficiency and ensure all bins are swapped within time constraints while respecting vehicle limits.",
+        "desc_split": "A city’s recycling authority must deliver empty recycling bins to businesses and collect filled ones for processing. Each business has designated time windows for service (e.g., after business hours) to avoid disrupting operations. Recycling trucks with a <capacity> ton capacity must balance the weight of empty bins (deliveries) and collected waste (pickups) without overloading. Routes can end at the last stop, as not all trucks need to return to the central depot. The goal is to optimize fuel efficiency and ensure all bins are swapped within time constraints while respecting vehicle limits.",
         "data_template": {
             "num_depots": [
                 1
@@ -26064,7 +26149,8 @@
                 1.0
             ]
         },
-        "label": "ovrpmbtw"
+        "label": "ovrpmbtw",
+        "index": 85
     },
     {
         "title": "EV Charging Station Battery Logistics",
@@ -26402,7 +26488,8 @@
                 1.0
             ]
         },
-        "label": "ovrpmbtw"
+        "label": "ovrpmbtw",
+        "index": 86
     },
     {
         "title": "Temporary Office Setup and Equipment Retrieval",
@@ -26773,7 +26860,8 @@
                 1.0
             ]
         },
-        "label": "ovrpmbtw"
+        "label": "ovrpmbtw",
+        "index": 87
     },
     {
         "title": "Perishable Seafood Delivery and Ice Waste Collection",
@@ -26946,11 +27034,12 @@
                 1.0
             ]
         },
-        "label": "ovrpmbtw"
+        "label": "ovrpmbtw",
+        "index": 88
     },
     {
         "title": "Academic Lab Equipment Rental and Post-Experiment Retrieval",
-        "desc_split": "A university\u2019s equipment rental service delivers lab instruments to research facilities and collects them after experiments. Each lab has time windows for setup (e.g., before experiments begin) and return (after completion). The trucks must manage the weight of delicate equipment (deliveries) and potentially hazardous materials (pickups) within their <capacity> kg limit. Routes can end at the final lab, ensuring timely service while avoiding overloading vehicles.",
+        "desc_split": "A university’s equipment rental service delivers lab instruments to research facilities and collects them after experiments. Each lab has time windows for setup (e.g., before experiments begin) and return (after completion). The trucks must manage the weight of delicate equipment (deliveries) and potentially hazardous materials (pickups) within their <capacity> kg limit. Routes can end at the final lab, ensuring timely service while avoiding overloading vehicles.",
         "data_template": {
             "num_depots": [
                 1
@@ -27163,7 +27252,8 @@
                 1.0
             ]
         },
-        "label": "ovrpmbtw"
+        "label": "ovrpmbtw",
+        "index": 89
     },
     {
         "title": "Urban Vertical Farm Supplies Delivery and Compost Pickup",
@@ -27650,7 +27740,8 @@
                 ]
             ]
         },
-        "label": "ovrpmbtw"
+        "label": "ovrpmbtw",
+        "index": 90
     },
     {
         "title": "Temporary Sports Event Equipment Deployment and Post-Event Retrieval",
@@ -28153,11 +28244,12 @@
                 0.16879038512706757
             ]
         },
-        "label": "ovrpmbtw"
+        "label": "ovrpmbtw",
+        "index": 91
     },
     {
         "title": "Tech Conference AV Equipment Delivery and Post-Event Recovery",
-        "desc_split": "A tech conference requires AV gear, stage setups, and networking booths to be delivered to multiple venues (<loc_customer>). Time windows (<time_windows>) are critical to align with setup schedules. Trucks (<capacity> m\u00b3 capacity) also retrieve used equipment afterward. Mixed delivery/pickup routes allow technicians to optimize paths, avoiding backtracking. Routes conclude at the last venue to streamline post-event logistics, ensuring no truck exceeds its volume or weight limits during mixed-load journeys.",
+        "desc_split": "A tech conference requires AV gear, stage setups, and networking booths to be delivered to multiple venues (<loc_customer>). Time windows (<time_windows>) are critical to align with setup schedules. Trucks (<capacity> m³ capacity) also retrieve used equipment afterward. Mixed delivery/pickup routes allow technicians to optimize paths, avoiding backtracking. Routes conclude at the last venue to streamline post-event logistics, ensuring no truck exceeds its volume or weight limits during mixed-load journeys.",
         "data_template": {
             "num_depots": [
                 1
@@ -28498,7 +28590,8 @@
                 1.0
             ]
         },
-        "label": "ovrpmbtw"
+        "label": "ovrpmbtw",
+        "index": 92
     },
     {
         "title": "Seasonal Holiday Decoration Redistribution and Retrieval",
@@ -28815,7 +28908,8 @@
                 ]
             ]
         },
-        "label": "ovrpmbtw"
+        "label": "ovrpmbtw",
+        "index": 93
     },
     {
         "title": "Disaster Relief Aid Distribution and Hazardous Waste Collection",
@@ -29222,7 +29316,8 @@
                 0.15415187180042267
             ]
         },
-        "label": "ovrpmbtw"
+        "label": "ovrpmbtw",
+        "index": 94
     },
     {
         "title": "Marine Aquarium Supply Delivery and Waste Retrieval",
@@ -29550,7 +29645,8 @@
                 ]
             ]
         },
-        "label": "ovrpmbtw"
+        "label": "ovrpmbtw",
+        "index": 95
     },
     {
         "title": "Automotive Show Vehicle Deployment and Post-Event Retrieval",
@@ -29918,11 +30014,12 @@
                 1.0
             ]
         },
-        "label": "ovrpmbtw"
+        "label": "ovrpmbtw",
+        "index": 96
     },
     {
         "title": "Emergency Blood Plasma Transport and Empty Container Pickup",
-        "desc_split": "Medical transport teams deliver critical blood plasma (<demand_linehaul> liters) to hospitals during emergencies while retrieving expired units and empty cryogenic containers (<demand_backhaul>). Each vehicle\u2019s capacity (<capacity>) must account for both perishable deliveries and sterile pickups. Time windows (<time_windows>) ensure plasma arrives before expiration, with routes ending at the final healthcare facility to avoid unnecessary detours.",
+        "desc_split": "Medical transport teams deliver critical blood plasma (<demand_linehaul> liters) to hospitals during emergencies while retrieving expired units and empty cryogenic containers (<demand_backhaul>). Each vehicle’s capacity (<capacity>) must account for both perishable deliveries and sterile pickups. Time windows (<time_windows>) ensure plasma arrives before expiration, with routes ending at the final healthcare facility to avoid unnecessary detours.",
         "data_template": {
             "num_depots": [
                 1
@@ -30354,7 +30451,8 @@
                 ]
             ]
         },
-        "label": "ovrpmbtw"
+        "label": "ovrpmbtw",
+        "index": 97
     },
     {
         "title": "Urban Farming Equipment Delivery and Compost Collection",
@@ -30586,11 +30684,12 @@
                 1.0
             ]
         },
-        "label": "ovrpmbtw"
+        "label": "ovrpmbtw",
+        "index": 98
     },
     {
         "title": "Rural Healthcare Supplies and Medical Waste Pickup",
-        "desc_split": "Healthcare providers deliver medical kits, vaccines, and equipment (<demand_linehaul> items) to remote clinics while collecting hazardous waste and used supplies (<demand_backhaul>). Each vehicle\u2019s capacity (<capacity>) must balance fragile deliveries with biohazard pickups. Time windows (<time_windows>) align with clinic staff shifts, and routes are open-ended to minimize travel backtracking in sparsely populated areas.",
+        "desc_split": "Healthcare providers deliver medical kits, vaccines, and equipment (<demand_linehaul> items) to remote clinics while collecting hazardous waste and used supplies (<demand_backhaul>). Each vehicle’s capacity (<capacity>) must balance fragile deliveries with biohazard pickups. Time windows (<time_windows>) align with clinic staff shifts, and routes are open-ended to minimize travel backtracking in sparsely populated areas.",
         "data_template": {
             "num_depots": [
                 1
@@ -31107,6 +31206,7 @@
                 ]
             ]
         },
-        "label": "ovrpmbtw"
+        "label": "ovrpmbtw",
+        "index": 99
     }
 ]

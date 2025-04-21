@@ -1,7 +1,7 @@
 [
     {
         "title": "Perishable Food Distribution in Urban Areas with Shelf-Life Constraints",
-        "desc_split": "A grocery distributor must deliver perishable goods to retail stores using refrigerated trucks. Each store\u2019s location is specified in <locs>, with a demand <demand> representing the volume of goods required. Stores have strict time windows <time_windows> to ensure products are stocked before their shelf-life expires. Each truck has a refrigeration capacity of <capacity> cubic meters and travels at <speed> km/h. The distributor must plan routes starting and ending at the central warehouse, ensuring deliveries commence within each store\u2019s time window and service time <service_time> for unloading is respected. The goal is to minimize total travel distance while avoiding overloading trucks.",
+        "desc_split": "A grocery distributor must deliver perishable goods to retail stores using refrigerated trucks. Each store’s location is specified in <locs>, with a demand <demand> representing the volume of goods required. Stores have strict time windows <time_windows> to ensure products are stocked before their shelf-life expires. Each truck has a refrigeration capacity of <capacity> cubic meters and travels at <speed> km/h. The distributor must plan routes starting and ending at the central warehouse, ensuring deliveries commence within each store’s time window and service time <service_time> for unloading is respected. The goal is to minimize total travel distance while avoiding overloading trucks.",
         "data_template": {
             "num_depots": [
                 1
@@ -405,7 +405,8 @@
                 0.15411750972270966
             ]
         },
-        "label": "vrptw"
+        "label": "vrptw",
+        "index": 0
     },
     {
         "title": "Emergency Medical Supply Deployment During Natural Disasters",
@@ -1002,11 +1003,12 @@
                 0.15619954466819763
             ]
         },
-        "label": "vrptw"
+        "label": "vrptw",
+        "index": 1
     },
     {
         "title": "Manufacturing Component Delivery for Just-in-Time Production",
-        "desc_split": "A factory relies on on-time delivery of parts to assembly lines using delivery vans. Component demand <demand> for each workstation (locations <locs>) must align with production schedules, which define strict time windows <time_windows> for part arrival. Each van has a payload capacity <capacity> kg and travels at <speed> km/h, with service time <service_time> for precise unloading. The depot operates within a fixed shift (modeled as depot\u2019s time window), and routes must start/end there. The aim is to minimize total distance while preventing production delays caused by missed time windows or overloading.",
+        "desc_split": "A factory relies on on-time delivery of parts to assembly lines using delivery vans. Component demand <demand> for each workstation (locations <locs>) must align with production schedules, which define strict time windows <time_windows> for part arrival. Each van has a payload capacity <capacity> kg and travels at <speed> km/h, with service time <service_time> for precise unloading. The depot operates within a fixed shift (modeled as depot’s time window), and routes must start/end there. The aim is to minimize total distance while preventing production delays caused by missed time windows or overloading.",
         "data_template": {
             "num_depots": [
                 1
@@ -1515,11 +1517,12 @@
                 0.17268481850624084
             ]
         },
-        "label": "vrptw"
+        "label": "vrptw",
+        "index": 2
     },
     {
         "title": "Waste Collection in Smart Cities with Dynamic Scheduling",
-        "desc_split": "A municipal waste management system uses automated garbage trucks to collect refuse from smart bins. Each bin\u2019s location <locs> has a fill-level sensor determining its demand <demand> (weight to collect). Bins have time windows <time_windows> based on neighborhood activity patterns (e.g., avoiding rush hours). Trucks have a maximum capacity <capacity> tons and travel at <speed> km/h, with service time <service_time> for emptying. Routes must start/end at the waste processing facility. The goal is to minimize travel distance while adhering to time windows and preventing overflow by not exceeding truck capacity.",
+        "desc_split": "A municipal waste management system uses automated garbage trucks to collect refuse from smart bins. Each bin’s location <locs> has a fill-level sensor determining its demand <demand> (weight to collect). Bins have time windows <time_windows> based on neighborhood activity patterns (e.g., avoiding rush hours). Trucks have a maximum capacity <capacity> tons and travel at <speed> km/h, with service time <service_time> for emptying. Routes must start/end at the waste processing facility. The goal is to minimize travel distance while adhering to time windows and preventing overflow by not exceeding truck capacity.",
         "data_template": {
             "num_depots": [
                 1
@@ -2112,7 +2115,8 @@
                 0.16418631374835968
             ]
         },
-        "label": "vrptw"
+        "label": "vrptw",
+        "index": 3
     },
     {
         "title": "Event Equipment Redistribution for Live Concert Tours",
@@ -2646,7 +2650,8 @@
                 0.15682809054851532
             ]
         },
-        "label": "vrptw"
+        "label": "vrptw",
+        "index": 4
     },
     {
         "title": "Agricultural Produce Delivery to Farmers' Markets with Perishability Constraints",
@@ -2928,7 +2933,8 @@
                 1.0
             ]
         },
-        "label": "vrptw"
+        "label": "vrptw",
+        "index": 5
     },
     {
         "title": "Sports Venue Equipment Redistribution for Multi-Event Stadiums",
@@ -3315,7 +3321,8 @@
                 0.16842211782932281
             ]
         },
-        "label": "vrptw"
+        "label": "vrptw",
+        "index": 6
     },
     {
         "title": "Blood Sample Transportation to Diagnostic Labs Under Regulatory Timelines",
@@ -3822,7 +3829,8 @@
                 1.0
             ]
         },
-        "label": "vrptw"
+        "label": "vrptw",
+        "index": 7
     },
     {
         "title": "Urgent Legal Document Delivery for Court Deadlines",
@@ -4209,7 +4217,8 @@
                 0.17213040590286255
             ]
         },
-        "label": "vrptw"
+        "label": "vrptw",
+        "index": 8
     },
     {
         "title": "Festival Kiosk Supply Redistribution Across Multiple Venues",
@@ -4722,7 +4731,8 @@
                 0.16185253858566284
             ]
         },
-        "label": "vrptw"
+        "label": "vrptw",
+        "index": 9
     },
     {
         "title": "Construction Material Delivery to Active Sites with Daily Time Windows",
@@ -5067,7 +5077,8 @@
                 0.17485904693603516
             ]
         },
-        "label": "vrptw"
+        "label": "vrptw",
+        "index": 10
     },
     {
         "title": "Same-Day E-commerce Deliveries with Urban Traffic Time Windows",
@@ -5622,7 +5633,8 @@
                 0.16730988025665283
             ]
         },
-        "label": "vrptw"
+        "label": "vrptw",
+        "index": 11
     },
     {
         "title": "Floral Bouquet Delivery with Perishability and Time Constraints",
@@ -6240,7 +6252,8 @@
                 0.16984616219997406
             ]
         },
-        "label": "vrptw"
+        "label": "vrptw",
+        "index": 12
     },
     {
         "title": "School Meal Delivery with Nutritional Time Windows",
@@ -6585,7 +6598,8 @@
                 0.17295895516872406
             ]
         },
-        "label": "vrptw"
+        "label": "vrptw",
+        "index": 13
     },
     {
         "title": "Beverage Delivery to Restaurants with Operating Time Constraints",
@@ -7077,7 +7091,8 @@
                 0.15057943761348724
             ]
         },
-        "label": "vrptw"
+        "label": "vrptw",
+        "index": 14
     },
     {
         "title": "Theme Park Attraction Restocking with Maintenance Time Windows",
@@ -7380,7 +7395,8 @@
                 1.0
             ]
         },
-        "label": "vrptw"
+        "label": "vrptw",
+        "index": 15
     },
     {
         "title": "Airport Ground Support Equipment Redistribution",
@@ -7860,11 +7876,12 @@
                 0.1566621959209442
             ]
         },
-        "label": "vrptw"
+        "label": "vrptw",
+        "index": 16
     },
     {
         "title": "School Supplies Delivery to Remote Classrooms with Academic Schedules",
-        "desc_split": "A rural education authority dispatches trucks to deliver textbooks and materials to schools in remote areas. Each school\u2019s academic calendar defines a delivery time window <time_windows> (e.g., before morning classes start), and the depot is the central warehouse. Trucks have a capacity <capacity> items and travel at <speed> km/h. Service time <service_time> includes unloading supplies. Routes must start/end at the depot, ensuring timely delivery without overloading trucks.",
+        "desc_split": "A rural education authority dispatches trucks to deliver textbooks and materials to schools in remote areas. Each school’s academic calendar defines a delivery time window <time_windows> (e.g., before morning classes start), and the depot is the central warehouse. Trucks have a capacity <capacity> items and travel at <speed> km/h. Service time <service_time> includes unloading supplies. Routes must start/end at the depot, ensuring timely delivery without overloading trucks.",
         "data_template": {
             "num_depots": [
                 1
@@ -8340,7 +8357,8 @@
                 0.17323321104049683
             ]
         },
-        "label": "vrptw"
+        "label": "vrptw",
+        "index": 17
     },
     {
         "title": "Restaurant Chain Ingredient Delivery with Peak Operating Hours",
@@ -8756,7 +8774,8 @@
                 0.17149367928504944
             ]
         },
-        "label": "vrptw"
+        "label": "vrptw",
+        "index": 18
     },
     {
         "title": "Data Center Hardware Deployment with Scheduled Maintenance Windows",
@@ -8980,11 +8999,12 @@
                 1.0
             ]
         },
-        "label": "vrptw"
+        "label": "vrptw",
+        "index": 19
     },
     {
         "title": "Municipal Snow Plow Route Optimization with Resource Constraints",
-        "desc_split": "A city\u2019s public works department must clear snow from critical roadways using plows with limited salt/sand capacity. Each road segment (node) has a time window during which it must be cleared (e.g., before morning rush hour). The location coordinates of road segments are <locs>, and each segment requires a service time <service_time> for clearing. Plows start and end at the central depot, which has a fixed operating window. Each plow has a maximum load capacity <capacity> tons of material and travels at <speed> km/h. The goal is to minimize total travel distance while ensuring all roads are cleared within their assigned time windows and without exceeding plow capacities.",
+        "desc_split": "A city’s public works department must clear snow from critical roadways using plows with limited salt/sand capacity. Each road segment (node) has a time window during which it must be cleared (e.g., before morning rush hour). The location coordinates of road segments are <locs>, and each segment requires a service time <service_time> for clearing. Plows start and end at the central depot, which has a fixed operating window. Each plow has a maximum load capacity <capacity> tons of material and travels at <speed> km/h. The goal is to minimize total travel distance while ensuring all roads are cleared within their assigned time windows and without exceeding plow capacities.",
         "data_template": {
             "num_depots": [
                 1
@@ -9284,11 +9304,12 @@
                 1.0
             ]
         },
-        "label": "vrptw"
+        "label": "vrptw",
+        "index": 20
     },
     {
         "title": "Hospital Linen Supply Logistics with Daily Time Windows",
-        "desc_split": "A hospital network requires daily linen delivery to multiple wards, with each ward specifying a time window for delivery (e.g., between 6:00 AM and 8:00 AM to align with morning shift changes). The linen trucks have a capacity <capacity> kg and travel at <speed> km/h. Each ward\u2019s demand <demand> corresponds to soiled linens to be replaced, and service times <service_time> account for loading/unloading. The central laundry depot operates within <depot_service_time> hours. The objective is to design routes starting/ending at the depot that meet all time windows while avoiding overloading any truck.",
+        "desc_split": "A hospital network requires daily linen delivery to multiple wards, with each ward specifying a time window for delivery (e.g., between 6:00 AM and 8:00 AM to align with morning shift changes). The linen trucks have a capacity <capacity> kg and travel at <speed> km/h. Each ward’s demand <demand> corresponds to soiled linens to be replaced, and service times <service_time> account for loading/unloading. The central laundry depot operates within <depot_service_time> hours. The objective is to design routes starting/ending at the depot that meet all time windows while avoiding overloading any truck.",
         "data_template": {
             "num_depots": [
                 1
@@ -9503,11 +9524,12 @@
                 0.0
             ]
         },
-        "label": "vrptw"
+        "label": "vrptw",
+        "index": 21
     },
     {
         "title": "Food Truck Restocking Under Operating Time Limits",
-        "desc_split": "Mobile food vendors operating in urban areas require restocking deliveries before their daily service hours. Each truck\u2019s operating window (time window <time_windows>) is fixed (e.g., 11:00 AM\u20138:00 PM), and deliveries must arrive by their opening time. The delivery vehicles have a capacity <capacity> kg for ingredients and travel at <speed> km/h. The central kitchen has a service time <depot_service_time> for loading. The goal is to plan routes ensuring all food trucks are restocked within their time windows without exceeding vehicle capacities, while minimizing total travel distance.",
+        "desc_split": "Mobile food vendors operating in urban areas require restocking deliveries before their daily service hours. Each truck’s operating window (time window <time_windows>) is fixed (e.g., 11:00 AM–8:00 PM), and deliveries must arrive by their opening time. The delivery vehicles have a capacity <capacity> kg for ingredients and travel at <speed> km/h. The central kitchen has a service time <depot_service_time> for loading. The goal is to plan routes ensuring all food trucks are restocked within their time windows without exceeding vehicle capacities, while minimizing total travel distance.",
         "data_template": {
             "num_depots": [
                 1
@@ -9762,11 +9784,12 @@
                 0.0
             ]
         },
-        "label": "vrptw"
+        "label": "vrptw",
+        "index": 22
     },
     {
         "title": "Automotive Service Parts Delivery with Workshop Hours",
-        "desc_split": "An automotive repair chain needs parts delivered to workshops that operate only during specific hours (time windows <time_windows>). Each workshop\u2019s demand <demand> corresponds to parts for scheduled repairs, and service times <service_time> account for unloading. Delivery trucks have a capacity <capacity> cubic feet and travel at <speed> km/h. The central warehouse has a fixed operating window <depot_service_time>. Routes must start/end at the warehouse, respect workshop time windows, and prevent overloading any vehicle. The aim is to minimize total travel distance while meeting all constraints.",
+        "desc_split": "An automotive repair chain needs parts delivered to workshops that operate only during specific hours (time windows <time_windows>). Each workshop’s demand <demand> corresponds to parts for scheduled repairs, and service times <service_time> account for unloading. Delivery trucks have a capacity <capacity> cubic feet and travel at <speed> km/h. The central warehouse has a fixed operating window <depot_service_time>. Routes must start/end at the warehouse, respect workshop time windows, and prevent overloading any vehicle. The aim is to minimize total travel distance while meeting all constraints.",
         "data_template": {
             "num_depots": [
                 1
@@ -10171,11 +10194,12 @@
                 0.0
             ]
         },
-        "label": "vrptw"
+        "label": "vrptw",
+        "index": 23
     },
     {
         "title": "Theater Set Redistribution for Venue Rotations",
-        "desc_split": "A theater company must relocate set pieces between multiple venues for rotating productions. Each venue\u2019s setup window (time window <time_windows>) aligns with pre-show schedules, requiring deliveries to arrive precisely. The transport trucks have a capacity <capacity> tons (weight) and dimensions (volume) constraints, traveling at <speed> km/h. Service times <service_time> include unloading/loading at each venue. The central storage depot operates within <depot_service_time> hours. The goal is to design routes that start/end at the depot, adhere to venue time windows, and avoid exceeding truck capacities, while minimizing travel distance.",
+        "desc_split": "A theater company must relocate set pieces between multiple venues for rotating productions. Each venue’s setup window (time window <time_windows>) aligns with pre-show schedules, requiring deliveries to arrive precisely. The transport trucks have a capacity <capacity> tons (weight) and dimensions (volume) constraints, traveling at <speed> km/h. Service times <service_time> include unloading/loading at each venue. The central storage depot operates within <depot_service_time> hours. The goal is to design routes that start/end at the depot, adhere to venue time windows, and avoid exceeding truck capacities, while minimizing travel distance.",
         "data_template": {
             "num_depots": [
                 1
@@ -10542,7 +10566,8 @@
                 0.0
             ]
         },
-        "label": "vrptw"
+        "label": "vrptw",
+        "index": 24
     },
     {
         "title": "Hospital Equipment Redistribution During Surge Events",
@@ -10824,7 +10849,8 @@
                 1.0
             ]
         },
-        "label": "vrptw"
+        "label": "vrptw",
+        "index": 25
     },
     {
         "title": "Perishable Seafood Delivery to Coastal Restaurants",
@@ -11400,7 +11426,8 @@
                 1.0
             ]
         },
-        "label": "vrptw"
+        "label": "vrptw",
+        "index": 26
     },
     {
         "title": "Urgent Lab Specimen Transport Between Research Facilities",
@@ -12010,7 +12037,8 @@
                 1.0
             ]
         },
-        "label": "vrptw"
+        "label": "vrptw",
+        "index": 27
     },
     {
         "title": "IT Hardware Deployment to Remote Data Centers",
@@ -12460,7 +12488,8 @@
                 1.0
             ]
         },
-        "label": "vrptw"
+        "label": "vrptw",
+        "index": 28
     },
     {
         "title": "Exam Material Delivery to Regional Testing Centers",
@@ -12826,11 +12855,12 @@
                 1.0
             ]
         },
-        "label": "vrptw"
+        "label": "vrptw",
+        "index": 29
     },
     {
         "title": "Film Equipment Redistribution for On-Schedule Shoot Schedules",
-        "desc_split": "A film production company must deliver camera gear, lighting rigs, and props to multiple filming locations. Each location has a strict start time for the shoot (time window `[e_i, l_i]`), and the equipment must be unloaded within its service time `s_i`. Delivery trucks have a maximum capacity `Q` due to space and weight limits for fragile equipment. The goal is to minimize total travel distance while ensuring all equipment arrives on time for each scene\u2019s scheduled start.",
+        "desc_split": "A film production company must deliver camera gear, lighting rigs, and props to multiple filming locations. Each location has a strict start time for the shoot (time window `[e_i, l_i]`), and the equipment must be unloaded within its service time `s_i`. Delivery trucks have a maximum capacity `Q` due to space and weight limits for fragile equipment. The goal is to minimize total travel distance while ensuring all equipment arrives on time for each scene’s scheduled start.",
         "data_template": {
             "num_depots": [
                 1
@@ -13083,7 +13113,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrptw"
+        "label": "vrptw",
+        "index": 30
     },
     {
         "title": "Solar Panel Component Delivery to Remote Installation Sites",
@@ -13329,7 +13360,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrptw"
+        "label": "vrptw",
+        "index": 31
     },
     {
         "title": "Wedding Florist Bouquet Delivery with Floral Perishability and Venue Timelines",
@@ -13586,7 +13618,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrptw"
+        "label": "vrptw",
+        "index": 32
     },
     {
         "title": "Aircraft Cabin Crew Supply Redistribution for Flight Turnarounds",
@@ -13799,7 +13832,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrptw"
+        "label": "vrptw",
+        "index": 33
     },
     {
         "title": "Precision Semiconductor Wafer Transport with Temperature-Controlled Delivery Windows",
@@ -14155,7 +14189,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrptw"
+        "label": "vrptw",
+        "index": 34
     },
     {
         "title": "Vaccine Delivery to Remote Health Clinics with Refrigeration Constraints",
@@ -14752,7 +14787,8 @@
                 1.0
             ]
         },
-        "label": "vrptw"
+        "label": "vrptw",
+        "index": 35
     },
     {
         "title": "Live Event Server Redistribution for Tech Conferences",
@@ -15412,11 +15448,12 @@
                 1.0
             ]
         },
-        "label": "vrptw"
+        "label": "vrptw",
+        "index": 36
     },
     {
         "title": "Seasonal Ornament Redistribution for Holiday Retailers",
-        "desc_split": "A retail chain must restock seasonal ornaments to multiple stores before holiday deadlines. Stores (<locs>) have time windows <time_windows> based on local shopping trends, with unloading taking <service_time>. Each truck has a capacity <capacity> for ornament boxes and travels at <speed> km/h. The depot\u2019s loading dock operates for <depot_service_time> hours, requiring optimized routes to ensure all stores receive stock before their promotional windows.",
+        "desc_split": "A retail chain must restock seasonal ornaments to multiple stores before holiday deadlines. Stores (<locs>) have time windows <time_windows> based on local shopping trends, with unloading taking <service_time>. Each truck has a capacity <capacity> for ornament boxes and travels at <speed> km/h. The depot’s loading dock operates for <depot_service_time> hours, requiring optimized routes to ensure all stores receive stock before their promotional windows.",
         "data_template": {
             "num_depots": [
                 1
@@ -15705,7 +15742,8 @@
                 0.0
             ]
         },
-        "label": "vrptw"
+        "label": "vrptw",
+        "index": 37
     },
     {
         "title": "Medical Device Delivery Under Regulatory Compliance Timelines",
@@ -16175,7 +16213,8 @@
                 1.0
             ]
         },
-        "label": "vrptw"
+        "label": "vrptw",
+        "index": 38
     },
     {
         "title": "Urgent Laboratory Equipment Redistribution for Research Institutions",
@@ -16705,7 +16744,8 @@
                 1.0
             ]
         },
-        "label": "vrptw"
+        "label": "vrptw",
+        "index": 39
     },
     {
         "title": "Perishable Grocery Delivery to Urban Micro-Warehouses with Daily Restocking Time Windows",
@@ -16941,11 +16981,12 @@
                 0.15321515500545502
             ]
         },
-        "label": "vrptw"
+        "label": "vrptw",
+        "index": 40
     },
     {
         "title": "Satellite Component Delivery to Remote Launch Sites with Government-Regulated Windows",
-        "desc_split": "A aerospace logistics firm transports precision satellite components to isolated launch facilities. Each facility has government-mandated access windows <time_windows> for security and operational reasons. The fragile components have individual weights <demand> that must not exceed the truck\u2019s weight capacity <capacity>, which also accommodates climate-controlled shipping containers. Vehicles move at <speed> and spend <service_time> minutes at each site for safety inspections. Routes must start/end at the base depot, ensuring components arrive undamaged and within regulated timeframes to avoid launch schedule delays.",
+        "desc_split": "A aerospace logistics firm transports precision satellite components to isolated launch facilities. Each facility has government-mandated access windows <time_windows> for security and operational reasons. The fragile components have individual weights <demand> that must not exceed the truck’s weight capacity <capacity>, which also accommodates climate-controlled shipping containers. Vehicles move at <speed> and spend <service_time> minutes at each site for safety inspections. Routes must start/end at the base depot, ensuring components arrive undamaged and within regulated timeframes to avoid launch schedule delays.",
         "data_template": {
             "num_depots": [
                 1
@@ -17500,11 +17541,12 @@
                 0.15634629130363464
             ]
         },
-        "label": "vrptw"
+        "label": "vrptw",
+        "index": 41
     },
     {
         "title": "Seasonal Ornamental Tree Delivery for Holiday Landscaping Projects",
-        "desc_split": "A landscaping company delivers live Christmas trees to commercial properties during peak season. Each client specifies a delivery time window <time_windows> to coincide with pre-decorating setup periods. The trees have bulk dimensions <demand> requiring trucks with volume capacity <capacity>, and vehicles travel at <speed>. Loading/unloading takes <service_time> minutes per location. Routes must originate/return to the nursery, balancing tree density to avoid overloading while meeting clients\u2019 urgent timelines to ensure tree freshness.",
+        "desc_split": "A landscaping company delivers live Christmas trees to commercial properties during peak season. Each client specifies a delivery time window <time_windows> to coincide with pre-decorating setup periods. The trees have bulk dimensions <demand> requiring trucks with volume capacity <capacity>, and vehicles travel at <speed>. Loading/unloading takes <service_time> minutes per location. Routes must originate/return to the nursery, balancing tree density to avoid overloading while meeting clients’ urgent timelines to ensure tree freshness.",
         "data_template": {
             "num_depots": [
                 1
@@ -17872,7 +17914,8 @@
                 0.1753225326538086
             ]
         },
-        "label": "vrptw"
+        "label": "vrptw",
+        "index": 42
     },
     {
         "title": "Industrial Gas Cylinder Redistribution for Manufacturing Plants",
@@ -18312,11 +18355,12 @@
                 0.15947622060775757
             ]
         },
-        "label": "vrptw"
+        "label": "vrptw",
+        "index": 43
     },
     {
         "title": "Art Exhibit Artifact Transportation Between Museums with Conservation Timelines",
-        "desc_split": "A cultural heritage organization transports fragile art artifacts between museums for a traveling exhibition. Each museum imposes strict handling time windows <time_windows> to minimize artifact exposure to environmental risks. Artifact weights/volumes <demand> must stay within the climate-controlled truck\u2019s capacity <capacity>. Vehicles move at <speed>, with <service_time> spent on delicate loading/unloading. Routes must begin/end at the logistics hub, ensuring artifacts arrive undamaged and within conservation-prescribed schedules to avoid preservation penalties.",
+        "desc_split": "A cultural heritage organization transports fragile art artifacts between museums for a traveling exhibition. Each museum imposes strict handling time windows <time_windows> to minimize artifact exposure to environmental risks. Artifact weights/volumes <demand> must stay within the climate-controlled truck’s capacity <capacity>. Vehicles move at <speed>, with <service_time> spent on delicate loading/unloading. Routes must begin/end at the logistics hub, ensuring artifacts arrive undamaged and within conservation-prescribed schedules to avoid preservation penalties.",
         "data_template": {
             "num_depots": [
                 1
@@ -18803,7 +18847,8 @@
                 0.17803597450256348
             ]
         },
-        "label": "vrptw"
+        "label": "vrptw",
+        "index": 44
     },
     {
         "title": "Automotive Retail Vehicle Delivery with Time Windows and Spatial Constraints",
@@ -19219,7 +19264,8 @@
                 1.0
             ]
         },
-        "label": "vrptw"
+        "label": "vrptw",
+        "index": 45
     },
     {
         "title": "University Campus Supply Redistribution with Academic Schedule Constraints",
@@ -19491,7 +19537,8 @@
                 1.0
             ]
         },
-        "label": "vrptw"
+        "label": "vrptw",
+        "index": 46
     },
     {
         "title": "Drone-Based Medical Sample Transportation in Urban Areas",
@@ -19779,7 +19826,8 @@
                 0.16117651760578156
             ]
         },
-        "label": "vrptw"
+        "label": "vrptw",
+        "index": 47
     },
     {
         "title": "Festival Ride Setup Redistribution with Event Timelines",
@@ -20115,7 +20163,8 @@
                 1.0
             ]
         },
-        "label": "vrptw"
+        "label": "vrptw",
+        "index": 48
     },
     {
         "title": "Post Office Last-Mile Delivery with Customer-Specified Time Windows",
@@ -20521,11 +20570,12 @@
                 1.0
             ]
         },
-        "label": "vrptw"
+        "label": "vrptw",
+        "index": 49
     },
     {
-        "title": "Perishable Dairy Product Delivery to Urban Caf\u00e9s with Morning Time Windows",
-        "desc_split": "A dairy company must deliver fresh milk, cheese, and yogurt to multiple caf\u00e9s in a city. Each caf\u00e9 has a morning time window (e.g., 6:00 AM to 8:30 AM) during which deliveries must be made to ensure product freshness before opening. Delivery trucks have a refrigerated capacity limit :math:`Q`, restricting the total volume of crates they can carry at any point. Each caf\u00e9 has a time window :math:`[e_i, l_i]` and a service time :math:`s_i` for unloading. Vehicles must arrive within the caf\u00e9's time window; early arrivals must wait until :math:`e_i`. The goal is to plan routes minimizing total distance while respecting capacity and time constraints.",
+        "title": "Perishable Dairy Product Delivery to Urban Cafés with Morning Time Windows",
+        "desc_split": "A dairy company must deliver fresh milk, cheese, and yogurt to multiple cafés in a city. Each café has a morning time window (e.g., 6:00 AM to 8:30 AM) during which deliveries must be made to ensure product freshness before opening. Delivery trucks have a refrigerated capacity limit :math:`Q`, restricting the total volume of crates they can carry at any point. Each café has a time window :math:`[e_i, l_i]` and a service time :math:`s_i` for unloading. Vehicles must arrive within the café's time window; early arrivals must wait until :math:`e_i`. The goal is to plan routes minimizing total distance while respecting capacity and time constraints.",
         "data_template": {
             "num_depots": [
                 1
@@ -20723,7 +20773,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrptw"
+        "label": "vrptw",
+        "index": 50
     },
     {
         "title": "Medical Imaging Equipment Redistribution for Hospital Shifts",
@@ -21002,7 +21053,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrptw"
+        "label": "vrptw",
+        "index": 51
     },
     {
         "title": "Seasonal Firework Delivery to Festive Venues with Strict Time Windows",
@@ -21270,7 +21322,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrptw"
+        "label": "vrptw",
+        "index": 52
     },
     {
         "title": "Corporate Event Floral Arrangement Delivery with Time-Sensitive Windows",
@@ -21516,7 +21569,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrptw"
+        "label": "vrptw",
+        "index": 53
     },
     {
         "title": "Temporary Office Setup Material Delivery for Corporate Events",
@@ -21685,7 +21739,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrptw"
+        "label": "vrptw",
+        "index": 54
     },
     {
         "title": "Emergency Power Generator Delivery During Regional Blackouts",
@@ -22366,7 +22421,8 @@
                 1.0
             ]
         },
-        "label": "vrptw"
+        "label": "vrptw",
+        "index": 55
     },
     {
         "title": "Antique Furniture Redistribution for Auction Houses",
@@ -22921,7 +22977,8 @@
                 1.0
             ]
         },
-        "label": "vrptw"
+        "label": "vrptw",
+        "index": 56
     },
     {
         "title": "Seasonal Apparel Redistribution for Retail Outlets",
@@ -23371,7 +23428,8 @@
                 1.0
             ]
         },
-        "label": "vrptw"
+        "label": "vrptw",
+        "index": 57
     },
     {
         "title": "Educational Lab Equipment Redistribution for University Campuses",
@@ -24052,7 +24110,8 @@
                 1.0
             ]
         },
-        "label": "vrptw"
+        "label": "vrptw",
+        "index": 58
     },
     {
         "title": "Construction Equipment Redistribution for Multi-Site Projects",
@@ -24376,7 +24435,8 @@
                 1.0
             ]
         },
-        "label": "vrptw"
+        "label": "vrptw",
+        "index": 59
     },
     {
         "title": "Fresh Bakery Goods Delivery with Perishability Constraints",
@@ -24688,7 +24748,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrptw"
+        "label": "vrptw",
+        "index": 60
     },
     {
         "title": "Emergency Medical Oxygen Delivery to Hospitals During Crises",
@@ -25000,7 +25061,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrptw"
+        "label": "vrptw",
+        "index": 61
     },
     {
         "title": "Data Center Server Maintenance with Scheduled Downtime Windows",
@@ -25213,7 +25275,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrptw"
+        "label": "vrptw",
+        "index": 62
     },
     {
         "title": "Nightly Retail Store Restocking with Store Operating Time Windows",
@@ -25437,11 +25500,12 @@
             ]
         },
         "user_template": {},
-        "label": "vrptw"
+        "label": "vrptw",
+        "index": 63
     },
     {
         "title": "Airport Baggage Redistribution Between Terminals with Flight Schedules",
-        "desc_split": "An airport\u2019s logistics team must redistribute luggage between terminals based on flight schedules. Each transfer has a time window :math:`[e_i, l_i]` tied to flight arrival/departure times. Baggage carts have a capacity :math:`Q` limiting the number of bags they can haul. Service time :math:`s_i` includes loading/unloading and conveyor coordination. The goal is to plan routes that adhere to flight schedules and cart capacities, minimizing delays and operational costs.",
+        "desc_split": "An airport’s logistics team must redistribute luggage between terminals based on flight schedules. Each transfer has a time window :math:`[e_i, l_i]` tied to flight arrival/departure times. Baggage carts have a capacity :math:`Q` limiting the number of bags they can haul. Service time :math:`s_i` includes loading/unloading and conveyor coordination. The goal is to plan routes that adhere to flight schedules and cart capacities, minimizing delays and operational costs.",
         "data_template": {
             "num_depots": [
                 1
@@ -25650,7 +25714,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrptw"
+        "label": "vrptw",
+        "index": 64
     },
     {
         "title": "Art Museum Artifact Transport with Conservation Timelines",
@@ -25932,7 +25997,8 @@
                 1.0
             ]
         },
-        "label": "vrptw"
+        "label": "vrptw",
+        "index": 65
     },
     {
         "title": "Emergency Flood Relief Supplies Delivery with Dynamic Windows",
@@ -26256,7 +26322,8 @@
                 1.0
             ]
         },
-        "label": "vrptw"
+        "label": "vrptw",
+        "index": 66
     },
     {
         "title": "Live Event AV Equipment Redistribution for Concurrent Conventions",
@@ -26727,7 +26794,8 @@
                 1.0
             ]
         },
-        "label": "vrptw"
+        "label": "vrptw",
+        "index": 67
     },
     {
         "title": "Fresh Fish Delivery to Sushi Restaurants with Morning Time Windows",
@@ -27009,7 +27077,8 @@
                 1.0
             ]
         },
-        "label": "vrptw"
+        "label": "vrptw",
+        "index": 68
     },
     {
         "title": "Medical Cannabis Delivery with Regulatory and Perishability Constraints",
@@ -27396,7 +27465,8 @@
                 1.0
             ]
         },
-        "label": "vrptw"
+        "label": "vrptw",
+        "index": 69
     },
     {
         "title": "Live Aquatic Animal Transport for Aquarium Exhibitions",
@@ -27927,11 +27997,12 @@
                 1.0
             ]
         },
-        "label": "vrptw"
+        "label": "vrptw",
+        "index": 70
     },
     {
         "title": "Satellite Component Delivery to Remote Launch Sites with Celestial Windows",
-        "desc_split": "A space agency must deliver sensitive satellite components to remote launch pads using specialized trucks. Each pad\u2019s location is in <locs>, with demands <demand> (component weight). Launch windows <time_windows> are dictated by orbital mechanics, allowing only narrow timeframes for delivery. Service time <service_time> includes secure unloading. Trucks have a capacity <capacity> constrained by weight and vibration tolerance. The goal is to minimize travel distance while ensuring components arrive within celestial-aligned time windows.",
+        "desc_split": "A space agency must deliver sensitive satellite components to remote launch pads using specialized trucks. Each pad’s location is in <locs>, with demands <demand> (component weight). Launch windows <time_windows> are dictated by orbital mechanics, allowing only narrow timeframes for delivery. Service time <service_time> includes secure unloading. Trucks have a capacity <capacity> constrained by weight and vibration tolerance. The goal is to minimize travel distance while ensuring components arrive within celestial-aligned time windows.",
         "data_template": {
             "num_depots": [
                 1
@@ -28248,11 +28319,12 @@
                 1.0
             ]
         },
-        "label": "vrptw"
+        "label": "vrptw",
+        "index": 71
     },
     {
         "title": "Emergency Blood Plasma Transfers During Disaster Response",
-        "desc_split": "A disaster relief organization must deliver blood plasma to affected regions using refrigerated vans. Each distribution point\u2019s location is in <locs>, with demands <demand> (liters required). Plasma viability requires strict time windows <time_windows> to avoid spoilage, while service time <service_time> includes unloading and documentation. Vehicles have a capacity <capacity> limited by refrigeration capacity and blood storage requirements. The aim is to minimize travel distance while adhering to time and capacity constraints.",
+        "desc_split": "A disaster relief organization must deliver blood plasma to affected regions using refrigerated vans. Each distribution point’s location is in <locs>, with demands <demand> (liters required). Plasma viability requires strict time windows <time_windows> to avoid spoilage, while service time <service_time> includes unloading and documentation. Vehicles have a capacity <capacity> limited by refrigeration capacity and blood storage requirements. The aim is to minimize travel distance while adhering to time and capacity constraints.",
         "data_template": {
             "num_depots": [
                 1
@@ -28758,11 +28830,12 @@
                 1.0
             ]
         },
-        "label": "vrptw"
+        "label": "vrptw",
+        "index": 72
     },
     {
         "title": "Vintage Wine Redistribution to Auction Houses with Climate Constraints",
-        "desc_split": "A luxury logistics firm transports fragile wine crates between cellars and auction venues. Each venue\u2019s location is in <locs>, with demands <demand> (number of crates). Venues enforce <time_windows> to align with auction schedules, while service time <service_time> includes climate checks. Vehicles have a capacity <capacity> restricted by crate dimensions and temperature control systems. The objective is to minimize travel distance while maintaining climate conditions and respecting time windows.",
+        "desc_split": "A luxury logistics firm transports fragile wine crates between cellars and auction venues. Each venue’s location is in <locs>, with demands <demand> (number of crates). Venues enforce <time_windows> to align with auction schedules, while service time <service_time> includes climate checks. Vehicles have a capacity <capacity> restricted by crate dimensions and temperature control systems. The objective is to minimize travel distance while maintaining climate conditions and respecting time windows.",
         "data_template": {
             "num_depots": [
                 1
@@ -29037,11 +29110,12 @@
                 1.0
             ]
         },
-        "label": "vrptw"
+        "label": "vrptw",
+        "index": 73
     },
     {
         "title": "Precision Surgical Instrument Redistribution for Hospital Networks",
-        "desc_split": "A medical supply company must deliver sterilized surgical tools to hospitals for urgent procedures. Each hospital\u2019s location is in <locs>, with demands <demand> (tool sets). Time windows <time_windows> align with scheduled surgeries, while service time <service_time> includes inventory verification. Vehicles have a capacity <capacity> limited by sterilization chamber space and toolset weight. The goal is to minimize travel distance while ensuring timely delivery and avoiding overloading vehicles.",
+        "desc_split": "A medical supply company must deliver sterilized surgical tools to hospitals for urgent procedures. Each hospital’s location is in <locs>, with demands <demand> (tool sets). Time windows <time_windows> align with scheduled surgeries, while service time <service_time> includes inventory verification. Vehicles have a capacity <capacity> limited by sterilization chamber space and toolset weight. The goal is to minimize travel distance while ensuring timely delivery and avoiding overloading vehicles.",
         "data_template": {
             "num_depots": [
                 1
@@ -29526,7 +29600,8 @@
                 1.0
             ]
         },
-        "label": "vrptw"
+        "label": "vrptw",
+        "index": 74
     },
     {
         "title": "Live Aquarium Fish Delivery to Aquatic Retailers with Oxygenation Constraints",
@@ -29955,11 +30030,12 @@
                 0.15024301409721375
             ]
         },
-        "label": "vrptw"
+        "label": "vrptw",
+        "index": 75
     },
     {
         "title": "Precision Laboratory Instrument Redistribution for University Research Labs",
-        "desc_split": "A university\u2019s logistics team redistributes high-precision lab equipment (e.g., mass spectrometers, microscopes) between research labs. Each lab\u2019s location is <locs>, with instrument demand <demand> and strict time windows <time_windows> to avoid disrupting ongoing experiments. Vehicles have a capacity <capacity> based on instrument weight and dimensional constraints, traveling at <speed> km/h. Service time <service_time> includes equipment setup and calibration. Routes must originate/return to the central storage facility, minimizing travel distance while ensuring instruments are delivered within labs\u2019 operational schedules.",
+        "desc_split": "A university’s logistics team redistributes high-precision lab equipment (e.g., mass spectrometers, microscopes) between research labs. Each lab’s location is <locs>, with instrument demand <demand> and strict time windows <time_windows> to avoid disrupting ongoing experiments. Vehicles have a capacity <capacity> based on instrument weight and dimensional constraints, traveling at <speed> km/h. Service time <service_time> includes equipment setup and calibration. Routes must originate/return to the central storage facility, minimizing travel distance while ensuring instruments are delivered within labs’ operational schedules.",
         "data_template": {
             "num_depots": [
                 1
@@ -30363,11 +30439,12 @@
                 0.16341939568519592
             ]
         },
-        "label": "vrptw"
+        "label": "vrptw",
+        "index": 76
     },
     {
         "title": "Emergency Firefighting Equipment Redistribution During Wildfire Season",
-        "desc_split": "During wildfire season, a fire department must redistribute water pumps, hoses, and other equipment to multiple hotspots. Each fire site\u2019s location is <locs>, with equipment demand <demand> and time windows <time_windows> dictated by evacuation timelines and fire progression forecasts. Trucks have a capacity <capacity> in terms of weight and volume, traveling at <speed> km/h. Service time <service_time> accounts for equipment deployment coordination. Routes must start/end at the central depot, minimizing response time while adhering to dynamic time windows and ensuring no vehicle exceeds its load limit.",
+        "desc_split": "During wildfire season, a fire department must redistribute water pumps, hoses, and other equipment to multiple hotspots. Each fire site’s location is <locs>, with equipment demand <demand> and time windows <time_windows> dictated by evacuation timelines and fire progression forecasts. Trucks have a capacity <capacity> in terms of weight and volume, traveling at <speed> km/h. Service time <service_time> accounts for equipment deployment coordination. Routes must start/end at the central depot, minimizing response time while adhering to dynamic time windows and ensuring no vehicle exceeds its load limit.",
         "data_template": {
             "num_depots": [
                 1
@@ -30813,11 +30890,12 @@
                 0.17660723626613617
             ]
         },
-        "label": "vrptw"
+        "label": "vrptw",
+        "index": 77
     },
     {
         "title": "High-Value Artwork Transport Between Auction Houses with Insurance Windows",
-        "desc_split": "An art logistics firm transports valuable paintings and sculptures between auction houses in a major city. Each destination\u2019s location is <locs>, with artwork dimensions/weight <demand> and time windows <time_windows> imposed by insurance policies requiring deliveries before appraisal deadlines. Vehicles have a capacity <capacity> based on secure cargo space and structural load limits, traveling at <speed> km/h. Service time <service_time> includes climate-controlled unloading and security checks. The goal is to minimize total distance while meeting strict deadlines and preventing overloading.",
+        "desc_split": "An art logistics firm transports valuable paintings and sculptures between auction houses in a major city. Each destination’s location is <locs>, with artwork dimensions/weight <demand> and time windows <time_windows> imposed by insurance policies requiring deliveries before appraisal deadlines. Vehicles have a capacity <capacity> based on secure cargo space and structural load limits, traveling at <speed> km/h. Service time <service_time> includes climate-controlled unloading and security checks. The goal is to minimize total distance while meeting strict deadlines and preventing overloading.",
         "data_template": {
             "num_depots": [
                 1
@@ -31494,7 +31572,8 @@
                 0.15287965536117554
             ]
         },
-        "label": "vrptw"
+        "label": "vrptw",
+        "index": 78
     },
     {
         "title": "Perishable Coffee Bean Delivery to Specialty Roasters with Roast Timing Windows",
@@ -31797,7 +31876,8 @@
                 0.17617960274219513
             ]
         },
-        "label": "vrptw"
+        "label": "vrptw",
+        "index": 79
     },
     {
         "title": "High-Precision Optical Lens Transport for Observatory Installations",
@@ -32184,7 +32264,8 @@
                 1.0
             ]
         },
-        "label": "vrptw"
+        "label": "vrptw",
+        "index": 80
     },
     {
         "title": "Live Event Catering Supply Redistribution for Concert Venues",
@@ -32781,7 +32862,8 @@
                 1.0
             ]
         },
-        "label": "vrptw"
+        "label": "vrptw",
+        "index": 81
     },
     {
         "title": "Emergency Construction Material Delivery for Post-Disaster Infrastructure",
@@ -33420,7 +33502,8 @@
                 1.0
             ]
         },
-        "label": "vrptw"
+        "label": "vrptw",
+        "index": 82
     },
     {
         "title": "Live Insect Redistribution for Entomological Research Facilities",
@@ -33975,7 +34058,8 @@
                 1.0
             ]
         },
-        "label": "vrptw"
+        "label": "vrptw",
+        "index": 83
     },
     {
         "title": "Live Aquatic Specimen Transport for Marine Research Expeditions",
@@ -34299,7 +34383,8 @@
                 1.0
             ]
         },
-        "label": "vrptw"
+        "label": "vrptw",
+        "index": 84
     },
     {
         "title": "Medical Isotope Transport for Cancer Treatment Facilities",
@@ -34600,7 +34685,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrptw"
+        "label": "vrptw",
+        "index": 85
     },
     {
         "title": "Secure Financial Document Delivery for Global Transactions",
@@ -34813,7 +34899,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrptw"
+        "label": "vrptw",
+        "index": 86
     },
     {
         "title": "Renewable Energy Component Delivery to Remote Wind Farms",
@@ -35114,7 +35201,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrptw"
+        "label": "vrptw",
+        "index": 87
     },
     {
         "title": "Perishable Live Plant Redistribution for Botanical Conservatories",
@@ -35448,7 +35536,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrptw"
+        "label": "vrptw",
+        "index": 88
     },
     {
         "title": "High-Precision Electronics Delivery for Tech Conference Exhibits",
@@ -35804,7 +35893,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrptw"
+        "label": "vrptw",
+        "index": 89
     },
     {
         "title": "Agricultural Equipment Redistribution for Seasonal Harvests",
@@ -36050,7 +36140,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrptw"
+        "label": "vrptw",
+        "index": 90
     },
     {
         "title": "Temporary Event Infrastructure Delivery for Large Festivals",
@@ -36241,7 +36332,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrptw"
+        "label": "vrptw",
+        "index": 91
     },
     {
         "title": "Live Animal Transport for Zoos with Conservation Timelines",
@@ -36487,7 +36579,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrptw"
+        "label": "vrptw",
+        "index": 92
     },
     {
         "title": "High-Value Gemstone Transport to Auction Houses with Security Timelines",
@@ -36700,7 +36793,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrptw"
+        "label": "vrptw",
+        "index": 93
     },
     {
         "title": "Live Coral Transport for Marine Conservation Projects",
@@ -36880,7 +36974,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrptw"
+        "label": "vrptw",
+        "index": 94
     },
     {
         "title": "Live Wildlife Transport for Conservation Breeding Programs",
@@ -37184,7 +37279,8 @@
                 1.0
             ]
         },
-        "label": "vrptw"
+        "label": "vrptw",
+        "index": 95
     },
     {
         "title": "High-Security Document Delivery for Government Agencies",
@@ -37520,7 +37616,8 @@
                 1.0
             ]
         },
-        "label": "vrptw"
+        "label": "vrptw",
+        "index": 96
     },
     {
         "title": "Emergency Medical Equipment Redistribution During Disease Outbreaks",
@@ -37760,11 +37857,12 @@
                 1.0
             ]
         },
-        "label": "vrptw"
+        "label": "vrptw",
+        "index": 97
     },
     {
         "title": "Live Event Lighting Redistribution for Theatre Tours",
-        "desc_split": "A touring theatre production must redistribute lighting equipment between venues for performances. Each venue has a time window <time_windows> for setup to avoid delays. Vehicles have a maximum capacity of <capacity> units (e.g., lights, cables), limiting the weight/volume per trip. The service time <service_time> includes equipment setup coordination. Vehicles travel at <speed> km/h and must start/end at the tour\u2019s central hub. The goal is to minimize travel distance while adhering to time constraints and equipment limits.",
+        "desc_split": "A touring theatre production must redistribute lighting equipment between venues for performances. Each venue has a time window <time_windows> for setup to avoid delays. Vehicles have a maximum capacity of <capacity> units (e.g., lights, cables), limiting the weight/volume per trip. The service time <service_time> includes equipment setup coordination. Vehicles travel at <speed> km/h and must start/end at the tour’s central hub. The goal is to minimize travel distance while adhering to time constraints and equipment limits.",
         "data_template": {
             "num_depots": [
                 1
@@ -38272,7 +38370,8 @@
                 1.0
             ]
         },
-        "label": "vrptw"
+        "label": "vrptw",
+        "index": 98
     },
     {
         "title": "Wildlife Rescue Equipment Redistribution During Natural Disasters",
@@ -38672,6 +38771,7 @@
                 1.0
             ]
         },
-        "label": "vrptw"
+        "label": "vrptw",
+        "index": 99
     }
 ]

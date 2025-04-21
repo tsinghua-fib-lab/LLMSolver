@@ -237,11 +237,12 @@
                 2.7564902305603027
             ]
         },
-        "label": "vrpmbl"
+        "label": "vrpmbl",
+        "index": 0
     },
     {
         "title": "Urban Grocery Delivery and Returns Network",
-        "desc_split": "An urban grocery chain uses electric vans (<capacity> kg capacity) to deliver fresh produce to <num_customer> residential locations and simultaneously collect returned items from customers. The vans must return to the central warehouse (<loc_depot>) within a <distance_limit> km radius to recharge and restock. Deliveries (linehaul) and pickups (backhaul) can be sequenced flexibly, but the total weight of produce plus returned goods must never exceed the van\u2019s capacity. The challenge is to balance efficient route planning with the dual task of fulfilling orders and managing returns.",
+        "desc_split": "An urban grocery chain uses electric vans (<capacity> kg capacity) to deliver fresh produce to <num_customer> residential locations and simultaneously collect returned items from customers. The vans must return to the central warehouse (<loc_depot>) within a <distance_limit> km radius to recharge and restock. Deliveries (linehaul) and pickups (backhaul) can be sequenced flexibly, but the total weight of produce plus returned goods must never exceed the van’s capacity. The challenge is to balance efficient route planning with the dual task of fulfilling orders and managing returns.",
         "data_template": {
             "num_depots": [
                 1
@@ -422,7 +423,8 @@
                 2.7401487827301025
             ]
         },
-        "label": "vrpmbl"
+        "label": "vrpmbl",
+        "index": 1
     },
     {
         "title": "Mobile Workshop Equipment Redistribution",
@@ -783,11 +785,12 @@
                 1.0
             ]
         },
-        "label": "vrpmbl"
+        "label": "vrpmbl",
+        "index": 2
     },
     {
         "title": "Furniture Delivery and Pickup for Sustainable Logistics",
-        "desc_split": "A furniture retailer offers a \"trade-in\" service, where customers receive new furniture deliveries while old items are picked up for recycling. The company uses trucks (<capacity> m\u00b3 capacity) to serve <num_customer> households. Routes must start and end at the warehouse (<loc_depot>), staying under a <distance_limit> km limit. Since deliveries (linehaul) and pickups (backhaul) can be arranged in any sequence, planners must ensure trucks aren\u2019t overloaded by the combined volume of new furniture and bulky old items.",
+        "desc_split": "A furniture retailer offers a \"trade-in\" service, where customers receive new furniture deliveries while old items are picked up for recycling. The company uses trucks (<capacity> m³ capacity) to serve <num_customer> households. Routes must start and end at the warehouse (<loc_depot>), staying under a <distance_limit> km limit. Since deliveries (linehaul) and pickups (backhaul) can be arranged in any sequence, planners must ensure trucks aren’t overloaded by the combined volume of new furniture and bulky old items.",
         "data_template": {
             "num_depots": [
                 1
@@ -1155,7 +1158,8 @@
                 2.0067129135131836
             ]
         },
-        "label": "vrpmbl"
+        "label": "vrpmbl",
+        "index": 3
     },
     {
         "title": "Disaster Relief Supply Redistribution",
@@ -1362,11 +1366,12 @@
                 1.9018625020980835
             ]
         },
-        "label": "vrpmbl"
+        "label": "vrpmbl",
+        "index": 4
     },
     {
         "title": "Agricultural Harvest and Equipment Redistribution",
-        "desc_split": "A farming cooperative must transport harvested crops from <num_customer> farms located at <loc_customer> to a central processing depot at <loc_depot>, while simultaneously collecting farm equipment for maintenance. Each truck has a capacity of <capacity> kg, and routes must stay within a maximum distance of <distance_limit> km to ensure timely return before dusk. Farms can be visited in any sequence\u2014deliveries or pickups first\u2014as long as the truck\u2019s capacity isn\u2019t exceeded. The goal is to optimize routes to minimize total travel while fulfilling all crop and equipment demands.",
+        "desc_split": "A farming cooperative must transport harvested crops from <num_customer> farms located at <loc_customer> to a central processing depot at <loc_depot>, while simultaneously collecting farm equipment for maintenance. Each truck has a capacity of <capacity> kg, and routes must stay within a maximum distance of <distance_limit> km to ensure timely return before dusk. Farms can be visited in any sequence—deliveries or pickups first—as long as the truck’s capacity isn’t exceeded. The goal is to optimize routes to minimize total travel while fulfilling all crop and equipment demands.",
         "data_template": {
             "num_depots": [
                 1
@@ -1578,7 +1583,8 @@
                 2.50492525100708
             ]
         },
-        "label": "vrpmbl"
+        "label": "vrpmbl",
+        "index": 5
     },
     {
         "title": "Construction Material Delivery and Waste Removal",
@@ -1989,11 +1995,12 @@
                 ]
             ]
         },
-        "label": "vrpmbl"
+        "label": "vrpmbl",
+        "index": 6
     },
     {
-        "title": "Electronics Retailer\u2019s Product Delivery and E-Waste Collection",
-        "desc_split": "An electronics retailer operates a \u201ctrade-in\u201d program where customers receive new devices (linehaul) and return old electronics (backhaul). Trucks depart from the warehouse at <loc_depot> to <num_customer> locations (<loc_customer>), each with a specified new-product demand (<demand_linehaul>) and e-waste pickup volume (<demand_backhaul>). Vehicles must adhere to a <capacity> kg weight limit and cannot travel more than <distance_limit> km per route to avoid overnight storage. The retailer prioritizes minimizing total distance while allowing flexible stop sequences.",
+        "title": "Electronics Retailer’s Product Delivery and E-Waste Collection",
+        "desc_split": "An electronics retailer operates a “trade-in” program where customers receive new devices (linehaul) and return old electronics (backhaul). Trucks depart from the warehouse at <loc_depot> to <num_customer> locations (<loc_customer>), each with a specified new-product demand (<demand_linehaul>) and e-waste pickup volume (<demand_backhaul>). Vehicles must adhere to a <capacity> kg weight limit and cannot travel more than <distance_limit> km per route to avoid overnight storage. The retailer prioritizes minimizing total distance while allowing flexible stop sequences.",
         "data_template": {
             "num_depots": [
                 1
@@ -2501,11 +2508,12 @@
                 2.3702075481414795
             ]
         },
-        "label": "vrpmbl"
+        "label": "vrpmbl",
+        "index": 7
     },
     {
         "title": "Hospital Linen Supply and Dirty Linen Pickup Logistics",
-        "desc_split": "A healthcare linen service provider delivers freshly laundered linens to hospitals and clinics (<num_customer> locations at <loc_customer>) and collects soiled linens for processing. Each truck has a <capacity> kg capacity and must complete its route within <distance_limit> km to ensure same-day return to the central laundry facility (<loc_depot>). The service can choose any order of stops\u2014deliveries first, pickups first, or mixed\u2014as long as the vehicle isn\u2019t overloaded. The goal is to design routes that minimize fuel use while serving all facilities.",
+        "desc_split": "A healthcare linen service provider delivers freshly laundered linens to hospitals and clinics (<num_customer> locations at <loc_customer>) and collects soiled linens for processing. Each truck has a <capacity> kg capacity and must complete its route within <distance_limit> km to ensure same-day return to the central laundry facility (<loc_depot>). The service can choose any order of stops—deliveries first, pickups first, or mixed—as long as the vehicle isn’t overloaded. The goal is to design routes that minimize fuel use while serving all facilities.",
         "data_template": {
             "num_depots": [
                 1
@@ -2747,7 +2755,8 @@
                 ]
             ]
         },
-        "label": "vrpmbl"
+        "label": "vrpmbl",
+        "index": 8
     },
     {
         "title": "Event Services Equipment Deployment and Retrieval",
@@ -3248,7 +3257,8 @@
                 2.1897659301757812
             ]
         },
-        "label": "vrpmbl"
+        "label": "vrpmbl",
+        "index": 9
     },
     {
         "title": "Home Appliance Delivery & Recycling Collection Network",
@@ -3439,7 +3449,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrpmbl"
+        "label": "vrpmbl",
+        "index": 10
     },
     {
         "title": "Urban Courier Service with Dynamic Returns Management",
@@ -3630,7 +3641,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrpmbl"
+        "label": "vrpmbl",
+        "index": 11
     },
     {
         "title": "Agricultural Cooperative Seed Delivery and Crop Collection",
@@ -3799,7 +3811,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrpmbl"
+        "label": "vrpmbl",
+        "index": 12
     },
     {
         "title": "Event Rental Equipment Redistribution",
@@ -4045,7 +4058,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrpmbl"
+        "label": "vrpmbl",
+        "index": 13
     },
     {
         "title": "Restaurant Supply Chain with Organic Waste Pickup",
@@ -4258,7 +4272,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrpmbl"
+        "label": "vrpmbl",
+        "index": 14
     },
     {
         "title": "Automotive Parts Delivery and Defective Return Logistics",
@@ -4603,11 +4618,12 @@
             ]
         },
         "user_template": {},
-        "label": "vrpmbl"
+        "label": "vrpmbl",
+        "index": 15
     },
     {
         "title": "Agricultural Seed Delivery and Crop Collection Logistics",
-        "desc_split": "A farm cooperative delivers fresh seed packets to farmers\u2019 fields and collects surplus crops or expired seeds for processing. Trucks must balance seed deliveries (linehaul) and crop pickups (backhaul) in any order, adhering to their capacity limits. Routes are constrained by a maximum distance to ensure farmers within a regional network are served efficiently without overextending travel time or fuel reserves.",
+        "desc_split": "A farm cooperative delivers fresh seed packets to farmers’ fields and collects surplus crops or expired seeds for processing. Trucks must balance seed deliveries (linehaul) and crop pickups (backhaul) in any order, adhering to their capacity limits. Routes are constrained by a maximum distance to ensure farmers within a regional network are served efficiently without overextending travel time or fuel reserves.",
         "data_template": {
             "num_depots": [
                 1
@@ -4860,7 +4876,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrpmbl"
+        "label": "vrpmbl",
+        "index": 16
     },
     {
         "title": "Mobile Medical Clinic Supply Delivery and Waste Collection",
@@ -5227,7 +5244,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrpmbl"
+        "label": "vrpmbl",
+        "index": 17
     },
     {
         "title": "Construction Equipment Rental and Pick-up Logistics",
@@ -5506,11 +5524,12 @@
             ]
         },
         "user_template": {},
-        "label": "vrpmbl"
+        "label": "vrpmbl",
+        "index": 18
     },
     {
         "title": "Pharmaceutical Cold Chain Delivery and Expired Product Collection",
-        "desc_split": "A pharmaceutical firm delivers temperature-sensitive medications to hospitals and collects expired drugs for safe disposal. Refrigerated trucks must balance deliveries and pickups in any order along their route, ensuring cold chain integrity and capacity constraints are met. Each route\u2019s total distance is capped to prevent delays in critical medical supplies while streamlining the reverse logistics of expired products.",
+        "desc_split": "A pharmaceutical firm delivers temperature-sensitive medications to hospitals and collects expired drugs for safe disposal. Refrigerated trucks must balance deliveries and pickups in any order along their route, ensuring cold chain integrity and capacity constraints are met. Each route’s total distance is capped to prevent delays in critical medical supplies while streamlining the reverse logistics of expired products.",
         "data_template": {
             "num_depots": [
                 1
@@ -5873,7 +5892,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrpmbl"
+        "label": "vrpmbl",
+        "index": 19
     },
     {
         "title": "Rental Equipment Redistribution for Event Services",
@@ -6086,11 +6106,12 @@
             ]
         },
         "user_template": {},
-        "label": "vrpmbl"
+        "label": "vrpmbl",
+        "index": 20
     },
     {
         "title": "Textile Mill Fabric Delivery and Scrap Pickup",
-        "desc_split": "A textile mill delivers rolls of fabric to manufacturing plants and collects scrap fabric from those sites for recycling. Each truck\u2019s capacity must accommodate both the outgoing fabric deliveries and the incoming scrap pickups without overloading. Routes are restricted by a maximum allowable distance to reduce fuel costs and ensure drivers return promptly. The challenge is to sequence deliveries and pickups optimally, allowing flexible orderings of stops while adhering to capacity and distance constraints.",
+        "desc_split": "A textile mill delivers rolls of fabric to manufacturing plants and collects scrap fabric from those sites for recycling. Each truck’s capacity must accommodate both the outgoing fabric deliveries and the incoming scrap pickups without overloading. Routes are restricted by a maximum allowable distance to reduce fuel costs and ensure drivers return promptly. The challenge is to sequence deliveries and pickups optimally, allowing flexible orderings of stops while adhering to capacity and distance constraints.",
         "data_template": {
             "num_depots": [
                 1
@@ -6288,7 +6309,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrpmbl"
+        "label": "vrpmbl",
+        "index": 21
     },
     {
         "title": "Appliance Repair Parts Delivery and Recycling Pickup",
@@ -6446,11 +6468,12 @@
             ]
         },
         "user_template": {},
-        "label": "vrpmbl"
+        "label": "vrpmbl",
+        "index": 22
     },
     {
         "title": "Brewery Keg Delivery and Return Logistics",
-        "desc_split": "A craft brewery delivers full beer kegs to pubs and collects empty kegs for reuse. Trucks have strict capacity limits for both the weight of full kegs and the volume of empties. Each route must stay within a maximum distance to ensure kegs are restocked quickly and drivers avoid lengthy trips. The problem requires flexible routing\u2014allowing keg drops and pickups to be arranged in any sequence\u2014while respecting capacity and distance constraints to maximize efficiency.",
+        "desc_split": "A craft brewery delivers full beer kegs to pubs and collects empty kegs for reuse. Trucks have strict capacity limits for both the weight of full kegs and the volume of empties. Each route must stay within a maximum distance to ensure kegs are restocked quickly and drivers avoid lengthy trips. The problem requires flexible routing—allowing keg drops and pickups to be arranged in any sequence—while respecting capacity and distance constraints to maximize efficiency.",
         "data_template": {
             "num_depots": [
                 1
@@ -6681,7 +6704,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrpmbl"
+        "label": "vrpmbl",
+        "index": 23
     },
     {
         "title": "Livestock Feed Delivery and Manure Collection",
@@ -6938,7 +6962,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrpmbl"
+        "label": "vrpmbl",
+        "index": 24
     },
     {
         "title": "Library Book Delivery and Returns Network",
@@ -7213,7 +7238,8 @@
                 2.410731554031372
             ]
         },
-        "label": "vrpmbl"
+        "label": "vrpmbl",
+        "index": 25
     },
     {
         "title": "Beverage Bottle Delivery and Recycling Collection",
@@ -7400,7 +7426,8 @@
                 2.2806715965270996
             ]
         },
-        "label": "vrpmbl"
+        "label": "vrpmbl",
+        "index": 26
     },
     {
         "title": "IT Equipment Delivery and E-Waste Pickup",
@@ -7587,7 +7614,8 @@
                 2.573521137237549
             ]
         },
-        "label": "vrpmbl"
+        "label": "vrpmbl",
+        "index": 27
     },
     {
         "title": "Road Maintenance Supplies Delivery and Debris Collection",
@@ -7906,7 +7934,8 @@
                 2.719834327697754
             ]
         },
-        "label": "vrpmbl"
+        "label": "vrpmbl",
+        "index": 28
     },
     {
         "title": "Sports Equipment Rental Delivery and Retrieval",
@@ -8236,7 +8265,8 @@
                 1.9137499332427979
             ]
         },
-        "label": "vrpmbl"
+        "label": "vrpmbl",
+        "index": 29
     },
     {
         "title": "Solar Panel Delivery and Battery Recycling Route Planning",
@@ -8467,7 +8497,8 @@
                 ]
             ]
         },
-        "label": "vrpmbl"
+        "label": "vrpmbl",
+        "index": 30
     },
     {
         "title": "Temporary Storage Container Logistics for Construction Sites",
@@ -8743,7 +8774,8 @@
                 2.261361598968506
             ]
         },
-        "label": "vrpmbl"
+        "label": "vrpmbl",
+        "index": 31
     },
     {
         "title": "Fashion Rental Service Delivery and Return Network",
@@ -8968,7 +9000,8 @@
                 2.051663637161255
             ]
         },
-        "label": "vrpmbl"
+        "label": "vrpmbl",
+        "index": 32
     },
     {
         "title": "Tech Equipment Rental and E-Waste Collection",
@@ -9208,7 +9241,8 @@
                 2.693225622177124
             ]
         },
-        "label": "vrpmbl"
+        "label": "vrpmbl",
+        "index": 33
     },
     {
         "title": "Offshore Supply and Waste Retrieval Logistics",
@@ -9574,7 +9608,8 @@
                 2.5876011848449707
             ]
         },
-        "label": "vrpmbl"
+        "label": "vrpmbl",
+        "index": 34
     },
     {
         "title": "Waste Management and Recycling Equipment Redistribution",
@@ -10069,7 +10104,8 @@
                 1.8719438314437866
             ]
         },
-        "label": "vrpmbl"
+        "label": "vrpmbl",
+        "index": 35
     },
     {
         "title": "Event Catering and Dishware Return Logistics",
@@ -10530,11 +10566,12 @@
                 2.6471667289733887
             ]
         },
-        "label": "vrpmbl"
+        "label": "vrpmbl",
+        "index": 36
     },
     {
         "title": "Flower Delivery and Compost Collection for Urban Gardens",
-        "desc_split": "A floral delivery service partners with urban gardeners to deliver fresh flowers to customers and collect wilted blooms for composting. The company\u2019s vehicles (<capacity> kg capacity) start at a central greenhouse (<loc_depot>) and service <num_customer> garden locations (<loc_customer>). Each garden requests a specific weight of fresh flowers (<demand_linehaul>) and has a corresponding weight of compostable waste to return (<demand_backhaul>). Routes must allow trucks to alternate between deliveries and pickups (e.g., delivering flowers to one garden and collecting compost from another) without exceeding the truck\u2019s capacity or a <distance_limit> km route length. The objective is to balance freshness, route efficiency, and waste management.",
+        "desc_split": "A floral delivery service partners with urban gardeners to deliver fresh flowers to customers and collect wilted blooms for composting. The company’s vehicles (<capacity> kg capacity) start at a central greenhouse (<loc_depot>) and service <num_customer> garden locations (<loc_customer>). Each garden requests a specific weight of fresh flowers (<demand_linehaul>) and has a corresponding weight of compostable waste to return (<demand_backhaul>). Routes must allow trucks to alternate between deliveries and pickups (e.g., delivering flowers to one garden and collecting compost from another) without exceeding the truck’s capacity or a <distance_limit> km route length. The objective is to balance freshness, route efficiency, and waste management.",
         "data_template": {
             "num_depots": [
                 1
@@ -10957,7 +10994,8 @@
                 1.8298182487487793
             ]
         },
-        "label": "vrpmbl"
+        "label": "vrpmbl",
+        "index": 37
     },
     {
         "title": "Tool Rental and Return for Construction Contractors",
@@ -11520,7 +11558,8 @@
                 1.8778605461120605
             ]
         },
-        "label": "vrpmbl"
+        "label": "vrpmbl",
+        "index": 38
     },
     {
         "title": "Aquarium Supply Delivery and Water Quality Sampling",
@@ -11998,11 +12037,12 @@
                 2.0513973236083984
             ]
         },
-        "label": "vrpmbl"
+        "label": "vrpmbl",
+        "index": 39
     },
     {
         "title": "Marine Equipment Delivery and Salvage Operations Logistics",
-        "desc_split": "A maritime logistics firm must deliver underwater survey equipment to offshore research stations and simultaneously retrieve salvaged materials from sunken vessels. Each vessel has a <capacity> ton capacity, requiring careful balancing of delivery (e.g., sonar arrays) and pickup loads (e.g., scrap metal). Routes must stay within a <distance_limit> nautical mile radius to ensure return to the coastal depot <loc_depot> before fuel depletion. The mixed backhaul approach allows flexible sequencing\u2014like dropping off equipment at one buoy and collecting salvage from another\u2014while adhering to strict capacity limits.",
+        "desc_split": "A maritime logistics firm must deliver underwater survey equipment to offshore research stations and simultaneously retrieve salvaged materials from sunken vessels. Each vessel has a <capacity> ton capacity, requiring careful balancing of delivery (e.g., sonar arrays) and pickup loads (e.g., scrap metal). Routes must stay within a <distance_limit> nautical mile radius to ensure return to the coastal depot <loc_depot> before fuel depletion. The mixed backhaul approach allows flexible sequencing—like dropping off equipment at one buoy and collecting salvage from another—while adhering to strict capacity limits.",
         "data_template": {
             "num_depots": [
                 1
@@ -12235,7 +12275,8 @@
                 ]
             ]
         },
-        "label": "vrpmbl"
+        "label": "vrpmbl",
+        "index": 40
     },
     {
         "title": "Agricultural Machinery Redistribution and Crop Collection",
@@ -12428,7 +12469,8 @@
                 2.5999019145965576
             ]
         },
-        "label": "vrpmbl"
+        "label": "vrpmbl",
+        "index": 41
     },
     {
         "title": "Airport Ground Service Equipment Redistribution",
@@ -12764,11 +12806,12 @@
                 ]
             ]
         },
-        "label": "vrpmbl"
+        "label": "vrpmbl",
+        "index": 42
     },
     {
         "title": "Urban Furniture Delivery and Public Space Waste Collection",
-        "desc_split": "A city\u2019s public works department uses trucks to deliver park benches, trash bins, and playground equipment to newly developed areas while collecting litter, recyclables, and discarded furniture from public zones. Each truck must handle mixed backhaul loads (linehaul: deliveries, backhaul: collections) without exceeding <capacity> kg capacity. Routes must not stretch beyond <distance_limit> kilometers to ensure coverage of densely packed urban districts. Workers can choose to first empty a dumpster before delivering new benches, optimizing route flow.",
+        "desc_split": "A city’s public works department uses trucks to deliver park benches, trash bins, and playground equipment to newly developed areas while collecting litter, recyclables, and discarded furniture from public zones. Each truck must handle mixed backhaul loads (linehaul: deliveries, backhaul: collections) without exceeding <capacity> kg capacity. Routes must not stretch beyond <distance_limit> kilometers to ensure coverage of densely packed urban districts. Workers can choose to first empty a dumpster before delivering new benches, optimizing route flow.",
         "data_template": {
             "num_depots": [
                 1
@@ -13083,7 +13126,8 @@
                 2.608626127243042
             ]
         },
-        "label": "vrpmbl"
+        "label": "vrpmbl",
+        "index": 43
     },
     {
         "title": "Rural School Supplies Delivery and Textbook Collection",
@@ -13397,11 +13441,12 @@
                 2.5322327613830566
             ]
         },
-        "label": "vrpmbl"
+        "label": "vrpmbl",
+        "index": 44
     },
     {
         "title": "Offshore Oil Rig Supply and Waste Retrieval",
-        "desc_split": "A maritime logistics firm must deliver fresh supplies (e.g., food, equipment) to offshore oil rigs while collecting hazardous waste for disposal. Each vessel has a limited cargo capacity (<capacity> tons) and must return to the coastal depot (<loc_depot>) within a <distance_limit> nautical mile radius. The mixed backhaul requirement allows crews to optimize routes by delivering to some rigs and collecting waste from others in any sequence, provided total cargo (supplies + waste) doesn\u2019t exceed capacity. The goal is to minimize total travel distance while ensuring all rigs are serviced and waste is retrieved safely.",
+        "desc_split": "A maritime logistics firm must deliver fresh supplies (e.g., food, equipment) to offshore oil rigs while collecting hazardous waste for disposal. Each vessel has a limited cargo capacity (<capacity> tons) and must return to the coastal depot (<loc_depot>) within a <distance_limit> nautical mile radius. The mixed backhaul requirement allows crews to optimize routes by delivering to some rigs and collecting waste from others in any sequence, provided total cargo (supplies + waste) doesn’t exceed capacity. The goal is to minimize total travel distance while ensuring all rigs are serviced and waste is retrieved safely.",
         "data_template": {
             "num_depots": [
                 1
@@ -13700,7 +13745,8 @@
                 2.292665958404541
             ]
         },
-        "label": "vrpmbl"
+        "label": "vrpmbl",
+        "index": 45
     },
     {
         "title": "Temporary Event Infrastructure Deployment & Recovery",
@@ -14123,11 +14169,12 @@
                 ]
             ]
         },
-        "label": "vrpmbl"
+        "label": "vrpmbl",
+        "index": 46
     },
     {
         "title": "Recycling Bin Redistribution & Waste Collection",
-        "desc_split": "A municipal recycling service provider needs to distribute empty bins to businesses and residential areas while collecting filled bins for processing. Each truck can carry up to <capacity> cubic meters of combined empty bins (deliveries) and waste-filled bins (pickups). Routes must remain within a <distance_limit> km radius of the sorting facility (<loc_depot>) to avoid exceeding daily operational hours. The mixed backhaul model allows drivers to dynamically choose delivery and pickup stops in any order, as long as the total volume doesn\u2019t exceed capacity. The challenge is balancing coverage with route length constraints to reduce fuel costs and emissions.",
+        "desc_split": "A municipal recycling service provider needs to distribute empty bins to businesses and residential areas while collecting filled bins for processing. Each truck can carry up to <capacity> cubic meters of combined empty bins (deliveries) and waste-filled bins (pickups). Routes must remain within a <distance_limit> km radius of the sorting facility (<loc_depot>) to avoid exceeding daily operational hours. The mixed backhaul model allows drivers to dynamically choose delivery and pickup stops in any order, as long as the total volume doesn’t exceed capacity. The challenge is balancing coverage with route length constraints to reduce fuel costs and emissions.",
         "data_template": {
             "num_depots": [
                 1
@@ -14481,11 +14528,12 @@
                 ]
             ]
         },
-        "label": "vrpmbl"
+        "label": "vrpmbl",
+        "index": 47
     },
     {
         "title": "Tourist Shuttle Service with Dynamic Itinerary Management",
-        "desc_split": "A scenic mountain resort operates a shuttle service that transports tourists between attractions (deliveries) and picks up passengers from remote viewpoints (pickups). Each shuttle bus holds up to <capacity> passengers and must return to the main terminal (<loc_depot>) within a <distance_limit> km loop to ensure timely turnaround. Drivers can mix drop-offs and pickups (e.g., deliver hikers to a trailhead, then collect skiers from a lift station) in any order, provided they don\u2019t exceed passenger capacity. The goal is to maximize tourist satisfaction while minimizing detours and adhering to strict route length limits imposed by limited battery range in electric vehicles.",
+        "desc_split": "A scenic mountain resort operates a shuttle service that transports tourists between attractions (deliveries) and picks up passengers from remote viewpoints (pickups). Each shuttle bus holds up to <capacity> passengers and must return to the main terminal (<loc_depot>) within a <distance_limit> km loop to ensure timely turnaround. Drivers can mix drop-offs and pickups (e.g., deliver hikers to a trailhead, then collect skiers from a lift station) in any order, provided they don’t exceed passenger capacity. The goal is to maximize tourist satisfaction while minimizing detours and adhering to strict route length limits imposed by limited battery range in electric vehicles.",
         "data_template": {
             "num_depots": [
                 1
@@ -14729,7 +14777,8 @@
                 1.7395721673965454
             ]
         },
-        "label": "vrpmbl"
+        "label": "vrpmbl",
+        "index": 48
     },
     {
         "title": "Electric Vehicle Charging Station Maintenance & Replacement",
@@ -15182,11 +15231,12 @@
                 ]
             ]
         },
-        "label": "vrpmbl"
+        "label": "vrpmbl",
+        "index": 49
     },
     {
         "title": "Medical Supply Delivery and Waste Collection for Rural Clinics",
-        "desc_split": "A healthcare logistics company must deliver medical supplies (e.g., vaccines, medications) to remote rural clinics and collect hazardous medical waste (e.g., used syringes, biohazard materials) from the same locations. Each vehicle has a maximum capacity of <capacity> kg, balancing sterile deliveries and contaminated waste pickups. Routes must stay within a <distance_limit> km limit to ensure timely returns to the central medical depot (<loc_depot>), avoiding overnight stays in remote areas. The clinics (<loc_customer>) may be visited in any order, as long as the combined weight of supplies and waste never exceeds the truck\u2019s capacity.",
+        "desc_split": "A healthcare logistics company must deliver medical supplies (e.g., vaccines, medications) to remote rural clinics and collect hazardous medical waste (e.g., used syringes, biohazard materials) from the same locations. Each vehicle has a maximum capacity of <capacity> kg, balancing sterile deliveries and contaminated waste pickups. Routes must stay within a <distance_limit> km limit to ensure timely returns to the central medical depot (<loc_depot>), avoiding overnight stays in remote areas. The clinics (<loc_customer>) may be visited in any order, as long as the combined weight of supplies and waste never exceeds the truck’s capacity.",
         "data_template": {
             "num_depots": [
                 1
@@ -15425,11 +15475,12 @@
                 ]
             ]
         },
-        "label": "vrpmbl"
+        "label": "vrpmbl",
+        "index": 50
     },
     {
         "title": "Perishable Seafood Delivery and Ice Pack Recycling",
-        "desc_split": "A coastal seafood distributor delivers fresh fish and shellfish to urban markets (<loc_customer>) while collecting used ice packs from the same locations for recycling. The refrigerated trucks have a capacity of <capacity> kg, accommodating both perishable deliveries and plastic ice pack pickups. To maintain product freshness, all routes must be completed within a <distance_limit> km radius of the central processing facility (<loc_depot>). The sequence of deliveries and pickups can be optimized for efficiency, as long as the total load remains under the vehicle\u2019s limit.",
+        "desc_split": "A coastal seafood distributor delivers fresh fish and shellfish to urban markets (<loc_customer>) while collecting used ice packs from the same locations for recycling. The refrigerated trucks have a capacity of <capacity> kg, accommodating both perishable deliveries and plastic ice pack pickups. To maintain product freshness, all routes must be completed within a <distance_limit> km radius of the central processing facility (<loc_depot>). The sequence of deliveries and pickups can be optimized for efficiency, as long as the total load remains under the vehicle’s limit.",
         "data_template": {
             "num_depots": [
                 1
@@ -15758,11 +15809,12 @@
                 ]
             ]
         },
-        "label": "vrpmbl"
+        "label": "vrpmbl",
+        "index": 51
     },
     {
         "title": "Festival Infrastructure Deployment and Cleanup Logistics",
-        "desc_split": "A company specializing in temporary event infrastructure must deploy modular stages, lighting, and sound equipment to festival venues (<loc_customer>) while simultaneously collecting trash and recyclables from the same locations after events. Each truck has a <capacity> ton capacity for equipment and waste. Routes are constrained to a <distance_limit> km radius of the central storage depot (<loc_depot>) to ensure quick turnaround for multiple events. The order of equipment deliveries and waste pickups can be mixed, provided the vehicle\u2019s load never exceeds its capacity.",
+        "desc_split": "A company specializing in temporary event infrastructure must deploy modular stages, lighting, and sound equipment to festival venues (<loc_customer>) while simultaneously collecting trash and recyclables from the same locations after events. Each truck has a <capacity> ton capacity for equipment and waste. Routes are constrained to a <distance_limit> km radius of the central storage depot (<loc_depot>) to ensure quick turnaround for multiple events. The order of equipment deliveries and waste pickups can be mixed, provided the vehicle’s load never exceeds its capacity.",
         "data_template": {
             "num_depots": [
                 1
@@ -16061,11 +16113,12 @@
                 ]
             ]
         },
-        "label": "vrpmbl"
+        "label": "vrpmbl",
+        "index": 52
     },
     {
         "title": "Water Meter Replacement and Recycling Program",
-        "desc_split": "A utility company replaces outdated water meters in residential areas (<loc_customer>) with smart meters while collecting the old meters for recycling. Each service truck carries a maximum of <capacity> meters (combining new deliveries and old pickups). To comply with daily fuel and labor constraints, all routes must not exceed <distance_limit> km from the central depot (<loc_depot>). Technicians can visit locations in any sequence, as long as the combined weight of new meters and old equipment stays within the truck\u2019s capacity.",
+        "desc_split": "A utility company replaces outdated water meters in residential areas (<loc_customer>) with smart meters while collecting the old meters for recycling. Each service truck carries a maximum of <capacity> meters (combining new deliveries and old pickups). To comply with daily fuel and labor constraints, all routes must not exceed <distance_limit> km from the central depot (<loc_depot>). Technicians can visit locations in any sequence, as long as the combined weight of new meters and old equipment stays within the truck’s capacity.",
         "data_template": {
             "num_depots": [
                 1
@@ -16529,7 +16582,8 @@
                 ]
             ]
         },
-        "label": "vrpmbl"
+        "label": "vrpmbl",
+        "index": 53
     },
     {
         "title": "Wind Turbine Maintenance Parts Delivery and Scrap Collection",
@@ -16847,7 +16901,8 @@
                 ]
             ]
         },
-        "label": "vrpmbl"
+        "label": "vrpmbl",
+        "index": 54
     },
     {
         "title": "Landscaping Supply Delivery and Organic Waste Collection",
@@ -17104,10 +17159,11 @@
             ]
         },
         "user_template": {},
-        "label": "vrpmbl"
+        "label": "vrpmbl",
+        "index": 55
     },
     {
-        "title": "Honey Producer\u2019s Delivery and Empty Container Recycling Network",
+        "title": "Honey Producer’s Delivery and Empty Container Recycling Network",
         "desc_split": "A regional honey producer distributes jars of honey to retail stores and simultaneously collects empty containers from previous deliveries for sterilization and reuse. Trucks must balance the weight of honey deliveries against the volume of returned jars without exceeding their capacity. All routes must stay within a predefined maximum distance to ensure product freshness and efficient logistics, with stops arranged in any order that optimizes route efficiency.",
         "data_template": {
             "num_depots": [
@@ -17306,7 +17362,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrpmbl"
+        "label": "vrpmbl",
+        "index": 56
     },
     {
         "title": "Rural Water Supply Delivery and Plastic Bottle Recycling",
@@ -17552,7 +17609,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrpmbl"
+        "label": "vrpmbl",
+        "index": 57
     },
     {
         "title": "Offshore Energy Platform Equipment Supply and Tool Retrieval",
@@ -17754,10 +17812,11 @@
             ]
         },
         "user_template": {},
-        "label": "vrpmbl"
+        "label": "vrpmbl",
+        "index": 58
     },
     {
-        "title": "Library System\u2019s Book Delivery and Archival Material Collection",
+        "title": "Library System’s Book Delivery and Archival Material Collection",
         "desc_split": "A public library network transports new books to branch locations while collecting outdated materials for archival or recycling. Each delivery truck must balance the weight of outgoing books and incoming archives without exceeding capacity. All routes are constrained by a maximum distance to ensure timely service and fuel efficiency, with stops arranged in any order to minimize total travel distance.",
         "data_template": {
             "num_depots": [
@@ -18044,7 +18103,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrpmbl"
+        "label": "vrpmbl",
+        "index": 59
     },
     {
         "title": "Telecom Tower Maintenance Supplies Delivery and Scrap Recycling Route Planning",
@@ -18275,11 +18335,12 @@
                 2.131880760192871
             ]
         },
-        "label": "vrpmbl"
+        "label": "vrpmbl",
+        "index": 60
     },
     {
         "title": "Municipal Snow Removal Equipment Redistribution and Salt Delivery",
-        "desc_split": "During winter storms, a city\u2019s public works department must redistribute snowplows, de-icing spreaders, and salt supplies to district depots while collecting used equipment and empty salt containers for reuse. Each truck can carry up to <capacity> tons of combined equipment and salt. Routes must stay within a <distance_limit> km radius of the central depot to ensure rapid deployment and compliance with fuel limits. The goal is to balance delivery and pickup tasks across all districts while minimizing total travel distance.",
+        "desc_split": "During winter storms, a city’s public works department must redistribute snowplows, de-icing spreaders, and salt supplies to district depots while collecting used equipment and empty salt containers for reuse. Each truck can carry up to <capacity> tons of combined equipment and salt. Routes must stay within a <distance_limit> km radius of the central depot to ensure rapid deployment and compliance with fuel limits. The goal is to balance delivery and pickup tasks across all districts while minimizing total travel distance.",
         "data_template": {
             "num_depots": [
                 1
@@ -18440,7 +18501,8 @@
                 2.0315747261047363
             ]
         },
-        "label": "vrpmbl"
+        "label": "vrpmbl",
+        "index": 61
     },
     {
         "title": "Hotel Chain Linen Supply and Laundry Pickup Network",
@@ -18660,7 +18722,8 @@
                 2.580822229385376
             ]
         },
-        "label": "vrpmbl"
+        "label": "vrpmbl",
+        "index": 62
     },
     {
         "title": "Rural Internet Installation and Outdated Cable Recycling Logistics",
@@ -19034,7 +19097,8 @@
                 1.8316006660461426
             ]
         },
-        "label": "vrpmbl"
+        "label": "vrpmbl",
+        "index": 63
     },
     {
         "title": "Offshore Research Station Supply Delivery and Waste Retrieval",
@@ -19276,7 +19340,8 @@
                 2.580352306365967
             ]
         },
-        "label": "vrpmbl"
+        "label": "vrpmbl",
+        "index": 64
     },
     {
         "title": "Marine Conservation Equipment Redistribution and Coral Sample Collection",
@@ -19577,7 +19642,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrpmbl"
+        "label": "vrpmbl",
+        "index": 65
     },
     {
         "title": "Urban Vertical Farm Supply and Organic Waste Retrieval",
@@ -19746,7 +19812,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrpmbl"
+        "label": "vrpmbl",
+        "index": 66
     },
     {
         "title": "Remote Wilderness Research Supply and Sample Retrieval",
@@ -19915,7 +19982,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrpmbl"
+        "label": "vrpmbl",
+        "index": 67
     },
     {
         "title": "Art Museum Artifact Delivery and Exhibition Return Logistics",
@@ -20128,7 +20196,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrpmbl"
+        "label": "vrpmbl",
+        "index": 68
     },
     {
         "title": "Disaster Debris Removal and Emergency Supplies Delivery",
@@ -20385,7 +20454,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrpmbl"
+        "label": "vrpmbl",
+        "index": 69
     },
     {
         "title": "Film Production Equipment Redistribution and Set Clearance Logistics",
@@ -20638,7 +20708,8 @@
                 2.5116655826568604
             ]
         },
-        "label": "vrpmbl"
+        "label": "vrpmbl",
+        "index": 70
     },
     {
         "title": "Hazardous Waste Collection and Safety Equipment Delivery Network",
@@ -20814,7 +20885,8 @@
                 1.312726616859436
             ]
         },
-        "label": "vrpmbl"
+        "label": "vrpmbl",
+        "index": 71
     },
     {
         "title": "Mobile Healthcare Clinic Supply Delivery and Medical Waste Disposal",
@@ -21045,7 +21117,8 @@
                 2.3718645572662354
             ]
         },
-        "label": "vrpmbl"
+        "label": "vrpmbl",
+        "index": 72
     },
     {
         "title": "Sports Event Water Station Deployment and Post-Event Recycling",
@@ -21386,7 +21459,8 @@
                 2.7266383171081543
             ]
         },
-        "label": "vrpmbl"
+        "label": "vrpmbl",
+        "index": 73
     },
     {
         "title": "Offshore Research Vessel Supply and Sample Retrieval",
@@ -21617,7 +21691,8 @@
                 1.9232909679412842
             ]
         },
-        "label": "vrpmbl"
+        "label": "vrpmbl",
+        "index": 74
     },
     {
         "title": "Urban Postal Service Delivery and Package Collection Network",
@@ -21929,11 +22004,12 @@
             ]
         },
         "user_template": {},
-        "label": "vrpmbl"
+        "label": "vrpmbl",
+        "index": 75
     },
     {
         "title": "Offshore Wind Farm Maintenance and Scrap Retrieval Logistics",
-        "desc_split": "Maintenance teams service offshore wind turbines by delivering repair supplies and collecting broken components for recycling. Service boats have limited capacity for both outbound materials and scrap. Routes must not exceed the boat\u2019s fuel range (distance limit), ensuring safe return to harbor. Crews can prioritize deliveries or pickups first, as long as weight limits are respected and all turbines are serviced within operational constraints.",
+        "desc_split": "Maintenance teams service offshore wind turbines by delivering repair supplies and collecting broken components for recycling. Service boats have limited capacity for both outbound materials and scrap. Routes must not exceed the boat’s fuel range (distance limit), ensuring safe return to harbor. Crews can prioritize deliveries or pickups first, as long as weight limits are respected and all turbines are serviced within operational constraints.",
         "data_template": {
             "num_depots": [
                 1
@@ -22109,11 +22185,12 @@
             ]
         },
         "user_template": {},
-        "label": "vrpmbl"
+        "label": "vrpmbl",
+        "index": 76
     },
     {
         "title": "Museum Artifact Transport and Loan Return Logistics",
-        "desc_split": "A network of museums coordinates artifact exchanges between institutions. Vehicles transport outgoing exhibits to host locations while collecting returned loans from other museums. Each vehicle\u2019s capacity is constrained by artifact weight and space. Routes must stay within a daily distance limit to ensure artifacts are transported safely within one workday. Stops can be sequenced flexibly\u2014delivering first or retrieving first\u2014as long as load constraints are met and all artifacts are moved efficiently.",
+        "desc_split": "A network of museums coordinates artifact exchanges between institutions. Vehicles transport outgoing exhibits to host locations while collecting returned loans from other museums. Each vehicle’s capacity is constrained by artifact weight and space. Routes must stay within a daily distance limit to ensure artifacts are transported safely within one workday. Stops can be sequenced flexibly—delivering first or retrieving first—as long as load constraints are met and all artifacts are moved efficiently.",
         "data_template": {
             "num_depots": [
                 1
@@ -22355,7 +22432,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrpmbl"
+        "label": "vrpmbl",
+        "index": 77
     },
     {
         "title": "Forest Fire Prevention and Equipment Redistribution",
@@ -22678,11 +22756,12 @@
             ]
         },
         "user_template": {},
-        "label": "vrpmbl"
+        "label": "vrpmbl",
+        "index": 78
     },
     {
         "title": "Rural Health Clinic Medical Supply and Waste Disposal Routes",
-        "desc_split": "Mobile health clinics deliver critical medical supplies to remote clinics and collect hazardous medical waste for disposal. Each vehicle\u2019s capacity is limited by both supply weight and waste volume. Routes must stay within a maximum distance to ensure timely returns and regulatory compliance. Stops can be ordered flexibly\u2014delivering supplies first or collecting waste first\u2014to optimize travel while respecting load and distance constraints.",
+        "desc_split": "Mobile health clinics deliver critical medical supplies to remote clinics and collect hazardous medical waste for disposal. Each vehicle’s capacity is limited by both supply weight and waste volume. Routes must stay within a maximum distance to ensure timely returns and regulatory compliance. Stops can be ordered flexibly—delivering supplies first or collecting waste first—to optimize travel while respecting load and distance constraints.",
         "data_template": {
             "num_depots": [
                 1
@@ -23045,7 +23124,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrpmbl"
+        "label": "vrpmbl",
+        "index": 79
     },
     {
         "title": "Aquaculture Feed Delivery & Harvest Retrieval Logistics",
@@ -23455,11 +23535,12 @@
                 1.9941949844360352
             ]
         },
-        "label": "vrpmbl"
+        "label": "vrpmbl",
+        "index": 80
     },
     {
         "title": "Municipal Water Tank Redistribution for Drought Relief",
-        "desc_split": "During a severe drought, a water utility company must deliver full water tanks to parched communities while retrieving empty ones for refilling. The depot (<loc_depot>) sends trucks with a <capacity> liter capacity to <num_customer> distribution points. Each site requires a specific volume of water (<demand_linehaul>) and has a quota of empty tanks to return (<demand_backhaul>). Routes must balance both tasks without exceeding weight limits, as tanks are heavy when full. To prevent overextension, each truck\u2019s round-trip distance cannot exceed <distance_limit> kilometers, ensuring rapid redistribution cycles and minimal downtime for refilling operations.",
+        "desc_split": "During a severe drought, a water utility company must deliver full water tanks to parched communities while retrieving empty ones for refilling. The depot (<loc_depot>) sends trucks with a <capacity> liter capacity to <num_customer> distribution points. Each site requires a specific volume of water (<demand_linehaul>) and has a quota of empty tanks to return (<demand_backhaul>). Routes must balance both tasks without exceeding weight limits, as tanks are heavy when full. To prevent overextension, each truck’s round-trip distance cannot exceed <distance_limit> kilometers, ensuring rapid redistribution cycles and minimal downtime for refilling operations.",
         "data_template": {
             "num_depots": [
                 1
@@ -23900,7 +23981,8 @@
                 2.523665428161621
             ]
         },
-        "label": "vrpmbl"
+        "label": "vrpmbl",
+        "index": 81
     },
     {
         "title": "Temporary Music Festival Infrastructure Deployment & Deconstruction",
@@ -24412,7 +24494,8 @@
                 2.5676279067993164
             ]
         },
-        "label": "vrpmbl"
+        "label": "vrpmbl",
+        "index": 82
     },
     {
         "title": "Wildlife Research Supplies & Specimen Collection Routes",
@@ -24714,7 +24797,8 @@
                 1.862173080444336
             ]
         },
-        "label": "vrpmbl"
+        "label": "vrpmbl",
+        "index": 83
     },
     {
         "title": "Medical Cannabis Dispensary Restocking & Waste Management",
@@ -24964,7 +25048,8 @@
                 1.6165746450424194
             ]
         },
-        "label": "vrpmbl"
+        "label": "vrpmbl",
+        "index": 84
     },
     {
         "title": "Space Research Supply and Sample Retrieval Logistics",
@@ -25159,7 +25244,8 @@
                 2.7351255416870117
             ]
         },
-        "label": "vrpmbl"
+        "label": "vrpmbl",
+        "index": 85
     },
     {
         "title": "Wildlife Monitoring Equipment Deployment and Specimen Collection",
@@ -25445,11 +25531,12 @@
                 1.616748571395874
             ]
         },
-        "label": "vrpmbl"
+        "label": "vrpmbl",
+        "index": 86
     },
     {
         "title": "Museum Artifact Exchange and Conservation Material Delivery",
-        "desc_split": "A cultural heritage organization coordinates artifact exchanges between museums while transporting specialized preservation materials. Vehicles depart from a central depot (<loc_depot>), delivering conservation supplies (<demand_linehaul>) to museums and collecting loaned artifacts (<demand_backhaul>) for return to lenders. Each truck has a limited space (<capacity> m\u00b3), and routes must not exceed a daily driving limit (<distance_limit> km) to prevent overheating of sensitive artifacts. Delivery and pickup stops can be interleaved for efficiency.",
+        "desc_split": "A cultural heritage organization coordinates artifact exchanges between museums while transporting specialized preservation materials. Vehicles depart from a central depot (<loc_depot>), delivering conservation supplies (<demand_linehaul>) to museums and collecting loaned artifacts (<demand_backhaul>) for return to lenders. Each truck has a limited space (<capacity> m³), and routes must not exceed a daily driving limit (<distance_limit> km) to prevent overheating of sensitive artifacts. Delivery and pickup stops can be interleaved for efficiency.",
         "data_template": {
             "num_depots": [
                 1
@@ -25770,7 +25857,8 @@
                 2.256099224090576
             ]
         },
-        "label": "vrpmbl"
+        "label": "vrpmbl",
+        "index": 87
     },
     {
         "title": "Offshore Wind Turbine Maintenance Parts and Scrap Transport",
@@ -26173,11 +26261,12 @@
                 2.4476754665374756
             ]
         },
-        "label": "vrpmbl"
+        "label": "vrpmbl",
+        "index": 88
     },
     {
         "title": "Urban Apiary Supply Delivery and Honey Collection",
-        "desc_split": "An urban beekeeping cooperative supplies hives with protective gear, feed, and tools (<demand_linehaul>) while collecting harvested honey (<demand_backhaul>) from rooftop apiaries. Electric delivery vans (<capacity> liters/cubic feet) must complete routes within a <distance_limit> km radius of the central facility (<loc_depot>) to ensure perishable supplies stay fresh. Drivers can choose any sequence of stops\u2014delivering equipment to new hives and collecting honey from active sites\u2014without exceeding vehicle capacity.",
+        "desc_split": "An urban beekeeping cooperative supplies hives with protective gear, feed, and tools (<demand_linehaul>) while collecting harvested honey (<demand_backhaul>) from rooftop apiaries. Electric delivery vans (<capacity> liters/cubic feet) must complete routes within a <distance_limit> km radius of the central facility (<loc_depot>) to ensure perishable supplies stay fresh. Drivers can choose any sequence of stops—delivering equipment to new hives and collecting honey from active sites—without exceeding vehicle capacity.",
         "data_template": {
             "num_depots": [
                 1
@@ -26563,7 +26652,8 @@
                 ]
             ]
         },
-        "label": "vrpmbl"
+        "label": "vrpmbl",
+        "index": 89
     },
     {
         "title": "Urban Mobility Scooter Redistribution and Battery Swap Logistics",
@@ -26783,7 +26873,8 @@
                 2.521196126937866
             ]
         },
-        "label": "vrpmbl"
+        "label": "vrpmbl",
+        "index": 90
     },
     {
         "title": "Telecom Tower Upgrades",
@@ -27124,7 +27215,8 @@
                 2.0780282020568848
             ]
         },
-        "label": "vrpmbl"
+        "label": "vrpmbl",
+        "index": 91
     },
     {
         "title": "Disaster Response",
@@ -27465,7 +27557,8 @@
                 2.0739142894744873
             ]
         },
-        "label": "vrpmbl"
+        "label": "vrpmbl",
+        "index": 92
     },
     {
         "title": "Agricultural Drone Deployment and Battery Recycling",
@@ -27685,7 +27778,8 @@
                 2.6670589447021484
             ]
         },
-        "label": "vrpmbl"
+        "label": "vrpmbl",
+        "index": 93
     },
     {
         "title": "Cultural Heritage Conservation",
@@ -28004,7 +28098,8 @@
                 2.628774404525757
             ]
         },
-        "label": "vrpmbl"
+        "label": "vrpmbl",
+        "index": 94
     },
     {
         "title": "Remote Mining Site Supply and Waste Retrieval Logistics",
@@ -28349,7 +28444,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrpmbl"
+        "label": "vrpmbl",
+        "index": 95
     },
     {
         "title": "Camping Gear Rental and Return Logistics for National Parks",
@@ -28661,7 +28757,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrpmbl"
+        "label": "vrpmbl",
+        "index": 96
     },
     {
         "title": "Rural Health Testing Kit Delivery and Sample Collection",
@@ -28874,7 +28971,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrpmbl"
+        "label": "vrpmbl",
+        "index": 97
     },
     {
         "title": "Offshore Wind Turbine Blade Replacement and Recycling",
@@ -29043,7 +29141,8 @@
             ]
         },
         "user_template": {},
-        "label": "vrpmbl"
+        "label": "vrpmbl",
+        "index": 98
     },
     {
         "title": "Urban Farmers' Market Produce Delivery and Compost Collection",
@@ -29377,6 +29476,7 @@
             ]
         },
         "user_template": {},
-        "label": "vrpmbl"
+        "label": "vrpmbl",
+        "index": 99
     }
 ]

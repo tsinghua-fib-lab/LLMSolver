@@ -1,7 +1,7 @@
 [
     {
         "title": "Grocery Delivery for Elderly Care Centers",
-        "desc_split": "A meal delivery service operates from a central kitchen (<loc_depot>) to supply fresh groceries to <num_customer> elderly care centers (<loc_customer>). Each center has a specific daily order (<demand>) and a strict delivery window (<time_windows>) to align with meal prep schedules. Delivery vans (<capacity>) must:  \n\u2713 Avoid overloading while carrying perishable goods.  \n\u2713 Arrive within each center\u2019s time window (early arrivals wait).  \n\u2713 End routes at the last center, as drivers assist with unloading.  \nThe goal is to minimize total travel distance while ensuring timely deliveries.",
+        "desc_split": "A meal delivery service operates from a central kitchen (<loc_depot>) to supply fresh groceries to <num_customer> elderly care centers (<loc_customer>). Each center has a specific daily order (<demand>) and a strict delivery window (<time_windows>) to align with meal prep schedules. Delivery vans (<capacity>) must:  \n✓ Avoid overloading while carrying perishable goods.  \n✓ Arrive within each center’s time window (early arrivals wait).  \n✓ End routes at the last center, as drivers assist with unloading.  \nThe goal is to minimize total travel distance while ensuring timely deliveries.",
         "data_template": {
             "num_depots": [
                 1
@@ -268,11 +268,12 @@
                 1.0
             ]
         },
-        "label": "ovrptw"
+        "label": "ovrptw",
+        "index": 0
     },
     {
         "title": "Mobile Vaccination Clinic Deployment",
-        "desc_split": "A health organization dispatches mobile clinics from a hub (<loc_depot>) to <num_customer> rural villages (<loc_customer>). Each clinic van (<capacity>) carries vaccines (<demand>) and must arrive during village-specified time windows (<time_windows>) to align with local events. Staff stay overnight at the final village, eliminating return trips. Challenges include:  \n\u2713 Strict cold-chain capacity limits for vaccines.  \n\u2713 Narrow time windows (e.g., midday when villagers gather).  \n\u2713 Routes ending at the last village to reduce wasted travel.",
+        "desc_split": "A health organization dispatches mobile clinics from a hub (<loc_depot>) to <num_customer> rural villages (<loc_customer>). Each clinic van (<capacity>) carries vaccines (<demand>) and must arrive during village-specified time windows (<time_windows>) to align with local events. Staff stay overnight at the final village, eliminating return trips. Challenges include:  \n✓ Strict cold-chain capacity limits for vaccines.  \n✓ Narrow time windows (e.g., midday when villagers gather).  \n✓ Routes ending at the last village to reduce wasted travel.",
         "data_template": {
             "num_depots": [
                 1
@@ -759,11 +760,12 @@
                 ]
             ]
         },
-        "label": "ovrptw"
+        "label": "ovrptw",
+        "index": 1
     },
     {
         "title": "E-Commerce Same-Day Delivery in Urban Areas",
-        "desc_split": "A logistics company fulfills same-day orders from a warehouse (<loc_depot>) to <num_customer> customers (<loc_customer>). Each order has a weight (<demand>) and a 2-hour delivery window (<time_windows>). Scooters (<capacity>) deliver parcels and:  \n\u2713 Cannot carry more than their load limit.  \n\u2713 Must arrive within the customer\u2019s window (early arrivals wait).  \n\u2713 Finish routes at the last delivery point, as riders clock out.  \nThe objective is to minimize total distance while meeting tight deadlines.",
+        "desc_split": "A logistics company fulfills same-day orders from a warehouse (<loc_depot>) to <num_customer> customers (<loc_customer>). Each order has a weight (<demand>) and a 2-hour delivery window (<time_windows>). Scooters (<capacity>) deliver parcels and:  \n✓ Cannot carry more than their load limit.  \n✓ Must arrive within the customer’s window (early arrivals wait).  \n✓ Finish routes at the last delivery point, as riders clock out.  \nThe objective is to minimize total distance while meeting tight deadlines.",
         "data_template": {
             "num_depots": [
                 1
@@ -1350,11 +1352,12 @@
                 1.0
             ]
         },
-        "label": "ovrptw"
+        "label": "ovrptw",
+        "index": 2
     },
     {
         "title": "Waste Collection from Temporary Event Sites",
-        "desc_split": "After a city festival, cleanup crews start from a depot (<loc_depot>) to collect waste from <num_customer> temporary bins (<loc_customer>). Each bin has a volume (<demand>) and a pickup deadline (<time_windows>) before site teardown. Trucks (<capacity>) must:  \n\u2713 Avoid overfilling during collection.  \n\u2713 Reach bins before their closing time.  \n\u2713 End routes at the last bin, as crews shift to sorting.  \nOptimize for shortest total travel while adhering to time constraints.",
+        "desc_split": "After a city festival, cleanup crews start from a depot (<loc_depot>) to collect waste from <num_customer> temporary bins (<loc_customer>). Each bin has a volume (<demand>) and a pickup deadline (<time_windows>) before site teardown. Trucks (<capacity>) must:  \n✓ Avoid overfilling during collection.  \n✓ Reach bins before their closing time.  \n✓ End routes at the last bin, as crews shift to sorting.  \nOptimize for shortest total travel while adhering to time constraints.",
         "data_template": {
             "num_depots": [
                 1
@@ -1981,11 +1984,12 @@
                 1.0
             ]
         },
-        "label": "ovrptw"
+        "label": "ovrptw",
+        "index": 3
     },
     {
         "title": "On-Demand Courier Services for Legal Documents",
-        "desc_split": "A law firm uses couriers to deliver sensitive documents from its office (<loc_depot>) to <num_customer> clients (<loc_customer>). Each package has a weight (<demand>) and a strict signing window (<time_windows>). Couriers (<capacity>) must:  \n\u2713 Stay under load limits for secure transport.  \n\u2713 Arrive within the client\u2019s availability window.  \n\u2713 Finish at the last stop, as couriers file reports remotely.  \nThe goal is to minimize travel distance while ensuring punctual deliveries.",
+        "desc_split": "A law firm uses couriers to deliver sensitive documents from its office (<loc_depot>) to <num_customer> clients (<loc_customer>). Each package has a weight (<demand>) and a strict signing window (<time_windows>). Couriers (<capacity>) must:  \n✓ Stay under load limits for secure transport.  \n✓ Arrive within the client’s availability window.  \n✓ Finish at the last stop, as couriers file reports remotely.  \nThe goal is to minimize travel distance while ensuring punctual deliveries.",
         "data_template": {
             "num_depots": [
                 1
@@ -2332,7 +2336,8 @@
                 1.0
             ]
         },
-        "label": "ovrptw"
+        "label": "ovrptw",
+        "index": 4
     },
     {
         "title": "Fresh Flower Delivery for Wedding Events",
@@ -2835,7 +2840,8 @@
                 1.0
             ]
         },
-        "label": "ovrptw"
+        "label": "ovrptw",
+        "index": 5
     },
     {
         "title": "Mobile COVID-19 Testing Unit Deployment",
@@ -3395,7 +3401,8 @@
                 ]
             ]
         },
-        "label": "ovrptw"
+        "label": "ovrptw",
+        "index": 6
     },
     {
         "title": "Luxury Retail Pop-Up Shop Inventory Replenishment",
@@ -4012,7 +4019,8 @@
                 1.0
             ]
         },
-        "label": "ovrptw"
+        "label": "ovrptw",
+        "index": 7
     },
     {
         "title": "Film Production Equipment Logistics",
@@ -4440,7 +4448,8 @@
                 1.0
             ]
         },
-        "label": "ovrptw"
+        "label": "ovrptw",
+        "index": 8
     },
     {
         "title": "Disaster Relief Tent Distribution",
@@ -4772,7 +4781,8 @@
                 1.0
             ]
         },
-        "label": "ovrptw"
+        "label": "ovrptw",
+        "index": 9
     },
     {
         "title": "Mobile Blood Donation Unit Deployment",
@@ -5237,7 +5247,8 @@
                 ]
             ]
         },
-        "label": "ovrptw"
+        "label": "ovrptw",
+        "index": 10
     },
     {
         "title": "Agricultural Input Delivery to Remote Farms",
@@ -5745,11 +5756,12 @@
                 ]
             ]
         },
-        "label": "ovrptw"
+        "label": "ovrptw",
+        "index": 11
     },
     {
         "title": "Temporary Traffic Sensor Installation for Urban Studies",
-        "desc_split": "A research team deploys portable sensors (<demand> units/weight) to intersections (<loc_customer>) from a municipal yard (<loc_depot>), with installation vans (<capacity>). Each location has strict time windows (<time_windows>) coinciding with low-traffic periods. Technicians finish shifts at the last installation site. The challenge is to optimize routes that:  \n\u2713 Install all sensors before morning rush hour  \n\u2713 Never exceed van payload limits  \n\u2713 Minimize pre-dawn driving distances",
+        "desc_split": "A research team deploys portable sensors (<demand> units/weight) to intersections (<loc_customer>) from a municipal yard (<loc_depot>), with installation vans (<capacity>). Each location has strict time windows (<time_windows>) coinciding with low-traffic periods. Technicians finish shifts at the last installation site. The challenge is to optimize routes that:  \n✓ Install all sensors before morning rush hour  \n✓ Never exceed van payload limits  \n✓ Minimize pre-dawn driving distances",
         "data_template": {
             "num_depots": [
                 1
@@ -6133,11 +6145,12 @@
                 ]
             ]
         },
-        "label": "ovrptw"
+        "label": "ovrptw",
+        "index": 12
     },
     {
         "title": "Luxury Hotel Amenity Delivery for VIP Guests",
-        "desc_split": "A concierge service transports premium amenities (wine, gifts - <demand>) from a storage facility (<loc_depot>) to high-end hotels (<loc_customer>) using temperature-controlled carts (<capacity>). Deliveries must align with guest arrival times (<time_windows>), with staff released after final drop-off. The system requires routes that:  \n\u2022 Respect 15-minute delivery windows  \n\u2022 Prevent cargo mixing (capacity per item type)  \n\u2022 Eliminate unnecessary cross-town trips",
+        "desc_split": "A concierge service transports premium amenities (wine, gifts - <demand>) from a storage facility (<loc_depot>) to high-end hotels (<loc_customer>) using temperature-controlled carts (<capacity>). Deliveries must align with guest arrival times (<time_windows>), with staff released after final drop-off. The system requires routes that:  \n• Respect 15-minute delivery windows  \n• Prevent cargo mixing (capacity per item type)  \n• Eliminate unnecessary cross-town trips",
         "data_template": {
             "num_depots": [
                 1
@@ -6541,11 +6554,12 @@
                 ]
             ]
         },
-        "label": "ovrptw"
+        "label": "ovrptw",
+        "index": 13
     },
     {
         "title": "Festival Food Vendor Restocking",
-        "desc_split": "During multi-day festivals, a logistics provider replenishes food trucks (<loc_customer>) from a commissary (<loc_depot>) using refrigerated vehicles (<capacity>). Each vendor specifies restocking times (<time_windows>) between customer rushes. Vehicles remain near vendor clusters after final delivery for rapid response. The optimization seeks to:  \n\u25b8 Synchronize with 30-minute service gaps  \n\u25b8 Handle perishable item volume limits  \n\u25b8 Reduce congestion in pedestrian zones",
+        "desc_split": "During multi-day festivals, a logistics provider replenishes food trucks (<loc_customer>) from a commissary (<loc_depot>) using refrigerated vehicles (<capacity>). Each vendor specifies restocking times (<time_windows>) between customer rushes. Vehicles remain near vendor clusters after final delivery for rapid response. The optimization seeks to:  \n▸ Synchronize with 30-minute service gaps  \n▸ Handle perishable item volume limits  \n▸ Reduce congestion in pedestrian zones",
         "data_template": {
             "num_depots": [
                 1
@@ -7158,7 +7172,8 @@
                 ]
             ]
         },
-        "label": "ovrptw"
+        "label": "ovrptw",
+        "index": 14
     },
     {
         "title": "Mobile Pet Vaccination Clinic Routing",
@@ -7467,7 +7482,8 @@
                 0.16885992884635925
             ]
         },
-        "label": "ovrptw"
+        "label": "ovrptw",
+        "index": 15
     },
     {
         "title": "Art Gallery Exhibition Setup Logistics",
@@ -7874,7 +7890,8 @@
                 ]
             ]
         },
-        "label": "ovrptw"
+        "label": "ovrptw",
+        "index": 16
     },
     {
         "title": "Corporate Catering Lunch Delivery",
@@ -8533,7 +8550,8 @@
                 0.16727852821350098
             ]
         },
-        "label": "ovrptw"
+        "label": "ovrptw",
+        "index": 17
     },
     {
         "title": "Pop-Up EV Charging Station Deployment",
@@ -8902,7 +8920,8 @@
                 0.17144106328487396
             ]
         },
-        "label": "ovrptw"
+        "label": "ovrptw",
+        "index": 18
     },
     {
         "title": "Academic Conference Materials Distribution",
@@ -9414,7 +9433,8 @@
                 0.15881063044071198
             ]
         },
-        "label": "ovrptw"
+        "label": "ovrptw",
+        "index": 19
     },
     {
         "title": "Mobile Laundry Service for Homeless Shelters",
@@ -9985,7 +10005,8 @@
                 1.0
             ]
         },
-        "label": "ovrptw"
+        "label": "ovrptw",
+        "index": 20
     },
     {
         "title": "Perishable Seafood Delivery to High-End Restaurants",
@@ -10356,7 +10377,8 @@
                 1.0
             ]
         },
-        "label": "ovrptw"
+        "label": "ovrptw",
+        "index": 21
     },
     {
         "title": "Temporary Election Ballot Box Collection",
@@ -10784,7 +10806,8 @@
                 ]
             ]
         },
-        "label": "ovrptw"
+        "label": "ovrptw",
+        "index": 22
     },
     {
         "title": "On-Demand Industrial Sensor Calibration",
@@ -11255,11 +11278,12 @@
                 1.0
             ]
         },
-        "label": "ovrptw"
+        "label": "ovrptw",
+        "index": 23
     },
     {
         "title": "Pop-Up Retail Sample Distribution for Marketing Campaigns",
-        "desc_split": "A brand launches a campaign where promotional teams distribute product samples from a warehouse (<loc_depot>) to <num_customer> temporary pop-up locations (<loc_customer>) in high-footfall areas. Each pop-up has a fixed activation period (<time_windows>) and sample requirement (<demand>). Vehicles (<capacity>) carry samples but don\u2019t return to the depot after the last stop. The aim is to maximize campaign coverage by meeting all time-bound distribution targets without overloading vehicles, while minimizing route distances to reduce fuel costs.",
+        "desc_split": "A brand launches a campaign where promotional teams distribute product samples from a warehouse (<loc_depot>) to <num_customer> temporary pop-up locations (<loc_customer>) in high-footfall areas. Each pop-up has a fixed activation period (<time_windows>) and sample requirement (<demand>). Vehicles (<capacity>) carry samples but don’t return to the depot after the last stop. The aim is to maximize campaign coverage by meeting all time-bound distribution targets without overloading vehicles, while minimizing route distances to reduce fuel costs.",
         "data_template": {
             "num_depots": [
                 1
@@ -11686,7 +11710,8 @@
                 1.0
             ]
         },
-        "label": "ovrptw"
+        "label": "ovrptw",
+        "index": 24
     },
     {
         "title": "Mobile EV Charging Station Deployment for Urban Fleets",
@@ -12274,7 +12299,8 @@
                 ]
             ]
         },
-        "label": "ovrptw"
+        "label": "ovrptw",
+        "index": 25
     },
     {
         "title": "Just-in-Time Automotive Parts Delivery to Assembly Lines",
@@ -12805,7 +12831,8 @@
                 0.11764705926179886
             ]
         },
-        "label": "ovrptw"
+        "label": "ovrptw",
+        "index": 26
     },
     {
         "title": "Temperature-Controlled Vaccine Distribution to Clinics",
@@ -13232,7 +13259,8 @@
                 1.0
             ]
         },
-        "label": "ovrptw"
+        "label": "ovrptw",
+        "index": 27
     },
     {
         "title": "On-Demand Scaffolding Delivery for Construction Sites",
@@ -13563,7 +13591,8 @@
                 ]
             ]
         },
-        "label": "ovrptw"
+        "label": "ovrptw",
+        "index": 28
     },
     {
         "title": "Pop-Up Museum Exhibit Installation with Curatorial Time Slots",
@@ -14126,7 +14155,8 @@
                 ]
             ]
         },
-        "label": "ovrptw"
+        "label": "ovrptw",
+        "index": 29
     },
     {
         "title": "Mobile Dental Clinic Scheduling",
@@ -14515,7 +14545,8 @@
                 0.1673794388771057
             ]
         },
-        "label": "ovrptw"
+        "label": "ovrptw",
+        "index": 30
     },
     {
         "title": "Perishable Lab Sample Collection",
@@ -14884,7 +14915,8 @@
                 0.16449281573295593
             ]
         },
-        "label": "ovrptw"
+        "label": "ovrptw",
+        "index": 31
     },
     {
         "title": "Pop-Up Fitness Class Equipment Logistics",
@@ -15313,7 +15345,8 @@
                 0.1645491123199463
             ]
         },
-        "label": "ovrptw"
+        "label": "ovrptw",
+        "index": 32
     },
     {
         "title": "Just-in-Time Aircraft Catering Delivery",
@@ -15846,7 +15879,8 @@
                 0.15043091773986816
             ]
         },
-        "label": "ovrptw"
+        "label": "ovrptw",
+        "index": 33
     },
     {
         "title": "Wildlife Tracking Tag Deployment",
@@ -16295,7 +16329,8 @@
                 0.17201031744480133
             ]
         },
-        "label": "ovrptw"
+        "label": "ovrptw",
+        "index": 34
     },
     {
         "title": "Mobile Library Book Rotation",
@@ -16760,7 +16795,8 @@
                 ]
             ]
         },
-        "label": "ovrptw"
+        "label": "ovrptw",
+        "index": 35
     },
     {
         "title": "On-Demand Laboratory Animal Feed Delivery",
@@ -17149,7 +17185,8 @@
                 1.0
             ]
         },
-        "label": "ovrptw"
+        "label": "ovrptw",
+        "index": 36
     },
     {
         "title": "Pop-Up Urban Farming Kit Distribution",
@@ -17652,7 +17689,8 @@
                 ]
             ]
         },
-        "label": "ovrptw"
+        "label": "ovrptw",
+        "index": 37
     },
     {
         "title": "Luxury Watch Showroom Appointments",
@@ -18054,7 +18092,8 @@
                 1.0
             ]
         },
-        "label": "ovrptw"
+        "label": "ovrptw",
+        "index": 38
     },
     {
         "title": "Marine Conservation Equipment Deployment",
@@ -18595,7 +18634,8 @@
                 1.0
             ]
         },
-        "label": "ovrptw"
+        "label": "ovrptw",
+        "index": 39
     },
     {
         "title": "Mobile Vet Clinic for Rural Communities",
@@ -19146,7 +19186,8 @@
                 0.23529411852359772
             ]
         },
-        "label": "ovrptw"
+        "label": "ovrptw",
+        "index": 40
     },
     {
         "title": "High-Value Artwork Transport for Gallery Exhibitions",
@@ -19577,7 +19618,8 @@
                 ]
             ]
         },
-        "label": "ovrptw"
+        "label": "ovrptw",
+        "index": 41
     },
     {
         "title": "Pop-Up EV Charging for Urban Ride-Sharing Fleets",
@@ -20028,7 +20070,8 @@
                 0.2666666805744171
             ]
         },
-        "label": "ovrptw"
+        "label": "ovrptw",
+        "index": 42
     },
     {
         "title": "Just-in-Time Aircraft De-Icing Fluid Delivery",
@@ -20419,7 +20462,8 @@
                 0.20000000298023224
             ]
         },
-        "label": "ovrptw"
+        "label": "ovrptw",
+        "index": 43
     },
     {
         "title": "Temporary Cell Tower Deployment for Disaster Recovery",
@@ -20730,11 +20774,12 @@
                 0.2666666805744171
             ]
         },
-        "label": "ovrptw"
+        "label": "ovrptw",
+        "index": 44
     },
     {
         "title": "Mobile Health Screening Unit Deployment",
-        "desc_split": "A public health initiative deploys mobile screening units from a central hub (<loc_depot>) to underserved neighborhoods (<loc_customer>). Each unit has limited medical equipment capacity (<capacity>), and each neighborhood has a specific demand (<demand>) for screenings (e.g., blood pressure, glucose tests). Time windows (<time_windows>) are strict due to community availability (e.g., 9 AM\u201312 PM at senior centers, 4 PM\u20137 PM at workplaces). Units conclude operations at their last site without returning to base. The goal is to maximize screenings served while minimizing travel distance between locations.",
+        "desc_split": "A public health initiative deploys mobile screening units from a central hub (<loc_depot>) to underserved neighborhoods (<loc_customer>). Each unit has limited medical equipment capacity (<capacity>), and each neighborhood has a specific demand (<demand>) for screenings (e.g., blood pressure, glucose tests). Time windows (<time_windows>) are strict due to community availability (e.g., 9 AM–12 PM at senior centers, 4 PM–7 PM at workplaces). Units conclude operations at their last site without returning to base. The goal is to maximize screenings served while minimizing travel distance between locations.",
         "data_template": {
             "num_depots": [
                 1
@@ -20998,11 +21043,12 @@
                 ]
             ]
         },
-        "label": "ovrptw"
+        "label": "ovrptw",
+        "index": 45
     },
     {
         "title": "Just-in-Time Fashion Sample Delivery for Buyers",
-        "desc_split": "A designer showroom (<loc_depot>) delivers seasonal collections to luxury retail buyers (<loc_customer>) ahead of fashion week. Each vehicle carries fragile garment racks (<capacity>), and buyers have narrow appointment slots (<time_windows>) to review samples (<demand>). Drivers depart after final deliveries (e.g., to hotels or next-day venues). Constraints include avoiding early arrivals (buyers won\u2019t wait) and ensuring no vehicle exceeds sample capacity. Optimize routes to meet all time-critical appointments.",
+        "desc_split": "A designer showroom (<loc_depot>) delivers seasonal collections to luxury retail buyers (<loc_customer>) ahead of fashion week. Each vehicle carries fragile garment racks (<capacity>), and buyers have narrow appointment slots (<time_windows>) to review samples (<demand>). Drivers depart after final deliveries (e.g., to hotels or next-day venues). Constraints include avoiding early arrivals (buyers won’t wait) and ensuring no vehicle exceeds sample capacity. Optimize routes to meet all time-critical appointments.",
         "data_template": {
             "num_depots": [
                 1
@@ -21506,11 +21552,12 @@
                 0.11764705926179886
             ]
         },
-        "label": "ovrptw"
+        "label": "ovrptw",
+        "index": 46
     },
     {
         "title": "Urban Tree Planting Logistics",
-        "desc_split": "A sustainability NGO coordinates tree planting across city parks (<loc_customer>) from a nursery (<loc_depot>). Each truck transports saplings (<capacity>), and sites have planting time windows (<time_windows>) aligned with volunteer shifts (e.g., 8 AM\u201310 AM). Soil/water demands vary per site (<demand>). Trucks remain at the final park for unloading. The challenge is to route vehicles to maximize saplings delivered within volunteer availability while minimizing deadhead mileage.",
+        "desc_split": "A sustainability NGO coordinates tree planting across city parks (<loc_customer>) from a nursery (<loc_depot>). Each truck transports saplings (<capacity>), and sites have planting time windows (<time_windows>) aligned with volunteer shifts (e.g., 8 AM–10 AM). Soil/water demands vary per site (<demand>). Trucks remain at the final park for unloading. The challenge is to route vehicles to maximize saplings delivered within volunteer availability while minimizing deadhead mileage.",
         "data_template": {
             "num_depots": [
                 1
@@ -21934,7 +21981,8 @@
                 0.10000000149011612
             ]
         },
-        "label": "ovrptw"
+        "label": "ovrptw",
+        "index": 47
     },
     {
         "title": "On-Demand Industrial Tool Rental Fulfillment",
@@ -22442,11 +22490,12 @@
                 0.23529411852359772
             ]
         },
-        "label": "ovrptw"
+        "label": "ovrptw",
+        "index": 48
     },
     {
         "title": "Pop-Up Theater Equipment Touring",
-        "desc_split": "A traveling theater group transports stage gear (<capacity>) from a warehouse (<loc_depot>) to temporary venues (<loc_customer>). Each venue has a load-in window (<time_windows>) before performances (e.g., 2 PM\u20135 PM for evening shows). Gear demands (<demand>) include lighting, props, and sound systems. Trucks stay at the final venue for setup. The objective is to minimize travel costs while meeting rigid setup deadlines across multiple cities.",
+        "desc_split": "A traveling theater group transports stage gear (<capacity>) from a warehouse (<loc_depot>) to temporary venues (<loc_customer>). Each venue has a load-in window (<time_windows>) before performances (e.g., 2 PM–5 PM for evening shows). Gear demands (<demand>) include lighting, props, and sound systems. Trucks stay at the final venue for setup. The objective is to minimize travel costs while meeting rigid setup deadlines across multiple cities.",
         "data_template": {
             "num_depots": [
                 1
@@ -22890,7 +22939,8 @@
                 0.06666667014360428
             ]
         },
-        "label": "ovrptw"
+        "label": "ovrptw",
+        "index": 49
     },
     {
         "title": "Mobile COVID-19 Booster Shot Clinics",
@@ -23321,7 +23371,8 @@
                 ]
             ]
         },
-        "label": "ovrptw"
+        "label": "ovrptw",
+        "index": 50
     },
     {
         "title": "Just-in-Time Fashion Sample Delivery for Buyers",
@@ -23849,7 +23900,8 @@
                 ]
             ]
         },
-        "label": "ovrptw"
+        "label": "ovrptw",
+        "index": 51
     },
     {
         "title": "Urban Tree Planting Logistics",
@@ -24500,7 +24552,8 @@
                 ]
             ]
         },
-        "label": "ovrptw"
+        "label": "ovrptw",
+        "index": 52
     },
     {
         "title": "On-Demand Industrial Tool Rental Fulfillment",
@@ -25008,7 +25061,8 @@
                 ]
             ]
         },
-        "label": "ovrptw"
+        "label": "ovrptw",
+        "index": 53
     },
     {
         "title": "Pop-Up Theater Equipment Touring",
@@ -25619,7 +25673,8 @@
                 ]
             ]
         },
-        "label": "ovrptw"
+        "label": "ovrptw",
+        "index": 54
     },
     {
         "title": "Mobile Coffee Truck Fleet Scheduling",
@@ -26231,7 +26286,8 @@
                 0.15952031314373016
             ]
         },
-        "label": "ovrptw"
+        "label": "ovrptw",
+        "index": 55
     },
     {
         "title": "On-Demand Luxury Car Test Drive Coordination",
@@ -26780,11 +26836,12 @@
                 0.1705070436000824
             ]
         },
-        "label": "ovrptw"
+        "label": "ovrptw",
+        "index": 56
     },
     {
         "title": "Temporary Urban Beehive Pollination Services",
-        "desc_split": "An agro-tech company deploys portable beehives (<capacity> hives/vehicle) from a rural depot (<loc_depot>) to urban farms (<loc_customer>) during precise flowering periods (<time_windows> \u00b13 days). Each farm requires <demand> hives for 48-hour pollination (<service_time>). Vehicles remain at final locations to avoid disturbing hives with return trips. Optimization must balance hive capacity with tight biological time windows across scattered micro-farms.",
+        "desc_split": "An agro-tech company deploys portable beehives (<capacity> hives/vehicle) from a rural depot (<loc_depot>) to urban farms (<loc_customer>) during precise flowering periods (<time_windows> ±3 days). Each farm requires <demand> hives for 48-hour pollination (<service_time>). Vehicles remain at final locations to avoid disturbing hives with return trips. Optimization must balance hive capacity with tight biological time windows across scattered micro-farms.",
         "data_template": {
             "num_depots": [
                 1
@@ -27187,7 +27244,8 @@
                 0.16699503362178802
             ]
         },
-        "label": "ovrptw"
+        "label": "ovrptw",
+        "index": 57
     },
     {
         "title": "Olympic Venue Medical Kit Restocking",
@@ -27539,11 +27597,12 @@
                 0.172806516289711
             ]
         },
-        "label": "ovrptw"
+        "label": "ovrptw",
+        "index": 58
     },
     {
         "title": "Floating Bookstore Island Hopping",
-        "desc_split": "A literacy NGO operates a boat (<capacity> books) visiting <num_customer> remote islands (<loc_customer>) on tidal schedules (<time_windows> \u00b11 hour around high tide). Each stop requires 2-hour pop-up operations (<service_time>). The boat docks overnight at its final island. Routing must synchronize with tidal access windows while maximizing book distribution across archipelagos, accounting for variable island demand (<demand>).",
+        "desc_split": "A literacy NGO operates a boat (<capacity> books) visiting <num_customer> remote islands (<loc_customer>) on tidal schedules (<time_windows> ±1 hour around high tide). Each stop requires 2-hour pop-up operations (<service_time>). The boat docks overnight at its final island. Routing must synchronize with tidal access windows while maximizing book distribution across archipelagos, accounting for variable island demand (<demand>).",
         "data_template": {
             "num_depots": [
                 1
@@ -28111,7 +28170,8 @@
                 0.029411764815449715
             ]
         },
-        "label": "ovrptw"
+        "label": "ovrptw",
+        "index": 59
     },
     {
         "title": "Mobile EV Battery Swapping for Ride-Sharing Fleets",
@@ -28699,7 +28759,8 @@
                 ]
             ]
         },
-        "label": "ovrptw"
+        "label": "ovrptw",
+        "index": 60
     },
     {
         "title": "On-Demand Meal Kit Delivery for Corporate Offices",
@@ -29227,7 +29288,8 @@
                 0.23529411852359772
             ]
         },
-        "label": "ovrptw"
+        "label": "ovrptw",
+        "index": 61
     },
     {
         "title": "Temporary Urban Air Quality Sensor Deployment",
@@ -29516,7 +29578,8 @@
                 0.17569172382354736
             ]
         },
-        "label": "ovrptw"
+        "label": "ovrptw",
+        "index": 62
     },
     {
         "title": "Pop-Up COVID-19 Booster Shot Clinics",
@@ -30007,7 +30070,8 @@
                 0.30000001192092896
             ]
         },
-        "label": "ovrptw"
+        "label": "ovrptw",
+        "index": 63
     },
     {
         "title": "Just-in-Time Fashion Sample Delivery for Buyers",
@@ -30496,7 +30560,8 @@
                 0.15952639281749725
             ]
         },
-        "label": "ovrptw"
+        "label": "ovrptw",
+        "index": 64
     },
     {
         "title": "Mobile EV Charging for Urban Ride-Sharing Fleets",
@@ -31064,7 +31129,8 @@
                 ]
             ]
         },
-        "label": "ovrptw"
+        "label": "ovrptw",
+        "index": 65
     },
     {
         "title": "Just-in-Time Aircraft Catering Delivery",
@@ -31552,7 +31618,8 @@
                 ]
             ]
         },
-        "label": "ovrptw"
+        "label": "ovrptw",
+        "index": 66
     },
     {
         "title": "Pop-Up COVID-19 Booster Shot Clinics",
@@ -32140,7 +32207,8 @@
                 ]
             ]
         },
-        "label": "ovrptw"
+        "label": "ovrptw",
+        "index": 67
     },
     {
         "title": "Luxury Watch Showroom Appointments",
@@ -32488,7 +32556,8 @@
                 ]
             ]
         },
-        "label": "ovrptw"
+        "label": "ovrptw",
+        "index": 68
     },
     {
         "title": "Temporary Urban Beehive Pollination Services",
@@ -33036,7 +33105,8 @@
                 ]
             ]
         },
-        "label": "ovrptw"
+        "label": "ovrptw",
+        "index": 69
     },
     {
         "title": "Mobile EV Charging for Urban Ride-Sharing Fleets",
@@ -33524,7 +33594,8 @@
                 ]
             ]
         },
-        "label": "ovrptw"
+        "label": "ovrptw",
+        "index": 70
     },
     {
         "title": "Just-in-Time Aircraft Catering Delivery",
@@ -34186,7 +34257,8 @@
                 0.163410946726799
             ]
         },
-        "label": "ovrptw"
+        "label": "ovrptw",
+        "index": 71
     },
     {
         "title": "Pop-Up COVID-19 Booster Shot Clinics",
@@ -34654,7 +34726,8 @@
                 ]
             ]
         },
-        "label": "ovrptw"
+        "label": "ovrptw",
+        "index": 72
     },
     {
         "title": "Luxury Watch Showroom Appointments",
@@ -35062,7 +35135,8 @@
                 ]
             ]
         },
-        "label": "ovrptw"
+        "label": "ovrptw",
+        "index": 73
     },
     {
         "title": "Temporary Urban Beehive Pollination Services",
@@ -35670,7 +35744,8 @@
                 ]
             ]
         },
-        "label": "ovrptw"
+        "label": "ovrptw",
+        "index": 74
     },
     {
         "title": "Mobile COVID-19 Booster Shot Clinics",
@@ -35951,7 +36026,8 @@
                 1.0
             ]
         },
-        "label": "ovrptw"
+        "label": "ovrptw",
+        "index": 75
     },
     {
         "title": "Just-in-Time Aircraft Catering Delivery",
@@ -36337,7 +36413,8 @@
                 1.0
             ]
         },
-        "label": "ovrptw"
+        "label": "ovrptw",
+        "index": 76
     },
     {
         "title": "Pop-Up Luxury Watch Showroom Appointments",
@@ -36870,7 +36947,8 @@
                 0.16056649386882782
             ]
         },
-        "label": "ovrptw"
+        "label": "ovrptw",
+        "index": 77
     },
     {
         "title": "Temporary Urban Beehive Pollination Services",
@@ -37403,7 +37481,8 @@
                 0.1723833680152893
             ]
         },
-        "label": "ovrptw"
+        "label": "ovrptw",
+        "index": 78
     },
     {
         "title": "Olympic Venue Medical Kit Restocking",
@@ -37936,7 +38015,8 @@
                 1.0
             ]
         },
-        "label": "ovrptw"
+        "label": "ovrptw",
+        "index": 79
     },
     {
         "title": "Mobile Library Book Rotation for Rural Schools",
@@ -38344,7 +38424,8 @@
                 1.0
             ]
         },
-        "label": "ovrptw"
+        "label": "ovrptw",
+        "index": 80
     },
     {
         "title": "On-Demand Medical Sample Collection for Homebound Patients",
@@ -38809,7 +38890,8 @@
                 ]
             ]
         },
-        "label": "ovrptw"
+        "label": "ovrptw",
+        "index": 81
     },
     {
         "title": "Pop-Up Urban Farm Produce Distribution",
@@ -39177,7 +39259,8 @@
                 1.0
             ]
         },
-        "label": "ovrptw"
+        "label": "ovrptw",
+        "index": 82
     },
     {
         "title": "Temporary Wildlife Camera Maintenance in National Parks",
@@ -39756,7 +39839,8 @@
                 ]
             ]
         },
-        "label": "ovrptw"
+        "label": "ovrptw",
+        "index": 83
     },
     {
         "title": "Mobile Voting Unit Deployment for Local Elections",
@@ -40373,7 +40457,8 @@
                 ]
             ]
         },
-        "label": "ovrptw"
+        "label": "ovrptw",
+        "index": 84
     },
     {
         "title": "Mobile EV Charging for Urban Ride-Sharing Fleets",
@@ -40781,7 +40866,8 @@
                 ]
             ]
         },
-        "label": "ovrptw"
+        "label": "ovrptw",
+        "index": 85
     },
     {
         "title": "Just-in-Time Aircraft Catering Delivery",
@@ -41249,7 +41335,8 @@
                 ]
             ]
         },
-        "label": "ovrptw"
+        "label": "ovrptw",
+        "index": 86
     },
     {
         "title": "Pop-Up COVID-19 Booster Shot Clinics",
@@ -41517,7 +41604,8 @@
                 ]
             ]
         },
-        "label": "ovrptw"
+        "label": "ovrptw",
+        "index": 87
     },
     {
         "title": "Luxury Watch Showroom Appointments",
@@ -42045,7 +42133,8 @@
                 ]
             ]
         },
-        "label": "ovrptw"
+        "label": "ovrptw",
+        "index": 88
     },
     {
         "title": "Temporary Urban Beehive Pollination Services",
@@ -42333,7 +42422,8 @@
                 ]
             ]
         },
-        "label": "ovrptw"
+        "label": "ovrptw",
+        "index": 89
     },
     {
         "title": "Mobile EV Charging for Urban Ride-Sharing Fleets",
@@ -42915,11 +43005,12 @@
                 0.2571428716182709
             ]
         },
-        "label": "ovrptw"
+        "label": "ovrptw",
+        "index": 90
     },
     {
         "title": "Just-in-Time Aircraft Catering Delivery",
-        "desc_split": "A catering company supplies fresh meals to aircraft at an airport\u2019s gates (<loc_customer>). Each flight has a strict loading window (<time_windows>) before departure. Delivery trucks (<capacity>) transport meals (<demand>) from a central kitchen (<loc_depot>) but remain at the last gate (O) to avoid congestion. Routes must ensure no truck exceeds capacity and all flights are served on time, minimizing delays and food waste.",
+        "desc_split": "A catering company supplies fresh meals to aircraft at an airport’s gates (<loc_customer>). Each flight has a strict loading window (<time_windows>) before departure. Delivery trucks (<capacity>) transport meals (<demand>) from a central kitchen (<loc_depot>) but remain at the last gate (O) to avoid congestion. Routes must ensure no truck exceeds capacity and all flights are served on time, minimizing delays and food waste.",
         "data_template": {
             "num_depots": [
                 1
@@ -43463,7 +43554,8 @@
                 ]
             ]
         },
-        "label": "ovrptw"
+        "label": "ovrptw",
+        "index": 91
     },
     {
         "title": "Pop-Up COVID-19 Booster Shot Clinics",
@@ -44011,11 +44103,12 @@
                 ]
             ]
         },
-        "label": "ovrptw"
+        "label": "ovrptw",
+        "index": 92
     },
     {
         "title": "Luxury Watch Showroom Appointments",
-        "desc_split": "A high-end retailer sends consultants to clients\u2019 homes (<loc_customer>) for private watch showcases. Each appointment has a strict 1-hour slot (<time_windows>). Consultants carry demo kits (<demand>) in luxury cars (<capacity>) and finish their day after the last appointment (O). Routes must minimize travel time between clients while ensuring no kit exceeds vehicle capacity.",
+        "desc_split": "A high-end retailer sends consultants to clients’ homes (<loc_customer>) for private watch showcases. Each appointment has a strict 1-hour slot (<time_windows>). Consultants carry demo kits (<demand>) in luxury cars (<capacity>) and finish their day after the last appointment (O). Routes must minimize travel time between clients while ensuring no kit exceeds vehicle capacity.",
         "data_template": {
             "num_depots": [
                 1
@@ -44373,7 +44466,8 @@
                 1.0
             ]
         },
-        "label": "ovrptw"
+        "label": "ovrptw",
+        "index": 93
     },
     {
         "title": "Temporary Urban Beehive Pollination Services",
@@ -44801,7 +44895,8 @@
                 ]
             ]
         },
-        "label": "ovrptw"
+        "label": "ovrptw",
+        "index": 94
     },
     {
         "title": "Mobile COVID-19 Booster Shot Clinics",
@@ -45112,7 +45207,8 @@
                 1.0
             ]
         },
-        "label": "ovrptw"
+        "label": "ovrptw",
+        "index": 95
     },
     {
         "title": "Just-in-Time Aircraft Catering Delivery",
@@ -45380,11 +45476,12 @@
                 1.0
             ]
         },
-        "label": "ovrptw"
+        "label": "ovrptw",
+        "index": 96
     },
     {
         "title": "Pop-Up Luxury Watch Showroom Appointments",
-        "desc_split": "A high-end watch brand tours cities with a mobile showroom, visiting `<num_customer>` VIP clients (`<loc_customer>`) who booked private viewings (`<time_windows>`). Each stop requires transporting watches (`<demand>` \u2264 insured value limit `<capacity>`). The vehicle departs from a secure warehouse (`<loc_depot>`) but remains overnight at the last appointment. The goal is to maximize security (minimize travel time) while honoring all appointments.",
+        "desc_split": "A high-end watch brand tours cities with a mobile showroom, visiting `<num_customer>` VIP clients (`<loc_customer>`) who booked private viewings (`<time_windows>`). Each stop requires transporting watches (`<demand>` ≤ insured value limit `<capacity>`). The vehicle departs from a secure warehouse (`<loc_depot>`) but remains overnight at the last appointment. The goal is to maximize security (minimize travel time) while honoring all appointments.",
         "data_template": {
             "num_depots": [
                 1
@@ -45691,7 +45788,8 @@
                 ]
             ]
         },
-        "label": "ovrptw"
+        "label": "ovrptw",
+        "index": 97
     },
     {
         "title": "Temporary Urban Beehive Pollination Services",
@@ -46062,7 +46160,8 @@
                 1.0
             ]
         },
-        "label": "ovrptw"
+        "label": "ovrptw",
+        "index": 98
     },
     {
         "title": "Olympic Venue Medical Kit Restocking",
@@ -46393,6 +46492,7 @@
                 1.0
             ]
         },
-        "label": "ovrptw"
+        "label": "ovrptw",
+        "index": 99
     }
 ]

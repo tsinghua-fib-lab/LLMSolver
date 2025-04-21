@@ -316,7 +316,8 @@
                 1.0
             ]
         },
-        "label": "ovrpmb"
+        "label": "ovrpmb",
+        "index": 0
     },
     {
         "title": "Recycling Bin Distribution and Waste Collection Routing",
@@ -618,7 +619,8 @@
                 1.0
             ]
         },
-        "label": "ovrpmb"
+        "label": "ovrpmb",
+        "index": 1
     },
     {
         "title": "Construction Site Material Delivery and Debris Removal",
@@ -988,11 +990,12 @@
                 1.0
             ]
         },
-        "label": "ovrpmb"
+        "label": "ovrpmb",
+        "index": 2
     },
     {
         "title": "Appliance Delivery and Trade-In Recycling Logistics",
-        "desc_split": "An electronics retailer operates a \"trade-in\" program, delivering new appliances (<demand_linehaul>) to customers\u2019 homes (<loc_customer>) and collecting old devices (<demand_backhaul>) for recycling. Vehicles from the distribution center (<loc_depot>) must handle mixed backhauls, with flexibility in visiting customers in any order to optimize routing. Each truck\u2019s capacity (<capacity>) must accommodate both the weight of new appliances and the volume of bulky recyclables. The objective is to minimize driving distances while ensuring all deliveries and pickups are completed without overloading vehicles, with routes terminating at the last customer stop.",
+        "desc_split": "An electronics retailer operates a \"trade-in\" program, delivering new appliances (<demand_linehaul>) to customers’ homes (<loc_customer>) and collecting old devices (<demand_backhaul>) for recycling. Vehicles from the distribution center (<loc_depot>) must handle mixed backhauls, with flexibility in visiting customers in any order to optimize routing. Each truck’s capacity (<capacity>) must accommodate both the weight of new appliances and the volume of bulky recyclables. The objective is to minimize driving distances while ensuring all deliveries and pickups are completed without overloading vehicles, with routes terminating at the last customer stop.",
         "data_template": {
             "num_depots": [
                 1
@@ -1545,7 +1548,8 @@
                 1.0
             ]
         },
-        "label": "ovrpmb"
+        "label": "ovrpmb",
+        "index": 3
     },
     {
         "title": "Utility Pole Maintenance and Scrap Metal Recovery",
@@ -1983,11 +1987,12 @@
                 1.0
             ]
         },
-        "label": "ovrpmb"
+        "label": "ovrpmb",
+        "index": 4
     },
     {
         "title": "Electronics Retail and Trade-In Logistics",
-        "desc_split": "A major electronics retailer must deliver new devices to customers\u2019 homes while simultaneously collecting old electronics for recycling. Trucks depart from a regional distribution center (<loc_depot>) and carry a mix of new gadgets (<demand_linehaul>) and empty containers for used devices (<demand_backhaul>). Each truck has a limited capacity (<capacity>), requiring careful balancing of outgoing deliveries and incoming pickups. Routes must allow flexible sequencing\u2014some drivers might start by dropping off a TV, then pick up a laptop, or vice versa\u2014while ensuring no vehicle overloads. The goal is to minimize total mileage while efficiently processing both supply and return streams, with drivers ending their shifts at their final stop.",
+        "desc_split": "A major electronics retailer must deliver new devices to customers’ homes while simultaneously collecting old electronics for recycling. Trucks depart from a regional distribution center (<loc_depot>) and carry a mix of new gadgets (<demand_linehaul>) and empty containers for used devices (<demand_backhaul>). Each truck has a limited capacity (<capacity>), requiring careful balancing of outgoing deliveries and incoming pickups. Routes must allow flexible sequencing—some drivers might start by dropping off a TV, then pick up a laptop, or vice versa—while ensuring no vehicle overloads. The goal is to minimize total mileage while efficiently processing both supply and return streams, with drivers ending their shifts at their final stop.",
         "data_template": {
             "num_depots": [
                 1
@@ -2396,7 +2401,8 @@
                 1.0
             ]
         },
-        "label": "ovrpmb"
+        "label": "ovrpmb",
+        "index": 5
     },
     {
         "title": "Event Equipment Distribution and Recovery",
@@ -2647,11 +2653,12 @@
                 0.06666667014360428
             ]
         },
-        "label": "ovrpmb"
+        "label": "ovrpmb",
+        "index": 6
     },
     {
         "title": "Automotive Aftermarket Parts Supply and Core Retrieval",
-        "desc_split": "An auto parts supplier delivers new components (e.g., tires, engines) to repair shops (<loc_customer>) and collects used \u201ccores\u201d (recyclable parts) for remanufacturing. Trucks start at a central hub (<loc_depot>) with a capacity (<capacity>) to hold both outgoing parts (<demand_linehaul>) and incoming cores (<demand_backhaul>). The sequence of stops can prioritize deliveries first or pickups first, as long as total load stays within limits. The objective is to optimize routes to cover all customers efficiently, with drivers ending their shifts at their final stop. This reduces idle return trips and ensures shops receive fresh parts while old cores are reclaimed promptly.",
+        "desc_split": "An auto parts supplier delivers new components (e.g., tires, engines) to repair shops (<loc_customer>) and collects used “cores” (recyclable parts) for remanufacturing. Trucks start at a central hub (<loc_depot>) with a capacity (<capacity>) to hold both outgoing parts (<demand_linehaul>) and incoming cores (<demand_backhaul>). The sequence of stops can prioritize deliveries first or pickups first, as long as total load stays within limits. The objective is to optimize routes to cover all customers efficiently, with drivers ending their shifts at their final stop. This reduces idle return trips and ensures shops receive fresh parts while old cores are reclaimed promptly.",
         "data_template": {
             "num_depots": [
                 1
@@ -2966,7 +2973,8 @@
                 0.0
             ]
         },
-        "label": "ovrpmb"
+        "label": "ovrpmb",
+        "index": 7
     },
     {
         "title": "Meal Kit Delivery and Organic Waste Collection",
@@ -3415,11 +3423,12 @@
                 0.0
             ]
         },
-        "label": "ovrpmb"
+        "label": "ovrpmb",
+        "index": 8
     },
     {
         "title": "Municipal Street Furniture Redistribution and Scrap Collection",
-        "desc_split": "A city\u2019s public works department redistributes street furniture (benches, trash bins) to high-traffic areas (<loc_customer>) and collects rusted or broken units for recycling. Trucks depart from a maintenance yard (<loc_depot>) with a capacity (<capacity>) to handle both new installations (<demand_linehaul>) and scrap metal pickups (<demand_backhaul>). The order of stops can vary\u2014e.g., replacing a bench first, then hauling away debris\u2014so long as load constraints are met. Routes are designed to end at the final customer site, streamlining operations and reducing administrative overhead from depot returns.",
+        "desc_split": "A city’s public works department redistributes street furniture (benches, trash bins) to high-traffic areas (<loc_customer>) and collects rusted or broken units for recycling. Trucks depart from a maintenance yard (<loc_depot>) with a capacity (<capacity>) to handle both new installations (<demand_linehaul>) and scrap metal pickups (<demand_backhaul>). The order of stops can vary—e.g., replacing a bench first, then hauling away debris—so long as load constraints are met. Routes are designed to end at the final customer site, streamlining operations and reducing administrative overhead from depot returns.",
         "data_template": {
             "num_depots": [
                 1
@@ -3717,7 +3726,8 @@
                 0.0
             ]
         },
-        "label": "ovrpmb"
+        "label": "ovrpmb",
+        "index": 9
     },
     {
         "title": "Office Supply Delivery and Equipment Recycling Logistics",
@@ -3927,7 +3937,8 @@
                 ]
             ]
         },
-        "label": "ovrpmb"
+        "label": "ovrpmb",
+        "index": 10
     },
     {
         "title": "Mobile Medical Clinic Support and Waste Management",
@@ -4410,11 +4421,12 @@
                 1.0
             ]
         },
-        "label": "ovrpmb"
+        "label": "ovrpmb",
+        "index": 11
     },
     {
         "title": "E-Commerce Fulfillment and Returns Consolidation",
-        "desc_split": "An online retailer\u2019s logistics team must optimize routes for drivers delivering newly ordered items (electronics, clothing) to customers while also retrieving returned products (defective gadgets, unwanted apparel) for restocking or recycling. Each van (<capacity>) originates from a distribution center (<loc_depot>), visits <num_customer> addresses (<loc_customer>), and sequences stops to balance outgoing and incoming shipments. A route might alternate between dropping off a package and collecting a return, as long as the combined cargo doesn\u2019t exceed capacity. Drivers finish at their final delivery/pickup location.",
+        "desc_split": "An online retailer’s logistics team must optimize routes for drivers delivering newly ordered items (electronics, clothing) to customers while also retrieving returned products (defective gadgets, unwanted apparel) for restocking or recycling. Each van (<capacity>) originates from a distribution center (<loc_depot>), visits <num_customer> addresses (<loc_customer>), and sequences stops to balance outgoing and incoming shipments. A route might alternate between dropping off a package and collecting a return, as long as the combined cargo doesn’t exceed capacity. Drivers finish at their final delivery/pickup location.",
         "data_template": {
             "num_depots": [
                 1
@@ -4638,7 +4650,8 @@
                 ]
             ]
         },
-        "label": "ovrpmb"
+        "label": "ovrpmb",
+        "index": 12
     },
     {
         "title": "Agricultural Machinery Supply and Crop Harvest Collection",
@@ -5001,11 +5014,12 @@
                 ]
             ]
         },
-        "label": "ovrpmb"
+        "label": "ovrpmb",
+        "index": 13
     },
     {
         "title": "Event Catering Services with Reusable Utensil Recovery",
-        "desc_split": "A catering company provides meals for corporate events while recovering reusable dishware, cutlery, and glassware afterward. Delivery trucks (<capacity>) start at the kitchen hub (<loc_depot>), deliver food to event venues (<loc_customer>), and later return to the same sites (or others) to collect used utensils. The mixed backhaul allows flexible routing\u2014e.g., dropping off meals at a morning conference before picking up dishes from an evening wedding\u2014so long as the combined weight of meals and recovered items doesn\u2019t exceed capacity. Drivers end their shifts at the last stop.",
+        "desc_split": "A catering company provides meals for corporate events while recovering reusable dishware, cutlery, and glassware afterward. Delivery trucks (<capacity>) start at the kitchen hub (<loc_depot>), deliver food to event venues (<loc_customer>), and later return to the same sites (or others) to collect used utensils. The mixed backhaul allows flexible routing—e.g., dropping off meals at a morning conference before picking up dishes from an evening wedding—so long as the combined weight of meals and recovered items doesn’t exceed capacity. Drivers end their shifts at the last stop.",
         "data_template": {
             "num_depots": [
                 1
@@ -5361,7 +5375,8 @@
                 ]
             ]
         },
-        "label": "ovrpmb"
+        "label": "ovrpmb",
+        "index": 14
     },
     {
         "title": "Fashion Retail Stock Delivery and Return Collection",
@@ -5853,7 +5868,8 @@
                 0.0
             ]
         },
-        "label": "ovrpmb"
+        "label": "ovrpmb",
+        "index": 15
     },
     {
         "title": "Hazardous Chemical Delivery and Waste Retrieval",
@@ -6359,7 +6375,8 @@
                 0.0
             ]
         },
-        "label": "ovrpmb"
+        "label": "ovrpmb",
+        "index": 16
     },
     {
         "title": "Automotive Tire Supply and Used Tire Collection",
@@ -6610,7 +6627,8 @@
                 0.0
             ]
         },
-        "label": "ovrpmb"
+        "label": "ovrpmb",
+        "index": 17
     },
     {
         "title": "Restaurant Supply Chain and Organic Waste Pickup",
@@ -6963,7 +6981,8 @@
                 0.30000001192092896
             ]
         },
-        "label": "ovrpmb"
+        "label": "ovrpmb",
+        "index": 18
     },
     {
         "title": "Camping Gear Rental and Equipment Recovery",
@@ -7452,11 +7471,12 @@
                 0.0
             ]
         },
-        "label": "ovrpmb"
+        "label": "ovrpmb",
+        "index": 19
     },
     {
         "title": "Telecom Equipment Deployment and Recycling Logistics",
-        "desc_split": "A telecommunications company must deliver new routers and modems (linehaul) to residential and business customers while simultaneously collecting outdated devices (backhaul) for recycling. Each vehicle has a limited capacity to carry both new equipment and old devices. Routes can be organized in any order\u2014deliveries and pickups can intermingle\u2014ending at the final customer without returning to the depot. The goal is to minimize total distance traveled while ensuring no vehicle exceeds its weight or volume limits.",
+        "desc_split": "A telecommunications company must deliver new routers and modems (linehaul) to residential and business customers while simultaneously collecting outdated devices (backhaul) for recycling. Each vehicle has a limited capacity to carry both new equipment and old devices. Routes can be organized in any order—deliveries and pickups can intermingle—ending at the final customer without returning to the depot. The goal is to minimize total distance traveled while ensuring no vehicle exceeds its weight or volume limits.",
         "data_template": {
             "num_depots": [
                 1
@@ -7797,10 +7817,11 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpmb"
+        "label": "ovrpmb",
+        "index": 20
     },
     {
-        "title": "HVAC System Installation and\u65e7Part Collection",
+        "title": "HVAC System Installation and旧Part Collection",
         "desc_split": "An HVAC service provider needs to install new heating/cooling systems (linehaul) at customer sites while retrieving old units (backhaul) for disposal or recycling. Trucks have fixed capacities to handle both new equipment and bulky old systems. Routes can prioritize either delivery or pickup first, but must efficiently sequence stops to avoid overloading. Vehicles conclude their routes at their last customer stop, reducing unnecessary return trips.",
         "data_template": {
             "num_depots": [
@@ -8142,11 +8163,12 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpmb"
+        "label": "ovrpmb",
+        "index": 21
     },
     {
         "title": "Furniture Delivery and In-Home Pickup for Donation",
-        "desc_split": "A furniture retailer delivers new items (linehaul) to customers\u2019 homes and simultaneously collects old furniture (backhaul) for donation or recycling. Each delivery truck has a capacity constraint balancing the volume of new deliveries and the space required for bulky pickups. Routes are designed to allow flexible sequencing of deliveries and pickups, with drivers ending their shifts at the final stop to optimize fuel use and driver efficiency.",
+        "desc_split": "A furniture retailer delivers new items (linehaul) to customers’ homes and simultaneously collects old furniture (backhaul) for donation or recycling. Each delivery truck has a capacity constraint balancing the volume of new deliveries and the space required for bulky pickups. Routes are designed to allow flexible sequencing of deliveries and pickups, with drivers ending their shifts at the final stop to optimize fuel use and driver efficiency.",
         "data_template": {
             "num_depots": [
                 1
@@ -8410,10 +8432,11 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpmb"
+        "label": "ovrpmb",
+        "index": 22
     },
     {
-        "title": "Solar Panel Installation and\u5e9f\u65e7Material Recovery",
+        "title": "Solar Panel Installation and废旧Material Recovery",
         "desc_split": "A renewable energy company installs new solar panels (linehaul) at residential rooftops while collecting old panels or scrap materials (backhaul) from decommissioned sites. Vehicles must carry both new equipment and hazardous waste, adhering to strict capacity limits. Routes can dynamically alternate between installation and recovery stops, with no requirement to return to the depot after completing all assigned tasks.",
         "data_template": {
             "num_depots": [
@@ -8689,11 +8712,12 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpmb"
+        "label": "ovrpmb",
+        "index": 23
     },
     {
         "title": "Automotive Rental Vehicle Distribution and Collection",
-        "desc_split": "An auto rental firm operates a fleet of trucks to distribute rented vehicles (linehaul) to pickup locations and simultaneously collect returned cars (backhaul) from drop-off points. Each truck has a limited capacity (e.g., carrying 3\u20134 vehicles) and must plan routes that mix delivery and collection stops in any order. Routes terminate at the final customer stop, streamlining logistics and minimizing empty return journeys.",
+        "desc_split": "An auto rental firm operates a fleet of trucks to distribute rented vehicles (linehaul) to pickup locations and simultaneously collect returned cars (backhaul) from drop-off points. Each truck has a limited capacity (e.g., carrying 3–4 vehicles) and must plan routes that mix delivery and collection stops in any order. Routes terminate at the final customer stop, streamlining logistics and minimizing empty return journeys.",
         "data_template": {
             "num_depots": [
                 1
@@ -8935,7 +8959,8 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpmb"
+        "label": "ovrpmb",
+        "index": 24
     },
     {
         "title": "Office Technology Equipment Delivery and E-Waste Collection",
@@ -9288,7 +9313,8 @@
                 0.1666666716337204
             ]
         },
-        "label": "ovrpmb"
+        "label": "ovrpmb",
+        "index": 25
     },
     {
         "title": "Pharmaceutical Supply Distribution and Expired Medication Retrieval",
@@ -9777,7 +9803,8 @@
                 0.1428571492433548
             ]
         },
-        "label": "ovrpmb"
+        "label": "ovrpmb",
+        "index": 26
     },
     {
         "title": "Event Staging Equipment Deployment and Post-Event Material Recovery",
@@ -10130,7 +10157,8 @@
                 0.20000000298023224
             ]
         },
-        "label": "ovrpmb"
+        "label": "ovrpmb",
+        "index": 27
     },
     {
         "title": "Rental Furniture Delivery and Used Item Collection for Reuse",
@@ -10465,7 +10493,8 @@
                 0.0
             ]
         },
-        "label": "ovrpmb"
+        "label": "ovrpmb",
+        "index": 28
     },
     {
         "title": "Construction Machinery Rental and Return Logistics",
@@ -10800,7 +10829,8 @@
                 0.0
             ]
         },
-        "label": "ovrpmb"
+        "label": "ovrpmb",
+        "index": 29
     },
     {
         "title": "Agricultural Inputs and Crop Residue Collection Logistics",
@@ -11145,11 +11175,12 @@
                 1.0
             ]
         },
-        "label": "ovrpmb"
+        "label": "ovrpmb",
+        "index": 30
     },
     {
         "title": "Restaurant Equipment Delivery and Used Cooking Oil Recycling",
-        "desc_split": "A commercial kitchen supplier delivers new appliances and cooking equipment (linehaul) to restaurants (<loc_customer>), while simultaneously collecting used cooking oil containers (backhaul) for recycling. Each truck\u2019s capacity (<capacity> liters/kg) must account for both the weight of new gear and the volume of oil waste. Routes are planned to optimize fuel efficiency, with drivers concluding their day at the final stop instead of returning to the warehouse (<loc_depot>).",
+        "desc_split": "A commercial kitchen supplier delivers new appliances and cooking equipment (linehaul) to restaurants (<loc_customer>), while simultaneously collecting used cooking oil containers (backhaul) for recycling. Each truck’s capacity (<capacity> liters/kg) must account for both the weight of new gear and the volume of oil waste. Routes are planned to optimize fuel efficiency, with drivers concluding their day at the final stop instead of returning to the warehouse (<loc_depot>).",
         "data_template": {
             "num_depots": [
                 1
@@ -11640,11 +11671,12 @@
                 ]
             ]
         },
-        "label": "ovrpmb"
+        "label": "ovrpmb",
+        "index": 31
     },
     {
         "title": "Home Improvement Supply Delivery and Salvage Material Retrieval",
-        "desc_split": "A home renovation company sends trucks from its warehouse (<loc_depot>) to deliver building materials (linehaul) like lumber and tiles to customer homes (<loc_customer>). Simultaneously, they collect salvageable items (backhaul) such as reusable scrap wood or returned unsold products. Each vehicle must stay within its <capacity> ton limit while sequencing deliveries and pickups in any order. Routes prioritize efficiency, ending at the last customer\u2019s location to reduce idle travel.",
+        "desc_split": "A home renovation company sends trucks from its warehouse (<loc_depot>) to deliver building materials (linehaul) like lumber and tiles to customer homes (<loc_customer>). Simultaneously, they collect salvageable items (backhaul) such as reusable scrap wood or returned unsold products. Each vehicle must stay within its <capacity> ton limit while sequencing deliveries and pickups in any order. Routes prioritize efficiency, ending at the last customer’s location to reduce idle travel.",
         "data_template": {
             "num_depots": [
                 1
@@ -11895,7 +11927,8 @@
                 1.0
             ]
         },
-        "label": "ovrpmb"
+        "label": "ovrpmb",
+        "index": 32
     },
     {
         "title": "Library Book Delivery and Returned Book Collection",
@@ -12225,7 +12258,8 @@
                 1.0
             ]
         },
-        "label": "ovrpmb"
+        "label": "ovrpmb",
+        "index": 33
     },
     {
         "title": "Tool Rental and Return Logistics",
@@ -12615,7 +12649,8 @@
                 ]
             ]
         },
-        "label": "ovrpmb"
+        "label": "ovrpmb",
+        "index": 34
     },
     {
         "title": "Data Center Hardware Deployment and E-Waste Recycling",
@@ -12937,7 +12972,8 @@
                 1.0
             ]
         },
-        "label": "ovrpmb"
+        "label": "ovrpmb",
+        "index": 35
     },
     {
         "title": "Hotel Linen Supply Chain and Laundry Recycling",
@@ -13292,7 +13328,8 @@
                 1.0
             ]
         },
-        "label": "ovrpmb"
+        "label": "ovrpmb",
+        "index": 36
     },
     {
         "title": "Winery Bottle Delivery and Cork Harvesting",
@@ -13686,11 +13723,12 @@
                 1.0
             ]
         },
-        "label": "ovrpmb"
+        "label": "ovrpmb",
+        "index": 37
     },
     {
         "title": "Farm Equipment Rental and Agricultural Waste Collection",
-        "desc_split": "An agricultural equipment rental company delivers tractors, harvesters, and tools (<demand_linehaul>) to farms while simultaneously collecting organic waste like crop residues (<demand_backhaul>) for composting. Each truck\u2019s capacity (<capacity>) must accommodate both heavy machinery and loose biomass, requiring careful load balancing. The mixed sequence of deliveries and pickups allows drivers to serve multiple farms efficiently, supporting sustainable farming practices while optimizing vehicle utilization.",
+        "desc_split": "An agricultural equipment rental company delivers tractors, harvesters, and tools (<demand_linehaul>) to farms while simultaneously collecting organic waste like crop residues (<demand_backhaul>) for composting. Each truck’s capacity (<capacity>) must accommodate both heavy machinery and loose biomass, requiring careful load balancing. The mixed sequence of deliveries and pickups allows drivers to serve multiple farms efficiently, supporting sustainable farming practices while optimizing vehicle utilization.",
         "data_template": {
             "num_depots": [
                 1
@@ -13872,7 +13910,8 @@
                 1.0
             ]
         },
-        "label": "ovrpmb"
+        "label": "ovrpmb",
+        "index": 38
     },
     {
         "title": "Movie Theater Projection Equipment Transport and Film Recycling",
@@ -14188,7 +14227,8 @@
                 1.0
             ]
         },
-        "label": "ovrpmb"
+        "label": "ovrpmb",
+        "index": 39
     },
     {
         "title": "Home Appliance Repair Services with Part Replacement Logistics",
@@ -14394,7 +14434,8 @@
                 1.0
             ]
         },
-        "label": "ovrpmb"
+        "label": "ovrpmb",
+        "index": 40
     },
     {
         "title": "Laboratory Equipment Delivery and Biohazard Waste Retrieval",
@@ -14589,11 +14630,12 @@
                 1.0
             ]
         },
-        "label": "ovrpmb"
+        "label": "ovrpmb",
+        "index": 41
     },
     {
         "title": "Retail Store Inventory Redistribution and Outdated Stock Pickup",
-        "desc_split": "A national retail chain redistributes excess inventory between stores while collecting outdated stock for return. Delivery trucks begin at a central warehouse, carrying new items to some stores and picking up returned goods from others. The fleet\u2019s capacity is <capacity> cubic meters, requiring careful load balancing to avoid overpacking. Routes can sequence deliveries and pickups freely, as long as all stores are served. Vehicles conclude their tours at their last assigned stop, optimizing paths to reduce fuel use and ensure timely stock turnover.",
+        "desc_split": "A national retail chain redistributes excess inventory between stores while collecting outdated stock for return. Delivery trucks begin at a central warehouse, carrying new items to some stores and picking up returned goods from others. The fleet’s capacity is <capacity> cubic meters, requiring careful load balancing to avoid overpacking. Routes can sequence deliveries and pickups freely, as long as all stores are served. Vehicles conclude their tours at their last assigned stop, optimizing paths to reduce fuel use and ensure timely stock turnover.",
         "data_template": {
             "num_depots": [
                 1
@@ -14916,7 +14958,8 @@
                 1.0
             ]
         },
-        "label": "ovrpmb"
+        "label": "ovrpmb",
+        "index": 42
     },
     {
         "title": "Temporary Festival Infrastructure Deployment and Dismantling Logistics",
@@ -15265,10 +15308,11 @@
                 1.0
             ]
         },
-        "label": "ovrpmb"
+        "label": "ovrpmb",
+        "index": 43
     },
     {
-        "title": "Automotive Service Chain \u2013 Oil Delivery and Empty Canisters Collection",
+        "title": "Automotive Service Chain – Oil Delivery and Empty Canisters Collection",
         "desc_split": "An automotive service network delivers oil cans to garages for vehicle maintenance and collects empty canisters for recycling. Each truck starts at a central distribution center with a <capacity> kg load limit, servicing stops that may require oil drop-offs (linehaul) or empty canister pickups (backhaul). Routes can freely alternate between these tasks, as long as the cumulative weight stays within limits. Vehicles finish at their last assigned stop, eliminating return journeys to the depot. The aim is to optimize delivery paths for cost savings while ensuring garages never run out of supplies and recycling targets are met.",
         "data_template": {
             "num_depots": [
@@ -15526,11 +15570,12 @@
                 1.0
             ]
         },
-        "label": "ovrpmb"
+        "label": "ovrpmb",
+        "index": 44
     },
     {
         "title": "Brewery Keg Delivery and Empty Keg Collection",
-        "desc_split": "A craft brewery operates a fleet of trucks to distribute full kegs of beer to local pubs and restaurants while simultaneously collecting empty kegs for cleaning and reuse. Each truck has a maximum capacity constraint, requiring careful balancing between outgoing deliveries and incoming pickups. The routes originate from the brewery\u2019s central warehouse and conclude at the final customer location, avoiding unnecessary return trips to the depot. The goal is to minimize total travel distance while ensuring no truck exceeds its weight limit, allowing both keg deliveries and pickups to be sequenced flexibly along the route.",
+        "desc_split": "A craft brewery operates a fleet of trucks to distribute full kegs of beer to local pubs and restaurants while simultaneously collecting empty kegs for cleaning and reuse. Each truck has a maximum capacity constraint, requiring careful balancing between outgoing deliveries and incoming pickups. The routes originate from the brewery’s central warehouse and conclude at the final customer location, avoiding unnecessary return trips to the depot. The goal is to minimize total travel distance while ensuring no truck exceeds its weight limit, allowing both keg deliveries and pickups to be sequenced flexibly along the route.",
         "data_template": {
             "num_depots": [
                 1
@@ -15882,11 +15927,12 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpmb"
+        "label": "ovrpmb",
+        "index": 45
     },
     {
         "title": "Garden Center Supply Delivery and Yard Waste Collection",
-        "desc_split": "A suburban garden center delivers soil, compost, and potted plants to residential customers while collecting yard waste (e.g., leaves, branches) for composting. Each delivery truck must manage mixed loads of outgoing supplies and incoming organic materials, adhering to strict capacity limits. Routes begin at the garden center\u2019s warehouse and end at the last customer\u2019s address, optimizing fuel efficiency. The flexibility to sequence deliveries and pickups allows for dynamic route planning to serve both urban and rural customers efficiently.",
+        "desc_split": "A suburban garden center delivers soil, compost, and potted plants to residential customers while collecting yard waste (e.g., leaves, branches) for composting. Each delivery truck must manage mixed loads of outgoing supplies and incoming organic materials, adhering to strict capacity limits. Routes begin at the garden center’s warehouse and end at the last customer’s address, optimizing fuel efficiency. The flexibility to sequence deliveries and pickups allows for dynamic route planning to serve both urban and rural customers efficiently.",
         "data_template": {
             "num_depots": [
                 1
@@ -16227,11 +16273,12 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpmb"
+        "label": "ovrpmb",
+        "index": 46
     },
     {
         "title": "Automotive Detailing Services with Chemical Recycling",
-        "desc_split": "A mobile car detailing service operates trucks that deliver cleaning supplies (e.g., detergents, towels) to customer driveways for vehicle maintenance and collect used chemicals and waste materials for proper disposal. Each truck\u2019s capacity is constrained by the combined weight of fresh supplies and returned waste. Routes start at the detailing company\u2019s depot and terminate at the final customer\u2019s location, eliminating redundant return journeys. The mixed backhaul nature allows technicians to interleave deliveries and pickups based on customer proximity and load requirements.",
+        "desc_split": "A mobile car detailing service operates trucks that deliver cleaning supplies (e.g., detergents, towels) to customer driveways for vehicle maintenance and collect used chemicals and waste materials for proper disposal. Each truck’s capacity is constrained by the combined weight of fresh supplies and returned waste. Routes start at the detailing company’s depot and terminate at the final customer’s location, eliminating redundant return journeys. The mixed backhaul nature allows technicians to interleave deliveries and pickups based on customer proximity and load requirements.",
         "data_template": {
             "num_depots": [
                 1
@@ -16385,11 +16432,12 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpmb"
+        "label": "ovrpmb",
+        "index": 47
     },
     {
         "title": "Event Catering Equipment Delivery and Post-Event Retrieval",
-        "desc_split": "A catering company deploys trucks to deliver tables, linens, and kitchen equipment to event venues while later retrieving used items for cleaning and storage. Each vehicle must balance the weight of outbound equipment with the return trip\u2019s load of dirty linens and broken utensils. Routes originate from the catering hub and end at the last venue, prioritizing minimal travel distance. The open routing ensures drivers finish at the final stop, maximizing efficiency for time-sensitive events.",
+        "desc_split": "A catering company deploys trucks to deliver tables, linens, and kitchen equipment to event venues while later retrieving used items for cleaning and storage. Each vehicle must balance the weight of outbound equipment with the return trip’s load of dirty linens and broken utensils. Routes originate from the catering hub and end at the last venue, prioritizing minimal travel distance. The open routing ensures drivers finish at the final stop, maximizing efficiency for time-sensitive events.",
         "data_template": {
             "num_depots": [
                 1
@@ -16620,11 +16668,12 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpmb"
+        "label": "ovrpmb",
+        "index": 48
     },
     {
         "title": "Home Improvement Rental Tool Delivery and Return Logistics",
-        "desc_split": "A tool rental business operates trucks to deliver power tools, ladders, and equipment to homeowners while collecting returned items for maintenance and redistribution. Each truck\u2019s capacity must accommodate both outgoing tool deliveries and incoming returns, which may vary in size and weight. Routes begin at the rental depot and conclude at the final customer\u2019s address, avoiding depot returns. The mixed backhaul structure allows drivers to optimize stops based on geographic clusters, ensuring tools are replenished quickly while managing load constraints.",
+        "desc_split": "A tool rental business operates trucks to deliver power tools, ladders, and equipment to homeowners while collecting returned items for maintenance and redistribution. Each truck’s capacity must accommodate both outgoing tool deliveries and incoming returns, which may vary in size and weight. Routes begin at the rental depot and conclude at the final customer’s address, avoiding depot returns. The mixed backhaul structure allows drivers to optimize stops based on geographic clusters, ensuring tools are replenished quickly while managing load constraints.",
         "data_template": {
             "num_depots": [
                 1
@@ -16822,7 +16871,8 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpmb"
+        "label": "ovrpmb",
+        "index": 49
     },
     {
         "title": "Film Production Equipment Redistribution and Post-Shoot Recovery",
@@ -17183,11 +17233,12 @@
                 0.0
             ]
         },
-        "label": "ovrpmb"
+        "label": "ovrpmb",
+        "index": 50
     },
     {
         "title": "Portable Storage Container Delivery and Collection Network",
-        "desc_split": "A storage solutions provider offers temporary containers to customers for home renovations, events, or disaster recovery. Their fleet must deliver empty containers to new clients while simultaneously collecting returned units from customers completing leases. Each truck\u2019s capacity (<capacity>) must handle both outbound deliveries (<demand_linehaul>) and inbound pickups (<demand_backhaul>), with stops arranged flexibly to minimize total distance. Drivers end their routes at the last customer location, streamlining logistics costs and reducing idle mileage.",
+        "desc_split": "A storage solutions provider offers temporary containers to customers for home renovations, events, or disaster recovery. Their fleet must deliver empty containers to new clients while simultaneously collecting returned units from customers completing leases. Each truck’s capacity (<capacity>) must handle both outbound deliveries (<demand_linehaul>) and inbound pickups (<demand_backhaul>), with stops arranged flexibly to minimize total distance. Drivers end their routes at the last customer location, streamlining logistics costs and reducing idle mileage.",
         "data_template": {
             "num_depots": [
                 1
@@ -17512,11 +17563,12 @@
                 0.0
             ]
         },
-        "label": "ovrpmb"
+        "label": "ovrpmb",
+        "index": 51
     },
     {
         "title": "Restaurant Equipment Rental and Return Logistics",
-        "desc_split": "A commercial kitchen equipment rental service delivers grills, refrigeration units, and dining sets to restaurants while collecting returned gear from clients ending leases. Vehicles (<capacity>) must manage mixed cargo\u2014new rentals and reclaimed items\u2014without exceeding load limits. Routes can interleave deliveries and pickups in any sequence, ensuring all customers are serviced efficiently. Drivers conclude their shifts at the final stop, cutting down on redundant travel to the central depot (<loc_depot>).",
+        "desc_split": "A commercial kitchen equipment rental service delivers grills, refrigeration units, and dining sets to restaurants while collecting returned gear from clients ending leases. Vehicles (<capacity>) must manage mixed cargo—new rentals and reclaimed items—without exceeding load limits. Routes can interleave deliveries and pickups in any sequence, ensuring all customers are serviced efficiently. Drivers conclude their shifts at the final stop, cutting down on redundant travel to the central depot (<loc_depot>).",
         "data_template": {
             "num_depots": [
                 1
@@ -17713,7 +17765,8 @@
                 ]
             ]
         },
-        "label": "ovrpmb"
+        "label": "ovrpmb",
+        "index": 52
     },
     {
         "title": "Agricultural Machinery Rental and Crop Residue Collection",
@@ -18055,7 +18108,8 @@
                 0.1764705926179886
             ]
         },
-        "label": "ovrpmb"
+        "label": "ovrpmb",
+        "index": 53
     },
     {
         "title": "Mobile Science Lab Deployment and Lab Waste Retrieval",
@@ -18371,7 +18425,8 @@
                 0.0
             ]
         },
-        "label": "ovrpmb"
+        "label": "ovrpmb",
+        "index": 54
     },
     {
         "title": "Food Bank Supply Distribution and Donation Collection",
@@ -18551,7 +18606,8 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpmb"
+        "label": "ovrpmb",
+        "index": 55
     },
     {
         "title": "Event Rental Costume Delivery and Return Logistics",
@@ -18907,7 +18963,8 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpmb"
+        "label": "ovrpmb",
+        "index": 56
     },
     {
         "title": "Tool Sharing Network Delivery and Pickup Optimization",
@@ -19164,11 +19221,12 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpmb"
+        "label": "ovrpmb",
+        "index": 57
     },
     {
         "title": "Grocery Home Delivery with Reusable Packaging Retrieval",
-        "desc_split": "A grocery delivery service transports perishables to customers\u2019 homes and retrieves reusable packaging containers for reuse. Vehicles must manage mixed loads of outgoing groceries and incoming containers, constrained by capacity limits. Routes are open, concluding at the last stop to reduce operational costs. The challenge is designing routes where deliveries and pickups can be sequenced flexibly, ensuring timely service and maximizing the reuse of packaging materials.",
+        "desc_split": "A grocery delivery service transports perishables to customers’ homes and retrieves reusable packaging containers for reuse. Vehicles must manage mixed loads of outgoing groceries and incoming containers, constrained by capacity limits. Routes are open, concluding at the last stop to reduce operational costs. The challenge is designing routes where deliveries and pickups can be sequenced flexibly, ensuring timely service and maximizing the reuse of packaging materials.",
         "data_template": {
             "num_depots": [
                 1
@@ -19487,7 +19545,8 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpmb"
+        "label": "ovrpmb",
+        "index": 58
     },
     {
         "title": "Manufacturing Raw Material Delivery and Finished Goods Pickup",
@@ -19722,7 +19781,8 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpmb"
+        "label": "ovrpmb",
+        "index": 59
     },
     {
         "title": "Maritime Platform Equipment Supply and Salvage Retrieval",
@@ -20067,7 +20127,8 @@
                 1.0
             ]
         },
-        "label": "ovrpmb"
+        "label": "ovrpmb",
+        "index": 60
     },
     {
         "title": "Tech Hardware Deployment and E-Waste Collection",
@@ -20403,7 +20464,8 @@
                 1.0
             ]
         },
-        "label": "ovrpmb"
+        "label": "ovrpmb",
+        "index": 61
     },
     {
         "title": "Art Exhibition Logistics with Artwork Transport and Return",
@@ -20807,7 +20869,8 @@
                 1.0
             ]
         },
-        "label": "ovrpmb"
+        "label": "ovrpmb",
+        "index": 62
     },
     {
         "title": "Disaster Relief Aid Delivery and Debris Collection",
@@ -21041,7 +21104,8 @@
                 1.0
             ]
         },
-        "label": "ovrpmb"
+        "label": "ovrpmb",
+        "index": 63
     },
     {
         "title": "Winter Sports Rental Equipment Distribution and Return",
@@ -21581,11 +21645,12 @@
                 1.0
             ]
         },
-        "label": "ovrpmb"
+        "label": "ovrpmb",
+        "index": 64
     },
     {
         "title": "School Lab Equipment Distribution and Collection Network",
-        "desc_split": "A school district needs to efficiently distribute science lab equipment to multiple schools and simultaneously collect outdated or broken items for repair or recycling. Each vehicle starts from a central warehouse (<loc_depot>) and must balance the delivery of new lab supplies (<demand_linehaul>) with the pickup of used equipment (<demand_backhaul>). The truck\u2019s capacity (<capacity>) must not be exceeded at any point in the route. Routes are designed to visit all schools without requiring vehicles to return to the depot, minimizing total travel distance while accommodating mixed delivery and pickup tasks in any sequence.",
+        "desc_split": "A school district needs to efficiently distribute science lab equipment to multiple schools and simultaneously collect outdated or broken items for repair or recycling. Each vehicle starts from a central warehouse (<loc_depot>) and must balance the delivery of new lab supplies (<demand_linehaul>) with the pickup of used equipment (<demand_backhaul>). The truck’s capacity (<capacity>) must not be exceeded at any point in the route. Routes are designed to visit all schools without requiring vehicles to return to the depot, minimizing total travel distance while accommodating mixed delivery and pickup tasks in any sequence.",
         "data_template": {
             "num_depots": [
                 1
@@ -21799,7 +21864,8 @@
                 1.0
             ]
         },
-        "label": "ovrpmb"
+        "label": "ovrpmb",
+        "index": 65
     },
     {
         "title": "Pop-Up Retail Inventory Redistribution and Return Logistics",
@@ -21991,7 +22057,8 @@
                 ]
             ]
         },
-        "label": "ovrpmb"
+        "label": "ovrpmb",
+        "index": 66
     },
     {
         "title": "Outdoor Adventure Gear Rental and Return Logistics",
@@ -22248,11 +22315,12 @@
                 1.0
             ]
         },
-        "label": "ovrpmb"
+        "label": "ovrpmb",
+        "index": 67
     },
     {
         "title": "Municipal Public Art Installation and Removal Logistics",
-        "desc_split": "A city\u2019s cultural department deploys temporary public art installations (e.g., sculptures, murals) to neighborhoods and later removes them after exhibitions. Trucks must deliver art pieces (<demand_linehaul>) to designated locations and collect them afterward (<demand_backhaul>). Each vehicle\u2019s capacity (<capacity>) must accommodate both the weight of installations and the materials being removed. Routes are open-ended, concluding at the final drop-off or pickup point, ensuring minimal travel distance and compliance with load limits while supporting the city\u2019s cultural initiatives.",
+        "desc_split": "A city’s cultural department deploys temporary public art installations (e.g., sculptures, murals) to neighborhoods and later removes them after exhibitions. Trucks must deliver art pieces (<demand_linehaul>) to designated locations and collect them afterward (<demand_backhaul>). Each vehicle’s capacity (<capacity>) must accommodate both the weight of installations and the materials being removed. Routes are open-ended, concluding at the final drop-off or pickup point, ensuring minimal travel distance and compliance with load limits while supporting the city’s cultural initiatives.",
         "data_template": {
             "num_depots": [
                 1
@@ -22447,11 +22515,12 @@
                 1.0
             ]
         },
-        "label": "ovrpmb"
+        "label": "ovrpmb",
+        "index": 68
     },
     {
         "title": "Temporary Medical Clinic Equipment Deployment and Recovery",
-        "desc_split": "A healthcare nonprofit sets up mobile clinics in rural or disaster-affected areas, requiring rapid delivery of medical equipment (<demand_linehaul>) and later retrieval of reusable supplies (<demand_backhaul>). Vehicles departing from a central hub (<loc_depot>) must handle both tasks in any order, ensuring their capacity (<capacity>) isn\u2019t exceeded. Routes are planned to end at the last clinic site, prioritizing efficient pathing to maximize the number of communities served while minimizing operational costs and logistical complexity.",
+        "desc_split": "A healthcare nonprofit sets up mobile clinics in rural or disaster-affected areas, requiring rapid delivery of medical equipment (<demand_linehaul>) and later retrieval of reusable supplies (<demand_backhaul>). Vehicles departing from a central hub (<loc_depot>) must handle both tasks in any order, ensuring their capacity (<capacity>) isn’t exceeded. Routes are planned to end at the last clinic site, prioritizing efficient pathing to maximize the number of communities served while minimizing operational costs and logistical complexity.",
         "data_template": {
             "num_depots": [
                 1
@@ -22782,7 +22851,8 @@
                 1.0
             ]
         },
-        "label": "ovrpmb"
+        "label": "ovrpmb",
+        "index": 69
     },
     {
         "title": "Temporary Event Infrastructure Delivery and Post-Event Retrieval",
@@ -23017,11 +23087,12 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpmb"
+        "label": "ovrpmb",
+        "index": 70
     },
     {
         "title": "Industrial Tool Rental and Scrap Metal Collection",
-        "desc_split": "An industrial tool rental firm supplies specialized machinery (e.g., welding equipment, CNC routers) to construction and manufacturing clients. Alongside deliveries, their trucks also collect outdated or broken tools for recycling or repair. Vehicles must balance both tasks without exceeding their weight capacity, with routes concluding at the last customer\u2019s location.",
+        "desc_split": "An industrial tool rental firm supplies specialized machinery (e.g., welding equipment, CNC routers) to construction and manufacturing clients. Alongside deliveries, their trucks also collect outdated or broken tools for recycling or repair. Vehicles must balance both tasks without exceeding their weight capacity, with routes concluding at the last customer’s location.",
         "data_template": {
             "num_depots": [
                 1
@@ -23197,7 +23268,8 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpmb"
+        "label": "ovrpmb",
+        "index": 71
     },
     {
         "title": "Pop-Up Retail Inventory Deployment and Return Logistics",
@@ -23366,7 +23438,8 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpmb"
+        "label": "ovrpmb",
+        "index": 72
     },
     {
         "title": "Disaster Response Supply Delivery and Hazardous Waste Removal",
@@ -23601,11 +23674,12 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpmb"
+        "label": "ovrpmb",
+        "index": 73
     },
     {
         "title": "Veterinary Clinic Supply Delivery and Medical Waste Retrieval",
-        "desc_split": "A veterinary supply distributor delivers vaccines, pharmaceuticals, and medical equipment to clinics and animal hospitals. In the same routes, they collect expired medications, used syringes, and biohazard waste for regulated disposal. Vehicles can interleave deliveries and pickups, ensuring capacity constraints are met while ending routes at the last customer\u2019s location.",
+        "desc_split": "A veterinary supply distributor delivers vaccines, pharmaceuticals, and medical equipment to clinics and animal hospitals. In the same routes, they collect expired medications, used syringes, and biohazard waste for regulated disposal. Vehicles can interleave deliveries and pickups, ensuring capacity constraints are met while ending routes at the last customer’s location.",
         "data_template": {
             "num_depots": [
                 1
@@ -23891,7 +23965,8 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpmb"
+        "label": "ovrpmb",
+        "index": 74
     },
     {
         "title": "Mobile Healthcare Equipment Delivery and Medical Waste Collection",
@@ -24164,7 +24239,8 @@
                 ]
             ]
         },
-        "label": "ovrpmb"
+        "label": "ovrpmb",
+        "index": 75
     },
     {
         "title": "Office Furniture Rental and Return Logistics",
@@ -24377,7 +24453,8 @@
                 11
             ]
         },
-        "label": "ovrpmb"
+        "label": "ovrpmb",
+        "index": 76
     },
     {
         "title": "Temporary Event Storage Container Delivery and Retrieval",
@@ -24740,7 +24817,8 @@
                 ]
             ]
         },
-        "label": "ovrpmb"
+        "label": "ovrpmb",
+        "index": 77
     },
     {
         "title": "Perishable Grocery Delivery and Compostable Waste Pickup",
@@ -25163,11 +25241,12 @@
                 ]
             ]
         },
-        "label": "ovrpmb"
+        "label": "ovrpmb",
+        "index": 78
     },
     {
         "title": "Art Installation Setup and Post-Exhibition Material Recovery",
-        "desc_split": "A cultural organization coordinates temporary public art installations across cities. Trucks (<capacity> m\u00b3 capacity) transport art pieces from a central storage facility (<loc_depot>) to <num_customer> exhibition sites (<loc_customer>). After exhibitions end, the same vehicles collect dismantled materials (e.g., sculptures, canvases) for reuse or recycling. Routes must accommodate both delivery and pickup operations in any order, ensuring that no truck exceeds its volume limit. The open-route design permits drivers to conclude their shifts at the last visited site, streamlining logistics for rapid redistribution of resources.  \n```",
+        "desc_split": "A cultural organization coordinates temporary public art installations across cities. Trucks (<capacity> m³ capacity) transport art pieces from a central storage facility (<loc_depot>) to <num_customer> exhibition sites (<loc_customer>). After exhibitions end, the same vehicles collect dismantled materials (e.g., sculptures, canvases) for reuse or recycling. Routes must accommodate both delivery and pickup operations in any order, ensuring that no truck exceeds its volume limit. The open-route design permits drivers to conclude their shifts at the last visited site, streamlining logistics for rapid redistribution of resources.  \n```",
         "data_template": {
             "num_depots": [
                 1
@@ -25376,7 +25455,8 @@
                 ]
             ]
         },
-        "label": "ovrpmb"
+        "label": "ovrpmb",
+        "index": 79
     },
     {
         "title": "Outdoor Music Festival Equipment Distribution and Post-Event Recovery",
@@ -25622,10 +25702,11 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpmb"
+        "label": "ovrpmb",
+        "index": 80
     },
     {
-        "title": "Electric Vehicle Charging Station Installation and\u5e9f\u65e7Battery Collection",
+        "title": "Electric Vehicle Charging Station Installation and废旧Battery Collection",
         "desc_split": "A green energy firm deploys new EV charging stations to high-traffic locations while simultaneously collecting spent batteries from outdated stations for recycling. Trucks must handle the weight of bulky new equipment and heavy old batteries, planning routes that allow flexible delivery/pickup sequences to maximize efficiency. Vehicles start from a central depot, serve all assigned customers in any order, and finish at their last stop without needing to return.",
         "data_template": {
             "num_depots": [
@@ -25868,7 +25949,8 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpmb"
+        "label": "ovrpmb",
+        "index": 81
     },
     {
         "title": "Pop-Up Farmers' Market Inventory Delivery and Unsold Produce Retrieval",
@@ -26048,7 +26130,8 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpmb"
+        "label": "ovrpmb",
+        "index": 82
     },
     {
         "title": "Rental Wedding Equipment Delivery and Post-Event Material Recovery",
@@ -26404,7 +26487,8 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpmb"
+        "label": "ovrpmb",
+        "index": 83
     },
     {
         "title": "Mobile Testing Unit Deployment and Equipment Retrieval",
@@ -26595,11 +26679,12 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpmb"
+        "label": "ovrpmb",
+        "index": 84
     },
     {
         "title": "Aquaculture Feed Delivery and Fish Harvest Collection",
-        "desc_split": "A company operates a network of fish farms along coastal regions. They must deliver feed to farms (<loc_customer>) using trucks with a <capacity> ton capacity while simultaneously collecting harvested fish for processing. The vehicles can sequence deliveries and pickups in any order to balance load constraints. Routes start at the central depot (<loc_depot>) but end at the last customer, avoiding unnecessary return trips. The goal is to minimize total distance traveled while ensuring feed supplies match each farm\u2019s demand (<demand_linehaul>) and fish collections meet processing quotas (<demand_backhaul>), all within vehicle capacity limits.",
+        "desc_split": "A company operates a network of fish farms along coastal regions. They must deliver feed to farms (<loc_customer>) using trucks with a <capacity> ton capacity while simultaneously collecting harvested fish for processing. The vehicles can sequence deliveries and pickups in any order to balance load constraints. Routes start at the central depot (<loc_depot>) but end at the last customer, avoiding unnecessary return trips. The goal is to minimize total distance traveled while ensuring feed supplies match each farm’s demand (<demand_linehaul>) and fish collections meet processing quotas (<demand_backhaul>), all within vehicle capacity limits.",
         "data_template": {
             "num_depots": [
                 1
@@ -27033,7 +27118,8 @@
                 0.0
             ]
         },
-        "label": "ovrpmb"
+        "label": "ovrpmb",
+        "index": 85
     },
     {
         "title": "Sports Event Equipment Deployment and Post-Event Recovery",
@@ -27358,11 +27444,12 @@
                 21
             ]
         },
-        "label": "ovrpmb"
+        "label": "ovrpmb",
+        "index": 86
     },
     {
-        "title": "IT Rental Hardware Distribution and\u5e9f\u65e7Component Retrieval",
-        "desc_split": "An IT rental service delivers servers, laptops, and peripherals (<demand_linehaul>) to businesses and collects\u5e9f\u65e7 hardware (<demand_backhaul>) for recycling. Each truck (<capacity> kg capacity) starts at the central hub (<loc_depot>) and must balance outgoing and incoming loads. Routes can prioritize deliveries before pickups or interleave them as needed, ending at the last customer location. The goal is to minimize driving distance while adhering to vehicle capacity and ensuring all <num_customer> clients receive their rented equipment and\u5e9f\u65e7 items are collected for reuse.",
+        "title": "IT Rental Hardware Distribution and废旧Component Retrieval",
+        "desc_split": "An IT rental service delivers servers, laptops, and peripherals (<demand_linehaul>) to businesses and collects废旧 hardware (<demand_backhaul>) for recycling. Each truck (<capacity> kg capacity) starts at the central hub (<loc_depot>) and must balance outgoing and incoming loads. Routes can prioritize deliveries before pickups or interleave them as needed, ending at the last customer location. The goal is to minimize driving distance while adhering to vehicle capacity and ensuring all <num_customer> clients receive their rented equipment and废旧 items are collected for reuse.",
         "data_template": {
             "num_depots": [
                 1
@@ -27644,11 +27731,12 @@
                 18
             ]
         },
-        "label": "ovrpmb"
+        "label": "ovrpmb",
+        "index": 87
     },
     {
-        "title": "Aircraft Maintenance Supply Delivery and\u5e9f\u65e7Part Collection",
-        "desc_split": "An aviation maintenance provider supplies parts and tools (<demand_linehaul>) to airports for aircraft upkeep and collects\u5e9f\u65e7 components (<demand_backhaul>) for recycling. Trucks departing from the depot (<loc_depot>) have a <capacity> kg limit for both deliveries and pickups. Routes may sequence stops in any order to optimize efficiency, with vehicles finishing at their final destination. The challenge is to cover all <num_customer> airport locations while managing load constraints and minimizing fuel expenditure.",
+        "title": "Aircraft Maintenance Supply Delivery and废旧Part Collection",
+        "desc_split": "An aviation maintenance provider supplies parts and tools (<demand_linehaul>) to airports for aircraft upkeep and collects废旧 components (<demand_backhaul>) for recycling. Trucks departing from the depot (<loc_depot>) have a <capacity> kg limit for both deliveries and pickups. Routes may sequence stops in any order to optimize efficiency, with vehicles finishing at their final destination. The challenge is to cover all <num_customer> airport locations while managing load constraints and minimizing fuel expenditure.",
         "data_template": {
             "num_depots": [
                 1
@@ -27839,7 +27927,8 @@
                 11
             ]
         },
-        "label": "ovrpmb"
+        "label": "ovrpmb",
+        "index": 88
     },
     {
         "title": "Marine Research Equipment Deployment and Biological Sample Retrieval",
@@ -28047,11 +28136,12 @@
                 12
             ]
         },
-        "label": "ovrpmb"
+        "label": "ovrpmb",
+        "index": 89
     },
     {
         "title": "Industrial Cleaning Services Logistics",
-        "desc_split": "A cleaning services company must deliver chemical supplies and equipment to industrial facilities while simultaneously collecting hazardous waste and\u5e9f\u65e7materials for disposal. Each truck has a maximum capacity (<capacity>), requiring careful balancing of delivery and pickup loads. Routes start from the central warehouse (<loc_depot>) and must end at the final customer location (<loc_customer>). The goal is to minimize travel distance while ensuring no truck exceeds its capacity and all facilities receive supplies and waste collections efficiently.",
+        "desc_split": "A cleaning services company must deliver chemical supplies and equipment to industrial facilities while simultaneously collecting hazardous waste and废旧materials for disposal. Each truck has a maximum capacity (<capacity>), requiring careful balancing of delivery and pickup loads. Routes start from the central warehouse (<loc_depot>) and must end at the final customer location (<loc_customer>). The goal is to minimize travel distance while ensuring no truck exceeds its capacity and all facilities receive supplies and waste collections efficiently.",
         "data_template": {
             "num_depots": [
                 1
@@ -28497,11 +28587,12 @@
                 ]
             ]
         },
-        "label": "ovrpmb"
+        "label": "ovrpmb",
+        "index": 90
     },
     {
-        "title": "Agricultural Drone Deployment and\u5e9f\u65e7Battery Retrieval",
-        "desc_split": "Agricultural drones are used to deliver seeds and pesticides to remote farmland while also collecting\u5e9f\u65e7batteries from drone charging stations for recycling. Vehicles (<capacity> capacity) start at the central depot (<loc_depot>), servicing a mix of delivery and pickup locations (<loc_customer>). Routes must be planned to maximize battery and seed distribution while efficiently retrieving\u5e9f\u65e7batteries, ending at the last stop to avoid unnecessary backtracking.",
+        "title": "Agricultural Drone Deployment and废旧Battery Retrieval",
+        "desc_split": "Agricultural drones are used to deliver seeds and pesticides to remote farmland while also collecting废旧batteries from drone charging stations for recycling. Vehicles (<capacity> capacity) start at the central depot (<loc_depot>), servicing a mix of delivery and pickup locations (<loc_customer>). Routes must be planned to maximize battery and seed distribution while efficiently retrieving废旧batteries, ending at the last stop to avoid unnecessary backtracking.",
         "data_template": {
             "num_depots": [
                 1
@@ -28797,11 +28888,12 @@
                 ]
             ]
         },
-        "label": "ovrpmb"
+        "label": "ovrpmb",
+        "index": 91
     },
     {
         "title": "Temporary Office Setup and Dismantling Logistics",
-        "desc_split": "A company provides temporary office solutions for remote projects, delivering desks, IT equipment, and supplies to construction sites and later collecting\u5e9f\u65e7materials or reusable items. Each truck (<capacity>) starts at the warehouse (<loc_depot>), servicing both delivery and pickup requests. Routes must optimize mixed loads to reduce fuel costs and ensure all sites are serviced without returning to the depot after the final stop.",
+        "desc_split": "A company provides temporary office solutions for remote projects, delivering desks, IT equipment, and supplies to construction sites and later collecting废旧materials or reusable items. Each truck (<capacity>) starts at the warehouse (<loc_depot>), servicing both delivery and pickup requests. Routes must optimize mixed loads to reduce fuel costs and ensure all sites are serviced without returning to the depot after the final stop.",
         "data_template": {
             "num_depots": [
                 1
@@ -28998,11 +29090,12 @@
                 ]
             ]
         },
-        "label": "ovrpmb"
+        "label": "ovrpmb",
+        "index": 92
     },
     {
-        "title": "Medical Equipment Rental and\u5e9f\u65e7Component Retrieval",
-        "desc_split": "A healthcare equipment rental service delivers wheelchairs, hospital beds, and diagnostic tools to patients\u2019 homes while retrieving\u5e9f\u65e7parts (e.g., batteries, sensors) for repair or recycling. Vehicles (<capacity>) must balance delivery and pickup demands across locations (<loc_customer>), starting from the medical supply depot (<loc_depot>). Routes end at the last customer to minimize travel and ensure timely service, all while adhering to strict capacity limits.",
+        "title": "Medical Equipment Rental and废旧Component Retrieval",
+        "desc_split": "A healthcare equipment rental service delivers wheelchairs, hospital beds, and diagnostic tools to patients’ homes while retrieving废旧parts (e.g., batteries, sensors) for repair or recycling. Vehicles (<capacity>) must balance delivery and pickup demands across locations (<loc_customer>), starting from the medical supply depot (<loc_depot>). Routes end at the last customer to minimize travel and ensure timely service, all while adhering to strict capacity limits.",
         "data_template": {
             "num_depots": [
                 1
@@ -29403,7 +29496,8 @@
                 ]
             ]
         },
-        "label": "ovrpmb"
+        "label": "ovrpmb",
+        "index": 93
     },
     {
         "title": "Seasonal Equipment Rental and Return Logistics",
@@ -29733,11 +29827,12 @@
                 ]
             ]
         },
-        "label": "ovrpmb"
+        "label": "ovrpmb",
+        "index": 94
     },
     {
         "title": "Event Security Equipment Distribution and Post-Event Retrieval",
-        "desc_split": "A security firm provides temporary equipment (cameras, barriers, detectors) to venues hosting large events such as concerts, conferences, or sports matches. Their vehicles (capacity <capacity>) start at the central depot (<loc_depot>) and must deliver equipment to event sites (<loc_customer>). After the event concludes, the same routes are used to collect and return the equipment to the depot. The firm needs to optimize routes so that deliveries and pickups can be sequenced flexibly\u2014e.g., dropping off gear at one venue and retrieving equipment from another en route\u2014to minimize total distance while respecting vehicle capacity. Drivers end their routes at the last customer visited, avoiding unnecessary return trips to the depot.",
+        "desc_split": "A security firm provides temporary equipment (cameras, barriers, detectors) to venues hosting large events such as concerts, conferences, or sports matches. Their vehicles (capacity <capacity>) start at the central depot (<loc_depot>) and must deliver equipment to event sites (<loc_customer>). After the event concludes, the same routes are used to collect and return the equipment to the depot. The firm needs to optimize routes so that deliveries and pickups can be sequenced flexibly—e.g., dropping off gear at one venue and retrieving equipment from another en route—to minimize total distance while respecting vehicle capacity. Drivers end their routes at the last customer visited, avoiding unnecessary return trips to the depot.",
         "data_template": {
             "num_depots": [
                 1
@@ -30168,10 +30263,11 @@
                 ]
             ]
         },
-        "label": "ovrpmb"
+        "label": "ovrpmb",
+        "index": 95
     },
     {
-        "title": "Film Set Construction Material Delivery and\u5e9f\u65e7Prop Recovery",
+        "title": "Film Set Construction Material Delivery and废旧Prop Recovery",
         "desc_split": "Film production crews require rapid delivery of building materials (wood, scaffolding) to remote set locations and later retrieval of discarded props, set pieces, and reusable materials. Trucks (capacity <capacity>) depart from a central storage facility (<loc_depot>) to serve <num_customer> film sites (<loc_customer>). Each site has specific material delivery needs (<demand_linehaul>) and generates waste/pickup volumes (<demand_backhaul>). The logistics team must plan mixed routes where deliveries and pickups can occur in any sequence (e.g., dropping lumber at one set and collecting scrap from another), ensuring no truck overloads. Routes are open-ended, ending at the final stop without returning to the depot.",
         "data_template": {
             "num_depots": [
@@ -30490,11 +30586,12 @@
                 0.0
             ]
         },
-        "label": "ovrpmb"
+        "label": "ovrpmb",
+        "index": 96
     },
     {
         "title": "Livestock Feed Delivery and Animal Waste Collection for Composting",
-        "desc_split": "A farm cooperative supplies concentrated feed to dairy and poultry farms while simultaneously collecting manure and organic waste for industrial composting. Delivery trucks (<capacity>) begin at the cooperative\u2019s hub (<loc_depot>) and visit <num_customer> farms (<loc_customer>). Each farm requires a specific feed quantity (<demand_linehaul>) and generates a waste volume (<demand_backhaul>). The cooperative seeks routes where feed drops and waste pickups can be interleaved in any order (e.g., delivering feed to Farm A and collecting waste from Farm B on the same trip), prioritizing minimal travel distance. Trucks finish their routes at the last customer, avoiding depot returns.",
+        "desc_split": "A farm cooperative supplies concentrated feed to dairy and poultry farms while simultaneously collecting manure and organic waste for industrial composting. Delivery trucks (<capacity>) begin at the cooperative’s hub (<loc_depot>) and visit <num_customer> farms (<loc_customer>). Each farm requires a specific feed quantity (<demand_linehaul>) and generates a waste volume (<demand_backhaul>). The cooperative seeks routes where feed drops and waste pickups can be interleaved in any order (e.g., delivering feed to Farm A and collecting waste from Farm B on the same trip), prioritizing minimal travel distance. Trucks finish their routes at the last customer, avoiding depot returns.",
         "data_template": {
             "num_depots": [
                 1
@@ -30897,11 +30994,12 @@
                 0.13333334028720856
             ]
         },
-        "label": "ovrpmb"
+        "label": "ovrpmb",
+        "index": 97
     },
     {
-        "title": "Remote Research Station Supply Delivery and\u5e9f\u65e7Equipment Retrieval",
-        "desc_split": "A scientific organization supplies remote research stations (e.g., Arctic, desert, or oceanic sites) with food, fuel, and equipment while retrieving outdated gear for recycling. Vehicles (<capacity>) depart from a logistics base (<loc_depot>) to serve <num_customer> isolated stations (<loc_customer>). Each station needs supplies (<demand_linehaul>) and has obsolete equipment to return (<demand_backhaul>). Routes must allow flexible sequencing\u2014such as delivering fresh gear to one station and collecting old equipment from another\u2014to optimize fuel use. Routes are open-ended, terminating at the final station without looping back to the base.",
+        "title": "Remote Research Station Supply Delivery and废旧Equipment Retrieval",
+        "desc_split": "A scientific organization supplies remote research stations (e.g., Arctic, desert, or oceanic sites) with food, fuel, and equipment while retrieving outdated gear for recycling. Vehicles (<capacity>) depart from a logistics base (<loc_depot>) to serve <num_customer> isolated stations (<loc_customer>). Each station needs supplies (<demand_linehaul>) and has obsolete equipment to return (<demand_backhaul>). Routes must allow flexible sequencing—such as delivering fresh gear to one station and collecting old equipment from another—to optimize fuel use. Routes are open-ended, terminating at the final station without looping back to the base.",
         "data_template": {
             "num_depots": [
                 1
@@ -31440,7 +31538,8 @@
                 0.0
             ]
         },
-        "label": "ovrpmb"
+        "label": "ovrpmb",
+        "index": 98
     },
     {
         "title": "Rural Healthcare Supply Delivery and Medical Waste Pickup",
@@ -31864,6 +31963,7 @@
                 0.0
             ]
         },
-        "label": "ovrpmb"
+        "label": "ovrpmb",
+        "index": 99
     }
 ]

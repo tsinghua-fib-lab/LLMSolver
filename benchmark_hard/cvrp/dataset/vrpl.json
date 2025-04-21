@@ -382,7 +382,8 @@
                 2.1893370151519775
             ]
         },
-        "label": "vrpl"
+        "label": "vrpl",
+        "index": 0
     },
     {
         "title": "Urban Waste Collection Route Planning",
@@ -783,11 +784,12 @@
                 2.3756263256073
             ]
         },
-        "label": "vrpl"
+        "label": "vrpl",
+        "index": 1
     },
     {
         "title": "Agricultural Produce Transportation for a Farm Collective",
-        "desc_split": "A cooperative of farmers requires transporting harvested crops to a processing facility. The depot is located at <loc_depot>, while fields needing collection are at <loc_customer>. Each field\u2019s crop yield is <demand> tons, and trucks have a maximum load capacity of <capacity> tons. Due to perishability and limited refrigeration, vehicles must return to the depot within <distance_limit> km to ensure timely processing. Design routes to collect all crops without overloading trucks or exceeding distance limits.",
+        "desc_split": "A cooperative of farmers requires transporting harvested crops to a processing facility. The depot is located at <loc_depot>, while fields needing collection are at <loc_customer>. Each field’s crop yield is <demand> tons, and trucks have a maximum load capacity of <capacity> tons. Due to perishability and limited refrigeration, vehicles must return to the depot within <distance_limit> km to ensure timely processing. Design routes to collect all crops without overloading trucks or exceeding distance limits.",
         "data_template": {
             "num_depots": [
                 1
@@ -1056,7 +1058,8 @@
                 2.6591274738311768
             ]
         },
-        "label": "vrpl"
+        "label": "vrpl",
+        "index": 2
     },
     {
         "title": "Mountainous Region Parcel Delivery Service",
@@ -1473,7 +1476,8 @@
                 2.3583054542541504
             ]
         },
-        "label": "vrpl"
+        "label": "vrpl",
+        "index": 3
     },
     {
         "title": "Emergency Relief Supplies Distribution",
@@ -1778,11 +1782,12 @@
                 2.5287351608276367
             ]
         },
-        "label": "vrpl"
+        "label": "vrpl",
+        "index": 4
     },
     {
         "title": "Offshore Oil Rig Supply Delivery",
-        "desc_split": "An offshore oil drilling company must deliver critical equipment and supplies to multiple oil rigs located at sea. The main supply depot is onshore at <loc_depot>, while the rigs are positioned at <loc_customer>. Each rig requires a specific amount of supplies <demand>, and the supply boats have a maximum cargo capacity of <capacity> tons. Additionally, due to tidal restrictions and fuel limitations, each boat\u2019s round-trip journey cannot exceed <distance_limit> nautical miles. Plan routes to ensure all rigs are supplied without overloading any vessel or exceeding their operational range.",
+        "desc_split": "An offshore oil drilling company must deliver critical equipment and supplies to multiple oil rigs located at sea. The main supply depot is onshore at <loc_depot>, while the rigs are positioned at <loc_customer>. Each rig requires a specific amount of supplies <demand>, and the supply boats have a maximum cargo capacity of <capacity> tons. Additionally, due to tidal restrictions and fuel limitations, each boat’s round-trip journey cannot exceed <distance_limit> nautical miles. Plan routes to ensure all rigs are supplied without overloading any vessel or exceeding their operational range.",
         "data_template": {
             "num_depots": [
                 1
@@ -2291,11 +2296,12 @@
                 2.640432834625244
             ]
         },
-        "label": "vrpl"
+        "label": "vrpl",
+        "index": 5
     },
     {
         "title": "Rural Healthcare Clinic Equipment Redistribution",
-        "desc_split": "A nonprofit organization operates mobile medical clinics across remote rural areas. The central warehouse (<loc_depot>) must redistribute medical equipment to satellite clinics (<loc_customer>). Each clinic requires a specific quantity of supplies <demand>, and the transport trucks can carry no more than <capacity> kilograms. Due to poor road conditions and limited fuel availability, each truck\u2019s route must not exceed <distance_limit> kilometers to ensure safe return to the warehouse. Design routes to meet all clinics\u2019 needs while adhering to vehicle constraints.",
+        "desc_split": "A nonprofit organization operates mobile medical clinics across remote rural areas. The central warehouse (<loc_depot>) must redistribute medical equipment to satellite clinics (<loc_customer>). Each clinic requires a specific quantity of supplies <demand>, and the transport trucks can carry no more than <capacity> kilograms. Due to poor road conditions and limited fuel availability, each truck’s route must not exceed <distance_limit> kilometers to ensure safe return to the warehouse. Design routes to meet all clinics’ needs while adhering to vehicle constraints.",
         "data_template": {
             "num_depots": [
                 1
@@ -2820,11 +2826,12 @@
                 1.6679713726043701
             ]
         },
-        "label": "vrpl"
+        "label": "vrpl",
+        "index": 6
     },
     {
         "title": "Agricultural Seed Distribution in Arid Regions",
-        "desc_split": "A government agency is distributing drought-resistant seed packets to farming communities scattered across an arid region. The seed storage facility (<loc_depot>) dispatches trucks to villages (<loc_customer>). Each village requires <demand> kilograms of seeds, and each truck\u2019s trailer can hold up to <capacity> kilograms. The trucks must return to the depot daily, with their total travel distance limited to <distance_limit> kilometers to avoid overheating engines and ensure timely redistribution. Plan routes to cover all villages efficiently.",
+        "desc_split": "A government agency is distributing drought-resistant seed packets to farming communities scattered across an arid region. The seed storage facility (<loc_depot>) dispatches trucks to villages (<loc_customer>). Each village requires <demand> kilograms of seeds, and each truck’s trailer can hold up to <capacity> kilograms. The trucks must return to the depot daily, with their total travel distance limited to <distance_limit> kilometers to avoid overheating engines and ensure timely redistribution. Plan routes to cover all villages efficiently.",
         "data_template": {
             "num_depots": [
                 1
@@ -3061,11 +3068,12 @@
                 2.7031259536743164
             ]
         },
-        "label": "vrpl"
+        "label": "vrpl",
+        "index": 7
     },
     {
         "title": "Urban Emergency Fire Equipment Deployment",
-        "desc_split": "A city\u2019s fire department needs to pre-position emergency equipment caches at strategic locations across the city. The central depot (<loc_depot>) sends trucks to install equipment at fire stations and critical sites (<loc_customer>). Each location requires <demand> units of equipment, and each truck can carry a maximum of <capacity> units. To ensure rapid deployment, no truck\u2019s route can exceed <distance_limit> kilometers, preventing delays in returning to the depot for restocking. Optimize routes to cover all sites while respecting capacity and distance limits.",
+        "desc_split": "A city’s fire department needs to pre-position emergency equipment caches at strategic locations across the city. The central depot (<loc_depot>) sends trucks to install equipment at fire stations and critical sites (<loc_customer>). Each location requires <demand> units of equipment, and each truck can carry a maximum of <capacity> units. To ensure rapid deployment, no truck’s route can exceed <distance_limit> kilometers, preventing delays in returning to the depot for restocking. Optimize routes to cover all sites while respecting capacity and distance limits.",
         "data_template": {
             "num_depots": [
                 1
@@ -3494,11 +3502,12 @@
                 2.4183130264282227
             ]
         },
-        "label": "vrpl"
+        "label": "vrpl",
+        "index": 8
     },
     {
         "title": "Remote Mining Camp Resupply Operations",
-        "desc_split": "A mining corporation must resupply isolated drilling camps located in a desert region. Supplies are transported from the main logistics hub (<loc_depot>) to campsites (<loc_customer>). Each camp requires <demand> liters of fuel and rations, while transport trucks have a fuel tank capacity limiting their total round-trip distance to <distance_limit> kilometers. Additionally, each truck\u2019s cargo bay can hold up to <capacity> liters of supplies. Plan routes to deliver all required supplies without overextending vehicle ranges or overloading trucks.",
+        "desc_split": "A mining corporation must resupply isolated drilling camps located in a desert region. Supplies are transported from the main logistics hub (<loc_depot>) to campsites (<loc_customer>). Each camp requires <demand> liters of fuel and rations, while transport trucks have a fuel tank capacity limiting their total round-trip distance to <distance_limit> kilometers. Additionally, each truck’s cargo bay can hold up to <capacity> liters of supplies. Plan routes to deliver all required supplies without overextending vehicle ranges or overloading trucks.",
         "data_template": {
             "num_depots": [
                 1
@@ -3943,7 +3952,8 @@
                 1.0
             ]
         },
-        "label": "vrpl"
+        "label": "vrpl",
+        "index": 9
     },
     {
         "title": "Remote Mining Site Supply Delivery",
@@ -4234,11 +4244,12 @@
                 1.5099221467971802
             ]
         },
-        "label": "vrpl"
+        "label": "vrpl",
+        "index": 10
     },
     {
         "title": "Fragile Artwork Transportation for Museums",
-        "desc_split": "A logistics company transports fragile artworks between museums. Each museum requires <demand> kilograms of art pieces, and refrigerated trucks can carry up to <capacity> kg to protect the items. Due to vibration risks over long distances, each truck\u2019s route must not exceed <distance_limit> km from the central depot <loc_depot>. Plan routes to deliver all artworks safely without overloading trucks or exceeding distance limits, ensuring minimal total travel.",
+        "desc_split": "A logistics company transports fragile artworks between museums. Each museum requires <demand> kilograms of art pieces, and refrigerated trucks can carry up to <capacity> kg to protect the items. Due to vibration risks over long distances, each truck’s route must not exceed <distance_limit> km from the central depot <loc_depot>. Plan routes to deliver all artworks safely without overloading trucks or exceeding distance limits, ensuring minimal total travel.",
         "data_template": {
             "num_depots": [
                 1
@@ -4561,7 +4572,8 @@
                 ]
             ]
         },
-        "label": "vrpl"
+        "label": "vrpl",
+        "index": 11
     },
     {
         "title": "Temperature-Controlled Drug Delivery",
@@ -4864,7 +4876,8 @@
                 2.358443260192871
             ]
         },
-        "label": "vrpl"
+        "label": "vrpl",
+        "index": 12
     },
     {
         "title": "Solar Panel Installation Logistics",
@@ -5215,7 +5228,8 @@
                 ]
             ]
         },
-        "label": "vrpl"
+        "label": "vrpl",
+        "index": 13
     },
     {
         "title": "Telecom Equipment Deployment",
@@ -5458,7 +5472,8 @@
                 ]
             ]
         },
-        "label": "vrpl"
+        "label": "vrpl",
+        "index": 14
     },
     {
         "title": "Livestock Transport for Agricultural Farms",
@@ -5827,7 +5842,8 @@
                 0.23333333432674408
             ]
         },
-        "label": "vrpl"
+        "label": "vrpl",
+        "index": 15
     },
     {
         "title": "Construction Material Delivery to Remote Work Sites",
@@ -6100,7 +6116,8 @@
                 0.13333334028720856
             ]
         },
-        "label": "vrpl"
+        "label": "vrpl",
+        "index": 16
     },
     {
         "title": "Post-Disaster Debris Removal Operations",
@@ -6597,7 +6614,8 @@
                 0.20000000298023224
             ]
         },
-        "label": "vrpl"
+        "label": "vrpl",
+        "index": 17
     },
     {
         "title": "Wildlife Conservation Animal Relocation",
@@ -7030,7 +7048,8 @@
                 0.23529411852359772
             ]
         },
-        "label": "vrpl"
+        "label": "vrpl",
+        "index": 18
     },
     {
         "title": "Industrial Equipment Redistribution for Manufacturing Plants",
@@ -7319,11 +7338,12 @@
                 0.30000001192092896
             ]
         },
-        "label": "vrpl"
+        "label": "vrpl",
+        "index": 19
     },
     {
         "title": "Offshore Wind Turbine Maintenance Logistics",
-        "desc_split": "A renewable energy company must service offshore wind turbines located in the North Sea. The service vessels depart from a central harbor depot (<loc_depot>) and must inspect and maintain turbines at <loc_customer> locations. Each vessel has a cargo capacity of <capacity> kg for spare parts and equipment. Due to fuel and operational safety constraints, each vessel\u2019s round-trip journey must not exceed <distance_limit> nautical miles. Each turbine requires specific quantities of parts. Plan routes to service all turbines without exceeding capacity or distance limits, minimizing total travel distance.",
+        "desc_split": "A renewable energy company must service offshore wind turbines located in the North Sea. The service vessels depart from a central harbor depot (<loc_depot>) and must inspect and maintain turbines at <loc_customer> locations. Each vessel has a cargo capacity of <capacity> kg for spare parts and equipment. Due to fuel and operational safety constraints, each vessel’s round-trip journey must not exceed <distance_limit> nautical miles. Each turbine requires specific quantities of parts. Plan routes to service all turbines without exceeding capacity or distance limits, minimizing total travel distance.",
         "data_template": {
             "num_depots": [
                 1
@@ -7742,7 +7762,8 @@
                 1.7717297077178955
             ]
         },
-        "label": "vrpl"
+        "label": "vrpl",
+        "index": 20
     },
     {
         "title": "Industrial Chemical Delivery to Remote Factories",
@@ -8180,7 +8201,8 @@
                 1.876050353050232
             ]
         },
-        "label": "vrpl"
+        "label": "vrpl",
+        "index": 21
     },
     {
         "title": "Emergency Communication Equipment Deployment",
@@ -8513,7 +8535,8 @@
                 2.7758142948150635
             ]
         },
-        "label": "vrpl"
+        "label": "vrpl",
+        "index": 22
     },
     {
         "title": "Agricultural Fertilizer Distribution in Arid Regions",
@@ -8741,7 +8764,8 @@
                 2.727144956588745
             ]
         },
-        "label": "vrpl"
+        "label": "vrpl",
+        "index": 23
     },
     {
         "title": "Mountain Rescue Team Equipment Transport",
@@ -9179,11 +9203,12 @@
                 2.402662754058838
             ]
         },
-        "label": "vrpl"
+        "label": "vrpl",
+        "index": 24
     },
     {
         "title": "Arctic Research Station Supplies Redistribution",
-        "desc_split": "A research organization must supply remote Arctic outposts with critical equipment and provisions. The depot is located at <loc_depot>, and research stations are scattered at <loc_customer>. Each vehicle can carry a maximum load of <capacity> kg due to ice road weight restrictions. Additionally, the extreme cold limits each vehicle\u2019s operational range to <distance_limit> km before needing to return to the depot to avoid fuel freezing. Each station requires <demand> kg of supplies. Plan routes ensuring all stations are supplied without exceeding vehicle capacities or distance limits, while minimizing total travel distance.",
+        "desc_split": "A research organization must supply remote Arctic outposts with critical equipment and provisions. The depot is located at <loc_depot>, and research stations are scattered at <loc_customer>. Each vehicle can carry a maximum load of <capacity> kg due to ice road weight restrictions. Additionally, the extreme cold limits each vehicle’s operational range to <distance_limit> km before needing to return to the depot to avoid fuel freezing. Each station requires <demand> kg of supplies. Plan routes ensuring all stations are supplied without exceeding vehicle capacities or distance limits, while minimizing total travel distance.",
         "data_template": {
             "num_depots": [
                 1
@@ -9484,7 +9509,8 @@
                 0.10000000149011612
             ]
         },
-        "label": "vrpl"
+        "label": "vrpl",
+        "index": 25
     },
     {
         "title": "Offshore Island Resort Goods Delivery",
@@ -9885,7 +9911,8 @@
                 0.1764705926179886
             ]
         },
-        "label": "vrpl"
+        "label": "vrpl",
+        "index": 26
     },
     {
         "title": "Desert Solar Farm Equipment Transport",
@@ -10270,7 +10297,8 @@
                 0.30000001192092896
             ]
         },
-        "label": "vrpl"
+        "label": "vrpl",
+        "index": 27
     },
     {
         "title": "Mountain Ski Resort Supplies Delivery",
@@ -10623,7 +10651,8 @@
                 0.20000000298023224
             ]
         },
-        "label": "vrpl"
+        "label": "vrpl",
+        "index": 28
     },
     {
         "title": "Coastal Marine Research Equipment Redistribution",
@@ -10960,7 +10989,8 @@
                 0.06666667014360428
             ]
         },
-        "label": "vrpl"
+        "label": "vrpl",
+        "index": 29
     },
     {
         "title": "Mineral Transport in Remote Mining Districts",
@@ -11377,7 +11407,8 @@
                 2.0789411067962646
             ]
         },
-        "label": "vrpl"
+        "label": "vrpl",
+        "index": 30
     },
     {
         "title": "Film Equipment Redistribution for Remote Film Production",
@@ -11778,7 +11809,8 @@
                 2.6382241249084473
             ]
         },
-        "label": "vrpl"
+        "label": "vrpl",
+        "index": 31
     },
     {
         "title": "Perishable Beverage Delivery to Rural Markets",
@@ -12099,7 +12131,8 @@
                 1.8635478019714355
             ]
         },
-        "label": "vrpl"
+        "label": "vrpl",
+        "index": 32
     },
     {
         "title": "Disaster Zone Medical Equipment Redistribution",
@@ -12340,7 +12373,8 @@
                 1.7283616065979004
             ]
         },
-        "label": "vrpl"
+        "label": "vrpl",
+        "index": 33
     },
     {
         "title": "High-Value Electronics Delivery to Remote Tech Facilities",
@@ -12709,7 +12743,8 @@
                 2.2877869606018066
             ]
         },
-        "label": "vrpl"
+        "label": "vrpl",
+        "index": 34
     },
     {
         "title": "Coral Reef Restoration Material Transport",
@@ -13142,7 +13177,8 @@
                 2.7584924697875977
             ]
         },
-        "label": "vrpl"
+        "label": "vrpl",
+        "index": 35
     },
     {
         "title": "Satellite Component Delivery to Remote Launch Sites",
@@ -13511,7 +13547,8 @@
                 2.458754539489746
             ]
         },
-        "label": "vrpl"
+        "label": "vrpl",
+        "index": 36
     },
     {
         "title": "Music Festival Equipment Redistribution",
@@ -13880,7 +13917,8 @@
                 2.068770170211792
             ]
         },
-        "label": "vrpl"
+        "label": "vrpl",
+        "index": 37
     },
     {
         "title": "Humanitarian Aid Distribution in Conflict Zones",
@@ -14121,7 +14159,8 @@
                 2.5770421028137207
             ]
         },
-        "label": "vrpl"
+        "label": "vrpl",
+        "index": 38
     },
     {
         "title": "Mountain Weather Station Resupply",
@@ -14538,7 +14577,8 @@
                 2.063631772994995
             ]
         },
-        "label": "vrpl"
+        "label": "vrpl",
+        "index": 39
     },
     {
         "title": "Lunar Base Resupply with Autonomous Rovers",
@@ -14971,7 +15011,8 @@
                 0.029411764815449715
             ]
         },
-        "label": "vrpl"
+        "label": "vrpl",
+        "index": 40
     },
     {
         "title": "Mountainous Mining Equipment Transport",
@@ -15292,11 +15333,12 @@
                 0.03333333507180214
             ]
         },
-        "label": "vrpl"
+        "label": "vrpl",
+        "index": 41
     },
     {
         "title": "Perishable Flower Delivery to Remote Resorts",
-        "desc_split": "A florist company supplies fresh flowers to luxury resorts in remote mountainous regions. The depot is at <loc_depot>, and resort locations are at <loc_customer>. Delivery vans can carry a maximum of <capacity> kg of flowers and must return to the depot within <distance_limit> km to prevent spoilage. Each resort requires <demand> kg of flowers. Plan routes to ensure all resorts receive their orders while keeping each van\u2019s total travel distance within limits.",
+        "desc_split": "A florist company supplies fresh flowers to luxury resorts in remote mountainous regions. The depot is at <loc_depot>, and resort locations are at <loc_customer>. Delivery vans can carry a maximum of <capacity> kg of flowers and must return to the depot within <distance_limit> km to prevent spoilage. Each resort requires <demand> kg of flowers. Plan routes to ensure all resorts receive their orders while keeping each van’s total travel distance within limits.",
         "data_template": {
             "num_depots": [
                 1
@@ -15613,7 +15655,8 @@
                 0.30000001192092896
             ]
         },
-        "label": "vrpl"
+        "label": "vrpl",
+        "index": 42
     },
     {
         "title": "Offshore Wind Turbine Component Delivery by Barge",
@@ -15918,7 +15961,8 @@
                 0.23333333432674408
             ]
         },
-        "label": "vrpl"
+        "label": "vrpl",
+        "index": 43
     },
     {
         "title": "Arctic Weather Station Instrumentation Transport",
@@ -16367,7 +16411,8 @@
                 0.20588235557079315
             ]
         },
-        "label": "vrpl"
+        "label": "vrpl",
+        "index": 44
     },
     {
         "title": "Cultural Heritage Site Preservation Supply Delivery",
@@ -16848,7 +16893,8 @@
                 2.282245397567749
             ]
         },
-        "label": "vrpl"
+        "label": "vrpl",
+        "index": 45
     },
     {
         "title": "Remote Island Conservation Equipment Transport",
@@ -17313,7 +17359,8 @@
                 2.526235342025757
             ]
         },
-        "label": "vrpl"
+        "label": "vrpl",
+        "index": 46
     },
     {
         "title": "Perishable Food Delivery to Remote Indigenous Communities",
@@ -17650,7 +17697,8 @@
                 2.514993906021118
             ]
         },
-        "label": "vrpl"
+        "label": "vrpl",
+        "index": 47
     },
     {
         "title": "Mountain Micro-Hydro Power Installation Logistics",
@@ -17875,7 +17923,8 @@
                 2.3843777179718018
             ]
         },
-        "label": "vrpl"
+        "label": "vrpl",
+        "index": 48
     },
     {
         "title": "Remote Mountain Hospital Medical Equipment Transport",
@@ -18244,7 +18293,8 @@
                 2.222126007080078
             ]
         },
-        "label": "vrpl"
+        "label": "vrpl",
+        "index": 49
     },
     {
         "title": "Remote Desert Research Outpost Equipment Delivery",
@@ -18601,7 +18651,8 @@
                 0.06666667014360428
             ]
         },
-        "label": "vrpl"
+        "label": "vrpl",
+        "index": 50
     },
     {
         "title": "Mountainous Region Construction Material Transport",
@@ -18990,7 +19041,8 @@
                 0.06666667014360428
             ]
         },
-        "label": "vrpl"
+        "label": "vrpl",
+        "index": 51
     },
     {
         "title": "Archipelago Island Goods Delivery by Boat",
@@ -19443,7 +19495,8 @@
                 2.000218629837036
             ]
         },
-        "label": "vrpl"
+        "label": "vrpl",
+        "index": 52
     },
     {
         "title": "Rainforest Medical Supplies Delivery via River",
@@ -19928,7 +19981,8 @@
                 0.1428571492433548
             ]
         },
-        "label": "vrpl"
+        "label": "vrpl",
+        "index": 53
     },
     {
         "title": "Research Vessel Equipment Resupply",
@@ -20317,7 +20371,8 @@
                 0.23333333432674408
             ]
         },
-        "label": "vrpl"
+        "label": "vrpl",
+        "index": 54
     },
     {
         "title": "Renewable Energy Battery Transport for Remote Solar Farms",
@@ -20620,7 +20675,8 @@
                 2.4704577922821045
             ]
         },
-        "label": "vrpl"
+        "label": "vrpl",
+        "index": 55
     },
     {
         "title": "Post-Conflict Zone Humanitarian Aid Redistribution",
@@ -21000,7 +21056,8 @@
                 ]
             ]
         },
-        "label": "vrpl"
+        "label": "vrpl",
+        "index": 56
     },
     {
         "title": "High-Altitude Weather Station Maintenance Logistics",
@@ -21270,7 +21327,8 @@
                 2.393338918685913
             ]
         },
-        "label": "vrpl"
+        "label": "vrpl",
+        "index": 57
     },
     {
         "title": "Vineyard Wine Barrels Transportation to Central Facility",
@@ -21465,7 +21523,8 @@
                 2.768711805343628
             ]
         },
-        "label": "vrpl"
+        "label": "vrpl",
+        "index": 58
     },
     {
         "title": "Underground Mine Equipment Transport",
@@ -21669,11 +21728,12 @@
                 1.7179312705993652
             ]
         },
-        "label": "vrpl"
+        "label": "vrpl",
+        "index": 59
     },
     {
         "title": "Remote Mountain Observatory Equipment Transport",
-        "desc_split": "Astronomers must deliver telescope components and scientific instruments to remote mountain observatories. The depot is located at <loc_depot>, and the observatory sites are at <loc_customer>. Each all-terrain vehicle can carry a maximum weight of <capacity> kg. The rugged mountainous terrain limits each vehicle\u2019s round-trip distance to <distance_limit> km due to fuel and safety constraints. Ensure all equipment is delivered without exceeding vehicle capacities or travel limits.",
+        "desc_split": "Astronomers must deliver telescope components and scientific instruments to remote mountain observatories. The depot is located at <loc_depot>, and the observatory sites are at <loc_customer>. Each all-terrain vehicle can carry a maximum weight of <capacity> kg. The rugged mountainous terrain limits each vehicle’s round-trip distance to <distance_limit> km due to fuel and safety constraints. Ensure all equipment is delivered without exceeding vehicle capacities or travel limits.",
         "data_template": {
             "num_depots": [
                 1
@@ -22092,7 +22152,8 @@
                 2.395416736602783
             ]
         },
-        "label": "vrpl"
+        "label": "vrpl",
+        "index": 60
     },
     {
         "title": "Offshore Wind Turbine Foundation Delivery",
@@ -22560,7 +22621,8 @@
                 1.8452198505401611
             ]
         },
-        "label": "vrpl"
+        "label": "vrpl",
+        "index": 61
     },
     {
         "title": "Remote Rainforest Research Equipment Redistribution",
@@ -22788,11 +22850,12 @@
                 1.8931052684783936
             ]
         },
-        "label": "vrpl"
+        "label": "vrpl",
+        "index": 62
     },
     {
         "title": "Remote Geothermal Power Plant Construction Logistics",
-        "desc_split": "A geothermal energy company is building a power plant in a volcanic region. Heavy machinery, pipes, and materials must be transported from the depot at <loc_depot> to construction sites at <loc_customer>. Each off-road vehicle has a maximum load capacity of <capacity> tons. Due to fuel constraints and unstable terrain, each vehicle\u2019s round-trip distance must not exceed <distance_limit> km. Plan routes to supply all sites without overloading or exceeding travel limits.",
+        "desc_split": "A geothermal energy company is building a power plant in a volcanic region. Heavy machinery, pipes, and materials must be transported from the depot at <loc_depot> to construction sites at <loc_customer>. Each off-road vehicle has a maximum load capacity of <capacity> tons. Due to fuel constraints and unstable terrain, each vehicle’s round-trip distance must not exceed <distance_limit> km. Plan routes to supply all sites without overloading or exceeding travel limits.",
         "data_template": {
             "num_depots": [
                 1
@@ -23136,7 +23199,8 @@
                 2.7139079570770264
             ]
         },
-        "label": "vrpl"
+        "label": "vrpl",
+        "index": 63
     },
     {
         "title": "Remote Gold Mining Site Equipment Transport",
@@ -23409,7 +23473,8 @@
                 1.9912595748901367
             ]
         },
-        "label": "vrpl"
+        "label": "vrpl",
+        "index": 64
     },
     {
         "title": "Remote Desert Solar Array Equipment Transport",
@@ -23650,7 +23715,8 @@
                 0.2666666805744171
             ]
         },
-        "label": "vrpl"
+        "label": "vrpl",
+        "index": 65
     },
     {
         "title": "Mountainous Infrastructure Repair Logistics",
@@ -24179,7 +24245,8 @@
                 0.02857142873108387
             ]
         },
-        "label": "vrpl"
+        "label": "vrpl",
+        "index": 66
     },
     {
         "title": "Perishable Seafood Transport to Coastal Markets",
@@ -24500,7 +24567,8 @@
                 0.23333333432674408
             ]
         },
-        "label": "vrpl"
+        "label": "vrpl",
+        "index": 67
     },
     {
         "title": "Arctic Hydroelectric Dam Construction Logistics",
@@ -24901,7 +24969,8 @@
                 0.20588235557079315
             ]
         },
-        "label": "vrpl"
+        "label": "vrpl",
+        "index": 68
     },
     {
         "title": "Remote Mine Explosives Delivery",
@@ -25254,11 +25323,12 @@
                 0.1666666716337204
             ]
         },
-        "label": "vrpl"
+        "label": "vrpl",
+        "index": 69
     },
     {
         "title": "Arid Region Water Tanker Delivery",
-        "desc_split": "A water utility company must deliver potable water to remote villages in an arid region. The depot is located at <loc_depot>, and the villages are at <locs>. Each tanker truck has a maximum capacity of <capacity> liters and must return to the depot within <distance_limit> km due to limited fuel reserves. Each village requires <demand> liters of water. Plan routes to ensure all villages receive their allocated water without exceeding the tanker\u2019s capacity or distance limit, while minimizing total travel distance.",
+        "desc_split": "A water utility company must deliver potable water to remote villages in an arid region. The depot is located at <loc_depot>, and the villages are at <locs>. Each tanker truck has a maximum capacity of <capacity> liters and must return to the depot within <distance_limit> km due to limited fuel reserves. Each village requires <demand> liters of water. Plan routes to ensure all villages receive their allocated water without exceeding the tanker’s capacity or distance limit, while minimizing total travel distance.",
         "data_template": {
             "num_depots": [
                 1
@@ -25515,7 +25585,8 @@
                 0.06666667014360428
             ]
         },
-        "label": "vrpl"
+        "label": "vrpl",
+        "index": 70
     },
     {
         "title": "Mountainous Area Emergency Shelter Supplies Delivery",
@@ -25776,7 +25847,8 @@
                 0.03333333507180214
             ]
         },
-        "label": "vrpl"
+        "label": "vrpl",
+        "index": 71
     },
     {
         "title": "High-Altitude Glacier Monitoring Equipment Transport",
@@ -26213,7 +26285,8 @@
                 0.1764705926179886
             ]
         },
-        "label": "vrpl"
+        "label": "vrpl",
+        "index": 72
     },
     {
         "title": "Remote Indigenous Community Medical Supplies Transport",
@@ -26570,7 +26643,8 @@
                 0.13333334028720856
             ]
         },
-        "label": "vrpl"
+        "label": "vrpl",
+        "index": 73
     },
     {
         "title": "Mountainous Area Winter Sports Equipment Redistribution",
@@ -26943,7 +27017,8 @@
                 0.1666666716337204
             ]
         },
-        "label": "vrpl"
+        "label": "vrpl",
+        "index": 74
     },
     {
         "title": "Beehive Transport for Agricultural Pollination Support",
@@ -27184,11 +27259,12 @@
                 2.391274929046631
             ]
         },
-        "label": "vrpl"
+        "label": "vrpl",
+        "index": 75
     },
     {
         "title": "Heavy Construction Equipment Delivery to Remote Mountain Work Sites",
-        "desc_split": "A construction firm must deliver large machinery (e.g., bulldozers, cranes) to isolated mountain construction sites. The depot (<loc_depot>) dispatches specialized trucks with a maximum load capacity of <capacity> tons. Each site requires equipment weighing <demand> tons. The mountainous terrain limits each truck\u2019s round-trip distance to <distance_limit> km to avoid mechanical strain. Design routes ensuring all sites receive their equipment without exceeding truck capacity or distance constraints.",
+        "desc_split": "A construction firm must deliver large machinery (e.g., bulldozers, cranes) to isolated mountain construction sites. The depot (<loc_depot>) dispatches specialized trucks with a maximum load capacity of <capacity> tons. Each site requires equipment weighing <demand> tons. The mountainous terrain limits each truck’s round-trip distance to <distance_limit> km to avoid mechanical strain. Design routes ensuring all sites receive their equipment without exceeding truck capacity or distance constraints.",
         "data_template": {
             "num_depots": [
                 1
@@ -27427,7 +27503,8 @@
                 2.1834094524383545
             ]
         },
-        "label": "vrpl"
+        "label": "vrpl",
+        "index": 76
     },
     {
         "title": "Cultural Artifact Redistribution Between Remote Museums",
@@ -27812,7 +27889,8 @@
                 1.8519542217254639
             ]
         },
-        "label": "vrpl"
+        "label": "vrpl",
+        "index": 77
     },
     {
         "title": "High-Altitude Climbing Oxygen Tank Delivery to Mountain Bases",
@@ -28287,11 +28365,12 @@
                 2.1807780265808105
             ]
         },
-        "label": "vrpl"
+        "label": "vrpl",
+        "index": 78
     },
     {
         "title": "Offshore Tidal Energy Turbine Component Transport",
-        "desc_split": "An offshore tidal energy company needs to deliver turbine components to installation sites in remote ocean regions. Components are transported via barge from a coastal depot (<loc_depot>) to sites (<loc_customer>). Each component weighs <demand> tons, and barges have a maximum capacity of <capacity> tons. Tidal currents and fuel constraints limit each barge\u2019s round-trip distance to <distance_limit> km. Design routes to deliver all components while respecting weight limits and voyage distance restrictions.",
+        "desc_split": "An offshore tidal energy company needs to deliver turbine components to installation sites in remote ocean regions. Components are transported via barge from a coastal depot (<loc_depot>) to sites (<loc_customer>). Each component weighs <demand> tons, and barges have a maximum capacity of <capacity> tons. Tidal currents and fuel constraints limit each barge’s round-trip distance to <distance_limit> km. Design routes to deliver all components while respecting weight limits and voyage distance restrictions.",
         "data_template": {
             "num_depots": [
                 1
@@ -28688,7 +28767,8 @@
                 2.173753023147583
             ]
         },
-        "label": "vrpl"
+        "label": "vrpl",
+        "index": 79
     },
     {
         "title": "Underwater Research Equipment Delivery to Deep-Sea Stations",
@@ -29121,7 +29201,8 @@
                 0.11764705926179886
             ]
         },
-        "label": "vrpl"
+        "label": "vrpl",
+        "index": 80
     },
     {
         "title": "Astronomical Observatory Equipment Transport to Remote Desert Site",
@@ -29378,7 +29459,8 @@
                 2.693636178970337
             ]
         },
-        "label": "vrpl"
+        "label": "vrpl",
+        "index": 81
     },
     {
         "title": "Laboratory Sample Collection from Remote Field Sites",
@@ -29843,7 +29925,8 @@
                 2.489637851715088
             ]
         },
-        "label": "vrpl"
+        "label": "vrpl",
+        "index": 82
     },
     {
         "title": "Heavy Machinery Delivery to Mountainous Infrastructure Project",
@@ -30176,7 +30259,8 @@
                 2.6897454261779785
             ]
         },
-        "label": "vrpl"
+        "label": "vrpl",
+        "index": 83
     },
     {
         "title": "Volcano Monitoring Equipment Transport to Remote Mountain Sites",
@@ -30545,11 +30629,12 @@
                 1.5507771968841553
             ]
         },
-        "label": "vrpl"
+        "label": "vrpl",
+        "index": 84
     },
     {
         "title": "Antarctic Scientific Instrument Transport via Icebreaker",
-        "desc_split": "A research organization must deliver sensitive scientific instruments to a remote Antarctic research station. The icebreaker\u2019s depot is located at <loc_depot>, and the research station is at <loc_customer>. Each instrument has a weight of <demand> kg, and the icebreaker can carry a maximum payload of <capacity> kg. Due to unpredictable ice conditions, the icebreaker must return to the depot within <distance_limit> km to avoid getting stranded. Plan routes ensuring all instruments are delivered without exceeding the icebreaker\u2019s capacity or travel distance.",
+        "desc_split": "A research organization must deliver sensitive scientific instruments to a remote Antarctic research station. The icebreaker’s depot is located at <loc_depot>, and the research station is at <loc_customer>. Each instrument has a weight of <demand> kg, and the icebreaker can carry a maximum payload of <capacity> kg. Due to unpredictable ice conditions, the icebreaker must return to the depot within <distance_limit> km to avoid getting stranded. Plan routes ensuring all instruments are delivered without exceeding the icebreaker’s capacity or travel distance.",
         "data_template": {
             "num_depots": [
                 1
@@ -30882,7 +30967,8 @@
                 1.9117534160614014
             ]
         },
-        "label": "vrpl"
+        "label": "vrpl",
+        "index": 85
     },
     {
         "title": "Mountain Village Medical Supplies via Small Aircraft",
@@ -31283,7 +31369,8 @@
                 1.9992525577545166
             ]
         },
-        "label": "vrpl"
+        "label": "vrpl",
+        "index": 86
     },
     {
         "title": "Jungle Logging Camp Heavy Machinery Transport",
@@ -31524,7 +31611,8 @@
                 2.2560875415802
             ]
         },
-        "label": "vrpl"
+        "label": "vrpl",
+        "index": 87
     },
     {
         "title": "Offshore Wind Farm Construction Barge Logistics",
@@ -31813,7 +31901,8 @@
                 2.586235523223877
             ]
         },
-        "label": "vrpl"
+        "label": "vrpl",
+        "index": 88
     },
     {
         "title": "Remote Volcano Monitoring Equipment Delivery via Helicopter",
@@ -32214,7 +32303,8 @@
                 2.6299638748168945
             ]
         },
-        "label": "vrpl"
+        "label": "vrpl",
+        "index": 89
     },
     {
         "title": "Theater Tour Equipment Delivery to Remote Venues",
@@ -32711,7 +32801,8 @@
                 2.4359090328216553
             ]
         },
-        "label": "vrpl"
+        "label": "vrpl",
+        "index": 90
     },
     {
         "title": "Mobile Medical Unit Redistribution to Rural Health Clinics",
@@ -33224,7 +33315,8 @@
                 2.418534994125366
             ]
         },
-        "label": "vrpl"
+        "label": "vrpl",
+        "index": 91
     },
     {
         "title": "Agricultural Machinery Redistribution for Seasonal Harvests",
@@ -33609,11 +33701,12 @@
                 2.3842785358428955
             ]
         },
-        "label": "vrpl"
+        "label": "vrpl",
+        "index": 92
     },
     {
         "title": "Marine Research Vessel Equipment Redistribution to Offshore Stations",
-        "desc_split": "A research vessel must supply scientific equipment to multiple offshore marine research stations scattered across a coastal area. The vessel\u2019s depot is at <loc_depot>, and stations are at <loc_customer>. Each station requires <demand> kg of equipment, while the vessel\u2019s cargo capacity is limited to <capacity> kg. The vessel\u2019s fuel reserves restrict round-trip journeys to <distance_limit> km. Design routes to deliver all equipment while ensuring the vessel returns to port within the distance limit.",
+        "desc_split": "A research vessel must supply scientific equipment to multiple offshore marine research stations scattered across a coastal area. The vessel’s depot is at <loc_depot>, and stations are at <loc_customer>. Each station requires <demand> kg of equipment, while the vessel’s cargo capacity is limited to <capacity> kg. The vessel’s fuel reserves restrict round-trip journeys to <distance_limit> km. Design routes to deliver all equipment while ensuring the vessel returns to port within the distance limit.",
         "data_template": {
             "num_depots": [
                 1
@@ -34042,7 +34135,8 @@
                 2.4781012535095215
             ]
         },
-        "label": "vrpl"
+        "label": "vrpl",
+        "index": 93
     },
     {
         "title": "Remote Island Resort Catering Supplies Delivery via Boat",
@@ -34363,7 +34457,8 @@
                 2.7705078125
             ]
         },
-        "label": "vrpl"
+        "label": "vrpl",
+        "index": 94
     },
     {
         "title": "Wildlife Tracking Collar Deployment in Remote Forest Reserves",
@@ -34892,11 +34987,12 @@
                 2.5734944343566895
             ]
         },
-        "label": "vrpl"
+        "label": "vrpl",
+        "index": 95
     },
     {
         "title": "Underwater Archaeological Artifact Recovery",
-        "desc_split": "A team of marine archaeologists must recover artifacts from submerged shipwrecks located at <loc_customer>. The recovery vessel acts as the depot <loc_depot> and can dispatch remotely operated vehicles (ROVs) to retrieve items. Each ROV has a cargo hold capacity of <capacity> liters for fragile artifacts and must return to the vessel within <distance_limit> km to prevent signal loss. The volume of each artifact\u2019s storage container is <demand> liters. Design routes to maximize artifact recovery while ensuring ROVs stay within operational range and capacity limits.",
+        "desc_split": "A team of marine archaeologists must recover artifacts from submerged shipwrecks located at <loc_customer>. The recovery vessel acts as the depot <loc_depot> and can dispatch remotely operated vehicles (ROVs) to retrieve items. Each ROV has a cargo hold capacity of <capacity> liters for fragile artifacts and must return to the vessel within <distance_limit> km to prevent signal loss. The volume of each artifact’s storage container is <demand> liters. Design routes to maximize artifact recovery while ensuring ROVs stay within operational range and capacity limits.",
         "data_template": {
             "num_depots": [
                 1
@@ -35149,7 +35245,8 @@
                 0.10000000149011612
             ]
         },
-        "label": "vrpl"
+        "label": "vrpl",
+        "index": 96
     },
     {
         "title": "Mobile Clinic Equipment Redistribution in Rural Regions",
@@ -35486,7 +35583,8 @@
                 0.10000000149011612
             ]
         },
-        "label": "vrpl"
+        "label": "vrpl",
+        "index": 97
     },
     {
         "title": "Volcanic Eruption Monitoring Equipment Deployment",
@@ -35999,7 +36097,8 @@
                 1.5264229774475098
             ]
         },
-        "label": "vrpl"
+        "label": "vrpl",
+        "index": 98
     },
     {
         "title": "Desert Solar Farm Maintenance Logistics",
@@ -36384,6 +36483,7 @@
                 0.06666667014360428
             ]
         },
-        "label": "vrpl"
+        "label": "vrpl",
+        "index": 99
     }
 ]

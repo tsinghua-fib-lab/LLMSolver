@@ -462,7 +462,8 @@
                 2.6016392707824707
             ]
         },
-        "label": "ovrpl"
+        "label": "ovrpl",
+        "index": 0
     },
     {
         "title": "Medical Diagnostic Equipment Redistribution",
@@ -799,11 +800,12 @@
                 2.050021171569824
             ]
         },
-        "label": "ovrpl"
+        "label": "ovrpl",
+        "index": 1
     },
     {
         "title": "Construction Material Delivery to Remote Mining Sites",
-        "desc_split": "A mining company operates in a remote region and needs to supply construction materials (steel beams, concrete) to active sites. Each site (<loc_customer>) has a material requirement (<demand>), and delivery trucks from the logistics center (<loc_depot>) can carry up to <capacity> tons. The trucks\u2019 fuel tanks limit their range to <distance_limit> km, and no refueling stations exist along the route. Drivers can conclude their shifts at the last site visited. Optimize routes to deliver all materials precisely while avoiding overloading and adhering to distance constraints.",
+        "desc_split": "A mining company operates in a remote region and needs to supply construction materials (steel beams, concrete) to active sites. Each site (<loc_customer>) has a material requirement (<demand>), and delivery trucks from the logistics center (<loc_depot>) can carry up to <capacity> tons. The trucks’ fuel tanks limit their range to <distance_limit> km, and no refueling stations exist along the route. Drivers can conclude their shifts at the last site visited. Optimize routes to deliver all materials precisely while avoiding overloading and adhering to distance constraints.",
         "data_template": {
             "num_depots": [
                 1
@@ -1040,7 +1042,8 @@
                 1.2176976203918457
             ]
         },
-        "label": "ovrpl"
+        "label": "ovrpl",
+        "index": 2
     },
     {
         "title": "Rural School Supply Distribution",
@@ -1345,7 +1348,8 @@
                 2.174379348754883
             ]
         },
-        "label": "ovrpl"
+        "label": "ovrpl",
+        "index": 3
     },
     {
         "title": "Offshore Wind Farm Equipment Transport",
@@ -1634,11 +1638,12 @@
                 2.2341244220733643
             ]
         },
-        "label": "ovrpl"
+        "label": "ovrpl",
+        "index": 4
     },
     {
         "title": "Urban Perishable Food Distribution to Food Shelters",
-        "desc_split": "A city\u2019s food bank operates from a central warehouse (<loc_depot>) and needs to deliver perishable groceries to <num_customer> urban food shelters. Each truck has a maximum capacity (<capacity> kg) to ensure freshness and prevent spoilage. The shelters are scattered across the city, and each requires a specific amount of supplies (<demand> kg). The goal is to design routes that:  \n- Avoid overloading any truck beyond its capacity.  \n- Ensure no route exceeds a maximum distance (<distance_limit> km) to minimize travel time and keep food fresh.  \n- Allow drivers to end their day at the last shelter visited, eliminating unnecessary return trips.",
+        "desc_split": "A city’s food bank operates from a central warehouse (<loc_depot>) and needs to deliver perishable groceries to <num_customer> urban food shelters. Each truck has a maximum capacity (<capacity> kg) to ensure freshness and prevent spoilage. The shelters are scattered across the city, and each requires a specific amount of supplies (<demand> kg). The goal is to design routes that:  \n- Avoid overloading any truck beyond its capacity.  \n- Ensure no route exceeds a maximum distance (<distance_limit> km) to minimize travel time and keep food fresh.  \n- Allow drivers to end their day at the last shelter visited, eliminating unnecessary return trips.",
         "data_template": {
             "num_depots": [
                 1
@@ -1868,7 +1873,8 @@
                 2.169384002685547
             ]
         },
-        "label": "ovrpl"
+        "label": "ovrpl",
+        "index": 5
     },
     {
         "title": "Rural Medical Drone Delivery Network",
@@ -2231,7 +2237,8 @@
                 2.7469122409820557
             ]
         },
-        "label": "ovrpl"
+        "label": "ovrpl",
+        "index": 6
     },
     {
         "title": "Wildlife Monitoring Sensor Deployment",
@@ -2654,7 +2661,8 @@
                 2.444056510925293
             ]
         },
-        "label": "ovrpl"
+        "label": "ovrpl",
+        "index": 7
     },
     {
         "title": "Emergency Water Tanker Distribution After Floods",
@@ -2912,7 +2920,8 @@
                 1.8430609703063965
             ]
         },
-        "label": "ovrpl"
+        "label": "ovrpl",
+        "index": 8
     },
     {
         "title": "Rural Internet Infrastructure Installation",
@@ -3320,11 +3329,12 @@
                 2.1172542572021484
             ]
         },
-        "label": "ovrpl"
+        "label": "ovrpl",
+        "index": 9
     },
     {
         "title": "Solar Panel Installation Logistics",
-        "desc_split": "A renewable energy company must deliver solar panels and installation equipment to remote villages scattered across mountainous regions. Each village requires a specific number of panels and tools (demand), while delivery trucks have limited cargo capacity (<capacity>). Due to fuel constraints, each truck\u2019s route must not exceed a maximum distance (<distance_limit>), and they can conclude their journey at the last village without returning to the depot. The goal is to minimize total travel distance while ensuring all villages receive their supplies within capacity and distance limits.",
+        "desc_split": "A renewable energy company must deliver solar panels and installation equipment to remote villages scattered across mountainous regions. Each village requires a specific number of panels and tools (demand), while delivery trucks have limited cargo capacity (<capacity>). Due to fuel constraints, each truck’s route must not exceed a maximum distance (<distance_limit>), and they can conclude their journey at the last village without returning to the depot. The goal is to minimize total travel distance while ensuring all villages receive their supplies within capacity and distance limits.",
         "data_template": {
             "num_depots": [
                 1
@@ -3496,11 +3506,12 @@
                 2.6509010791778564
             ]
         },
-        "label": "ovrpl"
+        "label": "ovrpl",
+        "index": 10
     },
     {
         "title": "Disaster Relief Shelter Setup",
-        "desc_split": "After a hurricane, a logistics team redistributes emergency shelter materials\u2014tents, medical kits, and food\u2014to affected areas. Each shelter site has unique supply needs (<demand>), and delivery trucks must adhere to strict weight limits (<capacity>). With fuel shortages, each route is restricted to a maximum travel distance (<distance_limit>) to ensure timely delivery. Trucks complete their routes at the final destination, avoiding unnecessary return trips to the depot.",
+        "desc_split": "After a hurricane, a logistics team redistributes emergency shelter materials—tents, medical kits, and food—to affected areas. Each shelter site has unique supply needs (<demand>), and delivery trucks must adhere to strict weight limits (<capacity>). With fuel shortages, each route is restricted to a maximum travel distance (<distance_limit>) to ensure timely delivery. Trucks complete their routes at the final destination, avoiding unnecessary return trips to the depot.",
         "data_template": {
             "num_depots": [
                 1
@@ -3781,11 +3792,12 @@
                 2.1498889923095703
             ]
         },
-        "label": "ovrpl"
+        "label": "ovrpl",
+        "index": 11
     },
     {
         "title": "Marine Research Station Resupply",
-        "desc_split": "A research vessel supplies isolated offshore marine stations with scientific equipment, food, and fuel. The vessel\u2019s cargo capacity (<capacity>) is limited, and it must not travel beyond a safety-mandated distance (<distance_limit>) from its starting port (<loc_depot>). Routes end at the last station, eliminating redundant return journeys. The challenge is to optimize delivery paths to cover all stations efficiently while respecting weight and range constraints.",
+        "desc_split": "A research vessel supplies isolated offshore marine stations with scientific equipment, food, and fuel. The vessel’s cargo capacity (<capacity>) is limited, and it must not travel beyond a safety-mandated distance (<distance_limit>) from its starting port (<loc_depot>). Routes end at the last station, eliminating redundant return journeys. The challenge is to optimize delivery paths to cover all stations efficiently while respecting weight and range constraints.",
         "data_template": {
             "num_depots": [
                 1
@@ -4139,11 +4151,12 @@
                 ]
             ]
         },
-        "label": "ovrpl"
+        "label": "ovrpl",
+        "index": 12
     },
     {
         "title": "Wildfire Firefighting Equipment Deployment",
-        "desc_split": "During a wildfire crisis, emergency crews distribute critical firefighting gear\u2014water pumps, hoses, and protective gear\u2014to multiple hotspots. Each site requires specific quantities (<demand>), and delivery trucks are constrained by both cargo capacity (<capacity>) and maximum travel distance (<distance_limit>) to ensure rapid response. Routes terminate at the final destination, allowing crews to remain on-site for immediate support.",
+        "desc_split": "During a wildfire crisis, emergency crews distribute critical firefighting gear—water pumps, hoses, and protective gear—to multiple hotspots. Each site requires specific quantities (<demand>), and delivery trucks are constrained by both cargo capacity (<capacity>) and maximum travel distance (<distance_limit>) to ensure rapid response. Routes terminate at the final destination, allowing crews to remain on-site for immediate support.",
         "data_template": {
             "num_depots": [
                 1
@@ -4520,7 +4533,8 @@
                 2.0334389209747314
             ]
         },
-        "label": "ovrpl"
+        "label": "ovrpl",
+        "index": 13
     },
     {
         "title": "Mobile Library Book Delivery to Remote Towns",
@@ -4685,7 +4699,8 @@
                 1.4965293407440186
             ]
         },
-        "label": "ovrpl"
+        "label": "ovrpl",
+        "index": 14
     },
     {
         "title": "Remote Utility Meter Installation Logistics",
@@ -5166,7 +5181,8 @@
                 2.789374589920044
             ]
         },
-        "label": "ovrpl"
+        "label": "ovrpl",
+        "index": 15
     },
     {
         "title": "Arctic Research Station Equipment Delivery",
@@ -5394,11 +5410,12 @@
                 1.4196884632110596
             ]
         },
-        "label": "ovrpl"
+        "label": "ovrpl",
+        "index": 16
     },
     {
         "title": "Post-Disaster Debris Collection and Disposal",
-        "desc_split": "Following a hurricane, a city\u2019s sanitation team must clear debris from <num_customer> neighborhoods (<loc_customer>). Collection trucks depart from a depot (<loc_depot>), transporting waste to a landfill. Each truck has a weight limit (<capacity> tons) and must complete its route within a maximum distance (<distance_limit> miles) to ensure timely disposal. Routes end at the landfill, with no return to the depot. The objective is to design efficient paths that respect weight and distance constraints while clearing all affected areas.",
+        "desc_split": "Following a hurricane, a city’s sanitation team must clear debris from <num_customer> neighborhoods (<loc_customer>). Collection trucks depart from a depot (<loc_depot>), transporting waste to a landfill. Each truck has a weight limit (<capacity> tons) and must complete its route within a maximum distance (<distance_limit> miles) to ensure timely disposal. Routes end at the landfill, with no return to the depot. The objective is to design efficient paths that respect weight and distance constraints while clearing all affected areas.",
         "data_template": {
             "num_depots": [
                 1
@@ -5685,7 +5702,8 @@
                 1.7502572536468506
             ]
         },
-        "label": "ovrpl"
+        "label": "ovrpl",
+        "index": 17
     },
     {
         "title": "Mountain Trail Maintenance Equipment Delivery",
@@ -6078,7 +6096,8 @@
                 2.7607421875
             ]
         },
-        "label": "ovrpl"
+        "label": "ovrpl",
+        "index": 18
     },
     {
         "title": "Coastal Island Goods Distribution",
@@ -6501,7 +6520,8 @@
                 2.6285271644592285
             ]
         },
-        "label": "ovrpl"
+        "label": "ovrpl",
+        "index": 19
     },
     {
         "title": "Desert Research Station Supplies Delivery",
@@ -6825,11 +6845,12 @@
                 2.7195940017700195
             ]
         },
-        "label": "ovrpl"
+        "label": "ovrpl",
+        "index": 20
     },
     {
         "title": "Coral Reef Restoration Material Transport",
-        "desc_split": "A marine conservation group needs to deploy coral fragments and restoration materials to damaged reef sites. Boats depart from a coastal base (<loc_depot>) and carry a maximum of <capacity> cubic meters of supplies. Each reef location (<loc_customer>) requires a specific volume of materials (<demand>). To maintain operational safety and efficiency, each boat\u2019s route must not exceed <distance_limit> kilometers from the base. Boats complete their missions at the final reef site, avoiding unnecessary return trips.",
+        "desc_split": "A marine conservation group needs to deploy coral fragments and restoration materials to damaged reef sites. Boats depart from a coastal base (<loc_depot>) and carry a maximum of <capacity> cubic meters of supplies. Each reef location (<loc_customer>) requires a specific volume of materials (<demand>). To maintain operational safety and efficiency, each boat’s route must not exceed <distance_limit> kilometers from the base. Boats complete their missions at the final reef site, avoiding unnecessary return trips.",
         "data_template": {
             "num_depots": [
                 1
@@ -7242,7 +7263,8 @@
                 2.209873914718628
             ]
         },
-        "label": "ovrpl"
+        "label": "ovrpl",
+        "index": 21
     },
     {
         "title": "Mountain Rescue Gear Distribution",
@@ -7582,7 +7604,8 @@
                 2.570375442504883
             ]
         },
-        "label": "ovrpl"
+        "label": "ovrpl",
+        "index": 22
     },
     {
         "title": "Rural Satellite Internet Installation",
@@ -7906,11 +7929,12 @@
                 2.034576892852783
             ]
         },
-        "label": "ovrpl"
+        "label": "ovrpl",
+        "index": 23
     },
     {
         "title": "Offshore Oil Rig Maintenance Supplies",
-        "desc_split": "An energy company supplies maintenance parts to offshore oil rigs. Supply boats (<capacity> tons) depart from a coastal port (<loc_depot>) and deliver equipment to <num_customer> rigs (<loc_customer>). Each rig requires a specific weight of parts (<demand>). Due to ocean currents and fuel capacity, each boat\u2019s route must stay within <distance_limit> nautical miles of the port. Boats finish their journeys at the final rig, optimizing fuel use and operational speed.",
+        "desc_split": "An energy company supplies maintenance parts to offshore oil rigs. Supply boats (<capacity> tons) depart from a coastal port (<loc_depot>) and deliver equipment to <num_customer> rigs (<loc_customer>). Each rig requires a specific weight of parts (<demand>). Due to ocean currents and fuel capacity, each boat’s route must stay within <distance_limit> nautical miles of the port. Boats finish their journeys at the final rig, optimizing fuel use and operational speed.",
         "data_template": {
             "num_depots": [
                 1
@@ -8358,7 +8382,8 @@
                 1.7540545463562012
             ]
         },
-        "label": "ovrpl"
+        "label": "ovrpl",
+        "index": 24
     },
     {
         "title": "Remote Mountain Research Station Equipment Resupply",
@@ -8826,7 +8851,8 @@
                 2.0539822578430176
             ]
         },
-        "label": "ovrpl"
+        "label": "ovrpl",
+        "index": 25
     },
     {
         "title": "Art Museum Artifact Transportation",
@@ -9189,7 +9215,8 @@
                 2.110116481781006
             ]
         },
-        "label": "ovrpl"
+        "label": "ovrpl",
+        "index": 26
     },
     {
         "title": "Disaster Zone Temporary Cell Tower Deployment",
@@ -9627,7 +9654,8 @@
                 2.276200771331787
             ]
         },
-        "label": "ovrpl"
+        "label": "ovrpl",
+        "index": 27
     },
     {
         "title": "Offshore Marine Research Vessel Supplies",
@@ -9855,7 +9883,8 @@
                 1.7373175621032715
             ]
         },
-        "label": "ovrpl"
+        "label": "ovrpl",
+        "index": 28
     },
     {
         "title": "Urban Medical Sample Collection for Pandemic Response",
@@ -10143,7 +10172,8 @@
                 2.6580710411071777
             ]
         },
-        "label": "ovrpl"
+        "label": "ovrpl",
+        "index": 29
     },
     {
         "title": "Island Chain Perishable Goods Delivery",
@@ -10506,7 +10536,8 @@
                 0.02857142873108387
             ]
         },
-        "label": "ovrpl"
+        "label": "ovrpl",
+        "index": 30
     },
     {
         "title": "Wilderness Fire Observation Post Supplies",
@@ -10809,7 +10840,8 @@
                 0.03333333507180214
             ]
         },
-        "label": "ovrpl"
+        "label": "ovrpl",
+        "index": 31
     },
     {
         "title": "Mobile Medical Clinic Deployment to Remote Villages",
@@ -11130,7 +11162,8 @@
                 2.6074934005737305
             ]
         },
-        "label": "ovrpl"
+        "label": "ovrpl",
+        "index": 32
     },
     {
         "title": "Offshore Wind Turbine Maintenance Supplies Transport",
@@ -11457,7 +11490,8 @@
                 0.029411764815449715
             ]
         },
-        "label": "ovrpl"
+        "label": "ovrpl",
+        "index": 33
     },
     {
         "title": "Polar Research Camp Resupply via Snowmobile",
@@ -11688,11 +11722,12 @@
                 0.1666666716337204
             ]
         },
-        "label": "ovrpl"
+        "label": "ovrpl",
+        "index": 34
     },
     {
         "title": "Offshore Research Platform Resupply",
-        "desc_split": "A maritime research organization must deliver specialized equipment and supplies to several offshore platforms scattered across the ocean. Each platform requires specific scientific instruments (<demand> kg), and supply vessels departing from the central port (<loc_depot>) have a maximum cargo capacity of <capacity> tons. Routes must terminate at the final platform without returning to the depot, and each vessel\u2019s journey cannot exceed <distance_limit> nautical miles due to fuel constraints. The goal is to minimize total fuel consumption while ensuring all platforms receive their required gear without overloading any vessel.",
+        "desc_split": "A maritime research organization must deliver specialized equipment and supplies to several offshore platforms scattered across the ocean. Each platform requires specific scientific instruments (<demand> kg), and supply vessels departing from the central port (<loc_depot>) have a maximum cargo capacity of <capacity> tons. Routes must terminate at the final platform without returning to the depot, and each vessel’s journey cannot exceed <distance_limit> nautical miles due to fuel constraints. The goal is to minimize total fuel consumption while ensuring all platforms receive their required gear without overloading any vessel.",
         "data_template": {
             "num_depots": [
                 1
@@ -11931,11 +11966,12 @@
                 2.072136163711548
             ]
         },
-        "label": "ovrpl"
+        "label": "ovrpl",
+        "index": 35
     },
     {
         "title": "Mountain Rescue Gear Distribution Network",
-        "desc_split": "A mountain rescue team operates in a rugged alpine region, needing to distribute emergency gear to remote lookout stations (<loc_customer>). Each station requires a specific amount of equipment (<demand> kg), and rescue trucks starting from the base (<loc_depot>) can carry no more than <capacity> kg. Routes must end at the last station visited, and each truck\u2019s total travel distance must stay under <distance_limit> km to avoid stranding crews in unreachable areas. The challenge is to cover all stations efficiently while adhering to weight and distance limits.",
+        "desc_split": "A mountain rescue team operates in a rugged alpine region, needing to distribute emergency gear to remote lookout stations (<loc_customer>). Each station requires a specific amount of equipment (<demand> kg), and rescue trucks starting from the base (<loc_depot>) can carry no more than <capacity> kg. Routes must end at the last station visited, and each truck’s total travel distance must stay under <distance_limit> km to avoid stranding crews in unreachable areas. The challenge is to cover all stations efficiently while adhering to weight and distance limits.",
         "data_template": {
             "num_depots": [
                 1
@@ -12380,11 +12416,12 @@
                 2.4595654010772705
             ]
         },
-        "label": "ovrpl"
+        "label": "ovrpl",
+        "index": 36
     },
     {
         "title": "Urban Park Maintenance Supplies Delivery",
-        "desc_split": "A city\u2019s parks department needs to deliver landscaping tools, mulch, and planters to 15 urban parks (<loc_customer>). Each park\u2019s order varies in weight (<demand> kg), and maintenance trucks (<capacity> kg capacity) must start from the central depot (<loc_depot>). Routes must end at the final park without returning to the depot, and each truck\u2019s route cannot exceed <distance_limit> km to ensure timely delivery and reduce emissions. The objective is to plan the most fuel-efficient routes while respecting load and distance constraints.",
+        "desc_split": "A city’s parks department needs to deliver landscaping tools, mulch, and planters to 15 urban parks (<loc_customer>). Each park’s order varies in weight (<demand> kg), and maintenance trucks (<capacity> kg capacity) must start from the central depot (<loc_depot>). Routes must end at the final park without returning to the depot, and each truck’s route cannot exceed <distance_limit> km to ensure timely delivery and reduce emissions. The objective is to plan the most fuel-efficient routes while respecting load and distance constraints.",
         "data_template": {
             "num_depots": [
                 1
@@ -12909,11 +12946,12 @@
                 2.6154239177703857
             ]
         },
-        "label": "ovrpl"
+        "label": "ovrpl",
+        "index": 37
     },
     {
         "title": "Indigenous Community Supplies Transport",
-        "desc_split": "An aid organization delivers food, medical kits, and building materials to remote indigenous communities (<loc_customer>) in dense rainforests. Each community\u2019s needs (<demand> kg) are unique, and cargo planes (<capacity> kg capacity) depart from an airbase (<loc_depot>). Pilots must land at the last community on their route and cannot exceed <distance_limit> km to avoid running out of fuel. The task is to plan delivery sequences that fully utilize each plane\u2019s capacity while ensuring all communities are reached within safe flight ranges.",
+        "desc_split": "An aid organization delivers food, medical kits, and building materials to remote indigenous communities (<loc_customer>) in dense rainforests. Each community’s needs (<demand> kg) are unique, and cargo planes (<capacity> kg capacity) depart from an airbase (<loc_depot>). Pilots must land at the last community on their route and cannot exceed <distance_limit> km to avoid running out of fuel. The task is to plan delivery sequences that fully utilize each plane’s capacity while ensuring all communities are reached within safe flight ranges.",
         "data_template": {
             "num_depots": [
                 1
@@ -13438,11 +13476,12 @@
                 1.8803961277008057
             ]
         },
-        "label": "ovrpl"
+        "label": "ovrpl",
+        "index": 38
     },
     {
         "title": "Satellite Launch Site Equipment Transport",
-        "desc_split": "A space agency must transport precision instruments and fuel canisters to three remote satellite launch sites (<loc_customer>). Equipment demands (<demand> kg) vary per site, and trucks (<capacity> kg capacity) start from a logistics hub (<loc_depot>). Routes must terminate at the final site without returning, and each truck\u2019s journey must stay under <distance_limit> km to comply with safety protocols for hazardous materials. The goal is to minimize total distance traveled while preventing overloading and ensuring safe delivery across rugged terrain.",
+        "desc_split": "A space agency must transport precision instruments and fuel canisters to three remote satellite launch sites (<loc_customer>). Equipment demands (<demand> kg) vary per site, and trucks (<capacity> kg capacity) start from a logistics hub (<loc_depot>). Routes must terminate at the final site without returning, and each truck’s journey must stay under <distance_limit> km to comply with safety protocols for hazardous materials. The goal is to minimize total distance traveled while preventing overloading and ensuring safe delivery across rugged terrain.",
         "data_template": {
             "num_depots": [
                 1
@@ -13919,11 +13958,12 @@
                 1.9602057933807373
             ]
         },
-        "label": "ovrpl"
+        "label": "ovrpl",
+        "index": 39
     },
     {
         "title": "Island Chain Renewable Energy Installation Logistics",
-        "desc_split": "A renewable energy company must deliver solar panels to remote islands in an archipelago. Boats depart from a mainland depot (<loc_depot>), each with a maximum cargo capacity of <capacity> panels. Each island (<loc_customer>) requires a specific number of panels (<demand>). Due to fuel limitations, each boat\u2019s total travel distance cannot exceed <distance_limit> km. The boats do not return to the depot after their final delivery, anchoring at the last island to await further instructions. The goal is to supply all islands efficiently while adhering to capacity and distance constraints.",
+        "desc_split": "A renewable energy company must deliver solar panels to remote islands in an archipelago. Boats depart from a mainland depot (<loc_depot>), each with a maximum cargo capacity of <capacity> panels. Each island (<loc_customer>) requires a specific number of panels (<demand>). Due to fuel limitations, each boat’s total travel distance cannot exceed <distance_limit> km. The boats do not return to the depot after their final delivery, anchoring at the last island to await further instructions. The goal is to supply all islands efficiently while adhering to capacity and distance constraints.",
         "data_template": {
             "num_depots": [
                 1
@@ -14160,7 +14200,8 @@
                 1.6346735954284668
             ]
         },
-        "label": "ovrpl"
+        "label": "ovrpl",
+        "index": 40
     },
     {
         "title": "High-Altitude Weather Monitoring Station Maintenance",
@@ -14689,11 +14730,12 @@
                 1.853973627090454
             ]
         },
-        "label": "ovrpl"
+        "label": "ovrpl",
+        "index": 41
     },
     {
         "title": "Mountain Climber Emergency Oxygen Delivery",
-        "desc_split": "During a mountain climbing season, an emergency response team must distribute oxygen canisters to high-altitude camps. Using specialized aircraft (<loc_depot>), each flight can carry up to <capacity> canisters. Each camp (<loc_customer>) needs a specific number (<demand>), and the aircraft\u2019s maximum range is <distance_limit> km. The planes do not return to base after their final drop-off, staying at the last camp to assist rescues. The goal is to ensure all camps are supplied within constraints.",
+        "desc_split": "During a mountain climbing season, an emergency response team must distribute oxygen canisters to high-altitude camps. Using specialized aircraft (<loc_depot>), each flight can carry up to <capacity> canisters. Each camp (<loc_customer>) needs a specific number (<demand>), and the aircraft’s maximum range is <distance_limit> km. The planes do not return to base after their final drop-off, staying at the last camp to assist rescues. The goal is to ensure all camps are supplied within constraints.",
         "data_template": {
             "num_depots": [
                 1
@@ -14914,11 +14956,12 @@
                 2.400287628173828
             ]
         },
-        "label": "ovrpl"
+        "label": "ovrpl",
+        "index": 42
     },
     {
         "title": "Remote Weather Station Sensor Deployment via Drones",
-        "desc_split": "A climate research team needs to deploy environmental sensors to remote mountain peaks. Drones are launched from a central research station (<loc_depot>), each carrying a maximum of <capacity> sensors. Each sensor location (<loc_customer>) requires a specific number (<demand>). Due to battery life, each drone\u2019s total flight distance cannot exceed <distance_limit> km. Drones do not return to base, remaining at their final deployment site to transmit data. The challenge is to cover all sites efficiently while respecting capacity and distance limits.",
+        "desc_split": "A climate research team needs to deploy environmental sensors to remote mountain peaks. Drones are launched from a central research station (<loc_depot>), each carrying a maximum of <capacity> sensors. Each sensor location (<loc_customer>) requires a specific number (<demand>). Due to battery life, each drone’s total flight distance cannot exceed <distance_limit> km. Drones do not return to base, remaining at their final deployment site to transmit data. The challenge is to cover all sites efficiently while respecting capacity and distance limits.",
         "data_template": {
             "num_depots": [
                 1
@@ -15267,11 +15310,12 @@
                 2.003329038619995
             ]
         },
-        "label": "ovrpl"
+        "label": "ovrpl",
+        "index": 43
     },
     {
         "title": "Arctic Oil Spill Cleanup Equipment Transport",
-        "desc_split": "After an oil spill in the Arctic, cleanup teams must deliver containment booms and equipment to affected coastal areas. Snowmobile convoys start from a depot (<loc_depot>), each capable of carrying <capacity> kg of gear. Each spill site (<loc_customer>) requires a specific amount of equipment (<demand>). The snowmobiles\u2019 operational range is limited to <distance_limit> km due to cold affecting fuel systems. The teams do not return to base, remaining on-site to manage cleanup efforts. The goal is to supply all sites without exceeding capacity or distance constraints.",
+        "desc_split": "After an oil spill in the Arctic, cleanup teams must deliver containment booms and equipment to affected coastal areas. Snowmobile convoys start from a depot (<loc_depot>), each capable of carrying <capacity> kg of gear. Each spill site (<loc_customer>) requires a specific amount of equipment (<demand>). The snowmobiles’ operational range is limited to <distance_limit> km due to cold affecting fuel systems. The teams do not return to base, remaining on-site to manage cleanup efforts. The goal is to supply all sites without exceeding capacity or distance constraints.",
         "data_template": {
             "num_depots": [
                 1
@@ -15652,11 +15696,12 @@
                 2.3540396690368652
             ]
         },
-        "label": "ovrpl"
+        "label": "ovrpl",
+        "index": 44
     },
     {
         "title": "Offshore Data Center Equipment Transport",
-        "desc_split": "A company needs to deliver servers and equipment to offshore data centers located in remote marine areas. Each transport ship has a maximum capacity (C) for the equipment's weight and volume. The ships depart from a coastal depot (<loc_depot>) and must deliver to multiple offshore platforms (<loc_customer>). Each route must stay within a distance limit (L) due to fuel constraints and safety regulations. Since the ships can unload at the farthest platform and proceed to a nearby port for maintenance, they don\u2019t return to the original depot (O). The goal is to minimize total travel distance while ensuring no ship exceeds its capacity and each platform receives the required equipment.",
+        "desc_split": "A company needs to deliver servers and equipment to offshore data centers located in remote marine areas. Each transport ship has a maximum capacity (C) for the equipment's weight and volume. The ships depart from a coastal depot (<loc_depot>) and must deliver to multiple offshore platforms (<loc_customer>). Each route must stay within a distance limit (L) due to fuel constraints and safety regulations. Since the ships can unload at the farthest platform and proceed to a nearby port for maintenance, they don’t return to the original depot (O). The goal is to minimize total travel distance while ensuring no ship exceeds its capacity and each platform receives the required equipment.",
         "data_template": {
             "num_depots": [
                 1
@@ -15964,11 +16009,12 @@
                 ]
             ]
         },
-        "label": "ovrpl"
+        "label": "ovrpl",
+        "index": 45
     },
     {
         "title": "Mountain Research Camp Gear Delivery",
-        "desc_split": "Transporting scientific equipment and supplies to remote Arctic research camps. Vehicles (snowmobiles or aircraft) have limited cargo capacity (C). Routes must stay within a distance limit (L) to ensure safe travel in harsh conditions. Vehicles don\u2019t return to the depot (O), as they remain at the camp to assist researchers. The challenge is to plan efficient routes that deliver all gear without overloading any vehicle and staying within the distance constraints.",
+        "desc_split": "Transporting scientific equipment and supplies to remote Arctic research camps. Vehicles (snowmobiles or aircraft) have limited cargo capacity (C). Routes must stay within a distance limit (L) to ensure safe travel in harsh conditions. Vehicles don’t return to the depot (O), as they remain at the camp to assist researchers. The challenge is to plan efficient routes that deliver all gear without overloading any vehicle and staying within the distance constraints.",
         "data_template": {
             "num_depots": [
                 1
@@ -16221,11 +16267,12 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpl"
+        "label": "ovrpl",
+        "index": 46
     },
     {
         "title": "Desert Solar Farm Equipment Delivery",
-        "desc_split": "Delivering solar panels and installation equipment to remote desert solar farms. Each truck has a limited capacity (C) for transporting heavy materials. Routes must stay within a distance limit (L) due to extreme desert conditions and fuel availability. Trucks don\u2019t return to the depot (O), as they are stationed at the farm for ongoing work. The goal is to minimize travel distance while ensuring all sites receive the necessary equipment without overloading any vehicle.",
+        "desc_split": "Delivering solar panels and installation equipment to remote desert solar farms. Each truck has a limited capacity (C) for transporting heavy materials. Routes must stay within a distance limit (L) due to extreme desert conditions and fuel availability. Trucks don’t return to the depot (O), as they are stationed at the farm for ongoing work. The goal is to minimize travel distance while ensuring all sites receive the necessary equipment without overloading any vehicle.",
         "data_template": {
             "num_depots": [
                 1
@@ -16423,11 +16470,12 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpl"
+        "label": "ovrpl",
+        "index": 47
     },
     {
         "title": "Remote Telecommunication Towers Installation",
-        "desc_split": "Installing communication towers in mountainous regions. Each truck carries a limited capacity (C) of tower components. Routes must stay within a distance limit (L) due to rugged terrain and fuel constraints. Vehicles don\u2019t return to the depot (O), as they remain at the installation site for setup. The challenge is to deliver all materials efficiently without overloading any truck and ensuring each tower location is supplied.",
+        "desc_split": "Installing communication towers in mountainous regions. Each truck carries a limited capacity (C) of tower components. Routes must stay within a distance limit (L) due to rugged terrain and fuel constraints. Vehicles don’t return to the depot (O), as they remain at the installation site for setup. The challenge is to deliver all materials efficiently without overloading any truck and ensuring each tower location is supplied.",
         "data_template": {
             "num_depots": [
                 1
@@ -16735,7 +16783,8 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpl"
+        "label": "ovrpl",
+        "index": 48
     },
     {
         "title": "Offshore Marine Research Platform Resupply",
@@ -17017,7 +17066,8 @@
                 ]
             ]
         },
-        "label": "ovrpl"
+        "label": "ovrpl",
+        "index": 49
     },
     {
         "title": "Lunar Research Base Supply Transport",
@@ -17380,7 +17430,8 @@
                 2.4319233894348145
             ]
         },
-        "label": "ovrpl"
+        "label": "ovrpl",
+        "index": 50
     },
     {
         "title": "Mangrove Restoration Material Distribution",
@@ -17716,7 +17767,8 @@
                 2.2897017002105713
             ]
         },
-        "label": "ovrpl"
+        "label": "ovrpl",
+        "index": 51
     },
     {
         "title": "Offshore Geothermal Plant Equipment Transport",
@@ -17909,11 +17961,12 @@
                 ]
             ]
         },
-        "label": "ovrpl"
+        "label": "ovrpl",
+        "index": 52
     },
     {
         "title": "Mountainous Region Internet Antenna Installation",
-        "desc_split": "A tech company aims to connect isolated mountain villages by delivering satellite internet antennas and equipment from a base camp (<loc_depot>). Delivery trucks face rugged terrain and must not exceed a maximum route distance (<distance_limit> km) to avoid risking fuel shortages or delays. Each truck\u2019s payload (<capacity> kg) must accommodate varying antenna sizes and installation gear for each village, with routes ending at the final destination to minimize logistical complexity.",
+        "desc_split": "A tech company aims to connect isolated mountain villages by delivering satellite internet antennas and equipment from a base camp (<loc_depot>). Delivery trucks face rugged terrain and must not exceed a maximum route distance (<distance_limit> km) to avoid risking fuel shortages or delays. Each truck’s payload (<capacity> kg) must accommodate varying antenna sizes and installation gear for each village, with routes ending at the final destination to minimize logistical complexity.",
         "data_template": {
             "num_depots": [
                 1
@@ -18146,7 +18199,8 @@
                 1.0
             ]
         },
-        "label": "ovrpl"
+        "label": "ovrpl",
+        "index": 53
     },
     {
         "title": "Desert Oasis Conservation Supply Delivery",
@@ -18526,7 +18580,8 @@
                 2.363182544708252
             ]
         },
-        "label": "ovrpl"
+        "label": "ovrpl",
+        "index": 54
     },
     {
         "title": "Offshore Marine Protected Area Monitoring Equipment Deployment",
@@ -19039,7 +19094,8 @@
                 2.266606569290161
             ]
         },
-        "label": "ovrpl"
+        "label": "ovrpl",
+        "index": 55
     },
     {
         "title": "Mountainous Area Emergency Shelter Supplies Delivery",
@@ -19522,7 +19578,8 @@
                 2.5950140953063965
             ]
         },
-        "label": "ovrpl"
+        "label": "ovrpl",
+        "index": 56
     },
     {
         "title": "Remote Desert Research Station Equipment Resupply",
@@ -19859,7 +19916,8 @@
                 2.5376315116882324
             ]
         },
-        "label": "ovrpl"
+        "label": "ovrpl",
+        "index": 57
     },
     {
         "title": "Offshore Wind Farm Maintenance During Storm Season",
@@ -20164,7 +20222,8 @@
                 2.7234253883361816
             ]
         },
-        "label": "ovrpl"
+        "label": "ovrpl",
+        "index": 58
     },
     {
         "title": "Remote Glacier Monitoring Equipment Transport",
@@ -20469,7 +20528,8 @@
                 1.3254673480987549
             ]
         },
-        "label": "ovrpl"
+        "label": "ovrpl",
+        "index": 59
     },
     {
         "title": "Ocean Plastic Collection and Transport",
@@ -20790,7 +20850,8 @@
                 1.475651502609253
             ]
         },
-        "label": "ovrpl"
+        "label": "ovrpl",
+        "index": 60
     },
     {
         "title": "Rainforest Research Outpost Supplies Delivery",
@@ -21175,7 +21236,8 @@
                 2.4691689014434814
             ]
         },
-        "label": "ovrpl"
+        "label": "ovrpl",
+        "index": 61
     },
     {
         "title": "Remote Airport Emergency Cargo Transport",
@@ -21640,7 +21702,8 @@
                 2.738906145095825
             ]
         },
-        "label": "ovrpl"
+        "label": "ovrpl",
+        "index": 62
     },
     {
         "title": "Underwater Cable Maintenance Logistics",
@@ -21897,7 +21960,8 @@
                 2.0664236545562744
             ]
         },
-        "label": "ovrpl"
+        "label": "ovrpl",
+        "index": 63
     },
     {
         "title": "Conflict Zone Mobile Clinic Supply Delivery",
@@ -22362,7 +22426,8 @@
                 2.4139227867126465
             ]
         },
-        "label": "ovrpl"
+        "label": "ovrpl",
+        "index": 64
     },
     {
         "title": "Remote Wilderness Conservation Equipment Transport",
@@ -22770,11 +22835,12 @@
                 1.950076937675476
             ]
         },
-        "label": "ovrpl"
+        "label": "ovrpl",
+        "index": 65
     },
     {
         "title": "Offshore Tidal Energy Installation Logistics",
-        "desc_split": "A renewable energy company is deploying tidal turbines in coastal regions. Heavy-duty barges (<capacity> ton capacity) depart from a port (<loc_depot>) to transport turbine components to offshore installation sites (<loc_customer>). Due to tidal restrictions and fuel constraints, each barge\u2019s route must not exceed <distance_limit> nautical miles. The open-ended routes allow barges to end operations at the final site, where crews unload equipment and await further instructions. The challenge is to optimize delivery sequences to minimize fuel use and ensure all sites receive their allocated components.",
+        "desc_split": "A renewable energy company is deploying tidal turbines in coastal regions. Heavy-duty barges (<capacity> ton capacity) depart from a port (<loc_depot>) to transport turbine components to offshore installation sites (<loc_customer>). Due to tidal restrictions and fuel constraints, each barge’s route must not exceed <distance_limit> nautical miles. The open-ended routes allow barges to end operations at the final site, where crews unload equipment and await further instructions. The challenge is to optimize delivery sequences to minimize fuel use and ensure all sites receive their allocated components.",
         "data_template": {
             "num_depots": [
                 1
@@ -23148,7 +23214,8 @@
                 1.5780470371246338
             ]
         },
-        "label": "ovrpl"
+        "label": "ovrpl",
+        "index": 66
     },
     {
         "title": "Mountainous Cultural Heritage Restoration",
@@ -23646,7 +23713,8 @@
                 2.456223964691162
             ]
         },
-        "label": "ovrpl"
+        "label": "ovrpl",
+        "index": 67
     },
     {
         "title": "Arctic Winter Research Station Supply Transport",
@@ -23859,11 +23927,12 @@
                 2.2874035835266113
             ]
         },
-        "label": "ovrpl"
+        "label": "ovrpl",
+        "index": 68
     },
     {
         "title": "Desert Oasis Conservation Water Distribution",
-        "desc_split": "A conservation group is restoring degraded desert oases by delivering freshwater and filtration systems to critical sites. Off-road trucks (<capacity> liters capacity) transport water from a central well (<loc_depot>) to oases (<loc_customer>). Due to extreme heat and fuel scarcity, each truck\u2019s route must stay within <distance_limit> km to avoid engine failure or crew dehydration. Routes terminate at the final oasis, allowing crews to assist with installation before seeking alternate routes back. The aim is to maximize water delivery while respecting vehicle limits and environmental constraints.",
+        "desc_split": "A conservation group is restoring degraded desert oases by delivering freshwater and filtration systems to critical sites. Off-road trucks (<capacity> liters capacity) transport water from a central well (<loc_depot>) to oases (<loc_customer>). Due to extreme heat and fuel scarcity, each truck’s route must stay within <distance_limit> km to avoid engine failure or crew dehydration. Routes terminate at the final oasis, allowing crews to assist with installation before seeking alternate routes back. The aim is to maximize water delivery while respecting vehicle limits and environmental constraints.",
         "data_template": {
             "num_depots": [
                 1
@@ -24252,7 +24321,8 @@
                 2.5182385444641113
             ]
         },
-        "label": "ovrpl"
+        "label": "ovrpl",
+        "index": 69
     },
     {
         "title": "Remote Astronomical Observatory Resupply Logistics",
@@ -24669,7 +24739,8 @@
                 2.6658120155334473
             ]
         },
-        "label": "ovrpl"
+        "label": "ovrpl",
+        "index": 70
     },
     {
         "title": "Desert Reforestation Project Equipment Transport",
@@ -24945,7 +25016,8 @@
                 2.1830852031707764
             ]
         },
-        "label": "ovrpl"
+        "label": "ovrpl",
+        "index": 71
     },
     {
         "title": "Coastal Marine Protected Area Conservation Supplies",
@@ -25416,7 +25488,8 @@
                 2.396472215652466
             ]
         },
-        "label": "ovrpl"
+        "label": "ovrpl",
+        "index": 72
     },
     {
         "title": "Mountainous Region Satellite Dish Installation",
@@ -25782,11 +25855,12 @@
                 2.1913065910339355
             ]
         },
-        "label": "ovrpl"
+        "label": "ovrpl",
+        "index": 73
     },
     {
         "title": "Offshore Subsea Exploration Equipment Transport",
-        "desc_split": "A research vessel (<loc_depot>) acts as a mobile depot for submersibles conducting deep-sea exploration. It must deliver specialized equipment\u2014like sonar arrays, sampling tools, and safety gear\u2014to <num_customer> underwater research sites (<loc_customer>). Each support boat has a <capacity> ton load limit and a <distance_limit> km maximum range due to limited onboard fuel. Routes must be planned to minimize travel distance while ensuring all submersible teams receive their required gear without exceeding vehicle capacities or straying beyond safe operating ranges.",
+        "desc_split": "A research vessel (<loc_depot>) acts as a mobile depot for submersibles conducting deep-sea exploration. It must deliver specialized equipment—like sonar arrays, sampling tools, and safety gear—to <num_customer> underwater research sites (<loc_customer>). Each support boat has a <capacity> ton load limit and a <distance_limit> km maximum range due to limited onboard fuel. Routes must be planned to minimize travel distance while ensuring all submersible teams receive their required gear without exceeding vehicle capacities or straying beyond safe operating ranges.",
         "data_template": {
             "num_depots": [
                 1
@@ -26058,7 +26132,8 @@
                 2.5810227394104004
             ]
         },
-        "label": "ovrpl"
+        "label": "ovrpl",
+        "index": 74
     },
     {
         "title": "Remote Indigenous Cultural Site Preservation Supplies",
@@ -26385,7 +26460,8 @@
                 2.470844268798828
             ]
         },
-        "label": "ovrpl"
+        "label": "ovrpl",
+        "index": 75
     },
     {
         "title": "Mountainous Hydroelectric Equipment Transport",
@@ -26642,7 +26718,8 @@
                 1.5655150413513184
             ]
         },
-        "label": "ovrpl"
+        "label": "ovrpl",
+        "index": 76
     },
     {
         "title": "Coastal Flood Defense Infrastructure Delivery",
@@ -27056,7 +27133,8 @@
                 1.955389380455017
             ]
         },
-        "label": "ovrpl"
+        "label": "ovrpl",
+        "index": 77
     },
     {
         "title": "Remote Wilderness Fire Lookout Tower Supplies",
@@ -27425,7 +27503,8 @@
                 2.656733512878418
             ]
         },
-        "label": "ovrpl"
+        "label": "ovrpl",
+        "index": 78
     },
     {
         "title": "Offshore Wind Turbine Foundation Installation",
@@ -27836,7 +27915,8 @@
                 0.1428571492433548
             ]
         },
-        "label": "ovrpl"
+        "label": "ovrpl",
+        "index": 79
     },
     {
         "title": "Polar Research Base Equipment Resupply via Icebreaker",
@@ -28253,7 +28333,8 @@
                 2.508841037750244
             ]
         },
-        "label": "ovrpl"
+        "label": "ovrpl",
+        "index": 80
     },
     {
         "title": "Mountainous Hydroelectric Turbine Transport",
@@ -28526,7 +28607,8 @@
                 2.474443197250366
             ]
         },
-        "label": "ovrpl"
+        "label": "ovrpl",
+        "index": 81
     },
     {
         "title": "Indigenous Cultural Site Preservation Logistics",
@@ -28927,7 +29009,8 @@
                 1.920407772064209
             ]
         },
-        "label": "ovrpl"
+        "label": "ovrpl",
+        "index": 82
     },
     {
         "title": "Offshore Oil Spill Cleanup Drone Deployment",
@@ -29260,7 +29343,8 @@
                 1.7730073928833008
             ]
         },
-        "label": "ovrpl"
+        "label": "ovrpl",
+        "index": 83
     },
     {
         "title": "Desert Solar Farm Maintenance Equipment Transport",
@@ -29629,11 +29713,12 @@
                 1.7678011655807495
             ]
         },
-        "label": "ovrpl"
+        "label": "ovrpl",
+        "index": 84
     },
     {
         "title": "Underwater Archaeological Site Exploration Equipment Transport",
-        "desc_split": "A team of marine archaeologists needs to deliver specialized equipment to several underwater excavation sites located far from the research vessel\u2019s anchorage point. The vessel (<loc_depot>) sends out submersibles and diving support boats (<capacity> kg capacity) to transport drilling tools, sonar arrays, and preservation kits (<demand> kg per site) to each archaeological site (<loc_customer>). Each vehicle must stay within a safe operating radius (<distance_limit> km) to ensure they can return to the surface or resurface safely. Routes must cover all sites without overloading any vessel while minimizing total travel distance.",
+        "desc_split": "A team of marine archaeologists needs to deliver specialized equipment to several underwater excavation sites located far from the research vessel’s anchorage point. The vessel (<loc_depot>) sends out submersibles and diving support boats (<capacity> kg capacity) to transport drilling tools, sonar arrays, and preservation kits (<demand> kg per site) to each archaeological site (<loc_customer>). Each vehicle must stay within a safe operating radius (<distance_limit> km) to ensure they can return to the surface or resurface safely. Routes must cover all sites without overloading any vessel while minimizing total travel distance.",
         "data_template": {
             "num_depots": [
                 1
@@ -29918,11 +30003,12 @@
                 2.190398931503296
             ]
         },
-        "label": "ovrpl"
+        "label": "ovrpl",
+        "index": 85
     },
     {
         "title": "Remote Mountainous Emergency Shelter Supplies via Helicopter",
-        "desc_split": "After a landslide isolates remote mountain villages, helicopters (<capacity> kg payload) must deliver emergency supplies (medical kits, food, and blankets) to stranded communities (<loc_customer>). The helicopters depart from a base (<loc_depot>), but due to extreme altitude and fuel constraints, each flight can only cover a maximum distance (<distance_limit> km) before needing to land at the final destination. The goal is to plan routes that deliver all supplies within the helicopters\u2019 range while avoiding overloading their cargo holds.",
+        "desc_split": "After a landslide isolates remote mountain villages, helicopters (<capacity> kg payload) must deliver emergency supplies (medical kits, food, and blankets) to stranded communities (<loc_customer>). The helicopters depart from a base (<loc_depot>), but due to extreme altitude and fuel constraints, each flight can only cover a maximum distance (<distance_limit> km) before needing to land at the final destination. The goal is to plan routes that deliver all supplies within the helicopters’ range while avoiding overloading their cargo holds.",
         "data_template": {
             "num_depots": [
                 1
@@ -30311,11 +30397,12 @@
                 2.490671157836914
             ]
         },
-        "label": "ovrpl"
+        "label": "ovrpl",
+        "index": 86
     },
     {
         "title": "Coastal Marine Reserve Monitoring via Autonomous Boats",
-        "desc_split": "A marine conservation organization uses autonomous boats (<capacity> liters capacity) to deploy water quality sensors and wildlife tracking devices (<demand> liters per site) across a coastal marine reserve. The boats start from a central hub (<loc_depot>) and must visit monitoring stations (<loc_customer>) scattered along the coast. Each boat has a limited battery range (<distance_limit> km) and cannot return to the hub after its final stop. The challenge is to optimize routes to cover all stations without exceeding the boats\u2019 capacity or range, ensuring comprehensive ecological data collection.",
+        "desc_split": "A marine conservation organization uses autonomous boats (<capacity> liters capacity) to deploy water quality sensors and wildlife tracking devices (<demand> liters per site) across a coastal marine reserve. The boats start from a central hub (<loc_depot>) and must visit monitoring stations (<loc_customer>) scattered along the coast. Each boat has a limited battery range (<distance_limit> km) and cannot return to the hub after its final stop. The challenge is to optimize routes to cover all stations without exceeding the boats’ capacity or range, ensuring comprehensive ecological data collection.",
         "data_template": {
             "num_depots": [
                 1
@@ -30616,11 +30703,12 @@
                 2.508427143096924
             ]
         },
-        "label": "ovrpl"
+        "label": "ovrpl",
+        "index": 87
     },
     {
         "title": "Arctic Research Station Gear Transport via Ice Road Trucks",
-        "desc_split": "Researchers in the Arctic need to transport heavy scientific equipment (e.g., drilling rigs, lab modules) to a remote ice-bound research station (<loc_customer>). Trucks (<capacity> ton capacity) depart from a coastal depot (<loc_depot>) on seasonal ice roads, which have a maximum safe travel distance (<distance_limit> km) due to melting ice. Once the trucks reach the final destination, they remain there to support operations. The goal is to plan routes that distribute gear efficiently without overloading the trucks or exceeding the ice road\u2019s operational limits.",
+        "desc_split": "Researchers in the Arctic need to transport heavy scientific equipment (e.g., drilling rigs, lab modules) to a remote ice-bound research station (<loc_customer>). Trucks (<capacity> ton capacity) depart from a coastal depot (<loc_depot>) on seasonal ice roads, which have a maximum safe travel distance (<distance_limit> km) due to melting ice. Once the trucks reach the final destination, they remain there to support operations. The goal is to plan routes that distribute gear efficiently without overloading the trucks or exceeding the ice road’s operational limits.",
         "data_template": {
             "num_depots": [
                 1
@@ -31069,11 +31157,12 @@
                 2.2258472442626953
             ]
         },
-        "label": "ovrpl"
+        "label": "ovrpl",
+        "index": 88
     },
     {
         "title": "Offshore Wind Turbine Maintenance During Stormy Seasons",
-        "desc_split": "A wind farm operator must repair turbines damaged by storms. Maintenance crews use service boats (<capacity> cubic meters capacity) to transport replacement parts (<demand> cubic meters per turbine) to offshore platforms (<loc_customer>). The boats start from a harbor (<loc_depot>), but rough seas limit their travel range (<distance_limit> nautical miles) and require them to stay at the last serviced platform after completing repairs. The challenge is to design routes that deliver all parts within the boats\u2019 capacity and range while minimizing total travel distance.",
+        "desc_split": "A wind farm operator must repair turbines damaged by storms. Maintenance crews use service boats (<capacity> cubic meters capacity) to transport replacement parts (<demand> cubic meters per turbine) to offshore platforms (<loc_customer>). The boats start from a harbor (<loc_depot>), but rough seas limit their travel range (<distance_limit> nautical miles) and require them to stay at the last serviced platform after completing repairs. The challenge is to design routes that deliver all parts within the boats’ capacity and range while minimizing total travel distance.",
         "data_template": {
             "num_depots": [
                 1
@@ -31486,7 +31575,8 @@
                 1.9835598468780518
             ]
         },
-        "label": "ovrpl"
+        "label": "ovrpl",
+        "index": 89
     },
     {
         "title": "Volcanic Eruption Monitoring Equipment Deployment",
@@ -31727,7 +31817,8 @@
                 2.276081085205078
             ]
         },
-        "label": "ovrpl"
+        "label": "ovrpl",
+        "index": 90
     },
     {
         "title": "Coastal Marine Debris Cleanup Operations",
@@ -32105,7 +32196,8 @@
                 2.2584726810455322
             ]
         },
-        "label": "ovrpl"
+        "label": "ovrpl",
+        "index": 91
     },
     {
         "title": "Mountain Pipeline Inspection via Unmanned Vehicles",
@@ -32362,7 +32454,8 @@
                 1.6202841997146606
             ]
         },
-        "label": "ovrpl"
+        "label": "ovrpl",
+        "index": 92
     },
     {
         "title": "Conflict Zone Emergency Aid Delivery",
@@ -32635,7 +32728,8 @@
                 2.337021827697754
             ]
         },
-        "label": "ovrpl"
+        "label": "ovrpl",
+        "index": 93
     },
     {
         "title": "Underwater Archaeological Expedition Support",
@@ -32956,11 +33050,12 @@
                 2.333035945892334
             ]
         },
-        "label": "ovrpl"
+        "label": "ovrpl",
+        "index": 94
     },
     {
         "title": "Offshore Research Vessel Resupply Operations",
-        "desc_split": "A scientific research vessel conducting deep-sea exploration requires regular resupply of equipment, food, and fuel while anchored in remote oceanic regions. Supply ships depart from a coastal depot (<loc_depot>) and must deliver critical cargo to the vessel\u2019s coordinates (<loc_customer>). Each ship has a maximum cargo capacity (<capacity> tons), and routes must stay within a predefined distance limit (<distance_limit> nautical miles) to ensure timely resupply without returning to port. The goal is to plan efficient routes that deliver all required supplies without overloading vessels or exceeding navigational limits, while minimizing total travel distance.",
+        "desc_split": "A scientific research vessel conducting deep-sea exploration requires regular resupply of equipment, food, and fuel while anchored in remote oceanic regions. Supply ships depart from a coastal depot (<loc_depot>) and must deliver critical cargo to the vessel’s coordinates (<loc_customer>). Each ship has a maximum cargo capacity (<capacity> tons), and routes must stay within a predefined distance limit (<distance_limit> nautical miles) to ensure timely resupply without returning to port. The goal is to plan efficient routes that deliver all required supplies without overloading vessels or exceeding navigational limits, while minimizing total travel distance.",
         "data_template": {
             "num_depots": [
                 1
@@ -33334,7 +33429,8 @@
                 2.455979824066162
             ]
         },
-        "label": "ovrpl"
+        "label": "ovrpl",
+        "index": 95
     },
     {
         "title": "Desert Reclamation Project Material Transport",
@@ -33607,7 +33703,8 @@
                 2.6039886474609375
             ]
         },
-        "label": "ovrpl"
+        "label": "ovrpl",
+        "index": 96
     },
     {
         "title": "Mountain Pipeline Inspection Logistics",
@@ -34008,7 +34105,8 @@
                 2.39388370513916
             ]
         },
-        "label": "ovrpl"
+        "label": "ovrpl",
+        "index": 97
     },
     {
         "title": "Remote Arctic Weather Station Resupply",
@@ -34416,11 +34514,12 @@
                 1.7081358432769775
             ]
         },
-        "label": "ovrpl"
+        "label": "ovrpl",
+        "index": 98
     },
     {
         "title": "Offshore Data Center Cooling System Transport",
-        "desc_split": "A company operates an offshore data center requiring urgent delivery of advanced cooling systems to prevent overheating. Transport vessels (<capacity> tons) must depart from a coastal depot (<loc_depot>) to the data center\u2019s location (<loc_customer>). Routes must stay within a distance limit (<distance_limit> nautical miles) to ensure timely delivery without returning to port. The challenge is to plan efficient routes that deliver all cooling components without overloading vessels or exceeding navigational limits, safeguarding critical infrastructure uptime.",
+        "desc_split": "A company operates an offshore data center requiring urgent delivery of advanced cooling systems to prevent overheating. Transport vessels (<capacity> tons) must depart from a coastal depot (<loc_depot>) to the data center’s location (<loc_customer>). Routes must stay within a distance limit (<distance_limit> nautical miles) to ensure timely delivery without returning to port. The challenge is to plan efficient routes that deliver all cooling components without overloading vessels or exceeding navigational limits, safeguarding critical infrastructure uptime.",
         "data_template": {
             "num_depots": [
                 1
@@ -34884,6 +34983,7 @@
                 1.9126648902893066
             ]
         },
-        "label": "ovrpl"
+        "label": "ovrpl",
+        "index": 99
     }
 ]

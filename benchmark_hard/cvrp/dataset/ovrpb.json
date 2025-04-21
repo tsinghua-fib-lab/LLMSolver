@@ -248,11 +248,12 @@
                 1.0
             ]
         },
-        "label": "ovrpb"
+        "label": "ovrpb",
+        "index": 0
     },
     {
         "title": "Industrial Parts Supplier with Core Returns",
-        "desc_split": "An auto parts supplier delivers new components (<demand_linehaul>) to repair shops (<loc_customer>) from a warehouse (<loc_depot>), while simultaneously collecting used \"core\" parts (<demand_backhaul>) for refurbishment. Trucks (<capacity>) must prioritize deliveries before loading cores, and routes remain open\u2014drivers finish at the last core pickup. The challenge is to optimize routes so that all shops receive parts, cores are efficiently retrieved, and total mileage is minimized without exceeding vehicle capacity.",
+        "desc_split": "An auto parts supplier delivers new components (<demand_linehaul>) to repair shops (<loc_customer>) from a warehouse (<loc_depot>), while simultaneously collecting used \"core\" parts (<demand_backhaul>) for refurbishment. Trucks (<capacity>) must prioritize deliveries before loading cores, and routes remain open—drivers finish at the last core pickup. The challenge is to optimize routes so that all shops receive parts, cores are efficiently retrieved, and total mileage is minimized without exceeding vehicle capacity.",
         "data_template": {
             "num_depots": [
                 1
@@ -499,7 +500,8 @@
                 1.0
             ]
         },
-        "label": "ovrpb"
+        "label": "ovrpb",
+        "index": 1
     },
     {
         "title": "E-Commerce Reverse Logistics",
@@ -988,7 +990,8 @@
                 0.0
             ]
         },
-        "label": "ovrpb"
+        "label": "ovrpb",
+        "index": 2
     },
     {
         "title": "Laundry Service for Hotels",
@@ -1494,7 +1497,8 @@
                 1.0
             ]
         },
-        "label": "ovrpb"
+        "label": "ovrpb",
+        "index": 3
     },
     {
         "title": "Construction Material Delivery and Debris Removal",
@@ -1898,7 +1902,8 @@
                 0.0
             ]
         },
-        "label": "ovrpb"
+        "label": "ovrpb",
+        "index": 4
     },
     {
         "title": "Pharmaceutical Delivery and Medical Waste Collection",
@@ -2438,7 +2443,8 @@
                 1.0
             ]
         },
-        "label": "ovrpb"
+        "label": "ovrpb",
+        "index": 5
     },
     {
         "title": "Retail Store Inventory Replenishment and Defective Returns",
@@ -2978,11 +2984,12 @@
                 1.0
             ]
         },
-        "label": "ovrpb"
+        "label": "ovrpb",
+        "index": 6
     },
     {
         "title": "Office Supply Delivery and Recycling Pickup",
-        "desc_split": "A logistics provider delivers printers, paper, and stationery to corporate offices (<loc_customer>) from a hub (<loc_depot>), while also collecting e-waste and recyclables (<demand_backhaul>). Each office\u2019s order (<demand_linehaul>) and recycling volume vary. Trucks (capacity <capacity>) must empty their load before picking up recyclables and finish routes at the last office. Plan routes to maximize efficiency and minimize empty mileage.",
+        "desc_split": "A logistics provider delivers printers, paper, and stationery to corporate offices (<loc_customer>) from a hub (<loc_depot>), while also collecting e-waste and recyclables (<demand_backhaul>). Each office’s order (<demand_linehaul>) and recycling volume vary. Trucks (capacity <capacity>) must empty their load before picking up recyclables and finish routes at the last office. Plan routes to maximize efficiency and minimize empty mileage.",
         "data_template": {
             "num_depots": [
                 1
@@ -3467,7 +3474,8 @@
                 1.0
             ]
         },
-        "label": "ovrpb"
+        "label": "ovrpb",
+        "index": 7
     },
     {
         "title": "Fresh Fish Distribution and Empty Container Retrieval",
@@ -3701,7 +3709,8 @@
                 0.0
             ]
         },
-        "label": "ovrpb"
+        "label": "ovrpb",
+        "index": 8
     },
     {
         "title": "Furniture Delivery and Packaging Material Recovery",
@@ -4156,7 +4165,8 @@
                 1.0
             ]
         },
-        "label": "ovrpb"
+        "label": "ovrpb",
+        "index": 9
     },
     {
         "title": "Art Gallery Supply and Return Logistics",
@@ -4546,7 +4556,8 @@
                 1.0
             ]
         },
-        "label": "ovrpb"
+        "label": "ovrpb",
+        "index": 10
     },
     {
         "title": "Brewery Keg Distribution and Recovery",
@@ -4817,7 +4828,8 @@
                 0.1666666716337204
             ]
         },
-        "label": "ovrpb"
+        "label": "ovrpb",
+        "index": 11
     },
     {
         "title": "Film Set Equipment Logistics",
@@ -5190,7 +5202,8 @@
                 0.0
             ]
         },
-        "label": "ovrpb"
+        "label": "ovrpb",
+        "index": 12
     },
     {
         "title": "Library Bookmobile Routing",
@@ -5512,7 +5525,8 @@
                 0.0
             ]
         },
-        "label": "ovrpb"
+        "label": "ovrpb",
+        "index": 13
     },
     {
         "title": "Solar Panel Installation Support",
@@ -5885,7 +5899,8 @@
                 0.0
             ]
         },
-        "label": "ovrpb"
+        "label": "ovrpb",
+        "index": 14
     },
     {
         "title": "Waste-to-Energy Plant Feedstock Logistics",
@@ -6275,7 +6290,8 @@
                 1.0
             ]
         },
-        "label": "ovrpb"
+        "label": "ovrpb",
+        "index": 15
     },
     {
         "title": "Film Production Equipment Circulation",
@@ -6818,7 +6834,8 @@
                 1.0
             ]
         },
-        "label": "ovrpb"
+        "label": "ovrpb",
+        "index": 16
     },
     {
         "title": "Urban Tree Nursery Operations",
@@ -7344,7 +7361,8 @@
                 1.0
             ]
         },
-        "label": "ovrpb"
+        "label": "ovrpb",
+        "index": 17
     },
     {
         "title": "Event Catering Logistics",
@@ -7887,7 +7905,8 @@
                 1.0
             ]
         },
-        "label": "ovrpb"
+        "label": "ovrpb",
+        "index": 18
     },
     {
         "title": "Marine Research Vessel Support",
@@ -8345,7 +8364,8 @@
                 1.0
             ]
         },
-        "label": "ovrpb"
+        "label": "ovrpb",
+        "index": 19
     },
     {
         "title": "Urban Waste-to-Compost Recycling Logistics",
@@ -8664,7 +8684,8 @@
                 0.0
             ]
         },
-        "label": "ovrpb"
+        "label": "ovrpb",
+        "index": 20
     },
     {
         "title": "Blood Bank Network Coordination",
@@ -9122,7 +9143,8 @@
                 0.0
             ]
         },
-        "label": "ovrpb"
+        "label": "ovrpb",
+        "index": 21
     },
     {
         "title": "Theater Equipment Circuit Routing",
@@ -9580,7 +9602,8 @@
                 0.0
             ]
         },
-        "label": "ovrpb"
+        "label": "ovrpb",
+        "index": 22
     },
     {
         "title": "Floating Market Supply Chain",
@@ -10106,7 +10129,8 @@
                 0.0
             ]
         },
-        "label": "ovrpb"
+        "label": "ovrpb",
+        "index": 23
     },
     {
         "title": "Disaster Relief Shelter Support",
@@ -10666,7 +10690,8 @@
                 0.0
             ]
         },
-        "label": "ovrpb"
+        "label": "ovrpb",
+        "index": 24
     },
     {
         "title": "Urban Furniture Rental Logistics",
@@ -11158,7 +11183,8 @@
                 0.0
             ]
         },
-        "label": "ovrpb"
+        "label": "ovrpb",
+        "index": 25
     },
     {
         "title": "Reusable Packaging Supply Chain",
@@ -11616,7 +11642,8 @@
                 ]
             ]
         },
-        "label": "ovrpb"
+        "label": "ovrpb",
+        "index": 26
     },
     {
         "title": "Charity Donation Drive Coordination",
@@ -12071,7 +12098,8 @@
                 ]
             ]
         },
-        "label": "ovrpb"
+        "label": "ovrpb",
+        "index": 27
     },
     {
         "title": "Auto Parts Circular Economy Network",
@@ -12356,11 +12384,12 @@
                 ]
             ]
         },
-        "label": "ovrpb"
+        "label": "ovrpb",
+        "index": 28
     },
     {
         "title": "Campus IT Equipment Redistribution",
-        "desc_split": "A university\u2019s IT department deploys laptops (`<demand_linehaul>`) to classrooms (`<loc_customer>`) and retrieves outdated devices (`<demand_backhaul>`) for recycling. Electric carts (capacity `<capacity>`) operate from a tech hub (`<loc_depot>`). Routes must ensure all deliveries precede pickups, with carts parked near final pickup points to minimize energy use across `<num_customer>` stops.",
+        "desc_split": "A university’s IT department deploys laptops (`<demand_linehaul>`) to classrooms (`<loc_customer>`) and retrieves outdated devices (`<demand_backhaul>`) for recycling. Electric carts (capacity `<capacity>`) operate from a tech hub (`<loc_depot>`). Routes must ensure all deliveries precede pickups, with carts parked near final pickup points to minimize energy use across `<num_customer>` stops.",
         "data_template": {
             "num_depots": [
                 1
@@ -12678,7 +12707,8 @@
                 16
             ]
         },
-        "label": "ovrpb"
+        "label": "ovrpb",
+        "index": 29
     },
     {
         "title": "Urban Flower Delivery and Vase Collection",
@@ -12912,11 +12942,12 @@
                 0.23333333432674408
             ]
         },
-        "label": "ovrpb"
+        "label": "ovrpb",
+        "index": 30
     },
     {
         "title": "Electronics Retailer Inventory Rotation",
-        "desc_split": "A tech retailer redistributes excess inventory (e.g., laptops, monitors) from overstocked stores (<loc_customer>) to understocked ones, while simultaneously collecting defective items (<demand_backhaul>) for refurbishment. Trucks (<capacity>) depart from a regional hub (<loc_depot>), deliver surplus stock (<demand_linehaul>), then retrieve returns\u2014strictly in that order. Vehicles remain at the final pickup point for maintenance.",
+        "desc_split": "A tech retailer redistributes excess inventory (e.g., laptops, monitors) from overstocked stores (<loc_customer>) to understocked ones, while simultaneously collecting defective items (<demand_backhaul>) for refurbishment. Trucks (<capacity>) depart from a regional hub (<loc_depot>), deliver surplus stock (<demand_linehaul>), then retrieve returns—strictly in that order. Vehicles remain at the final pickup point for maintenance.",
         "data_template": {
             "num_depots": [
                 1
@@ -13197,7 +13228,8 @@
                 0.23333333432674408
             ]
         },
-        "label": "ovrpb"
+        "label": "ovrpb",
+        "index": 31
     },
     {
         "title": "Pet Adoption Mobile Clinic Logistics",
@@ -13516,7 +13548,8 @@
                 1.0
             ]
         },
-        "label": "ovrpb"
+        "label": "ovrpb",
+        "index": 32
     },
     {
         "title": "Textile Manufacturer Scrap Recycling",
@@ -13750,7 +13783,8 @@
                 1.0
             ]
         },
-        "label": "ovrpb"
+        "label": "ovrpb",
+        "index": 33
     },
     {
         "title": "Municipal Park Maintenance Supply Chain",
@@ -13984,7 +14018,8 @@
                 1.0
             ]
         },
-        "label": "ovrpb"
+        "label": "ovrpb",
+        "index": 34
     },
     {
         "title": "Urban Grocery Delivery and Food Bank Collection",
@@ -14459,7 +14494,8 @@
                 0.0
             ]
         },
-        "label": "ovrpb"
+        "label": "ovrpb",
+        "index": 35
     },
     {
         "title": "Mining Equipment Maintenance and Core Sample Retrieval",
@@ -14832,7 +14868,8 @@
                 0.0
             ]
         },
-        "label": "ovrpb"
+        "label": "ovrpb",
+        "index": 36
     },
     {
         "title": "Floating Market Vendor Supply Chain",
@@ -15270,7 +15307,8 @@
                 0.0
             ]
         },
-        "label": "ovrpb"
+        "label": "ovrpb",
+        "index": 37
     },
     {
         "title": "Mobile COVID-19 Vaccination and Test Kit Recovery",
@@ -15660,11 +15698,12 @@
                 0.0
             ]
         },
-        "label": "ovrpb"
+        "label": "ovrpb",
+        "index": 38
     },
     {
         "title": "Film Festival Equipment Circulation",
-        "desc_split": "A media company services `<num_customer>` outdoor screening venues (`<loc_customer>`) from a gear warehouse (`<loc_depot>`). Trucks (capacity `<capacity>`) deliver projectors/speakers (`<demand_linehaul>`) before dawn, then retrieve equipment after nighttime events (`<demand_backhaul>`). Drivers park trucks at final venues until next day. The temporal separation of deliveries (pre-event) and pickups (post-event) requires routes that minimize empty mileage while handling bulky, fragile cargo.",
+        "desc_split": "A media company services `<num_customer>` outdoor screening venues (`<loc_customer>`) from a gear warehouse (`<loc_depot>`). Trucks (capacity `<capacity>`) deliver projectors/speakers (`<demand_linehaul>`) before dawn, then retrieve equipment after nighttime events (`<demand_backhaul>`). Drivers park trucks at final venues until next day. Requires routes that minimize empty mileage while handling bulky, fragile cargo.",
         "data_template": {
             "num_depots": [
                 1
@@ -16118,11 +16157,12 @@
                 0.11764705926179886
             ]
         },
-        "label": "ovrpb"
+        "label": "ovrpb",
+        "index": 39
     },
     {
         "title": "Urban EV Charging Station Battery Swap Logistics",
-        "desc_split": "A fleet of electric vehicles (EVs) operates battery swap stations across the city. Each station (<loc_customer>) requires fresh batteries (<demand_linehaul>) and returns depleted ones (<demand_backhaul>). Service trucks (<capacity>) depart from a central depot (<loc_depot>), deliver charged batteries to stations, and collect spent batteries\u2014always completing deliveries before pickups. Drivers end their shifts at the final station, eliminating return trips. The goal is to minimize total distance while ensuring no truck exceeds its battery transport capacity.",
+        "desc_split": "A fleet of electric vehicles (EVs) operates battery swap stations across the city. Each station (<loc_customer>) requires fresh batteries (<demand_linehaul>) and returns depleted ones (<demand_backhaul>). Service trucks (<capacity>) depart from a central depot (<loc_depot>), deliver charged batteries to stations, and collect spent batteries—always completing deliveries before pickups. Drivers end their shifts at the final station, eliminating return trips. The goal is to minimize total distance while ensuring no truck exceeds its battery transport capacity.",
         "data_template": {
             "num_depots": [
                 1
@@ -16352,7 +16392,8 @@
                 ]
             ]
         },
-        "label": "ovrpb"
+        "label": "ovrpb",
+        "index": 40
     },
     {
         "title": "Luxury Watch Showroom Inventory Rotation",
@@ -16824,7 +16865,8 @@
                 1.0
             ]
         },
-        "label": "ovrpb"
+        "label": "ovrpb",
+        "index": 41
     },
     {
         "title": "Film Studio Prop Circulation Network",
@@ -17347,7 +17389,8 @@
                 1.0
             ]
         },
-        "label": "ovrpb"
+        "label": "ovrpb",
+        "index": 42
     },
     {
         "title": "Museum Artifact Loan Logistics",
@@ -17836,7 +17879,8 @@
                 0.0
             ]
         },
-        "label": "ovrpb"
+        "label": "ovrpb",
+        "index": 43
     },
     {
         "title": "Vertical Farm Produce Distribution System",
@@ -18393,7 +18437,8 @@
                 0.22857142984867096
             ]
         },
-        "label": "ovrpb"
+        "label": "ovrpb",
+        "index": 44
     },
     {
         "title": "Urban Clothing Rental Service Logistics",
@@ -18919,7 +18964,8 @@
                 0.0
             ]
         },
-        "label": "ovrpb"
+        "label": "ovrpb",
+        "index": 45
     },
     {
         "title": "Aquaculture Feed Delivery and Harvest Collection",
@@ -19360,7 +19406,8 @@
                 ]
             ]
         },
-        "label": "ovrpb"
+        "label": "ovrpb",
+        "index": 46
     },
     {
         "title": "Film Location Catering and Waste Recovery",
@@ -19818,7 +19865,8 @@
                 ]
             ]
         },
-        "label": "ovrpb"
+        "label": "ovrpb",
+        "index": 47
     },
     {
         "title": "Industrial Gas Cylinder Distribution Network",
@@ -20225,7 +20273,8 @@
                 ]
             ]
         },
-        "label": "ovrpb"
+        "label": "ovrpb",
+        "index": 48
     },
     {
         "title": "Mobile Vet Clinic Animal Transport System",
@@ -20785,7 +20834,8 @@
                 ]
             ]
         },
-        "label": "ovrpb"
+        "label": "ovrpb",
+        "index": 49
     },
     {
         "title": "Urban EV Battery Swap and Depleted Battery Collection",
@@ -21274,7 +21324,8 @@
                 1.0
             ]
         },
-        "label": "ovrpb"
+        "label": "ovrpb",
+        "index": 50
     },
     {
         "title": "Luxury Fashion Pop-Up Inventory Rotation",
@@ -21576,7 +21627,8 @@
                 0.0
             ]
         },
-        "label": "ovrpb"
+        "label": "ovrpb",
+        "index": 51
     },
     {
         "title": "Offshore Oil Rig Supply and Waste Retrieval",
@@ -22133,7 +22185,8 @@
                 0.22857142984867096
             ]
         },
-        "label": "ovrpb"
+        "label": "ovrpb",
+        "index": 52
     },
     {
         "title": "Mobile COVID-19 Testing and Sample Logistics",
@@ -22452,7 +22505,8 @@
                 0.0
             ]
         },
-        "label": "ovrpb"
+        "label": "ovrpb",
+        "index": 53
     },
     {
         "title": "Reusable Packaging Network for Urban Grocers",
@@ -22737,7 +22791,8 @@
                 0.0
             ]
         },
-        "label": "ovrpb"
+        "label": "ovrpb",
+        "index": 54
     },
     {
         "title": "Urban EV Charging Station Battery Swap Logistics",
@@ -23022,7 +23077,8 @@
                 1.0
             ]
         },
-        "label": "ovrpb"
+        "label": "ovrpb",
+        "index": 55
     },
     {
         "title": "Luxury Fashion Pop-Up Inventory Rotation",
@@ -23545,7 +23601,8 @@
                 1.0
             ]
         },
-        "label": "ovrpb"
+        "label": "ovrpb",
+        "index": 56
     },
     {
         "title": "Aquaculture Feed Delivery and Harvest Collection",
@@ -24068,7 +24125,8 @@
                 ]
             ]
         },
-        "label": "ovrpb"
+        "label": "ovrpb",
+        "index": 57
     },
     {
         "title": "Industrial Gas Cylinder Distribution Network",
@@ -24523,7 +24581,8 @@
                 ]
             ]
         },
-        "label": "ovrpb"
+        "label": "ovrpb",
+        "index": 58
     },
     {
         "title": "Mobile Vet Clinic Animal Transport System",
@@ -24859,7 +24918,8 @@
                 ]
             ]
         },
-        "label": "ovrpb"
+        "label": "ovrpb",
+        "index": 59
     },
     {
         "title": "Urban Furniture Rental Logistics",
@@ -25246,7 +25306,8 @@
                 0.22857142984867096
             ]
         },
-        "label": "ovrpb"
+        "label": "ovrpb",
+        "index": 60
     },
     {
         "title": "Aquaculture Feed Delivery and Harvest Collection",
@@ -25701,7 +25762,8 @@
                 1.0
             ]
         },
-        "label": "ovrpb"
+        "label": "ovrpb",
+        "index": 61
     },
     {
         "title": "Industrial Gas Cylinder Distribution Network",
@@ -26101,7 +26163,8 @@
                 1.0
             ]
         },
-        "label": "ovrpb"
+        "label": "ovrpb",
+        "index": 62
     },
     {
         "title": "Mobile Vet Clinic Animal Transport System",
@@ -26345,7 +26408,8 @@
                 1.0
             ]
         },
-        "label": "ovrpb"
+        "label": "ovrpb",
+        "index": 63
     },
     {
         "title": "Luxury Fashion Pop-Up Inventory Rotation",
@@ -26698,7 +26762,8 @@
                 1.0
             ]
         },
-        "label": "ovrpb"
+        "label": "ovrpb",
+        "index": 64
     },
     {
         "title": "Urban Grocery Delivery and Food Bank Collection",
@@ -27204,7 +27269,8 @@
                 1.0
             ]
         },
-        "label": "ovrpb"
+        "label": "ovrpb",
+        "index": 65
     },
     {
         "title": "Renewable Energy Component Logistics",
@@ -27676,7 +27742,8 @@
                 0.0
             ]
         },
-        "label": "ovrpb"
+        "label": "ovrpb",
+        "index": 66
     },
     {
         "title": "Mobile Vaccination Clinic Logistics",
@@ -28029,7 +28096,8 @@
                 1.0
             ]
         },
-        "label": "ovrpb"
+        "label": "ovrpb",
+        "index": 67
     },
     {
         "title": "Luxury Retail Pop-Up Inventory Rotation",
@@ -28331,7 +28399,8 @@
                 0.0
             ]
         },
-        "label": "ovrpb"
+        "label": "ovrpb",
+        "index": 68
     },
     {
         "title": "Aquaculture Harvest and Feed Distribution",
@@ -28769,7 +28838,8 @@
                 0.2647058963775635
             ]
         },
-        "label": "ovrpb"
+        "label": "ovrpb",
+        "index": 69
     },
     {
         "title": "Urban Furniture Rental Logistics",
@@ -29207,7 +29277,8 @@
                 0.0
             ]
         },
-        "label": "ovrpb"
+        "label": "ovrpb",
+        "index": 70
     },
     {
         "title": "Aquaculture Feed Delivery and Harvest Collection",
@@ -29526,7 +29597,8 @@
                 ]
             ]
         },
-        "label": "ovrpb"
+        "label": "ovrpb",
+        "index": 71
     },
     {
         "title": "Industrial Gas Cylinder Distribution Network",
@@ -29981,7 +30053,8 @@
                 ]
             ]
         },
-        "label": "ovrpb"
+        "label": "ovrpb",
+        "index": 72
     },
     {
         "title": "Mobile Vet Clinic Animal Transport System",
@@ -30283,7 +30356,8 @@
                 ]
             ]
         },
-        "label": "ovrpb"
+        "label": "ovrpb",
+        "index": 73
     },
     {
         "title": "Luxury Fashion Pop-Up Inventory Rotation",
@@ -30670,7 +30744,8 @@
                 0.0
             ]
         },
-        "label": "ovrpb"
+        "label": "ovrpb",
+        "index": 74
     },
     {
         "title": "Urban Art Installation Logistics",
@@ -30949,7 +31024,8 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpb"
+        "label": "ovrpb",
+        "index": 75
     },
     {
         "title": "Modular Construction Site Support",
@@ -31162,7 +31238,8 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpb"
+        "label": "ovrpb",
+        "index": 76
     },
     {
         "title": "Aquarium Coral Trade Network",
@@ -31397,7 +31474,8 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpb"
+        "label": "ovrpb",
+        "index": 77
     },
     {
         "title": "Reusable Shipping Container Redistribution",
@@ -31566,7 +31644,8 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpb"
+        "label": "ovrpb",
+        "index": 78
     },
     {
         "title": "Mobile Voting Booth Deployment",
@@ -31856,7 +31935,8 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpb"
+        "label": "ovrpb",
+        "index": 79
     },
     {
         "title": "Urban Grocery Delivery and Food Bank Collection",
@@ -32243,7 +32323,8 @@
                 1.0
             ]
         },
-        "label": "ovrpb"
+        "label": "ovrpb",
+        "index": 80
     },
     {
         "title": "Renewable Energy Component Logistics",
@@ -32511,7 +32592,8 @@
                 1.0
             ]
         },
-        "label": "ovrpb"
+        "label": "ovrpb",
+        "index": 81
     },
     {
         "title": "Aquaculture Feed Delivery and Harvest Collection",
@@ -32983,7 +33065,8 @@
                 0.0
             ]
         },
-        "label": "ovrpb"
+        "label": "ovrpb",
+        "index": 82
     },
     {
         "title": "Modular Construction Site Support",
@@ -33523,7 +33606,8 @@
                 0.17142857611179352
             ]
         },
-        "label": "ovrpb"
+        "label": "ovrpb",
+        "index": 83
     },
     {
         "title": "Mobile Vaccination Clinic Logistics",
@@ -33995,7 +34079,8 @@
                 0.0
             ]
         },
-        "label": "ovrpb"
+        "label": "ovrpb",
+        "index": 84
     },
     {
         "title": "Urban Plant Nursery Delivery and Deadstock Collection",
@@ -34314,7 +34399,8 @@
                 0.0
             ]
         },
-        "label": "ovrpb"
+        "label": "ovrpb",
+        "index": 85
     },
     {
         "title": "Film Studio Prop Circulation Network",
@@ -34565,7 +34651,8 @@
                 0.0
             ]
         },
-        "label": "ovrpb"
+        "label": "ovrpb",
+        "index": 86
     },
     {
         "title": "Aquaculture Harvest Distribution and Feed Delivery",
@@ -35003,7 +35090,8 @@
                 0.05882352963089943
             ]
         },
-        "label": "ovrpb"
+        "label": "ovrpb",
+        "index": 87
     },
     {
         "title": "Art Exhibition Logistics for Gallery Chain",
@@ -35305,7 +35393,8 @@
                 0.0
             ]
         },
-        "label": "ovrpb"
+        "label": "ovrpb",
+        "index": 88
     },
     {
         "title": "Reusable Packaging System for Urban Bakeries",
@@ -35743,11 +35832,12 @@
                 0.0
             ]
         },
-        "label": "ovrpb"
+        "label": "ovrpb",
+        "index": 89
     },
     {
         "title": "Urban Furniture Rental Logistics",
-        "desc_split": "A furniture rental company delivers sofas, tables, and chairs to customers across the city (<loc_customer>) from their warehouse (<loc_depot>). Each delivery truck (<capacity>) carries new rentals (<demand_linehaul>) and picks up expired rentals (<demand_backhaul>) in the same trip\u2014but only after all deliveries are complete. The goal is to minimize total distance while ensuring trucks never exceed capacity during either phase.",
+        "desc_split": "A furniture rental company delivers sofas, tables, and chairs to customers across the city (<loc_customer>) from their warehouse (<loc_depot>). Each delivery truck (<capacity>) carries new rentals (<demand_linehaul>) and picks up expired rentals (<demand_backhaul>) in the same trip—but only after all deliveries are complete. The goal is to minimize total distance while ensuring trucks never exceed capacity during either phase.",
         "data_template": {
             "num_depots": [
                 1
@@ -36130,7 +36220,8 @@
                 0.0
             ]
         },
-        "label": "ovrpb"
+        "label": "ovrpb",
+        "index": 90
     },
     {
         "title": "Aquaculture Feed Delivery and Harvest Collection",
@@ -36364,7 +36455,8 @@
                 1.0
             ]
         },
-        "label": "ovrpb"
+        "label": "ovrpb",
+        "index": 91
     },
     {
         "title": "Industrial Gas Cylinder Distribution Network",
@@ -36632,7 +36724,8 @@
                 1.0
             ]
         },
-        "label": "ovrpb"
+        "label": "ovrpb",
+        "index": 92
     },
     {
         "title": "Mobile Vet Clinic Animal Transport System",
@@ -37138,7 +37231,8 @@
                 1.0
             ]
         },
-        "label": "ovrpb"
+        "label": "ovrpb",
+        "index": 93
     },
     {
         "title": "Luxury Fashion Pop-Up Inventory Rotation",
@@ -37372,7 +37466,8 @@
                 1.0
             ]
         },
-        "label": "ovrpb"
+        "label": "ovrpb",
+        "index": 94
     },
     {
         "title": "Urban Farm Produce Delivery and Compost Collection",
@@ -37811,7 +37906,8 @@
                 0.0
             ]
         },
-        "label": "ovrpb"
+        "label": "ovrpb",
+        "index": 95
     },
     {
         "title": "Mobile Vaccination Clinic and Medical Waste Disposal",
@@ -38147,7 +38243,8 @@
                 0.30000001192092896
             ]
         },
-        "label": "ovrpb"
+        "label": "ovrpb",
+        "index": 96
     },
     {
         "title": "Reusable Packaging Logistics for Meal Kit Subscriptions",
@@ -38430,7 +38527,8 @@
                 0.0
             ]
         },
-        "label": "ovrpb"
+        "label": "ovrpb",
+        "index": 97
     },
     {
         "title": "Film Festival Equipment Distribution and Return Logistics",
@@ -38860,11 +38958,12 @@
                 1.0
             ]
         },
-        "label": "ovrpb"
+        "label": "ovrpb",
+        "index": 98
     },
     {
         "title": "Industrial Tool Rental Fleet Redistribution",
-        "desc_split": "A tool rental company manages a network of construction sites (<loc_customer>) that require specialized equipment deliveries (linehauls: <demand_linehaul>) and returns (backhauls: <demand_backhaul>). Flatbed trucks (<capacity>) start from a maintenance hub (<loc_depot>), deliver tools to active sites, then collect overdue rentals\u2014always completing deliveries before pickups. Drivers end routes at the final pickup location. The system must balance tool availability across sites while minimizing deadhead mileage and respecting load limits.",
+        "desc_split": "A tool rental company manages a network of construction sites (<loc_customer>) that require specialized equipment deliveries (linehauls: <demand_linehaul>) and returns (backhauls: <demand_backhaul>). Flatbed trucks (<capacity>) start from a maintenance hub (<loc_depot>), deliver tools to active sites, then collect overdue rentals—always completing deliveries before pickups. Drivers end routes at the final pickup location. The system must balance tool availability across sites while minimizing deadhead mileage and respecting load limits.",
         "data_template": {
             "num_depots": [
                 1
@@ -39162,6 +39261,7 @@
                 ]
             ]
         },
-        "label": "ovrpb"
+        "label": "ovrpb",
+        "index": 99
     }
 ]

@@ -288,11 +288,12 @@
                 ]
             ]
         },
-        "label": "ovrpltw"
+        "label": "ovrpltw",
+        "index": 0
     },
     {
         "title": "Construction Material Distribution for Site Contractors",
-        "desc_split": "A construction firm supplies building materials (<demand> tons) to active worksites (<loc_customer>), each with a scheduled work window (<time_windows>). The materials must arrive during these times to avoid halting progress. Delivery trucks (<capacity> ton capacity) are dispatched from a regional warehouse (<loc_depot>), but cannot exceed a route distance limit (<distance_limit>) to prevent delays caused by excessive travel. The challenge is to:  \n- Allocate trucks to sites without exceeding their capacity.  \n- Respect each site\u2019s time window for material delivery.  \n- Optimize routes to minimize fuel costs while keeping all routes under the distance constraint.  \nTrucks finish their routes at the last site they service.",
+        "desc_split": "A construction firm supplies building materials (<demand> tons) to active worksites (<loc_customer>), each with a scheduled work window (<time_windows>). The materials must arrive during these times to avoid halting progress. Delivery trucks (<capacity> ton capacity) are dispatched from a regional warehouse (<loc_depot>), but cannot exceed a route distance limit (<distance_limit>) to prevent delays caused by excessive travel. The challenge is to:  \n- Allocate trucks to sites without exceeding their capacity.  \n- Respect each site’s time window for material delivery.  \n- Optimize routes to minimize fuel costs while keeping all routes under the distance constraint.  \nTrucks finish their routes at the last site they service.",
         "data_template": {
             "num_depots": [
                 1
@@ -739,11 +740,12 @@
                 2.759674549102783
             ]
         },
-        "label": "ovrpltw"
+        "label": "ovrpltw",
+        "index": 1
     },
     {
         "title": "On-Demand Grocery Delivery for Urban Subscribers",
-        "desc_split": "An online grocery service delivers perishables and dry goods to subscribers in a city. Each customer specifies a delivery time window (<time_windows>) to ensure someone is home to accept the order. Delivery vans (<capacity> cubic meters) must navigate tight urban routes, with a daily distance limit (<distance_limit>) to avoid overtime pay. The company aims to:  \n- Pack orders efficiently without overloading vans.  \n- Adhere to each customer\u2019s time window, even if it means waiting until the earliest slot.  \n- Plan routes that minimize detours while respecting distance constraints.  \nVans complete their routes at the last delivery stop of the day.",
+        "desc_split": "An online grocery service delivers perishables and dry goods to subscribers in a city. Each customer specifies a delivery time window (<time_windows>) to ensure someone is home to accept the order. Delivery vans (<capacity> cubic meters) must navigate tight urban routes, with a daily distance limit (<distance_limit>) to avoid overtime pay. The company aims to:  \n- Pack orders efficiently without overloading vans.  \n- Adhere to each customer’s time window, even if it means waiting until the earliest slot.  \n- Plan routes that minimize detours while respecting distance constraints.  \nVans complete their routes at the last delivery stop of the day.",
         "data_template": {
             "num_depots": [
                 1
@@ -1175,11 +1177,12 @@
                 1.7705446481704712
             ]
         },
-        "label": "ovrpltw"
+        "label": "ovrpltw",
+        "index": 2
     },
     {
         "title": "Time-Critical Medical Vaccine Delivery",
-        "desc_split": "A public health agency deploys specialized vehicles to distribute temperature-sensitive vaccines (<demand> doses) to rural clinics (<loc_customer>). Each clinic has a strict delivery window (<time_windows>) to ensure vaccines are administered promptly. Vehicles (<capacity> doses capacity) must travel within a maximum distance (<distance_limit>) to maintain refrigeration viability and avoid delays. The objective is to:  \n- Route vehicles so all clinics receive doses within their time window.  \n- Ensure no vehicle\u2019s load exceeds its capacity.  \n- Keep total travel distance minimal while complying with distance limits.  \nVehicles terminate routes at the final clinic to extend vaccine shelf life.",
+        "desc_split": "A public health agency deploys specialized vehicles to distribute temperature-sensitive vaccines (<demand> doses) to rural clinics (<loc_customer>). Each clinic has a strict delivery window (<time_windows>) to ensure vaccines are administered promptly. Vehicles (<capacity> doses capacity) must travel within a maximum distance (<distance_limit>) to maintain refrigeration viability and avoid delays. The objective is to:  \n- Route vehicles so all clinics receive doses within their time window.  \n- Ensure no vehicle’s load exceeds its capacity.  \n- Keep total travel distance minimal while complying with distance limits.  \nVehicles terminate routes at the final clinic to extend vaccine shelf life.",
         "data_template": {
             "num_depots": [
                 1
@@ -1480,11 +1483,12 @@
                 2.093928337097168
             ]
         },
-        "label": "ovrpltw"
+        "label": "ovrpltw",
+        "index": 3
     },
     {
         "title": "Ride-Sharing Shuttle Service for a Conference",
-        "desc_split": "A ride-sharing company provides shuttles to transport conference attendees from downtown hotels (<loc_customer>) to the event venue. Each pickup location has a time window (<time_windows>) based on the attendee\u2019s schedule. Shuttle buses (<capacity> passengers) must operate within a daily distance limit (<distance_limit>) due to driver regulations. The goal is to:  \n- Assign passengers to buses without exceeding capacity.  \n- Meet each hotel\u2019s pickup window to avoid attendee delays.  \n- Optimize routes to reduce idle driving and stay within the distance constraint.  \nBuses end their routes at the conference venue after their final pickup.",
+        "desc_split": "A ride-sharing company provides shuttles to transport conference attendees from downtown hotels (<loc_customer>) to the event venue. Each pickup location has a time window (<time_windows>) based on the attendee’s schedule. Shuttle buses (<capacity> passengers) must operate within a daily distance limit (<distance_limit>) due to driver regulations. The goal is to:  \n- Assign passengers to buses without exceeding capacity.  \n- Meet each hotel’s pickup window to avoid attendee delays.  \n- Optimize routes to reduce idle driving and stay within the distance constraint.  \nBuses end their routes at the conference venue after their final pickup.",
         "data_template": {
             "num_depots": [
                 1
@@ -1733,11 +1737,12 @@
                 2.049731731414795
             ]
         },
-        "label": "ovrpltw"
+        "label": "ovrpltw",
+        "index": 4
     },
     {
         "title": "Event Equipment Delivery for Concerts and Festivals",
-        "desc_split": "A logistics provider supplies temporary stages, lighting rigs, and sound systems to venues hosting music festivals and corporate events. Each venue requires delivery within a strict time window to align with setup schedules. Delivery trucks must not exceed their maximum capacity (e.g., weight or volume limits for equipment) and cannot travel beyond a daily distance limit to comply with driver hour regulations. The challenge is to route vehicles from the central warehouse (<loc_depot>) to all <num_customer> event locations (<loc_customer>) while respecting each venue\u2019s <time_window>, ensuring no truck overloads, and minimizing total mileage.",
+        "desc_split": "A logistics provider supplies temporary stages, lighting rigs, and sound systems to venues hosting music festivals and corporate events. Each venue requires delivery within a strict time window to align with setup schedules. Delivery trucks must not exceed their maximum capacity (e.g., weight or volume limits for equipment) and cannot travel beyond a daily distance limit to comply with driver hour regulations. The challenge is to route vehicles from the central warehouse (<loc_depot>) to all <num_customer> event locations (<loc_customer>) while respecting each venue’s <time_window>, ensuring no truck overloads, and minimizing total mileage.",
         "data_template": {
             "num_depots": [
                 1
@@ -2141,11 +2146,12 @@
                 ]
             ]
         },
-        "label": "ovrpltw"
+        "label": "ovrpltw",
+        "index": 5
     },
     {
         "title": "Home Healthcare Appliance Distribution",
-        "desc_split": "A medical supply company delivers mobility aids (wheelchairs, hospital beds) and medical devices to patients\u2019 homes. Each delivery must arrive within a time window (<time_window>) specified by the patient\u2019s caregiver or healthcare provider. Vehicles have limited cargo space (<capacity> cubic meters) and must adhere to a daily driving distance limit to avoid driver fatigue. The goal is to plan efficient routes that ensure timely appliance delivery, prevent vehicle overloads, and comply with route distance constraints while covering all <num_customer> homes (<loc_customer>).",
+        "desc_split": "A medical supply company delivers mobility aids (wheelchairs, hospital beds) and medical devices to patients’ homes. Each delivery must arrive within a time window (<time_window>) specified by the patient’s caregiver or healthcare provider. Vehicles have limited cargo space (<capacity> cubic meters) and must adhere to a daily driving distance limit to avoid driver fatigue. The goal is to plan efficient routes that ensure timely appliance delivery, prevent vehicle overloads, and comply with route distance constraints while covering all <num_customer> homes (<loc_customer>).",
         "data_template": {
             "num_depots": [
                 1
@@ -2432,7 +2438,8 @@
                 ]
             ]
         },
-        "label": "ovrpltw"
+        "label": "ovrpltw",
+        "index": 6
     },
     {
         "title": "Online Retail Last-Mile Delivery with Time Windows",
@@ -2767,11 +2774,12 @@
                 ]
             ]
         },
-        "label": "ovrpltw"
+        "label": "ovrpltw",
+        "index": 7
     },
     {
         "title": "Agricultural Fertilizer Distribution to Farmers",
-        "desc_split": "A cooperative delivers fertilizer to farms that require application during precise planting or soil-preparation windows (<time_window>). Each farm\u2019s location (<loc_customer>) has a specific demand (<demand> kg), and trucks must not exceed their capacity (<capacity> tons). Additionally, routes must stay within a daily distance limit to ensure timely deliveries without requiring overnight stays. The objective is to service all <num_customer> farms efficiently while respecting crop schedules, vehicle limits, and driver working hours.",
+        "desc_split": "A cooperative delivers fertilizer to farms that require application during precise planting or soil-preparation windows (<time_window>). Each farm’s location (<loc_customer>) has a specific demand (<demand> kg), and trucks must not exceed their capacity (<capacity> tons). Additionally, routes must stay within a daily distance limit to ensure timely deliveries without requiring overnight stays. The objective is to service all <num_customer> farms efficiently while respecting crop schedules, vehicle limits, and driver working hours.",
         "data_template": {
             "num_depots": [
                 1
@@ -3252,11 +3260,12 @@
                 22
             ]
         },
-        "label": "ovrpltw"
+        "label": "ovrpltw",
+        "index": 8
     },
     {
         "title": "Tourist Shuttle Service for Timed Attractions",
-        "desc_split": "A travel agency operates shuttles transporting tourists to popular attractions with timed entry slots (e.g., theme parks, museums). Each attraction (<loc_customer>) has a restricted arrival window (<time_window>), and shuttles must not exceed passenger capacity (<capacity>). Drivers must plan routes starting from a central hub (<loc_depot>) that stay within a daily distance limit to avoid excessive travel. The goal is to coordinate pickups and drop-offs so all tourists arrive on time, buses aren\u2019t overcrowded, and routes are as short as possible.",
+        "desc_split": "A travel agency operates shuttles transporting tourists to popular attractions with timed entry slots (e.g., theme parks, museums). Each attraction (<loc_customer>) has a restricted arrival window (<time_window>), and shuttles must not exceed passenger capacity (<capacity>). Drivers must plan routes starting from a central hub (<loc_depot>) that stay within a daily distance limit to avoid excessive travel. The goal is to coordinate pickups and drop-offs so all tourists arrive on time, buses aren’t overcrowded, and routes are as short as possible.",
         "data_template": {
             "num_depots": [
                 1
@@ -3698,7 +3707,8 @@
                 ]
             ]
         },
-        "label": "ovrpltw"
+        "label": "ovrpltw",
+        "index": 9
     },
     {
         "title": "Airport Catering Delivery with Time-Sensitive Meal Requirements",
@@ -3944,7 +3954,8 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpltw"
+        "label": "ovrpltw",
+        "index": 10
     },
     {
         "title": "Emergency Flood Sandbag Distribution with Time and Distance Constraints",
@@ -4190,7 +4201,8 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpltw"
+        "label": "ovrpltw",
+        "index": 11
     },
     {
         "title": "Urban EV Charging Station Replenishment with Operational Windows",
@@ -4535,7 +4547,8 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpltw"
+        "label": "ovrpltw",
+        "index": 12
     },
     {
         "title": "Agricultural Drone Battery Swaps with Precision Timing",
@@ -4737,7 +4750,8 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpltw"
+        "label": "ovrpltw",
+        "index": 13
     },
     {
         "title": "Museum Artifact Transport Between Exhibitions with Strict Schedules",
@@ -4917,7 +4931,8 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpltw"
+        "label": "ovrpltw",
+        "index": 14
     },
     {
         "title": "Critical Medical Equipment Redistribution During Outbreaks",
@@ -5086,7 +5101,8 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpltw"
+        "label": "ovrpltw",
+        "index": 15
     },
     {
         "title": "Offshore Wind Farm Turbine Component Delivery",
@@ -5288,11 +5304,12 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpltw"
+        "label": "ovrpltw",
+        "index": 16
     },
     {
         "title": "High-Precision Semiconductor Chip Delivery to Manufacturing Plants",
-        "desc_split": "A tech supplier delivers fragile semiconductor chips to semiconductor fabrication plants. Each plant has a critical time window (TW) to avoid halting production lines. The trucks have limited capacity (C) due to the chips\u2019 delicate packaging and strict vibration controls. Routes must not exceed distance limits (L) to ensure temperature-controlled environments remain stable during transit. Vehicles end their routes at the last plant to maximize delivery speed.",
+        "desc_split": "A tech supplier delivers fragile semiconductor chips to semiconductor fabrication plants. Each plant has a critical time window (TW) to avoid halting production lines. The trucks have limited capacity (C) due to the chips’ delicate packaging and strict vibration controls. Routes must not exceed distance limits (L) to ensure temperature-controlled environments remain stable during transit. Vehicles end their routes at the last plant to maximize delivery speed.",
         "data_template": {
             "num_depots": [
                 1
@@ -5644,7 +5661,8 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpltw"
+        "label": "ovrpltw",
+        "index": 17
     },
     {
         "title": "Disaster Response Drone Battery Replenishment for Flood Zones",
@@ -5890,7 +5908,8 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpltw"
+        "label": "ovrpltw",
+        "index": 18
     },
     {
         "title": "Luxury Automobile Delivery to Dealerships with Prestige Timetables",
@@ -6235,7 +6254,8 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpltw"
+        "label": "ovrpltw",
+        "index": 19
     },
     {
         "title": "Wildfire Emergency Supplies Delivery",
@@ -6886,7 +6906,8 @@
                 1.8362654447555542
             ]
         },
-        "label": "ovrpltw"
+        "label": "ovrpltw",
+        "index": 20
     },
     {
         "title": "Urban Drone Courier for Perishable Meal Kits",
@@ -7145,11 +7166,12 @@
                 ]
             ]
         },
-        "label": "ovrpltw"
+        "label": "ovrpltw",
+        "index": 21
     },
     {
         "title": "Farm-to-Market Perishable Produce Transport",
-        "desc_split": "Farmers\u2019 cooperatives need to deliver fragile produce (<demand> kg) from rural farms (<loc_depot>) to urban markets (<loc_customer>) before morning opening hours (<time_windows>). Refrigerated trucks have <capacity> ton limits and must complete deliveries within a <distance_limit> km radius to avoid excessive fuel costs and spoilage. Drivers end routes at the final market, avoiding return trips to conserve resources. The challenge is to balance load capacities, time-sensitive market schedules, and route distances to maximize product freshness and profitability.",
+        "desc_split": "Farmers’ cooperatives need to deliver fragile produce (<demand> kg) from rural farms (<loc_depot>) to urban markets (<loc_customer>) before morning opening hours (<time_windows>). Refrigerated trucks have <capacity> ton limits and must complete deliveries within a <distance_limit> km radius to avoid excessive fuel costs and spoilage. Drivers end routes at the final market, avoiding return trips to conserve resources. The challenge is to balance load capacities, time-sensitive market schedules, and route distances to maximize product freshness and profitability.",
         "data_template": {
             "num_depots": [
                 1
@@ -7656,11 +7678,12 @@
                 2.44208025932312
             ]
         },
-        "label": "ovrpltw"
+        "label": "ovrpltw",
+        "index": 22
     },
     {
         "title": "Medical Lab Sample Collection with Time-Sensitive Testing",
-        "desc_split": "A network of clinics (<loc_customer>) sends time-critical blood samples to a central lab (<loc_depot>). Refrigerated vans (<capacity> liters) collect samples, which degrade if not processed within <time_windows> hours. Each van\u2019s route must stay within a <distance_limit> km radius to ensure timely delivery, and drivers finish at the lab without returning to the depot. The goal is to minimize total travel distance while adhering to sample stability windows and vehicle storage limits.",
+        "desc_split": "A network of clinics (<loc_customer>) sends time-critical blood samples to a central lab (<loc_depot>). Refrigerated vans (<capacity> liters) collect samples, which degrade if not processed within <time_windows> hours. Each van’s route must stay within a <distance_limit> km radius to ensure timely delivery, and drivers finish at the lab without returning to the depot. The goal is to minimize total travel distance while adhering to sample stability windows and vehicle storage limits.",
         "data_template": {
             "num_depots": [
                 1
@@ -8124,7 +8147,8 @@
                 2.0641157627105713
             ]
         },
-        "label": "ovrpltw"
+        "label": "ovrpltw",
+        "index": 23
     },
     {
         "title": "Airport Ground Equipment Redistribution",
@@ -8729,7 +8753,8 @@
                 2.0408570766448975
             ]
         },
-        "label": "ovrpltw"
+        "label": "ovrpltw",
+        "index": 24
     },
     {
         "title": "Solar Panel Maintenance with Time Windows and Distance Constraints",
@@ -9083,7 +9108,8 @@
                 2.134718179702759
             ]
         },
-        "label": "ovrpltw"
+        "label": "ovrpltw",
+        "index": 25
     },
     {
         "title": "Cultural Site Preservation with Time-Windowed Access",
@@ -9469,7 +9495,8 @@
                 2.2458341121673584
             ]
         },
-        "label": "ovrpltw"
+        "label": "ovrpltw",
+        "index": 26
     },
     {
         "title": "Emergency Fire Station Replenishment with Daily Limits",
@@ -9820,7 +9847,8 @@
                 ]
             ]
         },
-        "label": "ovrpltw"
+        "label": "ovrpltw",
+        "index": 27
     },
     {
         "title": "School District Supply Delivery with Time-Windowed Drop-offs",
@@ -10415,7 +10443,8 @@
                 2.749237298965454
             ]
         },
-        "label": "ovrpltw"
+        "label": "ovrpltw",
+        "index": 28
     },
     {
         "title": "Livestock Feed Delivery with Scheduled Feeding Times",
@@ -10959,7 +10988,8 @@
                 2.026719331741333
             ]
         },
-        "label": "ovrpltw"
+        "label": "ovrpltw",
+        "index": 29
     },
     {
         "title": "Renewable Energy Equipment Delivery for Remote Installations",
@@ -11406,7 +11436,8 @@
                 2.0249290466308594
             ]
         },
-        "label": "ovrpltw"
+        "label": "ovrpltw",
+        "index": 30
     },
     {
         "title": "High-Tech Satellite Dish Installation for Rural Connectivity",
@@ -11933,7 +11964,8 @@
                 2.7071950435638428
             ]
         },
-        "label": "ovrpltw"
+        "label": "ovrpltw",
+        "index": 31
     },
     {
         "title": "Perishable Blood Plasma Transport to Emergency Clinics",
@@ -12156,11 +12188,12 @@
                 2.607032299041748
             ]
         },
-        "label": "ovrpltw"
+        "label": "ovrpltw",
+        "index": 32
     },
     {
         "title": "Vintage Wine Shipment to International Auction Houses",
-        "desc_split": "A luxury logistics firm transports fragile vintage wine crates to global auction venues. Each crate\u2019s size and weight (<demand>) must fit within climate-controlled truck capacities (<capacity>). Auction houses impose strict delivery deadlines (<time_windows>) to align with bidding schedules. Routes must stay within distance limits (<distance_limit>) to minimize temperature fluctuations during transit, and trucks are allowed to terminate at airports or customs hubs.",
+        "desc_split": "A luxury logistics firm transports fragile vintage wine crates to global auction venues. Each crate’s size and weight (<demand>) must fit within climate-controlled truck capacities (<capacity>). Auction houses impose strict delivery deadlines (<time_windows>) to align with bidding schedules. Routes must stay within distance limits (<distance_limit>) to minimize temperature fluctuations during transit, and trucks are allowed to terminate at airports or customs hubs.",
         "data_template": {
             "num_depots": [
                 1
@@ -12635,7 +12668,8 @@
                 2.5734829902648926
             ]
         },
-        "label": "ovrpltw"
+        "label": "ovrpltw",
+        "index": 33
     },
     {
         "title": "Art Exhibition Artifact Transport Between Global Museums",
@@ -13146,7 +13180,8 @@
                 2.7821056842803955
             ]
         },
-        "label": "ovrpltw"
+        "label": "ovrpltw",
+        "index": 34
     },
     {
         "title": "Satellite Launch Support Equipment Delivery",
@@ -13443,7 +13478,8 @@
                 1.2231926918029785
             ]
         },
-        "label": "ovrpltw"
+        "label": "ovrpltw",
+        "index": 35
     },
     {
         "title": "Wildlife Rescue Drone Battery Replenishment in Flood Zones",
@@ -13757,7 +13793,8 @@
                 1.0
             ]
         },
-        "label": "ovrpltw"
+        "label": "ovrpltw",
+        "index": 36
     },
     {
         "title": "High-Speed Rail Maintenance Crew Scheduling",
@@ -14048,7 +14085,8 @@
                 ]
             ]
         },
-        "label": "ovrpltw"
+        "label": "ovrpltw",
+        "index": 37
     },
     {
         "title": "Museum Artifact Transport During City Events",
@@ -14565,11 +14603,12 @@
                 ]
             ]
         },
-        "label": "ovrpltw"
+        "label": "ovrpltw",
+        "index": 38
     },
     {
         "title": "Offshore Research Station Supply Drops",
-        "desc_split": "A research vessel (<loc_depot>) must deliver scientific equipment and provisions to remote offshore platforms (<loc_customer>). Each platform requires <demand> kg of supplies, but the vessel\u2019s helicopters (<capacity>) can only carry limited loads. Drops must occur within <time_windows> dictated by tidal windows for safe landing, and flight routes must not exceed <distance_limit> km due to fuel constraints. Helicopters finish at the final platform to assist with unloading, avoiding return trips to conserve resources. The objective is to maximize supply coverage while respecting payload, distance, and tidal constraints to sustain research operations.",
+        "desc_split": "A research vessel (<loc_depot>) must deliver scientific equipment and provisions to remote offshore platforms (<loc_customer>). Each platform requires <demand> kg of supplies, but the vessel’s helicopters (<capacity>) can only carry limited loads. Drops must occur within <time_windows> dictated by tidal windows for safe landing, and flight routes must not exceed <distance_limit> km due to fuel constraints. Helicopters finish at the final platform to assist with unloading, avoiding return trips to conserve resources. The objective is to maximize supply coverage while respecting payload, distance, and tidal constraints to sustain research operations.",
         "data_template": {
             "num_depots": [
                 1
@@ -15056,11 +15095,12 @@
                 2.5044898986816406
             ]
         },
-        "label": "ovrpltw"
+        "label": "ovrpltw",
+        "index": 39
     },
     {
         "title": "Wildlife Sanctuary Equipment Delivery with Strict Timelines and Environmental Constraints",
-        "desc_split": "A wildlife sanctuary needs to deliver critical equipment\u2014such as animal feed, medical kits, and monitoring sensors\u2014to remote observation posts scattered across a protected area. Each post has a time window during which deliveries must occur to avoid disrupting animal behavior. Delivery trucks depart from a central depot but do not return, adhering to strict distance limits to minimize environmental impact. The trucks have limited cargo capacity to avoid overloading, and routes must ensure all sites are serviced within their operational hours while respecting fuel range constraints to safeguard against vehicle abandonment in sensitive ecosystems.",
+        "desc_split": "A wildlife sanctuary needs to deliver critical equipment—such as animal feed, medical kits, and monitoring sensors—to remote observation posts scattered across a protected area. Each post has a time window during which deliveries must occur to avoid disrupting animal behavior. Delivery trucks depart from a central depot but do not return, adhering to strict distance limits to minimize environmental impact. The trucks have limited cargo capacity to avoid overloading, and routes must ensure all sites are serviced within their operational hours while respecting fuel range constraints to safeguard against vehicle abandonment in sensitive ecosystems.",
         "data_template": {
             "num_depots": [
                 1
@@ -15225,7 +15265,8 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpltw"
+        "label": "ovrpltw",
+        "index": 40
     },
     {
         "title": "Urban EV Charging Station Emergency Supply During Power Outage",
@@ -15416,7 +15457,8 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpltw"
+        "label": "ovrpltw",
+        "index": 41
     },
     {
         "title": "Precision Agriculture Drone Battery Replenishment for Crop Monitoring",
@@ -15574,11 +15616,12 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpltw"
+        "label": "ovrpltw",
+        "index": 42
     },
     {
         "title": "High-Value Art Transport Between Museums with Security Constraints",
-        "desc_split": "A logistics company transports valuable artworks between museums with strict security protocols. Each museum has a time window for receiving deliveries to align with guarded access hours. Delivery trucks carry a limited number of artworks to minimize risk and cannot return to the depot post-delivery due to insurance requirements. Additionally, routes must stay within a maximum distance to comply with safety regulations. The challenge is to design routes that respect museums\u2019 schedules, vehicle capacity, and distance constraints while minimizing transit risks.",
+        "desc_split": "A logistics company transports valuable artworks between museums with strict security protocols. Each museum has a time window for receiving deliveries to align with guarded access hours. Delivery trucks carry a limited number of artworks to minimize risk and cannot return to the depot post-delivery due to insurance requirements. Additionally, routes must stay within a maximum distance to comply with safety regulations. The challenge is to design routes that respect museums’ schedules, vehicle capacity, and distance constraints while minimizing transit risks.",
         "data_template": {
             "num_depots": [
                 1
@@ -15864,11 +15907,12 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpltw"
+        "label": "ovrpltw",
+        "index": 43
     },
     {
         "title": "Offshore Research Station Emergency Medical Supply Delivery",
-        "desc_split": "A network of offshore research stations faces a health crisis requiring urgent medical supplies. Helicopters depart from a mainland depot to deliver critical kits but must adhere to time windows dictated by weather and operational safety. Each helicopter has limited cargo space and must complete its route within a maximum distance to ensure pilot and equipment safety. Routes end at the final destination without returning to the depot, balancing capacity, distance limits, and strict delivery windows to safeguard researchers\u2019 well-being.",
+        "desc_split": "A network of offshore research stations faces a health crisis requiring urgent medical supplies. Helicopters depart from a mainland depot to deliver critical kits but must adhere to time windows dictated by weather and operational safety. Each helicopter has limited cargo space and must complete its route within a maximum distance to ensure pilot and equipment safety. Routes end at the final destination without returning to the depot, balancing capacity, distance limits, and strict delivery windows to safeguard researchers’ well-being.",
         "data_template": {
             "num_depots": [
                 1
@@ -16143,7 +16187,8 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpltw"
+        "label": "ovrpltw",
+        "index": 44
     },
     {
         "title": "Cruise Ship Provisions Delivery with Docking Time Windows",
@@ -16510,11 +16555,12 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpltw"
+        "label": "ovrpltw",
+        "index": 45
     },
     {
         "title": "Emergency Aid Delivery to Remote Arctic Communities via Seasonal Ice Roads",
-        "desc_split": "In Arctic regions, remote communities rely on ice roads that become accessible only during specific seasonal windows (TW). Trucks (C) must deliver critical supplies (food, medical kits) to these communities before the ice weakens beyond safe travel limits (L). Routes must conclude at the last community served (O), as returning requires waiting for winter freeze-up. The task is to plan efficient paths that meet each community\u2019s delivery deadlines while avoiding overloading trucks and exceeding the ice road\u2019s distance restrictions.",
+        "desc_split": "In Arctic regions, remote communities rely on ice roads that become accessible only during specific seasonal windows (TW). Trucks (C) must deliver critical supplies (food, medical kits) to these communities before the ice weakens beyond safe travel limits (L). Routes must conclude at the last community served (O), as returning requires waiting for winter freeze-up. The task is to plan efficient paths that meet each community’s delivery deadlines while avoiding overloading trucks and exceeding the ice road’s distance restrictions.",
         "data_template": {
             "num_depots": [
                 1
@@ -16866,7 +16912,8 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpltw"
+        "label": "ovrpltw",
+        "index": 46
     },
     {
         "title": "Mountain Rescue Equipment Transport Amidst Storm Deadlines",
@@ -17068,7 +17115,8 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpltw"
+        "label": "ovrpltw",
+        "index": 47
     },
     {
         "title": "Live Aquatic Animal Transport to Aquariums with Climate Constraints",
@@ -17347,7 +17395,8 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpltw"
+        "label": "ovrpltw",
+        "index": 48
     },
     {
         "title": "Satellite Component Delivery for Launch Windows with Global Constraints",
@@ -17593,7 +17642,8 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpltw"
+        "label": "ovrpltw",
+        "index": 49
     },
     {
         "title": "Rocket Component Delivery to Spaceport with Launch Window Constraints",
@@ -18124,7 +18174,8 @@
                 1.9171652793884277
             ]
         },
-        "label": "ovrpltw"
+        "label": "ovrpltw",
+        "index": 50
     },
     {
         "title": "High-Value Electronics Delivery to Data Centers with Installation Timelines",
@@ -18455,7 +18506,8 @@
                 ]
             ]
         },
-        "label": "ovrpltw"
+        "label": "ovrpltw",
+        "index": 51
     },
     {
         "title": "Earthquake Relief Supply Distribution with Time-Sensitive Delivery Zones",
@@ -18826,7 +18878,8 @@
                 1.6314326524734497
             ]
         },
-        "label": "ovrpltw"
+        "label": "ovrpltw",
+        "index": 52
     },
     {
         "title": "Live Animal Transport to Zoos with Health and Safety Protocols",
@@ -19297,7 +19350,8 @@
                 2.2166640758514404
             ]
         },
-        "label": "ovrpltw"
+        "label": "ovrpltw",
+        "index": 53
     },
     {
         "title": "Offshore Oil Rig Equipment Delivery During Maintenance Windows",
@@ -19922,11 +19976,12 @@
                 2.4578447341918945
             ]
         },
-        "label": "ovrpltw"
+        "label": "ovrpltw",
+        "index": 54
     },
     {
         "title": "Space Station Resupply Mission",
-        "desc_split": "NASA\u2019s logistics team must deliver critical supplies to the International Space Station (ISS) using unmanned cargo spacecraft. The depot (<loc_depot>) launches spacecraft with a maximum payload capacity of <capacity> kg. Each resupply mission (<loc_customer>) has specific cargo demands (<demand>), including scientific equipment and life support materials. Launch windows (<time_windows>) are strictly tied to orbital synchronization periods, and the spacecraft must reach the ISS before its onboard fuel depletes (<distance_limit> km). Routes must ensure all payloads are delivered without exceeding capacity limits, adhering to time-critical docking slots, and ending at the ISS (no return to Earth).",
+        "desc_split": "NASA’s logistics team must deliver critical supplies to the International Space Station (ISS) using unmanned cargo spacecraft. The depot (<loc_depot>) launches spacecraft with a maximum payload capacity of <capacity> kg. Each resupply mission (<loc_customer>) has specific cargo demands (<demand>), including scientific equipment and life support materials. Launch windows (<time_windows>) are strictly tied to orbital synchronization periods, and the spacecraft must reach the ISS before its onboard fuel depletes (<distance_limit> km). Routes must ensure all payloads are delivered without exceeding capacity limits, adhering to time-critical docking slots, and ending at the ISS (no return to Earth).",
         "data_template": {
             "num_depots": [
                 1
@@ -20473,7 +20528,8 @@
                 2.4940505027770996
             ]
         },
-        "label": "ovrpltw"
+        "label": "ovrpltw",
+        "index": 55
     },
     {
         "title": "Wildlife Conservation Animal Relocation",
@@ -20784,11 +20840,12 @@
                 ]
             ]
         },
-        "label": "ovrpltw"
+        "label": "ovrpltw",
+        "index": 56
     },
     {
         "title": "Satellite Launch Component Delivery",
-        "desc_split": "A aerospace company must transport sensitive satellite components to remote launch pads. The depot (<loc_depot>) uses specialized trucks with a <capacity> kg payload limit. Each launch site (<loc_customer>) requires components weighing <demand> kg, and delivery must occur within a narrow time window (<time_windows>) aligned with the satellite\u2019s launch window. Trucks cannot exceed a <distance_limit> km range due to unstable terrain and limited refueling options. Routes must ensure components arrive intact without overloading vehicles and end at the launch pad (no return).",
+        "desc_split": "A aerospace company must transport sensitive satellite components to remote launch pads. The depot (<loc_depot>) uses specialized trucks with a <capacity> kg payload limit. Each launch site (<loc_customer>) requires components weighing <demand> kg, and delivery must occur within a narrow time window (<time_windows>) aligned with the satellite’s launch window. Trucks cannot exceed a <distance_limit> km range due to unstable terrain and limited refueling options. Routes must ensure components arrive intact without overloading vehicles and end at the launch pad (no return).",
         "data_template": {
             "num_depots": [
                 1
@@ -21415,7 +21472,8 @@
                 2.7874584197998047
             ]
         },
-        "label": "ovrpltw"
+        "label": "ovrpltw",
+        "index": 57
     },
     {
         "title": "Offshore Wind Turbine Inspection",
@@ -21946,7 +22004,8 @@
                 1.8926039934158325
             ]
         },
-        "label": "ovrpltw"
+        "label": "ovrpltw",
+        "index": 58
     },
     {
         "title": "Arctic Research Supply via Seasonal Ice Roads",
@@ -22457,7 +22516,8 @@
                 2.2846100330352783
             ]
         },
-        "label": "ovrpltw"
+        "label": "ovrpltw",
+        "index": 59
     },
     {
         "title": "Rural Broadband Deployment with Time-Critical Equipment Deliveries",
@@ -22817,11 +22877,12 @@
                 2.342308282852173
             ]
         },
-        "label": "ovrpltw"
+        "label": "ovrpltw",
+        "index": 60
     },
     {
         "title": "Satellite Launch Component Delivery with Countdown Timetables",
-        "desc_split": "A space agency needs to transport specialized rocket components (<demand>) to a launchpad (<loc_customer>) for an upcoming satellite deployment. Each component must arrive within precise time windows (<time_windows>) that align with the rocket\u2019s countdown schedule. Delivery trucks are subject to a <capacity> ton limit for sensitive cargo and must traverse mountainous terrain within a <distance_limit> range to prevent mechanical strain. Routes are open-ended (ending at the launchpad) to accommodate on-site assembly timelines.",
+        "desc_split": "A space agency needs to transport specialized rocket components (<demand>) to a launchpad (<loc_customer>) for an upcoming satellite deployment. Each component must arrive within precise time windows (<time_windows>) that align with the rocket’s countdown schedule. Delivery trucks are subject to a <capacity> ton limit for sensitive cargo and must traverse mountainous terrain within a <distance_limit> range to prevent mechanical strain. Routes are open-ended (ending at the launchpad) to accommodate on-site assembly timelines.",
         "data_template": {
             "num_depots": [
                 1
@@ -23082,7 +23143,8 @@
                 2.0519585609436035
             ]
         },
-        "label": "ovrpltw"
+        "label": "ovrpltw",
+        "index": 61
     },
     {
         "title": "Mountain Rescue Supplies with Weather-Dependent Delivery Windows",
@@ -23522,7 +23584,8 @@
                 ]
             ]
         },
-        "label": "ovrpltw"
+        "label": "ovrpltw",
+        "index": 62
     },
     {
         "title": "Live Event Catering with Concurrent Meal Service Timings",
@@ -23940,7 +24003,8 @@
                 2.179579734802246
             ]
         },
-        "label": "ovrpltw"
+        "label": "ovrpltw",
+        "index": 63
     },
     {
         "title": "Offshore Oil Rig Maintenance During Restricted Access Windows",
@@ -24470,11 +24534,12 @@
                 2.5775718688964844
             ]
         },
-        "label": "ovrpltw"
+        "label": "ovrpltw",
+        "index": 64
     },
     {
         "title": "Coral Reef Restoration Supply Delivery",
-        "desc_split": "A marine conservation team deploys divers to plant coral fragments in designated reef zones across a protected marine area. The team operates from a central research vessel (<loc_depot>) and must deliver specialized equipment (<demand> kg per site) to multiple underwater restoration sites (<loc_customer>). Each site has a narrow time window (<time_windows>) during favorable tides for safe diving operations. Divers\u2019 backpacks are limited to <capacity> kg of equipment, and the supply boat must return before sunset (<distance_limit> km round-trip limit to avoid night navigation). Routes must ensure all sites are serviced within their tidal windows while adhering to equipment capacity and daylight distance constraints.",
+        "desc_split": "A marine conservation team deploys divers to plant coral fragments in designated reef zones across a protected marine area. The team operates from a central research vessel (<loc_depot>) and must deliver specialized equipment (<demand> kg per site) to multiple underwater restoration sites (<loc_customer>). Each site has a narrow time window (<time_windows>) during favorable tides for safe diving operations. Divers’ backpacks are limited to <capacity> kg of equipment, and the supply boat must return before sunset (<distance_limit> km round-trip limit to avoid night navigation). Routes must ensure all sites are serviced within their tidal windows while adhering to equipment capacity and daylight distance constraints.",
         "data_template": {
             "num_depots": [
                 1
@@ -24961,7 +25026,8 @@
                 1.6309330463409424
             ]
         },
-        "label": "ovrpltw"
+        "label": "ovrpltw",
+        "index": 65
     },
     {
         "title": "Rural Internet Satellite Dish Installation with Access Windows",
@@ -25452,7 +25518,8 @@
                 ]
             ]
         },
-        "label": "ovrpltw"
+        "label": "ovrpltw",
+        "index": 66
     },
     {
         "title": "Emergency Flood Rescue Supplies with Tidal Constraints",
@@ -25843,7 +25910,8 @@
                 ]
             ]
         },
-        "label": "ovrpltw"
+        "label": "ovrpltw",
+        "index": 67
     },
     {
         "title": "High-Altitude Weather Station Maintenance",
@@ -26154,11 +26222,12 @@
                 2.3750672340393066
             ]
         },
-        "label": "ovrpltw"
+        "label": "ovrpltw",
+        "index": 68
     },
     {
         "title": "Underwater Archaeology Equipment Deployment",
-        "desc_split": "A team of marine archaeologists deploys submersible drones (<demand> kg per site) to survey shipwrecks (<loc_customer>). Drones are launched from a research ship (<loc_depot>), with each deployment requiring precise timing (<time_windows>) to coincide with optimal underwater visibility. The ship\u2019s crane can carry only <capacity> kg of equipment per trip, and the vessel must remain within a <distance_limit> km radius to ensure radio communication. Routes are designed to end at the last survey site without returning, maximizing exploration time while respecting operational limits.",
+        "desc_split": "A team of marine archaeologists deploys submersible drones (<demand> kg per site) to survey shipwrecks (<loc_customer>). Drones are launched from a research ship (<loc_depot>), with each deployment requiring precise timing (<time_windows>) to coincide with optimal underwater visibility. The ship’s crane can carry only <capacity> kg of equipment per trip, and the vessel must remain within a <distance_limit> km radius to ensure radio communication. Routes are designed to end at the last survey site without returning, maximizing exploration time while respecting operational limits.",
         "data_template": {
             "num_depots": [
                 1
@@ -26585,7 +26654,8 @@
                 2.2497305870056152
             ]
         },
-        "label": "ovrpltw"
+        "label": "ovrpltw",
+        "index": 69
     },
     {
         "title": "Perishable Flower Delivery for Event Venues",
@@ -26778,7 +26848,8 @@
                 2.4872634410858154
             ]
         },
-        "label": "ovrpltw"
+        "label": "ovrpltw",
+        "index": 70
     },
     {
         "title": "Mountain Research Station Supplies with Weather Windows",
@@ -27025,7 +27096,8 @@
                 2.6758103370666504
             ]
         },
-        "label": "ovrpltw"
+        "label": "ovrpltw",
+        "index": 71
     },
     {
         "title": "Autonomous Urban Parcel Delivery with Battery Constraints",
@@ -27362,7 +27434,8 @@
                 1.0
             ]
         },
-        "label": "ovrpltw"
+        "label": "ovrpltw",
+        "index": 72
     },
     {
         "title": "Offshore Wind Turbine Maintenance with Tidal Windows",
@@ -27864,7 +27937,8 @@
                 2.2027695178985596
             ]
         },
-        "label": "ovrpltw"
+        "label": "ovrpltw",
+        "index": 73
     },
     {
         "title": "High-Tech Semiconductor Delivery to Data Centers",
@@ -28276,7 +28350,8 @@
                 2.211169481277466
             ]
         },
-        "label": "ovrpltw"
+        "label": "ovrpltw",
+        "index": 74
     },
     {
         "title": "Urban Emergency Medical Drone Delivery in a Disaster Zone",
@@ -28725,7 +28800,8 @@
                 2.5532875061035156
             ]
         },
-        "label": "ovrpltw"
+        "label": "ovrpltw",
+        "index": 75
     },
     {
         "title": "Space Telescope Component Delivery to Remote Launch Sites",
@@ -29116,7 +29192,8 @@
                 2.681973457336426
             ]
         },
-        "label": "ovrpltw"
+        "label": "ovrpltw",
+        "index": 76
     },
     {
         "title": "Mountain Rescue Equipment Delivery During Avalanche Season",
@@ -29547,7 +29624,8 @@
                 2.7656943798065186
             ]
         },
-        "label": "ovrpltw"
+        "label": "ovrpltw",
+        "index": 77
     },
     {
         "title": "High-Value Art Transport Across International Borders with Security Time Windows",
@@ -30138,7 +30216,8 @@
                 2.378093719482422
             ]
         },
-        "label": "ovrpltw"
+        "label": "ovrpltw",
+        "index": 78
     },
     {
         "title": "Precision Agriculture Sensor Deployment in Flood-Prone Regions",
@@ -30429,7 +30508,8 @@
                 2.2523460388183594
             ]
         },
-        "label": "ovrpltw"
+        "label": "ovrpltw",
+        "index": 79
     },
     {
         "title": "Marine Research Equipment Deployment to Coral Monitoring Sites",
@@ -30860,7 +30940,8 @@
                 2.3071374893188477
             ]
         },
-        "label": "ovrpltw"
+        "label": "ovrpltw",
+        "index": 80
     },
     {
         "title": "Arctic Scientific Supply Drops to Research Outposts",
@@ -31331,7 +31412,8 @@
                 ]
             ]
         },
-        "label": "ovrpltw"
+        "label": "ovrpltw",
+        "index": 81
     },
     {
         "title": "Urban Vertical Farm Produce Delivery with Perishability Constraints",
@@ -31803,7 +31885,8 @@
                 2.620091199874878
             ]
         },
-        "label": "ovrpltw"
+        "label": "ovrpltw",
+        "index": 82
     },
     {
         "title": "Mountain Weather Station Resupply During Avalanche Windows",
@@ -32214,7 +32297,8 @@
                 ]
             ]
         },
-        "label": "ovrpltw"
+        "label": "ovrpltw",
+        "index": 83
     },
     {
         "title": "Subterranean Mine Equipment Redistribution with Shift Timetables",
@@ -32526,7 +32610,8 @@
                 2.148432493209839
             ]
         },
-        "label": "ovrpltw"
+        "label": "ovrpltw",
+        "index": 84
     },
     {
         "title": "Hospital Linen Supply Chain Optimization",
@@ -33077,11 +33162,12 @@
                 2.7228055000305176
             ]
         },
-        "label": "ovrpltw"
+        "label": "ovrpltw",
+        "index": 85
     },
     {
         "title": "Maritime Cruise Ship Provisions Delivery",
-        "desc_split": "A cruise line operates ships that dock at various ports (<loc_customer>) with tightly scheduled arrival/departure times (<time_windows>). A logistics company must deliver perishable food and supplies from a coastal warehouse (<loc_depot>) using cargo vessels with <capacity> ton capacity. Each ship\u2019s cargo hold demand (<demand>) varies, and vessels must reach the ship within its docking window. Additionally, each delivery route cannot exceed <distance_limit> nautical miles due to fuel and crew regulations. Routes are open-ended, ending at the final port to avoid unnecessary return trips. The goal is to coordinate timing, load capacities, and distance constraints to prevent costly delays or missed connections.",
+        "desc_split": "A cruise line operates ships that dock at various ports (<loc_customer>) with tightly scheduled arrival/departure times (<time_windows>). A logistics company must deliver perishable food and supplies from a coastal warehouse (<loc_depot>) using cargo vessels with <capacity> ton capacity. Each ship’s cargo hold demand (<demand>) varies, and vessels must reach the ship within its docking window. Additionally, each delivery route cannot exceed <distance_limit> nautical miles due to fuel and crew regulations. Routes are open-ended, ending at the final port to avoid unnecessary return trips. The goal is to coordinate timing, load capacities, and distance constraints to prevent costly delays or missed connections.",
         "data_template": {
             "num_depots": [
                 1
@@ -33728,11 +33814,12 @@
                 2.4808921813964844
             ]
         },
-        "label": "ovrpltw"
+        "label": "ovrpltw",
+        "index": 86
     },
     {
         "title": "Urban Food Bank Emergency Aid Distribution",
-        "desc_split": "During a natural disaster, food banks must deliver perishable aid packages (<demand>) to evacuation centers (<loc_customer>). Trucks (<capacity> kg capacity) depart from a central hub (<loc_depot>), but each center has a critical time window (<time_windows>) for receiving supplies before refrigeration systems fail. Routes are restricted to <distance_limit> kilometers to prioritize nearby areas first. Vehicles are not required to return to the depot, allowing drivers to assist at the final destination post-delivery. The problem requires managing perishable goods\u2019 shelf life, strict time constraints, and vehicle capacities while minimizing travel distances to maximize aid coverage.",
+        "desc_split": "During a natural disaster, food banks must deliver perishable aid packages (<demand>) to evacuation centers (<loc_customer>). Trucks (<capacity> kg capacity) depart from a central hub (<loc_depot>), but each center has a critical time window (<time_windows>) for receiving supplies before refrigeration systems fail. Routes are restricted to <distance_limit> kilometers to prioritize nearby areas first. Vehicles are not required to return to the depot, allowing drivers to assist at the final destination post-delivery. The problem requires managing perishable goods’ shelf life, strict time constraints, and vehicle capacities while minimizing travel distances to maximize aid coverage.",
         "data_template": {
             "num_depots": [
                 1
@@ -34359,7 +34446,8 @@
                 2.632970094680786
             ]
         },
-        "label": "ovrpltw"
+        "label": "ovrpltw",
+        "index": 87
     },
     {
         "title": "Aircraft Component Delivery for Scheduled Maintenance",
@@ -34750,11 +34838,12 @@
                 2.046865940093994
             ]
         },
-        "label": "ovrpltw"
+        "label": "ovrpltw",
+        "index": 88
     },
     {
         "title": "Mountain Rescue Helicopter Refueling Operations",
-        "desc_split": "Helicopter rescue teams stationed at a central base (<loc_depot>) require mid-mission refueling during ongoing mountain rescue operations. Refueling trucks must deliver <demand> liters of aviation fuel to stranded helicopters (<loc_customer>) positioned across rugged terrain. Each helicopter\u2019s refueling window (<time_windows>) is dictated by weather forecasts and rescue priorities. Trucks (<capacity> liters capacity) must navigate mountainous routes within <distance_limit> kilometers to avoid running out of fuel themselves. Routes end at the final helicopter site to ensure immediate refueling, with no return to base required. The solution must balance fuel capacity, terrain navigation, and time-critical constraints to save lives.",
+        "desc_split": "Helicopter rescue teams stationed at a central base (<loc_depot>) require mid-mission refueling during ongoing mountain rescue operations. Refueling trucks must deliver <demand> liters of aviation fuel to stranded helicopters (<loc_customer>) positioned across rugged terrain. Each helicopter’s refueling window (<time_windows>) is dictated by weather forecasts and rescue priorities. Trucks (<capacity> liters capacity) must navigate mountainous routes within <distance_limit> kilometers to avoid running out of fuel themselves. Routes end at the final helicopter site to ensure immediate refueling, with no return to base required. The solution must balance fuel capacity, terrain navigation, and time-critical constraints to save lives.",
         "data_template": {
             "num_depots": [
                 1
@@ -35401,7 +35490,8 @@
                 2.6184234619140625
             ]
         },
-        "label": "ovrpltw"
+        "label": "ovrpltw",
+        "index": 89
     },
     {
         "title": "Polar Research Equipment Transport Across Seasonal Ice Passages",
@@ -35896,7 +35986,8 @@
                 0.22857142984867096
             ]
         },
-        "label": "ovrpltw"
+        "label": "ovrpltw",
+        "index": 90
     },
     {
         "title": "Urban Food Rescue with Perishable Donations and Time-Sensitive Deadlines",
@@ -36341,7 +36432,8 @@
                 1.7245006561279297
             ]
         },
-        "label": "ovrpltw"
+        "label": "ovrpltw",
+        "index": 91
     },
     {
         "title": "Autonomous Cargo Drones Delivering Time-Sensitive Legal Documents",
@@ -36803,11 +36895,12 @@
                 ]
             ]
         },
-        "label": "ovrpltw"
+        "label": "ovrpltw",
+        "index": 92
     },
     {
         "title": "Mountain Climber Emergency Oxygen Delivery During Weather Windows",
-        "desc_split": "A rescue team uses helicopters to deliver oxygen canisters to stranded climbers on a high-altitude mountain. Each helicopter has a limited capacity (<capacity> canisters) and must operate within weather-permitted time windows (<time_windows>) when visibility is safe. Routes must stay under a maximum distance (<distance_limit>) due to fuel constraints, and helicopters can land at the climbers\u2019 final location (open routes) to maximize rescue efficiency.",
+        "desc_split": "A rescue team uses helicopters to deliver oxygen canisters to stranded climbers on a high-altitude mountain. Each helicopter has a limited capacity (<capacity> canisters) and must operate within weather-permitted time windows (<time_windows>) when visibility is safe. Routes must stay under a maximum distance (<distance_limit>) due to fuel constraints, and helicopters can land at the climbers’ final location (open routes) to maximize rescue efficiency.",
         "data_template": {
             "num_depots": [
                 1
@@ -37269,7 +37362,8 @@
                 2.4010040760040283
             ]
         },
-        "label": "ovrpltw"
+        "label": "ovrpltw",
+        "index": 93
     },
     {
         "title": "Offshore Research Vessel Supply Drops with Tidal and Fuel Constraints",
@@ -37874,7 +37968,8 @@
                 1.7497426271438599
             ]
         },
-        "label": "ovrpltw"
+        "label": "ovrpltw",
+        "index": 94
     },
     {
         "title": "Film Equipment Delivery for Movie Set Schedules",
@@ -38197,7 +38292,8 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpltw"
+        "label": "ovrpltw",
+        "index": 95
     },
     {
         "title": "Emergency Communication Hub Setup in Disaster Zones",
@@ -38355,7 +38451,8 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpltw"
+        "label": "ovrpltw",
+        "index": 96
     },
     {
         "title": "High-Tech Laboratory Equipment Delivery for Scientific Conferences",
@@ -38689,7 +38786,8 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpltw"
+        "label": "ovrpltw",
+        "index": 97
     },
     {
         "title": "Underwater Archaeology Equipment Deployment with Time Windows",
@@ -39023,7 +39121,8 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpltw"
+        "label": "ovrpltw",
+        "index": 98
     },
     {
         "title": "Precision Agriculture Drone Swarms for Crop Monitoring",
@@ -39181,6 +39280,7 @@
             ]
         },
         "user_template": {},
-        "label": "ovrpltw"
+        "label": "ovrpltw",
+        "index": 99
     }
 ]

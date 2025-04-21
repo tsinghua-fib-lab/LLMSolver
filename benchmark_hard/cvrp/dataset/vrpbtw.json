@@ -550,7 +550,8 @@
                 ]
             ]
         },
-        "label": "vrpbtw"
+        "label": "vrpbtw",
+        "index": 0
     },
     {
         "title": "Perishable Farm-to-Table Delivery with Return Packaging",
@@ -908,7 +909,8 @@
                 ]
             ]
         },
-        "label": "vrpbtw"
+        "label": "vrpbtw",
+        "index": 1
     },
     {
         "title": "Library Bookmobile Routing with Returns",
@@ -1251,7 +1253,8 @@
                 ]
             ]
         },
-        "label": "vrpbtw"
+        "label": "vrpbtw",
+        "index": 2
     },
     {
         "title": "Industrial Parts Just-in-Time Delivery with Core Returns",
@@ -1882,7 +1885,8 @@
                 1.0
             ]
         },
-        "label": "vrpbtw"
+        "label": "vrpbtw",
+        "index": 3
     },
     {
         "title": "E-Commerce Reverse Logistics with Same-Day Windows",
@@ -2561,7 +2565,8 @@
                 ]
             ]
         },
-        "label": "vrpbtw"
+        "label": "vrpbtw",
+        "index": 4
     },
     {
         "title": "Hospital Pharmacy Delivery and Medical Waste Collection",
@@ -3213,7 +3218,8 @@
                 0.0
             ]
         },
-        "label": "vrpbtw"
+        "label": "vrpbtw",
+        "index": 5
     },
     {
         "title": "Fresh Flower Distribution and Wilting Bouquet Returns",
@@ -3619,7 +3625,8 @@
                 0.0
             ]
         },
-        "label": "vrpbtw"
+        "label": "vrpbtw",
+        "index": 6
     },
     {
         "title": "School Meal Delivery and Reusable Container Recycling",
@@ -4183,7 +4190,8 @@
                 0.0
             ]
         },
-        "label": "vrpbtw"
+        "label": "vrpbtw",
+        "index": 7
     },
     {
         "title": "Luxury Retail Inventory Replenishment with Defective Returns",
@@ -4820,7 +4828,8 @@
                 0.1428571492433548
             ]
         },
-        "label": "vrpbtw"
+        "label": "vrpbtw",
+        "index": 8
     },
     {
         "title": "Film Set Equipment Logistics with Prop Returns",
@@ -5352,7 +5361,8 @@
                 0.20588235557079315
             ]
         },
-        "label": "vrpbtw"
+        "label": "vrpbtw",
+        "index": 9
     },
     {
         "title": "Organic Grocery Delivery with Compost Collection",
@@ -5674,7 +5684,8 @@
                 0.2666666805744171
             ]
         },
-        "label": "vrpbtw"
+        "label": "vrpbtw",
+        "index": 10
     },
     {
         "title": "Art Gallery Exhibition Rotation Logistics",
@@ -6146,7 +6157,8 @@
                 ]
             ]
         },
-        "label": "vrpbtw"
+        "label": "vrpbtw",
+        "index": 11
     },
     {
         "title": "Mobile COVID-19 Vaccination Clinic Routing",
@@ -6618,7 +6630,8 @@
                 0.30000001192092896
             ]
         },
-        "label": "vrpbtw"
+        "label": "vrpbtw",
+        "index": 12
     },
     {
         "title": "Construction Material Delivery with Debris Removal",
@@ -7048,7 +7061,8 @@
                 0.23333333432674408
             ]
         },
-        "label": "vrpbtw"
+        "label": "vrpbtw",
+        "index": 13
     },
     {
         "title": "Corporate Laptop Refresh Program Logistics",
@@ -7394,7 +7408,8 @@
                 0.0
             ]
         },
-        "label": "vrpbtw"
+        "label": "vrpbtw",
+        "index": 14
     },
     {
         "title": "Mobile Blood Donation Unit Routing with Sample Returns",
@@ -7821,7 +7836,8 @@
                 ]
             ]
         },
-        "label": "vrpbtw"
+        "label": "vrpbtw",
+        "index": 15
     },
     {
         "title": "Luxury Fashion Pop-Up Shop Inventory Rotation",
@@ -8095,7 +8111,8 @@
                 0.0
             ]
         },
-        "label": "vrpbtw"
+        "label": "vrpbtw",
+        "index": 16
     },
     {
         "title": "Marine Research Vessel Sampling Expedition",
@@ -8535,7 +8552,8 @@
                 1.0
             ]
         },
-        "label": "vrpbtw"
+        "label": "vrpbtw",
+        "index": 17
     },
     {
         "title": "Festival Catering Logistics with Zero-Waste Policy",
@@ -8937,7 +8955,8 @@
                 1.0
             ]
         },
-        "label": "vrpbtw"
+        "label": "vrpbtw",
+        "index": 18
     },
     {
         "title": "Semiconductor Wafer Fab Distribution with Defect Returns",
@@ -9453,7 +9472,8 @@
                 1.0
             ]
         },
-        "label": "vrpbtw"
+        "label": "vrpbtw",
+        "index": 19
     },
     {
         "title": "Mobile Laundry Service for Homeless Shelters",
@@ -10105,7 +10125,8 @@
                 0.0
             ]
         },
-        "label": "vrpbtw"
+        "label": "vrpbtw",
+        "index": 20
     },
     {
         "title": "Aquaculture Feed Delivery and Harvest Collection",
@@ -10673,7 +10694,8 @@
                 0.0
             ]
         },
-        "label": "vrpbtw"
+        "label": "vrpbtw",
+        "index": 21
     },
     {
         "title": "Corporate Document Shredding and Secure Storage Rotation",
@@ -11262,7 +11284,8 @@
                 0.0
             ]
         },
-        "label": "vrpbtw"
+        "label": "vrpbtw",
+        "index": 22
     },
     {
         "title": "Film Location Catering with Prop Recycling",
@@ -11683,7 +11706,8 @@
                 0.0
             ]
         },
-        "label": "vrpbtw"
+        "label": "vrpbtw",
+        "index": 23
     },
     {
         "title": "Beehive Pollination Service with Honey Extraction",
@@ -12020,7 +12044,8 @@
                 0.0
             ]
         },
-        "label": "vrpbtw"
+        "label": "vrpbtw",
+        "index": 24
     },
     {
         "title": "Mobile Vaccination Clinic with Sample Returns",
@@ -12657,7 +12682,8 @@
                 ]
             ]
         },
-        "label": "vrpbtw"
+        "label": "vrpbtw",
+        "index": 25
     },
     {
         "title": "Sustainable Fashion Pop-Up with Return Logistics",
@@ -13003,7 +13029,8 @@
                 0.0
             ]
         },
-        "label": "vrpbtw"
+        "label": "vrpbtw",
+        "index": 26
     },
     {
         "title": "Smartphone Trade-In Fleet Routing",
@@ -13469,7 +13496,8 @@
                 0.0
             ]
         },
-        "label": "vrpbtw"
+        "label": "vrpbtw",
+        "index": 27
     },
     {
         "title": "Oceanographic Sensor Maintenance Routing",
@@ -14046,7 +14074,8 @@
                 0.1764705926179886
             ]
         },
-        "label": "vrpbtw"
+        "label": "vrpbtw",
+        "index": 28
     },
     {
         "title": "Zero-Waste Event Catering Logistics",
@@ -14686,7 +14715,8 @@
                 0.02857142873108387
             ]
         },
-        "label": "vrpbtw"
+        "label": "vrpbtw",
+        "index": 29
     },
     {
         "title": "Mobile Vet Clinic Routing with Pet Return Logistics",
@@ -15331,11 +15361,12 @@
                 0.15240231156349182
             ]
         },
-        "label": "vrpbtw"
+        "label": "vrpbtw",
+        "index": 30
     },
     {
         "title": "Reusable Packaging Logistics for Meal Kit Subscriptions",
-        "desc_split": "A meal kit company delivers fresh ingredients (<demand_linehaul>) to subscribers (<loc_customer>) and retrieves reusable ice packs/containers (<demand_backhaul>) within designated 2-hour windows (<time_windows>) to align with home availability. Vehicles (<capacity>) must avoid mixing deliveries and returns to prevent temperature breaches. Late pickups risk container shortages for the next day\u2019s operations.",
+        "desc_split": "A meal kit company delivers fresh ingredients (<demand_linehaul>) to subscribers (<loc_customer>) and retrieves reusable ice packs/containers (<demand_backhaul>) within designated 2-hour windows (<time_windows>) to align with home availability. Vehicles (<capacity>) must avoid mixing deliveries and returns to prevent temperature breaches. Late pickups risk container shortages for the next day’s operations.",
         "data_template": {
             "num_depots": [
                 1
@@ -15668,7 +15699,8 @@
                 1.0
             ]
         },
-        "label": "vrpbtw"
+        "label": "vrpbtw",
+        "index": 31
     },
     {
         "title": "Museum Artifact Loan Logistics with Curatorial Time Constraints",
@@ -16236,7 +16268,8 @@
                 ]
             ]
         },
-        "label": "vrpbtw"
+        "label": "vrpbtw",
+        "index": 32
     },
     {
         "title": "Urban Tree Planting & Maintenance Routing",
@@ -16720,11 +16753,12 @@
                 ]
             ]
         },
-        "label": "vrpbtw"
+        "label": "vrpbtw",
+        "index": 33
     },
     {
         "title": "Mobile STEM Lab Rotation for Rural Schools",
-        "desc_split": "An educational nonprofit transports lab equipment (<demand_linehaul>) to schools (<loc_customer>) on fixed dates (<time_windows>) and retrieves last week\u2019s kits (<demand_backhaul>). Vans (<capacity>) must prioritize deliveries to remote schools with early dismissal times. Late pickups disrupt other schools\u2019 schedules in the rotation.",
+        "desc_split": "An educational nonprofit transports lab equipment (<demand_linehaul>) to schools (<loc_customer>) on fixed dates (<time_windows>) and retrieves last week’s kits (<demand_backhaul>). Vans (<capacity>) must prioritize deliveries to remote schools with early dismissal times. Late pickups disrupt other schools’ schedules in the rotation.",
         "data_template": {
             "num_depots": [
                 1
@@ -17393,7 +17427,8 @@
                 1.0
             ]
         },
-        "label": "vrpbtw"
+        "label": "vrpbtw",
+        "index": 34
     },
     {
         "title": "Mobile Vaccine Clinic with Cold Chain Returns",
@@ -17756,7 +17791,8 @@
                 0.16007757186889648
             ]
         },
-        "label": "vrpbtw"
+        "label": "vrpbtw",
+        "index": 35
     },
     {
         "title": "Urban Furniture Rental Fleet Rotation",
@@ -18412,11 +18448,12 @@
                 0.16094596683979034
             ]
         },
-        "label": "vrpbtw"
+        "label": "vrpbtw",
+        "index": 36
     },
     {
         "title": "Hybrid Mail Courier Network",
-        "desc_split": "A postal service consolidates outgoing mail (linehaul) and incoming parcels (backhaul) for <num_customer> businesses (<loc_customer>). Vehicles (<capacity>) must meet midday drop-off (<time_windows>) and afternoon pickup deadlines. Sorting facilities impose strict return times for processing. Routes must optimize the sequence to avoid backtracking while respecting one-way service order (deliveries \u2192 pickups).",
+        "desc_split": "A postal service consolidates outgoing mail (linehaul) and incoming parcels (backhaul) for <num_customer> businesses (<loc_customer>). Vehicles (<capacity>) must meet midday drop-off (<time_windows>) and afternoon pickup deadlines. Sorting facilities impose strict return times for processing. Routes must optimize the sequence to avoid backtracking while respecting one-way service order (deliveries → pickups).",
         "data_template": {
             "num_depots": [
                 1
@@ -18722,7 +18759,8 @@
                 ]
             ]
         },
-        "label": "vrpbtw"
+        "label": "vrpbtw",
+        "index": 37
     },
     {
         "title": "Solar Panel Maintenance & Battery Swap",
@@ -19208,7 +19246,8 @@
                 0.17412805557250977
             ]
         },
-        "label": "vrpbtw"
+        "label": "vrpbtw",
+        "index": 38
     },
     {
         "title": "Theater Costume Circuit Logistics",
@@ -19554,7 +19593,8 @@
                 0.15257591009140015
             ]
         },
-        "label": "vrpbtw"
+        "label": "vrpbtw",
+        "index": 39
     },
     {
         "title": "Mobile Vaccine Clinic with Empty Vial Returns",
@@ -19876,7 +19916,8 @@
                 0.1666666716337204
             ]
         },
-        "label": "vrpbtw"
+        "label": "vrpbtw",
+        "index": 40
     },
     {
         "title": "Urban Furniture Rental Fleet Rotation",
@@ -20243,7 +20284,8 @@
                 0.03333333507180214
             ]
         },
-        "label": "vrpbtw"
+        "label": "vrpbtw",
+        "index": 41
     },
     {
         "title": "Hybrid Mail Courier Network",
@@ -20534,7 +20576,8 @@
                 0.0
             ]
         },
-        "label": "vrpbtw"
+        "label": "vrpbtw",
+        "index": 42
     },
     {
         "title": "Solar Panel Maintenance & Battery Swap",
@@ -20898,7 +20941,8 @@
                 0.1666666716337204
             ]
         },
-        "label": "vrpbtw"
+        "label": "vrpbtw",
+        "index": 43
     },
     {
         "title": "Theater Costume Circuit Logistics",
@@ -21262,7 +21306,8 @@
                 0.0
             ]
         },
-        "label": "vrpbtw"
+        "label": "vrpbtw",
+        "index": 44
     },
     {
         "title": "Mobile COVID-19 Testing Lab Routing with Sample Returns",
@@ -21752,7 +21797,8 @@
                 0.0
             ]
         },
-        "label": "vrpbtw"
+        "label": "vrpbtw",
+        "index": 45
     },
     {
         "title": "Urban Vertical Farm Produce Delivery with Empty Hydroponic Pod Collection",
@@ -22284,7 +22330,8 @@
                 0.0
             ]
         },
-        "label": "vrpbtw"
+        "label": "vrpbtw",
+        "index": 46
     },
     {
         "title": "Pharmaceutical Clinical Trial Supply Chain with Biological Sample Retrieval",
@@ -22564,7 +22611,8 @@
                 0.0
             ]
         },
-        "label": "vrpbtw"
+        "label": "vrpbtw",
+        "index": 47
     },
     {
         "title": "Circular Fashion Rental Service with Garment Rotation Logistics",
@@ -23012,7 +23060,8 @@
                 0.0
             ]
         },
-        "label": "vrpbtw"
+        "label": "vrpbtw",
+        "index": 48
     },
     {
         "title": "Smart City Sensor Maintenance with Data Retrieval",
@@ -23544,7 +23593,8 @@
                 0.20588235557079315
             ]
         },
-        "label": "vrpbtw"
+        "label": "vrpbtw",
+        "index": 49
     },
     {
         "title": "Mobile Electronics Repair Service with Part Returns",
@@ -23818,7 +23868,8 @@
                 ]
             ]
         },
-        "label": "vrpbtw"
+        "label": "vrpbtw",
+        "index": 50
     },
     {
         "title": "Urban Vertical Farm Delivery with Empty Tray Collection",
@@ -24080,7 +24131,8 @@
                 ]
             ]
         },
-        "label": "vrpbtw"
+        "label": "vrpbtw",
+        "index": 51
     },
     {
         "title": "Disaster Relief Supply Chain with Medical Waste Retrieval",
@@ -24669,7 +24721,8 @@
                 0.0
             ]
         },
-        "label": "vrpbtw"
+        "label": "vrpbtw",
+        "index": 52
     },
     {
         "title": "Luxury Watch Showroom Rotation with Authentication Returns",
@@ -25195,7 +25248,8 @@
                 0.0
             ]
         },
-        "label": "vrpbtw"
+        "label": "vrpbtw",
+        "index": 53
     },
     {
         "title": "Sustainable Diaper Service with Soiled Laundry Collection",
@@ -25595,7 +25649,8 @@
                 ]
             ]
         },
-        "label": "vrpbtw"
+        "label": "vrpbtw",
+        "index": 54
     },
     {
         "title": "Mobile Vaccine Clinic with Empty Vial Returns",
@@ -25983,7 +26038,8 @@
                 1.0
             ]
         },
-        "label": "vrpbtw"
+        "label": "vrpbtw",
+        "index": 55
     },
     {
         "title": "Urban Furniture Rental Fleet Rotation",
@@ -26341,7 +26397,8 @@
                 1.0
             ]
         },
-        "label": "vrpbtw"
+        "label": "vrpbtw",
+        "index": 56
     },
     {
         "title": "Hybrid Mail Courier Network",
@@ -26729,7 +26786,8 @@
                 1.0
             ]
         },
-        "label": "vrpbtw"
+        "label": "vrpbtw",
+        "index": 57
     },
     {
         "title": "Solar Panel Maintenance & Battery Swap",
@@ -27072,7 +27130,8 @@
                 1.0
             ]
         },
-        "label": "vrpbtw"
+        "label": "vrpbtw",
+        "index": 58
     },
     {
         "title": "Theater Costume Circuit Logistics",
@@ -27460,7 +27519,8 @@
                 1.0
             ]
         },
-        "label": "vrpbtw"
+        "label": "vrpbtw",
+        "index": 59
     },
     {
         "title": "Mobile EV Charging Service with Battery Swap Logistics",
@@ -27683,7 +27743,8 @@
                 ]
             ]
         },
-        "label": "vrpbtw"
+        "label": "vrpbtw",
+        "index": 60
     },
     {
         "title": "Urban Vertical Farm Delivery with Empty Tray Collection",
@@ -28068,7 +28129,8 @@
                 ]
             ]
         },
-        "label": "vrpbtw"
+        "label": "vrpbtw",
+        "index": 61
     },
     {
         "title": "Pharmaceutical Clinical Trial Supply Chain with Biological Sample Retrieval",
@@ -28453,7 +28515,8 @@
                 1.0
             ]
         },
-        "label": "vrpbtw"
+        "label": "vrpbtw",
+        "index": 62
     },
     {
         "title": "Circular Fashion Rental Service with Garment Rotation Logistics",
@@ -28835,7 +28898,8 @@
                 1.0
             ]
         },
-        "label": "vrpbtw"
+        "label": "vrpbtw",
+        "index": 63
     },
     {
         "title": "Smart City Sensor Maintenance with Data Retrieval",
@@ -29142,7 +29206,8 @@
                 ]
             ]
         },
-        "label": "vrpbtw"
+        "label": "vrpbtw",
+        "index": 64
     },
     {
         "title": "Mobile EV Battery Swap Service with Depleted Battery Collection",
@@ -29670,7 +29735,8 @@
                 0.0
             ]
         },
-        "label": "vrpbtw"
+        "label": "vrpbtw",
+        "index": 65
     },
     {
         "title": "High-Value Artisanal Cheese Delivery with Returnable Packaging",
@@ -30244,7 +30310,8 @@
                 0.20588235557079315
             ]
         },
-        "label": "vrpbtw"
+        "label": "vrpbtw",
+        "index": 66
     },
     {
         "title": "Urban Tree-Trimming Service with Green Waste Removal",
@@ -30572,11 +30639,12 @@
                 0.0
             ]
         },
-        "label": "vrpbtw"
+        "label": "vrpbtw",
+        "index": 67
     },
     {
         "title": "Luxury Hotel Linen Service with Soiled Laundry Retrieval",
-        "desc_split": "A premium linen supplier services luxury hotels (<loc_customer>) from a central laundry facility (<loc_depot>) using temperature-controlled trucks (<capacity>). Clean linens (<demand_linehaul>) must arrive during hotels\u2019 narrow receiving windows (<time_windows>), while soiled linens (<demand_backhaul>) are collected afterward. Vehicles must avoid mixing clean and dirty loads.",
+        "desc_split": "A premium linen supplier services luxury hotels (<loc_customer>) from a central laundry facility (<loc_depot>) using temperature-controlled trucks (<capacity>). Clean linens (<demand_linehaul>) must arrive during hotels’ narrow receiving windows (<time_windows>), while soiled linens (<demand_backhaul>) are collected afterward. Vehicles must avoid mixing clean and dirty loads.",
         "data_template": {
             "num_depots": [
                 1
@@ -31209,7 +31277,8 @@
                 0.0
             ]
         },
-        "label": "vrpbtw"
+        "label": "vrpbtw",
+        "index": 68
     },
     {
         "title": "Mobile Dental Clinic Routing with Biohazard Waste Returns",
@@ -31617,7 +31686,8 @@
                 0.0
             ]
         },
-        "label": "vrpbtw"
+        "label": "vrpbtw",
+        "index": 69
     },
     {
         "title": "Mobile EV Charging Service with Battery Swap Logistics",
@@ -32048,7 +32118,8 @@
                 ]
             ]
         },
-        "label": "vrpbtw"
+        "label": "vrpbtw",
+        "index": 70
     },
     {
         "title": "High-End Wine Distribution with Empty Barrel Returns",
@@ -32511,7 +32582,8 @@
                 0.2666666805744171
             ]
         },
-        "label": "vrpbtw"
+        "label": "vrpbtw",
+        "index": 71
     },
     {
         "title": "Mobile Library for Rural Communities with Book Returns",
@@ -33058,7 +33130,8 @@
                 ]
             ]
         },
-        "label": "vrpbtw"
+        "label": "vrpbtw",
+        "index": 72
     },
     {
         "title": "Medical Equipment Leasing with Time-Sensitive Retrievals",
@@ -33653,7 +33726,8 @@
                 ]
             ]
         },
-        "label": "vrpbtw"
+        "label": "vrpbtw",
+        "index": 73
     },
     {
         "title": "Urban Furniture Rental Fleet Rotation with Installation Windows",
@@ -33948,7 +34022,8 @@
                 0.0
             ]
         },
-        "label": "vrpbtw"
+        "label": "vrpbtw",
+        "index": 74
     },
     {
         "title": "Mobile EV Battery Swap Service with Depleted Battery Collection",
@@ -34441,7 +34516,8 @@
                 1.0
             ]
         },
-        "label": "vrpbtw"
+        "label": "vrpbtw",
+        "index": 75
     },
     {
         "title": "High-Value Artisanal Cheese Delivery with Returnable Packaging",
@@ -34694,7 +34770,8 @@
                 ]
             ]
         },
-        "label": "vrpbtw"
+        "label": "vrpbtw",
+        "index": 76
     },
     {
         "title": "Urban Tree-Trimming Service with Green Waste Removal",
@@ -35187,7 +35264,8 @@
                 ]
             ]
         },
-        "label": "vrpbtw"
+        "label": "vrpbtw",
+        "index": 77
     },
     {
         "title": "Luxury Hotel Linen Service with Soiled Laundry Retrieval",
@@ -35410,7 +35488,8 @@
                 ]
             ]
         },
-        "label": "vrpbtw"
+        "label": "vrpbtw",
+        "index": 78
     },
     {
         "title": "Mobile Dental Clinic Routing with Biohazard Waste Returns",
@@ -35798,7 +35877,8 @@
                 ]
             ]
         },
-        "label": "vrpbtw"
+        "label": "vrpbtw",
+        "index": 79
     },
     {
         "title": "Mobile EV Battery Swap Service with Depleted Battery Collection",
@@ -36113,7 +36193,8 @@
                 0.15136505663394928
             ]
         },
-        "label": "vrpbtw"
+        "label": "vrpbtw",
+        "index": 80
     },
     {
         "title": "High-Security Cash-In-Transit Routing with ATM Replenishment",
@@ -36494,7 +36575,8 @@
                 0.1525890827178955
             ]
         },
-        "label": "vrpbtw"
+        "label": "vrpbtw",
+        "index": 81
     },
     {
         "title": "Live Aquarium Fish Distribution with Specimen Returns",
@@ -37007,7 +37089,8 @@
                 0.1776719093322754
             ]
         },
-        "label": "vrpbtw"
+        "label": "vrpbtw",
+        "index": 82
     },
     {
         "title": "Legal Document Courier Service with Notarized Returns",
@@ -37366,7 +37449,8 @@
                 0.16722141206264496
             ]
         },
-        "label": "vrpbtw"
+        "label": "vrpbtw",
+        "index": 83
     },
     {
         "title": "Theater Prop Delivery with Costume Returns",
@@ -37829,7 +37913,8 @@
                 0.16224883496761322
             ]
         },
-        "label": "vrpbtw"
+        "label": "vrpbtw",
+        "index": 84
     },
     {
         "title": "Mobile COVID-19 Testing Lab Routing with Sample Returns",
@@ -38292,7 +38377,8 @@
                 ]
             ]
         },
-        "label": "vrpbtw"
+        "label": "vrpbtw",
+        "index": 85
     },
     {
         "title": "Luxury Watch Showroom Rotation with Authentication Returns",
@@ -38944,7 +39030,8 @@
                 ]
             ]
         },
-        "label": "vrpbtw"
+        "label": "vrpbtw",
+        "index": 86
     },
     {
         "title": "Sustainable Diaper Service with Soiled Laundry Collection",
@@ -39218,7 +39305,8 @@
                 ]
             ]
         },
-        "label": "vrpbtw"
+        "label": "vrpbtw",
+        "index": 87
     },
     {
         "title": "Disaster Relief Supply Chain with Medical Waste Retrieval",
@@ -39639,7 +39727,8 @@
                 ]
             ]
         },
-        "label": "vrpbtw"
+        "label": "vrpbtw",
+        "index": 88
     },
     {
         "title": "High-Security Cash-In-Transit Routing with ATM Replenishment",
@@ -40291,7 +40380,8 @@
                 ]
             ]
         },
-        "label": "vrpbtw"
+        "label": "vrpbtw",
+        "index": 89
     },
     {
         "title": "Mobile COVID-19 Testing Lab Routing with Sample Returns",
@@ -40754,7 +40844,8 @@
                 1.0
             ]
         },
-        "label": "vrpbtw"
+        "label": "vrpbtw",
+        "index": 90
     },
     {
         "title": "Luxury Watch Showroom Rotation with Authentication Returns",
@@ -41301,7 +41392,8 @@
                 0.0
             ]
         },
-        "label": "vrpbtw"
+        "label": "vrpbtw",
+        "index": 91
     },
     {
         "title": "Sustainable Diaper Service with Soiled Laundry Collection",
@@ -41575,7 +41667,8 @@
                 1.0
             ]
         },
-        "label": "vrpbtw"
+        "label": "vrpbtw",
+        "index": 92
     },
     {
         "title": "Disaster Relief Supply Chain with Medical Waste Retrieval",
@@ -42059,7 +42152,8 @@
                 0.06666667014360428
             ]
         },
-        "label": "vrpbtw"
+        "label": "vrpbtw",
+        "index": 93
     },
     {
         "title": "High-Security Cash-In-Transit Routing with ATM Replenishment",
@@ -42711,7 +42805,8 @@
                 0.0
             ]
         },
-        "label": "vrpbtw"
+        "label": "vrpbtw",
+        "index": 94
     },
     {
         "title": "Mobile EV Battery Swap Service with Depleted Battery Collection",
@@ -43138,7 +43233,8 @@
                 ]
             ]
         },
-        "label": "vrpbtw"
+        "label": "vrpbtw",
+        "index": 95
     },
     {
         "title": "High-End Restaurant Linen Service with Soiled Laundry Retrieval",
@@ -43565,7 +43661,8 @@
                 1.0
             ]
         },
-        "label": "vrpbtw"
+        "label": "vrpbtw",
+        "index": 96
     },
     {
         "title": "Biotech Lab Sample Distribution with Hazardous Waste Collection",
@@ -43845,7 +43942,8 @@
                 ]
             ]
         },
-        "label": "vrpbtw"
+        "label": "vrpbtw",
+        "index": 97
     },
     {
         "title": "Pop-Up Retail Inventory Rotation with Seasonal Returns",
@@ -44209,7 +44307,8 @@
                 1.0
             ]
         },
-        "label": "vrpbtw"
+        "label": "vrpbtw",
+        "index": 98
     },
     {
         "title": "Urban Vertical Farm Delivery with Empty Tray Collection",
@@ -44504,6 +44603,7 @@
                 1.0
             ]
         },
-        "label": "vrpbtw"
+        "label": "vrpbtw",
+        "index": 99
     }
 ]

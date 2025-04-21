@@ -312,11 +312,12 @@
                 ]
             ]
         },
-        "label": "cvrp"
+        "label": "cvrp",
+        "index": 0
     },
     {
         "title": "Grocery Store Chain Resupply Problem",
-        "desc_split": "A regional grocery chain\u2019s central warehouse at <loc_depot> must restock <num_customer> stores with perishable goods like produce and dairy. Each store requires a specific inventory (<demand> kg), and refrigerated trucks with a <capacity> kg capacity are used for deliveries. The challenge is to plan routes so that all stores receive their orders without overloading any truck, while minimizing total mileage to reduce refrigeration and fuel expenses.",
+        "desc_split": "A regional grocery chain’s central warehouse at <loc_depot> must restock <num_customer> stores with perishable goods like produce and dairy. Each store requires a specific inventory (<demand> kg), and refrigerated trucks with a <capacity> kg capacity are used for deliveries. The challenge is to plan routes so that all stores receive their orders without overloading any truck, while minimizing total mileage to reduce refrigeration and fuel expenses.",
         "data_template": {
             "num_depots": [
                 1
@@ -615,11 +616,12 @@
                 1.0
             ]
         },
-        "label": "cvrp"
+        "label": "cvrp",
+        "index": 1
     },
     {
         "title": "E-commerce Package Delivery Network",
-        "desc_split": "An online retailer\u2019s distribution center at <loc_depot> must deliver packages to <num_customer> customer addresses. Each delivery truck can carry a maximum of <capacity> kg of goods. Orders vary in weight (<demand> kg), and the company must optimize routes to ensure all packages are delivered efficiently. The goal is to cover all stops with minimal truck usage and route distances, avoiding overloading while keeping operational costs low.",
+        "desc_split": "An online retailer’s distribution center at <loc_depot> must deliver packages to <num_customer> customer addresses. Each delivery truck can carry a maximum of <capacity> kg of goods. Orders vary in weight (<demand> kg), and the company must optimize routes to ensure all packages are delivered efficiently. The goal is to cover all stops with minimal truck usage and route distances, avoiding overloading while keeping operational costs low.",
         "data_template": {
             "num_depots": [
                 1
@@ -930,7 +932,8 @@
                 0.1764705926179886
             ]
         },
-        "label": "cvrp"
+        "label": "cvrp",
+        "index": 2
     },
     {
         "title": "Pharmaceutical Cold Chain Distribution",
@@ -1137,11 +1140,12 @@
                 0.10000000149011612
             ]
         },
-        "label": "cvrp"
+        "label": "cvrp",
+        "index": 3
     },
     {
         "title": "Construction Material Supply Chain",
-        "desc_split": "A construction firm must deliver building materials (e.g., cement, timber) to <num_customer> active construction sites from its central depot at <loc_depot>. Each delivery truck has a <capacity> cubic meter limit, and sites demand varying material volumes (<demand> m\u00b3). The logistics team must design routes that respect truck capacities while ensuring all sites receive their supplies. The objective is to minimize transportation costs and truck idling time, balancing workload across vehicles.",
+        "desc_split": "A construction firm must deliver building materials (e.g., cement, timber) to <num_customer> active construction sites from its central depot at <loc_depot>. Each delivery truck has a <capacity> cubic meter limit, and sites demand varying material volumes (<demand> m³). The logistics team must design routes that respect truck capacities while ensuring all sites receive their supplies. The objective is to minimize transportation costs and truck idling time, balancing workload across vehicles.",
         "data_template": {
             "num_depots": [
                 1
@@ -1548,7 +1552,8 @@
                 0.02857142873108387
             ]
         },
-        "label": "cvrp"
+        "label": "cvrp",
+        "index": 4
     },
     {
         "title": "Furniture Delivery Optimization Problem",
@@ -1839,11 +1844,12 @@
                 0.23333333432674408
             ]
         },
-        "label": "cvrp"
+        "label": "cvrp",
+        "index": 5
     },
     {
         "title": "Municipal Waste Collection Route Planning",
-        "desc_split": "A city\u2019s waste management division must collect trash from <num_customer> designated collection points (<loc_customer>). Garbage trucks depart from the central depot (<loc_depot>) and have a maximum hauling capacity of <capacity> tons. Each collection point accumulates a specific amount of waste (<demand>), and all must be emptied in a single daily route. The task is to plan efficient routes so no truck overloads, while covering all points as quickly as possible. The city aims to reduce operational costs and environmental impact by optimizing fuel usage.",
+        "desc_split": "A city’s waste management division must collect trash from <num_customer> designated collection points (<loc_customer>). Garbage trucks depart from the central depot (<loc_depot>) and have a maximum hauling capacity of <capacity> tons. Each collection point accumulates a specific amount of waste (<demand>), and all must be emptied in a single daily route. The task is to plan efficient routes so no truck overloads, while covering all points as quickly as possible. The city aims to reduce operational costs and environmental impact by optimizing fuel usage.",
         "data_template": {
             "num_depots": [
                 1
@@ -2080,7 +2086,8 @@
                 0.20000000298023224
             ]
         },
-        "label": "cvrp"
+        "label": "cvrp",
+        "index": 6
     },
     {
         "title": "Medical Supply Redistribution Network",
@@ -2407,11 +2414,12 @@
                 1.0
             ]
         },
-        "label": "cvrp"
+        "label": "cvrp",
+        "index": 7
     },
     {
         "title": "Livestock Feed Distribution Challenge",
-        "desc_split": "A feed mill (<loc_depot>) supplies <num_customer> livestock farms scattered across farmland with custom feed blends. Each farm has a unique feed requirement (<demand>), measured in tons. Delivery trucks can carry up to <capacity> tons per trip. The goal is to plan routes that distribute feed efficiently, ensuring no truck\u2019s capacity is exceeded. Farms must receive their full order in one delivery to avoid disruptions in animal feeding schedules. The mill seeks to balance vehicle utilization and reduce transportation expenses.",
+        "desc_split": "A feed mill (<loc_depot>) supplies <num_customer> livestock farms scattered across farmland with custom feed blends. Each farm has a unique feed requirement (<demand>), measured in tons. Delivery trucks can carry up to <capacity> tons per trip. The goal is to plan routes that distribute feed efficiently, ensuring no truck’s capacity is exceeded. Farms must receive their full order in one delivery to avoid disruptions in animal feeding schedules. The mill seeks to balance vehicle utilization and reduce transportation expenses.",
         "data_template": {
             "num_depots": [
                 1
@@ -2758,11 +2766,12 @@
                 1.0
             ]
         },
-        "label": "cvrp"
+        "label": "cvrp",
+        "index": 8
     },
     {
         "title": "Floral Delivery Network Optimization",
-        "desc_split": "A floral wholesaler (<loc_depot>) delivers fresh bouquets to <num_customer> flower shops and event venues. Each shop\u2019s order (<demand>) varies in bouquet quantity, and delivery vans have a maximum capacity of <capacity> bouquets to maintain freshness. The challenge is to design routes that prevent overloading vehicles while ensuring all orders are fulfilled. The company aims to minimize total driving distance to reduce fuel costs and keep flowers in optimal condition for customers.",
+        "desc_split": "A floral wholesaler (<loc_depot>) delivers fresh bouquets to <num_customer> flower shops and event venues. Each shop’s order (<demand>) varies in bouquet quantity, and delivery vans have a maximum capacity of <capacity> bouquets to maintain freshness. The challenge is to design routes that prevent overloading vehicles while ensuring all orders are fulfilled. The company aims to minimize total driving distance to reduce fuel costs and keep flowers in optimal condition for customers.",
         "data_template": {
             "num_depots": [
                 1
@@ -2953,7 +2962,8 @@
                 1.0
             ]
         },
-        "label": "cvrp"
+        "label": "cvrp",
+        "index": 9
     },
     {
         "title": "Drought Relief Water Tanker Delivery",
@@ -3292,7 +3302,8 @@
                 1.0
             ]
         },
-        "label": "cvrp"
+        "label": "cvrp",
+        "index": 10
     },
     {
         "title": "Bulk Sand Delivery to Construction Sites",
@@ -3725,7 +3736,8 @@
                 1.0
             ]
         },
-        "label": "cvrp"
+        "label": "cvrp",
+        "index": 11
     },
     {
         "title": "Medical Equipment Redistribution Network",
@@ -4078,11 +4090,12 @@
                 1.0
             ]
         },
-        "label": "cvrp"
+        "label": "cvrp",
+        "index": 12
     },
     {
         "title": "Refrigerator Delivery to Retail Outlets",
-        "desc_split": "An appliance retailer\u2019s central warehouse (<loc_depot>) stocks refrigerators to be delivered to <num_customer> retail stores. Each store (<loc_customer>) orders a distinct quantity (<demand> units), but delivery trucks can only hold up to <capacity> units at once. The company seeks to minimize total driving distance while ensuring every store receives its order exactly once. Trucks must not be overloaded, and routes must account for the bulky nature of refrigerators to avoid capacity breaches.",
+        "desc_split": "An appliance retailer’s central warehouse (<loc_depot>) stocks refrigerators to be delivered to <num_customer> retail stores. Each store (<loc_customer>) orders a distinct quantity (<demand> units), but delivery trucks can only hold up to <capacity> units at once. The company seeks to minimize total driving distance while ensuring every store receives its order exactly once. Trucks must not be overloaded, and routes must account for the bulky nature of refrigerators to avoid capacity breaches.",
         "data_template": {
             "num_depots": [
                 1
@@ -4415,7 +4428,8 @@
                 1.0
             ]
         },
-        "label": "cvrp"
+        "label": "cvrp",
+        "index": 13
     },
     {
         "title": "HVAC Unit Distribution for Commercial Buildings",
@@ -4768,7 +4782,8 @@
                 1.0
             ]
         },
-        "label": "cvrp"
+        "label": "cvrp",
+        "index": 14
     },
     {
         "title": "Postal Delivery Route Optimization",
@@ -4999,7 +5014,8 @@
                 0.30000001192092896
             ]
         },
-        "label": "cvrp"
+        "label": "cvrp",
+        "index": 15
     },
     {
         "title": "Gas Cylinder Refill Distribution Network",
@@ -5467,7 +5483,8 @@
                 28
             ]
         },
-        "label": "cvrp"
+        "label": "cvrp",
+        "index": 16
     },
     {
         "title": "Winery Barrel Transport Challenge",
@@ -5662,11 +5679,12 @@
                 0.20000000298023224
             ]
         },
-        "label": "cvrp"
+        "label": "cvrp",
+        "index": 17
     },
     {
         "title": "Industrial Equipment Delivery Optimization",
-        "desc_split": "A machinery supplier must deliver large industrial components (e.g., turbines, generators) to <num_customer> manufacturing plants. Components vary in weight and size, and each delivery truck can carry a maximum load of <capacity> tons. The supplier\u2019s depot (<loc_depot>) must design routes that respect vehicle capacities while visiting all plants. The goal is to minimize total travel distance and prevent overloading, ensuring fragile or oversized items are transported safely.",
+        "desc_split": "A machinery supplier must deliver large industrial components (e.g., turbines, generators) to <num_customer> manufacturing plants. Components vary in weight and size, and each delivery truck can carry a maximum load of <capacity> tons. The supplier’s depot (<loc_depot>) must design routes that respect vehicle capacities while visiting all plants. The goal is to minimize total travel distance and prevent overloading, ensuring fragile or oversized items are transported safely.",
         "data_template": {
             "num_depots": [
                 1
@@ -5943,7 +5961,8 @@
                 ]
             ]
         },
-        "label": "cvrp"
+        "label": "cvrp",
+        "index": 18
     },
     {
         "title": "Honey Collection from Apiaries",
@@ -6392,11 +6411,12 @@
                 1.0
             ]
         },
-        "label": "cvrp"
+        "label": "cvrp",
+        "index": 19
     },
     {
         "title": "Dairy Farm Milk Collection and Distribution",
-        "desc_split": "A dairy cooperative operates a central processing plant (<loc_depot>) and collects raw milk from <num_customer> farms, then redistributes it to regional dairies. Each farm supplies a specific daily volume (<demand> liters), and the trucks (<capacity> liters capacity) must first collect milk from farms before delivering it to processing hubs. The challenge is to design routes where the total milk collected from farms plus the milk loaded for delivery does not exceed the truck\u2019s capacity at any point. The goal is to minimize fuel costs while ensuring all farms are serviced and milk is efficiently transported to processing centers without overloading vehicles.",
+        "desc_split": "A dairy cooperative operates a central processing plant (<loc_depot>) and collects raw milk from <num_customer> farms, then sends it to the central processing plant. Each farm supplies a specific daily volume (<demand> liters), and the trucks (<capacity> liters capacity) must first collect milk from farms before delivering it to processing hubs. The challenge is to design routes where the total milk collected from farms plus the milk loaded for delivery does not exceed the truck’s capacity at any point. The goal is to minimize fuel costs while ensuring all farms are serviced and milk is efficiently transported to processing centers without overloading vehicles.",
         "data_template": {
             "num_depots": [
                 1
@@ -6707,11 +6727,12 @@
                 1.0
             ]
         },
-        "label": "cvrp"
+        "label": "cvrp",
+        "index": 20
     },
     {
         "title": "Tech Company Server Farm Resupply",
-        "desc_split": "A tech firm\u2019s central data center (<loc_depot>) needs to deliver heavy server racks (<demand> kg each) to <num_customer> remote server farms scattered across a region. Each truck (<capacity> kg capacity) must carry servers to multiple sites, but cannot exceed its weight limit. The servers are pre-packed and cannot be split, so planners must ensure that the sum of server weights for each route stays within the vehicle\u2019s capacity. The objective is to minimize total driving distance while guaranteeing all server farms receive their required hardware without overloading any truck.",
+        "desc_split": "A tech firm’s central data center (<loc_depot>) needs to deliver heavy server racks (<demand> kg each) to <num_customer> remote server farms scattered across a region. Each truck (<capacity> kg capacity) must carry servers to multiple sites, but cannot exceed its weight limit. The servers are pre-packed and cannot be split, so planners must ensure that the sum of server weights for each route stays within the vehicle’s capacity. The objective is to minimize total driving distance while guaranteeing all server farms receive their required hardware without overloading any truck.",
         "data_template": {
             "num_depots": [
                 1
@@ -7058,11 +7079,12 @@
                 1.0
             ]
         },
-        "label": "cvrp"
+        "label": "cvrp",
+        "index": 21
     },
     {
         "title": "Brewery Keg Redistribution Network",
-        "desc_split": "A craft brewery (<loc_depot>) distributes beer kegs to <num_customer> bars and restaurants. Each keg weighs 100 kg, and bars have varying demands (<demand> kegs). Delivery trucks (<capacity> kg capacity) must transport kegs from the brewery to these locations. The brewery wants to optimize routes to minimize fuel use while ensuring no truck exceeds its weight limit. Since bars operate 24/7, timing is not critical\u2014only capacity compliance and shortest paths matter.",
+        "desc_split": "A craft brewery (<loc_depot>) distributes beer kegs to <num_customer> bars and restaurants. Each keg weighs 100 kg, and bars have varying demands (<demand> kegs). Delivery trucks (<capacity> kg capacity) must transport kegs from the brewery to these locations. The brewery wants to optimize routes to minimize fuel use while ensuring no truck exceeds its weight limit. Since bars operate 24/7, timing is not critical—only capacity compliance and shortest paths matter.",
         "data_template": {
             "num_depots": [
                 1
@@ -7265,11 +7287,12 @@
                 1.0
             ]
         },
-        "label": "cvrp"
+        "label": "cvrp",
+        "index": 22
     },
     {
         "title": "Winter Road Salt Distribution",
-        "desc_split": "A municipal department (<loc_depot>) must distribute road salt to <num_customer> critical intersections and highways (<loc_customer>) before a snowstorm. Each location requires a specific amount of salt (<demand> tons), and salt trucks (<capacity> tons capacity) must be loaded without exceeding their maximum load. The goal is to plan routes that cover all designated areas with the least possible distance, ensuring that no truck\u2019s salt load exceeds its capacity at any point during the journey.",
+        "desc_split": "A municipal department (<loc_depot>) must distribute road salt to <num_customer> critical intersections and highways (<loc_customer>) before a snowstorm. Each location requires a specific amount of salt (<demand> tons), and salt trucks (<capacity> tons capacity) must be loaded without exceeding their maximum load. The goal is to plan routes that cover all designated areas with the least possible distance, ensuring that no truck’s salt load exceeds its capacity at any point during the journey.",
         "data_template": {
             "num_depots": [
                 1
@@ -7794,11 +7817,12 @@
                 1.0
             ]
         },
-        "label": "cvrp"
+        "label": "cvrp",
+        "index": 23
     },
     {
         "title": "Agricultural Fertilizer Supply Chain",
-        "desc_split": "A farming cooperative\u2019s central depot (<loc_depot>) supplies fertilizer to <num_customer> farms in a rural area. Each farm\u2019s soil test specifies a required quantity of fertilizer (<demand> kg), and delivery trucks (<capacity> kg capacity) must distribute it precisely. The cooperative aims to minimize fuel costs by optimizing routes while adhering to vehicle capacity limits. Since crops are not time-sensitive, the focus is purely on efficient path planning and load balancing across trucks.",
+        "desc_split": "A farming cooperative’s central depot (<loc_depot>) supplies fertilizer to <num_customer> farms in a rural area. Each farm’s soil test specifies a required quantity of fertilizer (<demand> kg), and delivery trucks (<capacity> kg capacity) must distribute it precisely. The cooperative aims to minimize fuel costs by optimizing routes while adhering to vehicle capacity limits. Since crops are not time-sensitive, the focus is purely on efficient path planning and load balancing across trucks.",
         "data_template": {
             "num_depots": [
                 1
@@ -8169,7 +8193,8 @@
                 1.0
             ]
         },
-        "label": "cvrp"
+        "label": "cvrp",
+        "index": 24
     },
     {
         "title": "Industrial Waste Collection from Factories",
@@ -8554,7 +8579,8 @@
                 1.0
             ]
         },
-        "label": "cvrp"
+        "label": "cvrp",
+        "index": 25
     },
     {
         "title": "Medical Oxygen Tank Delivery to Healthcare Facilities",
@@ -9067,7 +9093,8 @@
                 1.0
             ]
         },
-        "label": "cvrp"
+        "label": "cvrp",
+        "index": 26
     },
     {
         "title": "Christmas Tree Delivery to Retail Outlets",
@@ -9418,7 +9445,8 @@
                 1.0
             ]
         },
-        "label": "cvrp"
+        "label": "cvrp",
+        "index": 27
     },
     {
         "title": "Timber Delivery to Construction Sites",
@@ -9867,7 +9895,8 @@
                 1.0
             ]
         },
-        "label": "cvrp"
+        "label": "cvrp",
+        "index": 28
     },
     {
         "title": "Spare Parts Distribution to Auto Repair Shops",
@@ -10236,7 +10265,8 @@
                 1.0
             ]
         },
-        "label": "cvrp"
+        "label": "cvrp",
+        "index": 29
     },
     {
         "title": "Propane Tank Delivery to Residential and Commercial Clients",
@@ -10509,7 +10539,8 @@
                 1.0
             ]
         },
-        "label": "cvrp"
+        "label": "cvrp",
+        "index": 30
     },
     {
         "title": "Bulk Water Delivery to Rural Communities During Drought",
@@ -11038,7 +11069,8 @@
                 0.1428571492433548
             ]
         },
-        "label": "cvrp"
+        "label": "cvrp",
+        "index": 31
     },
     {
         "title": "Construction Equipment Redistribution to Job Sites",
@@ -11418,7 +11450,8 @@
                 ]
             ]
         },
-        "label": "cvrp"
+        "label": "cvrp",
+        "index": 32
     },
     {
         "title": "Appliance Delivery to Home Improvement Stores",
@@ -11835,7 +11868,8 @@
                 1.0
             ]
         },
-        "label": "cvrp"
+        "label": "cvrp",
+        "index": 33
     },
     {
         "title": "Landscaping Material Supply to Garden Projects",
@@ -12284,7 +12318,8 @@
                 0.23529411852359772
             ]
         },
-        "label": "cvrp"
+        "label": "cvrp",
+        "index": 34
     },
     {
         "title": "Temporary Concert Stage Equipment Delivery",
@@ -12573,7 +12608,8 @@
                 1.0
             ]
         },
-        "label": "cvrp"
+        "label": "cvrp",
+        "index": 35
     },
     {
         "title": "Farmers' Market Produce Redistribution",
@@ -12846,7 +12882,8 @@
                 1.0
             ]
         },
-        "label": "cvrp"
+        "label": "cvrp",
+        "index": 36
     },
     {
         "title": "Livestock Transport to Auction Markets",
@@ -13279,7 +13316,8 @@
                 1.0
             ]
         },
-        "label": "cvrp"
+        "label": "cvrp",
+        "index": 37
     },
     {
         "title": "Outdoor Event Tent and Generator Delivery",
@@ -13664,11 +13702,12 @@
                 1.0
             ]
         },
-        "label": "cvrp"
+        "label": "cvrp",
+        "index": 38
     },
     {
         "title": "School District Science Fair Supplies Redistribution",
-        "desc_split": "A school district is organizing a regional science fair and needs to deliver supplies (lab equipment, materials kits) to <num_customer> participating schools. Each school at <loc_customer> requires a specific set of items (<demand> in units), and supply trucks from <loc_depot> have a maximum load limit of <capacity> units. The challenge is to plan routes that ensure all schools receive their supplies without exceeding truck capacities, while minimizing the total distance driven to conserve resources. The district emphasizes fairness\u2014every school must be visited exactly once, and no vehicle can carry more than its rated capacity.",
+        "desc_split": "A school district is organizing a regional science fair and needs to deliver supplies (lab equipment, materials kits) to <num_customer> participating schools. Each school at <loc_customer> requires a specific set of items (<demand> in units), and supply trucks from <loc_depot> have a maximum load limit of <capacity> units. The challenge is to plan routes that ensure all schools receive their supplies without exceeding truck capacities, while minimizing the total distance driven to conserve resources. The district emphasizes fairness—every school must be visited exactly once, and no vehicle can carry more than its rated capacity.",
         "data_template": {
             "num_depots": [
                 1
@@ -14065,11 +14104,12 @@
                 1.0
             ]
         },
-        "label": "cvrp"
+        "label": "cvrp",
+        "index": 39
     },
     {
         "title": "Solar Panel Delivery to Renewable Energy Installations",
-        "desc_split": "A renewable energy company is deploying solar panels to <num_customer> residential and commercial sites scattered across the region. Each location requires a specific number of panels (<demand> kg), and the company uses trucks with a maximum capacity of <capacity> kg to transport them from their central depot at <loc_depot>. The goal is to design routes that ensure all sites receive their panels without exceeding any truck\u2019s capacity, minimizing total distance traveled to reduce fuel costs and meet project deadlines.",
+        "desc_split": "A renewable energy company is deploying solar panels to <num_customer> residential and commercial sites scattered across the region. Each location requires a specific number of panels (<demand> kg), and the company uses trucks with a maximum capacity of <capacity> kg to transport them from their central depot at <loc_depot>. The goal is to design routes that ensure all sites receive their panels without exceeding any truck’s capacity, minimizing total distance traveled to reduce fuel costs and meet project deadlines.",
         "data_template": {
             "num_depots": [
                 1
@@ -14260,11 +14300,12 @@
                 ]
             ]
         },
-        "label": "cvrp"
+        "label": "cvrp",
+        "index": 40
     },
     {
         "title": "5G Network Equipment Delivery to Cell Tower Sites",
-        "desc_split": "A telecommunications firm is expanding its 5G network and needs to deliver equipment (antennas, modems, etc.) to <num_customer> cell tower locations. Each site requires a specific shipment weight (<demand> kg). The company\u2019s trucks, each with a <capacity> kg capacity, must depart from <loc_depot> and plan routes to all sites without overloading. The aim is to minimize total route distances to cut costs while ensuring timely delivery for network activation.",
+        "desc_split": "A telecommunications firm is expanding its 5G network and needs to deliver equipment (antennas, modems, etc.) to <num_customer> cell tower locations. Each site requires a specific shipment weight (<demand> kg). The company’s trucks, each with a <capacity> kg capacity, must depart from <loc_depot> and plan routes to all sites without overloading. The aim is to minimize total route distances to cut costs while ensuring timely delivery for network activation.",
         "data_template": {
             "num_depots": [
                 1
@@ -14539,7 +14580,8 @@
                 ]
             ]
         },
-        "label": "cvrp"
+        "label": "cvrp",
+        "index": 41
     },
     {
         "title": "EV Charging Station Equipment Delivery to Public Locations",
@@ -14842,7 +14884,8 @@
                 1.0
             ]
         },
-        "label": "cvrp"
+        "label": "cvrp",
+        "index": 42
     },
     {
         "title": "Sports Championship Equipment Delivery to Venues",
@@ -15061,7 +15104,8 @@
                 1.0
             ]
         },
-        "label": "cvrp"
+        "label": "cvrp",
+        "index": 43
     },
     {
         "title": "Irrigation Equipment Delivery to Agricultural Farms",
@@ -15436,7 +15480,8 @@
                 1.0
             ]
         },
-        "label": "cvrp"
+        "label": "cvrp",
+        "index": 44
     },
     {
         "title": "Outdoor Festival Equipment Delivery Network",
@@ -15834,11 +15879,12 @@
                 1.0
             ]
         },
-        "label": "cvrp"
+        "label": "cvrp",
+        "index": 45
     },
     {
         "title": "Agricultural Seed and Pesticide Distribution",
-        "desc_split": "A cooperative of farmers needs seed packets and pesticide containers delivered to <num_customer> rural farms. Each farm\u2019s order varies in quantity (<demand>), and delivery trucks (<capacity>) must avoid overloading. The challenge is to design routes that cover all farms efficiently, ensuring timely delivery before planting season begins, while keeping total travel distance to a minimum.",
+        "desc_split": "A cooperative of farmers needs seed packets and pesticide containers delivered to <num_customer> rural farms. Each farm’s order varies in quantity (<demand>), and delivery trucks (<capacity>) must avoid overloading. The challenge is to design routes that cover all farms efficiently, keeping total travel distance to a minimum.",
         "data_template": {
             "num_depots": [
                 1
@@ -16239,11 +16285,12 @@
                 1.0
             ]
         },
-        "label": "cvrp"
+        "label": "cvrp",
+        "index": 46
     },
     {
         "title": "Industrial Tool Rental Equipment Delivery",
-        "desc_split": "A tool rental company must distribute heavy machinery\u2014such as jackhammers, generators, and scaffolding\u2014to construction sites. Each vehicle has a strict capacity limit (<capacity>), and each site (<loc_customer>) requires a unique combination of equipment (<demand>). The goal is to plan routes that deliver all requested tools without exceeding vehicle limits, while minimizing total mileage and maximizing equipment availability.",
+        "desc_split": "A tool rental company must distribute heavy machinery—such as jackhammers, generators, and scaffolding—to construction sites. Each vehicle has a strict capacity limit (<capacity>), and each site (<loc_customer>) requires a unique combination of equipment (<demand>). The goal is to plan routes that deliver all requested tools without exceeding vehicle limits, while minimizing total mileage and maximizing equipment availability.",
         "data_template": {
             "num_depots": [
                 1
@@ -16711,11 +16758,12 @@
                 0.17142857611179352
             ]
         },
-        "label": "cvrp"
+        "label": "cvrp",
+        "index": 47
     },
     {
         "title": "School District Science Fair Supplies Redistribution",
-        "desc_split": "A school district is organizing a regional science fair and needs to deliver lab equipment, experiment kits, and display materials to participating schools (<loc_customer>). Each school\u2019s order (<demand>) varies, and delivery vans (<capacity>) must not be overloaded. The challenge is to design efficient routes that ensure all supplies reach their destinations, with minimal travel distance and no skipped stops.",
+        "desc_split": "A school district is organizing a regional science fair and needs to deliver lab equipment, experiment kits, and display materials to participating schools (<loc_customer>). Each school’s order (<demand>) varies, and delivery vans (<capacity>) must not be overloaded. The challenge is to design efficient routes that ensure all supplies reach their destinations, with minimal travel distance and no skipped stops.",
         "data_template": {
             "num_depots": [
                 1
@@ -17151,7 +17199,8 @@
                 1.0
             ]
         },
-        "label": "cvrp"
+        "label": "cvrp",
+        "index": 48
     },
     {
         "title": "Disaster Relief Shelter Supplies Delivery",
@@ -17328,7 +17377,8 @@
                 1.0
             ]
         },
-        "label": "cvrp"
+        "label": "cvrp",
+        "index": 49
     },
     {
         "title": "Beehive Transport for Pollination Services",
@@ -17715,7 +17765,8 @@
                 0.05714285746216774
             ]
         },
-        "label": "cvrp"
+        "label": "cvrp",
+        "index": 50
     },
     {
         "title": "Prefabricated Housing Delivery to Disaster Zones",
@@ -17988,7 +18039,8 @@
                 0.2666666805744171
             ]
         },
-        "label": "cvrp"
+        "label": "cvrp",
+        "index": 51
     },
     {
         "title": "Artwork Shipment to Galleries",
@@ -18183,7 +18235,8 @@
                 0.20000000298023224
             ]
         },
-        "label": "cvrp"
+        "label": "cvrp",
+        "index": 52
     },
     {
         "title": "Agricultural Equipment Redistribution",
@@ -18462,7 +18515,8 @@
                 0.10000000149011612
             ]
         },
-        "label": "cvrp"
+        "label": "cvrp",
+        "index": 53
     },
     {
         "title": "Live Aquatic Animal Transport to Markets",
@@ -18681,11 +18735,12 @@
                 0.10000000149011612
             ]
         },
-        "label": "cvrp"
+        "label": "cvrp",
+        "index": 54
     },
     {
         "title": "Crane Delivery to Skyscraper Construction Sites",
-        "desc_split": "A crane rental company must transport heavy construction equipment from their central depot to multiple high-rise building sites. Each crane has a specific weight requirement, and delivery trucks have a maximum load capacity of <capacity> tons. The task is to design routes that deliver all cranes to their respective locations without exceeding any truck\u2019s capacity, while minimizing the total distance driven to reduce fuel costs and operational expenses.",
+        "desc_split": "A crane rental company must transport heavy construction equipment from their central depot to multiple high-rise building sites. Each crane has a specific weight requirement, and delivery trucks have a maximum load capacity of <capacity> tons. The task is to design routes that deliver all cranes to their respective locations without exceeding any truck’s capacity, while minimizing the total distance driven to reduce fuel costs and operational expenses.",
         "data_template": {
             "num_depots": [
                 1
@@ -18953,7 +19008,8 @@
                 1.0
             ]
         },
-        "label": "cvrp"
+        "label": "cvrp",
+        "index": 55
     },
     {
         "title": "Marine Animal Relocation Between Aquaria",
@@ -19247,11 +19303,12 @@
                 1.0
             ]
         },
-        "label": "cvrp"
+        "label": "cvrp",
+        "index": 56
     },
     {
         "title": "Industrial Refrigeration Unit Delivery to Breweries",
-        "desc_split": "A company supplies large refrigeration units to breweries across the region. Each unit has a significant weight, and delivery trucks can carry up to <capacity> tons. The task is to route trucks to all breweries, ensuring that each vehicle\u2019s load does not exceed its capacity, while minimizing the total distance traveled to reduce costs and meet delivery commitments efficiently.",
+        "desc_split": "A company supplies large refrigeration units to breweries across the region. Each unit has a significant weight, and delivery trucks can carry up to <capacity> tons. The task is to route trucks to all breweries, ensuring that each vehicle’s load does not exceed its capacity, while minimizing the total distance traveled to reduce costs and meet delivery commitments efficiently.",
         "data_template": {
             "num_depots": [
                 1
@@ -19497,7 +19554,8 @@
                 1.0
             ]
         },
-        "label": "cvrp"
+        "label": "cvrp",
+        "index": 57
     },
     {
         "title": "Live Plant Delivery to Nurseries and Landscapers",
@@ -19857,7 +19915,8 @@
                 1.0
             ]
         },
-        "label": "cvrp"
+        "label": "cvrp",
+        "index": 58
     },
     {
         "title": "Industrial Lubricant Delivery to Heavy Industry Sites",
@@ -20019,7 +20078,8 @@
                 1.0
             ]
         },
-        "label": "cvrp"
+        "label": "cvrp",
+        "index": 59
     },
     {
         "title": "Wind Turbine Component Delivery to Remote Construction Sites",
@@ -20344,11 +20404,12 @@
                 25
             ]
         },
-        "label": "cvrp"
+        "label": "cvrp",
+        "index": 60
     },
     {
         "title": "Offshore Oil Rig Supply Delivery Challenge",
-        "desc_split": "An energy logistics firm supplies offshore oil drilling platforms with equipment, tools, and maintenance parts. Starting from a coastal depot <loc_depot>, supply vessels must distribute critical cargo to <num_customer> rigs located in distant oceanic regions. Each vessel has a <capacity> ton payload limit, forcing planners to balance load distribution across routes. The challenge lies in ensuring all rigs receive their required supplies (<demand>) without exceeding vessel capacities, while navigating unpredictable weather windows and limited docking access.",
+        "desc_split": "An energy logistics firm supplies offshore oil drilling platforms with equipment, tools, and maintenance parts. Starting from a coastal depot <loc_depot>, supply vessels must distribute critical cargo to <num_customer> rigs located in distant oceanic regions. Each vessel has a <capacity> ton payload limit, forcing planners to balance load distribution across routes. The challenge lies in ensuring all rigs receive their required supplies (<demand>) without exceeding vessel capacities.",
         "data_template": {
             "num_depots": [
                 1
@@ -20587,7 +20648,8 @@
                 0.03333333507180214
             ]
         },
-        "label": "cvrp"
+        "label": "cvrp",
+        "index": 61
     },
     {
         "title": "Mobile Medical Clinic Equipment Redistribution",
@@ -20830,7 +20892,8 @@
                 0.03333333507180214
             ]
         },
-        "label": "cvrp"
+        "label": "cvrp",
+        "index": 62
     },
     {
         "title": "Ski Lift Parts Delivery to Mountain Resorts",
@@ -21121,11 +21184,12 @@
                 0.03333333507180214
             ]
         },
-        "label": "cvrp"
+        "label": "cvrp",
+        "index": 63
     },
     {
         "title": "Art Museum Exhibit Transport Network",
-        "desc_split": "A cultural institution coordinates the temporary relocation of large-scale art installations between museums. Art pieces vary in size and weight, and each truck has a <capacity> ton limit. The central logistics hub <loc_depot> must deliver <num_customer> exhibits to partner museums, ensuring no vehicle exceeds its capacity while minimizing total travel distance. The challenge includes coordinating fragile cargo handling and adhering to museums\u2019 space constraints, all while optimizing route efficiency to reduce costs and prevent overloading.",
+        "desc_split": "A cultural institution coordinates the temporary relocation of large-scale art installations between museums. Art pieces vary in size and weight, and each truck has a <capacity> ton limit. The central logistics hub <loc_depot> must deliver <num_customer> exhibits to partner museums, ensuring no vehicle exceeds its capacity while minimizing total travel distance. The challenge includes coordinating fragile cargo handling and adhering to museums’ space constraints, all while optimizing route efficiency to reduce costs and prevent overloading.",
         "data_template": {
             "num_depots": [
                 1
@@ -21424,7 +21488,8 @@
                 23
             ]
         },
-        "label": "cvrp"
+        "label": "cvrp",
+        "index": 64
     },
     {
         "title": "Mining Equipment Delivery to Remote Sites",
@@ -21727,7 +21792,8 @@
                 1.0
             ]
         },
-        "label": "cvrp"
+        "label": "cvrp",
+        "index": 65
     },
     {
         "title": "Bulk Chemical Transport for Industrial Plants",
@@ -21922,7 +21988,8 @@
                 1.0
             ]
         },
-        "label": "cvrp"
+        "label": "cvrp",
+        "index": 66
     },
     {
         "title": "Heavy Machinery Redistribution for Construction Projects",
@@ -22309,11 +22376,12 @@
                 1.0
             ]
         },
-        "label": "cvrp"
+        "label": "cvrp",
+        "index": 67
     },
     {
         "title": "Large Agricultural Machinery Delivery to Farms",
-        "desc_split": "An agricultural equipment supplier must deliver tractors, harvesters, and irrigation systems from a regional depot (<loc_depot>) to <num_customer> farms. Each farm\u2019s order (<demand> ton) varies based on size and crop type. Delivery trucks are limited to a <capacity> ton load due to road weight restrictions. The company must design routes that cover all farms while respecting truck capacities, ensuring timely delivery without violating legal weight limits on rural roads.",
+        "desc_split": "An agricultural equipment supplier must deliver tractors, harvesters, and irrigation systems from a regional depot (<loc_depot>) to <num_customer> farms. Each farm’s order (<demand> ton) varies based on size and crop type. Delivery trucks are limited to a <capacity> ton load due to road weight restrictions. The company must design routes that cover all farms while respecting truck capacities, ensuring timely delivery without violating legal weight limits on rural roads.",
         "data_template": {
             "num_depots": [
                 1
@@ -22516,7 +22584,8 @@
                 1.0
             ]
         },
-        "label": "cvrp"
+        "label": "cvrp",
+        "index": 68
     },
     {
         "title": "Film Production Equipment Transport for Movie Sets",
@@ -22723,7 +22792,8 @@
                 1.0
             ]
         },
-        "label": "cvrp"
+        "label": "cvrp",
+        "index": 69
     },
     {
         "title": "Industrial Reactor Components Delivery to Chemical Plants",
@@ -23105,7 +23175,8 @@
                 0.30000001192092896
             ]
         },
-        "label": "cvrp"
+        "label": "cvrp",
+        "index": 70
     },
     {
         "title": "Oversized Telecommunications Equipment Delivery to Remote Sites",
@@ -23528,7 +23599,8 @@
                 25
             ]
         },
-        "label": "cvrp"
+        "label": "cvrp",
+        "index": 71
     },
     {
         "title": "Heavy Scientific Instrument Redistribution to Research Facilities",
@@ -23978,7 +24050,8 @@
                 1.0
             ]
         },
-        "label": "cvrp"
+        "label": "cvrp",
+        "index": 72
     },
     {
         "title": "Large Prefabricated Bridge Sections Delivery to Disaster Zones",
@@ -24251,11 +24324,12 @@
                 14
             ]
         },
-        "label": "cvrp"
+        "label": "cvrp",
+        "index": 73
     },
     {
         "title": "Oversized Art Sculpture Transport to Urban Plazas",
-        "desc_split": "A city\u2019s public art initiative requires delivering large outdoor sculptures from an art warehouse (<loc_depot>) to plazas and parks (<loc_customer>). Each sculpture has a unique size and weight, and specialized trucks have a maximum capacity of <capacity> cubic meters. The challenge is to plan routes that ensure all sculptures are placed in their designated locations without exceeding vehicle space limits. The goal is to minimize the total distance driven while accommodating the irregular shapes and sizes of the artworks.",
+        "desc_split": "A city’s public art initiative requires delivering large outdoor sculptures from an art warehouse (<loc_depot>) to plazas and parks (<loc_customer>). Each sculpture has a unique size and weight, and specialized trucks have a maximum capacity of <capacity> cubic meters. The challenge is to plan routes that ensure all sculptures are placed in their designated locations without exceeding vehicle space limits. The goal is to minimize the total distance driven while accommodating the irregular shapes and sizes of the artworks.",
         "data_template": {
             "num_depots": [
                 1
@@ -24476,7 +24550,8 @@
                 1.0
             ]
         },
-        "label": "cvrp"
+        "label": "cvrp",
+        "index": 74
     },
     {
         "title": "Spaceport Rocket Component Delivery Problem",
@@ -24656,7 +24731,8 @@
                 1.0
             ]
         },
-        "label": "cvrp"
+        "label": "cvrp",
+        "index": 75
     },
     {
         "title": "Semiconductor Manufacturing Equipment Delivery",
@@ -24848,7 +24924,8 @@
                 1.0
             ]
         },
-        "label": "cvrp"
+        "label": "cvrp",
+        "index": 76
     },
     {
         "title": "Highway Construction Material Delivery Network",
@@ -25148,7 +25225,8 @@
                 0.20000000298023224
             ]
         },
-        "label": "cvrp"
+        "label": "cvrp",
+        "index": 77
     },
     {
         "title": "Deep-Sea Mining Equipment Redistribution",
@@ -25556,7 +25634,8 @@
                 1.0
             ]
         },
-        "label": "cvrp"
+        "label": "cvrp",
+        "index": 78
     },
     {
         "title": "Underwater Research Station Equipment Delivery",
@@ -25760,7 +25839,8 @@
                 1.0
             ]
         },
-        "label": "cvrp"
+        "label": "cvrp",
+        "index": 79
     },
     {
         "title": "Laboratory Equipment Redistribution for Research Institutions",
@@ -25984,7 +26064,8 @@
             ]
         },
         "user_template": {},
-        "label": "cvrp"
+        "label": "cvrp",
+        "index": 80
     },
     {
         "title": "Offshore Wind Farm Maintenance Supplies Delivery",
@@ -26351,7 +26432,8 @@
             ]
         },
         "user_template": {},
-        "label": "cvrp"
+        "label": "cvrp",
+        "index": 81
     },
     {
         "title": "Modular Classroom Delivery to Remote Schools",
@@ -26586,11 +26668,12 @@
             ]
         },
         "user_template": {},
-        "label": "cvrp"
+        "label": "cvrp",
+        "index": 82
     },
     {
         "title": "Artisanal Cheese Delivery to Specialty Stores",
-        "desc_split": "A cooperative of small cheesemakers needs to deliver perishable artisanal cheeses from a central aging facility to specialty stores across a city. Each store has ordered a unique combination of cheese varieties and quantities, and refrigerated trucks have limited storage capacity and temperature control. The challenge is to plan routes that fulfill all orders without exceeding truck capacities, maintaining product freshness, and minimizing delivery costs. The trucks must visit each store exactly once but can return to the depot after completing their routes.",
+        "desc_split": "A cooperative of small cheesemakers needs to deliver perishable artisanal cheeses from a central aging facility to specialty stores across a city. Each store has ordered a unique combination of cheese varieties and quantities, and refrigerated trucks have limited storage capacity and temperature control. The challenge is to plan routes that fulfill all orders without exceeding truck capacities, and minimizing delivery costs. The trucks must visit each store exactly once but can return to the depot after completing their routes.",
         "data_template": {
             "num_depots": [
                 1
@@ -26843,11 +26926,12 @@
             ]
         },
         "user_template": {},
-        "label": "cvrp"
+        "label": "cvrp",
+        "index": 83
     },
     {
         "title": "Satellite Component Delivery to Remote Tracking Stations",
-        "desc_split": "A satellite communications firm must deliver sensitive electronic components (e.g., antennas, transceivers, and power systems) from its headquarters to remote tracking stations in deserts, high-altitude regions, and coastal areas. Each station requires specific parts, and the delivery vehicles have restricted cargo space due to fragile equipment. The goal is to design the most efficient routes to ensure all stations receive their components without overloading vehicles, while navigating challenging terrain and minimizing travel costs. The depot is located at the company\u2019s central facility.",
+        "desc_split": "A satellite communications firm must deliver sensitive electronic components (e.g., antennas, transceivers, and power systems) from its headquarters to remote tracking stations in deserts, high-altitude regions, and coastal areas. Each station requires specific parts, and the delivery vehicles have restricted cargo space due to fragile equipment. The goal is to design the most efficient routes to ensure all stations receive their components without overloading vehicles, while navigating challenging terrain and minimizing travel costs. The depot is located at the company’s central facility.",
         "data_template": {
             "num_depots": [
                 1
@@ -27045,7 +27129,8 @@
             ]
         },
         "user_template": {},
-        "label": "cvrp"
+        "label": "cvrp",
+        "index": 84
     },
     {
         "title": "Arctic Research Station Equipment Delivery",
@@ -27270,7 +27355,8 @@
                 1.0
             ]
         },
-        "label": "cvrp"
+        "label": "cvrp",
+        "index": 85
     },
     {
         "title": "Mountainous Region Communication Tower Equipment Delivery",
@@ -27555,11 +27641,12 @@
                 1.0
             ]
         },
-        "label": "cvrp"
+        "label": "cvrp",
+        "index": 86
     },
     {
         "title": "Oversized Art Museum Exhibit Transport Network",
-        "desc_split": "A museum consortium is relocating oversized artifacts (e.g., dinosaur skeletons, historical machinery) to new exhibition centers. Each artifact at <loc_customer> has unique dimensions and weights. Transport trucks from the central warehouse at <loc_depot> can carry up to <capacity> kg. The challenge involves routing deliveries to ensure all items are transported without exceeding vehicle capacities, while minimizing total distance traveled and coordinating with each destination\u2019s unloading requirements. The goal is to safeguard fragile exhibits while optimizing fuel efficiency.",
+        "desc_split": "A museum consortium is relocating oversized artifacts (e.g., dinosaur skeletons, historical machinery) to new exhibition centers. Each artifact at <loc_customer> has unique dimensions and weights. Transport trucks from the central warehouse at <loc_depot> can carry up to <capacity> kg. The challenge involves routing deliveries to ensure all items are transported without exceeding vehicle capacities, while minimizing total distance traveled and coordinating with each destination’s unloading requirements. The goal is to safeguard fragile exhibits while optimizing fuel efficiency.",
         "data_template": {
             "num_depots": [
                 1
@@ -27975,7 +28062,8 @@
                 1.0
             ]
         },
-        "label": "cvrp"
+        "label": "cvrp",
+        "index": 87
     },
     {
         "title": "Rural Internet Infrastructure Deployment",
@@ -28200,11 +28288,12 @@
                 1.0
             ]
         },
-        "label": "cvrp"
+        "label": "cvrp",
+        "index": 88
     },
     {
         "title": "Winter Olympics Venue Construction Equipment Redistribution",
-        "desc_split": "A country is constructing venues for the Winter Olympics in mountainous regions. They must deliver heavy construction equipment (cranes, bulldozers, snow groomers) from a central depot at <loc_depot> to <num_customer> construction sites. Each vehicle has a maximum capacity of <capacity> tons. The challenge involves planning routes across snowy, uneven terrain to ensure all sites receive the necessary machinery without overloading any truck. The goal is to minimize travel distance and adhere to tight deadlines while navigating challenging winter conditions.",
+        "desc_split": "A country is constructing venues for the Winter Olympics in mountainous regions. They must deliver heavy construction equipment (cranes, bulldozers, snow groomers) from a central depot at <loc_depot> to <num_customer> construction sites. Each vehicle has a maximum capacity of <capacity> tons. The challenge involves planning routes across snowy, uneven terrain to ensure all sites receive the necessary machinery without overloading any truck. The goal is to minimize travel distance.",
         "data_template": {
             "num_depots": [
                 1
@@ -28503,7 +28592,8 @@
                 1.0
             ]
         },
-        "label": "cvrp"
+        "label": "cvrp",
+        "index": 89
     },
     {
         "title": "Heavy Machinery Parts Delivery to Manufacturing Plants",
@@ -28776,7 +28866,8 @@
                 0.06666667014360428
             ]
         },
-        "label": "cvrp"
+        "label": "cvrp",
+        "index": 90
     },
     {
         "title": "Large Art Installation Components Transport to Museums",
@@ -29049,7 +29140,8 @@
                 14
             ]
         },
-        "label": "cvrp"
+        "label": "cvrp",
+        "index": 91
     },
     {
         "title": "Emergency Medical Equipment Redistribution During a Pandemic",
@@ -29370,11 +29462,12 @@
                 0.03333333507180214
             ]
         },
-        "label": "cvrp"
+        "label": "cvrp",
+        "index": 92
     },
     {
         "title": "Bulk Fertilizer Delivery to Agricultural Cooperatives",
-        "desc_split": "An agricultural cooperative operates across vast farmlands and requires periodic deliveries of fertilizer to its member farms. Each farm (<loc_customer>) has a specific fertilizer demand (<demand> tons), and the cooperative\u2019s trucks (<capacity> ton capacity) must traverse rugged terrain to reach remote locations. The challenge is to design routes from the central depot (<loc_depot>) that minimize fuel costs while ensuring all <num_customer> farms receive their full order without overloading any vehicle.",
+        "desc_split": "An agricultural cooperative operates across vast farmlands and requires periodic deliveries of fertilizer to its member farms. Each farm (<loc_customer>) has a specific fertilizer demand (<demand> tons), and the cooperative’s trucks (<capacity> ton capacity) must traverse rugged terrain to reach remote locations. The challenge is to design routes from the central depot (<loc_depot>) that minimize fuel costs while ensuring all <num_customer> farms receive their full order without overloading any vehicle.",
         "data_template": {
             "num_depots": [
                 1
@@ -29611,7 +29704,8 @@
                 12
             ]
         },
-        "label": "cvrp"
+        "label": "cvrp",
+        "index": 93
     },
     {
         "title": "Modular Data Center Units Delivery to Remote Data Centers",
@@ -30092,7 +30186,8 @@
                 ]
             ]
         },
-        "label": "cvrp"
+        "label": "cvrp",
+        "index": 94
     },
     {
         "title": "Industrial Crane Delivery to Port Expansion Sites",
@@ -30287,7 +30382,8 @@
                 1.0
             ]
         },
-        "label": "cvrp"
+        "label": "cvrp",
+        "index": 95
     },
     {
         "title": "Art Museum Exhibit Transport Network",
@@ -30658,7 +30754,8 @@
                 1.0
             ]
         },
-        "label": "cvrp"
+        "label": "cvrp",
+        "index": 96
     },
     {
         "title": "Heavy Machinery Redistribution for Logging Operations",
@@ -30963,7 +31060,8 @@
                 1.0
             ]
         },
-        "label": "cvrp"
+        "label": "cvrp",
+        "index": 97
     },
     {
         "title": "Large Concrete Pipes Delivery to Sewer Construction Sites",
@@ -31235,7 +31333,8 @@
                 1.0
             ]
         },
-        "label": "cvrp"
+        "label": "cvrp",
+        "index": 98
     },
     {
         "title": "Heavy Mining Equipment Delivery to Remote Mining Camps",
@@ -31573,6 +31672,7 @@
                 1.0
             ]
         },
-        "label": "cvrp"
+        "label": "cvrp",
+        "index": 99
     }
 ]
