@@ -127,7 +127,7 @@ if __name__ == '__main__':
     problem_type_base = ['cvrp', 'ovrp', 'vrpb', 'vrpl', 'vrptw', 'vrpmb', 'mdcvrp']
     for problem_type in problem_type_base:
         print(problem_type)
-        llm = LLM_api(model="qwq-plus-latest", )
+        llm = LLM_api(model="deepseek-chat", )
         time_start = time.time()
         generated_problem_type_path = f"./data/{problem_type}_meta.json"
         total_generate_num = 100

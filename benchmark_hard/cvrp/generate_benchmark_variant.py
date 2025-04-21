@@ -5,13 +5,13 @@ import time
 from typing import List
 from tqdm import tqdm
 
-from LLM import LLM_api
+from benchmark_hard.LLM import LLM_api
 
 features_desc = {
     "C": "*Capacity (C)*: Each vehicle has a maximum capacity :math:`Q`, restricting the total load that can be in the vehicle at any point of the route. The route must be planned such that the sum of demands and pickups for all customers visited does not exceed this capacity.",
     "TW": "*Time Windows (TW)*: Every node :math:`i` has an associated time window :math:`[e_i, l_i]` during which service must commence. Additionally, each node has a service time :math:`s_i`. Vehicles must reach node :math:`i` within its time window; early arrivals must wait at the node location until time :math:`e_i`.",
-    "O": "*Open Routes (O)*: Vehicles are not required to return to the depot after serving all customers. Note that this does not need to be counted as a constraint since it can be modelled by setting zero costs on arcs returning to the depot :math:`c_{i0} = 0` from any customer :math:`i \\in C`, and not counting the return arc as part of the route.",
-    "B": "*Backhauls (B)*: Backhauls generalize demand to also account for return shipments. Customers are either linehaul or backhaul customers. Linehaul customers require delivery of a demand :math:`q_i > 0` that needs to be transported from the depot to the customer, whereas backhaul customers need a pickup of an amount :math:`p_i > 0` that is transported from the client back to the depot. It is possible for vehicles to serve a combination of linehaul and backhaul customers in a single route, but then any linehaul customers must precede the backhaul customers in the route.",
+    "O": "*Open Routes (O)*: You should emphasize in your description that once the vehicle has completed its route and served all its customers, it does not need to return to the depot",
+    "B": "*Backhauls (B)*: Backhauls generalize demand to account for return shipments. Customers are categorized as either linehaul or backhaul. Linehaul customers require delivery of goods from the depot to the customer, while backhaul customers require pickup of goods that are transported from the client back to the depot. You should emphasize in your description that any linehaul customers must precede the backhaul customers in the route, ensuring that deliveries are made before pickups are scheduled.",
     "L": "*Distance Limits (L)*: Restricts each route to a maximum allowable travel distance, ensuring equitable distribution of route lengths across vehicles.",
     "MB": "*Mixed (M) Backhaul (B)*: A backhaul constraint variant allowing linehaul (deliveries) and backhaul (pickups) customers to be sequenced in any order along a route, provided. You should emphasize in your description that customers may be served in any order",
     "MD": "*Multi-depot (MD)*: Generalizes single-depot (m = 1) variants with multiple depot nodes m > 1 from which vehicles can start their tour. Each vehicle must return to its starting depot. This variant requires decisions about depot-customer assignments, making the problem more realistic for organizations operating from multiple facilities.",
@@ -180,7 +180,7 @@ def generate_problem_desc(problem_type: str, generate_num: int = 5, title_list=N
             f"**Request:**\n" +
             f"Please generate **{generate_num} additional scenario titles and descriptions**, formatted as follows:\n" +
             f"```\n**Scenario <ID>:** <Title>\n<Description>\n---\n```\n" +
-            f"Please use diverse language to describe these scenarios.\n\n" +
+            f"Please use diverse language to describe these scenarios. All scenarios must be described in English.\n\n" +
             problem_feature_prompt
     )
 
@@ -231,7 +231,7 @@ if __name__ == '__main__':
         print(problem_type)
         if problem_type in problem_type_base:
             continue
-        llm = LLM_api(model="qwq-plus-latest", )
+        llm = LLM_api(model="deepseek-chat", )
         time_start = time.time()
         generated_problem_type_path = f"./data_var/{problem_type}_meta.json"
         if os.path.exists(generated_problem_type_path):

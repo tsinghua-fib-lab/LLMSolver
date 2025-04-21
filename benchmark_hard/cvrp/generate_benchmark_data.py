@@ -103,7 +103,7 @@ if __name__ == '__main__':
         with open(generated_problem_type_path, "r") as f:
             scenario_list = json.load(f)
         scenario_data_list = []
-        for scenario in scenario_list:
+        for scenario_idx, scenario in enumerate(scenario_list):
             # Generate data for each scenario
             data_dict = generate_data(problem_type)
             print(scenario["title"])
@@ -112,7 +112,8 @@ if __name__ == '__main__':
                 "desc_split": scenario["content"],
                 "data_template": data_dict,
                 "user_template": get_user_template_data(data_dict, scenario["tags"]),
-                "label": problem_type
+                "label": problem_type,
+                "index": scenario_idx,
             }
             scenario_data_list.append(scenario_data)
         scenario_problem_type_path = f"./{problem_type_dir}/{problem_type}.json"
