@@ -1,8 +1,8 @@
 jssp_features = """
 ### **Job Shop Scheduling Problem (JSSP) – Key Features**
 
-- Each **operation must be processed on a specific machine** assigned to it.  
-- **Each machine can handle only one operation at a time** — no overlapping.  
+- Each operation must be processed on a preassigned dedicated machine, forming an immutable processing route (fixed routing).  
+- **Each machine can handle only one operation at a time**
 - Every operation has a **known, fixed processing time**.  
 - The operations of each job must be **performed in a predefined order**, one after another — they **cannot be executed in parallel**.
 """
