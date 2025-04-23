@@ -1,4 +1,4 @@
-from envs.mtdvrp import MTVRPGenerator, MTVRPEnv
+from envs.cvrp import MTVRPGenerator, MTVRPEnv
 
 vrpmb_data_seed = [
     {

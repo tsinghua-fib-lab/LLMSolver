@@ -1,9 +1,3 @@
-import json
-
-import numpy as np
-
-from envs import MTVRPGenerator, MTVRPEnv
-
 mdcvrp_data_seed = [
     {
         "title": "Regional Courier Service Network",

@@ -1,4 +1,4 @@
-from envs import MTVRPGenerator, MTVRPEnv
+from envs.cvrp import MTVRPGenerator, MTVRPEnv
 
 vrptw_data_seed = [
     {

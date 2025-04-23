@@ -1,7 +1,7 @@
 import json
 
 import numpy as np
-from envs.mtdvrp import MTVRPGenerator, MTVRPEnv
+from envs.cvrp.mtdvrp import MTVRPGenerator, MTVRPEnv
 
 
 def get_user_template_data(data_template_dict: dict, tags: list) -> dict:
@@ -47,7 +47,7 @@ def get_user_template_data(data_template_dict: dict, tags: list) -> dict:
         elif tag == 'depot_open_time':
             num_depots = data_template_dict['num_depots'][0]
             user_template_dict[tag] = [row[0] for row in data_template_dict['time_windows'][:num_depots]]
-        elif tag in ['depot_close_time']:
+        elif tag in ['depot_close_time', 'max_route_duration']:
             num_depots = data_template_dict['num_depots'][0]
             user_template_dict[tag] = [row[1] for row in data_template_dict['time_windows'][:num_depots]]
         elif tag == 'locs_time_windows':

@@ -1,8 +1,4 @@
-import json
-
-import numpy as np
-
-from envs import MTVRPGenerator, MTVRPEnv
+from envs.cvrp import MTVRPGenerator, MTVRPEnv
 
 cvrp_data_seed = [
     {

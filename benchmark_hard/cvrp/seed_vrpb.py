@@ -1,5 +1,3 @@
-from envs import MTVRPGenerator, MTVRPEnv
-
 vrpb_data_seed = [
     {
         "title": "Routing for Fleet Logistics",
