@@ -3,7 +3,7 @@ import torch
 import time
 from recognition.LLM import LLM_api
 from collections import defaultdict
-from recognition.variants import VRP_VARIANTS, SP_VARIANTS
+from recognition.problems import PROBLEM_INFO, PROBLEM_DESCRIPTION
 
 
 class Agent:
@@ -21,14 +21,13 @@ class Agent:
         :return: A dictionary containing the parsed result
         """
         try:
-            # Remove markdown code block syntax if present
             text = text.replace('```json', '').replace('```', '').strip()
             json_format = eval(text)
             result = json_format.get('result', None)
             reason = json_format.get('reason', None)
             return (result, reason)
         except Exception as e:
-            return (f"<Error> parsing JSON: {e}", text)
+            return f"<Error> at parse json", text
 
     def run(self, *args, **kwargs):
         """Subclasses must implement the run method."""
@@ -37,64 +36,84 @@ class Agent:
 
 class Classifier(Agent):
     """
-    A VRP problem classifier agent: 
-    Given a VRP problem description in natural language, 
+    A problem classifier agent: 
+    Given a problem description in natural language, 
     """
-    def add_prompt(self, problem_desc: str, reason=None):
-        # prompt = f"You are a VRP problem judger agent. The user has provided the following VRP problem description:\n"
-        # prompt += f"{problem_desc}\n"
-        # prompt += "You need to choose one category for the description from the following list:\n"
-        # prompt += f"{VRP_VARIANTS}\n"
-        # prompt += "Where:\n"
-        # prompt += "- 'VRP' is the basic Vehicle Routing Problem\n"
-        # prompt += "- 'O' represents Open Route (routes can be open)\n"
-        # prompt += "- 'B' represents backhaul demand, and the backhaul demand can be only satisfied after all the linehual demand are satisfied. \n"
-        # prompt += "- 'MB' represents mixed backhaul, which means backhaul demand and linehaul demand can be sttisfied simultaneously.\n"
-        # prompt += "- 'L' represents Distance Limits\n"
-        # prompt += "- 'TW' represents Time Window constraints\n"
-        # prompt += "If the description contains any attribute in 'O', 'B', 'MB', 'L' or 'TW', the most likely corresponding classification is given, otherwise is 'C'.\n"
-        # prompt += "Your output should be a string in json format as follows:\n"
-        # prompt += "{\n"
-        # prompt += "    'reason': <string>,\n"
-        # prompt += "    'result': <string>\n"
-        # prompt += "}\n"
-        # prompt += "Where 'reason' is a string explaining why you chose this category, and 'result' must be one of the elements in the list.\n"
-        
-        
-        prompt = f"You are a Scheduling Problem judger agent. The user has provided the following scheduling problem description:\n"
-        prompt += f"{problem_desc}\n"
-        prompt += "You need to choose one category for the description from the following list:\n"
-        prompt += f"{SP_VARIANTS}\n"
-        prompt += "Where:\n"
-        prompt += "- 'Job Shop Scheduling Problem (JSSP) - fixed machine per operation, predefined operation order'\n"
-        prompt += "- 'Flexible Job Shop Scheduling Problem (FJSSP) - flexible machine choice per operation, predefined operation order'\n"
-        prompt += "- 'Flow-Shop Scheduling Problem (FSSP) - all jobs follow the same machine sequence'\n"
-        prompt += "- 'Hybrid Flow-shop Scheduling Problem (HFSSP) - multiple stages with parallel machines in at least one stage'\n"
-        prompt += "- 'Open Shop Scheduling Problem (OSSP) - no predefined operation order'\n"
-        prompt += "- 'Assembly Scheduling Problem (ASP) - operations have precedence constraints (DAG)'\n"
-        prompt += "Carefully read the problem description and identify the key features that match one of the scheduling problem variants listed above.\n"
-        prompt += "Your output should be a string in JSON format as follows:\n"
-        prompt += "{\n"
-        prompt += "    'reason': <string>,\n"
-        prompt += "    'result': <string>\n"
-        prompt += "}\n"
-        prompt += f"Where 'reason' is a string explaining why you chose this category, and 'result' must be one of the {SP_VARIANTS}.\n"
-        
+    def add_prompt(self, problem_desc: str, problem_level=0, problem_type=None):
+        """
+        Generates a prompt for the LLM to classify the problem based on its description.
+        :param problem_desc: The user's natural language VRP problem description
+        :param problem_level: The level of classification (0 for high-level, 1 for detailed)
+        :return: A string containing the prompt
+        """
+        if problem_level == 0:
+            prompt = f"You are a problem modeler tasked with selecting the most suitable problem type to model a solution based on a user's natural language description."
+            prompt += "The user has provided the following problem description:\n"
+            prompt += f"{problem_desc}\n"
+            prompt += "Identify the high-level problem category from the following list:\n"
+            prompt += f"{list(PROBLEM_INFO.keys())}\n"
+            prompt += "Where each category is defined as follows:\n"
+            for key, value in PROBLEM_DESCRIPTION.items():
+                prompt += f"- '{key}': {value}\n"
+            prompt += "Provide your response in JSON format as follows:\n"
+            prompt += "{\n"
+            prompt += "    'reason': '<explanation for your choice>',\n"
+            prompt += "    'result': '<selected category>'\n"
+            prompt += "}\n"
+            prompt += "Where 'reason' justifies your category selection, and 'result' is the chosen category."
+
+        elif problem_level == 1:
+            prompt = f"You are a problem modeler tasked with identifying the most specific problem variant that best matches the user's natural language description, building on the previously identified broad problem category.\n"
+            prompt += "The user has provided the following problem description:\n"
+            prompt += f"{problem_desc}\n"
+            prompt += f"You have previously classified the problem as '{problem_type}'.\n"
+            prompt += "Select the most appropriate specific variant from the following list:\n"
+            prompt += f"{PROBLEM_INFO[problem_type]['variants']}\n"
+            prompt += "Where each variant is defined as follows:\n"
+            for key, value in PROBLEM_INFO[problem_type]['description'].items():
+                prompt += f"- '{key}': {value}\n"
+            prompt += f"{PROBLEM_INFO[problem_type]['additional_description']}\n"
+            prompt += "Provide your response in JSON format as follows:\n"
+            prompt += "{\n"
+            prompt += "    'reason': '<explanation for your choice>',\n"
+            prompt += "    'result': '<selected variant>'\n"
+            prompt += "}\n"
+            prompt += "Where 'reason' justifies your selection of the variant, and 'result' is the chosen variant from the provided list."
+            
+        else:
+            raise ValueError("Invalid problem level. Use 0 for high-level classification or 1 for detailed classification.")
+
         return prompt
     
-    def run(self, problem_desc: list, reason=None, num_threads=1) -> list:
-        prompt = [self.add_prompt(problem_desc[i], reason) for i in range(min(num_threads, len(problem_desc)))]
-        text = self.llm_api.get_multi_text(prompt, max_workers=num_threads)
-        
-        tuples = []
-        for t in text:
-            result = self.get_result(t)
-            if isinstance(result, tuple):
-                choice, reason = result
-                tuples.append((choice.strip(), reason.strip()))
-            else:
-                tuples.append(("<Error>", str(result)))
-        return tuples
+    
+    def determine_problem_type(self, problem_desc: str, problem_level=0, problem_type=None) -> str:
+        """
+        Determines the problem's high-level category (e.g., VRP, SP) based on the description.
+        """
+        prompt = self.add_prompt(problem_desc, problem_level, problem_type)
+
+        text = self.llm_api.get_text(content=prompt).strip()
+        result = self.get_result(text)
+
+        problem_type, reason = result
+        if problem_type == "<Error>":
+            return f"<Error> at determin", f"{problem_type} \n {reason} \n"
+        else:
+            return problem_type.strip(), reason.strip()
+    
+    def run(self, problem_desc: str) -> str:
+        """
+        Classifies the problem by first determining the high-level category and then the specific type.
+        """
+        problem_type0, type_reason0 = self.determine_problem_type(problem_desc, problem_level=0)
+        if problem_type0.startswith("<Error>"):
+            return "<Error> at level 0", f"{problem_type0} \n {type_reason0} \n"
+
+        problem_type1, type_reason1 = self.determine_problem_type(problem_desc, problem_level=1, problem_type=problem_type0)
+        if problem_type1.startswith("<Error>"):
+            return "<Error> at level 1", f"{problem_type1} \n {type_reason1} \n"
+        else:
+            return problem_type1.strip(), type_reason1.strip()
 
 
 class Checker(Agent):
@@ -235,15 +254,14 @@ def main():
     extractor = Extractor(llm)
 
     # 3) Obtain the VRP problem description from the user
-    problem_desc = input("Please enter your VRP problem description: ")
+    problem_desc = 'A pharmaceutical distributor must deliver life-saving medications to hospitals and clinics while simultaneously collecting expired drugs for safe disposal. Each refrigerated truck (capacity <capacity> kg) starts at the central warehouse (<loc_depot>) and must first deliver temperature-sensitive medications to healthcare facilities (<loc_customer>) before returning to pick up expired inventory. The clinics have strict time windows (<time_windows>) to ensure medications are received during operational hours, and expired pickups must occur before waste storage limits are exceeded. Additionally, each route must stay within a <distance_limit> km radius to maintain cold chain integrity and avoid overworking drivers.'
 
     max_rounds = 5  # Limit the maximum number of iterations to avoid infinite loops
 
     for _ in range(max_rounds):
         # (a) Classify the VRP problem
-        classification = classifier.run(problem_desc)
-
-        # (b) Check the classification
+        classification, reason = classifier.run(problem_desc)
+        print(f"\n[Classifier] Classification result: {classification}")
         is_correct, reason = checker.run(problem_desc, classification)
 
         if is_correct:
@@ -267,3 +285,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

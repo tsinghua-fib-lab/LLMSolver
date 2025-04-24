@@ -1,108 +1,195 @@
 import os
 import json
-import datetime
-import numpy as np
-from LLM import LLM_api
-from rl4co.data.utils import load_npz_to_tensordict
-from tensordict.tensordict import TensorDict
-from routefinder.envs.mtvrp import MTVRPGenerator
+import random
+from typing import Dict, List, Optional, Union, Tuple
+import torch
+from torch.utils.data import Dataset as TorchDataset
 
-# Initialize LLM API
-llm = LLM_api(model="deepseek-reasoner", key_idx=0)
-
-# Function to generate the natural language prompt
-def generate_prompt(instance_data, scenario):
-    prompt = f"You are a problem modeler and you are provided with an example of a VRP problem below, please translate it into a plain natural language description in {scenario} and output the description directly.\n"
-    prompt += f"Specifically, the problem has the following parameters:\n"
-    prompt += f"Locations (depot + {len(instance_data['locs']) - 1} customers): {instance_data['locs']}\n"
-    prompt += f"Backhaul Demand: {instance_data['demand_backhaul']},\n"
-    prompt += f"Linehaul Demand: {instance_data['demand_linehaul']}\n"
-    prompt += f"Backhaul Class: {instance_data['backhaul_class']}, where '1' means classic backhaul and '2' means mixed backhaul.\n"
-    prompt += f"Distance Limit: {instance_data['distance_limit']}\n"
-    prompt += f"Time Windows: {instance_data['time_windows']}\n"
-    prompt += f"Service Time: {instance_data['service_time']}\n"
-    prompt += f"Vehicle Capacity: {instance_data['capacity_original']}, there is no capacity limitation if the capacity is equal to 0.\n"
-    prompt += f"Open Route: {instance_data['open_route']}, where 'True' means the routes could be open while 'False' means the routes should be closed \n"
-    prompt += f"Speed: {instance_data['speed']}\n"
-    prompt += f"Please notice that your description should be complete enough to recognize the problem type, you can omit specific parameter values from the description.\n"
-    prompt += f"Return the description directly without any additional explanation or information.\n"
-    return prompt
-
-# Function to generate natural language descriptions using LLM
-def generate_natural_language_description(instance_data, scenario, llm):
-    # Generate the prompt
-    prompt = generate_prompt(instance_data, scenario)
-    
-    # Request the LLM to generate the description
-    response = llm.get_text(content=prompt)
-    return response
-
-# Function to convert TensorDict to a simple dictionary
-def convert_tensor_dict(tensor_dict):
-    # Assuming tensor_dict is a dictionary-like object
-    return {key: value.tolist() if hasattr(value, 'tolist') else value for key, value in tensor_dict.items()}
-
-# Function to save the generated descriptions as a dataset
-def save_to_dataset(descriptions, variant_names, td_data, pclass='VRP'):
-    time_stamp = datetime.datetime.now().strftime("%Y%m%d%H%M%S")
-    filename = f"{pclass}_{time_stamp}.json"
-    
-    # Convert TensorDict to a JSON-serializable format
-    serialized_td_data = [convert_tensor_dict(data) for data in td_data]
-    print(len(serialized_td_data))
-    print(len(descriptions))
-    print(len(variant_names))
-    
-    data = [{"variant_name": variant_names[i], "description": descriptions[i], 'data': serialized_td_data[i]} for i in range(len(descriptions))]
-    
-    with open(filename, 'w') as f:
-        json.dump(data, f, indent=4)
-
-# Generate instances directly from the generator and save them as JSON
-def generate_and_save_vrp_instances(generator, scenario_list, plist, num_instances=100, pclass='VRP'):
-    descriptions = []
-    variant_names = []
-    td_datas = []
-
-    # Generate and process each problem type in plist
-    for problem_type in plist:
-        # Set the variant preset for the generator
-        generator.variant_preset = problem_type.lower()  # Match problem type with preset
-
-        # Generate the data for the given problem type
-        td_data = generator._generate(batch_size=(num_instances,))
-
-        # Append the problem type to the variant names
-        variant_names.extend([problem_type] * num_instances)
-
-        # Generate natural language descriptions for each instance
-        for idx in range(len(td_data)):
-            print(f"Processing variant {problem_type}...")
-
-            # Randomly select a scenario
-            scenario = np.random.choice(scenario_list)
+class Dataset(TorchDataset):
+    """
+    Dataset class: Used to load VRP problem descriptions and labels from JSON files.
+    """
+    def __init__(
+        self,
+        data_dir: str = "/data1/shy/zgc/llm_solver/LLMSolver/benchmark_hard/cvrp/dataset",
+        problem_counts: int = 100,
+        seed: int = 42,
+        shuffle: bool = False
+    ):
+        """
+        Initialize the dataset by loading problem descriptions from JSON files.
+        
+        Args:
+            data_dir: Directory containing JSON files with problem descriptions.
+            problem_counts: Number of samples to load for each problem type.
+            seed: Random seed for reproducibility.
+            shuffle: Whether to shuffle the dataset.
+        """
+        super().__init__()
+        self.data_dir = data_dir
+        self.problem_counts = problem_counts
+        self.shuffle = shuffle
+        
+        random.seed(seed)
+        
+        self.samples = self._load_data()
+        
+        # Shuffle samples if required
+        if self.shuffle:
+            random.shuffle(self.samples)
+        
+    def _load_data(self) -> List[Dict]:
+        """
+        Load problem descriptions and labels from JSON files.
+        
+        Returns:
+            A list of dictionaries containing problem information.
+        """
+        samples = []
+        json_files = [f for f in os.listdir(self.data_dir) if f.endswith('.json')]
+        
+        for filename in json_files:
+            problem_type = os.path.splitext(filename)[0]
+            file_path = os.path.join(self.data_dir, filename)
             
-            # Generate natural language description
-            description = generate_natural_language_description(td_data[idx], scenario, llm)
+            try:
+                with open(file_path, 'r', encoding='utf-8') as f:
+                    data = json.load(f)
+                
+                all_samples = []
+                if isinstance(data, list):
+                    for item in data:
+                        if 'desc_split' in item and 'label' in item and 'index' in item:
+                            sample = {
+                                'desc_split': item['desc_split'],
+                                'label': item['label'],
+                                'index': item['index'],
+                            }
+                            all_samples.append(sample)
+                elif isinstance(data, dict):
+                    if 'desc_split' in data and 'label' in data and 'index' in data:
+                        sample = {
+                            'description': data['desc_split'],
+                            'label': data['label'],
+                            'index': data['index']
+                        }
+                        all_samples.append(sample)
+                    else:
+                        for key, value in data.items():
+                            if isinstance(value, dict) and 'desc_split' in value and 'label' in value and 'index' in value:
+                                sample = {
+                                    'description': value['desc_split'],
+                                    'label': value['label'],
+                                    'index': value['index']
+                                }
+                                all_samples.append(sample)
+                
+                if not all_samples:
+                    print(f"Warning: No valid samples found in {filename}")
+                    continue
+                
+                if self.problem_counts:
+                    num_samples = self.problem_counts
+                    if len(all_samples) < num_samples:
+                        print(f"Warning: {problem_type} has fewer samples ({len(all_samples)}) than required ({num_samples}). Using all available samples.")
+                        num_samples = len(all_samples)
+                    all_samples = random.sample(all_samples, num_samples)
+                
+                samples.extend(all_samples)
+                
+            except Exception as e:
+                print(f"Error loading data from {filename}: {e}")
+        
+        return samples
+    
+    def __len__(self) -> int:
+        """
+        Return the number of samples in the dataset.
+        """
+        return len(self.samples)
+    
+    def __getitem__(self, idx: int) -> Dict:
+        """
+        Return a sample from the dataset.
+        
+        Args:
+            idx: Index of the sample to return.
             
-            # Print or save the description
-            print(f"Description: {description}")
+        Returns:
+            A dictionary containing problem description and label.
+        """
+        return self.samples[idx]
+    
+    def get_problems_by_type(self) -> Dict[str, int]:
+        """
+        Get the distribution of problems by type in the dataset.
+        
+        Returns:
+            A dictionary mapping problem types to their counts.
+        """
+        problem_counts = {}
+        for sample in self.samples:
+            variant_name = sample['label']
+            if variant_name in problem_counts:
+                problem_counts[variant_name] += 1
+            else:
+                problem_counts[variant_name] = 1
+        return problem_counts
+    
+    def create_subset(self, indices: List[int]) -> 'Dataset':
+        """
+        Create a subset of the dataset using specified indices.
+        
+        Args:
+            indices: List of indices to include in the subset.
             
-            # Append the description to the list
-            descriptions.append(description)
-            td_datas.append(td_data[idx])
-
-    # Save all descriptions, variant names, and TensorDict data to a JSON file
-    save_to_dataset(descriptions, variant_names, td_datas, pclass)
-
-
-# Define a real-world scenario list
-scenario_list = ['field service management', 'waste collection', 'emergency response', 'mobile surveillance', 'goods delivery', 'advertising placement', 'personnel scheduling']
-
-# Define the generator and problem types (plist)
-generator = MTVRPGenerator(num_loc=50, variant_preset="all")
-# plist = ['cvrp', 'cvrpl', 'cvrptw', 'ovrp', 'vrpb']  # Example problem types/
-plist = ['CVRP', 'CVRPL', 'CVRPTW', 'OVRP', 'VRPB']  # Example problem types
-
-# Generate and save the VRP instances as a JSON file
-generate_and_save_vrp_instances(generator, scenario_list, plist, num_instances=2, pclass='VRP')
+        Returns:
+            A new Dataset instance containing only the specified samples.
+        """
+        subset = Dataset(self.data_dir, None)
+        subset.samples = [self.samples[i] for i in indices]
+        return subset
+    
+    def save_to_file(self, filename: str) -> None:
+        """
+        Save the current dataset to a JSON file.
+        
+        Args:
+            filename: Name of the file to save the dataset.
+        """
+        with open(filename, 'w', encoding='utf-8') as f:
+            json.dump(self.samples, f, ensure_ascii=False, indent=4)
+    
+    @classmethod
+    def load_from_file(cls, filename: str) -> 'Dataset':
+        """
+        Load a dataset from a JSON file.
+        
+        Args:
+            filename: Name of the file to load the dataset from.
+            
+        Returns:
+            A new Dataset instance loaded from the file.
+        """
+        dataset = cls(None, None)
+        dataset.data_dir = None
+        with open(filename, 'r', encoding='utf-8') as f:
+            dataset.samples = json.load(f)
+        return dataset
+    
+if __name__ == '__main__':
+    problem_counts = 1
+    dataset = Dataset(
+        data_dir="/data1/shy/zgc/llm_solver/LLMSolver/benchmark_hard/cvrp/dataset",
+        shuffle=True,
+        problem_counts=problem_counts,
+    )
+    print(f"Dataset size: {len(dataset)}")
+    print(f"Problem type distribution: {dataset.get_problems_by_type()}")
+    
+    # subset = dataset.create_subset([0, 1, 2])
+    # print(f"Subset size: {len(subset)}")
+    
+    dataset.save_to_file(f"vrp_{problem_counts}.json")
+    # loaded_dataset = Dataset.load_from_file("dataset.json")
+    # print(f"Loaded dataset size: {len(loaded_dataset)}")
