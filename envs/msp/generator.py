@@ -3,6 +3,8 @@ from typing import Dict, List, Tuple, Union, OrderedDict
 import json
 from enum import Enum
 
+from benchmark_hard.msp.machine_scheduing_config import problem_type_param
+
 
 class SchedulingProblemType(Enum):
     ASP = 'asp'  # Assembly Scheduling Problem
@@ -139,24 +141,36 @@ class SchedulingProblemGenerator:
         processing_times = {}
         stages = sorted(machines_per_stage.keys(), key=lambda x: int(x.split('_')[1]))
 
-        for job_id in range(0, num_jobs):
+        # Track global machine IDs
+        global_machine_id = 0
+        stage_to_global_machines = {}  # Maps stage to its global machine IDs
+
+        # Assign global machine IDs to each stage
+        for stage in stages:
+            num_machines = machines_per_stage[stage]
+            stage_machines = list(range(global_machine_id, global_machine_id + num_machines))
+            stage_to_global_machines[stage] = stage_machines
+            global_machine_id += num_machines
+
+        for job_id in range(num_jobs):
             job_key = f'job_{job_id}'
             processing_times[job_key] = {}
 
-            for stage_num, stage in enumerate(stages):
-                op_key = f'stage_{stage_num}'  # Using stage as operation
-                processing_times[job_key][op_key] = {}
+            for stage in stages:
+                processing_times[job_key][stage] = {}
 
-                num_machines = machines_per_stage[stage]
-                for machine_id in range(0, num_machines):
-                    processing_times[job_key][op_key][f'machine_{machine_id}'] = (
+                # Get global machine IDs for this stage
+                global_machines = stage_to_global_machines[stage]
+
+                for local_machine_id, global_machine_id in enumerate(global_machines):
+                    processing_times[job_key][stage][f'machine_{global_machine_id}'] = (
                         random.randint(self.min_processing_time, self.max_processing_time),
-                        machine_id
+                        global_machine_id  # Now using global ID
                     )
 
         return processing_times
 
-    def generate_problem_instance(self) -> Dict:
+    def generate_problem_instance(self, **params) -> Dict:
         """Generate a complete problem instance"""
         num_jobs = random.randint(self.min_jobs, self.max_jobs)
         num_machines = random.randint(self.min_machines, self.max_machines)
@@ -177,7 +191,14 @@ class SchedulingProblemGenerator:
 
         if self.problem_type == SchedulingProblemType.HFSSP:
             num_operations = num_machines
-            data['machines_per_stage'] = self.generate_machines_per_stage(num_machines)
+            machines_per_stage = params.get('machines_per_stage', {})
+            num_machines = sum(machines_per_stage.values())
+            data['num_machines'] = num_machines
+            if not machines_per_stage:
+                machines_per_stage = self.generate_machines_per_stage(num_machines)
+
+            data['machines_per_stage'] = machines_per_stage
+
             data['processing_times'] = self.generate_HFSSP_processing_times(num_jobs, data['machines_per_stage'])
         else:
             data['processing_times'] = self.generate_processing_times(num_jobs, num_machines, num_operations)
@@ -196,7 +217,10 @@ class SchedulingProblemGenerator:
 
     def generate_json(self, file_path: str = None) -> str:
         """Generate and optionally save problem instance as JSON"""
-        instance = self.generate_problem_instance()
+        params = {}
+        if self.problem_type.value in problem_type_param:
+            params = problem_type_param[self.problem_type.value]
+        instance = self.generate_problem_instance(**params)
         json_data = json.dumps(instance, indent=2)
 
         if file_path:
