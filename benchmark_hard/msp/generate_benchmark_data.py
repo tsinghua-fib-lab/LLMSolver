@@ -1,6 +1,8 @@
 import json
 
 import numpy as np
+
+from benchmark_hard.msp.machine_scheduing_config import problem_type_param
 from envs.msp.generator import SchedulingProblemType, SchedulingProblemGenerator
 
 
@@ -33,8 +35,9 @@ def generate_data(problem_type):
     else:
         raise NotImplementedError(f"Problem type {problem_type} not implemented")
 
+    params = problem_type_param.get(problem_type, {})
     scheduling_generator = SchedulingProblemGenerator(scheduling_problem_type)
-    scheduling_data = scheduling_generator.generate_problem_instance()
+    scheduling_data = scheduling_generator.generate_problem_instance(**params)
     return scheduling_data
 
 

@@ -6,3 +6,13 @@ problem_type_dict = {
     "ossp": "Open Shop Scheduling Problem (OSSP)",
     "asp": "Assembly Scheduling Problem (ASP)",
 }
+
+problem_type_param = {
+    "hfssp": {
+        'machines_per_stage': {
+            f'stage_{0}': 4,
+            f'stage_{1}': 4,
+            f'stage_{2}': 4,
+        }
+    }
+}
