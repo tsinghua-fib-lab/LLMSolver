@@ -15,7 +15,7 @@ if dimension=="2D":
     box_sizes=[[row[0], 1, row[1]] for row in box_sizes]
 
 try:
-        bins, best_individual = genetic_algorithm(box_sizes, bin_size, is_online, can_rotate)
+        bins, best_individual = genetic_algorithm(box_sizes, bin_size, is_online, can_rotate)  #implement
         print("Problem solved successfully!Number of bins used:",len(bins))
 except Exception:
         print(False) 
