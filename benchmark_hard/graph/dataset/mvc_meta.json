@@ -1,0 +1,861 @@
+[
+    {
+        "title": "Disease Testing in Contact Networks",
+        "content": "In an outbreak scenario, a contact tracing graph <graph> with <num_nodes> individuals and <num_edges> interactions is analyzed. To identify all potential infections, health officials must test the smallest possible group of people such that every close contact pair includes at least one tested individual, optimizing testing resources.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Sensor Placement in Smart Buildings",
+        "content": "A building\u2019s room adjacency graph <graph> has <num_nodes> rooms and <num_edges> connecting doors. To deploy motion sensors efficiently, the goal is to cover all doorways by placing sensors in the fewest rooms, ensuring every door is monitored while minimizing installation costs.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Influencer Marketing Campaign",
+        "content": "A brand partnership graph <graph> models <num_nodes> influencers and <num_edges> collaborations (e.g., co-promotions). To maximize reach with minimal budget, marketers select the smallest set of influencers such that every collaboration involves at least one chosen influencer, ensuring full campaign coverage.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Wildlife Corridor Protection",
+        "content": "A habitat connectivity graph <graph> represents <num_nodes> wildlife zones and <num_edges> migration paths. Conservationists aim to protect the fewest zones while ensuring every migration route is adjacent to at least one protected area, balancing ecological preservation and land use.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Fraud Detection in Transaction Networks",
+        "content": "A financial transaction graph <graph> links <num_nodes> accounts via <num_edges> transfers. Auditors must flag the minimal set of accounts to investigate, ensuring every transaction involves at least one flagged account, thereby uncovering potential fraud rings with limited resources.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Pharmaceutical Supply Chain Monitoring",
+        "content": "In a distribution network modeled as <graph> with <num_nodes> warehouses and <num_edges> shipping routes, regulators must ensure all drug shipments are tracked. By selecting the smallest set of warehouses to audit, every route is monitored, minimizing regulatory overhead while preventing counterfeit goods.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Air Traffic Control Optimization",
+        "content": "An airline route map <graph> with <num_nodes> airports and <num_edges> flight paths requires radar coverage. Strategically placing radar stations at the fewest airports ensures every flight path is observed, reducing infrastructure costs without compromising safety.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Genome Assembly Error Detection",
+        "content": "In a DNA fragment overlap graph <graph> with <num_nodes> fragments and <num_edges> overlaps, scientists must verify critical fragments to detect sequencing errors. A minimal vertex cover identifies the fewest fragments needing validation to ensure all overlaps are error-free.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Cloud Service Failover Planning",
+        "content": "A cloud infrastructure graph <graph> with <num_nodes> servers and <num_edges> communication links requires backup nodes. Selecting the smallest set of servers to replicate guarantees that every link remains operational if any single server fails, optimizing redundancy costs.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Archaeological Site Protection",
+        "content": "A historical site\u2019s artifact proximity graph <graph> with <num_nodes> artifacts and <num_edges> proximity relationships needs guarding. Placing sensors on the minimal number of artifacts ensures all proximity pairs are monitored against theft, balancing security and budget constraints.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Vaccination Campaign Optimization",
+        "content": "In a community contact network <graph> with <num_nodes> individuals and <num_edges> interactions, health officials aim to vaccinate the smallest group of people to block disease transmission. By selecting a minimal vertex cover, every interaction involves at least one vaccinated individual, ensuring efficient herd immunity.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Ride-Sharing Hub Placement",
+        "content": "A transportation network <graph> models <num_nodes> neighborhoods and <num_edges> frequently traveled routes. To minimize costs, a ride-sharing company must place hubs in the fewest neighborhoods such that every route connects to at least one hub, ensuring coverage for all potential pickups.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Election Monitoring in Voting Districts",
+        "content": "A graph <graph> represents <num_nodes> voting districts and <num_edges> shared boundaries where electoral fraud could occur. Authorities need to deploy observers to the smallest set of districts to monitor all adjacent boundaries, guaranteeing fair elections with minimal resources.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Ad Placement in Digital Publishing",
+        "content": "A website network <graph> has <num_nodes> pages and <num_edges> hyperlinks. Advertisers want to place banners on the fewest pages possible while ensuring every hyperlink originates from or points to at least one page with an ad, maximizing visibility cost-effectively.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Critical Species Protection in Ecosystems",
+        "content": "In a food web <graph> with <num_nodes> species and <num_edges> predator-prey relationships, conservationists must protect the smallest set of species to disrupt all predation links. This ensures ecosystem stability by preventing unchecked population growth or collapse.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Cybersecurity Threat Detection",
+        "content": "In a corporate intranet represented as <graph> with <num_nodes> devices and <num_edges> connections, security analysts must deploy intrusion detection systems (IDS) to monitor all network traffic. By selecting a minimal set of devices to host IDS, every communication path is covered, ensuring threats are detected while minimizing deployment costs.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Railway Junction Monitoring",
+        "content": "A railway network is modeled as <graph>, where stations are nodes and tracks are edges. To ensure safety, inspectors must be stationed at key junctions to oversee all track segments. The goal is to select the fewest stations such that every track is monitored, optimizing inspector allocation for <num_nodes> stations and <num_edges> tracks.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Retail Store Inventory Auditing",
+        "content": "A retail supply chain is represented as <graph>, where warehouses are nodes and delivery routes are edges. Auditors must visit a subset of warehouses to verify stock levels across all routes. The MVC solution identifies the minimal set of warehouses to audit, ensuring full route coverage with <num_nodes> warehouses and <num_edges> routes.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Smart City Traffic Light Control",
+        "content": "A city\u2019s road intersection network is modeled as <graph> with <num_nodes> intersections and <num_edges> roads. To optimize traffic flow, sensors must be installed at intersections to monitor all roads. The MVC problem finds the smallest set of intersections to equip, ensuring every road is observed without redundant sensors.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Academic Collaboration Oversight",
+        "content": "In a co-authorship network <graph> with <num_nodes> researchers and <num_edges> collaborations, funding agencies must monitor research integrity. Selecting a minimal group of researchers to audit ensures all collaborations are reviewed, balancing oversight efficiency with comprehensive coverage.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Smart Grid Fault Detection",
+        "content": "In an advanced power distribution network modeled as <graph> with <num_nodes> substations and <num_edges> transmission lines, sensors must be deployed to detect faults. The MVC solution identifies the minimal set of substations where sensors can monitor all lines, ensuring rapid fault detection while reducing installation costs.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Autonomous Delivery Robot Charging Stations",
+        "content": "A city\u2019s road network is represented as <graph>, where nodes are intersections and edges are roads. To ensure autonomous delivery robots never run out of power, charging stations must cover all roads. The MVC problem determines the fewest intersections for station placement, guaranteeing every road has access to charging.",
+        "tags": [
+            "graph"
+        ]
+    },
+    {
+        "title": "Digital Rights Management in Streaming Platforms",
+        "content": "A content-sharing network <graph> links users (nodes) who share licensed media (edges). To enforce copyright, the platform must monitor a subset of users covering all shared content. The MVC solution minimizes the number of monitored accounts while ensuring no unauthorized sharing goes undetected.",
+        "tags": [
+            "graph"
+        ]
+    },
+    {
+        "title": "Emergency Evacuation Route Planning",
+        "content": "In a disaster-prone region, evacuation routes form <graph> with <num_nodes> shelters and <num_edges> pathways. Authorities must station responders at shelters to oversee all pathways. The MVC approach selects the minimal shelters to staff, ensuring every evacuation route is monitored for safety.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Agricultural Pest Control",
+        "content": "A farm\u2019s crop fields are modeled as <graph>, where nodes are fields and edges represent pest migration routes. To deploy traps efficiently, the MVC problem identifies the smallest set of fields where traps intercept all migration paths, minimizing costs while maximizing pest control coverage.",
+        "tags": [
+            "graph"
+        ]
+    },
+    {
+        "title": "Disaster Relief Supply Distribution",
+        "content": "In a region\u2019s transportation network modeled as <graph> with <num_nodes> locations and <num_edges> routes, aid agencies must position relief hubs to ensure all routes are serviced. Selecting the smallest set of hubs guarantees that every road or path is accessible from at least one distribution point, optimizing resource deployment during emergencies.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Smart Water Pipeline Monitoring",
+        "content": "A municipal water system is represented as <graph>, where nodes are junctions and edges are pipelines. To detect leaks or contamination, sensors must cover all pipelines. The MVC solution identifies the minimal set of junctions to place sensors, ensuring full coverage while reducing installation costs.",
+        "tags": [
+            "graph"
+        ]
+    },
+    {
+        "title": "Criminal Network Disruption",
+        "content": "In an organized crime network <graph> with <num_nodes> suspects and <num_edges> communications, law enforcement aims to surveil key individuals to intercept all interactions. The MVC approach determines the smallest group of suspects to monitor, ensuring no communication goes undetected.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "E-Commerce Warehouse Robot Charging",
+        "content": "A warehouse\u2019s robot navigation grid is modeled as <graph>, where nodes are charging stations and edges are travel paths. To ensure robots never run out of power, the MVC problem identifies the minimal stations to activate, guaranteeing every path is within reach of at least one charging point.",
+        "tags": [
+            "graph"
+        ]
+    },
+    {
+        "title": "Forest Fire Watchtower Placement",
+        "content": "A forest area\u2019s visibility graph <graph> has <num_nodes> potential watchtower sites and <num_edges> lines of sight between them. Rangers must select the fewest towers to ensure every area is visible, maximizing fire detection coverage while minimizing construction costs.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Smart Highway Emergency Response",
+        "content": "A highway system is modeled as <graph>, where exits are nodes and road segments are edges. To ensure rapid emergency response, authorities must place patrol units at exits such that every road segment is covered by at least one unit. The goal is to minimize the number of patrol stations while ensuring full coverage of the highway network (<num_nodes> nodes, <num_edges> edges).",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Digital Artifact Authentication",
+        "content": "In a blockchain transaction graph <graph>, nodes represent wallets and edges denote transactions. To detect fraudulent activity, auditors must verify a minimal set of wallets such that every transaction is linked to at least one verified wallet. This reduces verification costs while maintaining trust in the network (<num_nodes> nodes, <num_edges> edges).",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Industrial Pipeline Leak Detection",
+        "content": "An oil pipeline network is represented as <graph>, where junctions are nodes and pipes are edges. Sensors must be installed at junctions to detect leaks in any pipe. The challenge is to place the fewest sensors possible while ensuring every pipe is monitored by at least one adjacent sensor (<num_nodes> nodes, <num_edges> edges).",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Hospital Infection Control",
+        "content": "A hospital floor plan is modeled as <graph>, with rooms as nodes and connecting corridors as edges. To prevent outbreaks, disinfecting robots must be stationed in rooms to cover all corridors. The objective is to minimize robot deployments while ensuring every corridor is adjacent to at least one disinfected room (<num_nodes> nodes, <num_edges> edges).",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Satellite Communication Relay",
+        "content": "A satellite constellation forms <graph>, where satellites are nodes and communication links are edges. To maintain global coverage, ground stations must connect to a minimal set of satellites such that every inter-satellite link is relayed to at least one station. This optimizes infrastructure costs while ensuring uninterrupted communication (<num_nodes> nodes, <num_edges> edges).",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Smart Agriculture",
+        "content": "In a farmland irrigation system represented as <graph>, where nodes are valves and edges are pipes, engineers must ensure every pipe is monitored for leaks or blockages. Selecting the smallest set of valves to install sensors guarantees full pipe coverage while minimizing equipment costs. The system has <num_nodes> valves and <num_edges> pipes.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Telecommunication Network Optimization",
+        "content": "A cellular tower network <graph> requires signal boosters to maintain connectivity between towers (edges). By placing boosters at a minimal subset of towers (nodes), providers ensure all inter-tower links are strengthened without over-deployment. The network has <num_nodes> towers and <num_edges> connections.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Museum Artifact Theft Prevention",
+        "content": "A museum\u2019s floor plan is modeled as <graph>, where nodes are rooms and edges are doorways. Security guards must be stationed to cover all pathways. The MVC solution identifies the fewest rooms to place guards so every doorway is watched. The layout includes <num_nodes> rooms and <num_edges> doorways.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Online Education Proctoring",
+        "content": "In an exam proctoring system <graph>, students (nodes) may collaborate via communication channels (edges). To detect cheating, proctors must monitor a minimal group of students covering all potential interactions. The graph has <num_nodes> students and <num_edges> communication links.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Logistics Hub Selection",
+        "content": "A delivery network <graph> connects warehouses (nodes) via routes (edges). To streamline operations, the company selects the fewest warehouses to act as hubs, ensuring every route originates or terminates at a hub. The network spans <num_nodes> warehouses and <num_edges> routes.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Smart Waste Management Optimization",
+        "content": "In a city\u2019s waste collection network modeled as <graph> with <num_nodes> bins and <num_edges> collection routes, sensors must be installed to monitor fill levels. Selecting the smallest set of bins to equip ensures all routes are covered, minimizing sensor costs while maintaining efficient waste management.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Blockchain Transaction Validation",
+        "content": "In a decentralized ledger represented as <graph>, where nodes are validators and edges are transaction dependencies, a minimal set of validators must be chosen to verify all transactions. This reduces computational overhead while ensuring consensus integrity across the network.",
+        "tags": [
+            "graph"
+        ]
+    },
+    {
+        "title": "Sports Tournament Scheduling",
+        "content": "A tournament fixture graph <graph> with <num_nodes> teams and <num_edges> matches requires referees for oversight. Assigning referees to the fewest teams ensures every match has at least one officiating team, optimizing resource allocation for large-scale events.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Autonomous Drone Charging Stations",
+        "content": "In a delivery drone network <graph> with <num_nodes> hubs and <num_edges> flight paths, charging stations must cover all routes. Placing stations at a minimal set of hubs guarantees drones can recharge on any path, maximizing operational range with minimal infrastructure.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Legal Document Review for Compliance",
+        "content": "A citation network <graph> of legal documents (<num_nodes> documents, <num_edges> references) requires auditing for regulatory compliance. Selecting the smallest subset of documents to review ensures all referenced materials are covered, streamlining the verification process.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Smart Parking Lot Monitoring",
+        "content": "In a parking lot layout represented as <graph> with <num_nodes> parking spots and <num_edges> connecting lanes, surveillance cameras must cover all vehicle movement paths. By strategically placing cameras at a minimal set of spots, every lane is monitored while reducing installation costs.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Pharmaceutical Cold Chain Verification",
+        "content": "A vaccine distribution network <graph> with <num_nodes> storage facilities and <num_edges> transport routes requires temperature monitoring. Selecting the smallest set of facilities to audit ensures all transport links between them comply with safety standards, minimizing regulatory overhead.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Music Festival Security Checkpoints",
+        "content": "For an event venue modeled as <graph> with <num_nodes> stages and <num_edges> attendee pathways between them, security teams must oversee all foot traffic. Optimal checkpoint placement at a minimal number of stages guarantees full crowd movement coverage without redundant staffing.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "AI Training Data Annotation",
+        "content": "In a knowledge graph <graph> with <num_nodes> concepts and <num_edges> semantic relationships, annotators must label core concepts to infer all connections. Identifying the smallest set of concepts to manually tag allows comprehensive automated relationship derivation while minimizing human effort.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Offshore Wind Farm Maintenance",
+        "content": "A turbine network <graph> with <num_nodes> turbines and <num_edges> underwater cable connections requires preventive inspections. Selecting a minimal turbine set for technician visits ensures all interconnecting cables are checked, optimizing helicopter deployment costs in remote locations.  \n```  \n\nEach scenario embeds the required <graph>, <num_nodes>, and <num_edges> tags while introducing novel contexts like event logistics, AI training, and renewable energy maintenance. The descriptions emphasize the trade-off between coverage and resource minimization characteristic of MVC problems.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges",
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Autonomous Vehicle Charging Network",
+        "content": "In a transportation network modeled as <graph> with <num_nodes> charging stations and <num_edges> connecting routes, planners must ensure that every route has at least one charging station nearby. The goal is to minimize the number of stations while guaranteeing full coverage for electric vehicles.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Smart Retail Shelf Monitoring",
+        "content": "A retail store\u2019s shelf layout is represented as <graph>, where nodes are shelves and edges indicate adjacency. To monitor stock levels efficiently, sensors must be placed on the fewest shelves possible while ensuring every adjacent pair is observed. This reduces costs while maintaining inventory accuracy.",
+        "tags": [
+            "graph"
+        ]
+    },
+    {
+        "title": "Cybersecurity in IoT Device Networks",
+        "content": "In a smart home IoT network <graph> with <num_nodes> devices and <num_edges> communication links, security patches must be deployed to cover all vulnerable connections. The challenge is to select the smallest set of devices to update, ensuring every data exchange is protected.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Wildlife Migration Path Protection",
+        "content": "A conservation area\u2019s animal movement paths form <graph>, where nodes are key habitats and edges are migration routes. To prevent poaching, rangers must patrol the fewest habitats while ensuring every migration route is monitored, maximizing coverage with minimal resources.",
+        "tags": [
+            "graph"
+        ]
+    },
+    {
+        "title": "Supply Chain Fraud Detection",
+        "content": "A supply chain network <graph> consists of <num_nodes> suppliers and <num_edges> transactions. Auditors must select the smallest set of suppliers to investigate, ensuring that every transaction involving a high-risk supplier is scrutinized for fraud.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Smart City Streetlight Optimization",
+        "content": "In a city\u2019s road network modeled as <graph> with <num_nodes> intersections and <num_edges> streets, energy-efficient streetlights must illuminate all roads. By selecting the smallest set of intersections to install lights, every street segment is lit while minimizing power consumption and infrastructure costs.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Pharmaceutical Clinical Trial Site Selection",
+        "content": "A network of hospitals (<graph>) collaborates on a clinical trial, where nodes represent facilities and edges denote patient transfer routes. To ensure all patient movements are tracked, the trial coordinator must choose the fewest hospitals to host monitoring teams, guaranteeing complete coverage of transfer pathways.",
+        "tags": [
+            "graph"
+        ]
+    },
+    {
+        "title": "Autonomous Drone Surveillance for Border Patrol",
+        "content": "A border region\u2019s patrol zones are mapped as <graph>, with zones as nodes and adjacent boundaries as edges. Deploying drones at the minimum number of zones ensures every border segment is monitored, optimizing surveillance resources while maintaining security across <num_edges> boundary lines.",
+        "tags": [
+            "graph",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Digital Advertising Impressions in Streaming Networks",
+        "content": "A streaming platform\u2019s user interaction graph (<graph>) links viewers (nodes) who share content (edges). To maximize ad reach with minimal impressions, the platform must select the smallest subset of users to display ads, ensuring every shared piece of content is seen by at least one targeted viewer.",
+        "tags": [
+            "graph"
+        ]
+    },
+    {
+        "title": "Industrial Machine Maintenance Scheduling",
+        "content": "A factory\u2019s machine dependency graph (<graph>) connects equipment (nodes) that share maintenance dependencies (edges). To prevent downtime, technicians must inspect the fewest machines possible while covering all dependencies, ensuring <num_edges> critical maintenance links are monitored efficiently.",
+        "tags": [
+            "graph",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Smart Campus Energy Monitoring",
+        "content": "In a university campus represented as <graph> with <num_nodes> buildings and <num_edges> power connections, administrators must deploy energy monitors to track electricity flow. Selecting the smallest set of buildings to install sensors ensures all power lines are monitored while minimizing equipment costs.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Autonomous Taxi Fleet Charging Stations",
+        "content": "A city's road network is modeled as <graph> with <num_nodes> intersections and <num_edges> road segments. To optimize charging infrastructure for self-driving taxis, planners must place stations at intersections such that every road is serviced by at least one nearby station, reducing deployment costs.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Digital Forensic Evidence Collection",
+        "content": "In a cybercrime investigation, a communication network <graph> links <num_nodes> suspects via <num_edges> recorded interactions. Investigators must subpoena the minimal set of suspects to guarantee access to all communications, ensuring legal efficiency without overlooking critical evidence.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Precision Agriculture Pest Traps",
+        "content": "A farmland is divided into <num_nodes> zones with <num_edges> shared boundaries where pests can migrate. Farmers need to place traps in the fewest zones to cover all adjacent boundaries, preventing pest spread while reducing trap maintenance efforts.",
+        "tags": [
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Cloud Computing API Gateway Placement",
+        "content": "A microservices architecture is represented as <graph> with <num_nodes> services and <num_edges> API calls. To secure all inter-service communications, DevOps engineers must deploy API gateways at the minimal number of services, ensuring every call passes through a security checkpoint.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Smart Highway Emergency Response",
+        "content": "In a highway network represented as <graph> with <num_nodes> exits and <num_edges> connecting roads, emergency response teams must be stationed to ensure rapid access to any segment of the highway. By selecting the smallest set of exit points where teams are deployed, every road segment can be reached quickly, minimizing response time and resource allocation.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Pharmaceutical Cold Chain Verification",
+        "content": "A logistics network for temperature-sensitive vaccines is modeled as <graph>, where nodes are storage facilities and edges are transport routes. Auditors must verify that all routes comply with cold chain protocols. Choosing the minimal set of facilities to inspect ensures every transport link is covered, reducing costs while maintaining compliance.",
+        "tags": [
+            "graph"
+        ]
+    },
+    {
+        "title": "Autonomous Drone Surveillance for Border Patrol",
+        "content": "A border region is mapped as <graph> with <num_nodes> observation points and <num_edges> patrol routes. To monitor all routes for illegal crossings, drones must be stationed at the fewest possible points while ensuring every route is visible to at least one drone. This optimizes surveillance efficiency and battery usage.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Digital Forensic Evidence Collection",
+        "content": "In a digital communication network <graph> with <num_nodes> devices and <num_edges> connections, investigators must collect data from devices to trace illicit activity. Selecting the minimal set of devices to analyze ensures all communication links are covered, streamlining the forensic process without missing critical evidence.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Precision Agriculture Pest Traps",
+        "content": "A farmland is divided into zones represented as <graph>, where nodes are monitoring stations and edges are pest migration paths. To detect infestations early, traps must be placed at the fewest stations while covering all migration routes. This minimizes costs while ensuring comprehensive pest surveillance.",
+        "tags": [
+            "graph"
+        ]
+    },
+    {
+        "title": "Smart City Noise Monitoring",
+        "content": "In an urban area represented as <graph> with <num_nodes> noise sensors and <num_edges> connections between adjacent zones, authorities aim to deploy the fewest sensors possible to ensure all noise-polluted corridors are monitored. The MVC solution identifies optimal sensor placements to cover every zone boundary while minimizing equipment costs.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Autonomous Ship Navigation in Ports",
+        "content": "A busy harbor\u2019s waterway network is modeled as <graph>, where nodes are navigation checkpoints and edges are shipping lanes. To prevent collisions, the port authority must station patrol boats at the smallest set of checkpoints to oversee all lanes. The MVC approach ensures complete coverage with minimal resource deployment.",
+        "tags": [
+            "graph"
+        ]
+    },
+    {
+        "title": "Digital Twin Maintenance for Industrial Robots",
+        "content": "A factory\u2019s robot collaboration network is a <graph> with <num_nodes> robots and <num_edges> shared workspaces. To predict failures, engineers must install diagnostic modules on the fewest robots such that every shared workspace is monitored by at least one module. MVC optimizes this selection for cost-efficient predictive maintenance.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Dark Web Marketplace Disruption",
+        "content": "Law enforcement maps a dark web marketplace as <graph>, where nodes are vendors and edges are transactions. To dismantle the network, they must infiltrate the smallest group of vendors to trace all transactions. The MVC solution identifies the critical vendors to target for maximal disruption with minimal exposure.",
+        "tags": [
+            "graph"
+        ]
+    },
+    {
+        "title": "Smart Greenhouse Pest Detection",
+        "content": "A greenhouse\u2019s plant layout is a <graph> with <num_nodes> plants and <num_edges> overlapping pest-spread paths. To detect infestations early, sensors must be placed on the minimal number of plants to cover all potential spread routes. MVC ensures full coverage while reducing sensor costs and false alarms.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Smart City Noise Monitoring",
+        "content": "In an urban area modeled as <graph> with <num_nodes> noise sensors and <num_edges> connections between adjacent zones, authorities aim to deploy monitoring devices at key locations. By selecting the smallest set of nodes where each zone boundary is covered, the system ensures comprehensive noise pollution tracking while minimizing equipment costs.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Autonomous Ship Navigation in Ports",
+        "content": "A port\u2019s waterway network is represented as <graph>, where nodes are navigation checkpoints and edges are shipping lanes. To ensure collision-free routing, the port authority must install communication relays at the fewest possible checkpoints such that every lane is within range of at least one relay, optimizing coverage with <num_nodes> nodes and <num_edges> edges.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Digital Twin Maintenance for Industrial Robots",
+        "content": "A factory\u2019s robot collaboration network is modeled as <graph>, with <num_nodes> robots and <num_edges> interaction dependencies. To predict failures, engineers must instrument a minimal set of robots whose data streams cover all interactions, ensuring full system visibility without redundant sensors.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Dark Web Marketplace Disruption",
+        "content": "In a covert transaction network <graph> with <num_nodes> users and <num_edges> deals, law enforcement aims to infiltrate the fewest accounts to monitor all illegal exchanges. Selecting a vertex cover guarantees every transaction is observed, maximizing disruption efficiency.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Smart Greenhouse Pest Detection",
+        "content": "A greenhouse\u2019s plant layout is represented as <graph>, where nodes are plant clusters and edges are pest migration paths. To deploy traps efficiently, the goal is to cover all paths by placing traps in the minimal number of clusters (<num_nodes> nodes, <num_edges> edges), ensuring pest control with minimal resource use.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Smart City Noise Monitoring",
+        "content": "In an urban area modeled as <graph> with <num_nodes> noise sensors and <num_edges> connections between adjacent zones, authorities aim to deploy the fewest sensors possible to monitor all noise pollution hotspots. By selecting a minimal set of zones, every adjacent area is covered, ensuring comprehensive noise mapping with minimal infrastructure.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Autonomous Ship Navigation in Ports",
+        "content": "A port\u2019s waterway network is represented as <graph>, where nodes are navigation checkpoints and edges are shipping lanes. To ensure collision-free routing, the port authority must install monitoring systems at the fewest checkpoints such that every lane is observed. This minimizes costs while maintaining safety across <num_edges> critical paths.",
+        "tags": [
+            "graph",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Digital Twin Maintenance for Industrial Robots",
+        "content": "A factory\u2019s robot collaboration network is modeled as <graph>, with <num_nodes> robots and <num_edges> interaction dependencies. To preemptively detect failures, engineers must select a minimal set of robots to embed diagnostic sensors, ensuring every interaction is monitored without redundant data collection.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Dark Web Marketplace Disruption",
+        "content": "Law enforcement maps a dark web marketplace as <graph>, where nodes are vendors and edges are transactions. To dismantle the network, they must identify the smallest set of vendors to target, ensuring every transaction link is disrupted. With <num_nodes> vendors and <num_edges> transactions, MVC optimizes resource allocation for maximum impact.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Smart Greenhouse Pest Detection",
+        "content": "In a greenhouse with <num_nodes> plant sections and <num_edges> pest migration routes between them, farmers must place traps at the fewest sections to cover all potential infestations. The MVC solution ensures every route is monitored, reducing pesticide use while protecting crops.",
+        "tags": [
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Smart City Noise Monitoring",
+        "content": "In an urban noise monitoring system represented as <graph> with <num_nodes> sensors and <num_edges> connections between overlapping detection zones, authorities must deploy the fewest possible sensors to ensure every noise source is captured. A minimal vertex cover guarantees full coverage while reducing deployment costs.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Autonomous Ship Navigation in Ports",
+        "content": "A port's shipping lanes form <graph>, where nodes are docking points and edges are navigation paths. To prevent collisions, autonomous ships must be monitored at key points. The MVC solution identifies the smallest set of checkpoints where observers can track all ship movements efficiently.",
+        "tags": [
+            "graph"
+        ]
+    },
+    {
+        "title": "Digital Twin Maintenance for Industrial Robots",
+        "content": "A factory's robotic network is modeled as <graph> with <num_nodes> robots and <num_edges> communication links. To detect malfunctions, engineers must place diagnostic tools on a subset of robots. The MVC problem ensures every interaction is monitored while minimizing the number of equipped robots.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Dark Web Marketplace Disruption",
+        "content": "Law enforcement maps a dark web marketplace as <graph>, where nodes are vendors and edges are transaction links. To dismantle the network, they must infiltrate the fewest possible vendors to expose all illegal trades. The MVC solution optimizes undercover operations by covering all edges with minimal nodes.",
+        "tags": [
+            "graph"
+        ]
+    },
+    {
+        "title": "Smart Greenhouse Pest Detection",
+        "content": "In a greenhouse with <num_nodes> plant clusters and <num_edges> pest migration routes, sensors must be placed to detect infestations. The MVC problem determines the optimal sensor locations to cover all possible pest pathways while minimizing hardware costs.",
+        "tags": [
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Smart Traffic Intersection Monitoring",
+        "content": "In a city\u2019s traffic network represented as <graph> with <num_nodes> intersections and <num_edges> roads, authorities aim to deploy traffic sensors at the fewest intersections to monitor all road segments. This ensures real-time congestion tracking while minimizing installation costs.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Blockchain Validator Node Selection",
+        "content": "A decentralized blockchain network is modeled as <graph>, where nodes are validators and edges represent communication channels. To optimize consensus efficiency, the system must select a minimal set of validator nodes to verify all transactions, reducing redundancy while maintaining network integrity.",
+        "tags": [
+            "graph"
+        ]
+    },
+    {
+        "title": "Wildlife Poaching Patrol Routes",
+        "content": "A national park\u2019s animal movement paths form <graph> with <num_nodes> key locations and <num_edges> trails. Rangers must patrol a minimal set of locations to cover all trails, maximizing poaching deterrence with limited personnel.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Industrial IoT Device Firmware Updates",
+        "content": "In a factory\u2019s IoT device network <graph> (<num_nodes> devices, <num_edges> connections), engineers must select devices to update firmware such that all connected pairs are covered. This minimizes downtime while ensuring compatibility across the network.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Digital Voting Booth Auditing",
+        "content": "An electronic voting system\u2019s audit graph <graph> links <num_nodes> voting machines via <num_edges> shared verification protocols. To detect tampering, auditors must inspect the smallest set of machines to cover all protocol edges, ensuring election transparency efficiently.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Smart Factory Robot Maintenance",
+        "content": "In an automated factory, robots collaborate via a communication network represented as <graph> with <num_nodes> robots and <num_edges> interaction links. To ensure all collaborative tasks are monitored for malfunctions, engineers must select the smallest set of robots to install diagnostic sensors, covering every interaction while minimizing equipment costs.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Pandemic Testing in Airline Routes",
+        "content": "A global airline route network is modeled as <graph>, where airports are nodes and flight paths are edges. To detect disease spread efficiently, health agencies must choose the minimal number of airports to implement mandatory testing, ensuring every flight route is covered by at least one testing hub.",
+        "tags": [
+            "graph"
+        ]
+    },
+    {
+        "title": "Smart Grid Cyberattack Resilience",
+        "content": "A power grid\u2019s control network is represented as <graph> with <num_nodes> control units and <num_edges> communication links. To defend against cyberattacks, operators must deploy intrusion detectors at the fewest possible units, guaranteeing every data link is monitored without redundancy.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Autonomous Delivery Drone Charging Stations",
+        "content": "A city\u2019s drone delivery network is modeled as <graph>, where nodes are potential charging stations and edges are flight paths. To ensure drones never run out of power, planners must select the minimal set of stations to build, covering all routes while reducing infrastructure expenses.",
+        "tags": [
+            "graph"
+        ]
+    },
+    {
+        "title": "Dark Web Marketplace Takedown",
+        "content": "A dark web marketplace\u2019s user interaction graph <graph> has <num_nodes> vendors and <num_edges> transaction links. Law enforcement aims to disrupt the network by arresting the smallest group of vendors such that every transaction chain is broken, maximizing impact with minimal resources.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    }
+]

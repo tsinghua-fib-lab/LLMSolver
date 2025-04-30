@@ -1,0 +1,878 @@
+[
+    {
+        "title": "Distributed File Storage Optimization",
+        "content": "In a peer-to-peer file storage network represented by <graph> with <num_nodes> nodes and <num_edges> edges, nodes must be selected to store redundant copies of files without overlapping coverage. An MIS ensures that no two storage nodes are directly connected, maximizing fault tolerance while minimizing redundant data placement.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Cellular Tower Placement for Minimal Interference",
+        "content": "A telecom company aims to deploy cellular towers across a region modeled as <graph>, where <num_nodes> represents potential tower locations and <num_edges> indicates interference zones. An MIS identifies non-adjacent tower sites, allowing simultaneous signal transmission without cross-interference and optimizing network capacity.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Vaccine Distribution Center Selection",
+        "content": "During a pandemic, health authorities must choose vaccination centers from a city\u2019s facility network <graph> with <num_nodes> clinics and <num_edges> proximity links. An MIS ensures no two selected centers are too close, enabling equitable access while avoiding resource duplication in high-density areas.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Autonomous Drone Surveillance Zones",
+        "content": "For a drone-based surveillance system operating over a grid <graph> of <num_nodes> zones and <num_edges> overlapping patrol ranges, an MIS selects non-adjacent zones for simultaneous drone deployment. This maximizes area coverage while preventing redundant monitoring or mid-air collisions.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Conflict-Free Conference Session Scheduling",
+        "content": "A conference organizer uses an attendee collaboration graph <graph> with <num_nodes> participants and <num_edges> co-author relationships to schedule parallel sessions. An MIS groups attendees with no direct collaborations, ensuring fair participation and reducing intellectual property conflicts during presentations.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Distributed Cloud Server Placement",
+        "content": "In a global cloud infrastructure represented by <graph> with <num_nodes> data centers and <num_edges> communication links, selecting a set of non-adjacent servers ensures redundancy and minimizes latency conflicts. This setup allows parallel processing while avoiding bandwidth contention between critical nodes.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Wildlife Conservation Corridor Design",
+        "content": "Ecologists model animal habitats as <graph>, where nodes represent zones and edges indicate overlapping territories. A maximal independent set of zones ensures conservation efforts target non-adjacent areas, preventing overpopulation stress while maximizing protected biodiversity across <num_nodes> regions.",
+        "tags": [
+            "graph",
+            "num_nodes"
+        ]
+    },
+    {
+        "title": "Decentralized Blockchain Validator Selection",
+        "content": "A blockchain network\u2019s validator nodes (<num_nodes> total) form <graph>, with edges denoting mutual dependencies. Choosing an MIS of validators guarantees no two selected nodes can collude, enhancing transaction validation fairness and security in decentralized ledgers.",
+        "tags": [
+            "num_nodes",
+            "graph"
+        ]
+    },
+    {
+        "title": "Emergency Evacuation Shelter Allocation",
+        "content": "A city\u2019s evacuation plan maps shelters (<num_nodes>) and their proximity risks (<num_edges>) in <graph>. An MIS ensures shelters are far enough apart to avoid overcrowding during disasters, optimizing resource distribution and safety coverage.",
+        "tags": [
+            "num_nodes",
+            "num_edges",
+            "graph"
+        ]
+    },
+    {
+        "title": "Pharmaceutical Drug Interaction Avoidance",
+        "content": "In a molecular interaction graph <graph> with <num_nodes> compounds and <num_edges> reactive pairs, researchers select an MIS of drugs for combined therapies. This prevents adverse reactions by ensuring no two administered drugs interact directly, improving patient safety.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Distributed IoT Device Activation",
+        "content": "In an Internet of Things (IoT) network represented by <graph> with <num_nodes> devices and <num_edges> interference links, a subset of devices must be activated simultaneously without causing signal overlap. An MIS ensures that selected devices operate independently, maximizing coverage while minimizing interference.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Secure Military Communication Relay",
+        "content": "A tactical communication network <graph> with <num_nodes> relay stations and <num_edges> vulnerable connections requires a subset of stations to transmit securely. An MIS identifies stations that are not directly linked, preventing enemy interception by ensuring no two active relays are within eavesdropping range.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Smart Grid Power Distribution",
+        "content": "A power grid modeled as <graph> with <num_nodes> substations and <num_edges> shared transmission lines must avoid overloading. An MIS selects substations to distribute power independently, ensuring no two adjacent stations activate simultaneously, thus balancing load and preventing blackouts.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "AI-Based Game NPC Behavior",
+        "content": "In a multiplayer game world represented by <graph> with <num_nodes> non-player characters (NPCs) and <num_edges> interaction dependencies, an MIS selects NPCs to act autonomously without conflicting behaviors. This creates realistic, non-redundant actions while preserving gameplay balance.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Satellite Imaging Task Scheduling",
+        "content": "A constellation of satellites (<graph> with <num_nodes> satellites and <num_edges> overlapping orbits) must capture images of Earth without redundant coverage. An MIS schedules satellites to image distinct regions simultaneously, ensuring global coverage while minimizing resource waste.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Distributed Social Media Content Moderation",
+        "content": "In a social media platform represented by <graph> with <num_nodes> users and <num_edges> connections, moderators must be selected such that no two moderators are directly linked (to prevent collusion or bias). This ensures fair and independent content review while covering as many user groups as possible.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Autonomous Warehouse Robot Charging Station Placement",
+        "content": "A warehouse layout is modeled as <graph>, where nodes represent charging stations and edges indicate proximity conflicts. To avoid overloading the power grid, stations must be placed such that no two adjacent stations charge robots simultaneously, optimizing energy distribution across <num_nodes> stations and <num_edges> proximity constraints.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Decentralized Ride-Sharing Driver Allocation",
+        "content": "In a city\u2019s ride-sharing network <graph> with <num_nodes> drivers and <num_edges> overlapping service zones, drivers must be assigned to regions where they do not directly compete. This maximizes coverage while minimizing driver congestion, ensuring efficient passenger pickups.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Smart Streetlight Activation for Energy Savings",
+        "content": "A municipal street grid <graph> contains <num_nodes> streetlights connected by <num_edges> overlapping illumination zones. To conserve energy, a subset of lights must be activated such that no two adjacent lights are on, while still providing sufficient coverage for safe nighttime visibility.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Distributed Scientific Peer Review Assignment",
+        "content": "A collaboration network <graph> of <num_nodes> researchers and <num_edges> co-authorship links requires assigning reviewers to papers without conflicts of interest. By selecting an independent set of reviewers, the process ensures unbiased evaluations while maximizing the pool of eligible experts.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Distributed AI Training Node Selection",
+        "content": "In a federated learning system modeled by <graph> with <num_nodes> nodes and <num_edges> edges, selecting a maximal independent set of devices ensures that no two training nodes share overlapping data sources. This prevents bias amplification while maximizing parallel model updates across geographically dispersed devices.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Smart Agriculture Irrigation Zone Activation",
+        "content": "A farmland\u2019s sensor grid is represented as <graph>, where edges indicate overlapping water spray ranges. Activating sprinklers in a maximal independent set (<num_nodes> zones, <num_edges> overlaps) avoids water wastage while ensuring full coverage, optimizing resource use during drought conditions.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Decentralized Cryptocurrency Mining Pool Formation",
+        "content": "Miners in a blockchain network (<graph> with <num_nodes> participants) must form non-colluding pools to prevent centralization. A maximal independent set of miners ensures no two pools are directly connected, maintaining network security and fair reward distribution.",
+        "tags": [
+            "graph",
+            "num_nodes"
+        ]
+    },
+    {
+        "title": "Pandemic Testing Site Placement",
+        "content": "A city\u2019s neighborhoods are nodes in <graph>, with edges denoting high inter-zone mobility. Placing testing sites in a maximal independent set (<num_nodes> locations, <num_edges> mobility paths) minimizes redundant coverage while ensuring all high-risk areas are within reach, balancing cost and accessibility.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Air Traffic Control Sector Delegation",
+        "content": "In a flight zone partition graph <graph> (<num_nodes> sectors, <num_edges> shared boundaries), assigning control towers to a maximal independent set of sectors prevents overlapping jurisdiction conflicts, enabling efficient coordination without radio interference or redundant oversight.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Distributed AI Model Training Node Selection",
+        "content": "In a federated learning system represented by <graph> with <num_nodes> nodes and <num_edges> edges, a subset of devices must be chosen to train local AI models without overlapping data dependencies. Selecting an MIS ensures diverse, non-redundant training while minimizing communication overhead between connected devices.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Smart City Waste Collection Route Optimization",
+        "content": "A municipal waste management system models trash collection points as <graph>, where edges indicate proximity. By selecting an MIS of collection points, trucks can service non-adjacent locations simultaneously, reducing route conflicts and optimizing fuel efficiency across <num_nodes> nodes and <num_edges> edges.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Decentralized Music Festival Stage Scheduling",
+        "content": "For a multi-stage festival with <num_nodes> performers and <num_edges> overlapping fan bases, an MIS selects artists who can play simultaneously without drawing crowds to adjacent stages. This maximizes audience choice while preventing overcrowding in the venue graph <graph>.",
+        "tags": [
+            "num_nodes",
+            "num_edges",
+            "graph"
+        ]
+    },
+    {
+        "title": "Precision Forestry Harvesting Planning",
+        "content": "A forest is mapped as <graph>, where trees (<num_nodes> nodes) are connected if their root systems overlap (<num_edges> edges). An MIS identifies trees that can be harvested without destabilizing neighboring trees, ensuring sustainable logging and soil preservation.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Edge Computing Task Offloading",
+        "content": "In an edge network <graph> with <num_nodes> servers and <num_edges> latency-critical links, an MIS selects servers to process independent tasks in parallel. This avoids redundant computations in interconnected nodes, optimizing resource usage for real-time applications like autonomous vehicles.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Distributed Autonomous Vehicle Charging Station Activation",
+        "content": "In a smart city\u2019s transportation network modeled as <graph> with <num_nodes> charging stations and <num_edges> proximity-based conflicts, stations must be activated such that no two adjacent stations operate simultaneously. This ensures efficient power grid load balancing while avoiding localized energy surges.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Decentralized Art Gallery Lighting Control",
+        "content": "An art gallery\u2019s lighting system is represented by <graph>, where nodes are exhibits and edges indicate visibility overlaps. Selecting a maximal independent set of exhibits to illuminate ensures no two adjacent artworks compete for attention, optimizing viewer experience while conserving energy.",
+        "tags": [
+            "graph"
+        ]
+    },
+    {
+        "title": "Conflict-Free Satellite Communication Scheduling",
+        "content": "A constellation of <num_nodes> satellites forms a communication graph <graph> with <num_edges> interference links. To avoid signal collisions, ground stations must schedule transmissions to satellites in an MIS, enabling parallel data downloads without cross-talk.",
+        "tags": [
+            "num_nodes",
+            "graph",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Distributed Hospital ICU Bed Allocation",
+        "content": "During a crisis, a regional hospital network\u2019s ICU capacity is modeled as <graph>, where nodes are hospitals and edges represent shared patient transfer routes. An MIS ensures selected hospitals can independently handle critical cases without overburdening neighboring facilities, balancing regional healthcare load.",
+        "tags": [
+            "graph"
+        ]
+    },
+    {
+        "title": "AI-Driven Sports Tournament Scheduling",
+        "content": "A tournament organizer uses a competitor graph <graph> with <num_nodes> teams and <num_edges> rivalry edges (e.g., frequent past matches). Scheduling matches for teams in an MIS guarantees no two rivals play simultaneously, maximizing viewership diversity and reducing fan fatigue.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Distributed AI-Based Cybersecurity Threat Detection",
+        "content": "In a network of security nodes represented by <graph> with <num_nodes> devices and <num_edges> connections, an MIS is used to select a subset of nodes for simultaneous threat scanning. This ensures no two active scanners interfere with each other\u2019s signals while covering the entire network efficiently.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Decentralized EV Charging Station Load Balancing",
+        "content": "A city\u2019s electric vehicle charging infrastructure is modeled as <graph> with <num_nodes> stations and <num_edges> proximity links. An MIS selects stations to activate during peak hours so that nearby stations aren\u2019t overloaded simultaneously, optimizing energy distribution and reducing wait times.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Conflict-Free Satellite Constellation Communication",
+        "content": "A satellite network <graph> with <num_nodes> satellites and <num_edges> interference links requires an MIS to schedule communication windows. Selected satellites transmit data without signal clashes, maximizing bandwidth usage across orbital paths.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Smart Retail Shelf Restocking Coordination",
+        "content": "In a warehouse graph <graph> with <num_nodes> robotic shelves and <num_edges> collision zones, an MIS determines which shelves can be restocked concurrently by autonomous robots. This avoids physical bottlenecks and speeds up inventory replenishment.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Distributed Disaster Recovery Resource Deployment",
+        "content": "During disaster response, a relief network <graph> with <num_nodes> aid centers and <num_edges> overlapping service areas uses an MIS to deploy resources. Centers in the set operate independently to avoid duplication while ensuring all affected regions receive aid.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Distributed AI-Based Fraud Detection",
+        "content": "In a financial transaction network represented by <graph> with <num_nodes> accounts and <num_edges> suspicious links, an AI system must flag a set of accounts for investigation such that no two flagged accounts are directly linked. This ensures independent fraud detection while maximizing coverage of potentially fraudulent activity.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Decentralized Renewable Energy Grid Management",
+        "content": "A power grid modeled as <graph> with <num_nodes> solar farms and <num_edges> transmission dependencies requires selecting a subset of farms to activate simultaneously without overloading shared infrastructure. The MIS ensures energy distribution stability while avoiding cascading failures.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Autonomous Underwater Vehicle (AUV) Exploration",
+        "content": "For an ocean floor mapped as <graph> with <num_nodes> exploration sites and <num_edges> overlapping sonar ranges, AUVs must visit sites that are sufficiently distant to avoid interference. The MIS maximizes data collection efficiency while preventing sensor collisions.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Privacy-Preserving Contact Tracing",
+        "content": "In a contact graph <graph> with <num_nodes> individuals and <num_edges> close interactions, health agencies need to notify a subset of people about potential exposure without revealing overlapping contacts. The MIS ensures anonymized alerts while covering the maximum at-risk population.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Decentralized Art Auction Bidding",
+        "content": "An artist collaboration network <graph> with <num_nodes> artists and <num_edges> shared galleries requires selecting independent bidders for auctions to avoid price manipulation. The MIS guarantees fair bidding by preventing collusion among directly connected artists.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Distributed AI-Based Wildlife Poaching Patrol Planning",
+        "content": "In a wildlife reserve represented by <graph> with <num_nodes> patrol zones and <num_edges> overlapping surveillance ranges, rangers must select zones to monitor such that no two adjacent zones are patrolled simultaneously. This ensures optimal coverage while minimizing redundant patrols, deterring poachers effectively.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Decentralized Music Festival Stage Scheduling",
+        "content": "A music festival\u2019s stage network <graph> has <num_nodes> stages and <num_edges> sound interference edges. Organizers must schedule performances on stages that are acoustically isolated to prevent overlapping noise, maximizing audience enjoyment and artist clarity.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Smart Retail Shelf Restocking Coordination",
+        "content": "In a supermarket layout modeled as <graph> with <num_nodes> shelves and <num_edges> proximity constraints, restocking robots must select shelves to service without adjacent activations. This prevents aisle congestion and ensures efficient inventory replenishment.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Conflict-Free Satellite Constellation Communication",
+        "content": "A satellite network <graph> with <num_nodes> satellites and <num_edges> interference links requires a subset of satellites to transmit data simultaneously without signal clashes. Selecting an MIS guarantees maximal non-conflicting communication bandwidth.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Distributed AI-Based Cybersecurity Threat Detection",
+        "content": "A network of security sensors <graph> with <num_nodes> nodes and <num_edges> overlapping monitoring ranges must activate a subset of sensors to detect threats independently. An MIS ensures maximal coverage without redundant alerts, optimizing response efficiency.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Decentralized Smart Grid Microgrid Activation",
+        "content": "In a power distribution network modeled as <graph> with <num_nodes> substations and <num_edges> transmission lines, a utility provider must activate a subset of microgrids to ensure no two adjacent substations are powered simultaneously. This prevents overloads while maximizing energy coverage during peak demand.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Autonomous Drone Swarm Surveillance Coordination",
+        "content": "A fleet of surveillance drones operates over a region partitioned into zones (<graph>), where edges indicate overlapping sensor ranges. To avoid redundant data collection, a maximal independent set of zones must be selected for drone deployment, ensuring full coverage without interference.",
+        "tags": [
+            "graph"
+        ]
+    },
+    {
+        "title": "Conflict-Free Artisanal Mining Site Selection",
+        "content": "In a resource-rich area mapped as <graph> with <num_nodes> potential mining sites and <num_edges> proximity constraints, regulators must approve non-adjacent sites to prevent territorial disputes. An MIS ensures equitable resource extraction while minimizing conflicts among independent miners.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Distributed Edge Server Cache Placement",
+        "content": "A content delivery network (CDN) uses <graph> to model edge servers (<num_nodes>) and their latency-dependent overlaps (<num_edges>). To optimize cache updates, an MIS of servers is selected to synchronize data without redundancy, reducing bandwidth strain while maintaining coverage.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Privacy-Preserving Federated Learning Client Selection",
+        "content": "In federated learning, a coordinator must choose devices (<graph> with <num_nodes> clients and <num_edges> shared data risks) to train a global model. An MIS ensures no two selected devices have overlapping sensitive data, preserving privacy while maximizing participation diversity.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Decentralized Smart Parking Spot Allocation",
+        "content": "In a smart city parking system modeled as <graph> with <num_nodes> parking spots and <num_edges> proximity conflicts, an algorithm must select a set of non-adjacent spots to reserve for incoming vehicles. This ensures parked cars do not block each other\u2019s access lanes, optimizing space utilization and reducing congestion.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Distributed AI-Based News Fact-Checking",
+        "content": "A misinformation detection network uses <graph> to represent <num_nodes> news sources and <num_edges> shared ownership or bias links. To maximize unbiased verification, an MIS selects independent sources for cross-referencing facts, preventing coordinated false narratives from skewing results.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Conflict-Free Rare Earth Mining Site Selection",
+        "content": "Geologists map mining sites as <graph> with <num_nodes> locations and <num_edges> environmental overlap risks (e.g., shared watersheds). An MIS identifies non-adjacent sites for simultaneous extraction, minimizing ecological damage while maintaining production efficiency.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Decentralized Influencer Marketing in E-Commerce",
+        "content": "An online marketplace models its vendor-influencer partnerships as <graph> (<num_nodes> influencers, <num_edges> shared audience overlaps). Selecting an MIS ensures promoted products reach distinct customer segments, avoiding redundant ads and maximizing campaign ROI.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Autonomous Ship Navigation in Congested Waters",
+        "content": "A maritime traffic system represents ships and their collision radii as <graph> with <num_nodes> vessels and <num_edges> proximity conflicts. An MIS computes a safe subset of ships to maneuver simultaneously, preventing accidents while maintaining throughput in busy shipping lanes.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Decentralized Smart City Surveillance Camera Activation",
+        "content": "In a smart city, surveillance cameras are placed at key locations represented by <graph> with <num_nodes> nodes and <num_edges> edges. To optimize energy usage and avoid redundant coverage, cameras must be activated such that no two adjacent cameras are on simultaneously, while ensuring maximal area coverage.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Conflict-Free Rare Earth Mining Site Selection",
+        "content": "A mining company evaluates potential extraction sites modeled as <graph>, where edges indicate overlapping environmental impact zones. Selecting a maximal independent set of sites ensures that no two active mines disrupt the same ecosystem, balancing resource extraction with sustainability.",
+        "tags": [
+            "graph"
+        ]
+    },
+    {
+        "title": "Distributed AI-Based News Fact-Checking",
+        "content": "A fact-checking platform uses a network of contributors represented by <graph> with <num_nodes> nodes and <num_edges> edges. To prevent bias, contributors with conflicting interests (e.g., shared affiliations) cannot verify the same story. An MIS ensures independent, unbiased fact-checking teams.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Autonomous Ship Navigation in Congested Waters",
+        "content": "Maritime traffic controllers model ship routes as <graph>, where edges denote collision risks between vessels. By selecting a maximal independent set of ships to navigate simultaneously, collisions are avoided while maximizing throughput in busy shipping lanes.",
+        "tags": [
+            "graph"
+        ]
+    },
+    {
+        "title": "Privacy-Preserving Federated Learning Client Selection",
+        "content": "In federated learning, a central server coordinates training across devices in <graph>, where edges indicate data privacy risks (e.g., shared user demographics). An MIS selects devices for each training round to prevent leakage of correlated data, preserving privacy.",
+        "tags": [
+            "graph"
+        ]
+    },
+    {
+        "title": "Decentralized Smart Street Parking Allocation",
+        "content": "In a smart city, parking spots are modeled as nodes in <graph> with <num_nodes> spots and <num_edges> proximity conflicts. To optimize parking availability, a system must select a maximal set of non-adjacent spots for simultaneous reservations, ensuring no two reserved spots are close enough to cause traffic bottlenecks.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Conflict-Free Rare Earth Mining Site Selection",
+        "content": "Geologists must choose mining sites from a resource map represented as <graph>, where nodes are potential sites and edges indicate overlapping environmental impact zones. A maximal independent set ensures selected sites operate without ecological interference, balancing resource extraction and sustainability.",
+        "tags": [
+            "graph"
+        ]
+    },
+    {
+        "title": "Distributed AI-Based Wildlife Corridor Design",
+        "content": "Conservationists model animal habitats as <graph> with <num_nodes> zones and <num_edges> migration path overlaps. Selecting a maximal independent set of zones for wildlife corridors prevents territorial conflicts among species while maximizing protected area coverage.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Autonomous Drone Delivery Hub Activation",
+        "content": "A logistics company uses <graph> to map delivery hubs, where edges indicate airspace overlap. Activating a maximal independent set of hubs allows simultaneous drone launches without collision risks, optimizing delivery throughput in high-demand regions.",
+        "tags": [
+            "graph"
+        ]
+    },
+    {
+        "title": "Privacy-Preserving Federated Learning Client Selection",
+        "content": "In a federated learning system with <num_nodes> devices and <num_edges> data similarity links, a coordinator must select devices for training rounds such that no two share sensitive data patterns. A maximal independent set ensures diverse, non-redundant contributions while preserving privacy.",
+        "tags": [
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Decentralized Smart Grid Microgrid Activation",
+        "content": "In a power distribution network modeled as <graph> with <num_nodes> substations and <num_edges> transmission lines, operators must activate a subset of microgrids to ensure no two adjacent substations are simultaneously active. This prevents overloads while maximizing energy coverage during peak demand.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Autonomous Drone Swarm Surveillance Coordination",
+        "content": "A fleet of surveillance drones operates over a region divided into zones (<graph> with <num_nodes> zones and <num_edges> overlapping coverage areas). To avoid redundant monitoring, drones must be assigned to zones such that no two adjacent zones are surveilled, optimizing resource usage and minimizing interference.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Conflict-Free Artisanal Mining Site Selection",
+        "content": "In a resource-rich area represented by <graph> (<num_nodes> mining sites, <num_edges> proximity conflicts), regulators must designate independent mining sites to prevent environmental degradation from overlapping excavations. The MIS ensures maximal extraction without ecological clashes.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Privacy-Preserving Federated Learning Client Selection",
+        "content": "A federated learning system involves <num_nodes> devices connected via <graph> (edges indicate data leakage risks). To train a global model without exposing correlated data, an MIS selects devices with no shared links, preserving privacy while maximizing participation.",
+        "tags": [
+            "num_nodes",
+            "graph"
+        ]
+    },
+    {
+        "title": "Decentralized Smart Parking Spot Allocation",
+        "content": "A smart city\u2019s parking infrastructure is modeled as <graph> (<num_nodes> spots, <num_edges> adjacent pairs). An MIS allocates spots to drivers such that no two adjacent spots are occupied simultaneously, reducing congestion and optimizing space utilization in high-demand areas.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Decentralized Smart Grid Microgrid Activation",
+        "content": "In a power distribution network modeled as <graph> with <num_nodes> substations and <num_edges> transmission lines, a utility provider must activate a subset of microgrids such that no two active microgrids share a direct connection. This ensures localized power autonomy while preventing cascading failures due to interdependent loads.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Conflict-Free Rare Earth Mining Site Selection",
+        "content": "A mining corporation evaluates potential excavation sites represented by <graph>, where nodes are locations and edges indicate overlapping environmental impact zones. Selecting a maximal independent set of sites (<num_nodes> candidates, <num_edges> conflicts) allows sustainable extraction without violating ecological regulations or overburdening local ecosystems.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Autonomous Drone Delivery Hub Activation",
+        "content": "For a logistics network <graph> with <num_nodes> warehouses and <num_edges> overlapping delivery ranges, a drone operator must choose hubs to activate simultaneously. An MIS ensures no two active hubs are within interference range, optimizing package throughput while avoiding mid-air collisions or signal jamming.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Privacy-Preserving Federated Learning Client Selection",
+        "content": "In a federated learning system with <num_nodes> devices and <num_edges> communication dependencies (e.g., shared routers), a coordinator must select devices for model training such that no two selected devices exchange data indirectly. This prevents privacy leaks and biases in distributed AI training.",
+        "tags": [
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Decentralized Smart Street Parking Allocation",
+        "content": "A city\u2019s parking infrastructure is modeled as <graph>, where nodes are parking spots and edges connect spots too close for simultaneous use. An MIS (<num_nodes> spots, <num_edges> proximity constraints) allows drivers to reserve non-adjacent spots dynamically, minimizing disputes and double bookings during peak hours.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Distributed AI-Based Crop Disease Monitoring",
+        "content": "In a smart farming system modeled by <graph> with <num_nodes> fields and <num_edges> adjacency relationships, drones must monitor crops for diseases without overlapping coverage. Selecting a maximal independent set of fields ensures efficient surveillance while avoiding redundant data collection and energy waste.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Decentralized Music Festival Stage Scheduling",
+        "content": "A festival\u2019s stage network is represented by <graph>, where <num_nodes> stages and <num_edges> sound interference edges exist. Scheduling performances on stages that are acoustically isolated (no shared edges) prevents audio clashes, maximizing attendee experience and artist exposure.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Conflict-Free Rare Earth Mining Site Selection",
+        "content": "In a mining region graph <graph> with <num_nodes> sites and <num_edges> environmental conflict edges (e.g., shared watersheds), regulators must approve sites that do not mutually degrade ecosystems. A maximal independent set ensures sustainable extraction while minimizing ecological damage.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Privacy-Preserving Federated Learning Client Selection",
+        "content": "A federated learning network <graph> connects <num_nodes> devices with <num_edges> communication links. To train a global model without leaking sensitive data, a maximal independent set of devices is selected to ensure no two collaborating devices share direct connections, enhancing privacy.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Autonomous Drone Delivery Hub Activation",
+        "content": "A logistics network <graph> includes <num_nodes> hubs and <num_edges> proximity edges where simultaneous drone launches could cause collisions. Activating a maximal independent set of hubs allows parallel deliveries without airspace conflicts, optimizing throughput and safety.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Distributed AI-Based Wildlife Poaching Patrol Planning",
+        "content": "In a conservation area represented by <graph> with <num_nodes> patrol zones and <num_edges> overlapping surveillance ranges, rangers must select zones to monitor such that no two adjacent zones are patrolled simultaneously. This ensures efficient coverage while avoiding redundant patrols, maximizing deterrence with limited resources.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Decentralized Smart Grid Microgrid Activation",
+        "content": "A power grid modeled as <graph> with <num_nodes> microgrids and <num_edges> interconnections requires activation of independent subsets to prevent cascading failures. Selecting a maximal set of non-adjacent microgrids allows stable energy distribution during outages, balancing load and isolation needs.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Conflict-Free Satellite Constellation Communication",
+        "content": "For a satellite network <graph> with <num_nodes> satellites and <num_edges> interference links, ground stations must schedule transmissions to satellites that are not in mutual interference range. A maximal independent set ensures simultaneous, conflict-free data downlinks, optimizing bandwidth usage.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Privacy-Preserving Federated Learning Client Selection",
+        "content": "In a federated learning system with <num_nodes> devices and <num_edges> data dependency links (e.g., shared users), a coordinator must select devices for training rounds such that no two selected devices share sensitive data overlaps. This preserves privacy while maximizing participant diversity.",
+        "tags": [
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Autonomous Underwater Vehicle (AUV) Exploration",
+        "content": "An oceanographic mission uses <num_nodes> AUVs and <num_edges> proximity constraints (e.g., sonar interference) to map a region. By activating a maximal independent set of AUVs, the team avoids signal collisions while covering the largest possible area in parallel.",
+        "tags": [
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Decentralized EV Charging Station Load Balancing",
+        "content": "In a smart city\u2019s electric vehicle (EV) charging network modeled as <graph> with <num_nodes> stations and <num_edges> proximity connections, stations must be activated such that no two adjacent stations operate simultaneously. This prevents grid overload while ensuring maximal coverage for EV users during peak demand.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Autonomous Warehouse Robot Charging Station Placement",
+        "content": "A warehouse with <num_nodes> robot zones and <num_edges> overlapping paths requires charging stations to be placed such that no two stations are adjacent. This ensures robots can recharge without traffic jams, optimizing workflow in <graph>.",
+        "tags": [
+            "num_nodes",
+            "num_edges",
+            "graph"
+        ]
+    },
+    {
+        "title": "Conflict-Free Rare Earth Mining Site Selection",
+        "content": "In a mining region represented by <graph> with <num_nodes> potential sites and <num_edges> environmental conflict zones (e.g., overlapping ecosystems), selecting non-adjacent sites minimizes ecological disruption while maximizing resource extraction efficiency.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Privacy-Preserving Federated Learning Client Selection",
+        "content": "A federated learning system with <num_nodes> devices and <num_edges> communication dependencies must select a subset of devices for model training. By choosing non-adjacent devices in <graph>, data privacy is preserved, as correlated devices (e.g., same household) cannot infer each other\u2019s inputs.",
+        "tags": [
+            "num_nodes",
+            "num_edges",
+            "graph"
+        ]
+    },
+    {
+        "title": "Smart Retail Shelf Restocking Coordination",
+        "content": "A retail store\u2019s shelf network <graph> has <num_nodes> shelves and <num_edges> shared restocking pathways. Selecting non-adjacent shelves for simultaneous restocking prevents robot collisions, ensuring efficient inventory management without workflow interruptions.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Decentralized Smart Grid Microgrid Activation",
+        "content": "In a power distribution network modeled as <graph> with <num_nodes> substations and <num_edges> transmission lines, a utility company must activate a subset of microgrids to ensure no two active grids share a direct connection. This prevents cascading failures while maximizing energy coverage during peak demand.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Autonomous Drone Delivery Hub Activation",
+        "content": "A logistics company uses a geographic graph <graph> with <num_nodes> potential drone hubs and <num_edges> overlapping service ranges. To avoid airspace conflicts, hubs must be selected such that no two active hubs are within interference range, enabling parallel deliveries without collisions.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Conflict-Free Rare Earth Mining Site Selection",
+        "content": "In a resource extraction map represented by <graph> (<num_nodes> sites, <num_edges> shared environmental risks), regulators must approve mining sites where no two adjacent sites operate simultaneously. This minimizes ecological damage while maximizing resource yield.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Privacy-Preserving Federated Learning Client Selection",
+        "content": "A federated learning system employs a trust graph <graph> (<num_nodes> devices, <num_edges> data-sharing relationships). To prevent biased model updates, a subset of devices must be chosen such that no two selected devices have shared sensitive data, ensuring decentralized and fair training.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    },
+    {
+        "title": "Distributed AI-Based Wildlife Corridor Design",
+        "content": "Conservationists model animal habitats as <graph> (<num_nodes> habitat zones, <num_edges> migration overlaps). A maximal independent set of zones is designated as protected corridors, ensuring no two adjacent zones are overused while maintaining biodiversity connectivity.",
+        "tags": [
+            "graph",
+            "num_nodes",
+            "num_edges"
+        ]
+    }
+]
