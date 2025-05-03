@@ -1,5 +1,5 @@
-from .BaseDatasetGenerator import BaseDatasetGenerator
-from .RB_graphs import generate_xu_instances
+from solver.graph.DiffUCO.DatasetCreator.loadGraphDatasets.BaseDatasetGenerator import BaseDatasetGenerator
+from solver.graph.DiffUCO.DatasetCreator.loadGraphDatasets.RB_graphs import generate_xu_instances
 from tqdm import tqdm
 import numpy as np
 import igraph as ig
@@ -33,7 +33,7 @@ class RBDatasetGenerator(BaseDatasetGenerator):
 				"n_min": 200, "n_max": 300,
 				"n_low": 20, "n_high": 25,
 				"k_low": 5, "k_high": 12,
-				"n_train": 4000, "n_val": 500, "n_test": 1000
+				"n_train": 40, "n_val": 5, "n_test": 10
 			}
 		elif "large" in dataset_name:
 			self.size = "large"
@@ -97,13 +97,17 @@ class RBDatasetGenerator(BaseDatasetGenerator):
 		"""
 		Generate a RB graph instances for the dataset
 		"""
+		dataset_list = []
 		for p in self.p_list:
 			if (self.diff_ps):
 				self.dataset_name = f"RB_iid_{self.size}_p_{p}"
 				self.graph_config["n_test"] = 100
 			else:
 				self.dataset_name = f"RB_iid_{self.size}"
-			self.generate_graphs(p)
+			dataset_list.append(self.generate_graphs(p))
+		if len(dataset_list) == 1:
+			return dataset_list[0]
+		return dataset_list
 
 	def generate_graphs(self, p):
 		solutions = {
@@ -117,6 +121,7 @@ class RBDatasetGenerator(BaseDatasetGenerator):
 			"compl_H_graphs": [],
 			"p": []
 		}
+		dataset_list = []
 		for idx in tqdm(range(self.graph_config[f"n_{self.mode}"])):
 			while True:
 				if (not self.diff_ps):
@@ -160,7 +165,9 @@ class RBDatasetGenerator(BaseDatasetGenerator):
 				if len(solutions[key]) > 0:
 					indexed_solution_dict[key] = solutions[key][idx]
 			self.save_instance_solution(indexed_solution_dict, idx)
+			dataset_list.append(indexed_solution_dict)
 		self.save_solutions(solutions)
+		return dataset_list
 
 
 

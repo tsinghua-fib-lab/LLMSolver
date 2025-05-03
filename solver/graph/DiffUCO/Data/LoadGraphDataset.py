@@ -11,8 +11,8 @@ import torch
 from torch.utils.data import DataLoader
 from unipath import Path
 import os
-import jraph_utils
-from playground.Clusters.Meluxina import data_path
+import solver.graph.DiffUCO.jraph_utils
+from solver.graph.DiffUCO.playground.Clusters.Meluxina import data_path
 
 
 class SolutionDatasetLoader:
@@ -59,7 +59,7 @@ class SolutionDatasetLoader:
         # #print(gt_spin_states)
         return batch_dict
 
-    def dataloaders(self):
+    def dataloaders(self, train_graph_list=None, val_graph_list=None, test_graph_list=None):
 
 
         def seed_worker(worker_id):
@@ -74,9 +74,9 @@ class SolutionDatasetLoader:
         TEST_DATASET = self.test_dataset
         VAL_DATASET = self.val_dataset
 
-        dataset_train = SolutionDataset_InMemory(config = self.config, dataset=self.dataset_name, problem=self.problem_name, mode="train", relaxed=self.relaxed, seed=self.seed) if TRAIN_DATASET else None
-        dataset_test = SolutionDataset_InMemory(config = self.config, dataset=self.dataset_name, problem=self.problem_name, mode="test", relaxed=self.relaxed, seed=self.seed) if TEST_DATASET else None
-        dataset_val = SolutionDataset_InMemory(config = self.config, dataset=self.dataset_name, problem=self.problem_name, mode="val", relaxed=self.relaxed, seed=self.seed) if VAL_DATASET else None
+        dataset_train = SolutionDataset_InMemory(config = self.config, dataset=self.dataset_name, problem=self.problem_name, mode="train", relaxed=self.relaxed, seed=self.seed, graph_list=train_graph_list) if TRAIN_DATASET else None
+        dataset_test = SolutionDataset_InMemory(config = self.config, dataset=self.dataset_name, problem=self.problem_name, mode="test", relaxed=self.relaxed, seed=self.seed, graph_list=test_graph_list) if TEST_DATASET else None
+        dataset_val = SolutionDataset_InMemory(config = self.config, dataset=self.dataset_name, problem=self.problem_name, mode="val", relaxed=self.relaxed, seed=self.seed, graph_list=val_graph_list) if VAL_DATASET else None
 
         if(self.mode == "train"):
             mean_energy = dataset_train.val_mean_energy
@@ -132,7 +132,7 @@ class SolutionDatasetLoader:
         current_dataloader.smallest_n_edges_energy_graph, current_dataloader.largest_n_edges_energy_graph = get_x_smallest_and_largest(statistics_dict["energy_graph"]["n_edges"], self.batch_size)
         current_dataloader.smallest_n_nodes_input_graph, current_dataloader.largest_n_nodes_input_graph = get_x_smallest_and_largest(statistics_dict["input_graph"]["n_nodes"], self.batch_size)
         current_dataloader.smallest_n_nodes_energy_graph, current_dataloader.largest_n_nodes_energy_graph = get_x_smallest_and_largest(statistics_dict["energy_graph"]["n_nodes"], self.batch_size)
-        print("dataset statistics",mode, current_dataloader.smallest_n_edges_input_graph, current_dataloader.largest_n_edges_input_graph)
+        # print("dataset statistics",mode, current_dataloader.smallest_n_edges_input_graph, current_dataloader.largest_n_edges_input_graph)
 
 
 
@@ -194,7 +194,7 @@ class SolutionDataset(Dataset):
         elif(os.path.exist(data_path)):
             base_path = data_path
         else:
-            base_path = os.path.dirname(os.getcwd()) + "/DiffUCO/DatasetCreator/loadGraphDatasets/DatasetSolutions/"
+            base_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + "/DatasetCreator/loadGraphDatasets/DatasetSolutions/"
 
         if self.relaxed:
             self.path = base_path + "no_norm/"
@@ -268,7 +268,7 @@ class SolutionDataset(Dataset):
 
 
 class SolutionDataset_InMemory(Dataset):
-    def __init__(self, config = {}, dataset="ENZYMES", problem="MIS", mode="val", relaxed=False, seed=123):  ### TODO add orderign to config
+    def __init__(self, config = {}, dataset="ENZYMES", problem="MIS", mode="val", relaxed=False, seed=123, graph_list=None):  ### TODO add orderign to config
         self.config = config
         self.dataset_name = dataset
         self.problem_name = problem
@@ -280,7 +280,13 @@ class SolutionDataset_InMemory(Dataset):
         self.buffer_size = 1000
         self.N_basis_states = self.config["N_basis_states"]
 
-        self.get_dataset_paths(config, mode=mode, seed=seed)
+        if graph_list:
+            self.graph_list = graph_list
+            self.val_mean_energy = 0.
+            self.val_std_energy = 1.
+            self.n_graphs = len(self.graph_list)
+        else:
+            self.get_dataset_paths(config, mode=mode, seed=seed)
         self._init_MCMCBuffer()
         #super().__init__(self.base_path, None, None, None)
 
@@ -323,7 +329,7 @@ class SolutionDataset_InMemory(Dataset):
             base_path = data_path
             load_path = base_path + f"/no_norm/{self.dataset_name}/{self.mode}/{self.mode}/{self.seed}/{select_data_name}/indexed/"
         else:
-            base_path = os.path.dirname(os.getcwd()) + "/DiffUCO/DatasetCreator/loadGraphDatasets/DatasetSolutions/"
+            base_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + "/DatasetCreator/loadGraphDatasets/DatasetSolutions/"
 
             load_path = base_path + f"no_norm/{self.dataset_name}/{self.mode}/{self.seed}/{select_data_name}/indexed/"
         with open(load_path+ f"idx_{0}_solutions.pickle", "rb") as file:
@@ -342,8 +348,11 @@ class SolutionDataset_InMemory(Dataset):
 
     def __getitem__(self, idx):
 
-        with open(self.base_path + f"idx_{idx}_solutions.pickle", "rb") as file:
-            graph_dict = pickle.load(file)
+        if self.graph_list:
+            graph_dict = self.graph_list[idx]
+        else:
+            with open(self.base_path + f"idx_{idx}_solutions.pickle", "rb") as file:
+                graph_dict = pickle.load(file)
 
         input_graph = graph_dict["H_graphs"]
 

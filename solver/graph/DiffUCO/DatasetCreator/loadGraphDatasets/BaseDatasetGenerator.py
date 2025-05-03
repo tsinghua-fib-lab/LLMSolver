@@ -8,8 +8,8 @@ import jraph
 import pickle
 import numpy as np
 from pathlib import Path
-from DatasetCreator.Gurobi import GurobiSolver
-from DatasetCreator.jraph_utils import utils as jutils
+from solver.graph.DiffUCO.DatasetCreator.Gurobi import GurobiSolver
+from solver.graph.DiffUCO.DatasetCreator.jraph_utils import utils as jutils
 from .save_utils import save_indexed_dict, load_indexed_dict
 import igraph as ig
 import networkx as nx

@@ -4,7 +4,7 @@ from torch_geometric.datasets import TUDataset
 import numpy as np
 import jax.numpy as jnp
 import jraph
-from jraph_utils import utils as jutils
+from solver.graph.DiffUCO.jraph_utils import utils as jutils
 from loadGraphDatasets.loadTwitterGraph import TWITTER
 
 

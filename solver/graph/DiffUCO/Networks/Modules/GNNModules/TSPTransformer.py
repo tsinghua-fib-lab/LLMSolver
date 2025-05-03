@@ -2,7 +2,7 @@ import numpy as np
 import jax.numpy as jnp
 import flax
 import flax.linen as nn
-from Networks.Modules.MLPModules.MLPs import ReluMLP, ReluMLP_skip
+from solver.graph.DiffUCO.Networks.Modules.MLPModules.MLPs import ReluMLP, ReluMLP_skip
 
 
 class TSPTransformer(nn.Module):

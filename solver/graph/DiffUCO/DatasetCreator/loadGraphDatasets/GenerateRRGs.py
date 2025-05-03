@@ -1,11 +1,11 @@
 import igraph as ig
 from jraph_utils import utils as jutils
-from Gurobi import GurobiSolver
+from solver.graph.DiffUCO.DatasetCreator.Gurobi import GurobiSolver
 import numpy as np
 import pickle
 from unipath import Path
 import os
-from GreedyAlgorithms import GreedyMIS
+from solver.graph.DiffUCO.DatasetCreator.GreedyAlgorithms import GreedyMIS
 
 def generate_regular_graph(num_nodes, k):
     regular_graph = ig.Graph.K_Regular(num_nodes, k)

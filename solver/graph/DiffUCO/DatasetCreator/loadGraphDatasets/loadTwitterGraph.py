@@ -1,7 +1,7 @@
 import pickle
 from torch.utils.data import Dataset
 import numpy as np
-from jraph_utils import utils as jutils
+from solver.graph.DiffUCO.DatasetCreator.jraph_utils import utils as jutils
 import os
 
 class TWITTER(Dataset):

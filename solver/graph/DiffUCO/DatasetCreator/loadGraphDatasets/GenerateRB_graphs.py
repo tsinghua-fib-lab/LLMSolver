@@ -8,8 +8,8 @@ from collections import Counter
 from .RB_graphs import generate_xu_instances
 from tqdm import tqdm
 from .save_utils import save_indexed_dict
-from DatasetCreator.GreedyAlgorithms import GreedyMIS
-from DatasetCreator.UnetUtils.create_graphs import create_U_net
+from solver.graph.DiffUCO.DatasetCreator.GreedyAlgorithms import GreedyMIS
+from solver.graph.DiffUCO.DatasetCreator.UnetUtils.create_graphs import create_U_net
 
 def generate_instance(n, k, r, p):
     '''

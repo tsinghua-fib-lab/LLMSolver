@@ -5,7 +5,7 @@ import flax
 import flax.linen as nn
 from functools import partial
 
-from Networks.Modules import get_GNN_model
+from solver.graph.DiffUCO.Networks.Modules import get_GNN_model
 
 class DiffModel(nn.Module):
 	"""

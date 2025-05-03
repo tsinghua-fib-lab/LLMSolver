@@ -6,7 +6,7 @@ import numpy as np
 import os
 import sys
 sys.path.append("..")
-from DatasetCreator.jraph_utils import utils as jutils
+from solver.graph.DiffUCO.DatasetCreator.jraph_utils import utils as jutils
 from matplotlib import pyplot as plt
 
 try:

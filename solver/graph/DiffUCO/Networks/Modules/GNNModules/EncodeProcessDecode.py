@@ -4,8 +4,8 @@ import jax.numpy as jnp
 import flax
 import flax.linen as nn
 import jraph
-from Networks.Modules.MLPModules.MLPs import ReluMLP, ReluMLP_skip
-from Networks.Modules.GNNModules.GraphNorm import GraphNorm
+from solver.graph.DiffUCO.Networks.Modules.MLPModules.MLPs import ReluMLP, ReluMLP_skip
+from solver.graph.DiffUCO.Networks.Modules.GNNModules.GraphNorm import GraphNorm
 
 class NonLinearMessagePassingLayer(nn.Module):
 	"""

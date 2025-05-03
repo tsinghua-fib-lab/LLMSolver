@@ -15,10 +15,10 @@ class BaseNoiseDistr(ABC):
 
         self.beta_arr = jnp.flip(jnp.array(self.beta_list), axis=-1)
 
-        print("noise potential", self.config["noise_potential"])
-        print("beta is")
-        print(self.beta_arr)
-        print("______________")
+        # print("noise potential", self.config["noise_potential"])
+        # print("beta is")
+        # print(self.beta_arr)
+        # print("______________")
 
     @abstractmethod
     def get_log_p_T_0(self):

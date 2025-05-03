@@ -2,7 +2,7 @@ import jax
 import jax.numpy as jnp
 from flax import linen as nn
 from typing import Any
-from Networks.Modules.MLPModules.MLPs import ReluMLP, ReluMLP_skip
+from solver.graph.DiffUCO.Networks.Modules.MLPModules.MLPs import ReluMLP, ReluMLP_skip
 from functools import partial
 class ConvBlock(nn.Module):
     """A simple 2D convolutional block with optional batch normalization and ReLU activation."""

@@ -3,7 +3,7 @@ import networkx as nx
 import jraph
 import numpy as np
 from tqdm import tqdm
-from DatasetCreator.Gurobi import GurobiSolver
+from solver.graph.DiffUCO.DatasetCreator.Gurobi import GurobiSolver
 
 from .BaseDatasetGenerator import BaseDatasetGenerator
 

@@ -1,5 +1,5 @@
-from jraph_utils import utils as jutils
-from Gurobi import GurobiSolver
+from solver.graph.DiffUCO.DatasetCreator.jraph_utils import utils as jutils
+from solver.graph.DiffUCO.DatasetCreator.Gurobi import GurobiSolver
 
 import os
 import numpy as np
@@ -9,7 +9,7 @@ from unipath import Path
 from torch.utils.data import DataLoader
 import pickle
 from tqdm import tqdm
-from loadGraphDatasets.loadTwitterGraph import TWITTER
+from solver.graph.DiffUCO.DatasetCreator.loadGraphDatasets.loadTwitterGraph import TWITTER
 import time
 
 def solve_and_save(dataset_name ,mode = "val", EnergyFunction = "MaxCut", parent = True, seed = None, time_limit=float("inf"), norm = False):

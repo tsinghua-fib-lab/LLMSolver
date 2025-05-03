@@ -3,8 +3,8 @@ import jax
 import jax.numpy as jnp
 from flax import linen as nn
 import jraph
-from Networks.Modules.MLPModules.MLPs import ReluMLP
-from Networks.Modules.GNNModules.GraphNorm import GraphNorm
+from solver.graph.DiffUCO.Networks.Modules.MLPModules.MLPs import ReluMLP
+from solver.graph.DiffUCO.Networks.Modules.GNNModules.GraphNorm import GraphNorm
 
 def add_self_edges_fn(jraph):
     r"""Adds self edges. Assumes self edges are not in the graph yet."""

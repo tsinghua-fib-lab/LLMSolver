@@ -23,7 +23,7 @@ def solveMDS_as_MIP(H_graph, time_limit = float("inf"), num_CPUs = None, thread_
     m.setParam("TimeLimit", time_limit)
 
     if(num_CPUs == None):
-        print("Default value of the Threads parameter:", m.Params.Threads)
+        # print("Default value of the Threads parameter:", m.Params.Threads)
         m.setParam("Threads", int(thread_fraction*multiprocessing.cpu_count()))
     else:
         m.setParam("Threads", int(num_CPUs))
@@ -60,7 +60,7 @@ def solveMVC_as_MIP(H_graph, time_limit = float("inf"), num_CPUs = None, thread_
     m.setParam("TimeLimit", time_limit)
 
     if(num_CPUs == None):
-        print("Default value of the Threads parameter:", m.Params.Threads)
+        # print("Default value of the Threads parameter:", m.Params.Threads)
         m.setParam("Threads", int(thread_fraction*multiprocessing.cpu_count()))
     else:
         m.setParam("Threads", int(num_CPUs))
@@ -98,7 +98,7 @@ def solveMIS_as_MIP(H_graph,  time_limit = float("inf"), thread_fraction = 0.5, 
     m.setParam("TimeLimit", time_limit)
 
     if(num_CPUs == None):
-        print("Default value of the Threads parameter:", m.Params.Threads)
+        # print("Default value of the Threads parameter:", m.Params.Threads)
         m.setParam("Threads", int(thread_fraction*multiprocessing.cpu_count()))
     else:
         m.setParam("Threads", int(num_CPUs))
@@ -228,7 +228,7 @@ def solveWMIS_QUBO(H_graph, time_limit=float("inf"), model_name = "miqp1", solut
         # m.params.nodelimit = 1000000
         # m.params.branchdir = -1
     else:
-        print("Default value of the Threads parameter:", m.Params.Threads)
+        # print("Default value of the Threads parameter:", m.Params.Threads)
         m.setParam("Threads", int(0.75*multiprocessing.cpu_count()))
     if (bnb):
         m.setParam("Heuristics", 0)
@@ -519,7 +519,7 @@ def solveMIS(H_graph, time_limit=float("inf"), model_name = "miqp1", solution_li
         # m.params.nodelimit = 1000000
         # m.params.branchdir = -1
     else:
-        print("Default value of the Threads parameter:", m.Params.Threads)
+        # print("Default value of the Threads parameter:", m.Params.Threads)
         m.setParam("Threads", int(0.75*multiprocessing.cpu_count()))
     if (bnb):
         m.setParam("Heuristics", 0)
@@ -561,7 +561,7 @@ def solveMaxCut(H_graph, time_limit=float("inf"), solution_limit=None, num_CPUs 
         m.setParam("Threads", 1)
         m.setParam("OutputFlag", 1)
     elif(num_CPUs == None):
-        print("Default value of the Threads parameter:", m.Params.Threads)
+        # print("Default value of the Threads parameter:", m.Params.Threads)
         m.setParam("Threads", int(thread_fraction*multiprocessing.cpu_count()))
     else:
         m.setParam("Threads", int(num_CPUs))
@@ -610,7 +610,7 @@ def solveSpinGlass(H_graph, time_limit=float("inf"), solution_limit=None, num_CP
         m.setParam("Threads", 1)
         m.setParam("OutputFlag", 1)
     elif(num_CPUs == None):
-        print("Default value of the Threads parameter:", m.Params.Threads)
+        # print("Default value of the Threads parameter:", m.Params.Threads)
         m.setParam("Threads", int(thread_fraction*multiprocessing.cpu_count()))
     else:
         m.setParam("Threads", int(num_CPUs))
@@ -659,7 +659,7 @@ def solveMaxCut_as_IP(H_graph, time_limit=float("inf"), solution_limit=None, ver
         m.setParam("Threads", 1)
         m.setParam("OutputFlag", 1)
     else:
-        print("Default value of the Threads parameter:", m.Params.Threads)
+        # print("Default value of the Threads parameter:", m.Params.Threads)
         m.setParam("Threads", int(0.75*multiprocessing.cpu_count()))
 
     if(bnb):

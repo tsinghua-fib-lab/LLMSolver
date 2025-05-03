@@ -1,9 +1,9 @@
-from Networks.Modules.GNNModules.EncodeProcessDecode import EncodeProcessDecode
-from Networks.Modules.GNNModules.TSPModel import TSPModel
-from Networks.Modules.GNNModules.TSPTransformer import TSPTransformer
-from Networks.Modules.GNNModules.U_Net import UNet
-from Networks.Modules.HeadModules.RLHead import RLHeadModuleTSP, RLHeadModule_agg_before, RLHeadModule_agg_after
-from Networks.Modules.HeadModules.NormalHead import NormalHeadModule,TransformerHead
+from solver.graph.DiffUCO.Networks.Modules.GNNModules.EncodeProcessDecode import EncodeProcessDecode
+from solver.graph.DiffUCO.Networks.Modules.GNNModules.TSPModel import TSPModel
+from solver.graph.DiffUCO.Networks.Modules.GNNModules.TSPTransformer import TSPTransformer
+from solver.graph.DiffUCO.Networks.Modules.GNNModules.U_Net import UNet
+from solver.graph.DiffUCO.Networks.Modules.HeadModules.RLHead import RLHeadModuleTSP, RLHeadModule_agg_before, RLHeadModule_agg_after
+from solver.graph.DiffUCO.Networks.Modules.HeadModules.NormalHead import NormalHeadModule,TransformerHead
 ### TODO implement mixture of AnnealedNoise and Bernoulli Noise
 GNNModel_registry = {"normal": EncodeProcessDecode, "TSPModel": TSPModel, "Transformer":TSPTransformer, "UNet": UNet}
 OutputHead_registry = {"RLHead": RLHeadModule_agg_before, "RLHead_aggr": RLHeadModule_agg_after, "RLHeadTSP": RLHeadModuleTSP, "NormalHead": NormalHeadModule, "TransformerHead": TransformerHead}

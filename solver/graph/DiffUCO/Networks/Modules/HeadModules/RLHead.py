@@ -2,7 +2,7 @@ import jax
 import numpy as np
 import jax.numpy as jnp
 import flax.linen as nn
-from Networks.Modules.MLPModules.MLPs import ProbMLP, ValueMLP
+from solver.graph.DiffUCO.Networks.Modules.MLPModules.MLPs import ProbMLP, ValueMLP
 from functools import partial
 import flax
 

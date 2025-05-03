@@ -1,7 +1,7 @@
 import sys
 sys.path.append("..")
 
-from DatasetCreator.loadGraphDatasets import get_dataset_generator
+from solver.graph.DiffUCO.DatasetCreator.loadGraphDatasets import get_dataset_generator
 
 import argparse
 
@@ -42,14 +42,36 @@ def create_dataset(config: dict, modes: list, time_limits: list):
 	if len(modes) != len(time_limits):
 		raise ValueError("Length of modes, sizes and time_limits should be the same")
 
+	mode_dataset_list = []
 	for mode,  time_limit in zip(modes, time_limits):
 		config["mode"] = mode
 		#config["n_graphs"] = size
 		config["time_limit"] = float(time_limit)
 		config["thread_fraction"] = args.thread_fraction
 		dataset_generator = get_dataset_generator(config)
-		dataset_generator.generate_dataset()
+		dataset_list = dataset_generator.generate_dataset()
+		mode_dataset_list.append(dataset_list)
+	return mode_dataset_list
 
+def get_dataset(problem: str, modes: list, gurobi_solve: bool=False, time_limits: list=None):
+	dataset = args.datasets[0]
+	seed = args.seed[0]
+
+	base_config = {
+		"licence_base_path": args.licence_path,
+		"seed": seed,
+		"parent": args.parent,
+		"save": args.save,
+		"gurobi_solve": gurobi_solve,
+		"diff_ps": args.diff_ps,
+		"dataset_name": dataset,
+		"problem": problem,
+		"time_limit": None,
+		"n_graphs": None,
+	}
+	if not time_limits:
+		time_limits = args.time_limits
+	return create_dataset(base_config, modes, time_limits)
 
 # python prepare_datasets.py --licence_path /system/user/berghamm --datasets NxNLattice_16x16 --problems IsingModel --seed 123 --save True --gurobi_solve False --modes test train val
 if __name__ == "__main__":

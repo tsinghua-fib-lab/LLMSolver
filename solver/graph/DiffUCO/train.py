@@ -11,20 +11,20 @@ import jraph
 from tqdm import tqdm
 import wandb
 from matplotlib import pyplot as plt
-from NoiseDistributions import get_Noise_class
-from Trainers import get_Trainer_class
-from Networks.DiffModel import DiffModel
-from jraph_utils import pmap_batch_U_net_graph_dict_and_pad
-from utils.lr_schedule import cos_schedule
-from EnergyFunctions import get_Energy_class
-from MCMC import MCMCSampler
+from solver.graph.DiffUCO.NoiseDistributions import get_Noise_class
+from solver.graph.DiffUCO.Trainers import get_Trainer_class
+from solver.graph.DiffUCO.Networks.DiffModel import DiffModel
+from solver.graph.DiffUCO.jraph_utils import pmap_batch_U_net_graph_dict_and_pad
+from solver.graph.DiffUCO.utils.lr_schedule import cos_schedule
+from solver.graph.DiffUCO.EnergyFunctions import get_Energy_class
+from solver.graph.DiffUCO.MCMC import MCMCSampler
 
-from Data.LoadGraphDataset import SolutionDatasetLoader
+from solver.graph.DiffUCO.Data.LoadGraphDataset import SolutionDatasetLoader
 from jax.tree_util import tree_flatten
 import time
-import jraph_utils
-from utils import reshape_utils
-from utils import dict_count
+from solver.graph.DiffUCO import jraph_utils
+from solver.graph.DiffUCO.utils import reshape_utils
+from solver.graph.DiffUCO.utils import dict_count
 import os
 
 import warnings
@@ -45,16 +45,17 @@ def main():
     raise RuntimeError(exception)
 
 class TrainMeanField:
-	def __init__(self, config, load_wandb_id = None, eval_step_factor = 1, load_best_parameters = False):
+	def __init__(self, config, load_wandb_id = None, eval_step_factor = 1, load_best_parameters = False,
+				 train_graph_list=None, val_graph_list=None, test_graph_list=None):
 		self.load_wandb_id = load_wandb_id
 		self.load_best_parameters = load_best_parameters
 		jax.config.update('jax_disable_jit', not config["jit"])
 
-		self.path_to_models = os.getcwd() + "/Checkpoints"
+		self.path_to_models = os.path.dirname(os.path.abspath(__file__)) + "/Checkpoints"
 
 		self.config = self._init_config(config)
 		self.config["eval_step_factor"] = eval_step_factor
-		print(self.config)
+		# print(self.config)
 
 		self.seed = self.config["seed"]
 		self.key = jax.random.PRNGKey(self.seed)
@@ -78,7 +79,7 @@ class TrainMeanField:
 		# if(len(jax.devices()) > 1):
 		# 	self.pad_k = 2.
 
-		print("pad_k is", self.pad_k, "grid num", self.grid_num)
+		# print("pad_k is", self.pad_k, "grid num", self.grid_num)
 
 		self.epochs = self.config["N_warmup"] + self.config["N_anneal"] + self.config["N_equil"]
 		self.config["epochs"] = self.epochs
@@ -133,7 +134,7 @@ class TrainMeanField:
 			self.config["n_features_list_prob"] = [120,120,self.n_bernoulli_features]
 		elif(self.problem_name == "IsingModel"):
 			self.config["n_features_list_prob"] = [64,64,self.n_bernoulli_features]
-		else:		
+		else:
 			self.config["n_features_list_prob"] = [120,64,2]
 
 		self.n_features_list_prob = self.config["n_features_list_prob"]
@@ -258,12 +259,12 @@ class TrainMeanField:
 		self.__init_noise_distribution_class()
 		self.config.pop("vmapped_energy_loss_func")
 		self.config.pop("vmapped_energy_func")
-		self.__init_dataset()
+		self.__init_dataset(train_graph_list=train_graph_list, val_graph_list=val_graph_list, test_graph_list=test_graph_list)
 		self.__init_network()
 		self.__init__Trainer()
 		self.__init_optimizer_and_params()
 		self.__init_functions()
-		self.__init_wandb(self.config)
+		# self.__init_wandb(self.config)
 		#self.__init_beta_list()
 
 	def __init__Trainer(self):
@@ -365,7 +366,7 @@ class TrainMeanField:
 			self.__init_optimizer(self.lr, self.params)
 		else:
 			if(self.load_best_parameters):
-				print("Best Parameters are Loaded!")
+				# print("Best Parameters are Loaded!")
 				loaded_dict = self._load_best_epoch()
 				if(isinstance(loaded_dict, dict)):
 					pass
@@ -384,7 +385,7 @@ class TrainMeanField:
 				else:
 					loaded_dict = self._load_last_epoch()
 
-			print("loaded dict", self.load_best_parameters, loaded_dict.keys())
+			# print("loaded dict", self.load_best_parameters, loaded_dict.keys())
 			self.curr_epoch = loaded_dict["epoch"]
 			self.params = loaded_dict["params"]
 
@@ -490,13 +491,13 @@ class TrainMeanField:
 
 
 		num_gpus = jax.local_device_count()
-		print("Training is distributed across ", num_gpus, "devices!")
+		# print("Training is distributed across ", num_gpus, "devices!")
 		# if(num_gpus <= 1):
 		# 	pass
 		# else:
 		self.params = jax.device_put_replicated(self.params, list(jax.devices()))
 
-		print("pmapped params")
+		# print("pmapped params")
 		print(jax.tree_map(lambda x: x.shape, self.params))
 
 	def _init_and_test_MCMC_sampler(self):
@@ -511,14 +512,14 @@ class TrainMeanField:
 		bin_sequence = jnp.ones((energy_graphs.nodes.shape[0], self.n_diffusion_steps + 1, energy_graphs.nodes.shape[1], self.N_basis_states, 1))
 		self.MCMCSamplerClass.update_buffer(self.params, input_graph_list, energy_graphs, bin_sequence, batched_key, T)
 
-	def __init_dataset(self):
+	def __init_dataset(self, train_graph_list=None, val_graph_list=None, test_graph_list=None):
 		self.data_generator = SolutionDatasetLoader(config = self.config, dataset=self.dataset_name,
 											   problem=self.problem_name,
 											   batch_size=self.batch_size,
 											   relaxed=self.relaxed,
 											   seed=self.seed)
 		self.dataloader_train, self.dataloader_test, self.dataloader_val, (
-			self.mean_energy, self.std_energy) = self.data_generator.dataloaders()
+			self.mean_energy, self.std_energy) = self.data_generator.dataloaders(train_graph_list=train_graph_list, val_graph_list=val_graph_list, test_graph_list=test_graph_list)
 
 	def __init_wandb(self, config):
 		"""
@@ -529,7 +530,6 @@ class TrainMeanField:
 		if(self.config["wandb"]):
 			wandb.init(project=self.wandb_project, name=self.wandb_run, group=self.wandb_group, id=self.wandb_run_id,
 				   config=config, mode=self.wandb_mode, settings=wandb.Settings(_service_wait=300))
-
 
 	@partial(jax.jit, static_argnums=(0,))
 	def __update_params(self, params, grads, opt_state):
@@ -595,7 +595,7 @@ class TrainMeanField:
 	def _on_epoch_end(self, epoch):
 		if (self.MCMC_steps != 0 and epoch != 0):
 			self.dataloader_train = self.data_generator.reinint_train_dataloader(int(epoch))
-			wandb.log({"MCMC/Energy": np.mean(self.MCMCSamplerClass.MCMC_Energ_list)})
+			# wandb.log({"MCMC/Energy": np.mean(self.MCMCSamplerClass.MCMC_Energ_list)})
 			self.MCMCSamplerClass._reset_MCMC_Energy_list()
 
 	def train_step(self, batch_dict):
@@ -612,9 +612,9 @@ class TrainMeanField:
 
 	def train(self):
 
-		wandb.define_metric("train/metrics")
-		wandb.define_metric("train/loss" )
-		wandb.define_metric("train/loss" )
+		# wandb.define_metric("train/metrics")
+		# wandb.define_metric("train/loss" )
+		# wandb.define_metric("train/loss" )
 
 		print("first evaluation...")
 		self.save_metrics_dict = {}
@@ -648,8 +648,8 @@ class TrainMeanField:
 			epoch_time_dict["epoch_time/logging"] = []
 			for iter, (batch_dict) in enumerate(self.dataloader_train):
 				gt_normed_energies = batch_dict["energies"]
-				print("batch", iter, "of", len(self.dataloader_train))
-				print("batchsize is", len(gt_normed_energies))
+				# print("batch", iter, "of", len(self.dataloader_train))
+				# print("batchsize is", len(gt_normed_energies))
 
 				step1 = time.time()
 				loss, (log_dict, energy_graph_batch, batching_time) = self.train_step(batch_dict)
@@ -729,8 +729,8 @@ class TrainMeanField:
 					#print("shape jsut calc the mean", np.array(wandb_log_dict[key]).shape)
 					train_log_dict["train/" + key] = np.mean(wandb_log_dict[key])
 
-			wandb.log(train_log_dict)
-			wandb.log(wandb_epoch_time_dict)
+			# wandb.log(train_log_dict)
+			# wandb.log(wandb_epoch_time_dict)
 
 			self.eval(epoch=epoch + 1)
 
@@ -738,7 +738,7 @@ class TrainMeanField:
 				# early stopping
 				print("run stopped due to break condition")
 				break
-		wandb.finish()
+		# wandb.finish()
 
 
 	def eval(self, epoch, mode = "eval"):
@@ -752,7 +752,7 @@ class TrainMeanField:
 		save_metrics_at_epoch["eval/rel_error"] = []
 		for iter, (batch_dict) in enumerate(dataloader):
 			gt_normed_energies = batch_dict["energies"]
-			print("batchsize is", len(gt_normed_energies))
+			# print("batchsize is", len(gt_normed_energies))
 
 			graph_batch, energy_graph_batch = self._prepare_graphs(batch_dict, mode = mode)
 
@@ -831,7 +831,7 @@ class TrainMeanField:
 
 		self.__save_params_every_epoch(epoch)
 
-		wandb.log(eval_log_dict)
+		# wandb.log(eval_log_dict)
 
 	def test(self, mode = "test"):
 
@@ -847,9 +847,10 @@ class TrainMeanField:
 		energy_mat_list = []
 		gt_energy_mat_list = []
 
+		solutions = []
 		for iter, (batch_dict) in enumerate(dataloader):
 			gt_normed_energies = batch_dict["energies"]
-			print("batchsize is", len(gt_normed_energies))
+			# print("batchsize is", len(gt_normed_energies))
 
 			graph_batch, energy_graph_batch = self._prepare_graphs(batch_dict, mode = mode)
 
@@ -863,6 +864,7 @@ class TrainMeanField:
 
 
 			log_dict_metrics = jax.tree_map(reshape_utils.unravel_dict, log_dict["metrics"])
+			solutions.extend(jnp.transpose(log_dict_metrics['X_0_CE'], (2, 1, 0)).tolist())
 			if("Losses" in log_dict.keys()):
 				loss_dict = {f"losses/{key}": log_dict["Losses"][key] for key in log_dict["Losses"]}
 				for key in loss_dict.keys():
@@ -905,6 +907,7 @@ class TrainMeanField:
 		forw_pass_time = np.sum(time_dict["forward_pass"])
 		overall_time = CE_time + forw_pass_time
 		eval_log_dict = {
+			f"{mode}/solutions": solutions,
 			f"{mode}/epochs_since_best": self.epochs_since_best,
 			f"{mode}/best_rel_error": self.best_rel_error,
 			f"{mode}/best_energy": self.best_energy,
@@ -984,7 +987,7 @@ class TrainMeanField:
 			plt.ylabel("Free Energies")
 			plt.xlabel("Number of Samples")
 			plt.tight_layout()
-			wandb_log[f"{mode}/figures/Est_Free_Energy"] = wandb.Image(fig)
+			# wandb_log[f"{mode}/figures/Est_Free_Energy"] = wandb.Image(fig)
 		plt.close("all")
 
 		fig = plt.figure()
@@ -999,7 +1002,7 @@ class TrainMeanField:
 			plt.ylabel("internal energies")
 			plt.xlabel("Number of Samples")
 			plt.tight_layout()
-			wandb_log[f"{mode}/figures/internal_energies"] = wandb.Image(fig)
+			# wandb_log[f"{mode}/figures/internal_energies"] = wandb.Image(fig)
 		plt.close("all")
 
 		fig = plt.figure()
@@ -1015,7 +1018,7 @@ class TrainMeanField:
 			plt.ylabel("internal energies MCMC")
 			plt.xlabel("Number of Samples")
 			plt.tight_layout()
-			wandb_log[f"{mode}/figures/internal_energies_MCMC"] = wandb.Image(fig)
+			# wandb_log[f"{mode}/figures/internal_energies_MCMC"] = wandb.Image(fig)
 		plt.close("all")
 
 		fig = plt.figure()
@@ -1031,7 +1034,7 @@ class TrainMeanField:
 		plt.yscale("log")
 		plt.xlabel("Number of Samples")
 		plt.tight_layout()
-		wandb_log[f"{mode}/figures/Est_Abs_Error"] = wandb.Image(fig)
+		# wandb_log[f"{mode}/figures/Est_Abs_Error"] = wandb.Image(fig)
 		plt.close("all")
 
 		fig = plt.figure()
@@ -1048,16 +1051,16 @@ class TrainMeanField:
 		plt.ylabel("effective_sample_size")
 		plt.xlabel("Number of Samples")
 		plt.tight_layout()
-		wandb_log[f"{mode}/figures/effective_sample_size"] = wandb.Image(fig)
+		# wandb_log[f"{mode}/figures/effective_sample_size"] = wandb.Image(fig)
 		plt.close("all")
 
 		wandb_log[f"gt_unbiased_free_energy"] = gt_free_energy
 		wandb_log[f"free_energy_estimate_error"] = abs(free_energies[-1] - gt_free_energy) / abs(gt_free_energy)
 		wandb_log[f"free_energy_estimate_error_abs"] = abs(free_energies[-1] - gt_free_energy)
 
-		wandb.log(wandb_log)
+		# wandb.log(wandb_log)
 
-		wandb.finish()
+		# wandb.finish()
 		print('Done')
 
 
@@ -1222,7 +1225,7 @@ class TrainMeanField:
 					plt_dict[f"{mode}/figures/{figure_key}"] = wandb.Image(fig)
 					plt.close("all")
 
-			wandb.log(plt_dict)
+			# wandb.log(plt_dict)
 
 	@partial(jax.jit, static_argnums=(0,))
 	def calc_mean_prob(self,graphs, spin_log_probs):

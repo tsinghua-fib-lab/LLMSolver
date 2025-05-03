@@ -40,6 +40,7 @@ class BADatasetGenerator(BaseDatasetGenerator):
 			"compl_H_graphs": [],
 		}
 
+		dataset_list = []
 		for idx in tqdm(range(self.graph_config[f"n_{self.mode}"])):
 			if "small" in self.dataset_name:
 				curr_n = np.random.randint(101) + 200
@@ -83,8 +84,9 @@ class BADatasetGenerator(BaseDatasetGenerator):
 				if len(solutions[key]) > 0:
 					indexed_solution_dict[key] = solutions[key][idx]
 			self.save_instance_solution(indexed_solution_dict, idx)
+			dataset_list.append(indexed_solution_dict)
 		self.save_solutions(solutions)
-
+		return dataset_list
 
 
 

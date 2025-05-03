@@ -10,9 +10,9 @@ from functools import partial
 import wandb
 import time
 
-from train import TrainMeanField
-from Data.LoadGraphDataset import SolutionDatasetLoader
-from jraph_utils import pad_graph_to_nearest_power_of_k, add_random_node_features
+from solver.graph.DiffUCO.train import TrainMeanField
+from solver.graph.DiffUCO.Data.LoadGraphDataset import SolutionDatasetLoader
+from solver.graph.DiffUCO.jraph_utils import pad_graph_to_nearest_power_of_k, add_random_node_features
 import warnings
 warnings.filterwarnings("ignore", category=FutureWarning)
 
@@ -29,7 +29,8 @@ Conditional Expectation
 
 
 class ConditionalExpectation:
-    def __init__(self, wandb_id, config, n_eval_samples, k = 1, load_best_network = True, eval_step_factor = 2, project_name = "", batch_size = 32):
+    def __init__(self, wandb_id, config, n_eval_samples, k = 1, load_best_network = True, eval_step_factor = 2, project_name = "", batch_size = 32,
+                 train_graph_list=None, val_graph_list=None, test_graph_list=None):
         self.config = config
         self.eval_step_factor = eval_step_factor
         self.load_best_network = load_best_network
@@ -41,10 +42,7 @@ class ConditionalExpectation:
 
         self.ST_k = k
 
-        if(os.getcwd() == "/code/DiffUCO/"):
-            base_path = "/mnt/proj2/dd-23-97/"
-        else:
-            base_path = os.path.dirname(os.getcwd())
+        base_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
         self.path_results = base_path + "/DiffUCO/CE_results"
 
@@ -53,14 +51,13 @@ class ConditionalExpectation:
 
         self.n_eval_samples = n_eval_samples
 
-        WANDB = True
+        WANDB = False
         if WANDB:
             self.wandb_mode = "online"
         else:
             self.wandb_mode = "disabled"
 
-
-        self.__load_network()
+        self.__load_network(train_graph_list=train_graph_list, val_graph_list=val_graph_list, test_graph_list=test_graph_list)
         self.model.eval_step_factor = self.eval_step_factor
         #self.__init_dataset()
         self.__vmap_get_energy = jax.vmap(self.__get_energy, in_axes=(None, 0), out_axes=(1))
@@ -90,8 +87,8 @@ class ConditionalExpectation:
                     params = loaded_dict["params"]
                     config = loaded_dict["config"]
                     eval_dict = loaded_dict["logs"]
-            for key in eval_dict.keys():
-                print(key, eval_dict[key])
+            # for key in eval_dict.keys():
+            #     print(key, eval_dict[key])
 
             return params, config
         else:
@@ -102,13 +99,13 @@ class ConditionalExpectation:
             return loaded_dict["params"], loaded_dict["config"]
 
 
-    def __load_network(self):
+    def __load_network(self, train_graph_list=None, val_graph_list=None, test_graph_list=None):
         self.params, self.config  = self.__load_params()
         print("loaded", jax.tree_map(lambda x: x.shape, self.params))
         self.params = jax.tree_map(lambda x: x[0], self.params)
         self.params = jax.device_put_replicated(self.params, list(jax.devices()))
 
-        print(f"wandb ID: {self.wandb_id}\nDataset: {self.config['dataset_name']} | Problem: {self.config['problem_name']}")
+        # print(f"wandb ID: {self.wandb_id}\nDataset: {self.config['dataset_name']} | Problem: {self.config['problem_name']}")
         self.path_dataset = self.config['dataset_name']
 
         self.dataset_name = self.config["dataset_name"]
@@ -133,12 +130,13 @@ class ConditionalExpectation:
         self.config["N_basis_states"] = 1
         self.__init_wandb()
 
-        self.model = TrainMeanField(self.config, load_wandb_id = self.wandb_id, eval_step_factor = self.eval_step_factor, load_best_parameters=True)
+        self.model = TrainMeanField(self.config, load_wandb_id = self.wandb_id, eval_step_factor = self.eval_step_factor, load_best_parameters=True,
+                                    train_graph_list=train_graph_list, val_graph_list=val_graph_list, test_graph_list=test_graph_list)
         #self.model.params = self.params
 
 
 
-    def init_dataset(self, dataset_name, mode = "train"):
+    def init_dataset(self, dataset_name, mode = "train", train_graph_list=None, val_graph_list=None, test_graph_list=None):
         self.mode = mode
         if not isinstance(dataset_name, type(None)):
             self.dataset_name = dataset_name
@@ -147,9 +145,9 @@ class ConditionalExpectation:
                                                batch_size=self.batch_size, relaxed=True, seed=self.seed,
                                                mode = mode)
         self.dataloader_train, self.dataloader_test, self.dataloader_val, (
-            self.mean_energy, self.std_energy) = data_generator.dataloaders()
+            self.mean_energy, self.std_energy) = data_generator.dataloaders(train_graph_list=train_graph_list, val_graph_list=val_graph_list, test_graph_list=test_graph_list)
 
-        print(f"T_max: {self.T_max}, {self.dataset_name} - {self.problem_name}")
+        # print(f"T_max: {self.T_max}, {self.dataset_name} - {self.problem_name}")
 
     @partial(jax.jit, static_argnums=(0,))
     def __get_energy(self, jraph_graph, state):
@@ -291,7 +289,7 @@ class ConditionalExpectation:
         loss, (log_dict, _) = self.model.TrainerClass.evaluation_step(params, graph_batch, energy_graph_batch, 0., batched_key)
         return loss, (log_dict, key)
 
-    def run(self, p=None, measure_time = False, dataset_name=f"RB_iid_small", mode="train", break_after_time = None):
+    def run(self, p=None, measure_time = False, dataset_name=f"RB_iid_small", mode="train", break_after_time = None, train_graph_list=None, val_graph_list=None, test_graph_list=None):
 
         ### TODO use train.eval here
         ### TODO reining test dataset
@@ -301,7 +299,7 @@ class ConditionalExpectation:
         if(measure_time):
             self.model.batch_size = 1
             self.batch_size = 1
-        self.init_dataset(dataset_name=dataset_name, mode=mode)
+        self.init_dataset(dataset_name=dataset_name, mode=mode, train_graph_list=train_graph_list, val_graph_list=val_graph_list, test_graph_list=test_graph_list)
         self.model.dataloader_test = self.dataloader_test
         self.model.TrainerClass.eval_step_factor = self.eval_step_factor
         self.model.TrainerClass.N_test_basis_states = self.n_eval_samples
@@ -314,9 +312,7 @@ class ConditionalExpectation:
             test_log_dict = self.model.test()
         test_log_dict = self.model.test()
 
-        wandb.log(test_log_dict)
-        wandb.finish()
-        print(test_log_dict.keys())
+        # print(test_log_dict.keys())
         return test_log_dict
 
     def __save_result(self, results, p):

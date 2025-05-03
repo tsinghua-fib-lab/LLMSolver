@@ -2,8 +2,8 @@ import numpy as np
 import jax.numpy as jnp
 import flax
 import flax.linen as nn
-from Networks.Modules.MLPModules.MLPs import ReluMLP
-from Networks.Modules.GNNModules.GAT import MultiheadGraphAttentionNetwork
+from solver.graph.DiffUCO.Networks.Modules.MLPModules.MLPs import ReluMLP
+from solver.graph.DiffUCO.Networks.Modules.GNNModules.GAT import MultiheadGraphAttentionNetwork
 
 
 class TSPModel(nn.Module):

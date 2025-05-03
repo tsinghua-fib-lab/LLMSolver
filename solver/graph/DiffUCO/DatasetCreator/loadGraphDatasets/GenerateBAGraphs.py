@@ -8,8 +8,8 @@ from .save_utils import save_indexed_dict
 import networkx as nx
 import pickle
 from unipath import Path
-from DatasetCreator.Gurobi import GurobiSolver
-from DatasetCreator.jraph_utils import utils as jutils
+from solver.graph.DiffUCO.DatasetCreator.Gurobi import GurobiSolver
+from solver.graph.DiffUCO.DatasetCreator.jraph_utils import utils as jutils
 
 def generateRB(mode = "val", n_train_graphs = 4000,seed = 123, m = 4, dataset_name = "BA_small", parent = True, EnergyFunction = "MaxCut", save = False, n_val_graphs = 500, val_time_limit = float("inf")):
 

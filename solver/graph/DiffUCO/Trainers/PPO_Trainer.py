@@ -5,7 +5,7 @@ import jax
 from .BaseTrainer import Base, repeat_along_nodes
 import time
 import optax
-from utils import MovingAverages
+from solver.graph.DiffUCO.utils import MovingAverages
 ### TODO use RL environments to make it possible to project solutions onto feasible solutions!
 
 vmap_repeat_along_nodes = jax.vmap(repeat_along_nodes, in_axes=(0, 0, 0))
