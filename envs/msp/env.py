@@ -96,17 +96,29 @@ def plot_schedule(schedule):
     plt.show()
 
 
-def calculate_makespan(schedule):
-    """Calculate the makespan (total completion time) of the schedule"""
-    max_end_time = 0
+class SchedulingProblemEnv:
+    def __init__(self, problem_type: str, obj: str = 'makespan'):
+        assert problem_type in ['jssp', 'fjssp', 'fssp', 'hfssp', 'ossp', 'asp']
+        self.problem_type = problem_type
+        self.obj = obj
 
-    for job_data in schedule['Schedule']:
-        for task in job_data['tasks']:
-            task_end_time = task['start'] + task['duration']
-            if task_end_time > max_end_time:
-                max_end_time = task_end_time
+    def calculate_makespan(self, schedule):
+        """Calculate the makespan (total completion time) of the schedule"""
+        max_end_time = 0
 
-    return max_end_time
+        for job_data in schedule['schedule']:
+            for task in job_data['tasks']:
+                task_end_time = task['start'] + task['duration']
+                if task_end_time > max_end_time:
+                    max_end_time = task_end_time
+
+        return max_end_time
+
+    def get_reward(self, instances: dict, solution: dict, ):
+        if self.obj == 'makespan':
+            return self.calculate_makespan(solution)
+        else:
+            raise NotImplementedError
 
 
 def test_valid():
