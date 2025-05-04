@@ -252,10 +252,10 @@ def pmap_graph_list(jraph_graph_list, k = 1.2, pad_func = pad_with_graphs, retur
 def pmap_graph_list_better(jraph_graph_list, dataset_statistics_dict, pad_func = pad_with_graphs, return_size = False):
     n_devices = jax.local_device_count()
     n_graphs_per_device = int(len(jraph_graph_list) / n_devices)
-    # if (len(jraph_graph_list) % n_devices != 0):
-    #     print("batchsize", len(jraph_graph_list))
-    #     print("n_devices", n_devices)
-    #     raise ValueError("batchisze must be devisible by number of devices")
+    if (len(jraph_graph_list) % n_devices != 0):
+        print("batchsize", len(jraph_graph_list))
+        print("n_devices", n_devices)
+        raise ValueError("batchisze must be devisible by number of devices")
     device_batched_graphs = [jraph.batch_np(jraph_graph_list[idx * n_graphs_per_device: (idx + 1) * n_graphs_per_device])
                              for idx in range(n_devices)] ### TODO move this to collate function
 

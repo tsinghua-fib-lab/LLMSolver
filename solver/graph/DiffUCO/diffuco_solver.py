@@ -231,12 +231,12 @@ problemType_dict = {
 }
 
 
-class DiffUCOSolver():
+class DiffUCOSolver:
     def __init__(self, problem_type: str):
         args = arg_parser()
         device = args.GPU
         os.environ['CUDA_DEVICE_ORDER'] = "PCI_BUS_ID"
-        os.environ['CUDA_VISIBLE_DEVICES'] = str(device)
+        # os.environ['CUDA_VISIBLE_DEVICES'] = str(device)
         os.environ["XLA_PYTHON_CLIENT_MEM_FRACTION"] = "0.92"
 
         wandb_id = problemType2WandbID_dict[problem_type]
@@ -334,7 +334,7 @@ def test_solve():
     generator = GraphGenerator(problem_type=problem_type)
     instances = generator.generate(10)
 
-    diffuco_solver = DiffUCOSolver(problem_type, graph_model=graph_model)
+    diffuco_solver = DiffUCOSolver(problem_type)
     solutions = diffuco_solver.solve(instances)
     print(solutions)
 
