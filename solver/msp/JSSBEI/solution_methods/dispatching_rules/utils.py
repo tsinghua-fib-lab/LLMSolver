@@ -2,8 +2,8 @@ import os
 import json
 import datetime
 
-from scheduling_environment.simulationEnv import SimulationEnv
-from solution_methods.helper_functions import load_job_shop_env
+from solver.msp.JSSBEI.scheduling_environment.simulationEnv import SimulationEnv
+from solver.msp.JSSBEI.solution_methods.helper_functions import load_job_shop_env
 
 DEFAULT_RESULTS_ROOT = os.getcwd() + "/results/dispatching_rules/"
 

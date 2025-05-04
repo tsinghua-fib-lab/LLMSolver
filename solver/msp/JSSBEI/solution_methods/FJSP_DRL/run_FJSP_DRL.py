@@ -11,14 +11,14 @@ import logging
 import os
 import torch
 
-from visualization import gantt_chart, precedence_chart
-from solution_methods.helper_functions import load_job_shop_env, load_parameters, initialize_device, set_seeds
-from solution_methods.FJSP_DRL.src.env_test import FJSPEnv_test
-from scheduling_environment.simulationEnv import SimulationEnv
+from solver.msp.JSSBEI.visualization import gantt_chart, precedence_chart
+from solver.msp.JSSBEI.solution_methods.helper_functions import load_job_shop_env, load_parameters, initialize_device, set_seeds
+from solver.msp.JSSBEI.solution_methods.FJSP_DRL.src.env_test import FJSPEnv_test
+from solver.msp.JSSBEI.scheduling_environment.simulationEnv import SimulationEnv
 
-from solution_methods.FJSP_DRL.src.PPO import HGNNScheduler
-from solution_methods.FJSP_DRL.utils import output_dir_exp_name, results_saving
-from solution_methods.FJSP_DRL.src.online_FJSP_DRL import run_online_dispatcher
+from solver.msp.JSSBEI.solution_methods.FJSP_DRL.src.PPO import HGNNScheduler
+from solver.msp.JSSBEI.solution_methods.FJSP_DRL.utils import output_dir_exp_name, results_saving
+from solver.msp.JSSBEI.solution_methods.FJSP_DRL.src.online_FJSP_DRL import run_online_dispatcher
 
 
 PARAM_FILE = "../../configs/FJSP_DRL.toml"

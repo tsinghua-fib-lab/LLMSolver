@@ -1,5 +1,5 @@
-from solution_methods.DANIEL.network.main_model import DANIEL
-from solution_methods.DANIEL.src.common_utils import eval_actions
+from solver.msp.JSSBEI.solution_methods.DANIEL.network.main_model import DANIEL
+from solver.msp.JSSBEI.solution_methods.DANIEL.src.common_utils import eval_actions
 import torch.nn as nn
 import torch
 from copy import deepcopy

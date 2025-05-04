@@ -3,10 +3,10 @@ from typing import Dict, Optional
 
 import simpy
 
-from scheduling_environment.job import Job
-from scheduling_environment.jobShop import JobShop
-from scheduling_environment.machine import Machine
-from scheduling_environment.operation import Operation
+from solver.msp.JSSBEI.scheduling_environment.job import Job
+from solver.msp.JSSBEI.scheduling_environment.jobShop import JobShop
+from solver.msp.JSSBEI.scheduling_environment.machine import Machine
+from solver.msp.JSSBEI.scheduling_environment.operation import Operation
 
 
 class SimulationEnv:

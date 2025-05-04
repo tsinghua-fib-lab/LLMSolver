@@ -1,6 +1,6 @@
-from solution_methods.DANIEL.src.common_utils import nonzero_averaging
-from solution_methods.DANIEL.network.attention_layer import *
-from solution_methods.DANIEL.network.sub_layers import *
+from solver.msp.JSSBEI.solution_methods.DANIEL.src.common_utils import nonzero_averaging
+from solver.msp.JSSBEI.solution_methods.DANIEL.network.attention_layer import *
+from solver.msp.JSSBEI.solution_methods.DANIEL.network.sub_layers import *
 import torch
 import torch.nn as nn
 import torch.nn.functional as F

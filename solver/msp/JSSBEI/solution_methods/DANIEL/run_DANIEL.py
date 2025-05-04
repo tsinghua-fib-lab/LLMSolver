@@ -3,12 +3,12 @@ import logging
 import os
 import torch
 
-from visualization import gantt_chart, precedence_chart
-from solution_methods.helper_functions import load_job_shop_env, load_parameters, initialize_device, set_seeds
-from solution_methods.DANIEL.src.common_utils import greedy_select_action, sample_action
-from solution_methods.DANIEL.src.env_test import FJSPEnv_test
-from solution_methods.DANIEL.network.PPO import PPO_initialize
-from solution_methods.DANIEL.utils import output_dir_exp_name, results_saving
+from solver.msp.JSSBEI.visualization import gantt_chart, precedence_chart
+from solver.msp.JSSBEI.solution_methods.helper_functions import load_job_shop_env, load_parameters, initialize_device, set_seeds
+from solver.msp.JSSBEI.solution_methods.DANIEL.src.common_utils import greedy_select_action, sample_action
+from solver.msp.JSSBEI.solution_methods.DANIEL.src.env_test import FJSPEnv_test
+from solver.msp.JSSBEI.solution_methods.DANIEL.network.PPO import PPO_initialize
+from solver.msp.JSSBEI.solution_methods.DANIEL.utils import output_dir_exp_name, results_saving
 
 PARAM_FILE = "../../configs/DANIEL.toml"
 logging.basicConfig(level=logging.INFO)

@@ -1,9 +1,9 @@
 import re
 from pathlib import Path
 
-from scheduling_environment.job import Job
-from scheduling_environment.machine import Machine
-from scheduling_environment.operation import Operation
+from solver.msp.JSSBEI.scheduling_environment.job import Job
+from solver.msp.JSSBEI.scheduling_environment.machine import Machine
+from solver.msp.JSSBEI.scheduling_environment.operation import Operation
 
 
 def parse_fjsp(JobShop, instance, from_absolute_path=False):

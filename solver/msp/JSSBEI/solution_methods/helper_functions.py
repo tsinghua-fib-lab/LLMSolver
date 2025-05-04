@@ -4,8 +4,8 @@ import numpy as np
 import tomli
 import torch
 
-from data.data_parsers import parser_fjsp, parser_fajsp, parser_fjsp_sdst, parser_jsp_fsp
-from scheduling_environment.jobShop import JobShop
+from solver.msp.JSSBEI.data.data_parsers import parser_fjsp, parser_fajsp, parser_fjsp_sdst, parser_jsp_fsp
+from solver.msp.JSSBEI.scheduling_environment.jobShop import JobShop
 
 
 def load_parameters(config_toml):

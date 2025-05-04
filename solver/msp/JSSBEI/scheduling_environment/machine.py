@@ -1,6 +1,6 @@
 from typing import List
 
-from scheduling_environment.operation import Operation
+from solver.msp.JSSBEI.scheduling_environment.operation import Operation
 
 
 class Machine:

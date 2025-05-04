@@ -4,11 +4,11 @@ import os
 
 from deap import tools
 
-from visualization import gantt_chart, precedence_chart
-from solution_methods.helper_functions import load_parameters, load_job_shop_env
-from solution_methods.GA.src.operators import (evaluate_individual, evaluate_population, repair_precedence_constraints, variation)
-from solution_methods.GA.utils import record_stats, output_dir_exp_name, results_saving
-from solution_methods.GA.src.initialization import initialize_run
+from solver.msp.JSSBEI.visualization import gantt_chart, precedence_chart
+from solver.msp.JSSBEI.solution_methods.helper_functions import load_parameters, load_job_shop_env
+from solver.msp.JSSBEI.solution_methods.GA.src.operators import (evaluate_individual, evaluate_population, repair_precedence_constraints, variation)
+from solver.msp.JSSBEI.solution_methods.GA.utils import record_stats, output_dir_exp_name, results_saving
+from solver.msp.JSSBEI.solution_methods.GA.src.initialization import initialize_run
 
 logging.basicConfig(level=logging.INFO)
 PARAM_FILE = "../../configs/GA.toml"

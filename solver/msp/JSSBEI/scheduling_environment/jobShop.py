@@ -1,9 +1,9 @@
 import numpy as np
 from typing import Dict, List
 
-from scheduling_environment.job import Job
-from scheduling_environment.machine import Machine
-from scheduling_environment.operation import Operation
+from solver.msp.JSSBEI.scheduling_environment.job import Job
+from solver.msp.JSSBEI.scheduling_environment.machine import Machine
+from solver.msp.JSSBEI.scheduling_environment.operation import Operation
 
 
 class JobShop:

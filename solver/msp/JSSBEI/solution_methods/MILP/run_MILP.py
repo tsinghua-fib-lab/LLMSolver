@@ -2,10 +2,10 @@ import argparse
 import logging
 import os
 
-from visualization import gantt_chart, precedence_chart
-from solution_methods.helper_functions import load_parameters, load_job_shop_env
-from solution_methods.MILP.models import JSPmodel, FJSPmodel, FJSPSDSTmodel, FAJSPmodel
-from solution_methods.MILP.utils import retrieve_decision_variables, results_saving, output_dir_exp_name
+from solver.msp.JSSBEI.visualization import gantt_chart, precedence_chart
+from solver.msp.JSSBEI.solution_methods.helper_functions import load_parameters, load_job_shop_env
+from solver.msp.JSSBEI.solution_methods.MILP.models import JSPmodel, FJSPmodel, FJSPSDSTmodel, FAJSPmodel
+from solver.msp.JSSBEI.solution_methods.MILP.utils import retrieve_decision_variables, results_saving, output_dir_exp_name
 
 PARAM_FILE = os.path.abspath("../../configs/milp.toml")
 logging.basicConfig(level=logging.INFO)

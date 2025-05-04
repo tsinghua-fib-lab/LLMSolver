@@ -2,7 +2,7 @@ import copy
 import networkx as nx
 import matplotlib.pyplot as plt
 
-from visualization.color_scheme import create_colormap
+from solver.msp.JSSBEI.visualization.color_scheme import create_colormap
 
 
 def plot(JobShop):

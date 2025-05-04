@@ -19,11 +19,11 @@ import numpy as np
 import torch
 from visdom import Visdom
 
-from solution_methods.helper_functions import load_parameters, initialize_device, set_seeds
-from solution_methods.FJSP_DRL.src import PPO as PPO_model
-from solution_methods.FJSP_DRL.src.case_generator import CaseGenerator
-from solution_methods.FJSP_DRL.src.env_training import FJSPEnv_training
-from solution_methods.FJSP_DRL.src.validate import get_validate_env, validate
+from solver.msp.JSSBEI.solution_methods.helper_functions import load_parameters, initialize_device, set_seeds
+from solver.msp.JSSBEI.solution_methods.FJSP_DRL.src import PPO as PPO_model
+from solver.msp.JSSBEI.solution_methods.FJSP_DRL.src.case_generator import CaseGenerator
+from solver.msp.JSSBEI.solution_methods.FJSP_DRL.src.env_training import FJSPEnv_training
+from solver.msp.JSSBEI.solution_methods.FJSP_DRL.src.validate import get_validate_env, validate
 
 # Add the base path to the Python module search path
 base_path = Path(__file__).resolve().parents[2]

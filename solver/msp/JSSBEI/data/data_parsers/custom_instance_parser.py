@@ -1,7 +1,7 @@
-from scheduling_environment.job import Job
-from scheduling_environment.machine import Machine
-from scheduling_environment.operation import Operation
-from scheduling_environment.jobShop import JobShop
+from solver.msp.JSSBEI.scheduling_environment.job import Job
+from solver.msp.JSSBEI.scheduling_environment.machine import Machine
+from solver.msp.JSSBEI.scheduling_environment.operation import Operation
+from solver.msp.JSSBEI.scheduling_environment.jobShop import JobShop
 
 
 def parse(processing_info, instance_name="custom_problem_instance"):
@@ -128,7 +128,7 @@ if __name__ == "__main__":
     # makespan, jobShopEnv = run_GA(jobShopEnv, population, toolbox, stats, hof, **parameters)
 
     # TEST CP_SAT:
-    from solution_methods.CP_SAT.run_cp_sat import run_CP_SAT
+    from solver.msp.JSSBEI.solution_methods.CP_SAT.run_cp_sat import run_CP_SAT
     parameters = {"instance": {"problem_instance": "custom_fjsp_sdst"},
                   "solver": {"time_limit": 3600},
                   "output": {"logbook": True}

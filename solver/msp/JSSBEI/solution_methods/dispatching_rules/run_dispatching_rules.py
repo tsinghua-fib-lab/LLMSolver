@@ -2,11 +2,11 @@ import argparse
 import logging
 import os
 
-from scheduling_environment.jobShop import JobShop
-from visualization import gantt_chart, precedence_chart
-from solution_methods.dispatching_rules.utils import configure_simulation_env, output_dir_exp_name, results_saving
-from solution_methods.helper_functions import load_parameters, load_job_shop_env
-from solution_methods.dispatching_rules.src.scheduling_functions import scheduler
+from solver.msp.JSSBEI.scheduling_environment.jobShop import JobShop
+from solver.msp.JSSBEI.visualization import gantt_chart, precedence_chart
+from solver.msp.JSSBEI.solution_methods.dispatching_rules.utils import configure_simulation_env, output_dir_exp_name, results_saving
+from solver.msp.JSSBEI.solution_methods.helper_functions import load_parameters, load_job_shop_env
+from solver.msp.JSSBEI.solution_methods.dispatching_rules.src.scheduling_functions import scheduler
 
 logging.basicConfig(level=logging.INFO)
 PARAM_FILE = "../../configs/dispatching_rules.toml"
