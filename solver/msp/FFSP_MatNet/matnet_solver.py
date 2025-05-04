@@ -44,7 +44,7 @@ os.chdir(os.path.dirname(os.path.abspath(__file__)))
 # import
 
 import torch
-from typing import Dict
+from typing import Dict, List
 from solver.msp.FFSP_MatNet.utils import copy_all_src
 from solver.msp.FFSP_MatNet.FFSPTester import FFSPTester as Tester
 
@@ -96,27 +96,26 @@ tester_params = {
 
 model_load_dict = {
     20: {
-        'path': './result/saved_ffsp20_model',  # directory path of pre-trained model and log files saved.
+        'path': os.path.join(os.path.dirname(os.path.realpath(__file__)), "result", "saved_ffsp20_model"),
+        # directory path of pre-trained model and log files saved.
         'epoch': 100,  # epoch version of pre-trained model to load.
     },
     50: {
-        'path': './result/saved_ffsp50_model',  # directory path of pre-trained model and log files saved.
+        'path': os.path.join(os.path.dirname(os.path.realpath(__file__)), "result", "saved_ffsp50_model"),
+        # directory path of pre-trained model and log files saved.
         'epoch': 150,  # epoch version of pre-trained model to load.
     },
     100: {
-        'path': './result/saved_ffsp100_model',  # directory path of pre-trained model and log files saved.
+        'path': os.path.join(os.path.dirname(os.path.realpath(__file__)), "result", "saved_ffsp100_model"),
+        # directory path of pre-trained model and log files saved.
         'epoch': 200,  # epoch version of pre-trained model to load.
     }
 }
 if tester_params['augmentation_enable']:
     tester_params['test_batch_size'] = tester_params['aug_batch_size']
 
-_tester: Tester = None
-
 
 def prepare_env(**params):
-    global _tester
-
     stage_cnt = params.get('stage_cnt', env_params['stage_cnt'])
     machine_cnt_list = params.get('machine_cnt_list', env_params['machine_cnt_list'])
     job_cnt = params.get('job_cnt', env_params['job_cnt'])
@@ -134,19 +133,22 @@ def prepare_env(**params):
     model_params['job_cnt'] = job_cnt
 
     tester_params['model_load'] = model_load_dict[model_key]
+    print(tester_params['model_load'])
     _tester = Tester(env_params=env_params,
                      model_params=model_params,
                      tester_params=tester_params)
 
+    return _tester
+
 
 ##########################################################################################
-# main
+# format
 
-def format_instance(instances: Dict):
-    processing_times = instances['processing_times']
+def format_instance(instance: Dict):
+    processing_times = instance['processing_times']
     # Get dimensions
-    num_jobs = instances['num_jobs']
-    machines_per_stage = instances['machines_per_stage']
+    num_jobs = instance['num_jobs']
+    machines_per_stage = instance['machines_per_stage']
 
     # Initialize 3D list (stage × machine × job)
     processing_time_matrix = [
@@ -165,87 +167,94 @@ def format_instance(instances: Dict):
         for stage_id, stage_data in job_data.items():
             stage_idx = int(stage_id.split('_')[-1])  # Extract '0' from 'stage_0'
             for machine_id, (proc_time, _) in stage_data.items():  # Ignore setup time
-                machine_idx = int(machine_id.split('_')[-1]) - stage_cumulative_machines[
-                    stage_idx]  # Extract '0' from 'machine_0'
+                machine_idx = int(machine_id.split('_')[-1]) - stage_cumulative_machines[stage_idx]
+                # Extract '0' from 'machine_0'
                 processing_time_matrix[stage_idx][job_idx][machine_idx] = proc_time
 
     processing_time_matrix = torch.tensor(processing_time_matrix).unsqueeze(1)
     return processing_time_matrix
 
 
-def format_result(schedule_list, score_list, instances, machines_per_stage):
+def format_result(schedule, score, instance, machines_per_stage):
     global_to_stage = []
     for stage_id, num_machines in enumerate(machines_per_stage.values()):
         for local_machine_id in range(num_machines):
             global_to_stage.append(stage_id)
 
-    processing_times = instances['processing_times']
+    processing_times = instance['processing_times']
     # Get dimensions
-    num_jobs = instances['num_jobs']
-    machines_per_stage = instances['machines_per_stage']
+    num_jobs = instance['num_jobs']
+    machines_per_stage = instance['machines_per_stage']
     num_machines = sum(machines_per_stage.values())
 
-    result_list = []
-    for schedule, score in zip(schedule_list, score_list):
-        output_schedule = [{'job': job, 'tasks': []} for job in range(num_jobs)]
+    output_schedule = [{'job': job, 'tasks': []} for job in range(num_jobs)]
 
-        for global_machine_id in range(num_machines):
-            for job_id in range(num_jobs):
-                start_time = schedule[global_machine_id][job_id]
+    for global_machine_id in range(num_machines):
+        for job_id in range(num_jobs):
+            start_time = schedule[global_machine_id][job_id]
 
-                if start_time >= 0:  # 如果 job 在 machine 上执行
-                    task_id = int(len(output_schedule[job_id]['tasks']))
-                    stage_id = global_to_stage[global_machine_id]
-                    output_schedule[job_id]['tasks'].append({
-                        'duration':
-                            processing_times[f'job_{job_id}'][f'stage_{stage_id}'][f'machine_{global_machine_id}'][0],
-                        'machine': global_machine_id,
-                        'start': start_time,
-                        'task': task_id
-                    })
+            if start_time >= 0:  # 如果 job 在 machine 上执行
+                task_id = int(len(output_schedule[job_id]['tasks']))
+                stage_id = global_to_stage[global_machine_id]
+                output_schedule[job_id]['tasks'].append({
+                    'duration':
+                        processing_times[f'job_{job_id}'][f'stage_{stage_id}'][f'machine_{global_machine_id}'][0],
+                    'machine': global_machine_id,
+                    'start': start_time,
+                    'task': task_id
+                })
 
-        result = {'Schedule': output_schedule, 'objValue': score}
-        result_list.append(result)
-    return result_list
+    result = {'schedule': output_schedule, 'obj_value': score}
+    return result
 
 
-def solve(instances: Dict, **params):
-    job_cnt = instances['num_jobs']
-    machines_per_stage = instances['machines_per_stage']
-    prepare_env(job_cnt=job_cnt, )
-    # copy_all_src(_tester.result_folder)
-    matnet_instances = format_instance(instances)
-    _tester.run(matnet_instances)
-    score_list, schedule_list = _tester.run(matnet_instances)
-    result_list = format_result(schedule_list, score_list, instances, machines_per_stage)
-    return result_list
+##########################################################################################
+# main
+
+class MatNet:
+    def __init__(self):
+        job_cnt = 50
+        self._tester = prepare_env(job_cnt=job_cnt, )
+
+    def solve(self, instances: List[Dict], **params) -> List[Dict]:
+        result_list = []
+        for instance in instances:
+            job_cnt = instance['num_jobs']
+            machines_per_stage = instance['machines_per_stage']
+            # _tester = prepare_env(job_cnt=job_cnt, )
+            # copy_all_src(_tester.result_folder)
+            matnet_instance = format_instance(instance)
+            self._tester.env.job_cnt = job_cnt
+
+            self._tester.run(matnet_instance)
+            score, schedule = self._tester.run(matnet_instance)
+            result = format_result(schedule[0], score[0], instance, machines_per_stage)
+            result_list.append(result)
+        return result_list
 
 
-def test_format_instance():
-    from envs.msp.generator import SchedulingProblemGenerator, SchedulingProblemType
+##########################################################################################
+# test
 
-    job_cnt = 21
-    generator = SchedulingProblemGenerator(SchedulingProblemType.HFSSP,
-                                           min_jobs=job_cnt,
-                                           max_jobs=job_cnt, )
+def test_solver():
+    from envs.msp.generator import SchedulingProblemGenerator
+    from envs.msp.env import SchedulingProblemEnv
 
-    machines_per_stage = {
-        f'stage_{0}': 4,
-        f'stage_{1}': 4,
-        f'stage_{2}': 4,
-    }
+    problem_type = 'hfssp'
+    generator = SchedulingProblemGenerator(problem_type, )
+    env = SchedulingProblemEnv(problem_type)
+    instances = generator.generate(batch_size=1)
 
-    instance = generator.generate_problem_instance(machines_per_stage=machines_per_stage)
-    prepare_env(job_cnt=job_cnt, )
-    print(instance)
-    matnet_instance = format_instance(instance)
-    print(matnet_instance.shape)
-    score_list, schedule_list = _tester.run(matnet_instance)
+    print(instances)
+    matnet_solver = MatNet()
+    schedule_list = matnet_solver.solve(instances)
 
-    print(score_list)
-    result_list = format_result(schedule_list, score_list, instance, machines_per_stage)
-    print(result_list)
+    reward_list = []
+    for instance, schedule in zip(instances, schedule_list):
+        reward = env.get_reward(instance, schedule)
+        reward_list.append(reward)
+    print(np.mean(np.array(reward_list)))
 
 
 if __name__ == '__main__':
-    test_format_instance()
+    test_solver()
