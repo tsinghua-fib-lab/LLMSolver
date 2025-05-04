@@ -23,12 +23,12 @@ def _validate_nodes_exist(G: nx.Graph, nodes: Set[Node]):
 
 class GraphEnv:
     def __init__(self, problem_type: str):
+        assert problem_type in ["maxcut", "mds", "maxclip", "mis", "mvc"]
         self.problem_type = problem_type
 
     def get_reward(self,
                    instances: dict,
                    solution: Union[Iterable[Node], dict[Node, int]],
-                   problem_type: str,
                    ):
         """Compute the *reward* for a given solution to a classic graph‑optimization problem.
 
@@ -46,8 +46,6 @@ class GraphEnv:
               independent set.
             * **MVC** (minimum vertex cover) – iterable of nodes claimed to cover all
               edges.
-        problem_type : str
-            One of {"MaxCut", "MDS", "MaxClique", "MIS", "MVC"} (case‑insensitive).
 
         Returns
         -------
@@ -57,16 +55,15 @@ class GraphEnv:
             always better. Invalid solutions return ``float('-inf')``.
         """
         G = data2graph(instances)
-        problem_type = problem_type.lower()
 
-        if problem_type == "maxcut":
+        if self.problem_type == "maxcut":
             side_a = _ensure_set(solution)
             _validate_nodes_exist(G, side_a)
             side_b = set(G.nodes) - side_a
             cut_size = sum(1 for u, v in G.edges if (u in side_a) ^ (v in side_a))
             return cut_size
 
-        elif problem_type == "mds":  # *minimise* size
+        elif self.problem_type == "mds":  # *minimise* size
             dom = _ensure_set(solution)
             _validate_nodes_exist(G, dom)
             # every node must be dominated
@@ -75,7 +72,7 @@ class GraphEnv:
                     return float("-inf")  # invalid dominating set
             return -len(dom)
 
-        elif problem_type == "maxclip":
+        elif self.problem_type == "maxclip":
             clique = _ensure_set(solution)
             _validate_nodes_exist(G, clique)
             # check clique
@@ -87,7 +84,7 @@ class GraphEnv:
                         return float("-inf")
             return len(clique)
 
-        elif problem_type == "mis":  # maximise size
+        elif self.problem_type == "mis":  # maximise size
             indep = _ensure_set(solution)
             _validate_nodes_exist(G, indep)
             # check no edge internal
@@ -96,7 +93,7 @@ class GraphEnv:
                     return float("-inf")
             return len(indep)
 
-        elif problem_type == "mvc":  # *minimise* size
+        elif self.problem_type == "mvc":  # *minimise* size
             cover = _ensure_set(solution)
             _validate_nodes_exist(G, cover)
             for u, v in G.edges:
