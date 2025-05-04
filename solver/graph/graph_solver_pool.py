@@ -162,7 +162,7 @@ def test_solve():
         for instance, solution in zip(instances, node_solutions):
             reward = grapg_env.get_reward(instance, solution, problem_type)
             rewards.append(reward)
-        print('fast_t2t: ', np.mean(rewards))
+        print('fastt2t: ', np.mean(rewards))
 
 
 def test():
@@ -173,7 +173,6 @@ def test():
     problem_type = 'mis'
     # problem_type = 'mvc'
     # problem_type = 'mds'
-
 
     generator = GraphGenerator(problem_type=problem_type)
     grapg_env = GraphEnv(problem_type=problem_type)
@@ -195,6 +194,15 @@ def test():
         reward = grapg_env.get_reward(instance, solution, problem_type)
         rewards.append(reward)
     print(solver_name, np.mean(rewards))
+
+    if problem_type == 'mis':
+        solver_name = "fastt2t"
+        solutions = graph_solve_pool.solve(deepcopy(instances), solver_name=solver_name, problem_type=problem_type)
+        for instance, solution in zip(instances, solutions):
+            reward = grapg_env.get_reward(instance, solution, problem_type)
+            rewards.append(reward)
+        print(solver_name, np.mean(rewards))
+
 
 if __name__ == '__main__':
     test()
