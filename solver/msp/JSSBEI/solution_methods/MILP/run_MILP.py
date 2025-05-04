@@ -32,11 +32,16 @@ def run_MILP(jobShopEnv, **kwargs):
         tuple: Contains optimization results and the updated job shop environment.
     """
     try:
-        instance_type = next((key for key in MODEL_MAP if key in kwargs['instance']['problem_instance']), None)
+        instance_type = next((key for key in MODEL_MAP if key in kwargs['instance']['instance_type']), None)
+        problem_instance = kwargs['instance']['problem_instance']
         if instance_type:
-            model_class, method_name = MODEL_MAP[instance_type]  # Unpack tuple
-            jobShopEnv = load_job_shop_env(kwargs['instance']['problem_instance'])
-            model = getattr(model_class, method_name)(jobShopEnv, kwargs['solver']['time_limit'])
+            if problem_instance == "custom_problem_instance":
+                model_class, method_name = MODEL_MAP[instance_type]  # Unpack tuple
+                model = getattr(model_class, method_name)(jobShopEnv, kwargs['solver']['time_limit'])
+            else:
+                model_class, method_name = MODEL_MAP[instance_type]  # Unpack tuple
+                jobShopEnv = load_job_shop_env(kwargs['instance']['problem_instance'])
+                model = getattr(model_class, method_name)(jobShopEnv, kwargs['solver']['time_limit'])
         else:
             raise ValueError("Unsupported problem instance type.")
     except Exception as e:

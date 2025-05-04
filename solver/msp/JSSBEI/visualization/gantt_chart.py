@@ -50,7 +50,7 @@ def plot(JobShop):
     fig.set_size_inches(12, 6)
 
     ax.set_yticks(range(JobShop.nr_of_machines))
-    ax.set_yticklabels([f'M{machine_id+1}' for machine_id in range(JobShop.nr_of_machines)])
+    ax.set_yticklabels([f'M{machine_id}' for machine_id in range(JobShop.nr_of_machines)])
     ax.set_xlabel('Time')
     ax.set_ylabel('Machine')
     ax.set_title('Gantt Chart')

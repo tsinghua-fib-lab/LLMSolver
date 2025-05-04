@@ -1,5 +1,5 @@
 [instance]
-problem_instance = "/fajsp/dafjs/DAFJS01"
+problem_instance = "custom_problem_instance"
 
 [algorithm]
 population_size = 10    # number of individuals in the population

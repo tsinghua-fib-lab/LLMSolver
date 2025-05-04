@@ -1,5 +1,6 @@
 [instance]
-problem_instance = "/fajsp/dafjs/DAFJS01"
+problem_instance = "custom_problem_instance"
+instance_type = "/fajsp/dafjs/DAFJS01"
 
 [solver]
 time_limit = 3600       # time limit for the gurobi solver, in seconds

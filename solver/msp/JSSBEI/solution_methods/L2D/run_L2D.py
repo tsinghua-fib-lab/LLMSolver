@@ -18,7 +18,7 @@ from solver.msp.JSSBEI.solution_methods.L2D.src.agent_utils import sample_select
 from solver.msp.JSSBEI.solution_methods.L2D.src.env_test import NipsJSPEnv_test as Env_test
 from solver.msp.JSSBEI.solution_methods.L2D.src.mb_agg import g_pool_cal
 from solver.msp.JSSBEI.solution_methods.L2D.src.PPO_model import PPO
-from utils import output_dir_exp_name, results_saving
+from solver.msp.JSSBEI.solution_methods.L2D.utils import output_dir_exp_name, results_saving
 
 PARAM_FILE = "../../configs/L2D.toml"
 logging.basicConfig(level=logging.INFO)

@@ -25,7 +25,7 @@ def parse(processing_info, instance_name="custom_problem_instance"):
 
             # Convert machine names (e.g., "machine_1") to numeric IDs for compatibility
             for machine_key, processing_time in operation_info["processing_times"].items():
-                machine_id = int(machine_key.split("_")[1])-1
+                machine_id = int(machine_key.split("_")[1])
                 operation.add_operation_option(machine_id, processing_time)
 
             job.add_operation(operation)
@@ -52,7 +52,7 @@ def parse(processing_info, instance_name="custom_problem_instance"):
     sequence_dependent_setup_times = {}
 
     for machine_key, setup_matrix in setup_times.items():
-        machine_id = int(machine_key.split("_")[1])-1  # Convert machine_1 to machine ID 1
+        machine_id = int(machine_key.split("_")[1])  # Convert machine_1 to machine ID 1
         machine_setup_times = {}
 
         # Map the setup times for all pairs of operations
