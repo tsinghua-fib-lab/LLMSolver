@@ -50,7 +50,7 @@ class SchedulingProblemGenerator:
         self.min_processing_time = min_processing_time
         self.max_processing_time = max_processing_time
 
-    def generate_jssp_processing_times(self, num_jobs: int, num_machines: int, num_operations: int) -> dict:
+    def generate_jssp_processing_times(self, num_jobs: int, num_machines: int) -> dict:
         """
         Generate JSSP data to ensure that all machines are used as evenly as possible.
 
@@ -67,22 +67,15 @@ class SchedulingProblemGenerator:
         """
 
         jobs: Dict[int, Dict[int, Dict[int, Tuple[int, int]]]] = {}
-        machine_use_count = defaultdict(int)
-        total_ops = num_jobs * num_operations
-
-        machine_pool = [i % num_machines for i in range(total_ops)]
-        random.shuffle(machine_pool)
-
-        m_idx = 0
         op_id = 0
         for job_id in range(num_jobs):
             job_ops: Dict[int, Dict[int, Tuple[int, int]]] = {}
-            for _ in range(num_operations):
-                machine_id = machine_pool[m_idx]
-                m_idx += 1
+            machines = list(range(num_machines))
+            random.shuffle(machines)
+            for _ in range(num_machines):
+                machine_id = machines[_]
                 proc_time = random.randint(self.min_processing_time, self.max_processing_time)
                 job_ops[op_id] = {machine_id: (proc_time, machine_id), }
-                machine_use_count[machine_id] += 1
                 op_id += 1
             jobs[job_id] = job_ops
         return jobs
@@ -389,9 +382,9 @@ class SchedulingProblemGenerator:
 
     def generate_problem_instance(self, **params) -> Dict:
         """Generate a complete problem instance"""
-        num_jobs = random.randint(self.min_jobs, self.max_jobs)
-        num_machines = random.randint(self.min_machines, self.max_machines)
-        num_operations = random.randint(self.min_operations, self.max_operations)
+        num_jobs = params.get('num_jobs', random.randint(self.min_jobs, self.max_jobs))
+        num_machines = params.get('num_machines', random.randint(self.min_machines, self.max_machines))
+        num_operations = params.get('num_operations', random.randint(self.min_operations, self.max_operations))
 
         data = {
             'num_jobs': num_jobs,
@@ -403,7 +396,7 @@ class SchedulingProblemGenerator:
         }
 
         if self.problem_type == SchedulingProblemType.JSSP:
-            data['processing_times'] = self.generate_jssp_processing_times(num_jobs, num_machines, num_operations)
+            data['processing_times'] = self.generate_jssp_processing_times(num_jobs, num_machines)
 
         elif self.problem_type == SchedulingProblemType.FJSSP:
             data['processing_times'] = self.generate_fjssp_processing_times(num_jobs, num_machines, num_operations)
@@ -423,12 +416,12 @@ class SchedulingProblemGenerator:
             data['processing_times'] = self.generate_hfssp_processing_times(num_jobs, machines_per_stage)
             data['is_flow'] = True
         elif self.problem_type == SchedulingProblemType.OSSP:
-            data['processing_times'] = self.generate_jssp_processing_times(num_jobs, num_machines, num_operations)
+            data['processing_times'] = self.generate_jssp_processing_times(num_jobs, num_machines)
             data['is_open'] = True
         elif self.problem_type == SchedulingProblemType.ASP:
             jobs = self.generate_fjssp_processing_times(num_jobs, num_machines, num_operations)
             data['processing_times'] = jobs
-            data['precedence_relations'] = self.split_and_pick_two(num_jobs, jobs)
+            data['precedence_relations'] = self.generate_precedence_relations(num_jobs, jobs)
         else:
             raise RuntimeError(f"Unknown problem type {self.problem_type}.")
         data = self.generate_data_tag(data)
