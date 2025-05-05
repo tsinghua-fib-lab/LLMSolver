@@ -6,7 +6,7 @@ Creative Commons Attribution-NonCommercial-ShareAlike 4.0 license
 from torch.utils.data import Dataset, DataLoader
 import numpy as np
 import torch
-from utils.samplers import SamplerVariousSolutionLens
+from solver.msp.GoalCO.utils.samplers import SamplerVariousSolutionLens
 
 
 class DotDict(dict):

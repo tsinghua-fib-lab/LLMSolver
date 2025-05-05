@@ -419,7 +419,7 @@ class SchedulingProblemGenerator:
             data['processing_times'] = self.generate_jssp_processing_times(num_jobs, num_machines)
             data['is_open'] = True
         elif self.problem_type == SchedulingProblemType.ASP:
-            jobs = self.generate_fjssp_processing_times(num_jobs, num_machines, num_operations)
+            jobs = self.generate_jssp_processing_times(num_jobs, num_machines)
             data['processing_times'] = jobs
             data['precedence_relations'] = self.generate_precedence_relations(num_jobs, jobs)
         else:

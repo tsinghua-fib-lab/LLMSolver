@@ -79,9 +79,6 @@ def format_instance(data):
             }
             operations.append(operation)
 
-            # Store mapping from original keys to operation_id
-
-
         # Add job to result
         result["jobs"].append({
             "job_id": job_id,
@@ -176,7 +173,7 @@ def format_result(schedule, instance):
                     processing_times[f'job_{job_id}'][f'op_{op_id}'][f'machine_{machine_id}'][0],
                 'machine': machine_id,
                 'start': operation_start,
-                'task': task_id
+                'task': op_id
             })
 
     result = {'schedule': output_schedule}
@@ -229,8 +226,8 @@ class JSSBEISolver:
                 _, jobShopEnv = self.solver_func(jobShopEnv, population, toolbox, stats, hof, **parameters)
             else:
                 _, jobShopEnv = self.solver_func(jobShopEnv, **parameters)
-            # plt = gantt_chart.plot(jobShopEnv)
-            # plt.show()
+            plt = gantt_chart.plot(jobShopEnv)
+            plt.show()
             result = format_result(jobShopEnv, instance)
             result_list.append(result)
         return result_list
@@ -239,7 +236,7 @@ class JSSBEISolver:
 def test_solver():
     from envs.msp.env import SchedulingProblemEnv
 
-    problem_type = 'asp'
+    problem_type = 'jssp'
     solver_name = 'cp_sat'
     generator = SchedulingProblemGenerator(problem_type)
     env = SchedulingProblemEnv(problem_type)

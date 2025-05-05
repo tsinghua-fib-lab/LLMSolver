@@ -1,5 +1,5 @@
-from solution_methods.dispatching_rules.src.rules import *
-from solution_methods.dispatching_rules.src.helper_functions import *
+from solver.msp.JSSBEI.solution_methods.dispatching_rules.src.rules import *
+from solver.msp.JSSBEI.solution_methods.dispatching_rules.src.helper_functions import *
 
 
 def select_operation(simulationEnv, machine, dispatching_rule, machine_assignment_rule):

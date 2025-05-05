@@ -1,7 +1,7 @@
 import random
 import numpy as np
 
-from scheduling_environment.jobShop import JobShop
+from solver.msp.JSSBEI.scheduling_environment.jobShop import JobShop
 
 
 def random_scheduler(jobShop: JobShop) -> JobShop:

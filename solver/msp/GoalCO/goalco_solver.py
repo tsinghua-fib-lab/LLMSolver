@@ -5,7 +5,7 @@ from typing import Dict, List
 
 import numpy as np
 
-from args import add_common_args, add_common_training_args
+from solver.msp.GoalCO.args import add_common_args, add_common_training_args
 from solver.msp.GoalCO.learning.data_iterators import DataIterator
 from solver.msp.GoalCO.learning.tester import Tester
 from solver.msp.GoalCO.utils.exp import setup_experiment, setup_test_environment

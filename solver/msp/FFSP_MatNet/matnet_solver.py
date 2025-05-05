@@ -211,7 +211,7 @@ def format_result(schedule, score, instance, machines_per_stage):
 ##########################################################################################
 # main
 
-class MatNet:
+class MatNetSolver:
     def __init__(self):
         job_cnt = 50
         self._tester = prepare_env(job_cnt=job_cnt, )
@@ -246,7 +246,7 @@ def test_solver():
     instances = generator.generate(batch_size=1)
 
     print(instances)
-    matnet_solver = MatNet()
+    matnet_solver = MatNetSolver()
     schedule_list = matnet_solver.solve(instances)
 
     reward_list = []

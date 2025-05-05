@@ -10,7 +10,7 @@ from torch.utils.data import Dataset, DataLoader, DistributedSampler
 from scipy.spatial.distance import pdist, squareform
 import numpy as np
 from torch.utils.data.dataloader import default_collate
-from utils.samplers import SamplerVariousSolutionLens
+from solver.msp.GoalCO.utils.samplers import SamplerVariousSolutionLens
 
 
 class DotDict(dict):

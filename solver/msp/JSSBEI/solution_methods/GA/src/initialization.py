@@ -4,10 +4,10 @@ import numpy as np
 
 from deap import base, creator, tools
 
-from solution_methods.GA.src.operators import (
+from solver.msp.JSSBEI.solution_methods.GA.src.operators import (
     evaluate_individual, evaluate_population, init_individual, init_population,
     mutate_sequence_exchange, mutate_shortest_proc_time, pox_crossover)
-from solution_methods.helper_functions import set_seeds
+from solver.msp.JSSBEI.solution_methods.helper_functions import set_seeds
 
 
 def initialize_run(jobShopEnv, **kwargs):

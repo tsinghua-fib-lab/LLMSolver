@@ -9,7 +9,7 @@ import torch
 from torch.utils.data import Dataset, DataLoader, DistributedSampler
 import numpy as np
 from torch.utils.data.dataloader import default_collate
-from utils.samplers import SamplerVariousSolutionLens
+from solver.msp.GoalCO.utils.samplers import SamplerVariousSolutionLens
 
 
 class DotDict(dict):
