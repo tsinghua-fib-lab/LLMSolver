@@ -79,7 +79,7 @@ class DataSet(Dataset):
         return item_dict
 
 
-def load_dataset(path, batch_size, datasets_size, shuffle=False, drop_last=False, what="test", ddp=False):
+def load_dataset(path, batch_size, datasets_size, shuffle=False, drop_last=False, what="test", ddp=False, test_data=None):
 
     if what == "train":
         with open(os.path.join(path, "dataset.info")) as file:
@@ -105,7 +105,10 @@ def load_dataset(path, batch_size, datasets_size, shuffle=False, drop_last=False
         scales = np.memmap(os.path.join(path, "scales.dat"), dtype=np.int32, mode="r", shape=(datasets_size, 1))
         optimal_values = None
     else:
-        data = np.load(path)
+        if test_data is not None:
+            data = test_data
+        else:
+            data = np.load(path)
         execution_times = data["execution_times"][:datasets_size]
         task_on_machines = data["task_on_machines"][:datasets_size]
         scales = data["scales"][:datasets_size]

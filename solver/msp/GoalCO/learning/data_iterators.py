@@ -20,7 +20,7 @@ from solver.msp.GoalCO.learning.mclp.dataset import load_dataset as load_mclp_da
 
 class DataIterator:
 
-    def __init__(self, args: Namespace, ddp: bool = False):
+    def __init__(self, args: Namespace, ddp: bool = False, test_data = None):
 
         loaders = {"tsp": load_tsp_dataset,
                    "trp": load_tsp_dataset,
@@ -61,4 +61,4 @@ class DataIterator:
         self.test_datasets = dict()
         for problem_no, problem in enumerate(args.problems):
             self.test_datasets[problem] = loaders[problem](args.test_datasets[problem_no], args.test_batch_size,
-                                                           args.test_datasets_size, False, False, "test", False)
+                                                           args.test_datasets_size, False, False, "test", False, test_data)

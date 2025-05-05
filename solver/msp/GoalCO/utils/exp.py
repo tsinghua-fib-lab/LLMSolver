@@ -6,9 +6,9 @@ Creative Commons Attribution-NonCommercial-ShareAlike 4.0 license
 
 import os
 import torch
-from model.goal import GOAL
-from utils.misc import set_seed, get_params_to_log
-from utils.watcher import MetricsLogger
+from solver.msp.GoalCO.model.goal import GOAL
+from solver.msp.GoalCO.utils.misc import set_seed, get_params_to_log
+from solver.msp.GoalCO.utils.watcher import MetricsLogger
 
 
 def setup_experiment(args):
@@ -91,7 +91,7 @@ def setup_tune_environment(args):
 def setup_test_environment(args):
     assert args.pretrained_model is not None and os.path.exists(args.pretrained_model)
     net = GOAL(args.dim_node_idx, args.dim_emb, args.num_layers, args.dim_ff, args.activation_ff,
-               args.node_feature_low_dim, args.edge_feature_low_dim, args.activation_edge_adapter, args.num_heads)
+               args.node_feature_low_dim, args.edge_feature_low_dim, args.activation_edge_adapter, args.num_heads, args.is_finetuning)
     if torch.cuda.is_available():
         net = net.to("cuda")
     return net
