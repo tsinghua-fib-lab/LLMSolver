@@ -38,64 +38,6 @@ def validate_schedule(schedule):
     return True, "Schedule is valid"
 
 
-def plot_schedule(schedule):
-    fig, ax = plt.subplots(figsize=(12, 6))
-
-    colors = [
-        'tab:blue', 'tab:orange', 'tab:green', 'tab:red', 'tab:purple', 'tab:brown',
-        'tab:pink', 'tab:gray', 'tab:olive', 'tab:cyan',
-        'lightblue', 'gold', 'lightgreen', 'salmon', 'plum',
-        'sienna', 'violet', 'lightgrey', 'olive', 'turquoise'
-    ]
-    color_idx = 0
-    job_colors = {}
-
-    # Find all machine ids
-    all_machines = set()
-    for job in schedule['Schedule']:
-        for task in job['tasks']:
-            all_machines.add(task['machine'])
-
-    all_machines = sorted(all_machines)
-    machine_to_y = {machine: idx for idx, machine in enumerate(all_machines)}
-
-    # Plot each task
-    for job in schedule['Schedule']:
-        job_id = job['job']
-        if job_id not in job_colors:
-            job_colors[job_id] = colors[color_idx % len(colors)]
-            color_idx += 1
-        for task in job['tasks']:
-            start = task['start']
-            duration = task['duration']
-            machine = task['machine']
-            y = machine_to_y[machine]
-            ax.barh(y, duration, left=start, color=job_colors[job_id], edgecolor='black')
-            # Label placed inside the bar
-            ax.text(start + duration / 2, y, f'J{job_id}({task["task"]})',
-                    ha='center', va='center', color='black', fontsize=8, fontweight='bold')
-
-    # Customize axes
-    ax.set_yticks(range(len(all_machines)))
-    ax.set_yticklabels(all_machines)
-    ax.invert_yaxis()  # 0 at top, max at bottom
-    ax.set_xlabel('Time')
-    ax.set_ylabel('Machine')
-    ax.set_title('Job Shop Schedule')
-    ax.grid(True, axis='x')
-
-    # Horizontal lines for each machine
-    for y in range(len(all_machines)):
-        ax.axhline(y, color='grey', linestyle='--', linewidth=0.5)
-
-    # Create a legend OUTSIDE
-    patches = [mpatches.Patch(color=color, label=f'Job {jid}') for jid, color in job_colors.items()]
-    ax.legend(handles=patches, loc='center left', bbox_to_anchor=(1.0, 0.5))  # Move legend outside
-
-    plt.tight_layout()
-    plt.show()
-
-
 class SchedulingProblemEnv:
     def __init__(self, problem_type: str, obj: str = 'makespan'):
         assert problem_type in ['jssp', 'fjssp', 'fssp', 'hfssp', 'ossp', 'asp']
@@ -119,6 +61,63 @@ class SchedulingProblemEnv:
             return self.calculate_makespan(solution)
         else:
             raise NotImplementedError
+
+    def plot_schedule(self, schedule):
+        fig, ax = plt.subplots(figsize=(12, 6))
+
+        colors = [
+            'tab:blue', 'tab:orange', 'tab:green', 'tab:red', 'tab:purple', 'tab:brown',
+            'tab:pink', 'tab:gray', 'tab:olive', 'tab:cyan',
+            'lightblue', 'gold', 'lightgreen', 'salmon', 'plum',
+            'sienna', 'violet', 'lightgrey', 'olive', 'turquoise'
+        ]
+        color_idx = 0
+        job_colors = {}
+
+        # Find all machine ids
+        all_machines = set()
+        for job in schedule['schedule']:
+            for task in job['tasks']:
+                all_machines.add(task['machine'])
+
+        all_machines = sorted(all_machines)
+        machine_to_y = {machine: idx for idx, machine in enumerate(all_machines)}
+
+        # Plot each task
+        for job in schedule['schedule']:
+            job_id = job['job']
+            if job_id not in job_colors:
+                job_colors[job_id] = colors[color_idx % len(colors)]
+                color_idx += 1
+            for task in job['tasks']:
+                start = task['start']
+                duration = task['duration']
+                machine = task['machine']
+                y = machine_to_y[machine]
+                ax.barh(y, duration, left=start, color=job_colors[job_id], edgecolor='black')
+                # Label placed inside the bar
+                ax.text(start + duration / 2, y, f'J{job_id}({task["task"]})',
+                        ha='center', va='center', color='black', fontsize=8, fontweight='bold')
+
+        # Customize axes
+        ax.set_yticks(range(len(all_machines)))
+        ax.set_yticklabels(all_machines)
+        ax.invert_yaxis()  # 0 at top, max at bottom
+        ax.set_xlabel('Time')
+        ax.set_ylabel('Machine')
+        ax.set_title('Job Shop Schedule')
+        ax.grid(True, axis='x')
+
+        # Horizontal lines for each machine
+        for y in range(len(all_machines)):
+            ax.axhline(y, color='grey', linestyle='--', linewidth=0.5)
+
+        # Create a legend OUTSIDE
+        patches = [mpatches.Patch(color=color, label=f'Job {jid}') for jid, color in job_colors.items()]
+        ax.legend(handles=patches, loc='center left', bbox_to_anchor=(1.0, 0.5))  # Move legend outside
+
+        plt.tight_layout()
+        plt.show()
 
 
 def test_valid():
@@ -158,7 +157,8 @@ def test_plot():
         ]
     }
 
-    plot_schedule(schedule)
+    env = SchedulingProblemEnv(problem_type='jssp')
+    env.plot_schedule(schedule)
 
 
 if __name__ == '__main__':
