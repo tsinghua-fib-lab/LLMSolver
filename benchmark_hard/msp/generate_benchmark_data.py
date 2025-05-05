@@ -20,23 +20,8 @@ def get_user_template_data(data_template_dict: dict, tags: list) -> dict:
 
 
 def generate_data(problem_type):
-    if problem_type == 'jssp':
-        scheduling_problem_type = SchedulingProblemType.JSSP
-    elif problem_type == 'fjssp':
-        scheduling_problem_type = SchedulingProblemType.FJSSP
-    elif problem_type == 'fssp':
-        scheduling_problem_type = SchedulingProblemType.FSSP
-    elif problem_type == 'hfssp':
-        scheduling_problem_type = SchedulingProblemType.HFSSP
-    elif problem_type == 'ossp':
-        scheduling_problem_type = SchedulingProblemType.OSSP
-    elif problem_type == 'asp':
-        scheduling_problem_type = SchedulingProblemType.ASP
-    else:
-        raise NotImplementedError(f"Problem type {problem_type} not implemented")
-
     params = problem_type_param.get(problem_type, {})
-    scheduling_generator = SchedulingProblemGenerator(scheduling_problem_type)
+    scheduling_generator = SchedulingProblemGenerator(problem_type)
     scheduling_data = scheduling_generator.generate_problem_instance(**params)
     return scheduling_data
 
