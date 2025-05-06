@@ -55,16 +55,30 @@ BP_DESCRIPTION = {
 BP_ADDITIONAL_DESCRIPTION = ""
 
 
+GRAPH_VARIANTS = [
+    "MAXCUT", "MIS", "MVC", "MAXCLIQUE"
+]
+
+GRAPH_DESCRIPTION = {
+    "MAXCUT": 'Max-Cut Problem – partition the nodes of a given graph into two disjoint subsets such that the number (or total weight) of edges crossing between them is maximized.',
+    "MIS": 'Maximal Independent Set problem – select a subset of nodes from a given graph such that no two selected nodes are adjacent and no additional node can be added without violating this condition; the goal is to find a set that is maximal, ensuring that every unselected node is adjacent to at least one selected node.',
+    "MVC": 'Minimum Vertex Cover problem – find the smallest possible subset of nodes in a graph such that every edge is incident to at least one selected node, minimizing the number of chosen nodes while ensuring that all edges are covered.',
+    "MAXCLIQUE": "Maximum Clique problem - find the largest subset of nodes such that every pair of nodes in the subset is connected by an edge.",
+}
+
+GRAPH_ADDITIONAL_DESCRIPTION = ""
 
 PROBLEM_INFO = {
     "VRP": {'variants': VRP_VARIANTS, 'description': VRP_DESCRIPTION, 'additional_description': VRP_ADDITIONAL_DESCRIPTION},
     "SP": {'variants': SP_VARIANTS, 'description': SP_DESCRIPTION, 'additional_description': SP_ADDITIONAL_DESCRIPTION},
     "BP": {'variants': BP_VARIANTS, 'description': BP_DESCRIPTION, 'additional_description': BP_ADDITIONAL_DESCRIPTION},
+    "GRAPH": {'variants': GRAPH_VARIANTS, 'description': GRAPH_DESCRIPTION, 'additional_description': GRAPH_ADDITIONAL_DESCRIPTION},
 }
 
 PROBLEM_DESCRIPTION = {
     "VRP": "Vehicle Routing Problem - a set of customers with demands and a set of vehicles with limited capacity, the goal is to minimize the total distance traveled by the vehicles while satisfying the demands of the customers.",
     "SP": "Scheduling Problem - a set of jobs with operations and a set of machines, the goal is to minimize the total makespan or total tardiness.",
     "BP": "Bin Packing Problem - a set of items and a set of fixed bins, the goal is to minimize the total number of bins used while placing all the items into the bins.",
+    "GRAPH": "Graph Problem - a class of problems involving selection or partitioning of nodes and edges in a graph, aiming to optimize structures like cuts, covers, independent sets, or cliques.",
 }
 
