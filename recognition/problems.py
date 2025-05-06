@@ -52,7 +52,7 @@ BP_DESCRIPTION = {
     '3DONBPPR': '3D Online Rotatable Bin Packing Problem: Place 3D items, each with length, width, and height, into 3D bins that also have length, width, and height, allowing items to be rotated during placement. Items arrive sequentially, and the dimensions of items not yet placed are unknown when placing the current item.',
 }
 
-BP_ADDITIONAL_DESCRIPTION = ""
+BP_ADDITIONAL_DESCRIPTION = "If the description does not mention that the object can rotate, it is default that the object cannot rotate."
 
 
 

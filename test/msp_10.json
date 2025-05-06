@@ -1,0 +1,302 @@
+[
+    {
+        "desc_split": "An automotive plant assembles <num_jobs> engine units through a strict sequence of operations (e.g., block machining, piston fitting, head assembly, testing) across <num_machines> specialized workstations. Each operation is permanently assigned to a specific workstation with fixed durations from <processing_times>. Workstations enforce single-operation processing, while engines must follow their assembly sequence without deviation. The scheduling challenge is to minimize makespan by coordinating all workflows to complete all units as early as possible, respecting both procedural dependencies and workstation exclusivity.",
+        "label": "jssp",
+        "index": 0
+    },
+    {
+        "desc_split": "A biomechanical engineering facility assembles <num_jobs> custom exoskeleton suits through a rigid sequence of operations (e.g., servo calibration, carbon-fiber joint bonding, neural interface testing) across <num_machines> specialized stations. Each operation is permanently allocated to a specific station with durations from <processing_times>. Stations enforce single-operation processing, while suits must advance through their assembly sequence without parallelism. The scheduling challenge is to minimize makespan by coordinating all workflows to achieve the fastest full production cycle, adhering to ergonomic assembly protocols and precision-tooling constraints.",
+        "label": "jssp",
+        "index": 75
+    },
+    {
+        "desc_split": "A biomedical engineering lab assembles <num_jobs> components for a neural-controlled prosthetic hand across <num_machines> precision stations. Operations like servo calibration, tactile sensor alignment, and AI chip integration must follow a strict sequence (e.g., sensors cannot be tested before mechanical assembly). The dependencies in <precedence_relations> and task durations in <processing_times> guide scheduling to minimize production time for urgent patient orders.",
+        "label": "asp",
+        "index": 81
+    },
+    {
+        "desc_split": "A traveling film festival must prepare <num_jobs> screening venues by configuring <num_machines> equipment sets (projectors, sound systems, seating). Each venue requires all setups, but the sequence depends on crew availability and venue access. Setup times per task (e.g., calibrating audio) are in <processing_times>. The objective is to minimize the total setup time before the festival opens.",
+        "label": "ossp",
+        "index": 77
+    },
+    {
+        "desc_split": "A confectionery plant processes <num_jobs> batches of chocolate products through <num_stages> stages, including mixing, conching, tempering, molding, and packaging. Some stages (e.g., molding) have multiple parallel machines to handle high demand, as specified in <machines_per_stage>. Each batch must complete all stages in sequence, with no stage skipping. Processing times per stage are detailed in <processing_times>. The goal is to minimize the makespan—the total production time—while ensuring consistent product quality and meeting seasonal demand peaks.",
+        "label": "hfssp",
+        "index": 70
+    },
+    {
+        "desc_split": "A pharmaceutical facility manufactures <num_jobs> tablet batches, each following operations like granulation, compression, coating, and packaging. Each step can be processed by one of <num_machines> machines (e.g., different coaters or presses), with processing times documented in <processing_times>. Operations are sequential and non-interruptible to comply with regulatory requirements. The schedule aims to minimize the makespan while ensuring batch traceability and quality control.",
+        "label": "fjssp",
+        "index": 3
+    },
+    {
+        "desc_split": "A manufacturing plant handles <num_jobs> custom orders, each requiring processing on <num_machines> 3D printers, sanding stations, and quality control checks. The operation sequence is open, with durations per step (<processing_times>) varying by material and design complexity. Each machine can process only one order at a time, and no order can be split across machines simultaneously. The objective is to minimize the makespan—the time to fulfill all orders.",
+        "label": "ossp",
+        "index": 44
+    },
+    {
+        "desc_split": "A prefab housing factory assembles <num_jobs> modular units using <num_machines> workstations (e.g., framing, plumbing, electrical, finishing). The assembly sequence is adaptable to worker availability, with task times defined in <processing_times>. Each unit must pass through all stations, but no station can process multiple units simultaneously. The goal is to minimize the makespan—the total time to complete all units.",
+        "label": "ossp",
+        "index": 13
+    },
+    {
+        "desc_split": "A logistics hub services <num_jobs> autonomous warehouse robots, each needing diagnostics, battery replacement, sensor recalibration, and test runs in sequence. Each task can be performed by a technician team or automated station from <num_machines>, with durations in <processing_times>. Operations are exclusive to machines and order-constrained. The depot aims to minimize total downtime (makespan) to maximize robot availability for warehouse operations.",
+        "label": "fjssp",
+        "index": 64
+    },
+    {
+        "desc_split": "A precision optics workshop processes <num_jobs> lens orders through a strict sequence of operations (e.g., rough grinding, fine polishing, coating, inspection) across <num_machines> dedicated machines. Each operation is permanently assigned to a specific machine with fixed durations from <processing_times>. Machines enforce single-operation processing, while lenses must follow their exact manufacturing sequence without parallelization. The scheduling challenge is to minimize makespan by coordinating all jobs to exit production as early as possible, respecting optical tolerances and machine exclusivity constraints.",
+        "label": "jssp",
+        "index": 20
+    },
+    {
+        "desc_split": "A luthier workshop handcrafts <num_jobs> violins through ordered artisan stages (e.g., wood carving, varnishing, soundpost fitting, tuning) using <num_machines> specialized tools. Each stage requires exclusive access to tools like bending irons or drying racks for fixed durations (<processing_times>). Instruments must progress through centuries-old sequences without parallel work to preserve acoustic quality. The goal is to minimize workshop completion time while honoring traditional craftsmanship constraints.",
+        "label": "jssp",
+        "index": 57
+    },
+    {
+        "desc_split": "A factory produces <num_jobs> personalized sports gear (e.g., tennis rackets), with operations such as composite layering, 3D-printed handle customization, tension calibration, and branding. Each step must follow an order but can be assigned to <num_machines> machines (e.g., automated looms or CNC printers). The <processing_times> vary by material and machine precision. The schedule aims to minimize makespan while meeting athlete-specific tolerances.",
+        "label": "fjssp",
+        "index": 69
+    },
+    {
+        "desc_split": "A biotech facility assembles <num_jobs> bioreactor components across <num_machines> sterile workstations. Operations involve vessel sterilization, nutrient scaffold insertion, cell culture seeding, and environmental sealing. Dependencies (e.g., sterilization precedes all biological steps) are modeled in <precedence_relations>, with durations in <processing_times>. Scheduling aims to minimize makespan to preserve cell viability.",
+        "label": "asp",
+        "index": 86
+    },
+    {
+        "desc_split": "A robotic pizzeria executes <num_jobs> tasks across <num_machines> automated stations (dough prep, topping placement, baking, boxing). Precedence constraints in <precedence_relations> require dough proofing before saucing, and baking before boxing. Task durations in <processing_times> (e.g., 3 minutes per bake) are optimized to minimize customer wait times while ensuring food safety standards.",
+        "label": "asp",
+        "index": 94
+    },
+    {
+        "desc_split": "A museum conservatory handles <num_jobs> artworks requiring <num_machines> treatments (e.g., cleaning, stabilization, pigment analysis, varnishing). The order of treatments is flexible, as long as all are completed. Each step’s duration is listed in <processing_times>, and only one artwork can be worked on per machine at a time. The objective is to minimize the total project duration while preserving delicate workflows.",
+        "label": "ossp",
+        "index": 12
+    },
+    {
+        "desc_split": "A candle workshop produces <num_jobs> artisanal candles through <num_machines> steps: wax melting, scent infusion, wick insertion, and mold cooling. Every candle follows the same production sequence, with the i-th operation assigned to the i-th machine. Machines are non-shareable, and processing times are fixed (see <processing_times>). The scheduling aim is to minimize the makespan—the total time to finish all candles.",
+        "label": "fssp",
+        "index": 69
+    },
+    {
+        "desc_split": "A jet engine manufacturer coats <num_jobs> turbine blades through <num_machines> critical steps: chemical cleaning, thermal spraying, precision grinding, and X-ray inspection. Each blade must pass through the machines in the same order, with no overlaps on any machine. Processing times are deterministic (<processing_times>). The scheduling aim is to minimize the makespan—the total time to coat all blades while meeting aviation standards.",
+        "label": "fssp",
+        "index": 53
+    },
+    {
+        "desc_split": "An electronics manufacturer assembles <num_jobs> fire alarm panels through <num_machines> stages: circuit board mounting, wiring, functional testing, and casing assembly. Each panel must pass through these steps in strict order, with no parallel processing on any machine. The <processing_times> matrix defines all operation durations. The goal is to minimize the total assembly time (makespan) for all panels.",
+        "label": "fssp",
+        "index": 83
+    },
+    {
+        "desc_split": "A toy factory assembles <num_jobs> model cars via <num_machines> stations: chassis molding, motor installation, body painting, decal application, and final testing. All cars follow this fixed route, with exclusive machine access and operation durations in <processing_times>. The production line seeks to minimize the makespan to maximize daily output.",
+        "label": "fssp",
+        "index": 89
+    },
+    {
+        "desc_split": "A tech R&D lab calibrates <num_jobs> holographic display units through sequential procedures (e.g., laser alignment, pixel grid testing, 3D projection tuning) using <num_machines> precision instruments. Each procedure is permanently assigned to a specific instrument with durations defined in <processing_times>. Instruments operate exclusively, and units must complete calibration steps in exact order. The goal is to minimize total calibration time while ensuring sub-micron accuracy and avoiding instrument conflicts.",
+        "label": "jssp",
+        "index": 54
+    },
+    {
+        "desc_split": "A nuclear energy plant schedules <num_jobs> high-safety operations across <num_machines> shielded workstations to assemble control rods. Tasks include material inspection, graphite coating, and pressure sealing, with dependencies (e.g., coating requires prior inspection) in <precedence_relations>. Durations in <processing_times> account for safety checks. The priority is minimizing makespan without compromising protocols.",
+        "label": "asp",
+        "index": 14
+    },
+    {
+        "desc_split": "A high-precision production line fabricates <num_jobs> smartphone display panels through a sequence of critical processes (e.g., glass cutting, OLED deposition, encapsulation, quality inspection). Each process is permanently assigned to one of <num_machines> specialized machines, with exact durations specified in <processing_times>. Machines enforce single-operation processing, while panels must follow strict sequential workflows without deviation. The scheduling challenge is to minimize makespan by optimizing the alignment of all jobs across the production line, ensuring zero cross-contamination and adherence to nanoscale tolerances.",
+        "label": "jssp",
+        "index": 35
+    },
+    {
+        "desc_split": "A confectionery plant crafts <num_jobs> batches of premium chocolates through <num_machines> steps: tempering, molding, cooling, and wrapping. Each batch must pass through the machines in the same order, with no overlaps on any machine. The i-th operation corresponds to the i-th machine, and times are listed in <processing_times>. The goal is to minimize the total production time (makespan) for all chocolate batches.",
+        "label": "fssp",
+        "index": 3
+    },
+    {
+        "desc_split": "During a race, a pit crew performs <num_jobs> tasks (tire changes, refueling, wing adjustments) across <num_machines> crew members. Precedence constraints apply: fuel caps must be closed before tires are replaced. The workflow is defined in <precedence_relations>, with task times in <processing_times>. The team aims to minimize the pit stop’s total duration.",
+        "label": "asp",
+        "index": 17
+    },
+    {
+        "desc_split": "A controlled nuclear facility assembles <num_jobs> fuel rods via strictly ordered steps (e.g., pellet stacking, cladding, welding, radiation testing) using <num_machines> shielded machines. Each step is assigned to a specific machine with immutable durations from <processing_times>. Machines operate exclusively, and rods must progress sequentially to meet safety protocols. The objective is to minimize makespan while adhering to stringent regulatory pauses between hazardous operations.",
+        "label": "jssp",
+        "index": 97
+    },
+    {
+        "desc_split": "A chocolate factory processes <num_jobs> batches through <num_stages> stages: cocoa bean roasting, grinding, conching, tempering, molding, and packaging. Some stages (e.g., molding) have multiple parallel machines (<machines_per_stage>) to handle different product variants. All batches follow the same sequence, and no stage can be bypassed. Processing times per stage are detailed in <processing_times>. The production schedule is optimized to minimize the makespan—the total time to produce all batches—while ensuring consistent flavor and texture.",
+        "label": "hfssp",
+        "index": 37
+    },
+    {
+        "desc_split": "A gas plant refills <num_jobs> medical oxygen cylinders through <num_machines> critical stages: depressurization, purity testing, refilling, valve calibration, and safety certification. Cylinders follow this strict sequence, with each i-th operation bound to the i-th machine. Processing times (including safety checks) are fixed in <processing_times>. The schedule must minimize makespan to accelerate emergency supply chains.",
+        "label": "fssp",
+        "index": 77
+    },
+    {
+        "desc_split": "An agritech company assembles <num_jobs> components for autonomous crop-spraying drones across <num_machines> robotic stations. Tasks like motor mounting, GPS calibration, and tank installation follow dependencies (e.g., motors must be installed before flight testing). The DAG is defined in <precedence_relations>, and <processing_times> list task durations. The goal is to reduce makespan for seasonal demand peaks.",
+        "label": "asp",
+        "index": 13
+    },
+    {
+        "desc_split": "An electronics factory assembles <num_jobs> smart glasses via <num_stages> stages: lens calibration, microchip integration, frame assembly, software flashing, and final testing. Parallel testing stations (<machines_per_stage>) prevent bottlenecks, while other stages use specialized single machines. Jobs progress sequentially, with no stage-jumping permitted. Processing times per stage are in <processing_times>. The schedule targets minimized makespan to accelerate delivery of customized wearable tech while maintaining rigorous performance standards.",
+        "label": "hfssp",
+        "index": 93
+    },
+    {
+        "desc_split": "An automated warehouse processes <num_jobs> customer orders using <num_machines> robotic stations for picking, packing, labeling, and quality checks. The sequence of operations is adaptable to avoid congestion, with each task duration specified in <processing_times>. Only one order can occupy a station at a time. The scheduler aims to minimize the total fulfillment time (makespan) while balancing workload across robots.",
+        "label": "ossp",
+        "index": 11
+    },
+    {
+        "desc_split": "A semiconductor foundry processes <num_jobs> silicon wafers through <num_stages> stages, including photolithography, etching, doping, and final testing. Some stages (e.g., etching) have multiple parallel machines to handle high-volume production, as specified in <machines_per_stage>. Wafers must complete each stage in sequence, with no backtracking. Stage-specific processing times are detailed in <processing_times>. The goal is to minimize the makespan—total production time—while maintaining nanometer-scale precision and minimizing equipment idle time.",
+        "label": "hfssp",
+        "index": 5
+    },
+    {
+        "desc_split": "A wind turbine plant produces <num_jobs> composite blades, each requiring layup, curing, trimming, and quality checks in a strict order. Each operation can be performed by a subset of <num_machines> machines (e.g., autoclaves or CNC trimmers), with machine-specific durations in <processing_times>. Tasks are non-preemptive and must avoid overlaps on shared resources. The objective is to minimize the total production time (makespan) while meeting structural tolerances.",
+        "label": "fjssp",
+        "index": 4
+    },
+    {
+        "desc_split": "An aerospace research center schedules <num_jobs> experimental vehicle tests through sequential preparation stages (e.g., model mounting, sensor calibration, shockwave imaging) in <num_machines> specialized test cells. Each stage is bound to specific infrastructure (e.g., optical diagnostics rigs) with durations from <processing_times>. Cells operate exclusively due to extreme conditions (Mach 7+), and tests require strict procedural sequences. The goal is to minimize total testing timeline while synchronizing high-speed data acquisition systems across all experiments.",
+        "label": "jssp",
+        "index": 43
+    },
+    {
+        "desc_split": "A sustainable packaging facility processes <num_jobs> batches of biodegradable containers across <num_stages> stages: molding, drying, printing, and stacking. High-speed printing requires multiple parallel machines (<machines_per_stage>). Jobs advance sequentially, with no overlapping stages. Processing times (<processing_times>) vary by material thickness and print complexity. The objective is to minimize makespan—ensuring rapid turnover to meet eco-friendly retail demand—while avoiding drying-stage bottlenecks.",
+        "label": "hfssp",
+        "index": 33
+    },
+    {
+        "desc_split": "A tech company processes <num_jobs> datasets through <num_machines> stages like data cleaning, annotation, and model validation. The workflow is non-sequential: tasks can be reordered to balance server loads. Each stage’s runtime is listed in <processing_times>, and no two tasks can use the same machine simultaneously. The scheduler aims to minimize the total processing time for all datasets to accelerate AI deployment.",
+        "label": "ossp",
+        "index": 97
+    },
+    {
+        "desc_split": "A high-volume repair center processes <num_jobs> damaged smartphone screens daily, each requiring a sequence of operations: diagnostics, adhesive removal, screen replacement, and quality testing. Each operation can be performed by one of <num_machines> specialized workstations, with processing times varying by machine skill level (see <processing_times>). Operations are non-preemptive and must follow a strict order. The goal is to minimize the makespan—ensuring all devices are repaired and returned to customers as quickly as possible.",
+        "label": "fjssp",
+        "index": 75
+    },
+    {
+        "desc_split": "A luxury watchmaker crafts <num_jobs> gear components through <num_machines> specialized machines: CNC cutting, deburring, heat treatment, polishing, and dimensional verification. Every gear must pass through these stages in the same strict order, with exclusive machine usage. The exact processing times for each operation are provided in <processing_times>. The schedule aims to minimize the total production time (makespan) for all gears.",
+        "label": "fssp",
+        "index": 71
+    },
+    {
+        "desc_split": "A steel mill processes <num_jobs> batches of pipes through <num_stages> stages, including cutting, welding, heat treatment, coating, and inspection. Some stages, like welding and coating, have multiple parallel machines (<machines_per_stage>) to handle high-volume production. Jobs must follow the same sequence, and no stage can be skipped. Processing times per stage are detailed in <processing_times>. The goal is to minimize the makespan—the total production time—while adhering to industrial safety and quality standards.",
+        "label": "hfssp",
+        "index": 10
+    },
+    {
+        "desc_split": "A gourmet dairy processes <num_jobs> cheese batches through sequential steps: curd pressing, brine soaking, mold inoculation, and cave aging. Each stage can use specialized chambers or manual stations from <num_machines>, with aging times in <processing_times> varying by equipment (e.g., humidity-controlled vs. traditional caves). The schedule minimizes makespan to align with seasonal demand peaks while preserving flavor profiles.",
+        "label": "fjssp",
+        "index": 94
+    },
+    {
+        "desc_split": "An electronics factory assembles <num_jobs> smart glasses via <num_stages> stages: lens calibration, circuit integration, frame assembly, software flashing, and quality testing. Parallel machines (<machines_per_stage>) handle bottlenecks like software flashing. Jobs flow linearly, with no stage skipping. Stage durations depend on device complexity (<processing_times>). The schedule targets minimal makespan to fulfill pre-orders for the holiday season.",
+        "label": "hfssp",
+        "index": 68
+    },
+    {
+        "desc_split": "A construction materials plant manufactures <num_jobs> concrete pipes through <num_machines> stages: mold filling, vibration compacting, steam curing, and quality inspection. Each pipe must undergo the same sequence, with one pipe per machine at a time. The processing times are deterministic and provided in <processing_times>. The goal is to minimize the total production time (makespan) for all pipes.",
+        "label": "fssp",
+        "index": 28
+    },
+    {
+        "desc_split": "A medical workshop produces <num_jobs> patient-specific orthopedic implants, each requiring precise operations like 3D printing, polishing, sterilization, and quality inspection. Each operation has a predefined order and can be executed by a subset of <num_machines> machines, with processing times documented in <processing_times>. Non-preemptive scheduling ensures no interruptions. The goal is to minimize the makespan to accelerate patient treatment timelines.",
+        "label": "fjssp",
+        "index": 27
+    },
+    {
+        "desc_split": "A luthier workshop assembles <num_jobs> custom guitars through <num_machines> stages: body sanding, fretboard installation, string fitting, tuning, and polishing. Every guitar follows this exact workflow, with exclusive machine usage. Processing times for each operation are fixed and listed in <processing_times>. The scheduling objective is to minimize the total production time for all guitars.",
+        "label": "fssp",
+        "index": 91
+    },
+    {
+        "desc_split": "A medical robotics lab coordinates <num_jobs> tasks (actuator calibration, carbon-fiber socket molding, neural interface syncing) across <num_machines> precision workstations. Dependencies in <precedence_relations> require waterproofing to follow sensor integration. Custom-fit adjustments lead to non-uniform <processing_times>. The schedule prioritizes minimizing patient wait times.",
+        "label": "asp",
+        "index": 28
+    },
+    {
+        "desc_split": "A research team deploys <num_jobs> sensor arrays across <num_machines> calibration and testing stations (e.g., humidity, temperature, air quality). Each array must pass all tests, but the sequence is flexible to accommodate equipment availability. Processing times for each test are given in <processing_times>. The goal is to minimize the makespan—the total time required to calibrate all sensors—while ensuring no station processes multiple arrays simultaneously.",
+        "label": "ossp",
+        "index": 45
+    },
+    {
+        "desc_split": "A humanitarian organization coordinates <num_jobs> assembly tasks across <num_machines> mobile teams to erect modular shelters in crisis zones. Tasks include foundation laying, frame assembly, insulation installation, and solar panel mounting. Dependencies in <precedence_relations> require frames to be stabilized before insulation, and panels can only be mounted after roof completion. Time-critical processing times in <processing_times> account for weather delays. The objective is to minimize total deployment time.",
+        "label": "asp",
+        "index": 31
+    },
+    {
+        "desc_split": "A smart textile factory processes <num_jobs> fabric orders through sequential stages: pre-treatment, dyeing, drying, and quality control. Each stage can be handled by any compatible machine from <num_machines>, with machine-dependent processing times (<processing_times>). Jobs follow a strict order, and machines are reserved until tasks finish. The objective is to minimize the makespan while reducing water/energy waste in dyeing processes.",
+        "label": "fjssp",
+        "index": 29
+    },
+    {
+        "desc_split": "An urban farm manages <num_jobs> crop batches (e.g., leafy greens, herbs), each requiring seeding, LED growth cycling, nutrient flushing, and robotic harvesting in sequence. <num_machines> interchangeable growth racks and harvesters are available, with task durations in <processing_times>. Operations are order-sensitive but machine-flexible to adapt to crop varieties. The goal is to minimize the makespan to ensure peak freshness for daily deliveries.",
+        "label": "fjssp",
+        "index": 54
+    },
+    {
+        "desc_split": "A convention center must prepare <num_jobs> conference rooms for events requiring <num_machines> setup tasks (e.g., audio-visual testing, seating arrangement, signage, and catering). The order of tasks is flexible, but each has fixed times (<processing_times>). Only one team can work in a room at a time, and each setup task requires dedicated equipment. The goal is to minimize the total setup time before sessions begin.",
+        "label": "ossp",
+        "index": 43
+    },
+    {
+        "desc_split": "A furniture company assembles <num_jobs> custom furniture units (e.g., cabinets, shelves) across <num_machines> workstations. Tasks like wood cutting, drilling, and finishing follow dependencies — e.g., painting requires sanding to be completed. The DAG in <precedence_relations> captures these rules, and <processing_times> provides task durations. The goal is to minimize total production time while meeting customer deadlines.",
+        "label": "asp",
+        "index": 3
+    },
+    {
+        "desc_split": "A precision optics facility assembles <num_jobs> mirror segments for a next-generation space telescope across <num_machines> ultra-clean workstations. Tasks include grinding, coating, alignment, and stress testing, with strict dependencies — e.g., coating requires prior grinding and cleaning. These constraints are formalized in <precedence_relations>, and each operation’s duration is specified in <processing_times>. The goal is to minimize the makespan to meet launch window deadlines.",
+        "label": "asp",
+        "index": 35
+    },
+    {
+        "desc_split": "A recycling plant services <num_jobs> battery packs through <num_machines> stages (disassembly, diagnostics, reconditioning, repackaging). The sequence of stages is flexible to optimize technician workflows. Each stage’s duration is defined in <processing_times>, and no two packs can occupy the same stage simultaneously. The goal is to minimize total refurbishment time across all packs.",
+        "label": "ossp",
+        "index": 48
+    },
+    {
+        "desc_split": "An electronics manufacturer assembles <num_jobs> PCB batches, each undergoing operations such as solder paste application, component placement, reflow soldering, and testing. Each operation can be executed on one of several compatible machines from <num_machines>, with processing times depending on machine efficiency (<processing_times>). The operations must follow a predefined sequence, and no two tasks can overlap on the same machine. The objective is to minimize the total production time while maintaining high yield rates.",
+        "label": "fjssp",
+        "index": 11
+    },
+    {
+        "desc_split": "An optical manufacturing center coats <num_jobs> AR lens batches through precision processes (e.g., anti-reflective layering, hydrophobic treatment, quality inspection) on <num_machines> deposition chambers. Each process stage is permanently assigned to a chamber with fixed times from <processing_times>. Chambers process one lens batch at a time, and production sequences cannot be altered due to material science requirements. The goal is to minimize makespan by optimizing the coating schedule to meet demand while avoiding chamber congestion.",
+        "label": "jssp",
+        "index": 89
+    },
+    {
+        "desc_split": "A coffee processing plant roasts and packages <num_jobs> batches of coffee beans through <num_machines> sequential stages: cleaning, roasting, grinding, flavor infusion, and vacuum sealing. Each batch must follow the same machine sequence, with the i-th operation performed on the i-th machine. Only one batch can be processed per machine at any time, and all durations are fixed in <processing_times>. The goal is to minimize the makespan—the total time to complete all batches.",
+        "label": "fssp",
+        "index": 25
+    },
+    {
+        "desc_split": "A high-tech factory produces <num_jobs> batches of smartphone displays through <num_stages> stages, including glass cutting, OLED lamination, touch sensor integration, quality inspection, and final assembly. Each stage has at least one machine, with critical stages like lamination featuring multiple parallel machines (<machines_per_stage>). Jobs must follow the same rigid sequence, advancing only after completing the prior stage. Processing times vary by machine and are documented in <processing_times>. The goal is to minimize the makespan—total production time—while meeting precision tolerances and avoiding bottlenecks in high-demand stages.",
+        "label": "hfssp",
+        "index": 15
+    },
+    {
+        "desc_split": "A chemical plant produces <num_jobs> batches of fertilizer through <num_stages> stages: raw material mixing, granulation, drying, coating, and bagging. Some stages (e.g., granulation and bagging) have multiple parallel machines to maximize efficiency, as specified in <machines_per_stage>. Each batch must complete all stages in sequence. The processing times per stage are detailed in <processing_times>. The scheduling system is optimized to minimize the makespan—the total time to process all batches—while ensuring product uniformity and meeting agricultural demand cycles.",
+        "label": "hfssp",
+        "index": 48
+    },
+    {
+        "desc_split": "A aerospace testing facility evaluates <num_jobs> satellite components through rigorous validation phases (e.g., thermal cycling, vibration testing, vacuum exposure) on <num_machines> specialized test rigs. Each test phase is irrevocably assigned to a rig with durations fixed in <processing_times>. Rigs operate exclusively, and components must complete tests in predefined sequences to meet certification standards. The objective is to minimize the total testing timeline while ensuring no two tests overlap on shared rigs and all procedural dependencies are satisfied.",
+        "label": "jssp",
+        "index": 19
+    },
+    {
+        "desc_split": "A research facility tests <num_jobs> self-driving car prototypes across <num_machines> environments (e.g., urban simulation, off-road track, sensor calibration lab). Tests can be conducted in any order, but each prototype must complete all scenarios. Testing times per environment are listed in <processing_times>, and no two cars can share a testbed simultaneously. The objective is to minimize the total testing period to accelerate development cycles.",
+        "label": "ossp",
+        "index": 27
+    },
+    {
+        "desc_split": "An electronics factory assembles <num_jobs> smart glasses via <num_stages> stages: lens calibration, frame integration, sensor installation, software flashing, and stress testing. Parallel machines (<machines_per_stage>) are deployed in stages like sensor installation to balance workload. Jobs proceed in strict order, with no overlapping stages. Task durations depend on machine configurations (<processing_times>). The scheduling system optimizes for makespan reduction—total assembly time—while ensuring zero defects in optical and functional tests.",
+        "label": "hfssp",
+        "index": 58
+    }
+]

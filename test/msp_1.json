@@ -1,0 +1,32 @@
+[
+    {
+        "desc_split": "A tech manufacturer assembles <num_jobs> customized smartphones using <num_machines> workstations (e.g., screen installation, battery fitting, camera calibration, and software flashing). The assembly sequence for each phone is flexible, allowing optimization based on workstation availability. Each operation’s duration is specified in <processing_times>, and no workstation can handle more than one phone at a time. The goal is to minimize the makespan—the total time to assemble all phones.",
+        "label": "ossp",
+        "index": 35
+    },
+    {
+        "desc_split": "A quantum computing lab installs <num_jobs> superconducting qubit arrays in dilution refrigerators using <num_machines> cryogenically compatible workstations (wire bonding, Josephson junction tuning). Each array requires 12+ millikelvin-temperature operations (<processing_times>) in fixed order to prevent quantum decoherence. Machines like SQUID magnetometers allow only serial usage due to electromagnetic interference. The objective is to minimize makespan while coordinating scarce 10mK cooldown cycles and avoiding cosmic ray-induced scheduling disruptions.",
+        "label": "jssp",
+        "index": 94
+    },
+    {
+        "desc_split": "A confectionery plant crafts <num_jobs> batches of premium chocolates through <num_machines> steps: tempering, molding, cooling, and wrapping. Each batch must pass through the machines in the same order, with no overlaps on any machine. The i-th operation corresponds to the i-th machine, and times are listed in <processing_times>. The goal is to minimize the total production time (makespan) for all chocolate batches.",
+        "label": "fssp",
+        "index": 3
+    },
+    {
+        "desc_split": "A biomedical engineering lab assembles <num_jobs> components for a neural-controlled prosthetic hand across <num_machines> precision stations. Operations like servo calibration, tactile sensor alignment, and AI chip integration must follow a strict sequence (e.g., sensors cannot be tested before mechanical assembly). The dependencies in <precedence_relations> and task durations in <processing_times> guide scheduling to minimize production time for urgent patient orders.",
+        "label": "asp",
+        "index": 81
+    },
+    {
+        "desc_split": "A custom footwear factory produces <num_jobs> sneaker orders through <num_stages> stages: 3D printing, stitching, sole attachment, and quality inspection. Critical stages like stitching have multiple machines (<machines_per_stage>) to accommodate design variations. All jobs follow the same workflow, and a job cannot proceed until its current stage is complete. Stage-specific processing times (<processing_times>) depend on material and design complexity. The schedule optimizes makespan to meet tight delivery windows for limited-edition releases.",
+        "label": "hfssp",
+        "index": 31
+    },
+    {
+        "desc_split": "A military maintenance depot services <num_jobs> defense equipment units, each requiring diagnostic checks, part replacements, calibration, and final testing in sequence. Each operation can be performed by one of <num_machines> specialized repair bays or technicians, with processing times varying by resource expertise (<processing_times>). Tasks are non-preemptive and must follow a strict workflow. The scheduling goal is to minimize the total repair time while ensuring mission-critical readiness.",
+        "label": "fjssp",
+        "index": 14
+    }
+]

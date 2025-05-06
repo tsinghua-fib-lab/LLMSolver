@@ -1,0 +1,434 @@
+Label: 3DOFBPP, Predicted: <Error> at level 0, Index: 59
+Description: Luxury jewelry retailers regularly rotate inventory between stores, requiring secure transport of elaborate displays and merchandise vaults within armored vehicles with strict compartment sizes <bin_size>. The valuable items range from delicate necklaces in velvet boxes to heavy safes containing precious metals <items_size>. The dual challenge is maximum value transport per vehicle while guaranteeing absolute protection against movement damage.
+Reason: <Error> at parse json 
+ {
+    'reason': 'The problem described involves fitting a variety of items, each with specific sizes and values, into vehicles (bins) that have strict size limitations. The goal is to maximize the value of the transported goods while ensuring they fit within the vehicle's capacity and are protected against damage. This directly aligns with the Bin Packing Problem, where the objective is to efficiently pack items into bins (in this case, armored vehicles) while minimizing the number of bins used or, in this scenario, maximizing the value within the constraints of bin sizes.',
+    'result': 'BP'
+} 
+
+--------------------------------------------------------------------------------
+Label: 2DOFBPP, Predicted: <Error> at level 1, Index: 59
+Description: Aircraft manufacturers must precisely arrange lightweight reinforced composite sheets (<items_size>) onto large structural wing molds (<bin_size>). The challenge lies in optimizing the placement of irregularly shaped carbon-fiber sheets purely along their length and width dimensions to achieve maximum coverage, reduce material overlap, and maintain structural integrity while minimizing excess weight. This requires strategic sheet orientation to align with aerodynamic stress patterns.
+Reason: <Error> at parse json 
+ {
+    'reason': 'The problem description specifies the need to arrange 2D composite sheets (items) on large structural wing molds (bins), focusing on optimizing placement, reducing overlap, and aligning with aerodynamic stress patterns. Since the sheets are described as being optimally oriented for alignment with stress patterns, it implies that rotation is a key part of the solution. There is no mention of dealing with items in a sequential manner where future items' dimensions are unknown, which rules out the online variants. Additionally, since the problem deals purely with length and width dimensions, a 3D variant is not applicable. Therefore, the 2D Offline Rotatable Bin Packing Problem (2DOFBPPR) is the most appropriate choice.',
+    'result': '2DOFBPPR'
+} 
+
+--------------------------------------------------------------------------------
+Label: 3DONBPP, Predicted: 3DONBPPR, Index: 99
+Description: Aerospace technicians must carefully arrange satellite components (<items_size>) with extremely sensitive tolerances into specially designed launch canisters (<bin_size>). The high-value parts become available for loading in variable sequences based on manufacturing completion, with each piece requiring precise 3D orientation. Technicians must maximize space utilization without knowing subsequent components' dimensions, while maintaining exact positioning requirements and shock absorption clearances in all three axes throughout the loading process.
+Reason: The problem description specifies that the satellite components (items) and launch canisters (bins) are 3D, with requirements for precise 3D orientation and space utilization. The components become available in a variable sequence, and the dimensions of subsequent items are unknown at the time of loading each piece, which aligns with an online scenario. Additionally, the requirement for exact positioning and shock absorption clearances suggests that the orientation (rotation) of the items is a critical factor, making the rotatable variant more appropriate.
+--------------------------------------------------------------------------------
+Label: 2DOFBPP, Predicted: <Error> at level 1, Index: 43
+Description: Billboards are constructed by arranging standardized rectangular panels (<items_size>) onto mounting frames (<bin_size>) of predetermined dimensions. The task is to place all panels within the frame without gaps or overlaps, maximizing visual coherence while ensuring structural stability. Only panel length and width are considered, and efficiency is critical to minimizing material waste and construction time for large-scale installations.
+Reason: <Error> at parse json 
+ {
+    'reason': 'The problem description specifies that the task is to place 2D rectangular panels (items) onto mounting frames (bins) of predetermined dimensions, with the aim of maximizing visual coherence and structural stability. The problem does not mention any 3D aspect, such as height, and there's no indication that the panels can be rotated. Furthermore, since the problem context involves planning for large-scale installations and aims at minimizing material waste and construction time, it implies an offline setting where all panel dimensions are known in advance. This aligns with the 2D Offline Bin Packing Problem (2DOFBPP), which focuses on placing 2D items into 2D bins without rotation, given that all item dimensions are known before the packing process begins.',
+    'result': '2DOFBPP'
+} 
+
+--------------------------------------------------------------------------------
+Label: 2DONBPP, Predicted: 2DONBPPR, Index: 31
+Description: Rectangular solar panels (<items_size>) must be arranged optimally on rectangular roof sections (<bin_size>). Panels arrive for installation in real-world weather conditions requiring immediate placement without knowledge of subsequent panel dimensions or positions. The challenge involves maximizing roof coverage through careful length/width-based positioning with minimal structural adaptation.
+Reason: The problem description specifies that the solar panels (2D items with length and width) must be arranged on rectangular roof sections (also 2D with length and width). It also mentions that the panels arrive for installation in real-world weather conditions, requiring immediate placement without knowledge of subsequent panel dimensions or positions. This matches the characteristics of a 2D Online Bin Packing Problem where items arrive sequentially and their dimensions are unknown until they need to be placed. The possibility of rotating the panels is explicitly mentioned, which allows us to consider the rotatable variant.
+--------------------------------------------------------------------------------
+Label: 2DOFBPP, Predicted: 2DOFBPPR, Index: 61
+Description: Commercial kitchen equipment manufacturers must optimize cuts from large stainless steel sheets (<bin_size>) into components (<items_size>) for countertops, splashbacks, and appliance housings. The purely two-dimensional problem demands careful placement of rectangular and L-shaped pieces to minimize expensive metal wastage, accounting for grain directionality in brushed finishes while ignoring sheet thickness entirely during the cutting layout phase.
+Reason: The problem description specifies a two-dimensional cutting optimization task, where the primary goal is to minimize wastage by carefully placing rectangular and L-shaped pieces (items) onto large stainless steel sheets (bins). The problem involves only length and width dimensions, as sheet thickness is ignored. Additionally, the user mentioned that careful placement is required, considering grain directionality, which implies that rotation of items could be necessary for optimal placement. Since the problem does not indicate an online scenario where items arrive sequentially, the most fitting variant is 2D Offline Rotatable Bin Packing Problem.
+--------------------------------------------------------------------------------
+Label: 3DOFBPPR, Predicted: <Error> at level 0, Index: 86
+Description: In the floral industry, fresh flowers and ornamental plants must be carefully packed into refrigerated vans with specific <bin_size> (length, width, and height) during transportation. These floral items, such as bouquets, potted plants, and wreaths, come in varying <items_size> (length, width, and height) and need to be strategically rotated and arranged to minimize wasted space while preserving their delicate structure. The challenge involves packing all items into the fewest vans possible while ensuring proper temperature control and minimal physical contact between fragile blooms.
+Reason: <Error> at parse json 
+ {
+    'reason': 'The problem focuses on packing items of varying sizes into bins (refrigerated vans) with specific dimensions, aiming to minimize the number of vans used while considering the spatial arrangement and orientation of the floral items. This aligns closely with the Bin Packing Problem (BP), where the objective is to efficiently pack items into the fewest containers possible, without exceeding the container's capacity or in this case, optimizing space usage.',
+    'result': 'BP'
+} 
+
+--------------------------------------------------------------------------------
+Label: 2DOFBPPR, Predicted: 2DOFBPP, Index: 83
+Description: Municipal bench manufacturing requires cutting long aluminum extrusions of size <bin_size> into various slat lengths <items_size> for different bench models. The production team rotates cutting patterns to maximize material yield from each extrusion, dealing exclusively with length-width optimization as all slats share identical cross-sectional profiles irrelevant to the 2D layout challenge.
+Reason: The problem description indicates that the manufacturing process involves cutting long aluminum extrusions into various slat lengths for different bench models, focusing on length-width optimization. This scenario fits a 2D bin packing problem where all items (slats) and bins (extrusions) are defined by their length and width only. The problem does not mention any aspect of 3D dimensions or online (sequential) arrival of items; instead, it emphasizes optimizing the use of material from each extrusion, which suggests an offline approach. Additionally, since the problem specifies that the cross-sectional profiles of the slats are identical and irrelevant to the layout, rotation is not a factor in this context.
+--------------------------------------------------------------------------------
+Label: 3DONBPP, Predicted: 3DONBPPR, Index: 70
+Description: In the beverage industry, bottles and cans of various sizes (<items_size>) arrive continuously on a conveyor belt and must be packed into plastic crates (<bin_size>) for delivery to retail stores. Workers cannot predict the exact dimensions or quantities of upcoming beverages, requiring real-time decisions about how to orient each item based on its length, width, and height to maximize crate utilization while preventing breakage during transit.
+Reason: The problem description specifies that items (bottles and cans) have three dimensions (length, width, and height) and must be packed into 3D bins (plastic crates). It also indicates that the items arrive continuously, meaning the dimensions of upcoming items are not known in advance, which fits the "online" setting. Additionally, the need to orient each item based on its dimensions suggests that rotating the items for optimal packing is a requirement.
+--------------------------------------------------------------------------------
+Label: 2DOFBPP, Predicted: 2DOFBPPR, Index: 51
+Description: Aircraft manufacturers working with costly composite materials must precisely cut predefined aircraft components (<items_size>) from large composite sheets (<bin_size>). Engineers need to optimally position parts on each sheet considering only the length and width constraints, often incorporating geometric nesting of irregularly shaped pieces to minimize expensive composite wastage while meeting structural grain alignment specifications.
+Reason: The problem description specifies the need to optimally position irregularly shaped 2D aircraft components on large composite sheets, considering length and width constraints. It also mentions the importance of geometric nesting, which implies that rotation of parts could be a strategy to minimize waste. Since the process is planned with all items known beforehand (offline), and rotation seems to be a considered factor for optimization, the most suitable variant is 2DOFBPPR, which allows for the placement and rotation of 2D items into 2D bins while knowing all items in advance.
+--------------------------------------------------------------------------------
+Label: 3DONBPP, Predicted: 3DONBPPR, Index: 75
+Description: A modular furniture company must efficiently pack various furniture components (<items_size>) into delivery trucks (<bin_size>) without knowing what pieces will arrive next during the loading process. Each component from table legs to cabinet panels has distinct length, width, and height measurements, requiring dynamic 3D arrangement to maximize space utilization while preventing damage during transit.
+Reason: The problem description mentions that the furniture components have distinct length, width, and height, indicating a 3D packing problem. Additionally, it specifies that the items arrive without prior knowledge of their dimensions, which fits the online nature of the problem. The need to maximize space utilization while preventing damage during transit suggests the possibility of rotating items for better fit, although rotation is not explicitly mentioned, the flexibility in arrangement implies rotation could be beneficial. Therefore, the most suitable variant that encompasses these aspects is the 3D Online Rotatable Bin Packing Problem (3DONBPPR).
+--------------------------------------------------------------------------------
+Label: 3DONBPPR, Predicted: 3DONBPP, Index: 80
+Description: Pharmaceutical companies assembling portable cleanrooms from prefabricated wall panels <bin_size> must efficiently load trucks with components like air filtration units and sterile workstations measuring <items_size>. Installation teams arriving on site need immediate unpacking without rotation restrictions, requiring intelligent cargo space allocation despite unpredictable loading sequences due to manufacturing variances.
+Reason: The problem involves loading 3D items (components like air filtration units and sterile workstations) into 3D bins (trucks). The loading sequence is unpredictable, which means the items arrive sequentially, and their dimensions are unknown until they need to be placed. There is no mention of rotating the items, so rotation is not allowed. Therefore, the most appropriate variant is the 3D Online Bin Packing Problem (3DONBPP).
+--------------------------------------------------------------------------------
+Label: 3DOFBPP, Predicted: 3DOFBPPR, Index: 91
+Description: A tech retailer's distribution center handles delicate server racks, home assistant hubs, and smart displays destined for stores, using uniform metal storage racks <bin_size>. Fragile components with anti-static packaging requirements <items_size> require careful vertical stacking to prevent damage while achieving 95%+ rack occupancy across the fulfillment center.
+Reason: The problem description specifies that the distribution center handles 3D items (server racks, home assistant hubs, and smart displays) which have length, width, and height. These items need to be placed into 3D storage racks (bins) with the goal of achieving a high occupancy rate. The description also emphasizes the careful vertical stacking of fragile components, indicating that the orientation or rotation of items is a critical factor in preventing damage. Since the process seems planned and not sequential (all items and their dimensions are known before placement), this aligns with an offline scenario. Therefore, the most appropriate variant is the 3D Offline Rotatable Bin Packing Problem.
+--------------------------------------------------------------------------------
+Label: 3DONBPP, Predicted: <Error> at level 1, Index: 76
+Description: NASA engineers face the challenge of fitting irregularly shaped scientific instruments and satellites (<items_size>) into launch vehicle fairings (<bin_size>) without knowing subsequent payload dimensions. Each item must be precisely positioned considering length, width, and height constraints while maintaining proper weight distribution, with future experiment requirements remaining unknown until integration begins.
+Reason: <Error> at parse json 
+ {
+    'reason': 'The problem description indicates that the items (irregularly shaped scientific instruments and satellites) and bins (launch vehicle fairings) have three dimensions: length, width, and height. Additionally, it is mentioned that the future payload dimensions are unknown until integration begins, which aligns with an online scenario where items arrive sequentially without prior knowledge of their dimensions. The need for precise positioning considering all three dimensions while maintaining proper weight distribution further confirms the 3D nature of the problem. Since there's no explicit mention of the possibility to rotate the items, we assume rotation is not allowed.',
+    'result': '3DONBPP'
+} 
+
+--------------------------------------------------------------------------------
+Label: 2DOFBPPR, Predicted: <Error> at level 0, Index: 48
+Description: Data centers require optimal arrangement of rectangular server rack footprints of size <items_size> within constrained floor grids of size <bin_size>. Rotation capability allows flexible positioning to maximize capacity while maintaining cooling corridors. Only planar dimensions are relevant.
+Reason: <Error> at parse json 
+ {
+    'reason': 'The problem described involves fitting a set of items (server racks) into a constrained space (floor grids) in an optimal way, which aligns with the Bin Packing Problem. The goal here is to maximize the utilization of the space, akin to minimizing the number of bins used while ensuring all items are placed. The ability to rotate server racks for better fit further supports this categorization as it's a common optimization technique in bin packing problems. This scenario does not involve routing or scheduling, making "BP" the most suitable category.',
+    'result': 'BP'
+} 
+
+--------------------------------------------------------------------------------
+Label: 3DOFBPP, Predicted: 3DONBPP, Index: 22
+Description: A large bookstore warehouse needs to pack books of all sizes, from hardcover editions to slim paperbacks, into reusable shipping boxes with predefined capacity <bin_size>. With stacks arriving in random distributions <items_size>, the staff must devise tight packing strategies to reduce the number of shipments, protecting books from shifting while maximizing space efficiency.
+Reason: The problem describes the need to pack books of various sizes into shipping boxes, which implies that we are dealing with 3D items (length, width, and height). The stacks of books arrive in random distributions, indicating an online scenario where the dimensions of upcoming items are unknown when placing the current item. Since there is no mention of the ability to rotate the books during packing, we assume that rotation is not allowed. Therefore, the most appropriate variant is 3D Online Bin Packing Problem without rotation.
+--------------------------------------------------------------------------------
+Label: 3DOFBPPR, Predicted: <Error> at level 1, Index: 26
+Description: Movie sets require the transportation of bulky and irregularly shaped equipment, such as camera rigs, lighting stands, and sound booms, into specialized transport cases with defined <bin_size>. Each piece of gear has distinct <items_size> (accounting for length, width, and height), and crews must rotate items strategically to fit within case limits without damaging sensitive components. The aim is to reduce logistical costs by packing all necessary gear into the fewest cases possible.
+Reason: <Error> at parse json 
+ {
+    'reason': 'The problem description indicates that the items (camera rigs, lighting stands, sound booms) have distinct sizes accounting for length, width, and height, which makes it a 3D problem. Additionally, the description mentions that crews must rotate items strategically to fit within case limits, indicating that rotation is allowed. Since all necessary gear is packed into the fewest cases possible, and there's no mention of items arriving sequentially or their dimensions being unknown when placing them, this suggests an offline scenario where all item dimensions are known beforehand. Therefore, the most fitting variant is the 3D Offline Rotatable Bin Packing Problem.',
+    'result': '3DOFBPPR'
+} 
+
+--------------------------------------------------------------------------------
+Label: 3DONBPP, Predicted: <Error> at level 0, Index: 1
+Description: On active construction sites, building materials such as bricks, pipes, and timber (<items_size>) are delivered in real time and must be stored in standardized storage containers (<bin_size>) to protect them from weather damage. Workers cannot predict future item dimensions and must pack each material upon arrival, optimizing container usage while respecting their length, width, and height constraints.
+Reason: <Error> at parse json 
+ {
+    'reason': 'The problem involves fitting a set of items (building materials) into standardized storage containers, with the goal of optimizing the usage of these containers. This aligns closely with the Bin Packing Problem (BP), where the objective is to minimize the total number of bins (in this case, storage containers) used while ensuring all items are packed according to their dimensions and the container's constraints.',
+    'result': 'BP'
+} 
+
+--------------------------------------------------------------------------------
+Label: 2DONBPP, Predicted: <Error> at level 0, Index: 8
+Description: Cardboard packaging trays (<bin_size>) must hold various rectangular tech accessories (<items_size>) like chargers or cables as orders arrive sequentially. Each item must be positioned immediately without knowledge of future products' dimensions. The objective is to use the minimal number of trays while arranging based purely on item and tray length and width.
+Reason: <Error> at parse json 
+ {
+    'reason': 'The problem involves fitting a set of items (tech accessories) into a set of containers (cardboard packaging trays) with the objective of minimizing the number of containers used. This matches the definition of the Bin Packing Problem (BP), where the goal is to minimize the total number of bins (trays) while accommodating all items. The sequential nature of item arrival and the need to place each item immediately without knowledge of future items' sizes further aligns with the dynamic or online version of the Bin Packing Problem.',
+    'result': 'BP'
+} 
+
+--------------------------------------------------------------------------------
+Label: 3DOFBPP, Predicted: 3DONBPP, Index: 95
+Description: A Hollywood production company needs to move countless props, from fake antique furniture to life-sized sculptures, between filming locations using specially outfitted trailers <bin_size>. Each irregularly shaped prop has unique dimensions and fragility requirements <items_size>, demanding innovative packing techniques to prevent damage during cross-country travel while accommodating last-minute itinerary changes.
+Reason: The problem description involves moving 3D props with unique dimensions and fragility requirements, indicating that the items and bins are three-dimensional. Additionally, since the company needs to accommodate last-minute itinerary changes, it suggests an online scenario where the dimensions of items not yet placed are unknown when placing the current item. There is no explicit mention that the objects can be rotated, so we assume they cannot. Thus, the 3D Online Bin Packing Problem (3DONBPP) is the most appropriate variant.
+--------------------------------------------------------------------------------
+Label: 2DONBPP, Predicted: <Error> at level 0, Index: 36
+Description: Renewable energy planners allocate rectangular solar panel clusters (<items_size>) to rectangular land plots (<bin_size>). Each cluster's dimensions become known sequentially during planning and must be placed immediately without future cluster information, demanding strategic land use optimization considering only the lengths and widths of clusters and plots.
+Reason: <Error> at parse json 
+ {
+    'reason': 'The problem involves allocating items (solar panel clusters) of varying sizes into fixed bins (land plots) with the goal of optimizing the use of space. This matches the definition of a Bin Packing Problem, where the objective is to minimize the number of bins used while fitting all items. The sequential nature of the cluster's dimensions becoming known and the need for immediate placement without future information also aligns well with online versions of the bin packing problem.',
+    'result': 'BP'
+} 
+
+--------------------------------------------------------------------------------
+Label: 2DOFBPP, Predicted: 2DOFBPPR, Index: 9
+Description: Contractors must fit ceramic tiles (<items_size>) onto rectangular floor areas (<bin_size>) in residential or commercial projects. The challenge is to calculate the optimal tile arrangement, considering only their length and width, to minimize cutting waste, reduce material costs, and ensure a symmetrical or pattern-aligned finish that meets aesthetic and functional requirements.
+Reason: The problem description involves placing 2D items (ceramic tiles) with only length and width into 2D bins (rectangular floor areas) also defined by length and width. The aim is to minimize cutting waste, which implies an offline setting where all tile sizes are known in advance. The description does not explicitly state that the tiles can be rotated, but it emphasizes minimizing waste and achieving a symmetrical or pattern-aligned finish, suggesting that rotation might be allowed to achieve these goals. Therefore, the 2D Offline Rotatable Bin Packing Problem (2DOFBPPR) seems most appropriate as it allows for the optimization of space through rotation, thus potentially reducing waste and meeting aesthetic requirements.
+--------------------------------------------------------------------------------
+Label: 3DONBPP, Predicted: 3DONBPPR, Index: 57
+Description: Zoos require careful organization when storing diverse food shipments (hay bales, frozen meats, or bulk produce) (<items_size>) into climate-controlled storage rooms (<bin_size>). Deliveries arrive unpredictably, with dimensional details unknown until unloading. Staff must arrange items immediately, considering 3D orientation and perishability while maximizing space efficiency prioritizing access without unnecessary room occupation.
+Reason: The problem description mentions that the zoo staff must organize 3D items (hay bales, frozen meats, or bulk produce) into climate-controlled storage rooms. These items have length, width, and height, indicating a 3D problem. Additionally, it is specified that deliveries arrive unpredictably, with dimensional details unknown until unloading, which aligns with an online scenario where item dimensions are not known in advance. Lastly, the requirement to consider 3D orientation suggests that rotating items during placement is allowed to maximize space efficiency.
+--------------------------------------------------------------------------------
+Label: 3DOFBPP, Predicted: 3DOFBPPR, Index: 10
+Description: Marine scientists preparing for months-long voyages must fit specialized equipment like sonar arrays, water samplers, and submarine drones into research vessel holds with strict dimension limits <bin_size>. The fragile instruments <items_size> require custom positioning that prevents ocean movement damage while accommodating maximal scientific payload for comprehensive data collection.
+Reason: The problem description indicates that the marine scientists need to fit 3D items (sonar arrays, water samplers, and submarine drones) into a 3D space (research vessel holds) with strict dimension limits. The need for custom positioning of these fragile instruments suggests that the orientation or rotation of items is a critical factor to prevent damage. Since all the equipment and their dimensions are known in advance before the voyage, this points towards an offline scenario where the full set of items is known before the packing process begins. Therefore, the most appropriate variant is the 3D Offline Rotatable Bin Packing Problem, which allows for the rotation of items during placement to find the best fit while preventing damage from ocean movement.
+--------------------------------------------------------------------------------
+Label: 2DOFBPP, Predicted: 2DOFBPPR, Index: 36
+Description: Furniture upholsterers work with large fabric sheets (<bin_size>) to cut covers (<items_size>) for sofas, chairs, and cushions, aiming to minimize fabric waste. The challenge involves placing all required cutouts efficiently on the fabric sheet, considering only length and width, while considering pattern alignment and material constraints to reduce costs and improve sustainability.
+Reason: The problem description specifies that the task involves placing 2D items (fabric covers) onto a 2D sheet (fabric) with only length and width considered. It also mentions the need for pattern alignment, which suggests that rotation of items may be necessary to fit the patterns correctly, even though it is not explicitly stated. Since all items are known beforehand (offline), and considering the potential necessity for rotation to align patterns, the most suitable variant is 2DOFBPPR.
+--------------------------------------------------------------------------------
+Label: 3DOFBPP, Predicted: <Error> at level 1, Index: 44
+Description: An IoT device manufacturer needs to optimize shipping for thousands of smart home hubs, security systems, and automated appliances <items_size> into branded retail-ready containers <bin_size> destined for chain stores globally. The focus lies on constructing stable product stacks that maximize container capacity without compromising the pristine presentation expected for premium electronics display.
+Reason: <Error> at parse json 
+ {
+    'reason': 'The problem description involves optimizing the shipping of 3D items (smart home hubs, security systems, and automated appliances) into 3D containers (branded retail-ready containers). The focus is on constructing stable product stacks, which implies that the orientation and stacking of items are important. Since the problem does not specify that the items can be rotated, and all items' dimensions are known in advance (as they are being prepared for shipping), this fits the 3DOFBPP variant, where 3D items are placed into 3D bins without rotation.',
+    'result': '3DOFBPP'
+} 
+
+--------------------------------------------------------------------------------
+Label: 3DOFBPPR, Predicted: <Error> at level 0, Index: 66
+Description: Carbon fiber body panels, alloy wheels, and upholstered seats must arrive unscathed at assembly lines, packed into specialized <bin_size> (length, width, and height) trolleys. Irregular <items_size> (length, width, and height) parts are rotated to prevent scratches - contoured panels nest diagonally beside bundled wiring harnesses. Precision matters to avoid damage during just-in-time deliveries.
+Reason: <Error> at parse json 
+ {
+    'reason': 'The problem involves fitting items of various sizes (carbon fiber body panels, alloy wheels, upholstered seats) into specialized trolleys with specific dimensions. The goal is to ensure that these items are packed in a way that prevents damage, which aligns closely with the Bin Packing Problem where the objective is to minimize the number of bins (in this case, trolleys) used while ensuring all items fit properly without exceeding the bin's capacity or causing damage. The aspect of rotating and positioning items to avoid scratches and optimize space usage further supports this classification.',
+    'result': 'BP'
+} 
+
+--------------------------------------------------------------------------------
+Label: 2DOFBPPR, Predicted: <Error> at level 1, Index: 80
+Description: Manufacturing aircraft interior panels requires cutting lightweight composite boards of size <bin_size> into seat backs, overhead bins, and sidewall covers of dimensions <items_size>. The challenge lies in minimizing raw material costs by efficiently packing components with 90-degree rotation flexibility, considering only their length and width, as thickness is determined separately during manufacturing.
+Reason: <Error> at parse json 
+ {
+    'reason': 'The problem description specifies that the manufacturing process involves cutting lightweight composite boards into various components, focusing on minimizing raw material costs. It explicitly mentions that items can be rotated by 90 degrees during the packing process to optimize space usage. Since the problem only considers length and width (thus, it is a 2D problem) and allows for rotation of items, the most appropriate variant is the 2D Offline Rotatable Bin Packing Problem (2DOFBPPR). The offline nature of the problem is implied as all items' dimensions are known before the packing process begins, making 2DONBPP and 2DONBPPR, which involve sequential item arrival, unsuitable.',
+    'result': '2DOFBPPR'
+} 
+
+--------------------------------------------------------------------------------
+Label: 3DOFBPP, Predicted: 3DOFBPPR, Index: 92
+Description: Farming cooperatives need to move freshly picked produce like melons, squash, and pumpkins from fields to processing facilities using vented crop trailers <bin_size>. Irregularly shaped harvest batches <items_size> must be arranged to prevent bruising during transit while maximizing each truckload's economic value within narrow post-harvest freshness windows.
+Reason: The problem involves packing irregularly shaped 3D items (melons, squash, and pumpkins) into 3D bins (vented crop trailers), which suggests a 3D bin packing problem. Since the produce is described as "irregularly shaped" and must be arranged to prevent bruising, it implies that the orientation of the items in the trailer could be important, making rotation a relevant factor for optimal packing. However, there is no indication that the items will arrive sequentially without prior knowledge of their dimensions, thus an offline (as opposed to online) variant is more appropriate. Therefore, the 3D Offline Rotatable Bin Packing Problem (3DOFBPPR) is the most fitting variant.
+--------------------------------------------------------------------------------
+Label: 3DONBPPR, Predicted: <Error> at level 0, Index: 93
+Description: Prestigious auction houses transport valuable sculptures and installations between global locations using advanced security vaults with internal dimensions <bin_size>. Each artwork has unique protective casings with dimensions <items_size> that arrive unpredictably at loading stations, requiring immediate placement without knowing subsequent pieces' requirements. Art handlers can carefully rotate cases in three dimensions (length, width, height) to protect fragile contents while optimizing the vault's premium security space. The high insurance costs demand maximizing vault capacity utilization across each transport leg without ever compromising artwork safety.
+Reason: <Error> at parse json 
+ {
+    'reason': 'The problem described involves fitting various items (artworks with unique protective casings) into a fixed space (security vaults) in the most efficient way possible, without exceeding the capacity of the bins (vaults). The goal is to maximize the utilization of the vault's space while ensuring all items are safely accommodated. This directly aligns with the Bin Packing Problem (BP), where the objective is to minimize the number of bins (or in this case, optimize the use of each bin) used to pack a set of items. Neither the Vehicle Routing Problem (VRP) nor the Scheduling Problem (SP) fit as well, since VRP deals with optimizing routes for delivery and SP focuses on scheduling tasks over time or machines, neither of which are the primary concerns in the given scenario.',
+    'result': 'BP'
+} 
+
+--------------------------------------------------------------------------------
+Label: 3DONBPPR, Predicted: <Error> at level 0, Index: 56
+Description: Entertainment engineering teams must transport delicate robotic show elements between theme park venues using customized shock-proof transit cases with dimensions <bin_size>. Servo mechanisms, sensor arrays, and cosmetic shells of varying sizes <items_size> arrive for packing without knowledge of subsequent system components requiring transport. Each expensive animatronic piece can be rotated in three dimensions to isolate sensitive machinery from vibrations during transit while maximizing case utilization between shows needing last-minute equipment swaps.
+Reason: <Error> at parse json 
+ {
+    'reason': 'The problem involves fitting items of varying sizes into containers (transit cases) with specific dimensions, aiming to utilize the space as efficiently as possible. This directly aligns with the Bin Packing Problem, where the goal is to minimize the total number of bins (or in this case, transit cases) used while ensuring all items are packed. The need for rotating items to fit better and the lack of prior knowledge about the items' sizes further emphasize the complexity and dynamic nature of a bin packing challenge, rather than vehicle routing or scheduling.',
+    'result': 'BP'
+} 
+
+--------------------------------------------------------------------------------
+Label: 3DOFBPPR, Predicted: <Error> at level 1, Index: 21
+Description: Bottling plants need to pack glass bottles, cans, and crate packs of different <items_size> (length, width, height) into delivery trucks with fixed <bin_size> cargo compartments. Containers can be rotated horizontally to maximize pallet space, but fragile glass requires stable base support. The challenge is to load mixed beverage orders from slender wine bottles to wide jugs into trucks with minimal wasted airspace while preventing breakage during transport.
+Reason: <Error> at parse json 
+ {
+    'reason': 'The problem description involves packing 3D items (glass bottles, cans, and crate packs) with dimensions of length, width, and height into 3D bins (delivery trucks). It is also mentioned that the containers can be rotated horizontally to maximize space, indicating rotation is allowed. There is no indication that the items arrive sequentially or that the future items' sizes are unknown at the time of placement, which suggests this is an offline problem where all item sizes are known beforehand.',
+    'result': '3DOFBPPR'
+} 
+
+--------------------------------------------------------------------------------
+Label: 2DOFBPP, Predicted: 2DOFBPPR, Index: 69
+Description: Aircraft manufacturing requires precise cutting of advanced composite sheets (<bin_size>) into reinforced wing rib components (<items_size>). Engineers must position all necessary rib profiles on each sheet, accounting only for length and width measurements, to minimize expensive material waste. The challenge involves arranging complex polygonal shapes while respecting material grain directions and structural load requirements for each aerospace-grade component.
+Reason: The problem description specifies that the cutting involves 2D components (length and width) from composite sheets, which matches a 2D bin packing problem. The requirement to account for material grain directions and structural load requirements suggests that the orientation (rotation) of the components on the sheet is important, indicating a rotatable bin packing problem. Since all rib profiles are known and must be positioned on each sheet, this aligns with an offline scenario where all items are known before the packing process begins.
+--------------------------------------------------------------------------------
+Label: 2DOFBPPR, Predicted: <Error> at level 1, Index: 84
+Description: In modern office design, large modular panels of size <bin_size> are used to create flexible workspaces, requiring precise cutting of smaller decorative and functional elements like glass inserts, wiring channels, and mounting brackets with dimensions <items_size>. The goal is to maximize material efficiency by optimally arranging all elements on each panel while permitting 90-degree rotations to minimize waste, considering only length and width as thickness remains standardized across components.
+Reason: <Error> at parse json 
+ {
+    'reason': 'The problem description specifies that the task involves arranging 2D items (length and width) on 2D panels, with the allowance for 90-degree rotations to minimize waste. This aligns with the 2D Offline Rotatable Bin Packing Problem (2DOFBPPR), as it allows for optimizing the arrangement of all known elements on each panel while considering rotation to improve material efficiency. The scenario does not mention any sequential arrival of items or the need to handle unknown future items, which rules out the online variants. Additionally, since the problem is focused on length and width, and thickness is standardized (implying it's not a varying dimension), this points towards a 2D rather than a 3D problem.',
+    'result': '2DOFBPPR'
+} 
+
+--------------------------------------------------------------------------------
+Label: 3DOFBPPR, Predicted: <Error> at level 1, Index: 88
+Description: Scientists transporting seismic sensors, gas analyzers, and ruggedized drones to volcanic sites must utilize reinforced storage containers with strict <bin_size> (length, width, and height). The gear has diverse <items_size> (length, width, and height), and each piece can be rotated for placement to ensure stability during rugged transit. The goal is to pack all fragile equipment securely within the fewest containers while preventing shifting or collisions that could damage sensitive instruments.
+Reason: <Error> at parse json 
+ {
+    'reason': 'The problem description specifies that the items (seismic sensors, gas analyzers, and ruggedized drones) have diverse sizes in three dimensions (length, width, and height) and can be rotated for optimal placement. The goal is to pack these 3D items into 3D containers with strict size constraints, ensuring stability and minimizing the number of containers used. Since all items' dimensions are known beforehand and they can be rotated, this scenario best fits the "3DOFBPPR" variant, which stands for 3D Offline Rotatable Bin Packing Problem.',
+    'result': '3DOFBPPR'
+} 
+
+--------------------------------------------------------------------------------
+Label: 3DOFBPPR, Predicted: <Error> at level 1, Index: 2
+Description: A car manufacturer must store spare parts engine blocks, bumpers, and exhaust pipes in industrial shelving units with predefined <bin_size>. The irregularly shaped parts vary greatly in <items_size> and can be rotated in any orientation to maximize storage efficiency. The challenge lies in arranging oversized and oddly angled parts within the shelves while minimizing unused space and ensuring easy retrieval.
+Reason: <Error> at parse json 
+ {
+    'reason': 'The problem involves storing 3D items (engine blocks, bumpers, and exhaust pipes) in 3D bins (industrial shelving units). The user specifies that the parts are irregularly shaped, can vary greatly in size, and can be rotated to maximize storage efficiency. This indicates a 3D offline scenario where rotation of items is allowed, but there's no mention of items arriving sequentially or dimensions being unknown for future items, which rules out the online variants.',
+    'result': '3DOFBPPR'
+} 
+
+--------------------------------------------------------------------------------
+Label: 2DOFBPP, Predicted: <Error> at level 1, Index: 70
+Description: In the production of scale model vehicles, large sheets of die-cast metal (<bin_size>) must be stamped with numerous pre-designed vehicle parts (<items_size>) such as doors, hoods, and chassis components. The goal is to fit as many parts as possible onto each metal sheet considering only their length and width, ensuring maximal material usage while maintaining proper spacing for clean stamping and minimal waste in this high-precision manufacturing process.
+Reason: <Error> at parse json 
+ {
+    'reason': 'The problem describes a scenario where 2D items (vehicle parts) need to be placed on 2D sheets (die-cast metal). The goal is to maximize the material usage, which aligns with a bin packing problem. Since the description does not mention that the parts can be rotated and there's no indication that the items arrive sequentially without prior knowledge of their dimensions, the most appropriate variant is the 2D Offline Bin Packing Problem (2DOFBPP).',
+    'result': '2DOFBPP'
+} 
+
+--------------------------------------------------------------------------------
+Label: 3DOFBPPR, Predicted: <Error> at level 1, Index: 82
+Description: Alpine rescue teams prep crevassd kits, avalanche transceivers, and modular stretchers into lightweight drop pods with fixed <bin_size> (length, width, height) for helicopter missions.Emergency gear varies from coiled ropes to hexagonal medical panels with distinct <items_size> (length, width, height), all rotatable tto withstand high-altitude drops.The extreme conditions demand maximal equipment per pod, where optimal packing directly impacts survival rates in frozen wilderness rescues.
+Reason: <Error> at parse json 
+ {
+    'reason': 'The problem description mentions that the items (emergency gear) have distinct sizes in terms of length, width, and height, indicating a 3D packing problem. Additionally, it is stated that all items are rotatable to withstand high-altitude drops, which aligns with the "Rotatable" variant. There's no indication that the items arrive sequentially or that their dimensions are unknown at the time of placement, suggesting an offline rather than an online problem. Therefore, the most appropriate specific variant is the 3D Offline Rotatable Bin Packing Problem.',
+    'result': '3DOFBPPR'
+} 
+
+--------------------------------------------------------------------------------
+Label: 3DOFBPPR, Predicted: <Error> at level 0, Index: 27
+Description: Cultural institutions face the challenge of transporting priceless artifacts, like sculptures, vases, and framed paintings, into custom-built storage crates with strict <bin_size>. These artifacts vary dramatically in <items_size> (factoring in length, width, and height), and each item must be positioned carefully potentially rotated to avoid stress or vibration damage during transit. The goal is to minimize the number of crates used while ensuring total protection during relocation.
+Reason: <Error> at parse json 
+ {
+    'reason': 'The problem involves fitting a set of items, each with its own dimensions, into custom-built storage crates (bins) with the goal of minimizing the number of crates used. This directly aligns with the Bin Packing Problem (BP), where the objective is to minimize the total number of bins (crates in this case) used while ensuring all items are placed without exceeding the bin's capacity or, in this scenario, without causing damage to the artifacts.',
+    'result': 'BP'
+} 
+
+--------------------------------------------------------------------------------
+Label: 2DOFBPP, Predicted: 2DOFBPPR, Index: 75
+Description: Museums often need to arrange precious artifacts of varying dimensions (<items_size>) within standardized display cases (<bin_size>), carefully considering only the length and width of each item to prevent damage while maximizing space utilization. The challenge lies in strategically placing irregularly shaped historical objects to create visually appealing exhibits while minimizing unused space, requiring meticulous attention to spacing and orientation constraints.
+Reason: The problem description specifies that the artifacts are of varying dimensions but only considers length and width, indicating a 2D problem. It also mentions the need to strategically place irregularly shaped objects with careful attention to spacing and orientation, which implies that rotating items could be beneficial for maximizing space utilization. However, there is no explicit mention of items arriving sequentially or the unknown dimensions of future items, suggesting an offline (non-sequential) scenario.
+--------------------------------------------------------------------------------
+Label: 3DOFBPP, Predicted: <Error> at level 1, Index: 13
+Description: A marine research team must pack fragile sensors, diving gear, and sample containers into research vessels with limited cargo holds <bin_size>. The scientific equipment comes in irregular configurations and sizes <items_size>, and the priority is to utilize every cubic inch efficiently while protecting gear from saltwater exposure and rough sea conditions.
+Reason: <Error> at parse json 
+ {
+    'reason': 'The problem description indicates that the marine research team needs to pack items, including fragile sensors, diving gear, and sample containers, into the cargo holds of research vessels. These items come in irregular configurations and sizes, which implies a 3D space (length, width, and height) for both the items and the bins. Since there is no mention of items arriving sequentially or the ability to rotate items, the most appropriate variant is the 3D Offline Bin Packing Problem, where all items' dimensions are known in advance, and the objective is to efficiently utilize the space without the consideration of rotation.',
+    'result': '3DOFBPP'
+} 
+
+--------------------------------------------------------------------------------
+Label: 3DONBPP, Predicted: 3DONBPPR, Index: 93
+Description: Marine biologists transporting delicate coral specimens (<items_size>) in custom-designed water containers (<bin_size>) must carefully arrange each irregularly shaped colony in 3D space during reef conservation projects. The specimens arrive one by one with unpredictable dimensions (length, width, height), requiring real-time packing decisions that protect fragile coral structures while maximizing container capacity usage.
+Reason: The problem description specifies that the coral specimens are irregularly shaped and have unpredictable dimensions (length, width, height), which indicates a 3D problem. Since the items arrive one by one with their dimensions unknown beforehand, this fits an online scenario. Additionally, given the need to carefully arrange each colony in 3D space to protect them, it implies that rotation might be necessary for optimal packing, even though it is not explicitly stated. Therefore, the most fitting variant is the 3D Online Rotatable Bin Packing Problem.
+--------------------------------------------------------------------------------
+Label: 3DOFBPP, Predicted: <Error> at level 1, Index: 48
+Description: A theme park's merchandise department needs to arrange towering plush toys, framed posters and oversized souvenir cups within restricted backroom shelving units <bin_size>. The seasonal influx of irregularly shaped prizes <items_size> demands creative stacking solutions to prevent damage while keeping popular items readily available for carnival game stations.
+Reason: <Error> at parse json 
+ {
+    'reason': 'The problem involves arranging 3D items (towering plush toys, framed posters, and oversized souvenir cups) within 3D bins (restricted backroom shelving units). The items are described as having irregular shapes, which implies they have length, width, and height. There is no explicit mention of the possibility to rotate the items, so we assume rotation is not allowed. Since the seasonal influx of prizes demands creative stacking solutions, it suggests that the items' dimensions are known in advance for planning purposes, indicating an offline scenario.',
+    'result': '3DOFBPP'
+} 
+
+--------------------------------------------------------------------------------
+Label: 3DONBPP, Predicted: 3DONBPPR, Index: 69
+Description: Warehousing diverse spools of filament, resin tanks, and industrial powder packages (<items_size>) presents challenges in organizing them within designated 3D storage cubicles (<bin_size>). Materials arrive in random sizes without prior notice, complicating real-time cubicle assignments. The warehouse must maximize space efficiency by dynamically placing each item's length, width, and height dimensions into appropriate slots, reducing unused gaps while ensuring fragile materials aren't compromised. The goal is to store all materials using fewer cubicles while maintaining accessibility.
+Reason: The problem involves organizing 3D items (spools of filament, resin tanks, and industrial powder packages) that have length, width, and height dimensions into 3D storage cubicles. The items arrive in random sizes without prior notice, which indicates an online scenario where the dimensions of upcoming items are unknown when making placement decisions. Additionally, the requirement to maximize space efficiency and reduce unused gaps suggests that rotating the items for a better fit might be beneficial, although it is not explicitly stated that rotation is allowed or necessary. Given these factors, and assuming rotation could be a useful strategy, the most appropriate variant is the 3D Online Rotatable Bin Packing Problem.
+--------------------------------------------------------------------------------
+Label: 3DONBPPR, Predicted: <Error> at level 1, Index: 49
+Description: During high-intensity electric car races, pit crews must organize rapidly interchangeable battery packs, cooling systems, and repair tools into modular wheeled drawers with dimensions <bin_size>. Components of varying dimensions <items_size> arrive at the garage in real-time between sessions, requiring immediate packing without subsequent item information. All parts can be reoriented in 3D space (length/width/height) to create instant-access configurations that minimize drawer units while maintaining critical quick-change capabilities under time pressure.
+Reason: <Error> at parse json 
+ {
+    'reason': 'The problem description mentions that components of varying dimensions, including length, width, and height, need to be packed into modular wheeled drawers (bins) with their own 3D dimensions. It also states that all parts can be reoriented in 3D space, indicating that items can be rotated during placement. Additionally, the requirement for immediate packing without subsequent item information suggests an online scenario where items arrive sequentially, and the future items' dimensions are unknown at the time of placing the current item. This aligns perfectly with the 3DONBPPR variant, which allows for 3D rotatable bin packing in an online setting.',
+    'result': '3DONBPPR'
+} 
+
+--------------------------------------------------------------------------------
+Label: 3DONBPP, Predicted: 3DONBPPR, Index: 31
+Description: During film productions, cameras, lighting rigs, and audio gear (<items_size>) are transported between shooting locations in specialized ruggedized cases (<bin_size>). Since equipment is packed on-set without prior knowledge of dimensions, each piece must be optimally oriented in 3D space (considering length, width, and height) to minimize the number of cases used while preserving the safety of expensive gear. Fast yet efficient packing is crucial to maintain tight shooting schedules.
+Reason: The problem description indicates that the items (cameras, lighting rigs, and audio gear) are 3D in nature, as it mentions considering length, width, and height for optimal orientation. Additionally, since the equipment is packed on-set without prior knowledge of dimensions, this suggests an online scenario where the dimensions of subsequent items to be placed are unknown at the time of packing the current item. The user also emphasizes the need to optimally orient each piece in 3D space, which implies rotation is allowed to minimize the number of cases used. Therefore, the 3D Online Rotatable Bin Packing Problem (3DONBPPR) is the most appropriate variant.
+--------------------------------------------------------------------------------
+Label: 2DOFBPP, Predicted: <Error> at level 0, Index: 64
+Description: When designing modular display platforms (<bin_size>) for rotating museum exhibits, conservators must arrange fragile artifacts (<items_size>) of varying rectangular footprints from pottery shards to framed paintings without exceeding weight distribution limits. The 2D optimization requires positioning all items within the platform boundaries considering only their length and width, while maintaining mandatory clearance gaps for humidity control devices.
+Reason: <Error> at parse json 
+ {
+    'reason': 'The problem involves fitting a set of items (artifacts) with varying sizes (rectangular footprints) into fixed spaces (modular display platforms) while considering constraints such as weight distribution and clearance gaps. This is most similar to the Bin Packing Problem, where the objective is to efficiently allocate space within bins (in this case, display platforms) for all given items without exceeding the bin's capacity or violating specific placement rules.',
+    'result': 'BP'
+} 
+
+--------------------------------------------------------------------------------
+Label: 2DOFBPPR, Predicted: <Error> at level 0, Index: 74
+Description: In an art gallery, exhibition walls of size <bin_size> need to be optimally filled with rectangular paintings of varying dimensions <items_size>, ensuring minimal empty space and aesthetically pleasing arrangements. Each painting can be rotated 90 degrees to achieve better alignment and balance, while only its length and width are considered for placement, as frame thickness is uniform and irrelevant to the spatial layout.
+Reason: <Error> at parse json 
+ {
+    'reason': 'The problem described involves fitting a set of items (rectangular paintings) into fixed spaces (exhibition walls) with the goal of minimizing empty space. This closely aligns with the Bin Packing Problem (BP), where the objective is to minimize the total number of bins (or in this case, the unused space within the given bin/wall size) used while placing all the items. The ability to rotate the paintings 90 degrees for better fit further supports this categorization, as it's a common consideration in bin packing problems to optimize space usage.',
+    'result': 'BP'
+} 
+
+--------------------------------------------------------------------------------
+Label: 2DOFBPPR, Predicted: <Error> at level 1, Index: 85
+Description: Commercial greenhouses use expansive shade cloth rolls measuring <bin_size> that must be cut into rectangular sections with dimensions <items_size> to precisely cover various greenhouse frames while accounting for ventilation gaps. Rotations are permitted to accommodate irregular frame geometries, optimizing cloth utilization by reducing trim loss, with all calculations based solely on the two-dimensional measurements of both rolls and required sections.
+Reason: <Error> at parse json 
+ {
+    'reason': 'The problem description specifies that the shade cloth sections (items) can be rotated to fit into the greenhouse frames (bins), and it focuses on two-dimensional measurements for both the items and the bins. Since all calculations are based on 2D measurements, and rotations are allowed to optimize the use of the cloth, this best matches the 2D Offline Rotatable Bin Packing Problem (2DOFBPPR). The "offline" nature is implied as the user's description does not indicate that the items arrive sequentially or that their dimensions are unknown when making placement decisions.',
+    'result': '2DOFBPPR'
+} 
+
+--------------------------------------------------------------------------------
+Label: 2DOFBPPR, Predicted: <Error> at level 0, Index: 87
+Description: Sterilization trays of dimensions <bin_size> in hospitals must accommodate various specialized surgical instruments with footprints of <items_size>, requiring optimal spatial arrangement to maintain sterilization protocols while ensuring quick access. Instruments may be rotated to compact layout configuration, with only length and width considerations as instrument heights fall within standardized clearance requirements of the tray design spec.
+Reason: <Error> at parse json 
+ {
+    'reason': 'The problem involves placing various surgical instruments (items) into sterilization trays (bins) with the goal of optimizing the spatial arrangement, which aligns with minimizing the number of bins used or efficiently using the available space. This is a typical characteristic of the Bin Packing Problem, where the focus is on fitting items into containers as efficiently as possible without exceeding the container's capacity, and in this case, also considering the orientation of the items to achieve the best fit.',
+    'result': 'BP'
+} 
+
+--------------------------------------------------------------------------------
+Label: 3DONBPPR, Predicted: 2DONBPPR, Index: 99
+Description: Hospitals need to organize medical equipment and supplies <items_size> into storage rooms <bin_size> as they arrive from suppliers throughout the day. Staff must place each item individually, rotating when necessary, without knowing what will arrive next. The objective is to maximize storage space efficiency to ensure critical supplies are accessible while minimizing clutter in limited storage areas.
+Reason: The problem description indicates that the medical equipment and supplies (items) are arriving throughout the day, meaning the dimensions of future items are unknown when placing the current item, which points towards an online version of the bin packing problem. Additionally, the description mentions that staff must place each item individually, rotating when necessary, indicating that the rotation of items is allowed. Since there is no specific mention of the third dimension (height) being a critical factor in organizing the storage, it can be assumed that we are dealing with a 2D scenario. Therefore, the most appropriate variant for this situation is 2DONBPPR, which stands for 2D Online Rotatable Bin Packing Problem.
+--------------------------------------------------------------------------------
+Label: 3DONBPPR, Predicted: <Error> at level 0, Index: 6
+Description: At large-scale construction sites, materials like pipes, tiles, and insulation panels must be bundled together in weatherproof transport pallets with dimensions <bin_size> for efficient movement between storage and work areas. Workers receive items with dimensions <items_size> in an unpredictable sequence and must immediately position them on the pallet, rotating as needed (length-wise, width-wise, or height-wise) to stabilize the load, without knowing what materials will arrive next. The aim is to maximize pallet space usage while ensuring structural integrity during transport.
+Reason: <Error> at parse json 
+ {
+    'reason': 'The problem described involves fitting items of various sizes into a fixed space (the transport pallets) with the goal of maximizing the usage of that space, which aligns closely with the Bin Packing Problem (BP). The objective is to efficiently pack items into bins (pallets in this case), considering dimensions and the possibility of rotating items, without exceeding the bin's capacity. This does not fit the characteristics of a Vehicle Routing Problem or a Scheduling Problem, as it does not involve routing vehicles or scheduling tasks on machines.',
+    'result': 'BP'
+} 
+
+--------------------------------------------------------------------------------
+Label: 2DOFBPP, Predicted: 2DOFBPPR, Index: 52
+Description: Kitchen manufacturers cutting standardized boards (<bin_size>) into cabinet parts (<items_size>) face complex spatial planning where doors, shelves, and side panels of varying dimensions must be strategically placed considering only their length and width parameters. Multiple variants with specific edge profiles require careful nesting solutions to reduce material waste while accommodating production-friendly cutting paths for CNC machines in high-volume fabrication scenarios.
+Reason: The problem description specifies that the kitchen manufacturers are dealing with cutting standardized boards into cabinet parts, where only the length and width parameters of the items (doors, shelves, side panels) are considered. The scenario also mentions high-volume fabrication, which suggests an offline setting where all item dimensions are known beforehand. Additionally, the need for careful nesting solutions to reduce material waste and accommodate production-friendly cutting paths implies that rotation of items could be beneficial, even though it is not explicitly stated. Therefore, the 2D Offline Rotatable Bin Packing Problem (2DOFBPPR) seems to be the most appropriate variant, as it allows for the rotation of items during placement, which can help in optimizing the use of space and reducing waste.
+--------------------------------------------------------------------------------
+Label: 2DOFBPP, Predicted: 2DOFBPPR, Index: 72
+Description: Manufacturers cutting protective film rolls (<bin_size>) into individual screen covers (<items_size>) for various phone models face the challenge of fitting multiple differently-sized rectangles onto each roll. With only length and width dimensions considered, the optimization aims to minimize film waste between cuts while maintaining clean edges for hundreds of variants within tight production tolerances and material constraints.
+Reason: The problem description specifies a 2D scenario, as only length and width are considered for both the protective film rolls (bins) and the individual screen covers (items). The aim is to minimize waste, which is a common goal in bin packing problems. Since the description does not mention any restriction on the rotation of the items and indicates the need to fit multiple differently-sized rectangles, allowing rotation could help in minimizing waste. Additionally, the problem statement implies that all item dimensions are known beforehand, fitting the "offline" category. Therefore, the 2D Offline Rotatable Bin Packing Problem (2DOFBPPR) is the most appropriate variant.
+--------------------------------------------------------------------------------
+Label: 3DOFBPP, Predicted: 3DOFBPPR, Index: 64
+Description: A construction firm is transporting prefabricated window frames and glass panels to a skyscraper worksite using cargo elevators with strict weight and size limits <bin_size>. The components arrive in varied protective packaging with some pieces requiring vertical orientation <items_size>. The need is to fully utilize each elevator trip to avoid costly delays in the high-precision installation schedule.
+Reason: The problem description indicates that the construction firm is dealing with 3D items (prefabricated window frames and glass panels) which need to be packed into 3D bins (cargo elevators). The items have specific requirements for orientation, suggesting that rotation may be necessary to fit them optimally within the constraints of the bin size. Since all items are known in advance (the packaging and orientation needs are specified), this implies an offline scenario where the dimensions and characteristics of all items are known before the packing process begins. Therefore, the most suitable variant is one that allows for 3D packing with the possibility of rotating items.
+--------------------------------------------------------------------------------
+Label: 3DOFBPPR, Predicted: <Error> at level 1, Index: 47
+Description: High-end kitchen remodelers transport countertop segments, cabinet units, and appliance housings each with complex <items_size> (length, width, and height) in specialized trucks with loading bays of precise <bin_size> (length, width, and height). Installers must pivot components like angled range hoods vertically or horizontally to maximize load capacity per trip.
+Reason: <Error> at parse json 
+ {
+    'reason': 'The problem description mentions that the kitchen remodelers are transporting 3D items (countertop segments, cabinet units, and appliance housings) each with length, width, and height into specialized trucks (bins) that also have length, width, and height. Additionally, it is specified that components like angled range hoods can be pivoted vertically or horizontally to maximize load capacity, indicating that rotation of items is allowed. Since all items' dimensions are known in advance (there's no mention of items arriving sequentially with unknown future item sizes), this fits best as a 3D Offline Rotatable Bin Packing Problem.',
+    'result': '3DOFBPPR'
+} 
+
+--------------------------------------------------------------------------------
+
+=== Statistics ===
+Overall Accuracy: 744/800 = 0.9300
+
+Problem Type: 3DOFBPP
+Accuracy: 90/100 = 0.9000
+Top 3 Misclassifications:
+  Predicted: 3DOFBPPR, Count: 4
+  Predicted: <Error> at level 1, Count: 3
+  Predicted: 3DONBPP, Count: 2
+
+Problem Type: 2DONBPP
+Accuracy: 97/100 = 0.9700
+Top 3 Misclassifications:
+  Predicted: <Error> at level 0, Count: 2
+  Predicted: 2DONBPPR, Count: 1
+
+Problem Type: 3DOFBPPR
+Accuracy: 91/100 = 0.9100
+Top 3 Misclassifications:
+  Predicted: <Error> at level 1, Count: 6
+  Predicted: <Error> at level 0, Count: 3
+
+Problem Type: 3DONBPPR
+Accuracy: 94/100 = 0.9400
+Top 3 Misclassifications:
+  Predicted: <Error> at level 0, Count: 3
+  Predicted: 3DONBPP, Count: 1
+  Predicted: <Error> at level 1, Count: 1
+
+Problem Type: 2DOFBPP
+Accuracy: 88/100 = 0.8800
+Top 3 Misclassifications:
+  Predicted: 2DOFBPPR, Count: 8
+  Predicted: <Error> at level 1, Count: 3
+  Predicted: <Error> at level 0, Count: 1
+
+Problem Type: 3DONBPP
+Accuracy: 91/100 = 0.9100
+Top 3 Misclassifications:
+  Predicted: 3DONBPPR, Count: 7
+  Predicted: <Error> at level 1, Count: 1
+  Predicted: <Error> at level 0, Count: 1
+
+Problem Type: 2DONBPPR
+Accuracy: 100/100 = 1.0000
+Top 3 Misclassifications:
+
+Problem Type: 2DOFBPPR
+Accuracy: 93/100 = 0.9300
+Top 3 Misclassifications:
+  Predicted: <Error> at level 0, Count: 3
+  Predicted: <Error> at level 1, Count: 3
+  Predicted: 2DOFBPP, Count: 1
+================================================================================

@@ -1,0 +1,87 @@
+Label: 3DOFBPP, Predicted: 3DONBPP, Index: 59
+Description: Luxury jewelry retailers regularly rotate inventory between stores, requiring secure transport of elaborate displays and merchandise vaults within armored vehicles with strict compartment sizes <bin_size>. The valuable items range from delicate necklaces in velvet boxes to heavy safes containing precious metals <items_size>. The dual challenge is maximum value transport per vehicle while guaranteeing absolute protection against movement damage.
+Reason: The problem involves transporting 3D items (necklaces in boxes and safes with precious metals) with specific dimensions into 3D bins (compartments of armored vehicles). The description emphasizes the need for secure transport and maximum value per vehicle, which aligns with a 3D bin packing problem. There is no indication that the items can be rotated, so the non-rotatable variant is appropriate. Additionally, the problem is offline because all item dimensions are known beforehand, allowing for optimal packing decisions.
+--------------------------------------------------------------------------------
+Label: 2DOFBPPR, Predicted: 2DOFBPP, Index: 83
+Description: Municipal bench manufacturing requires cutting long aluminum extrusions of size <bin_size> into various slat lengths <items_size> for different bench models. The production team rotates cutting patterns to maximize material yield from each extrusion, dealing exclusively with length-width optimization as all slats share identical cross-sectional profiles irrelevant to the 2D layout challenge.
+Reason: The problem involves cutting aluminum extrusions (1D bins) into various slat lengths (1D items). However, since the problem is framed in terms of maximizing material yield and does not involve a third dimension or rotation, it simplifies to a 2D Offline Bin Packing Problem (2DOFBPP), where the second dimension is irrelevant to the layout challenge. The key factors are that all items and bins are defined by only one relevant dimension (length), no rotation is allowed, and all item sizes are known ahead of time (offline scenario).
+--------------------------------------------------------------------------------
+Label: 3DOFBPP, Predicted: 3DONBPP, Index: 46
+Description: A grocery chain's distribution center faces daily challenges loading perishable frozen pizzas, ice cream tubs, and ready-meal trays into refrigerated display cases with fixed compartment sizes <bin_size>. The irregularly shaped frozen products <items_size> must be arranged to minimize wasted chill space while ensuring quick restocking during busy retail hours.
+Reason: The problem involves packing irregularly shaped 3D frozen products (with length, width, and height) into refrigerated display cases with fixed compartment sizes. Since the items are described as having irregular shapes and the bins have specific dimensions in three dimensions, this is a 3D bin packing problem. Additionally, there is no mention of rotation being allowed for the items, so we default to the non-rotatable variant. The problem does not indicate that items arrive sequentially or that dimensions are unknown when placing the current item, so it is classified as an offline problem.
+--------------------------------------------------------------------------------
+Label: 3DONBPPR, Predicted: 3DONBPP, Index: 80
+Description: Pharmaceutical companies assembling portable cleanrooms from prefabricated wall panels <bin_size> must efficiently load trucks with components like air filtration units and sterile workstations measuring <items_size>. Installation teams arriving on site need immediate unpacking without rotation restrictions, requiring intelligent cargo space allocation despite unpredictable loading sequences due to manufacturing variances.
+Reason: The problem involves 3D items (with length, width, and height) such as air filtration units and sterile workstations that need to be packed into 3D bins (truck cargo spaces). The description specifies unpredictable loading sequences due to manufacturing variances, which implies an online scenario where items arrive sequentially and future item dimensions are unknown when placing the current item. Additionally, the problem explicitly states that there are no rotation restrictions, meaning items cannot be rotated during placement. Therefore, the most appropriate variant is '3DONBPP'.
+--------------------------------------------------------------------------------
+Label: 2DOFBPPR, Predicted: 2DOFBPP, Index: 70
+Description: Shoe manufacturers must cut leather hides of size <bin_size> into patterns for uppers, soles, and linings with dimensions <items_size>. The challenge is to maximize material utilization by rotating and positioning these patterns to reduce waste, ensuring minimal hides are used. Only the length and width of hides and patterns matter, as thickness is irrelevant for cutting purposes.
+Reason: The problem involves cutting 2D patterns (uppers, soles, and linings) from 2D leather hides, focusing on length and width while maximizing material utilization. There is no mention of sequential arrival of items or the need for online decision-making; thus, the problem is offline. Additionally, the description does not explicitly state that the patterns can be rotated, so we assume they cannot be rotated. Therefore, the most appropriate variant is '2DOFBPP'.
+--------------------------------------------------------------------------------
+Label: 3DOFBPP, Predicted: <Error> at level 0, Index: 83
+Description: A wholesale agricultural supplier needs to transport freshly harvested fruits and vegetables from farms to supermarkets using refrigerated trucks with specific constraints <bin_size>. The produce comes in crates, boxes, and bags of various sizes <items_size>, and must be packed carefully to avoid bruising or spoilage while ensuring optimal space usage to minimize trips and fuel costs.
+Reason: <Error> at parse json 
+ {
+    "reason": "The problem involves packing items of various sizes into bins (refrigerated trucks) with specific constraints to optimize space usage and minimize the number of trips. This aligns with the Bin Packing Problem (BP), where the goal is to minimize the number of bins used while placing all items into the bins.",
+    "result": "BP"
+}
+ 
+
+This selection focuses on the packing aspect of the problem, which is central to the user's description. While transportation is mentioned, the emphasis is on packing produce efficiently within the trucks, making 'BP' the most suitable category. 
+
+--------------------------------------------------------------------------------
+Label: 2DONBPPR, Predicted: 3DONBPPR, Index: 90
+Description: In urban gardening, raised beds of size <bin_size> are filled with rectangular soil bags of dimensions <items_size> in layered patterns to ensure proper drainage and nutrition distribution. The packing process is online, as new shipments arrive unpredictably, and future bags sizes are unknown. Each bag can be rotated to optimize space, and only length and width matter since thickness compresses under weight. The challenge is to dynamically arrange the bags to fully utilize raised bed space without knowing future orders.
+Reason: The problem involves packing rectangular soil bags (3D items with length, width, and height) into raised beds (3D bins). The packing process is online since future bag sizes are unknown at the time of placement. Additionally, the user explicitly states that bags can be rotated to optimize space. Therefore, the most appropriate variant is the 3D Online Rotatable Bin Packing Problem.
+--------------------------------------------------------------------------------
+Label: 2DOFBPP, Predicted: 2DONBPP, Index: 37
+Description: Printers handle large-format media rolls (<bin_size>) for producing multiple signs, banners, or posters (<items_size>). The objective is to arrange all graphics within the available roll space, optimizing placement to reduce media waste by considering only length and width, while avoiding overlapping designs to ensure each printed element meets quality standards.
+Reason: The problem description specifies that the graphics are to be arranged within the available roll space by considering only length and width, which indicates a 2D bin packing problem. Additionally, there is no mention of item rotation being allowed, so we default to the non-rotatable variant. The problem also appears to involve all items being known beforehand, as it focuses on optimizing placement for reducing media waste without suggesting sequential arrival of items. Thus, this corresponds to a 2D Offline Non-Rotatable Bin Packing Problem.
+--------------------------------------------------------------------------------
+Label: 3DOFBPPR, Predicted: 3DOFBPP, Index: 90
+Description: Preserved shipwreck artifacts like amphorae, cannons, and stone carvings are relocated in specialized acid-free containers with precise <bin_size> (length, width, and height). These fragile relics have irregular <items_size> (length, width, and height) and require careful rotation and positioning to avoid stress fractures. The challenge is to fit all historically significant items using the fewest transport containers while maintaining stable cushioning and protection against salinity exposure.
+Reason: The problem involves packing 3D items (with length, width, and height) into 3D bins (also with length, width, and height). The description does not mention that the items can be rotated, so we assume they cannot. Additionally, the problem is offline because all item dimensions are known beforehand, as there is no indication that items arrive sequentially without prior knowledge of their sizes. Therefore, the most appropriate variant is '3DOFBPP'.
+--------------------------------------------------------------------------------
+
+=== Statistics ===
+Overall Accuracy: 791/800 = 0.9888
+
+Problem Type: 2DOFBPP
+Accuracy: 99/100 = 0.9900
+Top 3 Misclassifications:
+  Predicted: 2DONBPP, Count: 1
+
+Problem Type: 3DONBPP
+Accuracy: 100/100 = 1.0000
+Top 3 Misclassifications:
+
+Problem Type: 3DONBPPR
+Accuracy: 99/100 = 0.9900
+Top 3 Misclassifications:
+  Predicted: 3DONBPP, Count: 1
+
+Problem Type: 2DOFBPPR
+Accuracy: 98/100 = 0.9800
+Top 3 Misclassifications:
+  Predicted: 2DOFBPP, Count: 2
+
+Problem Type: 2DONBPPR
+Accuracy: 99/100 = 0.9900
+Top 3 Misclassifications:
+  Predicted: 3DONBPPR, Count: 1
+
+Problem Type: 3DOFBPP
+Accuracy: 97/100 = 0.9700
+Top 3 Misclassifications:
+  Predicted: 3DONBPP, Count: 2
+  Predicted: <Error> at level 0, Count: 1
+
+Problem Type: 3DOFBPPR
+Accuracy: 99/100 = 0.9900
+Top 3 Misclassifications:
+  Predicted: 3DOFBPP, Count: 1
+
+Problem Type: 2DONBPP
+Accuracy: 100/100 = 1.0000
+Top 3 Misclassifications:
+================================================================================

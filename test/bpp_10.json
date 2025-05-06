@@ -1,0 +1,402 @@
+[
+    {
+        "desc_split": "In a toy manufacturing facility, workers need to pack various newly assembled toys (<items_size>) into cartons (<bin_size>) for distribution to retailers. The toys vary greatly in shape and size (e.g., dolls, action figures, and building sets), and workers must pack each item as it arrives on the conveyor belt without knowledge of future items' length, width, or height. The objective is to maximize carton space utilization while ensuring delicate components are properly protected.",
+        "label": "3DONBPP",
+        "index": 24
+    },
+    {
+        "desc_split": "Carpenters cut rectangular furniture components (<items_size>) from standard plywood sheets (<bin_size>). Each component order arrives sequentially and must be laid out on the sheet instantaneously without knowledge of future piece dimensions. The objective is to conserve plywood sheets by intelligent spatial arrangement considering solely the length and width of components and sheets.",
+        "label": "2DONBPP",
+        "index": 28
+    },
+    {
+        "desc_split": "In custom kitchen manufacturing, various cabinetry units, countertops, and appliances with varying <items_size> (length, width, and height) must be transported to installation sites in standardized delivery trucks with constrained <bin_size> (length, width, and height). Components can be rotated in any orientation to achieve optimal packing efficiency, requiring careful arrangement to prevent damage during transit while minimizing the number of truckloads needed to fulfill an order. The challenge lies in combining bulky cabinets with fragile countertop slabs within the limited spatial constraints.",
+        "label": "3DOFBPPR",
+        "index": 58
+    },
+    {
+        "desc_split": "In hospitals, surgical trays of size <bin_size> must be efficiently organized to hold various medical instruments like scalpels, forceps, and clamps, each with dimensions <items_size>. The goal is to arrange all instruments within the tray for optimal accessibility while minimizing unused space, allowing rotation of items to achieve the best fit. Only length and width are considered, as the height of instruments is standardized and does not affect the layout.",
+        "label": "2DOFBPPR",
+        "index": 69
+    },
+    {
+        "desc_split": "In modern automated grocery fulfillment centers, robots must pack varying sizes of fresh produce, canned goods, and packaged items with dimensions <items_size> into standardized plastic totes with dimensions <bin_size> for delivery to supermarkets. Each item is conveyed sequentially without prior knowledge of subsequent products, requiring dynamic packing decisions where all items can be rotated along length, width, or height axes. The system aims to maximize space efficiency in each tote while maintaining proper weight distribution for stacking.",
+        "label": "3DONBPPR",
+        "index": 35
+    },
+    {
+        "desc_split": "A defense contractor must prepare sensitive gear like communication devices, weapons, and armor plating for airlift transport in cargo planes with strict payload limits <bin_size>. The equipment has varied physical profiles and protective casings <items_size>, requiring tactical placement to minimize wasted space while adhering to weight distribution constraints and safety regulations.",
+        "label": "3DOFBPP",
+        "index": 12
+    },
+    {
+        "desc_split": "A cloud kitchen preparing bulk meals for multiple restaurants must efficiently pack various food containers, sauce bottles, and utensil kits into standardized cooling units with fixed <bin_size> (length, width, and height). The food-related items each have specific <items_size> (length, width, and height) and can be rotated horizontally or vertically to optimize space. The priority is to minimize cooling units while ensuring rapid chilling capacity. The irregular shapes of squeeze bottles and stackable containers present unique spatial challenges.",
+        "label": "3DOFBPPR",
+        "index": 10
+    },
+    {
+        "desc_split": "In a bustling beverage distribution hub, workers must efficiently load various product packages (bottles, cans, and kegs) with dimensions <items_size> into delivery trucks having standardized cargo areas with dimensions <bin_size>. Since orders arrive continuously throughout the day without advance knowledge of future deliveries, packers must intelligently arrange each item as it arrives, allowing full 360-degree rotation along length, width, and height axes to create stable stacks while maximizing space usage. The primary objective is to minimize truck dispatches by achieving optimal container utilization without compromising product safety during transit.",
+        "label": "3DONBPPR",
+        "index": 81
+    },
+    {
+        "desc_split": "During disaster response operations, medical supplies including ventilators, stretchers, and portable surgical kits need to be swiftly transported in aircraft cargo holds with fixed <bin_size> (length, width, and height). These critical items have diverse <items_size> (length, width, and height) and must be strategically rotated to utilize every inch of space, ensuring rapid deployment while meeting strict aircraft weight and balance constraints. The priority is to minimize bin usage without compromising the accessibility of lifesaving equipment.",
+        "label": "3DOFBPPR",
+        "index": 68
+    },
+    {
+        "desc_split": "Professional framers custom-cut rectangular openings with dimensions <items_size> into large mat boards of size <bin_size> to display photographs. The process is online as customer orders arrive spontaneously without knowing future cut sizes. Each window cutout can be rotated to better arrange multiple frames on a single board. The goal is to conserve mat board material by optimizing window placement while considering only length and width parameters. This requires expert spatial judgment to accommodate unknown future requests while minimizing leftover material after completing all current cuts.",
+        "label": "2DONBPPR",
+        "index": 19
+    },
+    {
+        "desc_split": "In agricultural produce export, crates of fruits or vegetables (<items_size>) with varying sizes and fragility must be loaded onto cargo containers (<bin_size>) in real time as they arrive from farms. Workers must arrange them dynamically, considering their length, width, and height to prevent bruising and spoilage while minimizing the number of containers used to cut shipping costs.",
+        "label": "3DONBPP",
+        "index": 8
+    },
+    {
+        "desc_split": "For modular sofa manufacturing, large foam blocks of size <bin_size> must be cut into cushion components (seat pads, backrests, armrest covers) with dimensions <items_size>. The production team aims to maximize material usage by strategically arranging these pieces, permitting rotation to reduce gaps between cuts. The problem considers only length and width since foam thickness is uniform across all pieces.",
+        "label": "2DOFBPPR",
+        "index": 94
+    },
+    {
+        "desc_split": "Solar farms use large rectangular plots (<bin_size>) to arrange photovoltaic arrays, where panels (<items_size>) must be positioned sequentially as they arrive from suppliers, with no prior knowledge of future panel dimensions. The objective is to minimize unused land by efficiently placing each panel based solely on its length and width, ensuring optimal use of the designated plot area.",
+        "label": "2DONBPP",
+        "index": 81
+    },
+    {
+        "desc_split": "Professional bakeries need to arrange various cookie dough pieces (<items_size>) on standardized baking trays (<bin_size>) before oven loading. The challenge is to fit all dough portions per batch onto minimal trays while preventing deformation during baking, only considering the length and width of dough shapes and tray space. Optimal arrangement directly impacts production capacity, energy efficiency, and consistent baking results.",
+        "label": "2DOFBPP",
+        "index": 71
+    },
+    {
+        "desc_split": "When preparing major exhibitions, museum staff must carefully pack priceless sculptures, framed works, and installation pieces <items_size> into climate-controlled art transit crates <bin_size> for international loans. The primary concern involves achieving perfect fits that prevent movement during transport while accommodating conservation requirements and allowing for quick installation at destination venues.",
+        "label": "3DOFBPP",
+        "index": 43
+    },
+    {
+        "desc_split": "In textile manufacturing, fabric rolls of size <bin_size> must be efficiently cut to produce various swatches of dimensions <items_size>, each representing different patterns or colors. The cutting process is online, as new swatch dimensions are revealed only when requested by clients. Each swatch can be rotated 90 degrees to maximize space utilization. The challenge is to dynamically place each swatch on the roll while minimizing waste, as future swatch sizes are unknown. Only length and width are considered, as fabric thickness is negligible for packing purposes.",
+        "label": "2DONBPPR",
+        "index": 0
+    },
+    {
+        "desc_split": "A marine design firm must fit custom-made furniture pieces, appliances, and decorative elements <items_size> into a yacht's predetermined cabin compartments <bin_size>. Weight distribution and aesthetic alignment must be optimized to meet both safety protocols and the owner's lavish specifications.",
+        "label": "3DOFBPP",
+        "index": 27
+    },
+    {
+        "desc_split": "For commercial kitchens, rectangular appliances and cutting boards of size <items_size> must be arranged on countertops of size <bin_size> to maximize workspace efficiency. Items can be rotated for better placement, and the goal is to fit all equipment with minimal wasted counter space. Only length and width are relevant, as height variations are managed individually.",
+        "label": "2DOFBPPR",
+        "index": 29
+    },
+    {
+        "desc_split": "When installing solar farms, photovoltaic panels of size <items_size> must be placed within defined land plots or mounting structures of size <bin_size>. The goal is to maximize energy output by fitting as many panels as possible while permitting rotation to adapt to space constraints. Only the length and width of the panels and the available area are relevant, as height variations are handled separately during installation.",
+        "label": "2DOFBPPR",
+        "index": 11
+    },
+    {
+        "desc_split": "Rubber gym mats of size <items_size> get die-cut from vulcanized sheets (<bin_size>) during continuous vulcanization. The automated conveyor system must allocate space for arriving mat shapes in real-time, applying arbitrary rotations to irregular hexagon-shaped workout mats without knowing subsequent cutter head patterns—optimizing sheet usage despite unpredictable production flow by treating thickness as uniform across all parts. Sensors register only planar coordinates of cutting path overlaps, eliminating three-dimensional considerations.",
+        "label": "2DONBPPR",
+        "index": 57
+    },
+    {
+        "desc_split": "///ERROR///  (Note: The output above was terminated prematurely and was clearly marked as incomplete. Please provide the complete response from the beginning)  Here is the correct complete output following your exact requirements:   In commercial printing, oversized sheets of paper with dimensions <bin_size> must accommodate multiple poster designs of sizes <items_size> to be printed simultaneously, minimizing paper waste while ensuring all designs fit perfectly. Each poster can be rotated 90 degrees to optimize space utilization, and only length and width are considered since thickness is uniform and irrelevant to the arrangement.",
+        "label": "2DOFBPPR",
+        "index": 64
+    },
+    {
+        "desc_split": "In a high-speed food processing facility, workers must efficiently package freshly prepared products (<items_size>) such as pre-cut vegetables, portioned meats, or dairy items into rigid plastic totes (<bin_size>) for distribution to grocery stores. Since the production line processes various food items with different packaging requirements (considering length, width, and height) in unpredictable sequences, the packers must optimize bin usage without knowing what items will come next on the conveyor belt.",
+        "label": "3DONBPP",
+        "index": 80
+    },
+    {
+        "desc_split": "Ice sculpture festivals require transporting numerous fragile sculptures from production studios to exhibition venues using refrigerated trucks with fixed compartments sized <bin_size>. Each sculpture has unique dimensions <items_size>, and due to the delicate nature of ice and varying completion times, sculptures must be loaded sequentially without knowledge of incoming pieces. Sculptures can be carefully rotated along their length, width, or height axes to optimize space utilization while preventing damage. The goal is to minimize transportation costs while ensuring sculptures arrive intact and properly preserved.",
+        "label": "3DONBPPR",
+        "index": 29
+    },
+    {
+        "desc_split": "Rectangular solar panels (<items_size>) must be arranged optimally on rectangular roof sections (<bin_size>). Panels arrive for installation in real-world weather conditions requiring immediate placement without knowledge of subsequent panel dimensions or positions. The challenge involves maximizing roof coverage through careful length/width-based positioning with minimal structural adaptation.",
+        "label": "2DONBPP",
+        "index": 31
+    },
+    {
+        "desc_split": "In the beverage distribution industry, workers must efficiently load bottles, cans, and kegs of varying shapes and sizes (<items_size>) into delivery trucks with fixed cargo compartments (<bin_size>). Products arrive at the loading dock in an unpredictable sequence, and workers cannot foresee the dimensions of upcoming beverages while placing the current batch. The objective is to maximize space utilization by strategically arranging items in 3D space according to their length, width, and height, while minimizing the number of delivery trucks required for all shipments.",
+        "label": "3DONBPP",
+        "index": 46
+    },
+    {
+        "desc_split": "Touring music festivals must pack collapsible stage trusses, speaker arrays, and lighting rigs with differing <items_size> (length, width, and height) into articulated trailers of set <bin_size> (length, width, and height). Technicians rotate bulky subwoofers and deployable towers to exploit every cubic inch, reducing costly extra trips between venues.",
+        "label": "3DOFBPPR",
+        "index": 48
+    },
+    {
+        "desc_split": "Smart agricultural systems place rectangular seedling pods (<items_size>) into aeroponic growth trays (<bin_size>) with exact spatial requirements. Pods are processed individually with no advance knowledge of subsequent sizes, demanding intelligent layout optimization using only length and width parameters to maximize growing capacity per tray throughout the continuous planting process.",
+        "label": "2DONBPP",
+        "index": 94
+    },
+    {
+        "desc_split": "City planners must position various recreational equipment like benches and play structures with footprint dimensions <items_size> within designated park areas of size <bin_size>. Equipment arrives sequentially in unpredictable size combinations. Each item can be rotated for better spatial harmony while maintaining safety distances between fixtures. The challenge involves dynamically arranging equipment to maximize functionality within limited green spaces. Only two-dimensional footprints are considered as vertical elements don't affect placement. This online packing problem requires adaptive design that evolves as new park features require integration.",
+        "label": "2DONBPPR",
+        "index": 43
+    },
+    {
+        "desc_split": "Artists receive commissioned canvas panels (<items_size>) that must fit onto large raw canvas rolls (<bin_size>). Each panel has to be positioned on the roll immediately without knowing future panel sizes, optimizing the roll space for minimal cutting waste while considering only their rectangular dimensions.",
+        "label": "2DONBPP",
+        "index": 14
+    },
+    {
+        "desc_split": "Maintenance crews patch damaged conveyor belts by cutting reinforcement strips (<items_size>) from larger rubber sheets (<bin_size>). The objective is to maximize sheet usage by strategically positioning all required patches without overlaps, utilizing only length and width measurements to streamline repairs and minimize downtime.",
+        "label": "2DOFBPP",
+        "index": 91
+    },
+    {
+        "desc_split": "Museum conservators need to pack delicate ancient artifacts (<items_size>) with extreme dimensional variety into custom shockproof crates (<bin_size>) for international loan exhibitions. Each artifact must be carefully positioned to prevent movement during transit without knowing what other culturally significant objects will require shipment later, requiring real-time 3D spatial optimization while preserving each item's fragile integrity.",
+        "label": "3DONBPP",
+        "index": 79
+    },
+    {
+        "desc_split": "An NGO coordinating disaster relief needs to bundle tents, poles, and medical supplies <items_size> into helicopters with strict load limitations <bin_size>. Efficient packing ensures rapid deployment of essential items, requiring strategic placement to balance weight and fully utilize the available space.",
+        "label": "3DOFBPP",
+        "index": 77
+    },
+    {
+        "desc_split": "Toy factories mold rectangular plastic sheets of size <bin_size> into various puzzle pieces with shape dimensions <items_size>. Production runs sequentially with unknown future piece requirements when placing current molds. All puzzle piece patterns can be rotated to maximize sheet utilization. The challenge involves dynamically arranging molds on each plastic sheet to optimize material usage while only accounting for the two-dimensional outline of each piece, minimizing the number of sheets needed per production batch.",
+        "label": "2DONBPPR",
+        "index": 35
+    },
+    {
+        "desc_split": "A marine research team must pack fragile sensors, diving gear, and sample containers into research vessels with limited cargo holds <bin_size>. The scientific equipment comes in irregular configurations and sizes <items_size>, and the priority is to utilize every cubic inch efficiently while protecting gear from saltwater exposure and rough sea conditions.",
+        "label": "3DOFBPP",
+        "index": 13
+    },
+    {
+        "desc_split": "When designing cable management systems for server racks, standardized metal baseplates of size <bin_size> must accommodate different cable duct sections, clip holders and cable guides with dimensions <items_size>. The engineering challenge lies in arranging all required components on each plate while permitting 90-degree rotations to maximize space efficiency. The strictly two-dimensional nature of this problem focuses solely on length and width of components and trays.",
+        "label": "2DOFBPPR",
+        "index": 54
+    },
+    {
+        "desc_split": "In commercial printing, large sheets of paper with a fixed length and width (<bin_size>) are used to print multiple posters (<items_size>) in a single run to reduce costs. The goal is to arrange all posters on the printing sheet without overlapping while maximizing the number of sheets utilized efficiently, considering only their length and width, to minimize paper waste and production expenses.",
+        "label": "2DOFBPP",
+        "index": 25
+    },
+    {
+        "desc_split": "High-end fashion retailers must efficiently pack thousands of garments with various dimensions <items_size> into luxury-branded shipping boxes measuring <bin_size> while maintaining presentation quality. Items arrive sequentially from different suppliers without visibility of future inventory, and packers must carefully consider orientations - rotating some garments along length/width/height to prevent creasing while minimizing void space. The aim is both premium unboxing experience and sustainability through box reduction.",
+        "label": "3DONBPPR",
+        "index": 10
+    },
+    {
+        "desc_split": "Aircraft manufacturing requires precise cutting of advanced composite sheets (<bin_size>) into reinforced wing rib components (<items_size>). Engineers must position all necessary rib profiles on each sheet, accounting only for length and width measurements, to minimize expensive material waste. The challenge involves arranging complex polygonal shapes while respecting material grain directions and structural load requirements for each aerospace-grade component.",
+        "label": "2DOFBPP",
+        "index": 69
+    },
+    {
+        "desc_split": "In the solar panel installation sector, roof areas of size <bin_size> must be optimally covered with rectangular solar modules of dimensions <items_size> to maximize energy generation while minimizing material waste. The installation process is online, as modules arrive in unpredictable sequences, and future module dimensions remain unknown during placement, requiring dynamic adjustment. Each panel must be placed at 90-degree orientations when beneficial for space efficiency, considering only length and width as roof inclination is handled through mounting hardware. The challenge involves real-time arrangement without overlapping panels or exceeding roof boundaries.",
+        "label": "2DONBPPR",
+        "index": 54
+    },
+    {
+        "desc_split": "An automotive manufacturer needs to store an assortment of spare parts such as engines, transmissions, and body panels in warehouse shelving units with fixed dimensions <bin_size>. Each part has distinct packaging requirements and dimensions <items_size>, and the objective is to maximize space utilization while ensuring quick access for order fulfillment and minimizing wasted storage area.",
+        "label": "3DOFBPP",
+        "index": 11
+    },
+    {
+        "desc_split": "In pharmaceutical cold chain logistics, temperature-sensitive medications and vaccines (<items_size>) must be packed sequentially into refrigerated transportation units (<bin_size>) without prior knowledge of incoming shipment sizes. Each item's length, width, and height must be carefully considered to maintain proper air circulation and temperature distribution while minimizing the number of refrigeration units used to reduce costs and energy consumption.",
+        "label": "3DONBPP",
+        "index": 5
+    },
+    {
+        "desc_split": "In the automotive industry, large hides of leather with size <bin_size> are used to cut seat covers, armrests, and headrests of varying dimensions <items_size>. The cutting process is online, as orders arrive dynamically, and the exact shapes of future pieces are unknown when cutting the current one. Each piece can be rotated 90 degrees to maximize hide utilization. The goal is to arrange the cuts to minimize leather waste while ensuring all required pieces fit perfectly. Only length and width matter, as thickness is uniform. The challenge lies in efficient real-time placement to reduce costs without foreseeing future part dimensions.",
+        "label": "2DONBPPR",
+        "index": 20
+    },
+    {
+        "desc_split": "In car seat manufacturing, premium leather sheets of size <bin_size> are cut into seat cover segments, armrests, and headrest pieces of size <items_size>. The goal is to minimize leather waste by rotating pieces for optimal placement, focusing solely on length and width since leather thickness is consistent and irrelevant to the cutting layout.",
+        "label": "2DOFBPPR",
+        "index": 4
+    },
+    {
+        "desc_split": "Baking trays (<bin_size>) hold rectangular pastry dough pieces (<items_size>) that are placed on the tray as soon as they are molded. The bakery must arrange the dough without knowledge of additional orders, focusing on length and width to ensure efficient space utilization per tray.",
+        "label": "2DONBPP",
+        "index": 13
+    },
+    {
+        "desc_split": "For tile flooring installation, large rectangular tiles of size <items_size> must be arranged on floors or walls of size <bin_size> with minimal cutting and waste. Tiles can be rotated to align patterns or fit irregular spaces, considering only their length and width. The goal is to achieve full coverage using the least number of full tiles possible.",
+        "label": "2DOFBPPR",
+        "index": 3
+    },
+    {
+        "desc_split": "Wind farm logistics teams must pack enormous turbine components (blade segments <items_size>, gearbox parts <items_size>) into customized heavy-load trailers sized <bin_size>. Components arrive at docks unpredictably and handlers must immediately determine optimal 3D orientations (allowing all-axis rotations) for enormous irregularly shaped loads that can't be stacked traditionally. Efficient trailer space utilization directly impacts project costs regarding fleet requirements.",
+        "label": "3DONBPPR",
+        "index": 12
+    },
+    {
+        "desc_split": "Theater production crews face the challenge of packing elaborate stage props (<items_size>) of irregular forms into touring trucks (<bin_size>) while moving between performance venues. Each fragile prop (from oversize set pieces to delicate costumes) appears sequentially without advance dimension knowledge. The team must strategically position items in full 3D space within the truck's volume constraints, juggling length, width, and height considerations for optimal transport density while ensuring quick unloading access at venues.",
+        "label": "3DONBPP",
+        "index": 73
+    },
+    {
+        "desc_split": "During theme park construction, massive ride components like track segments, gondolas, and mechanical housings must be transported via custom shipping containers with fixed <bin_size> (length, width, and height). These oversized parts have diverse <items_size> (length, width, and height) and can be rotated carefully for optimal stability and space usage, with the goal being to minimize transportation trips while ensuring no single component exceeds container dimensions.",
+        "label": "3DOFBPPR",
+        "index": 33
+    },
+    {
+        "desc_split": "Heavy-duty printer manufacturers face the challenge of transporting massive modular components print heads, paper feeders, and ink reservoir systems in reinforced steel pallets with standardized <bin_size> (length, width, and height). With parts arriving in assorted <items_size> (length, width, and height), engineers must experiment with spatial permutations, rotating items to avoid pallet overhang and balance weight distribution. The goal is optimal palletization to streamline warehousing and minimize loading times for just-in-time delivery.",
+        "label": "3DOFBPPR",
+        "index": 70
+    },
+    {
+        "desc_split": "In rapid military medical deployments, field hospitals require packing different medical equipment like oxygen tanks, surgical kits, and portable scanners with dimensions <items_size> into standard military cargo shipping containers with dimensions <bin_size>. Units arrive for packing in unpredictable sequences based on battlefield demands, requiring each piece to be placed without knowledge of following equipment. All items can be rotated three-dimensionally (length, width, height) to maximize life-saving equipment density while maintaining quick access requirements in emergency situations.",
+        "label": "3DONBPPR",
+        "index": 37
+    },
+    {
+        "desc_split": "In urban waste management facilities, mixed recyclable materials like crushed cans, bundled newspapers, and compacted plastic containers (<items_size>) must be efficiently loaded into processing bins (<bin_size>) for transportation to recycling plants. Workers receive materials in an unpredictable sequence with varying dimensions, and must arrange each item in 3D space considering length, width, and height without knowledge of upcoming items, aiming to minimize the number of bins used while preventing overflow.",
+        "label": "3DONBPP",
+        "index": 90
+    },
+    {
+        "desc_split": "Agricultural equipment suppliers face the challenge of packing heavy-duty farming implements like tillers, seed drills, and irrigation components into reinforced transport containers with strict <bin_size> constraints (length, width, and height). These irregularly shaped items have varying <items_size> (length, width, and height), each requiring strategic rotation to maximize space efficiency while accounting for load-bearing restrictions. The goal is to optimize container usage by minimizing empty spaces and stacking components stably, ensuring safe transit across rugged rural terrain without compromising structural integrity.",
+        "label": "3DOFBPPR",
+        "index": 15
+    },
+    {
+        "desc_split": "In a fashion retail warehouse, seasonal clothing, footwear, and accessories of varying sizes (<items_size>) must be transported to stores via shipping containers (<bin_size>). Workers handle each item individually without knowing the dimensions of upcoming products. The goal is to fit as many items as possible into a container while accounting for their 3D dimensions (length, width, height), minimizing container usage without damaging the goods.",
+        "label": "3DONBPP",
+        "index": 29
+    },
+    {
+        "desc_split": "Field operations require the rapid packing of mission-critical military gear like generators, communication devices, and medical kits into ruggedized transport crates with dimensions <bin_size>. Each piece of equipment has specific dimensions <items_size>, and due to operational urgency, items must be loaded as they become available with no advance information on subsequent items. Personnel can rotate equipment along all axes (length, width, height) to maximize crate capacity while maintaining load stability during rough transport conditions. The objective is to minimize transport vehicle trips while ensuring all equipment arrives intact at the deployment site.",
+        "label": "3DONBPPR",
+        "index": 58
+    },
+    {
+        "desc_split": "When assembling digital billboards, mounting frames of size <bin_size> must accommodate various rectangular LED panels with dimensions <items_size>. Panel installation follows an online process where future panel specifications remain unknown during current placement. Each panel can be rotated for better alignment. Technicians need to configure layouts that maximize frame usage while ensuring electrical connectivity between panels. Only length and width are considered, as panel depth is standardized. This real-time packing challenge requires adaptable strategies to handle uncertain panel arrivals while maintaining display integrity.",
+        "label": "2DONBPPR",
+        "index": 89
+    },
+    {
+        "desc_split": "When constructing modular office spaces, large partition panels of size <bin_size> must be cut into smaller functional sections like whiteboards, fabric insets, and cable ducts with dimensions <items_size>. The objective is to minimize material waste by efficiently arranging these sections on panels, permitting rotational placement to maximize coverage. Only the length and width of panels and sections matter, as their depth is predetermined and fixed.",
+        "label": "2DOFBPPR",
+        "index": 75
+    },
+    {
+        "desc_split": "Agricultural suppliers divide rectangular seedling compartments (<items_size>) within large seed propagation trays (<bin_size>). Each compartment size is revealed only when ordered and must be placed immediately, requiring space optimization based exclusively on compartment and tray lengths and widths, while minimizing tray count.",
+        "label": "2DONBPP",
+        "index": 35
+    },
+    {
+        "desc_split": "Solar farm planners must arrange rectangular solar panels of size <items_size> on allocated land plots of size <bin_size> to maximize energy production. The panels can be rotated, and the arrangement must minimize unused land while adhering to spacing requirements for maintenance. The challenge involves only length and width, as panel height is fixed and irrelevant to the layout.",
+        "label": "2DOFBPPR",
+        "index": 27
+    },
+    {
+        "desc_split": "Commercial bakeries need to optimize the placement of dough pieces (<items_size>) on baking trays (<bin_size>) before baking. The objective is to fit as many dough pieces as possible per tray, considering only length and width, to maximize production output while ensuring uniform spacing for even baking. Efficient arrangement minimizes tray usage and energy consumption.",
+        "label": "2DOFBPP",
+        "index": 83
+    },
+    {
+        "desc_split": "Construction companies must efficiently load building materials such as beams, bricks, and piping <items_size> onto transport pallets <bin_size> as they are prepared at the site, with no advance knowledge of upcoming material sizes. Workers can rotate items to improve fit but must decide on placement without delaying the loading process, aiming to minimize the number of pallets used for cost-effective transportation.",
+        "label": "3DONBPPR",
+        "index": 98
+    },
+    {
+        "desc_split": "In electronics retail, stores receive shipments of TVs, sound systems, and gaming consoles that must be packed efficiently into standardized delivery trucks with fixed <bin_size> (length, width, and height). The electronics vary in <items_size> (length, width, and height), with flat-screen TVs being wide but thin and sound systems boxy. Each item can be rotated in any orientation to optimize space, and the goal is to fit all products into the fewest trucks while preventing movement during transit.",
+        "label": "3DOFBPPR",
+        "index": 5
+    },
+    {
+        "desc_split": "Garment factories place rectangular fabric patterns (<items_size>) on large rolls of cloth (<bin_size>) in real-time as orders arrive, without prior knowledge of future patterns. The objective is to minimize fabric waste by optimizing pattern arrangement based only on their length and width.",
+        "label": "2DONBPP",
+        "index": 3
+    },
+    {
+        "desc_split": "Transporting curved projection panels, hydraulic lift mechanisms, and high-resolution lenses for planetarium renovations demands specialized packing into reinforced transit cases with exact <bin_size> length, width, and height specifications. The fragile components have extremely diverse <items_size> dimensions where each piece can be strategically rotated to prevent gaps, ensuring shock absorption during movement while minimizing the astronomical costs of shipping oversized containers.",
+        "label": "3DOFBPPR",
+        "index": 93
+    },
+    {
+        "desc_split": "Office furniture manufacturers require optimal placement of desk segments (<items_size>) onto large modular baseplates (<bin_size>), considering only their length and width, to maximize workspace compatibility while reducing surplus materials. The task involves arranging varied-shaped desk parts efficiently without overlaps to enhance production scalability.",
+        "label": "2DOFBPP",
+        "index": 28
+    },
+    {
+        "desc_split": "Factories pack rectangular insulation boards (<items_size>) into standardized wall panel frames (<bin_size>) for prefabricated homes. Boards arrive in real-time without size information for future units, requiring optimized placement using only their current length and width measurements while assembling each panel.",
+        "label": "2DONBPP",
+        "index": 17
+    },
+    {
+        "desc_split": "A metropolitan hospital needs to efficiently store thousands of medical supplies in clean-room cabinets with regulated compartment sizes <bin_size>. The sterile packages containing surgical tools, medication boxes, and diagnostic equipment all have varying dimensions <items_size> that must be systematically arranged to maintain quick access during emergencies while obeying healthcare facility storage regulations.",
+        "label": "3DOFBPP",
+        "index": 97
+    },
+    {
+        "desc_split": "In shipbuilding, large steel plates (<bin_size>) need to be cut into smaller sections (<items_size>) to form parts of the hull. The goal is to arrange the sections on the plates to maximize material utilization, considering only their length and width, while minimizing offcuts. Due to the high cost of marine-grade steel, optimal section placement is crucial for cost efficiency and environmental sustainability.",
+        "label": "2DOFBPP",
+        "index": 53
+    },
+    {
+        "desc_split": "Marine biologists preparing for deep-sea missions must stawk all scientific instruments and life support systems into pressure-resistant storage bays with dimensions <bin_size> aboard the submersible. Equipment like sensors, sample containers, and backup oxygen tanks arrives for loading with dimensions <items_size> in unpredictable sequences, each rotatable in all directions to conform to the submarine's curved interior walls while maximizing space efficiency before the sealed vessel descends.",
+        "label": "3DONBPPR",
+        "index": 48
+    },
+    {
+        "desc_split": "An IoT device manufacturer needs to optimize shipping for thousands of smart home hubs, security systems, and automated appliances <items_size> into branded retail-ready containers <bin_size> destined for chain stores globally. The focus lies on constructing stable product stacks that maximize container capacity without compromising the pristine presentation expected for premium electronics display.",
+        "label": "3DOFBPP",
+        "index": 44
+    },
+    {
+        "desc_split": "Concert production companies must transport elaborate stage setups containing truss systems, speaker arrays, and lighting rigs in specialized road cases with defined <bin_size> (length, width, height). Each piece of touring equipment has distinct <items_size> (length, width, height) and can be rotated to fit securely, with the added challenge of protecting delicate electronics while maximizing trailer space efficiency for cross-city tours with hundreds of individual components.",
+        "label": "3DOFBPPR",
+        "index": 37
+    },
+    {
+        "desc_split": "Technicians servicing offshore wind turbines must transport replacement parts like gearboxes and generator components in waterproof transport modules with dimensions <bin_size>. Each irregularly shaped part arrives for loading with dimensions <items_size>, and due to unpredictable weather windows, items must be packed immediately without knowing upcoming components. All parts can be rotated in 3D space to balance weight distribution and module utilization, aiming to reduce helicopter trips while ensuring structural integrity during transport.",
+        "label": "3DONBPPR",
+        "index": 46
+    },
+    {
+        "desc_split": "In producing protective gear like martial arts mats, rectangular foam slabs of size <bin_size> are cut into various pad shapes with dimensions <items_size>. Orders arrive dynamically with unknown future padding requirements, making this an online packing problem. Each padding piece can be rotated to minimize material waste during cutting. The objective is to reduce the number of foam slabs used while meeting all customer specifications. Only two-dimensional footprints are considered, as foam thickness remains constant. The challenge lies in making immediate cutting decisions without knowledge of upcoming orders while ensuring maximal slab utilization.",
+        "label": "2DONBPPR",
+        "index": 75
+    },
+    {
+        "desc_split": "During nightly maintenance of major theme park attractions, technicians must stow repair parts and equipment (<items_size>) ranging from large mechanical components to sensitive electronics into mobile service carts (<bin_size>). With work orders changing nightly and item dimensions uncertain until retrieved from inventory, the maintenance team must dynamically arrange these items in 3D space while maximizing cart capacity, without visibility into what other items may be needed until later in their shift.",
+        "label": "3DONBPP",
+        "index": 84
+    },
+    {
+        "desc_split": "Solar farm planners arrange photovoltaic panels (<items_size>) on designated land plots (<bin_size>) to maximize energy output. The challenge is to position all panels within the plot's confines, considering only their length and width, to avoid shadowing and optimize sunlight exposure. Efficient packing increases energy yield and land utilization.",
+        "label": "2DOFBPP",
+        "index": 3
+    },
+    {
+        "desc_split": "Sterile surgical trays (<bin_size>) need to securely hold various rectangular surgical instruments (<items_size>) as they are prepared for operations. Each instrument must be placed without knowing what other tools will be required, demanding optimal spatial organization while considering only length and width constraints.",
+        "label": "2DONBPP",
+        "index": 86
+    },
+    {
+        "desc_split": "During board game production, manufacturers must assemble multiple rectangular game boards of different sizes <items_size> onto large cardboard sheets of size <bin_size>. The assembly occurs in real-time as various game components arrive unpredictably at the production line. Each board can be rotated to better fit available space. The problem focuses solely on length and width optimization to minimize raw material usage while accommodating an unknown sequence of components, requiring adaptive decision-making for each new board placement.",
+        "label": "2DONBPPR",
+        "index": 97
+    },
+    {
+        "desc_split": "Manufacturers producing touchscreen devices must cut large glass panels (<bin_size>) into smaller screens (<items_size>) for smartphones or tablets. The goal is to maximize the number of screens obtained from each panel, accounting only for their length and width, to minimize glass waste and reduce per-unit production costs. Precise arrangement helps meet high-volume demand while maintaining quality standards.",
+        "label": "2DOFBPP",
+        "index": 89
+    },
+    {
+        "desc_split": "A theme park's merchandise department needs to arrange towering plush toys, framed posters and oversized souvenir cups within restricted backroom shelving units <bin_size>. The seasonal influx of irregularly shaped prizes <items_size> demands creative stacking solutions to prevent damage while keeping popular items readily available for carnival game stations.",
+        "label": "3DOFBPP",
+        "index": 48
+    },
+    {
+        "desc_split": "A global electronics distributor needs to organize different smartphone models into standardized shipping pallets with constraints <bin_size>, where each pallet must accommodate mixed batches of phones in various retail packaging sizes <items_size>. The optimization goal is to maximize pallet density while preventing crushed boxes and enabling efficient scanning during logistics operations.",
+        "label": "3DOFBPP",
+        "index": 45
+    },
+    {
+        "desc_split": "Landscape architects face the challenge of fitting custom-cut stone slabs (<items_size>) of diverse rectangular shapes into predefined patio areas (<bin_size>), considering solely their length and width dimensions. The goal is to create aesthetically pleasing patterns while minimizing material waste and gaps, requiring creative spatial solutions that account for color variations and natural stone imperfections within strict area constraints.",
+        "label": "2DOFBPP",
+        "index": 77
+    }
+]

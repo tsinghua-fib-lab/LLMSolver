@@ -11,7 +11,7 @@ class Dataset(TorchDataset):
     """
     def __init__(
         self,
-        data_dir: str = "/data1/shy/zgc/llm_solver/LLMSolver/benchmark_hard/cvrp/dataset",
+        data_dir: str = f"/data1/shy/zgc/llm_solver/LLMSolver/benchmark_hard/cvrp/dataset",
         problem_counts: int = 100,
         seed: int = 42,
         shuffle: bool = False
@@ -179,8 +179,9 @@ class Dataset(TorchDataset):
     
 if __name__ == '__main__':
     problem_counts = 1
+    p_name = 'bpp'
     dataset = Dataset(
-        data_dir="/data1/shy/zgc/llm_solver/LLMSolver/benchmark_hard/cvrp/dataset",
+        data_dir=f"/data1/shy/zgc/llm_solver/LLMSolver/benchmark_hard/{p_name}/dataset",
         shuffle=True,
         problem_counts=problem_counts,
     )
@@ -190,6 +191,6 @@ if __name__ == '__main__':
     # subset = dataset.create_subset([0, 1, 2])
     # print(f"Subset size: {len(subset)}")
     
-    dataset.save_to_file(f"vrp_{problem_counts}.json")
+    dataset.save_to_file(f"{p_name}_{problem_counts}.json")
     # loaded_dataset = Dataset.load_from_file("dataset.json")
     # print(f"Loaded dataset size: {len(loaded_dataset)}")
