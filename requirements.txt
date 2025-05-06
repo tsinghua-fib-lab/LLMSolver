@@ -121,6 +121,7 @@ python-dateutil==2.9.0.post0
 python-dotenv==1.1.0
 pytorch-lightning==1.9.5
 pytz==2025.2
+pyvrp==0.10.1
 PyYAML==6.0.2
 referencing==0.36.2
 regex==2024.11.6
@@ -175,6 +176,7 @@ Unipath==1.1
 urllib3==2.4.0
 vhacdx==0.0.8.post2
 visdom==0.2.4
+vrplib==1.5.1
 wandb==0.19.10
 websocket-client==1.8.0
 xxhash==3.5.0
