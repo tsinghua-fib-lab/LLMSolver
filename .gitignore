@@ -171,3 +171,7 @@ cython_debug/
 .pypirc
 
 **/API_key.py
+
+# test and log
+*test*
+log/
