@@ -103,9 +103,11 @@ def igraph_to_jraph(g: ig.Graph) -> (jraph.GraphsTuple, float, int):
     return from_igraph_to_jgraph(g), density, graph_size
 
 
-def solve_graph(H_graph, g, gurobi_solve=False, problem_type="maxcut", time_limit=1., thread_fraction=0.75) -> (float, float,
-                                                                                                           list, float,
-                                                                                                           jraph.GraphsTuple):
+def solve_graph(H_graph, g, gurobi_solve=False, problem_type="maxcut", time_limit=1., thread_fraction=0.75) -> (float,
+                                                                                                                float,
+                                                                                                                list,
+                                                                                                                float,
+                                                                                                                jraph.GraphsTuple):
     """
     Solve the graph instance for the dataset using gurobi if self.gurobi_solve is True, otherwise return None Tuple
 
@@ -218,10 +220,10 @@ def prepare_data(problem_type, num_graphs=10, file_path=None):
 
 
 problemType2WandbID_dict = {
-    'mis': 'm3h9mz5g', #graph_model = 'rb'
+    'mis': 'm3h9mz5g',  # graph_model = 'rb'
     'mvc': 'ys42lka1',  # graph_model = 'rb'
-    'mds': '64dnrg5p', #graph_model = 'ba'
-    'maxcut': '114mqmhk', #graph_model = 'ba'
+    'mds': '64dnrg5p',  # graph_model = 'ba'
+    'maxcut': '114mqmhk',  # graph_model = 'ba'
 }
 problemType_dict = {
     'mis': 'MIS',
@@ -254,8 +256,8 @@ class DiffUCOSolver:
         self.env = GraphEnv(problem_type=problem_type)
 
         base_dir = os.path.join(os.path.dirname(os.path.realpath(__file__)), "prepare_data")
-        train_num_graphs=100
-        train_file_path=os.path.join(base_dir, f"train_graph_list_{problem_type}_{train_num_graphs}.pkl")
+        train_num_graphs = 100
+        train_file_path = os.path.join(base_dir, f"train_graph_list_{problem_type}_{train_num_graphs}.pkl")
         train_graph_list = prepare_data(problem_type=problem_type,
                                         num_graphs=train_num_graphs,
                                         file_path=train_file_path)
@@ -302,7 +304,7 @@ class DiffUCOSolver:
             bst_solution = None
             for solution in candidate_solution:
                 node_solution = np.where(np.array(solution) == 1)[0].tolist()
-                reward = self.env.get_reward(inst, node_solution, self.problem_type)
+                reward = self.env.get_reward(inst, node_solution)
                 if reward > bst_reward:
                     bst_reward = reward
                     bst_solution = node_solution

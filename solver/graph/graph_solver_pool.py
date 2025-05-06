@@ -140,7 +140,7 @@ def test_solve():
     print(gurobi_solutions)
     gurobi_rewards = []
     for instance, solution in zip(instances, gurobi_solutions):
-        reward = grapg_env.get_reward(instance, solution, problem_type)
+        reward = grapg_env.get_reward(instance, solution)
         gurobi_rewards.append(reward)
     print('gurobi: ', np.mean(gurobi_rewards))
 
@@ -150,7 +150,7 @@ def test_solve():
     print(diffuco_solutions)
     diffuco_rewards = []
     for instance, solution in zip(instances, diffuco_solutions):
-        reward = grapg_env.get_reward(instance, solution, problem_type)
+        reward = grapg_env.get_reward(instance, solution)
         diffuco_rewards.append(reward)
     print('diffuco: ', np.mean(diffuco_rewards))
 
@@ -160,7 +160,7 @@ def test_solve():
         print(node_solutions)
         rewards = []
         for instance, solution in zip(instances, node_solutions):
-            reward = grapg_env.get_reward(instance, solution, problem_type)
+            reward = grapg_env.get_reward(instance, solution)
             rewards.append(reward)
         print('fastt2t: ', np.mean(rewards))
 
@@ -184,14 +184,14 @@ def test():
     solver_name = "diffuco"
     solutions = graph_solve_pool.solve(deepcopy(instances), solver_name=solver_name, problem_type=problem_type)
     for instance, solution in zip(instances, solutions):
-        reward = grapg_env.get_reward(instance, solution, problem_type)
+        reward = grapg_env.get_reward(instance, solution)
         rewards.append(reward)
     print(solver_name, np.mean(rewards))
 
     solver_name = "gurobi"
     solutions = graph_solve_pool.solve(deepcopy(instances), solver_name=solver_name, problem_type=problem_type)
     for instance, solution in zip(instances, solutions):
-        reward = grapg_env.get_reward(instance, solution, problem_type)
+        reward = grapg_env.get_reward(instance, solution)
         rewards.append(reward)
     print(solver_name, np.mean(rewards))
 
@@ -199,7 +199,7 @@ def test():
         solver_name = "fastt2t"
         solutions = graph_solve_pool.solve(deepcopy(instances), solver_name=solver_name, problem_type=problem_type)
         for instance, solution in zip(instances, solutions):
-            reward = grapg_env.get_reward(instance, solution, problem_type)
+            reward = grapg_env.get_reward(instance, solution)
             rewards.append(reward)
         print(solver_name, np.mean(rewards))
 

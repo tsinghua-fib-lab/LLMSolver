@@ -216,7 +216,7 @@ def test_solve():
     print(node_solutions)
     rewards = []
     for instance, solution in zip(instances, node_solutions):
-        reward = grapg_env.get_reward(instance, solution, problem_type)
+        reward = grapg_env.get_reward(instance, solution)
         rewards.append(reward)
     print(np.mean(rewards))
     return node_solutions
