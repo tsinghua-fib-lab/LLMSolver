@@ -68,11 +68,23 @@ GRAPH_DESCRIPTION = {
 
 GRAPH_ADDITIONAL_DESCRIPTION = ""
 
+
+KP_VARIANTS = [
+    "KNAPSACK"
+]
+
+KP_DESCRIPTION = {
+    "KNAPSACK": 'Knapsack problem - given a set of items, each with a weight and a value, and a knapsack with a maximum weight capacity, the objective is to determine the most valuable subset of items that can fit within the knapsack's weight limit.',
+}
+
+KP_ADDITIONAL_DESCRIPTION = ""
+
 PROBLEM_INFO = {
     "VRP": {'variants': VRP_VARIANTS, 'description': VRP_DESCRIPTION, 'additional_description': VRP_ADDITIONAL_DESCRIPTION},
     "SP": {'variants': SP_VARIANTS, 'description': SP_DESCRIPTION, 'additional_description': SP_ADDITIONAL_DESCRIPTION},
     "BP": {'variants': BP_VARIANTS, 'description': BP_DESCRIPTION, 'additional_description': BP_ADDITIONAL_DESCRIPTION},
     "GRAPH": {'variants': GRAPH_VARIANTS, 'description': GRAPH_DESCRIPTION, 'additional_description': GRAPH_ADDITIONAL_DESCRIPTION},
+    "KP": {'variants': KP_VARIANTS, 'description': KP_DESCRIPTION, 'additional_description': KP_ADDITIONAL_DESCRIPTION},
 }
 
 PROBLEM_DESCRIPTION = {
@@ -80,5 +92,7 @@ PROBLEM_DESCRIPTION = {
     "SP": "Scheduling Problem - a set of jobs with operations and a set of machines, the goal is to minimize the total makespan or total tardiness.",
     "BP": "Bin Packing Problem - a set of items and a set of fixed bins, the goal is to minimize the total number of bins used while placing all the items into the bins.",
     "GRAPH": "Graph Problem - a class of problems involving selection or partitioning of nodes and edges in a graph, aiming to optimize structures like cuts, covers, independent sets, or cliques.",
+    "KP": 'Knapsack problem - given a set of items, each with a weight and a value, and a knapsack with a maximum weight capacity, the objective is to determine the most valuable subset of items that can fit within the knapsack's weight limit.',
+
 }
 
