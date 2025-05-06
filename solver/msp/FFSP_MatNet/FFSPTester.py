@@ -69,7 +69,7 @@ class FFSPTester:
         # Restore
         model_load = tester_params['model_load']
         checkpoint_fullname = '{path}/checkpoint-{epoch}.pt'.format(**model_load)
-        checkpoint = torch.load(checkpoint_fullname, map_location=self.device)
+        checkpoint = torch.load(checkpoint_fullname, map_location=self.device, weights_only=False)
         self.model.load_state_dict(checkpoint['model_state_dict'])
 
         # utility

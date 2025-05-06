@@ -24,7 +24,7 @@ def test_solve():
     print(groubi_solutions)
     groubi_rewards = []
     for instance, solution in zip(instances, groubi_solutions):
-        reward = grapg_env.get_reward(instance, solution, problem_type)
+        reward = grapg_env.get_reward(instance, solution)
         groubi_rewards.append(reward)
     print('groubi: ', np.mean(groubi_rewards))
 
@@ -34,7 +34,7 @@ def test_solve():
     print(diffuco_solutions)
     diffuco_rewards = []
     for instance, solution in zip(instances, diffuco_solutions):
-        reward = grapg_env.get_reward(instance, solution, problem_type)
+        reward = grapg_env.get_reward(instance, solution)
         diffuco_rewards.append(reward)
     print('diffuco: ', np.mean(diffuco_rewards))
 
@@ -44,7 +44,7 @@ def test_solve():
         print(node_solutions)
         rewards = []
         for instance, solution in zip(instances, node_solutions):
-            reward = grapg_env.get_reward(instance, solution, problem_type)
+            reward = grapg_env.get_reward(instance, solution)
             rewards.append(reward)
         print('fast_t2t: ', np.mean(rewards))
 
