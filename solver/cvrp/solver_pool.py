@@ -249,3 +249,25 @@ class SolverPool:
             print(e)
             return "<RuntimeError>"
         return solution
+
+
+def test_solver():
+    import time
+    from envs.cvrp.mtvrp.generator import MTVRPGenerator
+    solver_pool = SolverPool()
+    generator = MTVRPGenerator(num_loc=100, variant_preset="cvrp")
+    env = MTVRPEnv(generator, check_solution=False)
+
+    # Generate data (mixed variants)
+    td_data = env.generator(1)
+    td_test = env.reset(td_data)
+    time_start = time.time()
+    res = solver_pool.solve(td_test, solver_name='rf-transformer', problem_type='cvrp')
+    time_end = time.time()
+    print(env.get_reward(td_test, res))
+    print(res)
+    print(time_end - time_start)
+
+
+if __name__ == '__main__':
+    test_solver()
