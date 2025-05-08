@@ -64,7 +64,7 @@ def get_user_template_data(data_template_dict: dict, tags: list) -> dict:
 
 def generate_data(problem_type):
     num_depots = 1
-    num_loc = np.random.randint(10, 30)
+    num_loc = np.random.randint(10, 100)
     backhaul_class = 1
     if 'md' in problem_type:
         problem_type = problem_type.replace('md', '')
@@ -82,20 +82,15 @@ def generate_data(problem_type):
     return td_data_dict
 
 
-problem_type_base = ['cvrp', 'ovrp', 'vrpb', 'vrpl', 'vrptw', 'vrpmb', 'mdcvrp']
+problem_type_base = ['cvrp', 'ovrp', 'vrpb', 'vrpl', 'vrptw', 'vrpmb']
 
 var_problem_type_list = ['ovrptw', 'ovrpb', 'ovrpl', 'vrpbl', 'vrpbtw', 'vrpltw', 'ovrpbl', 'ovrpbtw', 'ovrpltw',
                          'vrpbltw', 'ovrpbltw', 'ovrpmb', 'vrpmbl', 'vrpmbtw', 'ovrpmbl', 'ovrpmbtw', 'vrpmbltw',
-                         'ovrpmbltw',
-
-                         'mdovrp', 'mdvrpb', 'mdvrpl', 'mdvrptw', 'mdovrptw', 'mdovrpb', 'mdovrpl', 'mdvrpbl',
-                         'mdvrpbtw', 'mdvrpltw', 'mdovrpbl', 'mdovrpbtw', 'mdovrpltw', 'mdvrpbltw', 'mdovrpbltw',
-                         'mdvrpmb', 'mdovrpmb', 'mdvrpmbl', 'mdvrpmbtw', 'mdovrpmbl', 'mdovrpmbtw', 'mdvrpmbltw',
-                         'mdovrpmbltw']
+                         'ovrpmbltw',]
 
 if __name__ == '__main__':
-    problem_type_list = var_problem_type_list
-    problem_type_dir = "data_var"
+    problem_type_list = problem_type_base + var_problem_type_list
+    problem_type_dir = "data"
     for problem_type in problem_type_list:
         print(problem_type)
 
