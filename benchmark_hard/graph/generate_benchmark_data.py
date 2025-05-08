@@ -28,7 +28,7 @@ if __name__ == '__main__':
     for problem_type in problem_type_list:
         print(problem_type)
 
-        generated_problem_type_path = f"./{problem_type_dir}/{problem_type}_meta.json"
+        generated_problem_type_path = f"./dataset/{problem_type}.json"
         with open(generated_problem_type_path, "r") as f:
             scenario_list = json.load(f)
         scenario_data_list = []
@@ -38,9 +38,9 @@ if __name__ == '__main__':
             print(scenario["title"])
             scenario_data = {
                 "title": scenario["title"],
-                "desc_split": scenario["content"],
+                "desc_split": scenario["desc_split"],
                 "data_template": data_dict,
-                "user_template": get_user_template_data(data_dict, scenario["tags"]),
+                "user_template": get_user_template_data(data_dict, list(scenario["user_template"].keys())),
                 "label": problem_type,
                 "index": scenario_idx,
             }

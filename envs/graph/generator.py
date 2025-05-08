@@ -21,7 +21,7 @@ problemType2graphModel_dict = {
 
 
 class GraphGenerator:
-    def __init__(self, problem_type="maxcut", weighted=False,min_n: int = 40, max_n: int = 60):
+    def __init__(self, problem_type="maxcut", weighted=False,min_n: int = 10, max_n: int = 100):
         self.graph_model = problemType2graphModel_dict[problem_type]
         self.weighted = weighted
         self.min_n = min_n

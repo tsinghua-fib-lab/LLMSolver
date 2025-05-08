@@ -134,18 +134,17 @@ class RBDatasetGenerator(GraphSampler):
         return graph_config
 
     def generate_graph(self):
-        while True:
-            p = np.random.uniform(self.graph_config["p_low"], self.graph_config["p_high"])
-            min_n, max_n = self.graph_config["n_min"], self.graph_config["n_max"]
-            n = np.random.randint(self.graph_config["n_low"], self.graph_config["n_high"])
-            k = np.random.randint(self.graph_config["k_low"], self.graph_config["k_high"])
 
-            edges = generate_xu_instances.get_random_instance(n, k, p)
-            G = nx.Graph()
-            G.add_edges_from(edges)
-            num_nodes = G.number_of_nodes()
-            if min_n <= num_nodes <= max_n:
-                break
+        p = np.random.uniform(self.graph_config["p_low"], self.graph_config["p_high"])
+        min_n, max_n = self.graph_config["n_min"], self.graph_config["n_max"]
+        n = np.random.randint(self.graph_config["n_low"], self.graph_config["n_high"])
+        k = np.random.randint(self.graph_config["k_low"], self.graph_config["k_high"])
+
+        edges = generate_xu_instances.get_random_instance(n, k, p)
+        G = nx.Graph()
+        G.add_edges_from(edges)
+        num_nodes = G.number_of_nodes()
+
         return G
 
 class HolmeKim(GraphSampler):
@@ -232,11 +231,10 @@ class RandomGraphGenerator:
     def generate(self, weighted=False):
         generated_graph = []
         for i in tqdm.tqdm(range(self.num_graphs)):
-            while True:
-                G = self.graph_sampler.generate_graph()
-                G.remove_nodes_from(list(nx.isolates(G)))
-                if G.number_of_nodes() > self.graph_sampler.min_n and G.number_of_nodes() < self.graph_sampler.max_n:
-                    break
+
+            G = self.graph_sampler.generate_graph()
+            G.remove_nodes_from(list(nx.isolates(G)))
+
             if weighted:
                 for u, v in G.edges():
                     G[u][v]['weight'] = random.random()
