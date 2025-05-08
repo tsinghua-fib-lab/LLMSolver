@@ -77,7 +77,7 @@ class SolverPool:
                 policy = get_policy(solver_name)
                 if policy is None:
                     raise ImportError
-                policy_dir = kwargs.get("policy_dir", "model_checkpoints/100")
+                policy_dir = os.path.join(os.path.dirname(os.path.realpath(__file__)), "model_checkpoints", "100")
                 policy.load_state_dict(torch.load(os.path.join(policy_dir, f"{solver_name}.pth")))
                 self.model_solver_dict[solver_name] = policy
                 self.model_solver_dict[solver_name].to(self.device)
@@ -243,9 +243,9 @@ class SolverPool:
     def solve(self, instances: TensorDict, solver_name: str = "rf-transformer", problem_type: str = "cvrp",
               timeout: int = 30, num_procs=32, **kwargs):
         try:
-            score = self._solve(instances=instances, solver_name=solver_name, problem_type=problem_type,
+            solution = self._solve(instances=instances, solver_name=solver_name, problem_type=problem_type,
                                 max_runtime=timeout, num_procs=num_procs, **kwargs)
         except Exception as e:
             print(e)
             return "<RuntimeError>"
-        return score
+        return solution
