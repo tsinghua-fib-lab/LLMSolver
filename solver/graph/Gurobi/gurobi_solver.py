@@ -46,10 +46,19 @@ class GurobiSolver():
             boundEnergy = Energy
             return solution, runtime
 
-        # elif self.problem == "MaxCl":
-        #     H_graph_compl = jutils.from_igraph_to_jgraph(g.complementer(loops=False), double_edges=False)
-        #     _, Energy, solution, runtime = solveMIS_as_MIP(H_graph_compl, time_limit=self.time_limit, thread_fraction = self.thread_fraction)
-        #     return solution, runtime
+        elif self.problem_type == "maxclique":
+            graph_compl = nx.complement(G)
+
+            edge_list = []
+            weight_list = []
+            for u, v, d in graph_compl.edges(data=True):
+                w = d.get('weight', 1.)
+                edge_list.append((u, v))
+                weight_list.append(w)
+                edge_list.append((v, u))
+                weight_list.append(w)
+            _, Energy, solution, runtime = solveMIS_as_MIP(edge_list=edge_list, N=instance['num_nodes'], time_limit=self.time_limit, thread_fraction = self.thread_fraction)
+            return solution, runtime
 
         elif self.problem_type == "mis":
             _, Energy, solution, runtime = solveMIS_as_MIP(edge_list=edge_list,
@@ -83,7 +92,7 @@ def test_solve():
     from envs.graph.generator import GraphGenerator
 
     # problem_type = 'maxcut'
-    problem_type = 'mis'
+    problem_type = 'maxclique'
 
     graph_model = 'rb'
     generator = GraphGenerator(problem_type=problem_type)

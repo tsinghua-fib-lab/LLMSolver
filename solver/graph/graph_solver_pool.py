@@ -9,7 +9,7 @@ class GraphSolverPool:
     solver_problem_dict = {
         'diffuco': ['mis', 'mvc', 'maxcut'],
         'fastt2t': ['mis'],
-        'gurobi': ['mis', 'mvc', 'maxcut'],
+        'gurobi': ['mis', 'mvc', 'maxcut', 'maxclique'],
     }
 
     def __init__(self, **kwargs):

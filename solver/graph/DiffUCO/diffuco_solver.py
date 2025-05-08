@@ -130,7 +130,7 @@ def solve_graph(H_graph, g, gurobi_solve=False, problem_type="maxcut", time_limi
             boundEnergy = Energy
             return Energy, boundEnergy, solution, runtime, None
 
-        elif problem_type == "maxclip":
+        elif problem_type == "maxclique":
             H_graph_compl = from_igraph_to_jgraph(g.complementer(loops=False), double_edges=False)
             _, Energy, solution, runtime = GurobiSolver.solveMIS_as_MIP(H_graph_compl, time_limit=time_limit,
                                                                         thread_fraction=thread_fraction)
@@ -224,12 +224,14 @@ problemType2WandbID_dict = {
     'mvc': 'ys42lka1',  # graph_model = 'rb'
     'mds': '64dnrg5p',  # graph_model = 'ba'
     'maxcut': '114mqmhk',  # graph_model = 'ba'
+    'maxclique': 'l3s6eybg',  # graph_model = 'rb'
 }
 problemType_dict = {
     'mis': 'MIS',
     'mds': 'MDS',
     'mvc': 'MVC',
     'maxcut': 'MaxCut',
+    'maxclique': 'MaxCl',
 }
 
 

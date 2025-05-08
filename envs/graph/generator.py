@@ -13,6 +13,7 @@ def data2graph(data: dict):
 
 problemType2graphModel_dict = {
     'maxcut': 'ba',
+    'maxclique': 'rb',
     'mds': 'ba',
     'mis': 'rb',
     'mvc': 'rb',

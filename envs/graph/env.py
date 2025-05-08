@@ -23,7 +23,7 @@ def _validate_nodes_exist(G: nx.Graph, nodes: Set[Node]):
 
 class GraphEnv:
     def __init__(self, problem_type: str):
-        assert problem_type in ["maxcut", "mds", "maxclip", "mis", "mvc"]
+        assert problem_type in ["maxcut", "mds", "maxclique", "mis", "mvc"]
         self.problem_type = problem_type
 
     def get_reward(self,
@@ -72,7 +72,7 @@ class GraphEnv:
                     return float("-inf")  # invalid dominating set
             return -len(dom)
 
-        elif self.problem_type == "maxclip":
+        elif self.problem_type == "maxclique":
             clique = _ensure_set(solution)
             _validate_nodes_exist(G, clique)
             # check clique
