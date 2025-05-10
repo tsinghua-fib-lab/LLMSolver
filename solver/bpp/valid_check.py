@@ -75,7 +75,7 @@ def test():
     solver = bppSolverPool() 
     result = solver.solve(instances=data, solver_name="genetic", problem_type="000")  
     is_valid = validate_solution(data, result)
-    print("是否为可行解:", is_valid)
+    print("Is it a feasible solution?:", is_valid)
 
 if __name__ == '__main__':
     test()
