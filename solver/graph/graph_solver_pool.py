@@ -184,6 +184,7 @@ def test():
     solver_name = "diffuco"
     solutions = graph_solve_pool.solve(deepcopy(instances), solver_name=solver_name, problem_type=problem_type)
     for instance, solution in zip(instances, solutions):
+        print(grapg_env.check_valid(instance, solution))
         reward = grapg_env.get_reward(instance, solution)
         rewards.append(reward)
     print(solver_name, np.mean(rewards))

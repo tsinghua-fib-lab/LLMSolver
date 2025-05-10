@@ -103,3 +103,64 @@ class GraphEnv:
 
         else:
             raise ValueError("Unsupported problem type; choose from MaxCut, MDS, MaxClique, MIS, MVC.")
+
+    def check_valid(self,
+                    instances: dict,
+                    solution: Union[Iterable[Node], dict[Node, int]], ):
+        G = data2graph(instances)
+
+        if self.problem_type == "maxcut":
+            try:
+                side_a = _ensure_set(solution)
+                _validate_nodes_exist(G, side_a)
+            except Exception:
+                return False
+        elif self.problem_type == "mds":  # *minimise* size
+            try:
+                dom = _ensure_set(solution)
+                _validate_nodes_exist(G, dom)
+            except Exception:
+                return False
+            # every node must be dominated
+            for v in G:
+                if v not in dom and not any(u in dom for u in G.neighbors(v)):
+                    return False  # invalid dominating set
+
+        elif self.problem_type == "maxclique":
+            try:
+                clique = _ensure_set(solution)
+                _validate_nodes_exist(G, clique)
+            except Exception:
+                return False
+            # check clique
+            for u in clique:
+                for v in clique:
+                    if u == v:
+                        continue
+                    if not G.has_edge(u, v):
+                        return False
+
+        elif self.problem_type == "mis":  # maximise size
+            try:
+                indep = _ensure_set(solution)
+                _validate_nodes_exist(G, indep)
+            except Exception:
+                return False
+            # check no edge internal
+            for u in indep:
+                if any(v in indep for v in G.neighbors(u)):
+                    return False
+
+        elif self.problem_type == "mvc":  # *minimise* size
+            try:
+                cover = _ensure_set(solution)
+                _validate_nodes_exist(G, cover)
+            except Exception:
+                return False
+            for u, v in G.edges:
+                if u not in cover and v not in cover:
+                    return False
+        else:
+            raise ValueError("Unsupported problem type; choose from MaxCut, MDS, MaxClique, MIS, MVC.")
+
+        return True
