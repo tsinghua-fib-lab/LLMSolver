@@ -103,18 +103,18 @@ def format_instance(data):
         # Find the operation IDs
         from_op_id = int(from_op.split('_')[1])
         to_op_id = int(to_op.split('_')[1])
+        to_job_id = int(to_job.split('_')[1])
 
         # Find the target operation in the result structure
-        for job in result["jobs"]:
-            for operation in job["operations"]:
-                if operation["operation_id"] == to_op_id:
-                    # Initialize predecessors list if needed
-                    if operation["predecessors"] is None:
-                        operation["predecessors"] = []
-                    # Add the predecessor
-                    operation["predecessors"].append(from_op_id)
-                    operation["predecessors"] = list(set(operation["predecessors"]))
-                    break
+        for operation in result["jobs"][to_job_id]["operations"]:
+            if operation["operation_id"] == to_op_id:
+                # Initialize predecessors list if needed
+                if operation["predecessors"] is None:
+                    operation["predecessors"] = []
+                # Add the predecessor
+                operation["predecessors"].append(from_op_id)
+                operation["predecessors"] = sorted(list(set(operation["predecessors"])))
+                break
 
     return result
 
@@ -131,7 +131,7 @@ def format_parameters(problem_type: str, solver_name: str, parameters: Dict, ins
     elif solver_name == 'dispatching_rules':
         pass
     elif solver_name == 'GA':
-        pass
+        parameters['instance']['instance'] = problem_type_dict[problem_type]
     elif solver_name == 'l2d':
         pass
     elif solver_name == 'fjsp_drl':
@@ -163,9 +163,9 @@ def format_result(schedule, instance):
         for task_id, operation in enumerate(machine_operations):
             job_id = operation.job_id
             op_id = operation.operation_id
-            operation_start = operation.scheduling_information['start_time']
-            operation_end = operation.scheduling_information['end_time']
-            operation_duration = operation_end - operation_start
+            operation_start = round(operation.scheduling_information['start_time'])
+            operation_end = round(operation.scheduling_information['end_time'])
+            operation_duration = round(operation_end - operation_start)
             # operation_label = f"{operation.operation_id}"
             assert operation_duration == processing_times[f'job_{job_id}'][f'op_{op_id}'][f'machine_{machine_id}'][0]
             output_schedule[job_id]['tasks'].append({
@@ -219,15 +219,15 @@ class JSSBEISolver:
         for instance in instances:
             parameters = format_parameters(self.problem_type, self.solver_name, deepcopy(self.parameters), instance)
             processing_info = format_instance(instance)
-            print(processing_info)
+            # print(processing_info)
             jobShopEnv = parse(processing_info)
             if self.solver_name == 'GA':
                 population, toolbox, stats, hof = initialize_run(jobShopEnv, **parameters)
                 _, jobShopEnv = self.solver_func(jobShopEnv, population, toolbox, stats, hof, **parameters)
             else:
                 _, jobShopEnv = self.solver_func(jobShopEnv, **parameters)
-            plt = gantt_chart.plot(jobShopEnv)
-            plt.show()
+            # plt = gantt_chart.plot(jobShopEnv)
+            # plt.show()
             result = format_result(jobShopEnv, instance)
             result_list.append(result)
         return result_list
@@ -241,13 +241,25 @@ def test_solver():
     generator = SchedulingProblemGenerator(problem_type)
     env = SchedulingProblemEnv(problem_type)
 
-    instances = generator.generate(10)
+    instances = generator.generate(20)
+    # instances=[
+    #     {'is_flow': False, 'is_open': False, 'machines_per_stage': {}, 'num_jobs': 5, 'num_machines': 2,
+    #      'precedence_relations': [[('job_1', 'op_3'), ('job_3', 'op_7')]], 'processing_times': {
+    #         'job_0': {'op_0': {'machine_1': (3, 'machine_1')}, 'op_1': {'machine_0': (6, 'machine_0')}},
+    #         'job_1': {'op_2': {'machine_1': (5, 'machine_1')}, 'op_3': {'machine_0': (10, 'machine_0')}},
+    #         'job_2': {'op_4': {'machine_1': (1, 'machine_1')}, 'op_5': {'machine_0': (5, 'machine_0')}},
+    #         'job_3': {'op_6': {'machine_0': (8, 'machine_0')}, 'op_7': {'machine_1': (10, 'machine_1')}},
+    #         'job_4': {'op_8': {'machine_0': (7, 'machine_0')}, 'op_9': {'machine_1': (7, 'machine_1')}}}}
+    # ]
     print(instances)
     jssbei_solver = JSSBEISolver(problem_type, solver_name)
     schedule_list = jssbei_solver.solve(instances)
 
     reward_list = []
     for instance, schedule in zip(instances, schedule_list):
+        env.plot_schedule(schedule)
+        print(env.check_valid(instance, schedule))
+
         reward = env.get_reward(instance, schedule)
         reward_list.append(reward)
     print(np.mean(np.array(reward_list)))

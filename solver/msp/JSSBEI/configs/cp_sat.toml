@@ -2,7 +2,7 @@
 problem_instance = "custom_problem_instance"
 
 [solver]
-time_limit = 10       # time limit for the OR-tools CP-SAT solver, in seconds
+time_limit = 15       # time limit for the OR-tools CP-SAT solver, in seconds
 model = "fajsp"          # model to use, either 'jsp', 'fsp', fjsp' or 'fjsp_sdst'
 
 [output]

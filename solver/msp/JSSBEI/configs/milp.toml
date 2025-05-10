@@ -3,7 +3,7 @@ problem_instance = "custom_problem_instance"
 instance_type = "/fajsp/dafjs/DAFJS01"
 
 [solver]
-time_limit = 3600       # time limit for the gurobi solver, in seconds
+time_limit = 15       # time limit for the gurobi solver, in seconds
 
 [output]
 show_precedences = true # draw precedence relations graph of the problem instance

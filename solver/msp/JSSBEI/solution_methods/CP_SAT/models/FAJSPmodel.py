@@ -131,19 +131,19 @@ def fajsp_cp_sat_model(jobShopEnv) -> tuple[cp_model.CpModel, dict]:
             ends[(job_id, task_id)] = end
 
             # Add precedence with potential previous task in other job (assembly variant)
-            if previous_end is None:
-                job_object = jobShopEnv.get_job(job_id)
-                operation_object = job_object.operations[task_id]
-                if operation_object.predecessors:
-                    for predecessor in operation_object.predecessors:
-                        predecessor_job = jobShopEnv.get_job(predecessor.job_id)
-                        predecessor_task_id = predecessor_job.operations.index(predecessor)
-                        predecessor_end = ends.get((predecessor.job_id, predecessor_task_id))
-                        if predecessor_end is not None:
-                            model.Add(start >= predecessor_end)
-                        else:
-                            raise ValueError(
-                                f"Predecessor end time not found for job {predecessor.job_id}, task {predecessor_task_id}")
+            # if previous_end is None:
+            job_object = jobShopEnv.get_job(job_id)
+            operation_object = job_object.operations[task_id]
+            if operation_object.predecessors:
+                for predecessor in operation_object.predecessors:
+                    predecessor_job = jobShopEnv.get_job(predecessor.job_id)
+                    predecessor_task_id = predecessor_job.operations.index(predecessor)
+                    predecessor_end = ends.get((predecessor.job_id, predecessor_task_id))
+                    if predecessor_end is not None:
+                        model.Add(start >= predecessor_end)
+                    else:
+                        raise ValueError(
+                            f"Predecessor end time not found for job {predecessor.job_id}, task {predecessor_task_id}")
 
             # Add precedence with previous task in the same job
             if previous_end is not None:

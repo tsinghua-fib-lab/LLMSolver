@@ -38,6 +38,272 @@ def validate_schedule(schedule):
     return True, "Schedule is valid"
 
 
+def check_jssp_schedule_valid(instance, schedule):
+    machine_usage = {}
+    processing_times = instance['processing_times']
+    for job_data in schedule['schedule']:
+        job_id = f'job_{job_data["job"]}'
+        tasks = job_data['tasks']
+        tasks = sorted(tasks, key=lambda t: t['task'])
+
+        ope_key_list = sorted(processing_times[job_id].keys(), key=lambda x: int(x.split('_')[1]))
+        if len(tasks) != len(ope_key_list):
+            return False
+        for i, task in enumerate(tasks):
+            op_id = f'op_{task["task"]}'
+            if op_id != ope_key_list[i]:
+                return False
+
+            machine = f'machine_{task["machine"]}'
+            start = task['start']
+            duration = task['duration']
+
+            # Check duration matches the instance
+            expected_duration = processing_times[job_id][op_id][machine][0]
+            if duration != expected_duration:
+                return False
+
+            # Check task order within job
+            if i > 0:
+                prev = tasks[i - 1]
+                if start < prev['start'] + prev['duration']:
+                    return False
+
+            # Check machine availability (no overlaps)
+            for t in range(start, start + duration):
+                if (machine, t) in machine_usage:
+                    return False
+                machine_usage[(machine, t)] = (job_id, op_id)
+
+    return True
+
+
+def check_fjssp_schedule_valid(instance, schedule):
+    machine_usage = {}
+    processing_times = instance['processing_times']
+
+    for job_data in schedule['schedule']:
+        job_id = f'job_{job_data["job"]}'
+        tasks = sorted(job_data['tasks'], key=lambda x: x['task'])
+
+        ope_key_list = sorted(processing_times[job_id].keys(), key=lambda x: int(x.split('_')[1]))
+        if len(tasks) != len(ope_key_list):
+            return False
+        for i, task in enumerate(tasks):
+            op_id = f'op_{task["task"]}'
+            if op_id != ope_key_list[i]:
+                return False
+            machine = f'machine_{task["machine"]}'
+            start = task['start']
+            duration = task['duration']
+
+            # Check if machine is allowed for this operation
+            if machine not in processing_times[job_id][op_id]:
+                return False
+
+            # Check if duration matches the machine-specific value
+            expected_duration = processing_times[job_id][op_id][machine][0]
+            if duration != expected_duration:
+                return False
+
+            # Check task order (precedence)
+            if i > 0:
+                prev = tasks[i - 1]
+                if start < prev['start'] + prev['duration']:
+                    return False
+
+            # Check for machine conflicts
+            for t in range(start, start + duration):
+                if (machine, t) in machine_usage:
+                    return False
+                machine_usage[(machine, t)] = (job_id, op_id)
+
+    return True
+
+
+def check_fssp_schedule_valid(instance, schedule):
+    machine_usage = {}
+    processing_times = instance['processing_times']
+
+    for job_data in schedule['schedule']:
+        job_id = f'job_{job_data["job"]}'
+        tasks = sorted(job_data['tasks'], key=lambda x: x['task'])
+
+        ope_key_list = sorted(processing_times[job_id].keys(), key=lambda x: int(x.split('_')[1]))
+        if len(tasks) != len(ope_key_list):
+            return False
+
+        for i, task in enumerate(tasks):
+            op_id = f'op_{task["task"]}'
+            if op_id != ope_key_list[i]:
+                return False
+            machine = f'machine_{task["machine"]}'
+            start = task['start']
+            duration = task['duration']
+
+            # Check machine validity
+            if machine not in processing_times[job_id][op_id]:
+                return False
+
+            # Check duration match
+            expected_duration = processing_times[job_id][op_id][machine][0]
+            if duration != expected_duration:
+                return False
+
+            # Check task order
+            if i > 0:
+                prev = tasks[i - 1]
+                if start < prev['start'] + prev['duration']:
+                    return False
+
+            # Check machine conflicts
+            for t in range(start, start + duration):
+                if (machine, t) in machine_usage:
+                    return False
+                machine_usage[(machine, t)] = (job_id, op_id)
+
+    return True
+
+
+def check_hfssp_schedule_valid(instance, schedule):
+    def get_stage_from_machine(machine_id, machines_per_stage):
+        cumulative = 0
+        for stage_index, count in machines_per_stage.items():
+            if machine_id < cumulative + count:
+                return stage_index
+            cumulative += count
+        return None
+
+    machine_usage = {}
+    proc_times = instance['processing_times']
+
+    for job_data in schedule['schedule']:
+        job_id = f"job_{job_data['job']}"
+        tasks = job_data['tasks']
+
+        # Check stage order
+        sorted_tasks = sorted(tasks, key=lambda x: x['task'])
+
+        for i, task in enumerate(sorted_tasks):
+            stage = f"stage_{task['task']}"
+            machine = f"machine_{task['machine']}"
+            start = task['start']
+            duration = task['duration']
+
+            # Check machine is valid for this stage
+            if get_stage_from_machine(task['machine'], instance['machines_per_stage']) != stage:
+                return False
+
+            # Check machine and duration in instance
+            if machine not in proc_times[job_id][stage]:
+                return False
+
+            expected_duration = proc_times[job_id][stage][machine][0]
+            if duration != expected_duration:
+                return False
+
+            # Check machine conflict
+            for t in range(start, start + duration):
+                if (machine, t) in machine_usage:
+                    return False
+                machine_usage[(machine, t)] = job_id
+
+            # Check stage order
+            if i > 0:
+                prev = sorted_tasks[i - 1]
+                if start < prev['start'] + prev['duration']:
+                    return False
+
+    return True
+
+
+def check_ossp_schedule_valid(instance, schedule):
+    machine_usage = {}
+    processing_times = instance['processing_times']
+
+    for job_data in schedule['schedule']:
+        job_id = f'job_{job_data["job"]}'
+        tasks = job_data['tasks']
+        seen_ops = set()
+
+        for task in tasks:
+            op_id = f'op_{task["task"]}'
+            if op_id in seen_ops:
+                return False  # Duplicate operation
+            seen_ops.add(op_id)
+
+            machine = f'machine_{task["machine"]}'
+            start = task['start']
+            duration = task['duration']
+
+            # Check if operation exists in instance and machine is valid
+            if op_id not in processing_times[job_id]:
+                return False
+            if machine not in processing_times[job_id][op_id]:
+                return False
+
+            # Check duration match
+            expected_duration = processing_times[job_id][op_id][machine][0]
+            if duration != expected_duration:
+                return False
+
+            # Check machine conflicts
+            for t in range(start, start + duration):
+                if (machine, t) in machine_usage:
+                    return False
+                machine_usage[(machine, t)] = (job_id, op_id)
+
+        # Optional: Check all required ops are scheduled
+        if seen_ops != set(processing_times[job_id].keys()):
+            return False
+
+    return True
+
+
+def check_asp_schedule_valid(instance, schedule):
+    machine_usage = {}
+    op_start_times = {}
+
+    processing_times = instance['processing_times']
+    precedence_relations = instance['precedence_relations']
+
+    for job_data in schedule['schedule']:
+        job_id = f"job_{job_data['job']}"
+        for task in job_data['tasks']:
+            op_id = f"op_{task['task']}"
+            machine = f"machine_{task['machine']}"
+            start = task['start']
+            duration = task['duration']
+
+            # Check if operation is defined
+            if op_id not in processing_times[job_id]:
+                return False
+            if machine not in processing_times[job_id][op_id]:
+                return False
+
+            expected_duration = processing_times[job_id][op_id][machine][0]
+            if duration != expected_duration:
+                return False
+
+            # Save start time for precedence check
+            op_start_times[(job_id, op_id)] = (start, duration)
+
+            # Machine conflict check
+            for t in range(start, start + duration):
+                if (machine, t) in machine_usage:
+                    return False
+                machine_usage[(machine, t)] = f"{job_id}-{op_id}"
+
+    # Check precedence constraints
+    for (pred, succ) in precedence_relations:
+        pred_end = op_start_times[pred][0] + op_start_times[pred][1]
+        succ_start = op_start_times[succ][0]
+        if pred_end > succ_start:
+            return False
+
+    return True
+
+
 class SchedulingProblemEnv:
     def __init__(self, problem_type: str, obj: str = 'makespan'):
         assert problem_type in ['jssp', 'fjssp', 'fssp', 'hfssp', 'ossp', 'asp']
@@ -61,6 +327,25 @@ class SchedulingProblemEnv:
             return self.calculate_makespan(solution)
         else:
             raise NotImplementedError
+
+    def check_valid(self, instances: dict, solution: dict, ):
+        if self.problem_type == 'jssp':
+            is_valid = check_jssp_schedule_valid(instances, solution)
+        elif self.problem_type == 'fjssp':
+            is_valid = check_fjssp_schedule_valid(instances, solution)
+        elif self.problem_type == 'fssp':
+            is_valid = check_fssp_schedule_valid(instances, solution)
+        elif self.problem_type == 'hfssp':
+            is_valid = check_hfssp_schedule_valid(instances, solution)
+        elif self.problem_type == 'ossp':
+            is_valid = check_ossp_schedule_valid(instances, solution)
+        elif self.problem_type == 'asp':
+            is_valid = check_asp_schedule_valid(instances, solution)
+        else:
+            raise NotImplementedError
+        if not isinstance(is_valid, bool):
+            is_valid = False
+        return is_valid
 
     def plot_schedule(self, schedule):
         fig, ax = plt.subplots(figsize=(12, 6))

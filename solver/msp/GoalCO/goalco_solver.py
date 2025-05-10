@@ -83,8 +83,8 @@ def format_result(schedule, instance):
             job_id = int(job_id)
             op_id = sorted(processing_times[f'job_{job_id}'].keys(), key=lambda x: int(x.split('_')[-1]))[int(op_idx)]
 
-            start_time = float(start_time)
-            end_time = float(end_time)
+            start_time = round(start_time)
+            end_time = round(end_time)
             duration = processing_times[f'job_{job_id}'][op_id][f'machine_{machine_id}'][0]
 
             # if job_id not in output_schedule:
@@ -94,7 +94,7 @@ def format_result(schedule, instance):
                 'duration': duration,
                 'machine': machine_id,
                 'start': start_time,
-                'task': op_id
+                'task': int(op_id.split('_')[-1])
             })
     for job_id in range(num_jobs):
         output_schedule[job_id]['tasks'].sort(key=lambda x: x['task'])
@@ -151,6 +151,7 @@ def test_solver():
     schedule_list = goalco_solver.solve(instances)
     reward_list = []
     for instance, schedule in zip(instances, schedule_list):
+        print(env.check_valid(instance, schedule))
         reward = env.get_reward(instance, schedule)
         reward_list.append(reward)
     print(np.mean(np.array(reward_list)))

@@ -126,7 +126,7 @@ def test():
         'milp': ['jssp', 'fjssp', 'fssp', 'asp'],
         'cp_sat': ['jssp', 'fjssp', 'fssp', 'asp'],
         'dispatching_rules': ['jssp', 'fjssp', 'fssp', 'asp'],
-        'GA': ['jssp', 'fjssp', 'fssp', 'asp'],
+        'GA': ['jssp', 'fjssp', 'fssp'],
         'l2d': ['jssp', 'fssp'],
         'fjsp_drl': ['jssp', 'fjssp', 'fssp'],
         'dannel': ['jssp', 'fjssp', 'fssp'],

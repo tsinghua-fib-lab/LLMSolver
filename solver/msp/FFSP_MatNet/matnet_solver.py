@@ -251,6 +251,7 @@ def test_solver():
 
     reward_list = []
     for instance, schedule in zip(instances, schedule_list):
+        print(env.check_valid(instance, schedule))
         reward = env.get_reward(instance, schedule)
         reward_list.append(reward)
     print(np.mean(np.array(reward_list)))
