@@ -1,0 +1,42 @@
+activation_edge_adapter: relu
+activation_ff: relu
+aimstack_dir: null
+backends: '10000'
+beam_size: 1
+commit_id: ''
+debug: false
+dim_emb: 128
+dim_ff: 512
+dim_node_idx: 1
+edge_feature_low_dim: 4
+job_id: 0
+knns: -1
+lr: 0.0005
+lr_gamma: 0.97
+node_feature_low_dim: 8
+num_heads: 8
+num_layers: 9
+num_sampled_init_params: 16
+num_samples: 128
+num_total_epochs: 500
+output_dir: output/
+pretrained_model: pretrained/multi.best
+problem_size: 100
+problems:
+- ossp
+project_name: null
+seed: 0
+test_batch_size: 128
+test_datasets:
+- data/finetune/ossp/ossp100_test.npz
+test_datasets_size: null
+test_every: 50
+train_batch_size: 128
+train_datasets:
+- data/finetune/ossp/ossp100_ft
+train_datasets_size: 1000000
+update_lr_every_n_epoch: 10
+val_batch_size: 128
+val_datasets: null
+val_datasets_size: null
+val_every: 1
