@@ -1,0 +1,22 @@
+[
+    {
+        "desc_split": "In a vehicle communication network <graph>, autonomous cars are <num_nodes> nodes and proximity-based interactions are <num_edges> edges. Splitting vehicles into two platoons to maximize inter-platoon communication optimizes traffic flow and reduces congestion while maintaining safe coordination.",
+        "label": "maxcut",
+        "index": 14
+    },
+    {
+        "desc_split": "An electronic voting system’s audit graph <graph> links <num_nodes> voting machines via <num_edges> shared verification protocols. To detect tampering, auditors must inspect the smallest set of machines to cover all protocol edges, ensuring election transparency efficiently.",
+        "label": "mvc",
+        "index": 94
+    },
+    {
+        "desc_split": "In cybersecurity, the <graph> captures trust relationships between dark web vendors, where 1 signifies a validated trust link and 0 distrust or no interaction. Pinpointing the largest clique of trusted vendors exposes resilient illicit networks for targeted law enforcement.",
+        "label": "maxclique",
+        "index": 81
+    },
+    {
+        "desc_split": "For a drone-based surveillance system operating over a grid <graph> of <num_nodes> zones and <num_edges> overlapping patrol ranges, an MIS selects non-adjacent zones for simultaneous drone deployment. This maximizes area coverage while preventing redundant monitoring or mid-air collisions.",
+        "label": "mis",
+        "index": 3
+    }
+]

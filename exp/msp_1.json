@@ -1,0 +1,32 @@
+[
+    {
+        "desc_split": "A high-precision production line fabricates <num_jobs> smartphone display panels through a sequence of critical processes (e.g., glass cutting, OLED deposition, encapsulation, quality inspection). Each process is permanently assigned to one of <num_machines> specialized machines, with exact durations specified in <processing_times>. Machines enforce single-operation processing, while panels must follow strict sequential workflows without deviation. The scheduling challenge is to minimize makespan by optimizing the alignment of all jobs across the production line, ensuring zero cross-contamination and adherence to nanoscale tolerances.",
+        "label": "jssp",
+        "index": 35
+    },
+    {
+        "desc_split": "A ceramics plant manufactures <num_jobs> tile batches through <num_stages> stages: clay mixing, pressing, glazing, kiln firing, and sorting. High-throughput stages like glazing deploy parallel robotic arms (<machines_per_stage>), while kilns operate sequentially. All batches follow the same irreversible workflow, with stage durations in <processing_times>. The objective is to minimize makespan, balancing energy-intensive kiln use and aesthetic consistency across decorative tile variants.",
+        "label": "hfssp",
+        "index": 94
+    },
+    {
+        "desc_split": "A confectionery plant crafts <num_jobs> batches of premium chocolates through <num_machines> steps: tempering, molding, cooling, and wrapping. Each batch must pass through the machines in the same order, with no overlaps on any machine. The i-th operation corresponds to the i-th machine, and times are listed in <processing_times>. The goal is to minimize the total production time (makespan) for all chocolate batches.",
+        "label": "fssp",
+        "index": 3
+    },
+    {
+        "desc_split": "A biomedical engineering lab assembles <num_jobs> components for a neural-controlled prosthetic hand across <num_machines> precision stations. Operations like servo calibration, tactile sensor alignment, and AI chip integration must follow a strict sequence (e.g., sensors cannot be tested before mechanical assembly). The dependencies in <precedence_relations> and task durations in <processing_times> guide scheduling to minimize production time for urgent patient orders.",
+        "label": "asp",
+        "index": 81
+    },
+    {
+        "desc_split": "A crime lab processes <num_jobs> evidence cases (e.g., DNA, fingerprints, toxicology) using <num_machines> specialized analysis machines. Each case must undergo all analyses, but the sequence can vary to expedite results. Processing times per analysis are defined in <processing_times>, and no machine can handle multiple cases simultaneously. The objective is to minimize the makespan—the time to complete all forensic reports.",
+        "label": "ossp",
+        "index": 31
+    },
+    {
+        "desc_split": "A military maintenance depot services <num_jobs> defense equipment units, each requiring diagnostic checks, part replacements, calibration, and final testing in sequence. Each operation can be performed by one of <num_machines> specialized repair bays or technicians, with processing times varying by resource expertise (<processing_times>). Tasks are non-preemptive and must follow a strict workflow. The scheduling goal is to minimize the total repair time while ensuring mission-critical readiness.",
+        "label": "fjssp",
+        "index": 14
+    }
+]

@@ -1,0 +1,122 @@
+[
+    {
+        "desc_split": "A movie studio transports filming equipment (<demand_linehaul>) to shooting locations (<loc_customer>) while collecting reusable props (<demand_backhaul>) from wrap sites. Trucks with <capacity> payloads leave the studio lot (<loc_depot>), optimize mixed-load routes, and terminate at the final location. Distance limits (<distance_limit> km) prevent crew overtime and reduce fuel costs.",
+        "label": "ovrpmbl",
+        "index": 13
+    },
+    {
+        "desc_split": "Marine archaeologists must deploy diving gear and equipment to underwater excavation sites (linehaul) and retrieve recovered artifacts (backhaul). Submersible vehicles have strict capacity limits (<capacity>) for both supplies and delicate finds. Routes are constrained by a maximum travel distance (<distance_limit>) due to oxygen and battery limitations. After the final artifact is secured, vessels remain at the last site to await transport to a research facility, avoiding return to the surface depot until mission completion.",
+        "label": "ovrpbl",
+        "index": 94
+    },
+    {
+        "desc_split": "An environmental agency deploys technicians to service urban beehives (<loc_customer>) for honey collection (backhaul) and sugar syrup delivery (linehaul). Vehicles with <capacity> L capacity must visit hives during optimal pollination hours (<time_windows>). Routes are limited to <distance_limit> km to minimize stress on transported bees. Technicians start at the depot (<loc_depot>) but finish at their last hive, as they conduct local ecological surveys afterward. Mixed sequencing allows prioritizing urgent hive health interventions.",
+        "label": "ovrpmbltw",
+        "index": 86
+    },
+    {
+        "desc_split": "After a natural disaster, relief organizations distribute emergency kits to affected communities. The central supply hub is at <loc_depot>, and aid stations are located at <loc_customer>. Each station requires <demand> kits, and relief trucks can carry a maximum of <capacity> kits. To ensure timely restocking, all routes must return to the depot within <distance_limit> km. Design routes to deliver all supplies without overloading trucks or exceeding distance limits.",
+        "label": "vrpl",
+        "index": 4
+    },
+    {
+        "desc_split": "A disaster response team deploys emergency kits (linehaul) to evacuation centers within critical time windows to ensure immediate aid. After the crisis subsides, used equipment like tents and medical supplies (backhaul) must be retrieved for redistribution. Each vehicle has a capacity limit for both supplies and retrieved items, and routes are constrained by distance to enable rapid response and safe return under limited fuel/resources. The priority is to prioritize urgent deliveries while efficiently repurposing assets without overloading vehicles or exceeding operational ranges.",
+        "label": "vrpbltw",
+        "index": 54
+    },
+    {
+        "desc_split": "A furniture retailer operates a program where new items are delivered to customers’ homes while collecting old furniture for recycling. Each truck must manage both outbound deliveries and inbound pickups without exceeding its capacity :math:`Q`. Since pickups and deliveries can be intermixed, planners can optimize routes by arranging stops in any sequence to balance load distribution. The warehouse and 20 customer locations are at <locs>, with delivery demands of <demand_linehaul> and pickup needs of <demand_backhaul>. The challenge is ensuring all items are transported efficiently while preventing vehicle overload.",
+        "label": "vrpmb",
+        "index": 11
+    },
+    {
+        "desc_split": "An event production firm must deliver stages, lighting rigs, and audio equipment to concert venues from the central warehouse (<loc_depot>). Each truck can carry up to <capacity> units of equipment. Each venue (<loc_customer>) requires a specific amount of gear (demand <demand>). The challenge is to plan routes that:  \n- Stay within each truck’s capacity limits.  \n- Allow drivers to end their routes at the final venue.  \n- Reduce total travel distance to cut costs and ensure all equipment arrives on time.",
+        "label": "ovrp",
+        "index": 14
+    },
+    {
+        "desc_split": "During a multi-day festival, logistics teams must restock food vendors with fresh ingredients while collecting compostable waste. Trucks (capacity <capacity>) start at a distribution center (<loc_depot>), making mixed deliveries (ingredients) and pickups (waste bins) (MB) to vendor locations (<loc_customer>). Tight time windows (<time_windows>) align with vendor break periods. Maximum route length (<distance_limit>) prevents overtime for drivers. Service times (<service_time>) account for perishable goods handling.",
+        "label": "vrpmbltw",
+        "index": 27
+    },
+    {
+        "desc_split": "A cooperative delivers farming inputs like seeds and pesticides (linehaul) to remote farms and collects harvested crops (backhaul). Each vehicle must first complete deliveries before picking up crops. Routes are constrained to a maximum of 120 km (L) to avoid driver fatigue. Farms have strict time windows for receiving supplies before dawn and crop pickups after harvest completion. Trucks with a 4-ton capacity (C) must balance outgoing and incoming loads to prevent overloading. Vehicles end their routes at the last farm visited (O), optimizing rural logistics efficiency.",
+        "label": "ovrpbltw",
+        "index": 35
+    },
+    {
+        "desc_split": "A sports league needs to transport goalposts, nets, and safety gear to stadiums (<loc_customer>) for matches (linehaul), then remove the equipment post-event (backhaul). Each venue has specific window times for setup (<time_windows>) to avoid conflicts with other events, and teardown must occur after the match ends. Equipment weight and bulk (<demand>) require careful vehicle capacity management (<capacity>). Drivers finalize their routes at the last venue, eliminating depot returns.",
+        "label": "ovrpbtw",
+        "index": 31
+    },
+    {
+        "desc_split": "A seasonal lighting service provider delivers holiday lights and decorations to residential and commercial properties before the holiday season (linehaul with customer-specified time windows). After the season, they retrieve the items (backhaul). Trucks must not exceed capacity limits, and deliveries/pickups must align with homeowners’ availability. Time windows ensure installations are completed before holidays and collections occur after the festive period.",
+        "label": "vrpbtw",
+        "index": 77
+    },
+    {
+        "desc_split": "A sustainable agriculture cooperative supplies boats (capacity <capacity>) to deliver fresh produce (<demand_linehaul>) to floating markets (<loc_customer>) and collect organic waste (<demand_backhaul>) for composting. Boats depart from a riverside hub (<loc_depot>), sequence deliveries/pickups freely (MB), and dock at the final market (O). Markets impose time windows (<time_windows>) for peak trading hours. Routes must balance perishable deliveries and waste volume while minimizing travel time.",
+        "label": "ovrpmbtw",
+        "index": 94
+    },
+    {
+        "desc_split": "A chemical supplier transports industrial drums of hazardous materials (<demand_linehaul>) to manufacturing plants (<loc_customer>) and later collects empty drums from clients (<demand_backhaul>). Due to safety protocols, empty drum pickups cannot begin until all deliveries are completed. The supplier’s trucks (<capacity>) must be carefully loaded to avoid overpacking, and each route ends at the final stop—no return to the depot (<loc_depot>). The objective is to minimize travel costs while ensuring compliance with hazardous material handling regulations and efficient drum turnover.",
+        "label": "ovrpb",
+        "index": 3
+    },
+    {
+        "desc_split": "An airport’s logistics team must redistribute luggage between terminals based on flight schedules. Each transfer has a time window :math:`[e_i, l_i]` tied to flight arrival/departure times. Baggage carts have a capacity :math:`Q` limiting the number of bags they can haul. Service time :math:`s_i` includes loading/unloading and conveyor coordination. The goal is to plan routes that adhere to flight schedules and cart capacities, minimizing delays and operational costs.",
+        "label": "vrptw",
+        "index": 64
+    },
+    {
+        "desc_split": "A touring theater production requires modular stage components delivered to venues (<loc_customer>) for overnight setup. Each venue enforces a curfew (<time_window>), allowing deliveries only during limited hours. Construction trucks (<capacity>) depart from a central warehouse (<loc_depot>), ending routes at the final stop. Routes must ensure all parts arrive within time windows while adhering to payload limits, avoiding depot returns to optimize efficiency.",
+        "label": "ovrptw",
+        "index": 69
+    },
+    {
+        "desc_split": "A renewable energy company operates offshore wind farms and must deliver maintenance supplies (e.g., lubricants, turbine blades, and electrical components) from a coastal depot to each turbine site. Each wind turbine requires specific parts, and the delivery vessels have limited cargo space. Routes must be planned to service all turbines efficiently, ensuring no vessel exceeds its capacity, while minimizing fuel consumption and operational costs. The challenge includes navigating marine routes and reaching remote offshore locations.",
+        "label": "cvrp",
+        "index": 81
+    },
+    {
+        "desc_split": "A subscription service delivers customized adaptive clothing (<demand_linehaul>) to clients with disabilities and picks up used garments (<demand_backhaul>) for cleaning. Vans (capacity <capacity>) start at a distribution center (<loc_depot>), with routes dynamically mixing deliveries and pickups based on client locations (<loc_customer>). Capacity management ensures clean and soiled items are segregated without overloading vehicles.  \n```  \n\nEach scenario emphasizes:  \n- **Open routes** (vehicles don’t return to depots)  \n- **Mixed backhauls** (flexible delivery/pickup sequencing)  \n- **Capacity constraints** (without time windows or distance limits)  \nAll descriptions avoid restricted constraints (TW, B, L, MD) while maintaining real-world plausibility.",
+        "label": "ovrpmb",
+        "index": 94
+    },
+    {
+        "desc_split": "A logistics company operates in a remote archipelago where islands depend on regular supplies. Each day, trucks must depart from a coastal depot (<loc_depot>) to deliver emergency provisions like food, medical kits, and generators (<demand_linehaul>) to isolated communities (<loc_customer>). After completing deliveries, the same trucks must collect recyclable materials (plastic, metal, and electronic waste) from the islands (<demand_backhaul>). The vessels have a maximum capacity (<capacity>) to balance outbound supplies and inbound recyclables. Additionally, each route is constrained by a distance limit (<distance_limit>) to ensure safe return without refueling, as fuel stations are nonexistent on the islands. The challenge is to optimize routes so that all islands receive critical supplies while efficiently transporting recyclables back to the mainland for processing.",
+        "label": "vrpbl",
+        "index": 75
+    },
+    {
+        "desc_split": "A production company transports sound systems, lighting rigs, and staging equipment between outdoor concert venues (<loc_customer>). Each venue has a strict setup window (<time_windows>) starting 4 hours before showtime. The trucks (<capacity>) can only carry a certain weight, and routes must not exceed a <distance_limit> to allow crews to rest between shifts. Once all equipment is unloaded at the final venue, the truck remains parked onsite to minimize logistics costs, with no need to return to the depot (<loc_depot>) that evening.",
+        "label": "ovrpltw",
+        "index": 17
+    },
+    {
+        "desc_split": "A technology firm provides businesses with new servers and computers while also collecting outdated electronics for recycling. Trucks must deliver new equipment to clients before returning to the depot with the old devices. This ensures that the vehicle’s capacity <capacity> isn’t overloaded during the initial delivery phase. The locations of the distribution center and 20 client sites are <locs>, with delivery demand <demand_linehaul> (new tech) and pickup demand <demand_backhaul> (e-waste). The goal is to design routes that minimize travel distance while adhering to capacity limits and ensuring all pickups follow deliveries.",
+        "label": "vrpb",
+        "index": 11
+    },
+    {
+        "desc_split": "A retail distributor restocks stores (<demand_linehaul>) and collects defective items (<demand_backhaul>) via trucks (capacity: <capacity>) starting at <loc_depot>. Stores (<loc_customer>) can be visited in any order, but routes must stay under <distance_limit> km to meet daily deadlines. The mixed backhaul approach avoids empty return trips, cutting costs and streamlining inventory management.",
+        "label": "vrpmbl",
+        "index": 3
+    },
+    {
+        "desc_split": "A costume rental company delivers period costumes (<demand_linehaul>) to theaters and film studios (<loc_customer>) while collecting used items (<demand_backhaul>) for dry cleaning. Time windows (<time_windows>) are dictated by rehearsal schedules and costume fitting appointments. Vehicles (<capacity>) optimize routes by interleaving deliveries (e.g., for a morning dress rehearsal) with pickups (e.g., from an evening performance), ensuring costumes are always available for the next production.",
+        "label": "vrpmbtw",
+        "index": 29
+    },
+    {
+        "desc_split": "A renewable energy company needs to deliver maintenance supplies (e.g., panels, batteries, and tools) to remote desert solar farms. Each vehicle has a capacity limit (<capacity>), and routes must stay within a distance threshold (<distance_limit>) to avoid fuel exhaustion in barren, uninhabited regions. The trucks finish their routes at the last farm, eliminating return trips. The objective is to minimize total travel distance while ensuring all farms receive their supplies.",
+        "label": "ovrpl",
+        "index": 28
+    },
+    {
+        "desc_split": "A grocery chain offers urgent delivery of perishables (e.g., dairy, meat) to <num_customer> households during a heatwave. Customers specify delivery time windows <time_windows> to ensure items stay cool, and each order has a weight (<demand>). Delivery trucks (<capacity> kg capacity) must complete routes within a <distance_limit> km limit to conserve refrigeration energy and driver stamina. The central warehouse <loc_depot> must plan paths that: (1) meet all time windows, (2) avoid overloading trucks, and (3) keep routes short enough to prevent refrigeration system failures.",
+        "label": "vrpltw",
+        "index": 3
+    }
+]

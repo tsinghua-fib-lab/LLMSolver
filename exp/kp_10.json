@@ -1,0 +1,52 @@
+[
+    {
+        "desc_split": "A fast-growing tech firm must prioritize hiring candidates, each with a salary expectation (<item_weight>) and a projected productivity score (<item_value>), given a total hiring budget (<knapsack_capacity>). The recruiter seeks the team composition yielding maximum output without breasting financial limitations.",
+        "label": "knapsack",
+        "index": 94
+    },
+    {
+        "desc_split": "An electricity distributor has a fixed power generation capacity (<knapsack_capacity>) and must prioritize powering facilities, each with demand <item_weight> and economic benefit <item_value>. The goal is to select facilities that maximize economic output without overloading the grid, ensuring stable and profitable energy distribution.",
+        "label": "knapsack",
+        "index": 3
+    },
+    {
+        "desc_split": "A jeweler must select gemstones for a signature piece, where each stone has a specific size <item_weight> and aesthetic appeal score <item_value>, working within a maximum design weight limit (<knapsack_capacity>). The challenge is to curate a visually stunning combination without exceeding the weight constraint, ensuring both beauty and wearability.",
+        "label": "knapsack",
+        "index": 35
+    },
+    {
+        "desc_split": "Aid workers must assemble survival kits with items like blankets or food packs, each having a weight <item_weight> and utility score <item_value>, limited by transport capacity (<knapsack_capacity>). The challenge is to maximize the lifesaving potential of each kit while ensuring logistical feasibility during distribution.",
+        "label": "knapsack",
+        "index": 86
+    },
+    {
+        "desc_split": "A boutique owner selects clothing items for inventory, where each piece has a shelf space requirement (<item_weight>) and projected sales revenue (<item_value>), constrained by store display capacity (<knapsack_capacity>). The task is to choose items that maximize revenue while fitting within the available space, enhancing profitability and customer appeal.",
+        "label": "knapsack",
+        "index": 31
+    },
+    {
+        "desc_split": "During a pandemic, a health organization must prioritize vaccine distribution to regions with varying population densities (<item_weight>) and expected reduction in transmission rates (<item_value>), given a limited supply of doses (<knapsack_capacity>). The goal is to maximize the overall reduction in transmission while ensuring equitable and efficient distribution.",
+        "label": "knapsack",
+        "index": 17
+    },
+    {
+        "desc_split": "A traveler must choose destinations to visit within a limited vacation time (<knapsack_capacity>), where each destination requires a certain travel time (<item_weight>) and offers a unique enjoyment score (<item_value>). The goal is to maximize the total enjoyment while fitting all selected trips into the available vacation period.",
+        "label": "knapsack",
+        "index": 81
+    },
+    {
+        "desc_split": "A building contractor must choose materials for a project, with each material having a weight (<item_weight>) and structural strength (<item_value>), subject to a maximum load limit (<knapsack_capacity>). The aim is to select materials that provide the highest strength without exceeding the load capacity, guaranteeing stability and safety.",
+        "label": "knapsack",
+        "index": 28
+    },
+    {
+        "desc_split": "A homeowner plans renovations with multiple options like flooring or kitchen upgrades, each costing <item_weight> and adding <item_value> to property value, constrained by a total budget (<knapsack_capacity>). The task is to select upgrades maximizing home value without overspending, ensuring a high return on investment.",
+        "label": "knapsack",
+        "index": 14
+    },
+    {
+        "desc_split": "A festival organizer must schedule artist performances within a fixed time slot (<knapsack_capacity>), where each performance has a duration <item_weight> and an expected audience draw <item_value>. The goal is to select acts that maximize total attendance appeal without overrunning the festival's schedule.",
+        "label": "knapsack",
+        "index": 13
+    }
+]

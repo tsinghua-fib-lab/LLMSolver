@@ -1,0 +1,7 @@
+[
+    {
+        "desc_split": "A traveler must choose destinations to visit within a limited vacation time (<knapsack_capacity>), where each destination requires a certain travel time (<item_weight>) and offers a unique enjoyment score (<item_value>). The goal is to maximize the total enjoyment while fitting all selected trips into the available vacation period.",
+        "label": "knapsack",
+        "index": 81
+    }
+]

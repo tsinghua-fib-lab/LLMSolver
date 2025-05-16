@@ -1,0 +1,202 @@
+[
+    {
+        "desc_split": "In cybersecurity, the <graph> captures trust relationships between dark web vendors, where 1 signifies a validated trust link and 0 distrust or no interaction. Pinpointing the largest clique of trusted vendors exposes resilient illicit networks for targeted law enforcement.",
+        "label": "maxclique",
+        "index": 81
+    },
+    {
+        "desc_split": "A social media graph <graph> links users (nodes) via shared interests (edges). Partitioning <num_nodes> users into two clusters to maximize inter-cluster edges allows advertisers to target divergent demographics simultaneously, increasing ad relevance and reducing audience overlap (<num_edges> interest connections).",
+        "label": "maxcut",
+        "index": 29
+    },
+    {
+        "desc_split": "In a greenhouse with <num_nodes> plant clusters and <num_edges> pest migration routes, sensors must be placed to detect infestations. The MVC problem determines the optimal sensor locations to cover all possible pest pathways while minimizing hardware costs.",
+        "label": "mvc",
+        "index": 89
+    },
+    {
+        "desc_split": "For financial analysts, the <graph> reflects correlation strengths between assets, with 1 representing high synergy (e.g., complementary returns) and 0 weak or negative alignment. Identifying the maximal group of inter-correlated assets assists in constructing diversified yet cohesive portfolios that mitigate risk.",
+        "label": "maxclique",
+        "index": 13
+    },
+    {
+        "desc_split": "For financial institutions, the <graph> captures transactions between accounts, with 1 marking suspicious activity links and 0 legitimate transfers. Detecting the largest group of accounts all linked by fraudulent transactions exposes coordinated scam networks for regulatory action.",
+        "label": "maxclique",
+        "index": 17
+    },
+    {
+        "desc_split": "In a delivery drone network <graph> with <num_nodes> hubs and <num_edges> flight paths, charging stations must cover all routes. Placing stations at a minimal set of hubs guarantees drones can recharge on any path, maximizing operational range with minimal infrastructure.",
+        "label": "mvc",
+        "index": 43
+    },
+    {
+        "desc_split": "In an urban area modeled as <graph> with <num_nodes> noise sensors and <num_edges> connections between adjacent zones, authorities aim to deploy monitoring devices at key locations. By selecting the smallest set of nodes where each zone boundary is covered, the system ensures comprehensive noise pollution tracking while minimizing equipment costs.",
+        "label": "mvc",
+        "index": 75
+    },
+    {
+        "desc_split": "In a farmland irrigation system represented as <graph>, where nodes are valves and edges are pipes, engineers must ensure every pipe is monitored for leaks or blockages. Selecting the smallest set of valves to install sensors guarantees full pipe coverage while minimizing equipment costs. The system has <num_nodes> valves and <num_edges> pipes.",
+        "label": "mvc",
+        "index": 35
+    },
+    {
+        "desc_split": "In a federated learning system with <num_nodes> devices and <num_edges> data similarity links, a coordinator must select devices for training rounds such that no two share sensitive data patterns. A maximal independent set ensures diverse, non-redundant contributions while preserving privacy.",
+        "label": "mis",
+        "index": 69
+    },
+    {
+        "desc_split": "In a co-authorship network <graph> with <num_nodes> researchers and <num_edges> collaborations, funding agencies must monitor research integrity. Selecting a minimal group of researchers to audit ensures all collaborations are reviewed, balancing oversight efficiency with comprehensive coverage.",
+        "label": "mvc",
+        "index": 19
+    },
+    {
+        "desc_split": "A financial network <graph> represents accounts (nodes) and suspicious transactions (edges). Separating accounts into two groups to maximize flagged transactions between groups isolates potential fraud rings. The graph includes <num_nodes> accounts and <num_edges> high-risk transactions.",
+        "label": "maxcut",
+        "index": 4
+    },
+    {
+        "desc_split": "For autonomous vehicles, the <graph> shows redundancy between sensor pairs, with 1 indicating consistent readings and 0 divergence. Locating the largest cluster of perfectly aligned sensors ensures failsafe perception systems critical for passenger safety.",
+        "label": "maxclique",
+        "index": 35
+    },
+    {
+        "desc_split": "In an advanced power distribution network modeled as <graph> with <num_nodes> substations and <num_edges> transmission lines, sensors must be deployed to detect faults. The MVC solution identifies the minimal set of substations where sensors can monitor all lines, ensuring rapid fault detection while reducing installation costs.",
+        "label": "mvc",
+        "index": 20
+    },
+    {
+        "desc_split": "A border region’s patrol zones are mapped as <graph>, with zones as nodes and adjacent boundaries as edges. Deploying drones at the minimum number of zones ensures every border segment is monitored, optimizing surveillance resources while maintaining security across <num_edges> boundary lines.",
+        "label": "mvc",
+        "index": 57
+    },
+    {
+        "desc_split": "In a style influence graph <graph>, artworks are <num_nodes> nodes and edges reflect stylistic similarities. Partitioning artworks into two groups to maximize stylistic differences between them helps curators or algorithms create distinct thematic exhibitions or training datasets.",
+        "label": "maxcut",
+        "index": 94
+    },
+    {
+        "desc_split": "A forest is mapped as <graph>, where trees (<num_nodes> nodes) are connected if their root systems overlap (<num_edges> edges). An MIS identifies trees that can be harvested without destabilizing neighboring trees, ensuring sustainable logging and soil preservation.",
+        "label": "mis",
+        "index": 28
+    },
+    {
+        "desc_split": "A content delivery network (CDN) uses <graph> to model edge servers (<num_nodes>) and their latency-dependent overlaps (<num_edges>). To optimize cache updates, an MIS of servers is selected to synchronize data without redundancy, reducing bandwidth strain while maintaining coverage.",
+        "label": "mis",
+        "index": 53
+    },
+    {
+        "desc_split": "A power grid’s control network is represented as <graph> with <num_nodes> control units and <num_edges> communication links. To defend against cyberattacks, operators must deploy intrusion detectors at the fewest possible units, guaranteeing every data link is monitored without redundancy.",
+        "label": "mvc",
+        "index": 97
+    },
+    {
+        "desc_split": "In a room-occupancy graph <graph>, nodes are rooms and edges represent shared occupancy patterns. Partitioning rooms into two lighting zones to maximize co-usage edges between zones allows adaptive lighting schedules that reduce energy waste while maintaining user comfort. The system monitors <num_nodes> rooms and <num_edges> co-usage relationships.",
+        "label": "maxcut",
+        "index": 69
+    },
+    {
+        "desc_split": "In a music similarity graph <graph>, nodes are songs and edges indicate shared acoustic features. Partitioning songs into two clusters to maximize cross-cluster edges allows AI systems to create hybrid playlists that blend genres seamlessly while preserving distinct stylistic boundaries. The graph comprises <num_nodes> nodes and <num_edges> edges.",
+        "label": "maxcut",
+        "index": 64
+    },
+    {
+        "desc_split": "For a logistics network <graph> with <num_nodes> warehouses and <num_edges> overlapping delivery ranges, a drone operator must choose hubs to activate simultaneously. An MIS ensures no two active hubs are within interference range, optimizing package throughput while avoiding mid-air collisions or signal jamming.",
+        "label": "mis",
+        "index": 77
+    },
+    {
+        "desc_split": "In national security, the <graph> maps suspected communication between operatives (1 for confirmed contacts and 0 for no observed links). Finding the maximum interconnected agent cell exposes potential infiltration rings that require immediate counter-surveillance measures.",
+        "label": "maxclique",
+        "index": 86
+    },
+    {
+        "desc_split": "An oceanographic mission uses <num_nodes> AUVs and <num_edges> proximity constraints (e.g., sonar interference) to map a region. By activating a maximal independent set of AUVs, the team avoids signal collisions while covering the largest possible area in parallel.",
+        "label": "mis",
+        "index": 89
+    },
+    {
+        "desc_split": "Within malware detection, the <graph> documents connections between infected devices, with 1 showing communication during an attack and 0 representing no interaction. Security teams search for the maximal interconnected device cluster to pinpoint botnet command centers, allowing targeted dismantling of coordinated cyberattacks.",
+        "label": "maxclique",
+        "index": 3
+    },
+    {
+        "desc_split": "In a CDN topology <graph>, servers are <num_nodes> nodes and high-latency connections are <num_edges> edges. Splitting servers into two geographically distinct clusters while maximizing cross-cluster traffic ensures efficient content replication and minimizes latency for end-users by distributing load evenly.",
+        "label": "maxcut",
+        "index": 11
+    },
+    {
+        "desc_split": "For genomic research, the <graph> maps co-occurring genetic variants in patient populations, where 1 denotes statistically significant variant pairing and 0 independent occurrence. Discovering the largest interconnected variant group helps pinpoint potential polygenic risk factors for complex hereditary disorders.",
+        "label": "maxclique",
+        "index": 94
+    },
+    {
+        "desc_split": "Conservationists represent habitats as <graph> (<num_nodes> patches, <num_edges> migration paths). Maximizing cut edges when partitioning habitats into two zones ensures species can migrate between zones while minimizing fragmentation within each zone, balancing biodiversity preservation and human land use.",
+        "label": "maxcut",
+        "index": 27
+    },
+    {
+        "desc_split": "In a heritage site dependency graph <graph>, nodes are artifacts or locations, and edges denote historical or contextual links. Splitting the sites into two preservation tiers to maximize cross-tier dependencies ensures balanced resource allocation, protecting both high-priority and contextually critical assets across <num_nodes> sites and <num_edges> connections.",
+        "label": "maxcut",
+        "index": 54
+    },
+    {
+        "desc_split": "In a federated learning system represented by <graph> with <num_nodes> nodes and <num_edges> edges, a subset of devices must be chosen to train local AI models without overlapping data dependencies. Selecting an MIS ensures diverse, non-redundant training while minimizing communication overhead between connected devices.",
+        "label": "mis",
+        "index": 25
+    },
+    {
+        "desc_split": "In culinary operations, the <graph> tracks ingredient pairings across dishes, where 1 denotes frequent co-occurrence (e.g., tomato-basil) and 0 rare combination. Finding the largest fully compatible ingredient subset enables chefs to design cohesive menus that maximize cross-utilization and reduce inventory waste.",
+        "label": "maxclique",
+        "index": 14
+    },
+    {
+        "desc_split": "A federated learning network <graph> connects <num_nodes> devices with <num_edges> communication links. To train a global model without leaking sensitive data, a maximal independent set of devices is selected to ensure no two collaborating devices share direct connections, enhancing privacy.",
+        "label": "mis",
+        "index": 83
+    },
+    {
+        "desc_split": "In a habitat connectivity graph <graph>, nodes are wildlife zones and edges are migration corridors. Partitioning zones into two reserves to maximize corridor crossings between them promotes genetic diversity by forcing species to traverse both reserves, with <num_nodes> zones and <num_edges> corridors.",
+        "label": "maxcut",
+        "index": 3
+    },
+    {
+        "desc_split": "In an outbreak scenario, a contact tracing graph <graph> with <num_nodes> individuals and <num_edges> interactions is analyzed. To identify all potential infections, health officials must test the smallest possible group of people such that every close contact pair includes at least one tested individual, optimizing testing resources.",
+        "label": "mvc",
+        "index": 0
+    },
+    {
+        "desc_split": "A fleet of surveillance drones operates over a region divided into zones (<graph> with <num_nodes> zones and <num_edges> overlapping coverage areas). To avoid redundant monitoring, drones must be assigned to zones such that no two adjacent zones are surveilled, optimizing resource usage and minimizing interference.",
+        "label": "mis",
+        "index": 71
+    },
+    {
+        "desc_split": "A supply chain network <graph> consists of <num_nodes> suppliers and <num_edges> transactions. Auditors must select the smallest set of suppliers to investigate, ensuring that every transaction involving a high-risk supplier is scrutinized for fraud.",
+        "label": "mvc",
+        "index": 54
+    },
+    {
+        "desc_split": "A warehouse with <num_nodes> robot zones and <num_edges> overlapping paths requires charging stations to be placed such that no two stations are adjacent. This ensures robots can recharge without traffic jams, optimizing workflow in <graph>.",
+        "label": "mis",
+        "index": 91
+    },
+    {
+        "desc_split": "For space agencies, the <graph> tracks proximity alerts between orbiting satellites, where 1 represents a potential collision risk and 0 signifies safe separation. Detecting the largest group of mutually at-risk satellites allows for preemptive maneuvers to avoid cascading collisions in congested orbital zones.",
+        "label": "maxclique",
+        "index": 31
+    },
+    {
+        "desc_split": "For music streaming platforms, the <graph> captures compatibility between songs, with 1 denoting a harmonious transition and 0 indicating a mismatch. The aim is to discover the largest subset of songs that all transition smoothly into one another, enabling the creation of flawlessly flowing playlists that enhance listener experience.",
+        "label": "maxclique",
+        "index": 28
+    },
+    {
+        "desc_split": "For a drone-based surveillance system operating over a grid <graph> of <num_nodes> zones and <num_edges> overlapping patrol ranges, an MIS selects non-adjacent zones for simultaneous drone deployment. This maximizes area coverage while preventing redundant monitoring or mid-air collisions.",
+        "label": "mis",
+        "index": 3
+    },
+    {
+        "desc_split": "In a city's transportation network modeled as <graph>, nodes represent high-demand zones and edges indicate frequent ride transitions between zones. By partitioning the zones into two pricing groups (<num_nodes> nodes, <num_edges> edges) to maximize cross-group transitions, operators can implement dynamic pricing strategies that optimize driver allocation and reduce wait times.",
+        "label": "maxcut",
+        "index": 75
+    }
+]

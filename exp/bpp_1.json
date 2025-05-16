@@ -1,0 +1,42 @@
+[
+    {
+        "desc_split": "Modular hydroponic systems grow plants in rectangular trays <items_size> placed across shelving units <bin_size>. Tray deliveries are intermittent, and future dimensions are unpredictable. Trays can rotate for better space utilization, considering only 2D footprints. The objective is rearranging existing trays in real-time to accommodate new arrivals while minimizing unused shelf area.",
+        "label": "2DONBPPR",
+        "index": 94
+    },
+    {
+        "desc_split": "An automated recycling facility processes irregularly shaped scrap metal pieces loaded into compaction bunkers with dimensions <bin_size>. Conveyor belts deliver mixed scrap chunks with variable dimensions <items_size> in real-time, and robotic arms must place each piece instantly without buffering future items. The system can freely rotate fragments along all axes (length/width/height) to achieve maximum density before hydraulic crushing. The operation aims to minimize the number of bunker cycles required per ton processed.",
+        "label": "3DONBPPR",
+        "index": 17
+    },
+    {
+        "desc_split": "Garment factories place rectangular fabric patterns (<items_size>) on large rolls of cloth (<bin_size>) in real-time as orders arrive, without prior knowledge of future patterns. The objective is to minimize fabric waste by optimizing pattern arrangement based only on their length and width.",
+        "label": "2DONBPP",
+        "index": 3
+    },
+    {
+        "desc_split": "In electronics manufacturing, circuit boards (<bin_size>) must accommodate various components (<items_size>) such as resistors, capacitors, and chips. The challenge is to place all components on the board without overlaps, considering only their length and width, to maximize space utilization and ensure proper functionality. Efficient placement reduces the need for larger boards and optimizes production efficiency.",
+        "label": "2DOFBPP",
+        "index": 81
+    },
+    {
+        "desc_split": "A winery needs to stack oak aging barrels in their cellar with constrained floor space and ceiling height <bin_size>. The barrels come in multiple sizes due to different wine batches and aging processes <items_size>. The aim is to optimize vertical and horizontal arrangement to store the maximum number of barrels while allowing proper air circulation for aging.",
+        "label": "3DOFBPP",
+        "index": 35
+    },
+    {
+        "desc_split": "During military field deployments, equipment such as communication devices, ammunition, and field rations (<items_size>) need to be packed into customized transport crates (<bin_size>) for rapid mobilization. The items arrive one by one without prior knowledge of their dimensions, requiring real-time 3D arrangement to optimize crate space while considering their length, width, and height. Efficient packing ensures fewer crates are used, speeding up deployment logistics.",
+        "label": "3DONBPP",
+        "index": 28
+    },
+    {
+        "desc_split": "For transporting freshly caught fish in specialized refrigerated containers from fishing vessels to processing plants, the containers have strict <bin_size> (length, width, and height) limits, while fish crates and storage units come in mixed <items_size> (length, width, and height). All crates can be rotated to achieve the densest packing configuration, with the objective being to reduce wasted chilled space while ensuring proper airflow around each crate to maintain quality.",
+        "label": "3DOFBPPR",
+        "index": 31
+    },
+    {
+        "desc_split": "In the renewable energy sector, solar panels of size <items_size> must be arranged on residential or commercial roofs of size <bin_size> to maximize energy generation while minimizing unused space. Each panel can be rotated 90 degrees to fit more efficiently, and only the length and width are considered as thickness is uniform and negligible for placement purposes. The goal is to cover the roof area with as few gaps as possible while ensuring the panels adhere to structural and safety constraints.",
+        "label": "2DOFBPPR",
+        "index": 14
+    }
+]

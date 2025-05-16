@@ -1,0 +1,14 @@
+{
+  "deepseek-reasoner": {
+    "log_file": "/data1/shy/zgc/llm_solver/LLMSolver/log/classification_log_deepseek-reasoner_20250508_011139.txt"
+  },
+  "deepseek-chat": {
+    "log_file": "/data1/shy/zgc/llm_solver/LLMSolver/log/classification_log_deepseek-chat_20250508_013212.txt"
+  },
+  "qwen-max": {
+    "log_file": "/data1/shy/zgc/llm_solver/LLMSolver/log/classification_log_qwen-max_20250508_030236.txt"
+  },
+  "qwen-plus": {
+    "log_file": "/data1/shy/zgc/llm_solver/LLMSolver/log/classification_log_qwen-plus_20250508_030634.txt"
+  }
+}

@@ -1,0 +1,502 @@
+[
+    {
+        "desc_split": "A defense strategist must allocate a transport plane's cargo limit (<knapsack_capacity>) to various mission-critical supplies, each with weight <item_weight> and strategic value <item_value>. The objective is to maximize the total strategic value of deployed equipment while staying within the weight limit, ensuring mission success.",
+        "label": "knapsack",
+        "index": 2
+    },
+    {
+        "desc_split": "A theater manager must curate a snack menu with items each requiring a certain shelf space (<item_weight>) and generating a specific profit (<item_value>), given limited display space (<knapsack_capacity>). The aim is to select the most profitable combination of snacks without exceeding the available space.",
+        "label": "knapsack",
+        "index": 21
+    },
+    {
+        "desc_split": "A boutique owner selects clothing items for inventory, where each piece has a shelf space requirement (<item_weight>) and projected sales revenue (<item_value>), constrained by store display capacity (<knapsack_capacity>). The task is to choose items that maximize revenue while fitting within the available space, enhancing profitability and customer appeal.",
+        "label": "knapsack",
+        "index": 31
+    },
+    {
+        "desc_split": "A studio must choose scripts for production, where each script has a production cost <item_weight> and projected box office revenue <item_value>, operating under a capped production fund (<knapsack_capacity>). The challenge is to assemble a slate of films that maximizes earnings without violating budget limits, shaping the studio's annual success.",
+        "label": "knapsack",
+        "index": 54
+    },
+    {
+        "desc_split": "An event organizer needs to select talks from a pool of submissions, where each talk has a duration <item_weight> and an attendee interest rating <item_value>, constrained by a total session time (<knapsack_capacity>). The challenge is to schedule talks to maximize audience engagement without exceeding the time limit.",
+        "label": "knapsack",
+        "index": 6
+    },
+    {
+        "desc_split": "A curator must select artwork for an exhibition where each piece has a display space requirement (<item_weight>) and an estimated visitor appeal score (<item_value>), within a fixed gallery space limit (<knapsack_capacity>). The challenge is to arrange a visually striking and cohesive collection that maximizes visitor engagement without overcrowding the venue, elevating the exhibition's prestige.",
+        "label": "knapsack",
+        "index": 89
+    },
+    {
+        "desc_split": "A film director has a fixed rental budget (<knapsack_capacity>) and must select filming equipment, where each item has a rental cost (<item_weight>) and a creative impact score (<item_value>). The goal is to maximize artistic value while staying within budget, ensuring no unnecessary overspending on equipment that won't significantly enhance the production.",
+        "label": "knapsack",
+        "index": 71
+    },
+    {
+        "desc_split": "Machine learning engineers must choose training datasets with total storage limitation (<knapsack_capacity>), where each dataset has size <item_weight> and predictive quality score <item_value>. The optimal subset maximizes model accuracy potential while respecting infrastructure constraints, crucially impacting AI performance.",
+        "label": "knapsack",
+        "index": 61
+    },
+    {
+        "desc_split": "A student must choose elective courses, each with a study time commitment <item_weight> and a personal interest score <item_value>, within a total available time (<knapsack_capacity>). The aim is to select courses that maximize satisfaction while balancing workload, ensuring a manageable schedule.",
+        "label": "knapsack",
+        "index": 8
+    },
+    {
+        "desc_split": "A farmer needs to select crops to plant, each requiring a specific amount of water (<item_weight>) and yielding a certain profit (<item_value>), subject to a fixed water supply constraint (<knapsack_capacity>). The challenge is to choose the optimal crop mix to maximize profit without exceeding the available water resources.",
+        "label": "knapsack",
+        "index": 18
+    },
+    {
+        "desc_split": "A smartphone manufacturer needs to select components (e.g., camera, processor, battery) for a new model, with each component having a power consumption <item_weight> and a performance rating <item_value>, given a total power budget (<knapsack_capacity>). The challenge is to maximize device performance without exceeding energy constraints, optimizing user experience.",
+        "label": "knapsack",
+        "index": 42
+    },
+    {
+        "desc_split": "A pharmacist must fill limited shelf space (<knapsack_capacity>) with medications, each occupying a shelf footprint (<item_weight>) and generating a profit rate (<item_value>). The task is to prioritize high-profit medicines while avoiding shelf overcrowding, ensuring both customer needs and business profitability are met efficiently.",
+        "label": "knapsack",
+        "index": 72
+    },
+    {
+        "desc_split": "A horology curator assembles an exhibition collection constrained by display case capacity (<knapsack_capacity>), evaluating timepieces by rarity/scarcity <item_weight> and cultural significance <item_value>. The challenge lies in selecting the most historically valuable ensemble that physically fits the showcase, creating an impactful visitor experience.",
+        "label": "knapsack",
+        "index": 60
+    },
+    {
+        "desc_split": "An HR department must schedule interviews for qualified candidates, each requiring a time slot <item_weight> and possessing a skill score <item_value>, given a total available interview time (<knapsack_capacity>). The objective is to maximize the aggregate skill level of interviewed candidates without exceeding the allotted time.",
+        "label": "knapsack",
+        "index": 39
+    },
+    {
+        "desc_split": "A film studio must select scenes to include in a movie, with each scene having a production cost <item_weight> and an estimated audience engagement score <item_value>, given a total budget limit (<knapsack_capacity>). The goal is to maximize the film's overall appeal without surpassing the budget, ensuring a compelling yet financially feasible final cut.",
+        "label": "knapsack",
+        "index": 16
+    },
+    {
+        "desc_split": "A jeweler must select gemstones for a signature piece, where each stone has a specific size <item_weight> and aesthetic appeal score <item_value>, working within a maximum design weight limit (<knapsack_capacity>). The challenge is to curate a visually stunning combination without exceeding the weight constraint, ensuring both beauty and wearability.",
+        "label": "knapsack",
+        "index": 35
+    },
+    {
+        "desc_split": "A startup must furnish its office with furniture and equipment, where each item takes up space <item_weight> and contributes to employee productivity <item_value>, facing limited office square footage (<knapsack_capacity>). The goal is to optimize workspace utility while avoiding overcrowding, enhancing operational efficiency.",
+        "label": "knapsack",
+        "index": 55
+    },
+    {
+        "desc_split": "A nonprofit organization must allocate a fixed donation budget (<knapsack_capacity>) across multiple causes, each with a funding requirement (<item_weight>) and an estimated social impact (<item_value>). The goal is to distribute funds to maximize total social benefit while staying within the budget constraints.",
+        "label": "knapsack",
+        "index": 20
+    },
+    {
+        "desc_split": "A funding agency must distribute research grants among proposals, where each proposal requires a funding amount <item_weight> and has an anticipated scientific impact <item_value>, limited by the total grant pool (<knapsack_capacity>). The task is to maximize collective impact while adhering to funding limits, fostering high-quality research.",
+        "label": "knapsack",
+        "index": 24
+    },
+    {
+        "desc_split": "An electricity distributor has a fixed power generation capacity (<knapsack_capacity>) and must prioritize powering facilities, each with demand <item_weight> and economic benefit <item_value>. The goal is to select facilities that maximize economic output without overloading the grid, ensuring stable and profitable energy distribution.",
+        "label": "knapsack",
+        "index": 3
+    },
+    {
+        "desc_split": "A retailer must stock a limited warehouse space (<knapsack_capacity>) with products, each consuming shelf space <item_weight> and generating profit <item_value>. The challenge is to select the optimal product mix to maximize profits without exceeding storage capacity, improving supply chain efficiency.",
+        "label": "knapsack",
+        "index": 1
+    },
+    {
+        "desc_split": "A logistics company aims to replace outdated vehicles with new models for improved efficiency. Each candidate vehicle has a purchase cost (<item_weight>) and an estimated productivity gain (<item_value>), with an upper budget limit (<knapsack_capacity>). The objective is to select vehicles that collectively enhance operational capability without exceeding financial constraints.",
+        "label": "knapsack",
+        "index": 82
+    },
+    {
+        "desc_split": "Disaster relief organizations must optimize survival kits by selecting items with weight <item_weight> and lifesaving priority <item_value>, limited by humanitarian airlift capacity (<knapsack_capacity>). The solution directly impacts the effectiveness of crisis response operations.",
+        "label": "knapsack",
+        "index": 80
+    },
+    {
+        "desc_split": "A logistics company needs to select a fleet of vehicles for delivery, where each vehicle has a maintenance cost <item_weight> and a cargo capacity <item_value>, with a total budget constraint (<knapsack_capacity>). The goal is to maximize total cargo capacity while staying within the financial limit, ensuring efficient fleet deployment.",
+        "label": "knapsack",
+        "index": 37
+    },
+    {
+        "desc_split": "A curator at Sotheby's must bid on paintings, each with a price <item_weight> and an artistic significance score <item_value>, within a total acquisition budget (<knapsack_capacity>). The objective is to assemble the most valuable collection without overspending, preserving cultural heritage.",
+        "label": "knapsack",
+        "index": 67
+    },
+    {
+        "desc_split": "In drug discovery, researchers must select potential drug candidates from a pool, each with a research cost <item_weight> and an estimated success rate <item_value>, given a tight research budget (<knapsack_capacity>). The aim is to maximize the likelihood of breakthroughs while staying within financial constraints, accelerating effective treatments.",
+        "label": "knapsack",
+        "index": 53
+    },
+    {
+        "desc_split": "A crypto miner needs to select mining rig components, each requiring a specific power draw (<item_weight>) and generating a mining revenue (<item_value>), with a fixed electricity budget (<knapsack_capacity>). The solution finds the most profitable hardware combination while staying within power constraints.",
+        "label": "knapsack",
+        "index": 93
+    },
+    {
+        "desc_split": "A social media company filters flagged posts, assigning each a moderation time cost (<item_weight>) and a severity score (<item_value>), with a daily moderator workload cap (<knapsack_capacity>). The ideal workflow processes the most critical content within available human review hours.",
+        "label": "knapsack",
+        "index": 96
+    },
+    {
+        "desc_split": "A fast-growing tech firm must prioritize hiring candidates, each with a salary expectation (<item_weight>) and a projected productivity score (<item_value>), given a total hiring budget (<knapsack_capacity>). The recruiter seeks the team composition yielding maximum output without breasting financial limitations.",
+        "label": "knapsack",
+        "index": 94
+    },
+    {
+        "desc_split": "A national park must decide which species to prioritize for protection efforts, where each species has a conservation cost <item_weight> and an ecological importance score <item_value>, given a fixed funding limit (<knapsack_capacity>). The goal is to maximize ecological benefit while staying within budget, ensuring sustainable biodiversity management.",
+        "label": "knapsack",
+        "index": 5
+    },
+    {
+        "desc_split": "NASA must prepare cargo shipments to the International Space Station, where each supply item has a weight <item_weight> and scientific value <item_value>, subject to the rocket's payload capacity <knapsack_capacity>. The mission planners must prioritize cargo that maximizes research utility without overloading the launch vehicle.",
+        "label": "knapsack",
+        "index": 97
+    },
+    {
+        "desc_split": "A shipping company needs to pack items into a truck where each box has a weight <item_weight> and a delivery priority <item_value>, given the truck's maximum load capacity (<knapsack_capacity>). The objective is to prioritize high-value shipments while staying within weight constraints, optimizing delivery efficiency.",
+        "label": "knapsack",
+        "index": 33
+    },
+    {
+        "desc_split": "A cruise line designer must choose amenities like spas or theaters, each with a space requirement <item_weight> and passenger satisfaction score <item_value>, given a fixed deck area (<knapsack_capacity>). The aim is to optimize guest experience by selecting amenities that deliver the highest satisfaction within space constraints.",
+        "label": "knapsack",
+        "index": 85
+    },
+    {
+        "desc_split": "A high-end car manufacturer offers optional features, each with an added cost (<item_weight>) and a perceived luxury value (<item_value>), given a customer's budget (<knapsack_capacity>). The challenge is to recommend a feature combination that maximizes exclusivity without exceeding the buyer's spending limit.",
+        "label": "knapsack",
+        "index": 45
+    },
+    {
+        "desc_split": "In a pharmaceutical laboratory, researchers must choose among multiple chemical compounds for an experiment, each with a toxicity level <item_weight> and an efficacy score <item_value>, constrained by a maximum allowable toxicity threshold (<knapsack_capacity>). The aim is to maximize efficacy while staying within safety limits, ensuring sustainable drug development.",
+        "label": "knapsack",
+        "index": 41
+    },
+    {
+        "desc_split": "A tourist wants to pack activities into a trip, where each activity has a duration <item_weight> and a enjoyment score <item_value>, constrained by available vacation time (<knapsack_capacity>). The objective is to choose activities that maximize enjoyment without exceeding time limits, creating an ideal travel experience.",
+        "label": "knapsack",
+        "index": 25
+    },
+    {
+        "desc_split": "Aid workers must assemble survival kits with items like blankets or food packs, each having a weight <item_weight> and utility score <item_value>, limited by transport capacity (<knapsack_capacity>). The challenge is to maximize the lifesaving potential of each kit while ensuring logistical feasibility during distribution.",
+        "label": "knapsack",
+        "index": 86
+    },
+    {
+        "desc_split": "A designer must furnish a yacht cabin with high-end decor items, where each piece occupies <item_weight> space and contributes <item_value> to aesthetic appeal, staying within a strict space constraint (<knapsack_capacity>). The aim is to curate items that create the most luxurious atmosphere without overcrowding the cabin.",
+        "label": "knapsack",
+        "index": 75
+    },
+    {
+        "desc_split": "A racing team must choose which tools to stock in their pit crew kit, where each tool has a weight <item_weight> and a time-saving impact <item_value>, constrained by the pit cart's weight limit (<knapsack_capacity>). The aim is to minimize pit stop duration while adhering to equipment restrictions.",
+        "label": "knapsack",
+        "index": 68
+    },
+    {
+        "desc_split": "A catering service must create a menu for a wedding within a client's budget (<knapsack_capacity>), where each dish has an ingredient cost <item_weight> and guest satisfaction score <item_value>. The task is to curate a menu that delights without overspending, ensuring a memorable culinary experience.",
+        "label": "knapsack",
+        "index": 56
+    },
+    {
+        "desc_split": "An event planner curates gift bags for VIP attendees, where each item has a procurement cost (<item_weight>) and a perceived exclusivity value (<item_value>), given a rigid per-bag budget (<knapsack_capacity>). The task is to create the most impressive assortment while respecting financial constraints, ensuring guest satisfaction and brand prestige.",
+        "label": "knapsack",
+        "index": 91
+    },
+    {
+        "desc_split": "An audiophile wants to assemble a premium home theater system with a fixed budget (<knapsack_capacity>). Each component (speakers, receiver, etc.) has a price tag (<item_weight>) and a subjective quality rating (<item_value>). The challenge lies in picking components that deliver the best overall quality while staying within the spending limit.",
+        "label": "knapsack",
+        "index": 83
+    },
+    {
+        "desc_split": "A gift shop aims to pack a set of wrapped presents, where each gift has a package weight <item_weight> and a customer satisfaction score <item_value>, subject to a maximum handling weight (<knapsack_capacity>). The challenge is to maximize customer satisfaction without overloading the delivery staff.",
+        "label": "knapsack",
+        "index": 38
+    },
+    {
+        "desc_split": "A casting director must choose models for a runway show, where each model requires <item_weight> preparation time and provides <item_value> in audience impact, working within a fixed schedule (<knapsack_capacity>). The task is to assemble a lineup that maximizes showstopping moments while adhering to time constraints.",
+        "label": "knapsack",
+        "index": 76
+    },
+    {
+        "desc_split": "A travel agency needs to design a tour package where each attraction has a visiting time (<item_weight>) and a popularity score (<item_value>), constrained by the total available time (<knapsack_capacity>). The objective is to select attractions that maximize tourist satisfaction while fitting within the schedule, ensuring a memorable and efficient trip.",
+        "label": "knapsack",
+        "index": 44
+    },
+    {
+        "desc_split": "In a role-playing game, a player must equip their character with a combination of weapons and armor, each contributing a stat boost (<item_value>) but also adding to the weight burden (<item_weight>), given a strict encumbrance limit (<knapsack_capacity>). The aim is to maximize combat effectiveness while avoiding movement penalties by carefully selecting gear within the weight constraint, enhancing gameplay strategy and realism.",
+        "label": "knapsack",
+        "index": 88
+    },
+    {
+        "desc_split": "A traveler must choose destinations to visit within a limited vacation time (<knapsack_capacity>), where each destination requires a certain travel time (<item_weight>) and offers a unique enjoyment score (<item_value>). The goal is to maximize the total enjoyment while fitting all selected trips into the available vacation period.",
+        "label": "knapsack",
+        "index": 81
+    },
+    {
+        "desc_split": "A cloud provider needs to distribute server resources (<knapsack_capacity>) among competing customer requests, each requiring computational power <item_weight> and promising revenue <item_value>. The goal is to maximize total revenue by selecting the most profitable requests while adhering to resource constraints, ensuring efficient utilization of infrastructure.",
+        "label": "knapsack",
+        "index": 0
+    },
+    {
+        "desc_split": "A logistics manager must pack a shipping container with goods, where each item has a specific volume (<item_weight>) and revenue potential (<item_value>), constrained by the container's maximum capacity (<knapsack_capacity>). The aim is to prioritize high-revenue goods while utilizing space efficiently, minimizing wasted capacity and maximizing profitability per shipment.",
+        "label": "knapsack",
+        "index": 69
+    },
+    {
+        "desc_split": "A hospital needs to allocate limited resources (<knapsack_capacity>) to treatments, each with a cost <item_weight> and a patient survival benefit <item_value>. The goal is to maximize lives saved while staying within budgetary limits, optimizing healthcare delivery under constraints.  (Note: All output is in a single paragraph as requested, with varied language styles and distinct scenarios not overlapping with the excluded list.)",
+        "label": "knapsack",
+        "index": 9
+    },
+    {
+        "desc_split": "When relocating fragile artifacts, curators must choose items with varying transport risk (<item_weight>) and cultural significance (<item_value>), constrained by insurance coverage limits (<knapsack_capacity>). The optimal selection preserves invaluable pieces while minimizing potential damage claims.",
+        "label": "knapsack",
+        "index": 78
+    },
+    {
+        "desc_split": "A hiker planning a multi-day trek must pack essential gear into a backpack with a strict weight limit (<knapsack_capacity>). Each item has a weight <item_weight> and a survival utility score <item_value>. The challenge is to select gear that optimizes survival utility while staying within the backpack's weight limit for a safe journey.",
+        "label": "knapsack",
+        "index": 12
+    },
+    {
+        "desc_split": "Engineers must select instruments for a satellite mission where each device has a mass <item_weight> and scientific value <item_value>, constrained by the rocket's payload limit (<knapsack_capacity>). The goal is to maximize the mission's scientific output while adhering to weight restrictions, ensuring the most impactful research tools are included.",
+        "label": "knapsack",
+        "index": 84
+    },
+    {
+        "desc_split": "A manufacturing company needs to decide which products to include in its next product line, where each product has a production cost <item_weight> and an estimated market revenue <item_value>, subject to a total production budget (<knapsack_capacity>). The aim is to select products that maximize revenue while staying within budgetary constraints, ensuring optimal profitability.",
+        "label": "knapsack",
+        "index": 22
+    },
+    {
+        "desc_split": "Humanitarian agencies pre-assemble emergency kits with limited transport weight (<knapsack_capacity>), choosing among various relief items each with volume/weight <item_weight> and lifesaving priority score <item_value>. The operation demands optimal item combinations that deliver maximum crisis relief efficiency under logistical limitations.",
+        "label": "knapsack",
+        "index": 59
+    },
+    {
+        "desc_split": "A curator must select movies for a festival where each film has a runtime <item_weight> and an audience appeal score <item_value>, constrained by the total available screening time (<knapsack_capacity>). The challenge is to maximize audience satisfaction by picking the most appealing films without exceeding the schedule limits, ensuring an engaging lineup.",
+        "label": "knapsack",
+        "index": 32
+    },
+    {
+        "desc_split": "A sports nutritionist needs to design balanced meals for an athlete, where each food item has a specific calorie count <item_weight> and nutritional score <item_value>, given a daily calorie limit <knapsack_capacity>. The goal is to maximize nutritional intake while staying within calorie constraints, ensuring peak performance.",
+        "label": "knapsack",
+        "index": 63
+    },
+    {
+        "desc_split": "A space agency must decide which scientific instruments (<item_weight>) to include in a rocket payload, each offering a unique scientific value (<item_value>), while adhering to a strict weight limit (<knapsack_capacity>). The objective is to maximize the scientific output of the mission without surpassing the payload capacity.",
+        "label": "knapsack",
+        "index": 19
+    },
+    {
+        "desc_split": "A warehouse manager needs to organize products on storage racks, where each item demands space <item_weight> and generates a profit margin <item_value>, constrained by the total shelf capacity (<knapsack_capacity>). The goal is to arrange products to maximize profit while using the rack space optimally.",
+        "label": "knapsack",
+        "index": 40
+    },
+    {
+        "desc_split": "An investor evaluates properties with acquisition costs (<item_weight>) and expected rental incomes (<item_value>), given a total investment limit (<knapsack_capacity>). The task is to select properties for maximum passive income without overspending.",
+        "label": "knapsack",
+        "index": 52
+    },
+    {
+        "desc_split": "During a pandemic, a health organization must prioritize vaccine distribution to regions with varying population densities (<item_weight>) and expected reduction in transmission rates (<item_value>), given a limited supply of doses (<knapsack_capacity>). The goal is to maximize the overall reduction in transmission while ensuring equitable and efficient distribution.",
+        "label": "knapsack",
+        "index": 17
+    },
+    {
+        "desc_split": "A disaster response team must pack relief supplies into transport vehicles, with each supply having a volume (<item_weight>) and urgency score (<item_value>), limited by the vehicle's cargo space (<knapsack_capacity>). The goal is to maximize the urgency of delivered aid without exceeding space limits, ensuring timely and effective relief.",
+        "label": "knapsack",
+        "index": 30
+    },
+    {
+        "desc_split": "A tech company must distribute its annual R&D fund (<knapsack_capacity>) across multiple innovation projects, where each requires a specific investment <item_weight> and promises a potential market breakthrough value <item_value>. The decision-makers aim to maximize cumulative innovation impact while staying within financial constraints, ensuring competitive technological advancement.",
+        "label": "knapsack",
+        "index": 58
+    },
+    {
+        "desc_split": "A homeowner plans renovations with multiple options like flooring or kitchen upgrades, each costing <item_weight> and adding <item_value> to property value, constrained by a total budget (<knapsack_capacity>). The task is to select upgrades maximizing home value without overspending, ensuring a high return on investment.",
+        "label": "knapsack",
+        "index": 14
+    },
+    {
+        "desc_split": "An online retailer must pack customer orders into shipping boxes, where each item has a weight <item_weight> and a priority value <item_value>, and the courier imposes a weight limit per box (<knapsack_capacity>). The goal is to package high-priority items first while avoiding overweight shipments, minimizing logistical costs.",
+        "label": "knapsack",
+        "index": 43
+    },
+    {
+        "desc_split": "A sports nutritionist designs a meal plan where each food item has a calorie count <item_weight> and a nutritional benefit score <item_value>, adhering to the athlete's daily calorie limit (<knapsack_capacity>). The goal is to maximize nutritional intake while staying within dietary restrictions, optimizing performance and recovery.",
+        "label": "knapsack",
+        "index": 36
+    },
+    {
+        "desc_split": "A record label must finalize an album's tracklist, where each song has a runtime (<item_weight>) and an estimated streaming appeal (<item_value>), limited by the total vinyl record capacity (<knapsack_capacity>). The goal is to curate tracks that maximize listener engagement while adhering to physical constraints.",
+        "label": "knapsack",
+        "index": 46
+    },
+    {
+        "desc_split": "As Michelin-starred restaurant equips its kitchen, the head chef must choose from premium utensils, each with a storage size requirement <item_weight> and performance quality rating <item_value>, limited by the kitchen's cabinet space <knapsack_capacity>. The objective is optimize the kitchen's capabilities by selecting the most effective tools within storage constraints.",
+        "label": "knapsack",
+        "index": 99
+    },
+    {
+        "desc_split": "A festival organizer must schedule artist performances within a fixed time slot (<knapsack_capacity>), where each performance has a duration <item_weight> and an expected audience draw <item_value>. The goal is to select acts that maximize total attendance appeal without overrunning the festival's schedule.",
+        "label": "knapsack",
+        "index": 13
+    },
+    {
+        "desc_split": "An outdoor enthusiast is preparing for a trek and must choose gear items, each with a weight (<item_weight>) and a utility score (<item_value>), while adhering to a backpack's weight limit (<knapsack_capacity>). The challenge lies in selecting the most useful combination of gear without overburdening oneself, ensuring both comfort and preparedness on the trail.",
+        "label": "knapsack",
+        "index": 70
+    },
+    {
+        "desc_split": "Airlines face the challenge of maximizing revenue per flight by selecting high-priority freight shipments, each with a weight <item_weight> and shipping fee <item_value>, while adhering to strict aircraft payload limits (<knapsack_capacity>). The solution determines the most profitable cargo combination without overloading the plane.",
+        "label": "knapsack",
+        "index": 77
+    },
+    {
+        "desc_split": "A thief targeting a jewelry store must select items with varying weights <item_weight> and resale values <item_value>, constrained by a bag capacity <knapsack_capacity>. The objective is to steal the most valuable combination without exceeding the bag's limit, optimizing the stolen loot's worth.",
+        "label": "knapsack",
+        "index": 64
+    },
+    {
+        "desc_split": "A development team has a fixed sprint timeframe (<knapsack_capacity>) to implement features, each requiring development effort <item_weight> and delivering user value <item_value>. The aim is to select the most valuable features for release while respecting the sprint's capacity, maximizing product impact for the upcoming release.",
+        "label": "knapsack",
+        "index": 4
+    },
+    {
+        "desc_split": "A building contractor must choose materials for a project, with each material having a weight (<item_weight>) and structural strength (<item_value>), subject to a maximum load limit (<knapsack_capacity>). The aim is to select materials that provide the highest strength without exceeding the load capacity, guaranteeing stability and safety.",
+        "label": "knapsack",
+        "index": 28
+    },
+    {
+        "desc_split": "A video production studio must store high-resolution clips on a hard drive with limited space (<knapsack_capacity>), where each clip occupies a specific amount of storage <item_weight> and has a priority score <item_value> based on its importance for editing. The team must select clips to maximize priority usage of the storage capacity efficiently.",
+        "label": "knapsack",
+        "index": 11
+    },
+    {
+        "desc_split": "A tech startup needs to hire developers with varying salaries (<item_weight>) and skill contributions (<item_value>), constrained by its hiring budget (<knapsack_capacity>). The challenge is to assemble the most effective team within financial limits, balancing cost and talent.",
+        "label": "knapsack",
+        "index": 50
+    },
+    {
+        "desc_split": "A chef must craft a prix-fixe menu with dishes that each require <item_weight> kitchen resources and offer a customer satisfaction score of <item_value>, given a total resource limit (<knapsack_capacity>). The challenge is to select dishes that maximize diner delight without exceeding kitchen capacity, ensuring both efficiency and culinary appeal.",
+        "label": "knapsack",
+        "index": 74
+    },
+    {
+        "desc_split": "A shipping company needs to load a vessel with cargo containers, each having a specific weight <item_weight> and monetary value <item_value>, while adhering to the ship's maximum load limit (<knapsack_capacity>). The goal is to determine which containers to load to maximize total value without exceeding the weight constraint, ensuring profitable transportation.",
+        "label": "knapsack",
+        "index": 10
+    },
+    {
+        "desc_split": "An explorer must pack equipment for a polar trek, where each item has a weight (<item_weight>) and a critical survival utility rating (<item_value>), restricted by a sled's load limit (<knapsack_capacity>). The selection must maximize life-saving potential while adhering to transport constraints.",
+        "label": "knapsack",
+        "index": 95
+    },
+    {
+        "desc_split": "A catering company must design a menu where each dish has a preparation time (<item_weight>) and a customer satisfaction score (<item_value>), limited by kitchen operation time (<knapsack_capacity>). The goal is to maximize satisfaction without exceeding preparation capacity.",
+        "label": "knapsack",
+        "index": 51
+    },
+    {
+        "desc_split": "A coach must assemble a team by selecting players with specific fitness requirements <item_weight> and performance metrics <item_value>, given a total stamina cap (<knapsack_capacity>). The objective is to maximize team performance while adhering to fitness constraints, optimizing competitive potential.",
+        "label": "knapsack",
+        "index": 7
+    },
+    {
+        "desc_split": "NASA engineers must select scientific instruments for a Mars mission, where each instrument has a mass <item_weight> and a scientific value score <item_value>, constrained by the rocket's maximum payload capacity (<knapsack_capacity>). The goal is to maximize scientific output without exceeding weight limits, ensuring mission success.",
+        "label": "knapsack",
+        "index": 65
+    },
+    {
+        "desc_split": "A five-star hotel's chef must curate a gourmet menu where each dish has a preparation cost <item_weight> and a perceived luxury rating <item_value>, given a fixed total budget (<knapsack_capacity>). The challenge is to create the most prestigious menu without overspending, enhancing guest satisfaction.",
+        "label": "knapsack",
+        "index": 66
+    },
+    {
+        "desc_split": "A sports agency must select endorsement deals for an athlete, where each deal requires a time commitment (<item_weight>) and offers a financial reward (<item_value>), given the athlete's limited availability (<knapsack_capacity>). The goal is to choose deals that maximize earnings while respecting the athlete's schedule.",
+        "label": "knapsack",
+        "index": 49
+    },
+    {
+        "desc_split": "A book collector has finite shelf space (<knapsack_capacity>) and must choose from rare books, each with a physical thickness (<item_weight>) and literary significance (<item_value>). The objective is to assemble a collection of the most valuable texts while keeping physical storage manageable, striking a balance between historical worth and practical display constraints.",
+        "label": "knapsack",
+        "index": 73
+    },
+    {
+        "desc_split": "An organizer must invite attendees to an exclusive event, where each guest has a social influence score (<item_value>) and a security clearance requirement (<item_weight>), capped by the venue's capacity (<knapsack_capacity>). The aim is to optimize the guest list for prestige and networking potential without compromising safety.",
+        "label": "knapsack",
+        "index": 47
+    },
+    {
+        "desc_split": "A boutique owner must buy garments for the season, where each piece has a cost <item_weight> and projected sales revenue <item_value>, working within a procurement budget (<knapsack_capacity>). The strategy is to select items that collectively yield the highest revenue without exceeding financial limits.",
+        "label": "knapsack",
+        "index": 87
+    },
+    {
+        "desc_split": "A security firm must choose a set of jewelry pieces for armored transport, each with a physical weight (<item_weight>) and insured value (<item_value>), adhering to a vehicle weight limit (<knapsack_capacity>). The optimal selection ensures maximum financial protection without compromising the vehicle's safety margin, reducing operational risk while maximizing profit.",
+        "label": "knapsack",
+        "index": 90
+    },
+    {
+        "desc_split": "A tech firm needs to purchase servers for its data center, where each server has a power consumption (<item_weight>) and computing performance (<item_value>), under a strict power supply limit (<knapsack_capacity>). The objective is to maximize computational capacity while staying within the power constraints, ensuring efficient energy use and performance.",
+        "label": "knapsack",
+        "index": 27
+    },
+    {
+        "desc_split": "Tech companies must choose which hardware components to include based on production cost <item_weight> and user demand <item_value>, while staying within strict device budget constraints (<knapsack_capacity>). This balance determines market competitiveness versus profitability.",
+        "label": "knapsack",
+        "index": 79
+    },
+    {
+        "desc_split": "A studio plans to produce merchandise for a film, where each item has a production cost (<item_weight>) and estimated fan demand (<item_value>), given a fixed production budget (<knapsack_capacity>). The challenge is to prioritize items that maximize fan engagement while staying within budget, optimizing marketing impact.",
+        "label": "knapsack",
+        "index": 29
+    },
+    {
+        "desc_split": "A tech firm must prioritize which security patches to deploy, considering each patch's system resource usage <item_weight> and its expected risk reduction <item_value>, with a total resource threshold (<knapsack_capacity>). The goal is to maximize security improvement without overwhelming the system's capacity.",
+        "label": "knapsack",
+        "index": 23
+    },
+    {
+        "desc_split": "An e-commerce platform is designing a personalized recommendation feed, where each recommended product occupies a screen display slot (<item_weight>) and has an estimated engagement score (<item_value>), constrained by a maximum allowable screen real estate (<knapsack_capacity>). The system must curate products to optimize user interaction without overcrowding the interface.",
+        "label": "knapsack",
+        "index": 92
+    },
+    {
+        "desc_split": "A machine learning engineer must select algorithm features where each has a computational cost <item_weight> and accuracy improvement <item_value>, bound by processing time constraints (<knapsack_capacity>). The aim is to maximize prediction accuracy while maintaining real-time performance, optimizing the model's practicality.",
+        "label": "knapsack",
+        "index": 34
+    },
+    {
+        "desc_split": "An high-end property developer aims to furnish villas with designer furniture, where each piece has a spatial footprint <item_weight> and an aesthetic appeal score <item_value>, constrained by the villa's available floor space <knapsack_capacity>. The task is select furnishings that create the most visually stunning interiors while adhering to spatial limits.",
+        "label": "knapsack",
+        "index": 98
+    },
+    {
+        "desc_split": "A museum curator evaluates artifacts for purchase, where each piece has a transportation cost (<item_weight>) and a cultural value (<item_value>), restricted by the acquisition budget (<knapsack_capacity>). The task is to assemble a collection that maximizes historical significance while staying within financial boundaries.",
+        "label": "knapsack",
+        "index": 48
+    },
+    {
+        "desc_split": "An NFT platform must select artworks to feature in a limited-capacity gallery (<knapsack_capacity>), where each piece consumes server storage <item_weight> and drives engagement metrics <item_value>. The curator's dilemma is to maximize audience interaction while staying within technical constraints.",
+        "label": "knapsack",
+        "index": 57
+    },
+    {
+        "desc_split": "City planners allocate a fixed municipal budget (<knapsack_capacity>) to install recreational facilities, with each amenity having construction cost <item_weight> and projected community benefit score <item_value>. The mission involves selecting facilities that collectively maximize resident welfare gains without exceeding fiscal boundaries.",
+        "label": "knapsack",
+        "index": 62
+    },
+    {
+        "desc_split": "In a role-playing game, a player's inventory has a weight limit (<knapsack_capacity>). Each item dropped by enemies has a weight <item_weight> and a gold value <item_value>. The player must choose the best loot combination to maximize gold earnings without exceeding the weight limit, optimizing in-game wealth.",
+        "label": "knapsack",
+        "index": 15
+    },
+    {
+        "desc_split": "A factory must schedule maintenance tasks for machines, with each task taking downtime <item_weight> but improving longevity or efficiency <item_value>, given a fixed total downtime allowance (<knapsack_capacity>). The goal is to optimize maintenance selection for maximum operational benefit without disrupting production.",
+        "label": "knapsack",
+        "index": 26
+    }
+]
