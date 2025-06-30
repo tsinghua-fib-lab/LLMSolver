@@ -1,0 +1,54 @@
+# LLMSolver
+Solver call via LLM automation
+
+## 任务分工
+- 问题子类型识别分类模块： 苏泓源
+- 任务构建、求解器匹配和调用模块： 张韶丰
+- 给定求解器，script生成及运行模块： 彭庆文
+## 计划安排
+- 准备工作（2/24-3/1）
+  - 相关文献、技术调研
+  - 待做的问题Big-Map集合分类
+- 工作流初步构建、打通（3/1-3/24）
+  - 工作流层面：分三个模块层次
+    - 问题的理解、分类、建模
+    - 求解器的推荐使用
+    - 脚本生成的自我debug
+  - 求解器和求解问题层面：
+    - 以VRP为样例，复现和封装RouteFinder/LKH3
+    - 基于24/48种VRP问题，实现不同问题类型的数据构建、算法调用
+- 完整框架完善、优化  (3/24-4/28)
+  - 工作流层面：
+    - 基于Agent推理工作进行优化
+  - 求解器和求解问题层面：
+    - 补充其他诸如BP、JSP等问题和问题子类
+    - 补充其他Learning/Non-learning的算法库集成
+    - 构建成熟的testbed，和metric评测标准
+- 实验补充、论文完成(4/28-5/???)
+  -最终目标NeurIPS2025（去年ddl：5/22）
+
+
+## How to run pipeline
+
+```
+pip install lkh
+cd solver/lkh_solver
+tar -zvxf LKH-3.0.13.tgz
+cd LKH-3.0.13
+make
+```
+
+Because some bugs exist in lkh, you should modify the lkh files installed by pip before.
+
+The install file is '~/miniconda3/envs/conda_env/lib/python3.10/site-packages/lkh/problems.py'
+
+You should move line 62
+```
+service_time = tsplib.fields.NumberField('SERVICE_TIME')
+```
+
+after line 71
+
+```
+service_time_section = tsplib.fields.MatrixField('SERVICE_TIME_SECTION')
+```
