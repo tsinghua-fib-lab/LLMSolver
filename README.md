@@ -93,7 +93,7 @@ See [`example/test_solver.py`](example/test_solver.py) for more detailed example
 
 ```
 autocobench/
-├── benchmark/          # Benchmark datasets
+├── benchmark_hard/          # Benchmark datasets
 ├── envs/              # Problem environment definitions
 ├── solver/            # Various solver implementations
 ├── recognition/       # LLM recognition pipeline
@@ -138,7 +138,7 @@ AutoCOBench spans **43 common COP types**, each with thousands of instances anno
 
 ## 🧠 LLM-based Recognition Pipeline
 
-The `recognition/` module provides a complete pipeline:
+The `recognition` module provides a complete pipeline:
 
 - **🔍 Classifier:** Automatically classifies problem type from natural language description
 - **✅ Checker:** Verifies and validates the classification accuracy
@@ -148,7 +148,7 @@ The `recognition/` module provides a complete pipeline:
 
 ## 📊 Benchmarks & Datasets
 
-- **Extensive Coverage:** Datasets for VRP, BPP, KP, and more in `benchmark`
+- **Extensive Coverage:** Datasets for VRP, BPP, KP, and more in `benchmark_hard`
 - **Ready-to-Use:** Data templates and JSON problem definitions
 - **Natural Language:** Thousands of instances with human-readable descriptions
 - **Structured Data:** Machine-readable problem representations
