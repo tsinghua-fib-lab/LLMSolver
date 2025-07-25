@@ -93,7 +93,7 @@ See [`example/test_solver.py`](example/test_solver.py) for more detailed example
 
 ```
 autocobench/
-├── benchmark_hard/          # Benchmark datasets
+├── benchmark/          # Benchmark datasets
 ├── envs/              # Problem environment definitions
 ├── solver/            # Various solver implementations
 ├── recognition/       # LLM recognition pipeline
@@ -148,7 +148,7 @@ The `recognition` module provides a complete pipeline:
 
 ## 📊 Benchmarks & Datasets
 
-- **Extensive Coverage:** Datasets for VRP, BPP, KP, and more in `benchmark_hard`
+- **Extensive Coverage:** Datasets for VRP, BPP, KP, and more in `benchmark`
 - **Ready-to-Use:** Data templates and JSON problem definitions
 - **Natural Language:** Thousands of instances with human-readable descriptions
 - **Structured Data:** Machine-readable problem representations
