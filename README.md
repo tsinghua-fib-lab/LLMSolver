@@ -27,13 +27,22 @@
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/your-username/LLMSolver.git
+   git clone git@github.com:tsinghua-fib-lab/LLMSolver.git
    cd LLMSolver
    ```
 
 2. **Install dependencies:**
    ```bash
+   # Create virtual environment
+   conda create -n autoco_bench python 3.10
+   conda activate autoco_bench
+   
+   # Install base dependencies
    pip install -r requirements.txt
+   
+   # Install PyTorch extensions (these must be installed separately)
+   # Replace ${CUDA} with the appropriate version for your environment: cpu, cu118, cu126, or cu128
+   pip install torch-scatter torch-sparse -f https://data.pyg.org/whl/torch-2.6.0+${CUDA}.html
    ```
 
 3. **(Optional) Install LKH for VRP solvers:**
@@ -50,8 +59,8 @@
 Here's a minimal example to run a solver on a VRP instance:
 
 ```python
-from solver.solver_pool import SolverPool
-from envs.mtvrp import MTVRPEnv, MTVRPGenerator
+from solver.cvrp.solver_pool import SolverPool
+from envs.cvrp.mtvrp import MTVRPEnv, MTVRPGenerator
 import torch
 
 # Setup solver pool
@@ -77,6 +86,20 @@ print(f"Reward: {rewards}")
 ```
 
 See [`example/test_solver.py`](example/test_solver.py) for more detailed examples.
+
+---
+
+## 🛠️ Project Structure
+
+```
+autocobench/
+├── benchmark/          # Benchmark datasets
+├── envs/              # Problem environment definitions
+├── solver/            # Various solver implementations
+├── recognition/       # LLM recognition pipeline
+├── utils/            # Utility functions
+└── assets/           # Resource files
+```
 
 ---
 
@@ -125,7 +148,7 @@ The `recognition/` module provides a complete pipeline:
 
 ## 📊 Benchmarks & Datasets
 
-- **Extensive Coverage:** Datasets for VRP, BPP, KP, and more in `benchmark_hard/`
+- **Extensive Coverage:** Datasets for VRP, BPP, KP, and more in `benchmark`
 - **Ready-to-Use:** Data templates and JSON problem definitions
 - **Natural Language:** Thousands of instances with human-readable descriptions
 - **Structured Data:** Machine-readable problem representations
@@ -134,12 +157,20 @@ The `recognition/` module provides a complete pipeline:
 
 ## 🤝 Contributing
 
-We welcome contributions! Please feel free to:
+We welcome various forms of contributions! Please feel free to:
 
-- 🐛 **Report bugs** by opening an issue
-- 💡 **Suggest features** through discussions
-- 🔧 **Submit pull requests** for improvements
-- 📚 **Improve documentation** and examples
+- 🐛 **Report bugs** - by opening an issue
+- 💡 **Suggest features** - through discussions
+- 🔧 **Submit code** - through pull requests
+- 📚 **Improve documentation** - enhance examples and documentation
+
+### Contribution Guidelines
+
+1. Fork this repository
+2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
 ---
 
