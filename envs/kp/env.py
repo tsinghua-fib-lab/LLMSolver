@@ -310,7 +310,7 @@ def test():
     
     # Test valid solution
     valid_solution = {
-        'selected_items': [1, 3, 4]  # Items with weights 0.3, 0.2, 0.6 = 1.1 (invalid)
+        'selected_items': [1, 3]  # Items with weights 0.3, 0.2 = 0.5 (invalid)
     }
     
     print("Testing valid solution:")
