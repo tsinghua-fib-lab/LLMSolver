@@ -81,8 +81,8 @@ class Bin:
         # Overlap checking
         for pb in self.placed_boxes:
             if not (x + w <= pb.x or x >= pb.x + pb.w or
-                y + h <= pb.y or y >= pb.y + pb.h or
-                z + d <= pb.z or z >= pb.z + pb.d):
+                    y + h <= pb.y or y >= pb.y + pb.h or
+                    z + d <= pb.z or z >= pb.z + pb.d):
                 return False
 
         # Gravitational support checking
@@ -93,8 +93,8 @@ class Bin:
             for pb in self.placed_boxes:
                 # Supported from below
                 if (pb.x < x + w and pb.x + pb.w > x and
-                    pb.y < y + h and pb.y + pb.h > y and
-                    pb.z + pb.d == z):
+                        pb.y < y + h and pb.y + pb.h > y and
+                        pb.z + pb.d == z):
                     supported = True
                     break
             if not supported:
@@ -104,27 +104,28 @@ class Bin:
 
     def get_candidate_positions(self) -> List[Tuple[int, int, int]]:
         """Get candidate positions for placing new boxes (for solver compatibility)"""
-        positions = []  
+        positions = []
 
         sorted_placed_boxes = self.placed_boxes
 
         for pb in sorted_placed_boxes:
-            if pb.z == 0:  
-                positions.append((pb.x + pb.w, pb.y, pb.z))  
-                positions.append((pb.x, pb.y + pb.h, pb.z))  
-                positions.append((pb.x, pb.y, pb.z + pb.d))  
+            if pb.z == 0:
+                positions.append((pb.x + pb.w, pb.y, pb.z))
+                positions.append((pb.x, pb.y + pb.h, pb.z))
+                positions.append((pb.x, pb.y, pb.z + pb.d))
             else:
                 for potential_support in sorted_placed_boxes:
                     if (potential_support.x < pb.x + pb.w and potential_support.x + potential_support.w > pb.x and
-                        potential_support.y < pb.y + pb.h and potential_support.y + potential_support.h > pb.y and
-                        potential_support.z + potential_support.d == pb.z):  
-                        positions.append((pb.x + pb.w, pb.y, pb.z))  
-                        positions.append((pb.x, pb.y + pb.h, pb.z))  
-                        positions.append((pb.x, pb.y, pb.z + pb.d))  
-                        break  
+                            potential_support.y < pb.y + pb.h and potential_support.y + potential_support.h > pb.y and
+                            potential_support.z + potential_support.d == pb.z):
+                        positions.append((pb.x + pb.w, pb.y, pb.z))
+                        positions.append((pb.x, pb.y + pb.h, pb.z))
+                        positions.append((pb.x, pb.y, pb.z + pb.d))
+                        break
         if not positions:
-            positions.append((0, 0, 0))  
-        positions.sort(key=lambda pos: (pos[2], pos[0]))  # First sort by ascending z-value; if z-values are equal, then sort by ascending x-value.
+            positions.append((0, 0, 0))
+        positions.sort(key=lambda pos: (pos[2], pos[
+            0]))  # First sort by ascending z-value; if z-values are equal, then sort by ascending x-value.
         return positions
 
     def place_box(self, box: Box) -> bool:
@@ -145,27 +146,48 @@ def validate_packing(problem_data: Dict, solution: Dict) -> Tuple[bool, str]:
     bin_size = problem_data['bin_size']
     items_size = problem_data['items_size']
     can_rotate = problem_data.get('can_rotate', False)
+    is_2d = problem_data.get('dimension') == '2D'
 
     # Check if all items are placed
     placed_items = set()
     bins = []
 
     for bin_data in solution.get('bins', []):
-        bin_width, bin_height = bin_data['bin_size'][:2]
-        bin_depth = bin_data['bin_size'][2] if len(bin_data['bin_size']) > 2 else 1
+        # Handle 2D vs 3D bin size
+        if is_2d:
+            if len(bin_data['bin_size']) != 2:
+                return False, f"2D problem expects 2D bin size, got {bin_data['bin_size']}"
+            bin_width, bin_height = bin_data['bin_size']
+            bin_depth = 1
+        else:
+            if len(bin_data['bin_size']) != 3:
+                return False, f"3D problem expects 3D bin size, got {bin_data['bin_size']}"
+            bin_width, bin_height, bin_depth = bin_data['bin_size']
 
         # Validate bin size matches problem
         if bin_width != bin_size[0] or bin_height != bin_size[1]:
             return False, f"Bin size mismatch: expected {bin_size}, got {bin_data['bin_size']}"
-        if len(bin_size) > 2 and bin_depth != bin_size[2]:
+        if not is_2d and len(bin_size) > 2 and bin_depth != bin_size[2]:
             return False, f"Bin depth mismatch: expected {bin_size[2]}, got {bin_depth}"
 
         bin_obj = Bin(bin_width, bin_height, bin_depth)
 
         for item_data in bin_data.get('items', []):
             item_id = item_data['item_id']
-            x, y, z = item_data['position']
-            w, h, d = item_data['size']
+
+            # Handle 2D vs 3D position and size
+            if is_2d:
+                if len(item_data['position']) != 2 or len(item_data['size']) != 2:
+                    return False, f"2D problem expects 2D position and size for item {item_id}"
+                x, y = item_data['position']
+                z = 0  # 2D items are placed at z=0
+                w, h = item_data['size']
+                d = 1  # 2D items have depth=1
+            else:
+                if len(item_data['position']) != 3 or len(item_data['size']) != 3:
+                    return False, f"3D problem expects 3D position and size for item {item_id}"
+                x, y, z = item_data['position']
+                w, h, d = item_data['size']
 
             # Check if item exists in problem
             if item_id >= len(items_size):
@@ -177,25 +199,41 @@ def validate_packing(problem_data: Dict, solution: Dict) -> Tuple[bool, str]:
 
             # Validate item size
             original_size = items_size[item_id]
-            if len(original_size) == 2:
-                original_size = original_size + [1]  # Add depth for 2D
-
-            if not can_rotate:
-                # Check if size matches exactly
-                if not (w == original_size[0] and h == original_size[1] and d == original_size[2]):
-                    return False, f"Item {item_id} size mismatch: expected {original_size}, got {[w, h, d]}"
+            if is_2d and len(original_size) == 2:
+                # For 2D problems, compare only width and height
+                if not can_rotate:
+                    # Check if size matches exactly
+                    if not (w == original_size[0] and h == original_size[1]):
+                        return False, f"Item {item_id} size mismatch: expected {original_size}, got {[w, h]}"
+                else:
+                    # Check if size is a valid rotation (2D)
+                    valid_rotations = [
+                        original_size,
+                        [original_size[1], original_size[0]]
+                    ]
+                    if [w, h] not in valid_rotations:
+                        return False, f"Item {item_id} invalid rotation: {[w, h]}"
             else:
-                # Check if size is a valid rotation
-                valid_rotations = [
-                    original_size,
-                    [original_size[1], original_size[0], original_size[2]],
-                    [original_size[0], original_size[2], original_size[1]],
-                    [original_size[1], original_size[2], original_size[0]],
-                    [original_size[2], original_size[0], original_size[1]],
-                    [original_size[2], original_size[1], original_size[0]]
-                ]
-                if [w, h, d] not in valid_rotations:
-                    return False, f"Item {item_id} invalid rotation: {[w, h, d]}"
+                # For 3D problems, handle 3D rotations
+                if len(original_size) == 2:
+                    original_size = original_size + [1]  # Add depth for 2D items in 3D problem
+
+                if not can_rotate:
+                    # Check if size matches exactly
+                    if not (w == original_size[0] and h == original_size[1] and d == original_size[2]):
+                        return False, f"Item {item_id} size mismatch: expected {original_size}, got {[w, h, d]}"
+                else:
+                    # Check if size is a valid rotation (3D)
+                    valid_rotations = [
+                        original_size,
+                        [original_size[1], original_size[0], original_size[2]],
+                        [original_size[0], original_size[2], original_size[1]],
+                        [original_size[1], original_size[2], original_size[0]],
+                        [original_size[2], original_size[0], original_size[1]],
+                        [original_size[2], original_size[1], original_size[0]]
+                    ]
+                    if [w, h, d] not in valid_rotations:
+                        return False, f"Item {item_id} invalid rotation: {[w, h, d]}"
 
             # Try to place item
             if not bin_obj.place_item(x, y, z, w, h, d, item_id):
@@ -232,12 +270,13 @@ class BPPEnv:
         
         Args:
             problem_data: Problem instance data
-            solution: Solution data
+            solution: Solution data (Dict format)
             
         Returns:
             True if solution is valid, False otherwise
         """
         is_valid, _ = validate_packing(problem_data, solution)
+        print(_)
         return is_valid
 
     def get_reward(self, problem_data: Dict, solution: Dict) -> float:
@@ -246,7 +285,7 @@ class BPPEnv:
         
         Args:
             problem_data: Problem instance data
-            solution: Solution data
+            solution: Solution data (Dict format)
             
         Returns:
             Reward value (negative number of bins used)
@@ -266,15 +305,30 @@ class BPPEnv:
 
         total_utilization = 0.0
         num_bins = len(solution.get('bins', []))
+        is_2d = problem_data.get('dimension') == '2D'
 
         for bin_data in solution.get('bins', []):
-            bin_width, bin_height = bin_data['bin_size'][:2]
-            bin_depth = bin_data['bin_size'][2] if len(bin_data['bin_size']) > 2 else 1
+            # Handle 2D vs 3D bin size
+            if is_2d and len(bin_data['bin_size']) == 2:
+                bin_width, bin_height = bin_data['bin_size']
+                bin_depth = 1
+            else:
+                bin_width, bin_height = bin_data['bin_size'][:2]
+                bin_depth = bin_data['bin_size'][2] if len(bin_data['bin_size']) > 2 else 1
+
             bin_obj = Bin(bin_width, bin_height, bin_depth)
 
             for item_data in bin_data.get('items', []):
-                x, y, z = item_data['position']
-                w, h, d = item_data['size']
+                # Handle 2D vs 3D position and size
+                if is_2d and len(item_data['position']) == 2:
+                    x, y = item_data['position']
+                    z = 0
+                    w, h = item_data['size']
+                    d = 1
+                else:
+                    x, y, z = item_data['position'][:3]
+                    w, h, d = item_data['size'][:3]
+
                 bin_obj.place_item(x, y, z, w, h, d, item_data['item_id'])
 
             total_utilization += bin_obj.get_utilization()
@@ -291,7 +345,12 @@ class BPPEnv:
         colors = plt.cm.Set3(np.linspace(0, 1, len(problem_data['items_size'])))
 
         for bin_idx, bin_data in enumerate(solution.get('bins', [])):
-            bin_width, bin_height = bin_data['bin_size']
+            # Handle 2D bin size
+            if len(bin_data['bin_size']) == 2:
+                bin_width, bin_height = bin_data['bin_size']
+            else:
+                # Fallback for 3D format
+                bin_width, bin_height = bin_data['bin_size'][:2]
 
             # Draw bin outline
             bin_rect = mpatches.Rectangle((0, bin_idx * (bin_height + 2)),
@@ -303,8 +362,21 @@ class BPPEnv:
             # Draw items
             for item_data in bin_data.get('items', []):
                 item_id = item_data['item_id']
-                x, y, z = item_data['position']
-                w, h, d = item_data['size']
+
+                # Handle 2D vs 3D position and size
+                if len(item_data['position']) == 2:
+                    # 2D format: [x, y]
+                    x, y = item_data['position']
+                else:
+                    # 3D format: [x, y, z] - use x, y
+                    x, y = item_data['position'][:2]
+
+                if len(item_data['size']) == 2:
+                    # 2D format: [w, h]
+                    w, h = item_data['size']
+                else:
+                    # 3D format: [w, h, d] - use w, h
+                    w, h = item_data['size'][:2]
 
                 # Adjust y position for bin offset
                 y_adjusted = y + bin_idx * (bin_height + 2)
@@ -318,13 +390,20 @@ class BPPEnv:
                 ax.text(x + w / 2, y_adjusted + h / 2, f'I{item_id}',
                         ha='center', va='center', fontsize=8, fontweight='bold')
 
-                # Add bin label
-                ax.text(bin_width / 2, bin_idx * (bin_height + 2) + bin_height / 2, f'Bin {bin_idx}',
-                        ha='center', va='center', fontsize=12, fontweight='bold',
-                        bbox=dict(boxstyle="round,pad=0.3", facecolor='white', alpha=0.8))
+            # Add bin label
+            ax.text(bin_width / 2, bin_idx * (bin_height + 2) + bin_height / 2, f'Bin {bin_idx}',
+                    ha='center', va='center', fontsize=12, fontweight='bold',
+                    bbox=dict(boxstyle="round,pad=0.3", facecolor='white', alpha=0.8))
 
-        ax.set_xlim(-1, max(bin_data['bin_size'][0] for bin_data in solution.get('bins', [])) + 1)
-        ax.set_ylim(-1, len(solution.get('bins', [])) * (problem_data['bin_size'][1] + 2) + 1)
+        # Set plot limits
+        max_width = max(bin_data['bin_size'][0] if len(bin_data['bin_size']) == 2
+                        else bin_data['bin_size'][0] for bin_data in solution.get('bins', []))
+        num_bins = len(solution.get('bins', []))
+        bin_height = (solution['bins'][0]['bin_size'][1] if len(solution['bins'][0]['bin_size']) == 2
+                      else solution['bins'][0]['bin_size'][1]) if solution.get('bins') else 0
+
+        ax.set_xlim(-1, max_width + 1)
+        ax.set_ylim(-1, num_bins * (bin_height + 2) + 1)
         ax.set_aspect('equal')
         ax.set_xlabel('Width')
         ax.set_ylabel('Height')
@@ -350,16 +429,20 @@ class BPPEnv:
 
         colors = plt.cm.Set3(np.linspace(0, 1, len(problem_data['items_size'])))
 
-        for bin_idx, bin_data in enumerate(solution.get('bins', [])):
+        bins_data = solution.get('bins', [])
+
+        for bin_idx, bin_data in enumerate(bins_data):
             if bin_idx >= 4:  # Limit to 4 bins for visualization
                 break
 
             bin_width, bin_height, bin_depth = bin_data['bin_size']
+            items = bin_data.get('items', [])
+
             ax = axes[bin_idx]
 
             # Group items by z-layer
             layers = {}
-            for item_data in bin_data.get('items', []):
+            for item_data in items:
                 item_id = item_data['item_id']
                 x, y, z = item_data['position']
                 w, h, d = item_data['size']
@@ -395,7 +478,7 @@ class BPPEnv:
             ax.grid(True, alpha=0.3)
 
         # Hide unused subplots
-        for i in range(len(solution.get('bins', [])), 4):
+        for i in range(len(bins_data), 4):
             axes[i].set_visible(False)
 
         plt.suptitle(title, fontsize=16)
@@ -430,6 +513,11 @@ def test_bpp_env():
                     {"item_id": 0, "position": [0, 0, 0], "size": [3, 4, 1]},
                     {"item_id": 1, "position": [3, 0, 0], "size": [2, 5, 1]},
                     {"item_id": 2, "position": [5, 0, 0], "size": [4, 2, 1]},
+                ]
+            },
+            {
+                "bin_size": [10, 10],
+                "items": [
                     {"item_id": 3, "position": [0, 4, 0], "size": [3, 3, 1]},
                     {"item_id": 4, "position": [3, 5, 0], "size": [2, 2, 1]}
                 ]
@@ -440,20 +528,20 @@ def test_bpp_env():
     # Create environment
     env = BPPEnv("2DOFBPP")
 
-    # Test validation
+    # Test validation with legacy format
     is_valid, message = validate_packing(problem_data, solution)
-    print(f"Validation: {is_valid}, Message: {message}")
+    print(f"Legacy format validation: {is_valid}, Message: {message}")
 
-    # Test reward calculation
+    # Test reward calculation with legacy format
     reward = env.get_reward(problem_data, solution)
-    print(f"Reward: {reward}")
+    print(f"Legacy format reward: {reward}")
 
-    # Test utilization
+    # Test utilization with legacy format
     utilization = env.calculate_utilization(problem_data, solution)
-    print(f"Utilization: {utilization:.2%}")
+    print(f"Legacy format utilization: {utilization:.2%}")
 
-    # Test visualization
-    env.plot_packing_2d(problem_data, solution, "Test 2D Packing")
+    # Test visualization with legacy format
+    env.plot_packing_2d(problem_data, solution, "Test 2D Packing - Legacy Format")
 
 
 if __name__ == '__main__':
