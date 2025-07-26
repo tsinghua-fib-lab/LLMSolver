@@ -70,3 +70,37 @@ class LoadBoxCreator(BoxCreator):
             self.box_list.append((10, 10, 10))
             self.recorder.append((10, 10, 10))
             self.box_index += 1
+
+class DataBoxCreator(BoxCreator):
+    def __init__(self, data=None):
+        super().__init__()
+        self.data = data
+        self.index = 0
+        self.box_index = 0
+        self.traj_nums = len(data)
+        self.box_trajs = torch.tensor(data)
+
+    def reset(self, index=None):
+        self.box_list.clear()
+        self.recorder = []
+        if index is None:
+            self.index += 1
+        else:
+            self.index = index
+        self.index = self.index % self.traj_nums
+
+        self.boxes = np.array(self.box_trajs[self.index])
+        self.boxes = self.boxes.tolist()
+        self.box_index = 0
+        self.box_set = self.boxes
+        self.box_set.append([100, 100, 100])
+
+    def generate_box_size(self, **kwargs):
+        if self.box_index < len(self.box_set):
+            self.box_list.append(self.box_set[self.box_index])
+            self.recorder.append(self.box_set[self.box_index])
+            self.box_index += 1
+        else:
+            self.box_list.append((10, 10, 10))
+            self.recorder.append((10, 10, 10))
+            self.box_index += 1

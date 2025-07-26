@@ -2,9 +2,9 @@ import torch
 from torch import nn
 import math
 from collections import namedtuple
-from graph_encoder import GraphAttentionEncoder
-from distributions import FixedCategorical
-from tools import observation_decode_leaf_node, init
+from solver.bpp.pct.graph_encoder import GraphAttentionEncoder
+from solver.bpp.pct.distributions import FixedCategorical
+from solver.bpp.pct.tools import observation_decode_leaf_node, init
 
 # Use collections.namedtuple for better compatibility
 AttentionModelFixed = namedtuple('AttentionModelFixed', [

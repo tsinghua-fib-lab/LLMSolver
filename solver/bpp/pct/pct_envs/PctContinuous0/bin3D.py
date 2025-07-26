@@ -1,7 +1,7 @@
 from .space import Space
 import numpy as np
 import gym
-from .binCreator import RandomBoxCreator, LoadBoxCreator, BoxCreator
+from .binCreator import RandomBoxCreator, LoadBoxCreator, BoxCreator, DataBoxCreator
 import torch
 import random
 
@@ -9,7 +9,7 @@ class PackingContinuous(gym.Env):
     def __init__(self,
                  setting,
                  container_size=(10, 10, 10),
-                 item_set=None, data_name=None, load_test_data=False,
+                 item_set=None, data_name=None, load_test_data=False, data=None,
                  internal_node_holder=80, leaf_node_holder=50, next_holder=1, shuffle=False,
                  sample_from_distribution = True,
                  sample_left_bound = 0.1,
@@ -26,7 +26,10 @@ class PackingContinuous(gym.Env):
             self.size_minimum = sample_left_bound
             self.sample_left_bound = sample_left_bound
             self.sample_right_bound = sample_right_bound
-        else: self.size_minimum = np.min(np.array(item_set))
+        elif data:
+            self.size_minimum = np.min(np.array(data))
+        else:
+            self.size_minimum = np.min(np.array(item_set))
         self.setting = setting
         self.item_set = item_set
         if self.setting == 2: self.orientation = 6
@@ -36,16 +39,18 @@ class PackingContinuous(gym.Env):
         self.space = Space(*self.bin_size, self.size_minimum, self.internal_node_holder)
 
         # Generator for train/test data
-        if not load_test_data:
+        if data is not None:
+            self.box_creator = DataBoxCreator(data)
+        elif not load_test_data:
             assert item_set is not None
             self.box_creator = RandomBoxCreator(item_set)
             assert isinstance(self.box_creator, BoxCreator)
-
-        self.sample_from_distribution = sample_from_distribution
-        if load_test_data:
+        else:
             self.box_creator = LoadBoxCreator(data_name)
 
-        self.test = load_test_data
+        self.sample_from_distribution = sample_from_distribution
+
+        self.test = load_test_data or data is not None
         self.observation_space = gym.spaces.Box(low=0.0, high=self.space.height,
                                                 shape=((self.internal_node_holder + self.leaf_node_holder + self.next_holder) * 9,))
         self.next_box_vec = np.zeros((self.next_holder, 9))

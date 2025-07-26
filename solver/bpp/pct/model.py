@@ -1,7 +1,7 @@
 import torch.nn as nn
-from tools import init
+from solver.bpp.pct.tools import init
 from numpy import sqrt
-from attention_model import AttentionModel
+from solver.bpp.pct.attention_model import AttentionModel
 
 class DRL_GAT(nn.Module):
     def __init__(self, args):

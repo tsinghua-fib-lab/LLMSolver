@@ -1,4 +1,4 @@
-from solver_pool import bppSolverPool
+from solver_pool_prev import bppSolverPool
 import random
 from typing import List
 from genetic import Box, Bin

@@ -3,7 +3,7 @@ import torch
 from shutil import copyfile, copytree
 import torch.nn as nn
 import argparse
-import givenData
+from solver.bpp.pct import givenData
 import numpy as np
 from gym.envs.registration import register
 
@@ -232,9 +232,9 @@ def get_args_heuristic():
 def registration_envs():
     register(
         id='PctDiscrete-v0',                                  # Format should be xxx-v0, xxx-v1
-        entry_point='pct_envs.PctDiscrete0:PackingDiscrete',  # Expalined in envs/__init__.py
+        entry_point='solver.bpp.pct.pct_envs.PctDiscrete0:PackingDiscrete',  # Expalined in envs/__init__.py
     )
     register(
         id='PctContinuous-v0',
-        entry_point='pct_envs.PctContinuous0:PackingContinuous',
+        entry_point='solver.bpp.pct.pct_envs.PctContinuous0:PackingContinuous',
     )
